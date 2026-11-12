@@ -11,6 +11,8 @@ RUN uv sync --frozen --no-dev
 COPY main.py database.py ./
 COPY identity.py migrate.py ./
 COPY snake_registry ./snake_registry
+COPY blockchain ./blockchain
+COPY certificates ./certificates
 COPY migrations ./migrations
 
 EXPOSE 8000

@@ -3,8 +3,10 @@ from sqlalchemy.exc import SQLAlchemyError
 
 from database import check_database_connection
 from snake_registry.routes import router as snake_router
+from certificates.routes import router as certificate_router
 
 app = FastAPI(title="Ball Python Blockchain API")
+app.include_router(certificate_router, prefix="/api/v1")
 app.include_router(snake_router, prefix="/api/v1")
 
 

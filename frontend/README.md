@@ -14,3 +14,14 @@ server-mediated Hardhat demo; the page never asks for a key or sender address.
 
 Run page tests with `uv run python -m unittest discover -s tests -v`.
 These use Streamlit AppTest and mocked HTTP responses.
+
+Choose the explicitly labelled Breeder, Laboratory or Buyer demo workspace; this is
+not authentication. Laboratory saves the original PDF, selects V1 and submits issuance.
+Buyer queries a snake profile, selects from its certificate list, previews/downloads
+the platform original and clicks 核验证书 without uploading another PDF. The optional
+上传外部文件核验 entry compares a seller-provided PDF and does not create/replace a
+certificate or submit a transaction. Registration
+evidence and match/mismatch/unable results are separate. No latest-version, revocation
+or whole-snake certification check is claimed. 下载证书 PDF retrieves the stored bytes;
+预览证书 PDF uses the browser's PDF viewer. Formal input requirements:
+`../docs/samples/certificates/README.md`.

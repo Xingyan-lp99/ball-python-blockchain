@@ -36,6 +36,9 @@ chain:
 deploy-registry:
     cd contracts; npx.cmd hardhat run scripts/deploy-snake-registry.ts --network localhost
 
+deploy-certificates:
+    cd contracts; npx.cmd hardhat run scripts/deploy-certificate-registry.ts --network localhost
+
 migrate:
     cd backend; uv run python migrate.py
 

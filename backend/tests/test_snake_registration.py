@@ -138,7 +138,7 @@ def test_migration_is_repeatable(db_client, registry_engine):
     migrate(registry_engine)
     assert db_client.get(f"{ENDPOINT}/{snake_id}").status_code == 200
     with registry_engine.connect() as connection:
-        assert connection.scalar(text("SELECT count(*) FROM schema_migrations")) == 2
+        assert connection.scalar(text("SELECT count(*) FROM schema_migrations")) == 3
 
 
 def test_persistence_after_http_application_restart(registry_engine):

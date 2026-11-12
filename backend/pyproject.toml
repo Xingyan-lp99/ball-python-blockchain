@@ -8,6 +8,7 @@ dependencies = [
     "fastapi>=0.162.4",
     "psycopg[binary]>=3.3.8",
     "python-dotenv>=1.2.4",
+    "python-multipart>=0.0.33",
     "sqlalchemy>=2.1.8",
     "uvicorn[standard]>=0.54.0",
     "web3>=8.0.0",

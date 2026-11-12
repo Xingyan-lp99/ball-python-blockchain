@@ -232,6 +232,9 @@ They do not reset the chain. Development records distinguish actual reads from s
 RPC/DB failures and reset conditions.
 
 Pending: real authentication and secure non-demo signing; broader Level 1 reconciliation;
-certificate features and transfers; background polling/reconciliation; production chain
+certificate V2/revocation lifecycle and transfers; background polling/reconciliation; production chain
 finality/reorg policy; explicit historical-profile recovery after a local reset. Public
 testnet deployment is outside this iteration.
+
+The subsequent V1 issuance and independent file-comparison slice is specified in
+`certificate-v1.md`; it does not change this snake profile's aggregate trust status.

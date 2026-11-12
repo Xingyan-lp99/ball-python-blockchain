@@ -42,13 +42,13 @@ def show_profile(profile: dict) -> None:
     registration = profile.get("chain_registration") or {}
     status = registration.get("status", "not_submitted")
     if status == "confirmed" and registration.get("chain_check") == "verified":
-        st.success("Confirmed on the current local Hardhat chain. Certificates have not been verified.")
+        st.success("Confirmed on the current local Hardhat chain. Snake profile details are not laboratory certified; verify individual certificate files separately.")
     elif status == "processing":
         st.warning("Processing / confirmation unavailable. This profile is not currently confirmed on-chain.")
     elif status == "failed":
         st.error("Registration failed or historical chain evidence is stale. The database profile is retained.")
     else:
-        st.info("Saved in the database only. Blockchain registration has not been submitted; certificates have not been verified.")
+        st.info("Saved in the database only. Blockchain registration has not been submitted. Snake profile details are not laboratory certified.")
     if registration:
         st.write("Registration status:", status)
         st.write("Transaction hash:", registration.get("transaction_hash") or "Not yet available")
@@ -71,6 +71,13 @@ def show_api_error(response: requests.Response) -> None:
     else:
         st.error("The service could not complete the request. Check backend and database availability.")
 
+
+role = st.radio("Demo workspace", ["Breeder", "Laboratory", "Buyer"], horizontal=True)
+st.caption("Demonstration workspaces only; selecting a role is not production authentication.")
+if role != "Breeder":
+    from certificate_page import render_certificate_workspace
+    render_certificate_workspace(API_URL, role)
+    st.stop()
 
 st.header("Snake Registration")
 st.warning("Demo identity: BR001 is assigned by the server. Real authentication is not implemented. Local-chain transactions are signed by the server-controlled Hardhat development wallet.")

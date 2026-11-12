@@ -46,6 +46,7 @@ class RegistrationRead(BaseModel):
     chain_check: Literal["not_checked", "verified", "unavailable", "stale", "conflict"]
     recorded_status: str | None = None
     error: str | None = None
+    error_code: str | None = None
     transaction_hash: str | None = None
     chain_id: int | None = None
     contract_address: str | None = None

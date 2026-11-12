@@ -1,39 +1,16 @@
 """Registration workflow; profile data and contract rules remain separate."""
 
-from contextlib import contextmanager
-
-from requests.exceptions import RequestException
-from sqlalchemy import select, text
+from sqlalchemy import select
 from sqlalchemy.orm import Session
-from web3.exceptions import Web3Exception
 
-from snake_registry.local_chain import (
-    ChainConflict, ChainStale, ChainUnavailable, hex_value,
+from blockchain.transactions import (
+    CHAIN_ERRORS, TransactionProblem as RegistrationProblem,
+    transaction_lock as registration_lock, persist_receipt,
+    transaction_report,
 )
+from snake_registry.local_chain import ChainConflict, ChainStale
 from snake_registry.models import RegistrationAttempt, Snake
 from snake_registry.schemas import RegistrationRead
-
-CHAIN_ERRORS = (ChainUnavailable, RequestException, Web3Exception, OSError, ValueError, KeyError)
-
-
-class RegistrationProblem(Exception):
-    def __init__(self, status_code: int, detail: str):
-        self.status_code = status_code
-        self.detail = detail
-
-
-@contextmanager
-def registration_lock(session: Session):
-    # A dedicated connection holds this advisory lock across intent/hash commits.
-    # Serialize the one demo signer across all Uvicorn workers and snake IDs.
-    with session.get_bind().connect() as connection:
-        acquired = connection.scalar(text("SELECT pg_try_advisory_lock(724801002)"))
-        if not acquired:
-            raise RegistrationProblem(409, "Another registration is processing; refresh and retry")
-        try:
-            yield
-        finally:
-            connection.execute(text("SELECT pg_advisory_unlock(724801002)"))
 
 
 def latest_attempt(session: Session, snake: Snake) -> RegistrationAttempt | None:
@@ -44,43 +21,12 @@ def latest_attempt(session: Session, snake: Snake) -> RegistrationAttempt | None
 
 
 def report(attempt: RegistrationAttempt | None, check: str = "not_checked", error: str | None = None) -> RegistrationRead:
-    status = "not_submitted"
-    if attempt:
-        status = {"prepared": "processing", "submitted": "processing"}.get(attempt.status, attempt.status)
-        if check == "stale" or check == "conflict":
-            status = "failed"
-        elif status == "confirmed" and check != "verified":
-            status = "processing"
-    return RegistrationRead(
-        status=status, chain_check=check, error=error,
-        recorded_status=attempt.status if attempt else None,
-        transaction_hash=attempt.transaction_hash if attempt else None,
-        chain_id=attempt.chain_id if attempt else None,
-        contract_address=attempt.contract_address if attempt else None,
-        manager_address=attempt.manager_address if attempt else None,
-        block_number=attempt.block_number if attempt else None,
-        block_hash=attempt.block_hash if attempt else None,
-        instance_id=attempt.instance_id if attempt else None,
-    )
+    return transaction_report(attempt, check, error)
 
 
 def save_receipt(session: Session, snake: Snake, attempt: RegistrationAttempt, chain) -> RegistrationRead:
-    receipt = chain.receipt(attempt.transaction_hash)
-    if receipt is None:
-        # A previously confirmed transaction disappearing is reset/reorg evidence.
-        if attempt.status == "confirmed":
-            raise ChainStale
+    if not persist_receipt(session, snake.snake_id, attempt, chain):
         return report(attempt, "verified", "Awaiting a transaction receipt; not confirmed")
-    if receipt["status"] != 1:
-        attempt.status = "failed"
-        attempt.failure_code = "transaction_reverted"
-    else:
-        chain.verify_success(snake.snake_id, attempt.transaction_hash, receipt)
-        attempt.status = "confirmed"
-        attempt.failure_code = None
-    attempt.block_number = receipt["blockNumber"]
-    attempt.block_hash = hex_value(receipt["blockHash"])
-    session.commit()
     return report(attempt, "verified", attempt.failure_code)
 
 

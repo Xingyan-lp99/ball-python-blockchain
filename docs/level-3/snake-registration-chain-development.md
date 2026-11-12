@@ -8,6 +8,9 @@ acceptance and commit `91998923146d12d44da49f3eeebee0307d6c3596` remain the base
 Historical-profile recovery after chain reset remains pending. Following acceptance,
 the user authorized the local feature commit described below; remote push is excluded.
 
+The later certificate V1 stage is recorded in `certificate-v1-development.md`. The
+implementation and pending-work notes below preserve this snake-stage handoff.
+
 ## Scope and preserved work
 
 Inspected root and contract AGENTS instructions, Level 0/1 architecture/data model,

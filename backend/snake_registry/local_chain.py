@@ -30,9 +30,9 @@ def hex_value(value) -> str:
 
 
 class LocalChain:
-    def __init__(self) -> None:
+    def __init__(self, deployment_path: Path | None = None) -> None:
         root = Path(__file__).resolve().parents[2]
-        path = Path(os.getenv("LOCAL_CHAIN_DEPLOYMENT", str(root / ".local/snake-registry.json")))
+        path = deployment_path or Path(os.getenv("LOCAL_CHAIN_DEPLOYMENT", str(root / ".local/snake-registry.json")))
         try:
             self.deployment = json.loads(path.read_text(encoding="utf-8"))
             self.chain_id = int(self.deployment["chain_id"])
