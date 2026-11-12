@@ -3,8 +3,8 @@
 ## Snake registration: database iteration (2026-11-12)
 
 Status: **Complete** for the database stage. Automated checks passed, and the user
-completed manual browser acceptance on 2026-11-12. Blockchain registration, real
-authentication and certificate features remain pending.
+completed manual browser acceptance on 2026-11-12. Local-chain registration is now
+implemented in the follow-up section below; real authentication and certificates remain pending.
 
 ### Implemented
 
@@ -44,8 +44,61 @@ Container build/start results and remaining checks are recorded in
 
 - [ ] Review and reconcile the broader Level 1 design with this requested database slice.
 - [ ] Replace demo identity with real login and authorization.
-- [ ] Implement the chain registration work listed in the Level 2 spec.
+- [x] Implement local-chain registration in the follow-up stage below.
 - [ ] Implement laboratory certificate issuance and verification.
 
 No existing contracts are changed. The user authorized a local feature commit after
 acceptance; remote push and existing-data deletion are outside this iteration.
+
+## Snake registration: local-chain iteration (2026-11-12)
+
+Status: **Complete** for the local-chain registration stage. Automated checks passed,
+and manual browser acceptance was performed by the user on 2026-11-12. The earlier
+database-stage acceptance is unchanged. Historical-profile recovery after chain reset
+remains pending.
+
+### Implemented
+
+- [x] Inspect and retain pre-existing Level 1, IDE and contract contents.
+- [x] Follow project-local Hardhat and ethers toolbox skills.
+- [x] Preserve Counter; add caller-bound SnakeRegistry and Ignition deployment module/script.
+- [x] Reject empty/duplicate IDs; emit snake ID and manager evidence.
+- [x] Map BR001 on the server to a local unlocked Hardhat development wallet.
+- [x] Suppress node private-key output; keep runtime deployment metadata out of Git.
+- [x] Add non-destructive versioned transaction-attempt migration.
+- [x] Add explicit submit/retry and read/reconcile routes under `/api/v1`.
+- [x] Enforce existing-profile/current-demo-manager restrictions and forbid signer overrides.
+- [x] Persist intent before broadcast and hash before receipt checks; serialize demo signer.
+- [x] Recover uncertain/hashless broadcasts and chain-success/database-failure cases.
+- [x] Expose not-submitted, processing, confirmed and failed states with public evidence.
+- [x] Revalidate scope/receipt/event/manager before reporting confirmation.
+- [x] Preserve historical evidence and refuse silent rebinding after reset/redeployment.
+- [x] Add UI submission/status refresh while retaining uncertified-description notices.
+- [x] Connect existing Compose backend to the host's local chain using a read-only manifest.
+
+### Tested
+
+- [x] Hardhat build and TypeScript typecheck.
+- [x] Contract tests: 10 passed (8 Solidity, 2 existing Mocha).
+- [x] Backend: 53 tests passed with actual local-chain checks enabled, no skips.
+- [x] Frontend tests: 10 passed, covering confirmation, pending, stale and timeout displays.
+- [x] Actual Streamlit -> HTTP API -> PostgreSQL/web3.py -> Hardhat registration.
+- [x] Independent direct contract manager, receipt and event reads.
+- [x] Actual pending transaction, repeat request and conflicting wallet checks.
+- [x] Real chain rejects mismatched instance, code hash and block-anchor evidence.
+- [x] Simulated RPC failures, transaction revert, lost response and DB-write recovery.
+- [x] Compose configuration, image build/start and container-to-host RPC access.
+- [x] Manual browser acceptance performed by the user: correct lookup, new-profile
+  submission to the local chain, transaction evidence after confirmation, consistent
+  results after refresh, and certificates remaining unverified.
+
+### Pending / outside this stage
+
+- [ ] Real authentication and signing outside the local demo.
+- [ ] Certificates, hashes, verification and manager transfers.
+- [ ] Explicit recovery/rebinding policy for profiles belonging to a reset local chain.
+- [ ] Background reconciliation and production confirmation/reorg policy.
+
+After manual acceptance, the user authorized a local commit with message
+`feat: implement local-chain snake registration`. Remote push remains excluded. See
+`snake-registration-chain-development.md` for evidence, commands and limitations.

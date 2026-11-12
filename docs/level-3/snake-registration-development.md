@@ -3,8 +3,9 @@
 Date: 2026-11-12 (Europe/Berlin)
 
 Status: **Database stage complete**, including automated checks and manual browser
-acceptance performed by the user. Real authentication, blockchain registration and
-certificate features remain pending.
+acceptance performed by the user. This document preserves that stage's historical
+record. The subsequent local-chain stage is documented in
+`snake-registration-chain-development.md`; real authentication and certificates remain pending.
 
 ## Existing project and decisions
 
@@ -109,7 +110,7 @@ Example registration body for `POST /api/v1/snakes`:
 Retrieve it with `GET /api/v1/snakes/S001`. A second registration of S001 returns 409.
 The server sets breeder and initial manager to demo BR001; this is not real login.
 
-## Not yet implemented or checked
+## Not yet implemented or checked at the database-stage handoff
 
 - Real authentication, chain registration, signing, transaction reconciliation,
   certificates and confirmed keeper state are not implemented in this iteration.

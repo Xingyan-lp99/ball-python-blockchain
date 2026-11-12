@@ -37,6 +37,24 @@ class SnakeCreate(BaseModel):
         return value
 
 
+class RegistrationSubmit(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+
+class RegistrationRead(BaseModel):
+    status: Literal["not_submitted", "processing", "confirmed", "failed"]
+    chain_check: Literal["not_checked", "verified", "unavailable", "stale", "conflict"]
+    recorded_status: str | None = None
+    error: str | None = None
+    transaction_hash: str | None = None
+    chain_id: int | None = None
+    contract_address: str | None = None
+    manager_address: str | None = None
+    block_number: int | None = None
+    block_hash: str | None = None
+    instance_id: str | None = None
+
+
 class SnakeRead(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
@@ -49,5 +67,6 @@ class SnakeRead(BaseModel):
     breeder_id: str
     current_manager_id: str
     created_at: datetime
-    registration_status: Literal["not_submitted"] = "not_submitted"
+    registration_status: Literal["not_submitted", "processing", "confirmed", "failed"] = "not_submitted"
+    chain_registration: RegistrationRead | None = None
     certificate_status: Literal["not_verified"] = "not_verified"

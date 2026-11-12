@@ -17,3 +17,7 @@ coverage/
 
 # Local files
 .DS_Store
+
+# Local-chain runtime configuration and deployment journals
+.local/
+contracts/ignition/deployments/

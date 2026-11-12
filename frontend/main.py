@@ -39,7 +39,25 @@ if st.button("Check Backend Connection"):
 def show_profile(profile: dict) -> None:
     st.subheader("Saved snake profile")
     st.json(profile)
-    st.info("Saved in the database only. Blockchain registration has not been submitted; certificates have not been verified.")
+    registration = profile.get("chain_registration") or {}
+    status = registration.get("status", "not_submitted")
+    if status == "confirmed" and registration.get("chain_check") == "verified":
+        st.success("Confirmed on the current local Hardhat chain. Certificates have not been verified.")
+    elif status == "processing":
+        st.warning("Processing / confirmation unavailable. This profile is not currently confirmed on-chain.")
+    elif status == "failed":
+        st.error("Registration failed or historical chain evidence is stale. The database profile is retained.")
+    else:
+        st.info("Saved in the database only. Blockchain registration has not been submitted; certificates have not been verified.")
+    if registration:
+        st.write("Registration status:", status)
+        st.write("Transaction hash:", registration.get("transaction_hash") or "Not yet available")
+        st.write("Manager wallet:", registration.get("manager_address") or "Not yet available")
+        st.write("Chain ID:", registration.get("chain_id"))
+        st.write("Registry contract:", registration.get("contract_address"))
+        st.write("Confirmation block:", registration.get("block_number"))
+        if registration.get("error"):
+            st.warning(registration["error"])
     st.caption("Morph description is breeder-provided and has not been certified by a laboratory.")
 
 
@@ -55,7 +73,7 @@ def show_api_error(response: requests.Response) -> None:
 
 
 st.header("Snake Registration")
-st.warning("Demo identity: BR001 is assigned by the server. Real authentication is not implemented.")
+st.warning("Demo identity: BR001 is assigned by the server. Real authentication is not implemented. Local-chain transactions are signed by the server-controlled Hardhat development wallet.")
 with st.form("register_snake"):
     snake_id = st.text_input("Snake ID (required)")
     name = st.text_input("Name (optional)")
@@ -86,7 +104,7 @@ if register:
         )
         if response.status_code == 201:
             st.success("Snake profile saved to the database.")
-            show_profile(response.json())
+            st.session_state["saved_profile"] = response.json()
         else:
             show_api_error(response)
     except (requests.RequestException, ValueError):
@@ -107,8 +125,67 @@ if lookup:
                 timeout=10,
             )
             if response.status_code == 200:
-                show_profile(response.json())
+                st.session_state["saved_profile"] = response.json()
             else:
                 show_api_error(response)
         except (requests.RequestException, ValueError):
             st.error("Query failed. Check backend availability and try again.")
+
+if "saved_profile" in st.session_state:
+    profile = st.session_state["saved_profile"]
+    registration = profile.get("chain_registration") or {}
+    endpoint = f"{API_URL}/api/v1/snakes/{quote(profile['snake_id'], safe='')}/registration"
+    operation = None
+    if registration.get("status") != "confirmed":
+        if st.button(
+            "Submit local-chain registration",
+            disabled=(registration.get("status") == "processing" and not (
+                registration.get("recorded_status") == "prepared" and registration.get("chain_check") == "verified"
+            )) or registration.get("chain_check") in {"stale", "conflict"},
+        ):
+            operation = "submit"
+    if st.button("Refresh chain status"):
+        operation = "refresh"
+    if operation:
+        try:
+            response = (
+                requests.post(endpoint, json={}, timeout=15) if operation == "submit"
+                else requests.get(endpoint, timeout=15)
+            )
+            if response.status_code == 200:
+                registration = response.json()
+                profile["chain_registration"] = registration
+                profile["registration_status"] = registration["status"]
+            else:
+                # Clear any previously displayed success after an unsuccessful check.
+                profile["chain_registration"] = {
+                    **registration, "status": "processing", "chain_check": "unavailable",
+                    "error": "Registration could not be confirmed. Refresh status before retrying.",
+                }
+                profile["registration_status"] = "processing"
+                if response.status_code in {403, 409}:
+                    st.error("Registration is forbidden, conflicts with chain state, or another request is processing. Refresh status for details.")
+                else:
+                    show_api_error(response)
+        except (requests.RequestException, ValueError):
+            profile["chain_registration"] = {
+                **registration, "status": "processing", "chain_check": "unavailable",
+                "error": "Response unavailable; a timeout is not proof of failure. Refresh chain status.",
+            }
+            profile["registration_status"] = "processing"
+        st.session_state["saved_profile"] = profile
+    elif registration.get("status") == "confirmed":
+        # A Streamlit rerun/session cache alone is not current blockchain evidence.
+        try:
+            response = requests.get(endpoint, timeout=15)
+            response.raise_for_status()
+            registration = response.json()
+            profile["chain_registration"] = registration
+            profile["registration_status"] = registration["status"]
+        except (requests.RequestException, ValueError):
+            profile["chain_registration"] = {
+                **registration, "status": "processing", "chain_check": "unavailable",
+                "error": "Current chain could not be checked; historical success is not current confirmation.",
+            }
+            profile["registration_status"] = "processing"
+    show_profile(profile)

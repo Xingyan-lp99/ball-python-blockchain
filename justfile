@@ -28,7 +28,13 @@ check:
     docker compose config --quiet
 
 test-contracts:
-    cd contracts; npx hardhat test
+    cd contracts; npx.cmd hardhat test
+
+chain:
+    cd backend; uv run python dev_chain.py
+
+deploy-registry:
+    cd contracts; npx.cmd hardhat run scripts/deploy-snake-registry.ts --network localhost
 
 migrate:
     cd backend; uv run python migrate.py
