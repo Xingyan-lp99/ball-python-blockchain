@@ -1,4 +1,5 @@
 import io
+import copy
 import unittest
 from unittest.mock import Mock, patch
 from pathlib import Path
@@ -66,7 +67,7 @@ class CertificatePageTests(unittest.TestCase):
         with patch("requests.get", side_effect=self.fake_get):
             app = self.buyer_profile()
             self.assertFalse(app.exception)
-            self.assertTrue(any("Latest-version and revocation checks are not implemented" in item.value for item in app.caption))
+            self.assertTrue(any("Revocation checks are not implemented" in item.value for item in app.caption))
             self.assertTrue(any("not certify every fact" in item.value for item in app.caption))
             self.assertFalse(any("matches this registered" in item.value for item in app.success))
             self.assertEqual(app.selectbox[0].value, "TEST-C001")
@@ -107,6 +108,41 @@ show_file_result({{"file_result": {outcome!r}, "message": "TEST ONLY", "registra
         self.assertEqual(post.call_args.kwargs["json"], {})
         self.assertNotIn("files", post.call_args.kwargs)
 
+    def test_buyer_defaults_to_confirmed_v2_and_can_verify_historical_v1(self):
+        versions = []
+        for number in (1, 2):
+            versions.append({**copy.deepcopy(CERTIFICATE), "version": number,
+                "history_id": "new-history", "registry_kind": "versioned", "original_filename": f"v{number}.pdf",
+                "history_contract_address": "0xNEW", "latest_version_checked": True, "latest_version": 2,
+                "version_status": "latest" if number == 2 else "superseded"})
+        catalog = {"default_history_id": "new-history", "default_version": 2,
+            "histories": [{"history_id": "new-history", "registry_kind": "versioned", "contract_address": "0xNEW", "versions": versions}]}
+        def get(url, **kwargs):
+            if url.endswith("/histories"):
+                return Mock(status_code=200, json=lambda: catalog)
+            if "/versions/" in url and not url.endswith("/file"):
+                return Mock(status_code=200, json=lambda: versions[int(url.rsplit("/", 1)[1]) - 1])
+            return self.fake_get(url, **kwargs)
+        with patch("requests.get", side_effect=get), patch("requests.post", return_value=Mock(status_code=200, json=lambda: {
+            "version": 1, "file_result": "match", "file_source": "platform", "version_status": "superseded",
+            "latest_version_checked": True, "latest_version": 2, "registration": CERTIFICATE["issuance"]})) as post:
+            app = self.buyer_profile()
+            self.assertFalse(app.exception)
+            self.assertEqual(app.selectbox[2].value, 2)
+            app.selectbox[2].set_value(1).run()
+            next(b for b in app.button if b.label == "核验证书").click().run()
+            self.assertFalse(app.exception)
+            self.assertTrue(post.call_args.args[0].endswith("/versions/1/verification/stored"))
+            self.assertEqual(post.call_args.kwargs["params"], {"history_id": "new-history"})
+            self.assertTrue(any("matches this registered V1" in item.value for item in app.success))
+
+    def test_external_v2_transport_scopes_version_and_history(self):
+        with patch("requests.post", return_value=Mock(status_code=200)) as post:
+            verify_v1("http://test", "TEST-C001", self.document(), 2, "new-history")
+        self.assertTrue(post.call_args.args[0].endswith("/versions/2/verification"))
+        self.assertEqual(post.call_args.kwargs["params"], {"history_id": "new-history"})
+        self.assertNotIn("json", post.call_args.kwargs)
+
     def test_no_certificates_has_no_verification_target(self):
         def no_certificates(url, **kwargs):
             if url.endswith("/snakes/TEST-S001/certificates"):
@@ -146,7 +182,7 @@ show_file_result({{"file_result": {outcome!r}, "message": "TEST ONLY", "registra
             app = AppTest.from_file(str(APP_PATH), default_timeout=15).run()
             app.radio[0].set_value("Laboratory").run()
             app.text_input[2].set_value("TEST-C001")
-            next(button for button in app.button if button.label == "Select certificate V1").click().run()
+            next(button for button in app.button if button.label == "Select certificate").click().run()
             self.assertFalse(app.exception)
             self.assertTrue(any("snake_not_registered" in item.value and "BP-S001" in item.value for item in app.warning))
             self.assertTrue(next(button for button in app.button if button.label == "Issue selected V1 on local chain").disabled)

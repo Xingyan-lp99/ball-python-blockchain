@@ -8,7 +8,7 @@ from blockchain.transactions import (
     CHAIN_ERRORS, TransactionProblem, transaction_lock, transaction_report, persist_receipt,
 )
 from certificates.local_chain import CertificateSubject, CertificatePreflightError
-from certificates.models import Certificate, CertificateVersion, IssuanceAttempt, Laboratory, StoredFile
+from certificates.models import Certificate, CertificateHistory, CertificateVersion, IssuanceAttempt, Laboratory, StoredFile
 from certificates.storage import MAX_PDF_BYTES, original_path, save_original
 from snake_registry.local_chain import ChainConflict, ChainStale, hex_value
 from snake_registry.models import Snake
@@ -23,17 +23,19 @@ def blocked_state(attempt, error: CertificatePreflightError):
     return state
 
 
-def selected_certificate(session, certificate_id: str):
+def selected_certificate(session, certificate_id: str, version_number: int = 1, history_id=None):
     row = session.execute(
         select(Certificate, CertificateVersion, Snake, Laboratory, StoredFile)
         .join(CertificateVersion, CertificateVersion.certificate_id == Certificate.id)
         .join(Snake, Snake.id == Certificate.snake_id)
         .join(Laboratory, Laboratory.id == Certificate.laboratory_id)
         .join(StoredFile, StoredFile.id == CertificateVersion.file_id)
-        .where(Certificate.certificate_id == certificate_id.strip(), CertificateVersion.version_number == 1)
+        .join(CertificateHistory, CertificateHistory.id == CertificateVersion.history_id)
+        .where(Certificate.certificate_id == certificate_id.strip(), CertificateVersion.version_number == version_number,
+               CertificateHistory.id == history_id if history_id else CertificateHistory.registry_kind == "legacy")
     ).first()
     if row is None:
-        raise TransactionProblem(404, "Certificate V1 not found")
+        raise TransactionProblem(404, "Selected certificate version/deployment history not found")
     return row
 
 
@@ -44,7 +46,7 @@ def latest_attempt(session, version):
 
 def subject_for(row) -> CertificateSubject:
     certificate, version, snake, _, _ = row
-    return CertificateSubject(certificate.certificate_id, snake.snake_id, version.issuer_address, version.file_hash)
+    return CertificateSubject(certificate.certificate_id, snake.snake_id, version.issuer_address, version.file_hash, version.version_number)
 
 
 def metadata(row, state=None) -> dict:
@@ -88,7 +90,11 @@ def upload_v1(session, certificate_id, snake_id, content, filename, lab_id, chai
         certificate = Certificate(certificate_id=certificate_id, snake_id=snake.id, laboratory_id=laboratory.id)
         session.add_all([stored, certificate])
         session.flush()
-        version = CertificateVersion(certificate_id=certificate.id, version_number=1, file_id=stored.id,
+        history = CertificateHistory(certificate_id=certificate.id, registry_kind="legacy", chain_id=chain.chain_id,
+                                     contract_address=chain.address, instance_id=chain.instance_id)
+        session.add(history)
+        session.flush()
+        version = CertificateVersion(certificate_id=certificate.id, history_id=history.id, version_number=1, file_id=stored.id,
                                      file_hash=digest, hash_algorithm="sha256", issuer_address=chain.manager)
         session.add(version)
         session.commit()
@@ -111,8 +117,13 @@ def new_attempt(row, chain, **values):
 
 def reconcile(session, row, attempt, chain):
     assert_scope(chain, attempt)
+    history = session.get(CertificateHistory, row[1].history_id)
+    if history.contract_address is None:
+        # A migrated, never-submitted legacy draft has no historical chain evidence.
+        # Its target becomes durable with the first intent/recovery commit.
+        history.chain_id, history.contract_address, history.instance_id = chain.chain_id, chain.address, chain.instance_id
     subject = subject_for(row)
-    record = chain.record(subject.certificate_id)
+    record = chain.record(subject.certificate_id) if subject.version == 1 else chain.record(subject.certificate_id, subject.version)
     if record:
         chain.assert_record(subject, record)
         transaction_hash = chain.registration_hash(subject)
@@ -156,7 +167,7 @@ def issuance_state(session, row, chain_factory):
     except ChainStale:
         return transaction_report(attempt, "stale", "Deployment changed or reset; historical issuance is not current")
     except ChainConflict:
-        return transaction_report(attempt, "conflict", "Chain certificate evidence conflicts with the selected V1")
+        return transaction_report(attempt, "conflict", "Chain certificate evidence conflicts with the selected version")
     except CHAIN_ERRORS:
         return transaction_report(attempt, "unavailable", "Chain unavailable; issuance cannot be confirmed")
     except TransactionProblem:
@@ -165,7 +176,7 @@ def issuance_state(session, row, chain_factory):
 
 def issue_v1(session, row, lab_id, chain_factory):
     if lab_id != "LAB001" or row[3].lab_id != lab_id:
-        raise TransactionProblem(403, "Only the server demo issuing laboratory may submit V1")
+        raise TransactionProblem(403, "Only the original server demo laboratory may issue this version")
     with transaction_lock(session):
         attempt = latest_attempt(session, row[1])
         try:
@@ -178,7 +189,7 @@ def issue_v1(session, row, lab_id, chain_factory):
             if attempt is None or attempt.status == "failed":
                 nonce, gas_price, start_block = chain.transaction_parameters()
                 reserved = session.scalar(select(IssuanceAttempt).where(
-                    IssuanceAttempt.chain_id == chain.chain_id, IssuanceAttempt.instance_id == chain.instance_id,
+                    IssuanceAttempt.chain_id == chain.chain_id,
                     IssuanceAttempt.manager_address == chain.manager, IssuanceAttempt.nonce == nonce,
                     IssuanceAttempt.status.in_(["prepared", "submitted"]),
                 ).limit(1))
@@ -200,7 +211,7 @@ def issue_v1(session, row, lab_id, chain_factory):
         except ChainStale:
             raise TransactionProblem(409, "Deployment changed/reset; original PDF and historical evidence retained", code="deployment_stale") from None
         except ChainConflict:
-            raise TransactionProblem(409, "On-chain transaction, receipt or event conflicts with the selected V1; confirmation and overwrite are refused", code="issuance_evidence_conflict") from None
+            raise TransactionProblem(409, "On-chain transaction, receipt or event conflicts with the selected version; confirmation and overwrite are refused", code="issuance_evidence_conflict") from None
         except CHAIN_ERRORS:
             if attempt:
                 return transaction_report(attempt, "unavailable", "RPC response unavailable; refresh before retrying")
@@ -212,24 +223,26 @@ def verify_file(session, row, content, chain_factory, source="external"):
     attempt = latest_attempt(session, row[1])
     state = transaction_report(attempt)
     result = {"certificate_id": row[0].certificate_id, "snake_id": row[2].snake_id,
-              "lab_id": row[3].lab_id, "lab_name": row[3].display_name, "version": 1,
+              "lab_id": row[3].lab_id, "lab_name": row[3].display_name, "version": row[1].version_number,
               "issuer_address": row[1].issuer_address, "file_source": source, "file_sha256": uploaded_hash.hex(),
               "on_chain_sha256": None, "file_result": "unable_to_verify",
-              "registration": state, "latest_version_checked": False, "revocation_checked": False}
+              "registration": state, "latest_version_checked": False, "revocation_checked": False,
+              "version_status": "unknown", "latest_version": None,
+              "history_id": str(row[1].history_id)}
     if source == "external":
         result["uploaded_sha256"] = uploaded_hash.hex()
     try:
         chain = chain_factory()
         assert_scope(chain, attempt)
-        record = chain.record(row[0].certificate_id)
+        record = chain.record(row[0].certificate_id) if row[1].version_number == 1 else chain.record(row[0].certificate_id, row[1].version_number)
         if record is None:
-            result["message"] = "No current on-chain V1 record; file comparison could not be completed"
+            result["message"] = "No current on-chain record for the selected version; file comparison could not be completed"
             if attempt and attempt.status == "confirmed":
                 result["registration"] = transaction_report(attempt, "stale", result["message"])
             return result
         # Hash the actual supplied bytes and compare with LIVE chain evidence.
         # Neither source uses a cached DB digest or the filename as the comparison.
-        subject = CertificateSubject(row[0].certificate_id, row[2].snake_id, row[1].issuer_address, record["file_hash"])
+        subject = CertificateSubject(row[0].certificate_id, row[2].snake_id, row[1].issuer_address, record["file_hash"], row[1].version_number)
         chain.assert_record(subject, record)
         transaction_hash = chain.registration_hash(subject)
         if not transaction_hash:
@@ -246,6 +259,7 @@ def verify_file(session, row, content, chain_factory, source="external"):
         }
         result["on_chain_sha256"] = record["file_hash"].hex()
         result["file_result"] = "match" if uploaded_hash == record["file_hash"] else "mismatch"
+        result.update(version_information(chain, row[0].certificate_id, row[1].version_number))
         label = "The platform-stored PDF" if source == "platform" else "The uploaded external PDF"
         result["message"] = (
             f"{label} matches this registered version. Hash matching does not prove biological findings."
@@ -264,6 +278,19 @@ def verify_file(session, row, content, chain_factory, source="external"):
     return result
 
 
+def version_information(chain, certificate_id, version_number):
+    result = {"version_status": "unknown", "latest_version": None, "latest_version_checked": False}
+    try:
+        # The real adapters always read current contract state. Legacy is provably V1-only.
+        latest = chain.latest_version(certificate_id)
+        if latest >= version_number:
+            result.update(version_status="latest" if latest == version_number else "superseded",
+                          latest_version=latest, latest_version_checked=True)
+    except (ChainStale, ChainConflict, *CHAIN_ERRORS):
+        pass
+    return result
+
+
 def verify_stored_file(session, row, chain_factory):
     # Read the actual platform file on EVERY click; do not read its cached digest.
     try:
@@ -276,6 +303,7 @@ def verify_stored_file(session, row, chain_factory):
         result["registration"] = result.pop("issuance")
         result.pop("sha256", None)
         result.update(file_source="platform", file_sha256=None, on_chain_sha256=None,
+                      version_status="unknown", latest_version=None,
                       file_result="unable_to_verify", message="Platform PDF is unavailable; no file comparison could be completed")
         return result
     # Even invalid/changed PDF bytes should be compared rather than regenerated.

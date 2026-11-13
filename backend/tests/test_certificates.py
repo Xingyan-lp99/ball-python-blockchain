@@ -46,6 +46,9 @@ class FakeCertificateChain:
 
     assert_record = CertificateChain.assert_record
 
+    def latest_version(self, certificate_id):
+        return 1 if certificate_id in self.records else 0
+
     def transaction_parameters(self):
         return len(self.send_calls), 1_000_000_000, 1
 
@@ -81,6 +84,9 @@ class FakeCertificateChain:
 @pytest.fixture
 def certificate_chain(monkeypatch, tmp_path):
     chain = FakeCertificateChain()
+    # Distinct test wallets prevent one test's deliberately pending nonce from
+    # reserving another independent test's fake wallet on the shared test schema.
+    chain.manager = "0x" + uuid4().hex + "12345678"
     monkeypatch.setattr("certificates.routes.get_certificate_chain", lambda: chain)
     monkeypatch.setenv("CERTIFICATE_STORAGE_DIR", str(tmp_path / "certificate-files"))
     return chain
@@ -183,7 +189,7 @@ def test_independent_file_comparison(db_client, certificate_chain, filename, mod
     assert result["uploaded_sha256"] == hashlib.sha256(content).hexdigest()
     assert result["on_chain_sha256"] == hashlib.sha256(make_pdf()).hexdigest()
     assert result["registration"]["status"] == "confirmed"
-    assert not result["latest_version_checked"] and not result["revocation_checked"]
+    assert result["latest_version_checked"] and not result["revocation_checked"]
 
 
 def test_verification_reads_chain_hash_not_database_cache(db_client, certificate_chain, registry_engine):

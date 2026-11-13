@@ -1,5 +1,50 @@
 # Level 3 - Implementation Tasks
 
+## Certificate V2 and deployment-scoped history (2026-11-13)
+
+Status: implemented; TEST ONLY real-chain demonstration completed. Formal V2 PDF
+and user-performed browser acceptance remain pending. See
+`certificate-v2-development.md` and Level 2 `certificate-versions.md`.
+
+### Implemented
+
+- [x] Inspect the immutable current deployment and preserve legacy Solidity/manifests.
+- [x] Deploy a separate versioned registry without resetting the current chain or DB.
+- [x] Require original, still-authorized issuer and immutable snake; contiguous append only.
+- [x] Add migration 004 with explicit deployment histories and unique history/version rows.
+- [x] Preserve old V1 files/attempts and legacy V1 routes; separate new V1 issuance evidence.
+- [x] Add explicit new-history initialization and immutable V2 upload API.
+- [x] Reuse prepared/hash/receipt/event/record recovery and serialize concurrent updates.
+- [x] Reserve LAB001 nonces across both deployments, not independently per contract.
+- [x] Read actual selected-version bytes for platform and optional external verification.
+- [x] Read chain latest version and separate file consistency from version status.
+- [x] Default Buyer to a confirmed version; allow history selection, preview and download.
+- [x] Keep revocation unchecked, demo identity/代签 limits and breeder morphology disclaimer.
+
+### Tested
+
+- [x] Contract build/typecheck and authorization/append/immutable-history regressions.
+- [x] Final results: 25 contract tests, 114 backend tests (including 11 actual-chain tests,
+  no skips), 24 frontend tests passed; earlier restart startup timeouts are recorded.
+- [x] Backend V2 append, roles, deauthorization, duplicate/concurrent requests and immutable files.
+- [x] V2 pending/reverted leaves V1 latest; confirmed V2 makes matching V1 superseded.
+- [x] Live hash comparison, filenames, latest lookup failure, RPC and post-broadcast DB failure.
+- [x] Actual Hardhat HTTP/database flow including pending-hash recovery and contract reads.
+- [x] Actual Buyer AppTest: V2 default, V1/V2 direct verification and historical PDF preview.
+- [x] Rebuild/recreate app containers; byte-identical PDFs and both live versions persist.
+- [x] Original formal V1 remains block 46; new-deployment formal V1 is a new block 62 issuance.
+- [x] Confirm pre-existing unrelated working files and legacy manifests are byte-unchanged.
+
+### Pending / excluded
+
+- [ ] Supply and inspect formal BP-S001 V2 and V2_MODIFIED PDFs, then issue formal V2.
+- [ ] User-performed browser acceptance of the V2 workflow (not claimed by automated tests).
+- [ ] Certificate revocation, real authentication/signing and keeper transfers.
+- [ ] Application V3+ workflow, reset-history recovery, orphan cleanup and backup policy.
+- [ ] Git commit/push: not authorized in this iteration; changes remain unstaged.
+
+The earlier V1 milestone and first-issuance conflict investigation below are retained.
+
 ## Snake registration: database iteration (2026-11-12)
 
 Status: **Complete** for the database stage. Automated checks passed, and the user

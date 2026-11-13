@@ -1,5 +1,9 @@
 # Level 2 - Certificate V1 and Independent File Verification
 
+V2 extension: see `certificate-versions.md` for deployment-scoped histories,
+append-only updates and live latest-version checks. The exclusions below describe
+the original V1 milestone and its retained legacy deployment.
+
 ## Scope and identities
 
 One immutable V1 PDF per globally unique certificate ID, using only local Hardhat

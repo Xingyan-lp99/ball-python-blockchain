@@ -34,10 +34,22 @@ class Certificate(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
 
 
+class CertificateHistory(Base):
+    __tablename__ = "certificate_histories"
+    id: Mapped[UUID] = mapped_column(primary_key=True, default=uuid4)
+    certificate_id: Mapped[UUID] = mapped_column(ForeignKey("certificates.id"))
+    registry_kind: Mapped[str] = mapped_column(Text)
+    chain_id: Mapped[int | None] = mapped_column(BigInteger)
+    contract_address: Mapped[str | None]
+    instance_id: Mapped[str | None]
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+
+
 class CertificateVersion(Base):
     __tablename__ = "certificate_versions"
     id: Mapped[UUID] = mapped_column(primary_key=True, default=uuid4)
     certificate_id: Mapped[UUID] = mapped_column(ForeignKey("certificates.id"))
+    history_id: Mapped[UUID] = mapped_column(ForeignKey("certificate_histories.id"))
     version_number: Mapped[int] = mapped_column(default=1)
     file_id: Mapped[UUID] = mapped_column(ForeignKey("files.id"))
     file_hash: Mapped[bytes] = mapped_column(LargeBinary)

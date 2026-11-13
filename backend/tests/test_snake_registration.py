@@ -138,7 +138,7 @@ def test_migration_is_repeatable(db_client, registry_engine):
     migrate(registry_engine)
     assert db_client.get(f"{ENDPOINT}/{snake_id}").status_code == 200
     with registry_engine.connect() as connection:
-        assert connection.scalar(text("SELECT count(*) FROM schema_migrations")) == 3
+        assert connection.scalar(text("SELECT count(*) FROM schema_migrations")) == 4
 
 
 def test_persistence_after_http_application_restart(registry_engine):
@@ -163,7 +163,9 @@ def test_persistence_after_http_application_restart(registry_engine):
         )
         try:
             with httpx.Client(base_url=f"http://127.0.0.1:{port}", timeout=3, trust_env=False) as client:
-                deadline = time.monotonic() + 15
+                # Full-suite Windows process startup can exceed 15s under load.
+                # Still require a real healthy HTTP response before testing restart.
+                deadline = time.monotonic() + 30
                 while True:
                     assert process.poll() is None, "HTTP application exited before becoming ready"
                     try:

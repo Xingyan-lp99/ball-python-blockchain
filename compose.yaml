@@ -34,6 +34,7 @@ services:
       LOCAL_CHAIN_RPC_URL: http://host.docker.internal:8545
       LOCAL_CHAIN_DEPLOYMENT: /app/local-chain/snake-registry.json
       CERTIFICATE_CHAIN_DEPLOYMENT: /app/local-chain/certificate-registry.json
+      CERTIFICATE_VERSIONED_DEPLOYMENT: /app/local-chain/certificate-versioned-registry.json
       CERTIFICATE_STORAGE_DIR: /app/certificate-files
 
     volumes:

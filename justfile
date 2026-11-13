@@ -39,6 +39,9 @@ deploy-registry:
 deploy-certificates:
     cd contracts; npx.cmd hardhat run scripts/deploy-certificate-registry.ts --network localhost
 
+deploy-versioned-certificates:
+    cd contracts; npx.cmd hardhat run scripts/deploy-versioned-certificate-registry.ts --network localhost
+
 migrate:
     cd backend; uv run python migrate.py
 

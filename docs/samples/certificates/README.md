@@ -1,5 +1,12 @@
 # Formal certificate input
 
+For the V2 stage, supply `BP-S001_Certificate_V2.pdf` and
+`BP-S001_Certificate_V2_MODIFIED.pdf` here. Neither was found during implementation.
+Inspect the same series CERT-LAB001-BP-S001, BP-S001 subject and laboratory name
+before use. Upload only the original as formal V2; MODIFIED is external verification
+input only. Generated TEST ONLY V2 originals/derived modifications are kept in
+ignored `.local/`, under a separate test series so formal V2 stays unoccupied.
+
 Place the supplied original here as `BP-S001_Certificate_V1.pdf`. It was absent during
 implementation; no replacement formal certificate was invented.
 
