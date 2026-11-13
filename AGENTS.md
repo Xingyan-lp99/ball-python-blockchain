@@ -49,4 +49,4 @@ Lower levels change more frequently.
 13. Do not expose secrets or private keys.
 14. Keep Solidity contract logic separate
     from FastAPI business logic.
-15. Do not invent requirements.
+15. Do not invent requirements
