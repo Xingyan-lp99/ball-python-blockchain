@@ -74,12 +74,14 @@ Before implementation:
 3. Read the relevant Level 2 specification.
 4. Check the current Level 3 task.
 5. Explain the implementation plan.
+6. Explain the workflow step and proposed inputs and outputs, with reasons and an example. Obtain explicit human agreement before providing implementation code in chat.
 
 During implementation:
 1. Make small, focused changes.
 2. Stay within the approved task scope.
 3. Add or update relevant tests.
 4. Do not change architecture without approval.
+5. Follow AGENTS.md: the human inserts all program code, tests, SQL, and executable configuration. The AI may directly write only agreed explanatory comments in code files, and agreed documentation and diagrams. Do not bypass this rule with generation or formatting commands.
 
 After implementation:
 1. Run relevant tests.

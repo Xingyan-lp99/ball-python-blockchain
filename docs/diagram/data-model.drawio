@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device" version="24.7.17">
+  <diagram id="logical-model" name="Combined logical model">
+    <mxGraphModel dx="2800" dy="2200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2800" pageHeight="2200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="BALL PYTHON REGISTRY | ONE-WEEK DEMONSTRATION&#10;One snake / breeder + buyer / two laboratories / one revision / match + mismatch / one transfer" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#ffffff;strokeColor=#ffffff;fontSize=24;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry x="30" y="20" width="2720" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="db_area" value="OFF-CHAIN | PostgreSQL logical entities + local file references&#10;Solid arrows: parent -&gt; referencing entity; labels state cardinality. PK = primary key; FK = foreign key." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f5f9ff;strokeColor=#6c8ebf;fontSize=17;align=left;verticalAlign=top;spacing=16;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="140" width="1750" height="1700" as="geometry" />
+        </mxCell>
+        <mxCell id="chain_area" value="ON-CHAIN | Logical contract state and events&#10;Green boxes are not SQL tables or separate-contract requirements.&#10;Dashed links map identifiers/evidence across the storage boundary." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#f2faee;strokeColor=#82b366;fontSize=17;align=left;verticalAlign=top;spacing=16;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1840" y="140" width="910" height="1700" as="geometry" />
+        </mxCell>
+        <mxCell id="participants" value="participants&#10;PK participant_id&#10;display_name&#10;wallet_address&#10;One local account per participant" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry x="80" y="280" width="340" height="185" as="geometry" />
+        </mxCell>
+        <mxCell id="snakes" value="snakes&#10;PK snake_id&#10;FK breeder_id -&gt; participants&#10;FK current_keeper_id -&gt; participants&#10;  (confirmed cache; unset before registration)&#10;breeder_internal_id / nickname&#10;species / sex / date_of_birth&#10;introduction / genetic_description&#10;sire_description / dam_description&#10;photo_reference&#10;created_at / updated_at" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry x="650" y="280" width="390" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="laboratories" value="laboratories&#10;PK laboratory_id&#10;FK participant_id -&gt; participants&#10;name / testing_direction&#10;One profile per lab participant" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="280" width="360" height="185" as="geometry" />
+        </mxCell>
+        <mxCell id="series" value="certificate_series&#10;PK series_id&#10;FK snake_id -&gt; snakes&#10;FK laboratory_id -&gt; laboratories&#10;title" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="630" width="360" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="versions" value="certificate_versions&#10;PK version_id&#10;FK series_id -&gt; certificate_series&#10;FK previous_version_id -&gt; self (optional)&#10;version_number (unique within series)&#10;file_reference / file_hash&#10;issuer_address / status / issued_at&#10;Original PDFs preserved off-chain&#10;Predecessor belongs to same series" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="930" width="380" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="transfers" value="keeper_transfers&#10;PK transfer_id&#10;FK snake_id -&gt; snakes&#10;FK from_participant_id -&gt; participants&#10;FK to_participant_id -&gt; participants&#10;status / initiated_at / resolved_at&#10;Resolved time absent while pending" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry x="650" y="930" width="390" height="235" as="geometry" />
+        </mxCell>
+        <mxCell id="transactions" value="blockchain_transactions&#10;PK transaction_id&#10;transaction_hash / operation / status&#10;FK snake_id -&gt; snakes (optional)&#10;FK version_id -&gt; certificate_versions (optional)&#10;FK transfer_id -&gt; keeper_transfers (optional)&#10;submitted / confirmed / failed&#10;Link the relevant operation target" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry x="650" y="1280" width="390" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="files_note" value="FILES AND VERIFICATION&#10;PDFs and photographs stay off-chain.&#10;References point to local file storage.&#10;Verification uploads are temporary.&#10;No report-result parsing.&#10;No private keys in SQL or responses.&#10;The modified V2 is not registered." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry x="80" y="950" width="340" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="roles_note" value="LOCAL DEMO IDENTITIES&#10;Breeder / buyer / LAB001 / LAB002&#10;Administrative setup authorizes labs.&#10;A participant may have multiple roles.&#10;Role selection is a demo convenience,&#10;not production authentication.&#10;No laboratory deauthorization screen." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry x="80" y="570" width="340" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="care_note" value="FOUR PARALLEL HUSBANDRY ENTITIES | Each has PK record_id; FK snake_id -&gt; snakes; FK created_by -&gt; participants; record_date; created_at; updated_at.&#10;Each snake and each author has 0..N rows in EACH table below. Shared fields here are a legend, not a shared parent entity." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1540" width="1620" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="growth" value="growth_records&#10;Common fields above +&#10;weight_g / length_cm (optional) / notes" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1670" width="360" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="shedding" value="shedding_records&#10;Common fields above +&#10;outcome / follow_up" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry x="500" y="1670" width="360" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="feeding" value="feeding_records&#10;Common fields above +&#10;food / feeding_outcome / notes" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry x="920" y="1670" width="360" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="health" value="health_records&#10;Common fields above +&#10;event / follow_up / status" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="1670" width="360" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="rights" value="SNAKE MANAGEMENT RIGHTS&#10;snake_id &lt;-&gt; snakes.snake_id&#10;current_keeper_address &lt;-&gt; participant wallet address&#10;Registration and transfer events preserve keeper history.&#10;Registrant becomes initial keeper.&#10;Chain state is authoritative; SQL keeper is only a cache." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=18;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry x="1900" y="300" width="780" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="lab_permission" value="LABORATORY ISSUANCE PERMISSION&#10;Laboratory account address / issuance permission&#10;Two different local accounts; same certificate workflow.&#10;Testing direction remains descriptive metadata off-chain." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=18;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry x="1900" y="650" width="780" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="evidence" value="CERTIFICATE EVIDENCE&#10;series/version references / snake identifier / issuer address&#10;file hash / version number / predecessor / lifecycle status&#10;V1 -&gt; superseded after confirmed V2; original retained.&#10;Specified-version revocation does not restore old versions.&#10;No revocation screen required for the demo.&#10;No PDF bytes, biological findings, or photos on-chain." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=18;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry x="1900" y="950" width="780" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="transfer_state" value="TRANSFER STATE AND EVENTS&#10;transfer reference / snake identifier / from + to addresses&#10;pending / accepted / rejected / cancelled&#10;Current keeper initiates; recipient accepts or rejects.&#10;Current keeper may cancel; at most one pending transfer.&#10;Confirmation changes keeper, not breeder or record authors.&#10;Pending acceptance differs from unconfirmed transaction." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=18;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry x="1900" y="1330" width="780" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="chain_note" value="NO HUSBANDRY BLOCKCHAIN WRITES&#10;Growth, shedding, feeding, health, profile content, and photos&#10;have no on-chain hashes or commitments.&#10;An unavailable chain read must not grant write access&#10;or be reported as a file hash mismatch." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=17;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry x="1900" y="1630" width="780" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="permissions" value="RECORD PERMISSIONS&#10;Current keeper: add rows; edit/delete only their own rows.&#10;Previous keeper: no writes after transfer, even to own rows.&#10;Previous keeper rows: read-only to the new keeper.&#10;Edits keep latest content only; permitted deletion removes a row.&#10;Never delete certificate or transfer history through care actions.&#10;Buyer profile/photo editing is outside the demo." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=17;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1880" width="870" height="235" as="geometry" />
+        </mxCell>
+        <mxCell id="demo" value="SEVEN DEMONSTRATION STEPS&#10;1 Breeder registers snake -&gt; 2 Two labs issue separate reports&#10;3 LAB001 adds V2 -&gt; 4 Buyer verifies original V2: MATCH&#10;5 Buyer verifies modified V2: MISMATCH&#10;6 Breeder initiates / buyer accepts management-rights transfer&#10;7 Buyer adds, edits, and deletes their own husbandry rows&#10;Existing breeder rows demonstrate read-only history." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=17;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry x="950" y="1880" width="870" height="235" as="geometry" />
+        </mxCell>
+        <mxCell id="limits" value="EVIDENCE AND SCOPE&#10;Hash match proves byte consistency, not biological truth.&#10;Show file match separately from version lifecycle status.&#10;Submitted transactions are not completed operations.&#10;Logical model only: types, indexes, API and contract layouts&#10;are discussed during human-approved coding steps.&#10;One week / local Hardhat / simple Streamlit / no payments." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=17;align=left;verticalAlign=top;spacing=16;" vertex="1" parent="1">
+          <mxGeometry x="1870" y="1880" width="880" height="235" as="geometry" />
+        </mxCell>
+        <mxCell id="breeder_fk" value="1 -&gt; 0..N | breeder" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontSize=13;labelBackgroundColor=#ffffff;strokeWidth=1.5;strokeColor=#52677e;exitX=1;exitY=0.3;entryX=0;entryY=0.15;" edge="1" parent="1" source="participants" target="snakes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="keeper_fk" value="1 -&gt; 0..N | keeper cache" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontSize=13;labelBackgroundColor=#ffffff;strokeWidth=1.5;strokeColor=#52677e;exitX=1;exitY=0.8;entryX=0;entryY=0.6;" edge="1" parent="1" source="participants" target="snakes">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="lab_fk" value="1 -&gt; 0..1 | laboratory profile" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontSize=13;labelBackgroundColor=#ffffff;strokeWidth=1.5;strokeColor=#52677e;exitX=0.9;exitY=0;entryX=0.5;entryY=0;" edge="1" parent="1" source="participants" target="laboratories">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="240" />
+              <mxPoint x="1460" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="snake_series" value="1 -&gt; 0..N | reports" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontSize=13;labelBackgroundColor=#ffffff;strokeWidth=1.5;strokeColor=#52677e;exitX=1;exitY=0.8;entryX=0;entryY=0.5;" edge="1" parent="1" source="snakes" target="series">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1130" y="580" />
+              <mxPoint x="1130" y="710" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lab_series" value="1 -&gt; 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontSize=13;labelBackgroundColor=#ffffff;strokeWidth=1.5;strokeColor=#52677e;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="laboratories" target="series">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="series_versions" value="1 -&gt; 1..N confirmed versions" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontSize=13;labelBackgroundColor=#ffffff;strokeWidth=1.5;strokeColor=#52677e;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="series" target="versions">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="predecessor" value="0..1 predecessor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontSize=13;labelBackgroundColor=#ffffff;strokeWidth=1.5;strokeColor=#52677e;exitX=1;exitY=0.2;entryX=1;entryY=0.8;" edge="1" parent="1" source="versions" target="versions">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1730" y="990" />
+              <mxPoint x="1730" y="1160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="snake_transfers" value="1 -&gt; 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontSize=13;labelBackgroundColor=#ffffff;strokeWidth=1.5;strokeColor=#52677e;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="snakes" target="transfers">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="participant_transfers" value="1 -&gt; 0..N | sender / recipient" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontSize=13;labelBackgroundColor=#ffffff;strokeWidth=1.5;strokeColor=#52677e;exitX=1;exitY=1;entryX=0;entryY=0.5;" edge="1" parent="1" source="participants" target="transfers">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="470" y="500" />
+              <mxPoint x="470" y="1040" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="transfer_tx" value="1 -&gt; 0..N | action transactions" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontSize=13;labelBackgroundColor=#ffffff;strokeWidth=1.5;strokeColor=#52677e;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="transfers" target="transactions">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="version_tx" value="1 -&gt; 0..N | version operations" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontSize=13;labelBackgroundColor=#ffffff;strokeWidth=1.5;strokeColor=#52677e;exitX=0;exitY=0.7;entryX=1;entryY=0.4;" edge="1" parent="1" source="versions" target="transactions">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1150" y="1130" />
+              <mxPoint x="1150" y="1380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="snake_tx" value="1 -&gt; 0..N | registration" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontSize=13;labelBackgroundColor=#ffffff;strokeWidth=1.5;strokeColor=#52677e;exitX=0;exitY=0.9;entryX=0;entryY=0.6;" edge="1" parent="1" source="snakes" target="transactions">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="620" />
+              <mxPoint x="560" y="1430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="map_rights" value="snake_id / confirmed keeper" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontSize=13;labelBackgroundColor=#ffffff;strokeWidth=1.5;dashed=1;strokeColor=#2d7600;exitX=1;exitY=0.6;entryX=0;entryY=0.5;" edge="1" parent="1" source="snakes" target="rights">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1100" y="510" />
+              <mxPoint x="1100" y="540" />
+              <mxPoint x="1810" y="540" />
+              <mxPoint x="1810" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="map_labs" value="participant wallet address" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontSize=13;labelBackgroundColor=#ffffff;strokeWidth=1.5;dashed=1;strokeColor=#2d7600;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="laboratories" target="lab_permission">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1760" y="370" />
+              <mxPoint x="1760" y="720" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="map_evidence" value="version identity / evidence" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontSize=13;labelBackgroundColor=#ffffff;strokeWidth=1.5;dashed=1;strokeColor=#2d7600;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="versions" target="evidence">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="map_transfer" value="transfer identity / confirmed events" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontSize=13;labelBackgroundColor=#ffffff;strokeWidth=1.5;dashed=1;strokeColor=#2d7600;exitX=1;exitY=0.95;entryX=0;entryY=0.5;" edge="1" parent="1" source="transfers" target="transfer_state">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1090" y="1235" />
+              <mxPoint x="1790" y="1235" />
+              <mxPoint x="1790" y="1440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="snake_growth" value="snake: 1 -&gt; 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;strokeColor=#52677e;exitX=1;exitY=0.9;entryX=0.5;entryY=0;" edge="1" parent="1" source="snakes" target="growth">
+          <mxGeometry relative="1" x="0.92" as="geometry">
+            <Array as="points">
+              <mxPoint x="1180" y="613" />
+              <mxPoint x="1180" y="820" />
+              <mxPoint x="1750" y="820" />
+              <mxPoint x="1750" y="1640" />
+              <mxPoint x="260" y="1640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="author_growth" value="author: 1 -&gt; 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;strokeColor=#52677e;exitX=0;exitY=0.5;entryX=0.5;entryY=1;" edge="1" parent="1" source="participants" target="growth">
+          <mxGeometry relative="1" x="0.92" as="geometry">
+            <Array as="points">
+              <mxPoint x="50" y="372" />
+              <mxPoint x="50" y="1820" />
+              <mxPoint x="260" y="1820" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="snake_shedding" value="snake: 1 -&gt; 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;strokeColor=#52677e;exitX=1;exitY=0.9;entryX=0.5;entryY=0;" edge="1" parent="1" source="snakes" target="shedding">
+          <mxGeometry relative="1" x="0.92" as="geometry">
+            <Array as="points">
+              <mxPoint x="1180" y="613" />
+              <mxPoint x="1180" y="820" />
+              <mxPoint x="1750" y="820" />
+              <mxPoint x="1750" y="1640" />
+              <mxPoint x="680" y="1640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="author_shedding" value="author: 1 -&gt; 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;strokeColor=#52677e;exitX=0;exitY=0.5;entryX=0.5;entryY=1;" edge="1" parent="1" source="participants" target="shedding">
+          <mxGeometry relative="1" x="0.92" as="geometry">
+            <Array as="points">
+              <mxPoint x="50" y="372" />
+              <mxPoint x="50" y="1820" />
+              <mxPoint x="680" y="1820" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="snake_feeding" value="snake: 1 -&gt; 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;strokeColor=#52677e;exitX=1;exitY=0.9;entryX=0.5;entryY=0;" edge="1" parent="1" source="snakes" target="feeding">
+          <mxGeometry relative="1" x="0.92" as="geometry">
+            <Array as="points">
+              <mxPoint x="1180" y="613" />
+              <mxPoint x="1180" y="820" />
+              <mxPoint x="1750" y="820" />
+              <mxPoint x="1750" y="1640" />
+              <mxPoint x="1100" y="1640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="author_feeding" value="author: 1 -&gt; 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;strokeColor=#52677e;exitX=0;exitY=0.5;entryX=0.5;entryY=1;" edge="1" parent="1" source="participants" target="feeding">
+          <mxGeometry relative="1" x="0.92" as="geometry">
+            <Array as="points">
+              <mxPoint x="50" y="372" />
+              <mxPoint x="50" y="1820" />
+              <mxPoint x="1100" y="1820" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="snake_health" value="snake: 1 -&gt; 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;strokeColor=#52677e;exitX=1;exitY=0.9;entryX=0.5;entryY=0;" edge="1" parent="1" source="snakes" target="health">
+          <mxGeometry relative="1" x="0.92" as="geometry">
+            <Array as="points">
+              <mxPoint x="1180" y="613" />
+              <mxPoint x="1180" y="820" />
+              <mxPoint x="1750" y="820" />
+              <mxPoint x="1750" y="1640" />
+              <mxPoint x="1520" y="1640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="author_health" value="author: 1 -&gt; 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;strokeColor=#52677e;exitX=0;exitY=0.5;entryX=0.5;entryY=1;" edge="1" parent="1" source="participants" target="health">
+          <mxGeometry relative="1" x="0.92" as="geometry">
+            <Array as="points">
+              <mxPoint x="50" y="372" />
+              <mxPoint x="50" y="1820" />
+              <mxPoint x="1520" y="1820" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

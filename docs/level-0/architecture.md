@@ -4,12 +4,16 @@
 
 Project name: Ball Python Blockchain Registry
 
-The application provides a shared digital registry for ball python identity, genetic certificates, certificate verification, and keeper history.
+The application is a one-week learning demonstration of ball python identity, laboratory certificate integrity, and keeper management rights. It is not a production platform.
 
 Primary participants:
 - Breeders register ball pythons and provide identity information.
-- Authorized laboratories issue and revise genetic certificates.
+- Two authorized laboratories issue reports in different testing directions; one revises its report once. Both use the same certificate workflow without parsing test results.
 - Buyers verify certificates and may become new keepers.
+
+The fixed demonstration uses one fictional snake: registration by its breeder, two independently issued reports, one report revision, a matching and a mismatching file verification, one keeper transfer after an offline sale, and buyer creation, editing, and deletion of their own husbandry records. See [the logical data model](../level-1/data-model.md) for the acceptance sequence.
+
+Use distinct local Hardhat test accounts for the demonstration roles. A role selector is a local demonstration convenience, not production authentication. Browser wallet integration, payments, marketplace features, production deployment, laboratory deauthorization screens, and report-result parsing are outside this iteration.
 
 ## 2. Architecture Style
 
@@ -66,7 +70,7 @@ Version control: Git
 - Compile Solidity contracts.
 - Run contract tests.
 - Deploy contracts to a local development blockchain.
-- Support later deployment to a test network.
+- Use a local development blockchain for this iteration; test-network deployment is outside the demonstration.
 
 ### web3.py
 
@@ -93,7 +97,7 @@ Off-chain:
 - Husbandry records
 - User-facing metadata
 
-Where an off-chain record requires blockchain integrity verification, store a corresponding cryptographic commitment on-chain.
+Only certificate file integrity and keeper management rights use blockchain evidence in this iteration. Husbandry records, profile content, and photographs have no on-chain hashes or commitments. Snake identifiers connect the on-chain rights and certificates to the off-chain profile; they do not put the full profile on-chain.
 
 Do not store large PDFs, photographs, or sensitive personal information directly on-chain.
 
@@ -102,9 +106,11 @@ Do not store large PDFs, photographs, or sensitive personal information directly
 - Only authorized laboratories can issue certificates.
 - A laboratory may revise or revoke only certificates it issued.
 - Historical certificate versions remain traceable.
+- Revocation targets a specified certificate version and does not restore a superseded version. Revocation remains part of the logical design; a revocation demonstration screen is outside this iteration.
+- The registering account becomes the initial keeper. Breeder attribution does not change when keeper rights are transferred.
 - Only the current keeper may initiate a transfer.
 - Only the designated recipient may accept a transfer.
-- The former keeper cannot add new keeper records after a completed transfer.
+- Only the current keeper may add husbandry records, and may edit or delete only records they originally authored. Former keeper records are read-only to both parties after transfer. Ordinary husbandry edits retain only the latest content.
 - Administrators may manage laboratory authorization but cannot forcibly transfer snake records.
 - A file hash proves byte-level consistency with a recorded hash, not the biological truth of the laboratory's findings.
 
@@ -117,6 +123,8 @@ Do not store large PDFs, photographs, or sensitive personal information directly
 - Use Docker Compose for reproducible local services.
 - Use Just to simplify developer commands.
 - Do not introduce additional frameworks without approval.
+- Follow the mandatory human-AI learning workflow in AGENTS.md. The human inserts all program code; the AI may maintain agreed documentation and diagrams.
+- Keep all four husbandry tables simple and off-chain. Their purpose is to demonstrate the practical effect of a keeper transfer, not a complete animal-care product.
 
 ## 7. Architecture Decisions Requiring Approval
 

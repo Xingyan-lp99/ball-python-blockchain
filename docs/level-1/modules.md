@@ -4,6 +4,8 @@
 
 This document describes the six business modules inside the FastAPI backend and how they work together. It follows the architecture and conventions defined in Level 0. Unresolved details are listed as open design questions.
 
+This iteration is a one-week local demonstration, limited to the seven steps in [the logical data model](data-model.md). Module names describe responsibilities inside one application, not six independently built products. Use fixed local Hardhat role accounts and simple Streamlit views. Do not add production login, wallets, payments, marketplace features, report parsing, or husbandry blockchain evidence.
+
 The backend is a modular monolith: one FastAPI application containing separate, focused business modules. The modules are parts of the same application, not independently deployed services.
 
 Streamlit communicates with FastAPI through REST-style HTTP endpoints under `/api/v1`. FastAPI manages PostgreSQL records and file storage, and uses web3.py to interact with Solidity contracts on an Ethereum-compatible blockchain. Streamlit does not access PostgreSQL directly.
@@ -18,7 +20,7 @@ Maintain each snake's registered identity and detailed profile.
 
 - Register a snake and its initial keeper.
 - Retrieve a snake's identity and profile.
-- Maintain profile information, subject to an agreed editing policy.
+- Save the breeder's initial profile and display it. Post-transfer profile and photo editing screens are outside this demonstration.
 - Provide other modules with snake existence and current keeper information.
 
 ### On-Chain Responsibilities
@@ -35,7 +37,7 @@ No required dependency on another business module for basic registration. This m
 
 ### Authorization Boundaries
 
-Breeders register snakes according to Level 0. Precise registration permissions, initial keeper assignment rules, and profile editing permissions remain open. This module must not provide a way to bypass keeper transfer rules.
+The breeder registers the demonstration snake. The registering address becomes the initial keeper on confirmation; initial keeper assignment to someone else is not part of this iteration. Breeder attribution remains unchanged by transfer. This module must not provide a way to bypass keeper transfer rules.
 
 ## 3. Laboratory Authorization
 
@@ -46,7 +48,7 @@ Manage which laboratory addresses are authorized to issue certificates.
 ### Main Operations
 
 - Grant laboratory authorization.
-- Remove laboratory authorization.
+- Laboratory deauthorization is outside this demonstration; do not build a screen for it.
 - Check whether a laboratory address is currently authorized.
 
 ### On-Chain Responsibilities
@@ -55,7 +57,7 @@ Coordinate and read laboratory authorization changes. Solidity enforces permissi
 
 ### Off-Chain Responsibilities
 
-Track application records associated with authorization transactions. Any additional laboratory profile information requires a defined feature requirement.
+Store the laboratory identifier, name, descriptive testing direction, and participant link defined in the logical model. Track setup transactions where needed. Both laboratories use the same certificate logic; directions do not introduce separate result schemas.
 
 ### Dependencies
 
@@ -65,7 +67,7 @@ No required dependency on another business module. Certificate Management and Ce
 
 Only administrators may manage laboratory authorization. This authority does not allow administrators to forcibly transfer snakes or revise another issuer's certificates.
 
-The effect of removing laboratory authorization on existing certificates and later revision or revocation remains an open question.
+Provision the two local laboratory addresses during administrative setup. Removing laboratory authorization and its effect on earlier certificates are deferred; those decisions must not block the fixed demonstration.
 
 ## 4. Certificate Management
 
@@ -77,18 +79,18 @@ Manage certificate issuance, append-only revision, revocation, and traceable ver
 
 - Issue a certificate for a registered snake.
 - Revise a certificate by appending a new version, without overwriting previous versions.
-- Revoke a certificate according to the agreed status rules.
+- Represent specified-version revocation in the logical design; a revocation demonstration screen is outside this iteration.
 - Retrieve certificate details and all previous versions, subject to file access permissions.
 
 ### On-Chain Responsibilities
 
 Coordinate recording of certificate hashes, version references, issuers, and statuses. Each version must preserve its own hash, issuer, version reference, and status information. Solidity enforces certificate issuer permissions.
 
-Status changes such as supersession or revocation must remain traceable and must not erase a version's identity or evidence. The precise status transition and history representation is a Level 2 decision.
+Status changes must not erase a version's identity or evidence. A confirmed correction adds a current version and supersedes the predecessor. Revocation targets a specified version and does not restore an older version. Detailed contract representation is a later small coding task.
 
 ### Off-Chain Responsibilities
 
-Manage original certificate PDFs, file references, genetic descriptions, and related metadata. Calculate certificate file hashes before submitting them for recording on-chain.
+Manage original certificate PDFs, file references, series/version identifiers, and display metadata. Calculate certificate file hashes before submitting them for recording on-chain. New independent tests create new series; corrections append versions within the existing series. Do not extract genetic or pathogen results from PDFs. Breeder genetic descriptions belong to the off-chain snake profile.
 
 Revisions are append-only. Previous files and version records remain accessible under the agreed access policy; uploading a revision must not replace or delete them.
 
@@ -175,7 +177,7 @@ Snake Registry provides snake identity and current keeper queries.
 - Only the designated recipient may accept or reject it.
 - The current keeper may cancel a pending transfer.
 - Administrators cannot forcibly transfer snake records.
-- After completion, the former keeper cannot append new keeper records.
+- After completion, the former keeper cannot add, edit, or delete husbandry records, even records they originally authored. The new keeper cannot edit or delete the predecessor's records.
 
 Husbandry Records enforces the final rule using current keeper information. Rejection and cancellation do not grant keeper rights to the recipient.
 
@@ -188,32 +190,29 @@ Maintain care records associated with a registered snake, preserving their origi
 ### Main Operations
 
 - Add a husbandry record.
-- Retrieve husbandry history according to the agreed access policy.
-- Support recording and checking on-chain integrity commitments for selected records, with the exact workflow defined at Level 2.
+- Display separate fixed-column tables for growth, shedding, feeding, and health records.
+- Edit or delete only rows authored by the acting current keeper.
+- Retrieve retained husbandry history without changing original authorship.
 
-Record fields and editing or deletion policies are not defined here.
+Fields and permissions are defined in [the logical data model](data-model.md). These are parallel off-chain tables; no generic parent record or audit subsystem is required.
 
 ### On-Chain Responsibilities
 
-Read current keeper information for authorization through Snake Registry. Support cryptographic commitments for selected husbandry records so that their integrity can be checked against blockchain evidence.
-
-A commitment is a compact cryptographic value used to check whether the associated off-chain data has changed. Detailed husbandry content remains off-chain. Record selection, commitment format, submission timing, and verification strategy are Level 2 design decisions.
+Read confirmed current keeper information for authorization through Snake Registry. This module submits no blockchain transactions, hashes, or commitments. All husbandry content remains off-chain.
 
 ### Off-Chain Responsibilities
 
 Store detailed husbandry records in PostgreSQL. Associate each record with its snake and original author, and preserve that attribution when the keeper changes. A transfer must not reassign historical authorship to the new keeper.
 
-Maintain the association between selected records and their on-chain commitments and transaction outcomes, according to the Level 2 strategy.
+Ordinary edits retain only the latest content. A permitted deletion removes the author's husbandry row; it must not cascade into certificate or transfer history. No content revision archive or soft-delete system is required.
 
 ### Dependencies
 
-Snake Registry provides snake identity and current keeper information. Shared web3.py integration supports commitment operations; Certificate Verification remains focused on certificates.
+Snake Registry provides snake identity and confirmed current keeper information. Certificate Verification remains focused on certificates.
 
 ### Authorization Boundaries
 
-The proposed write policy is that only the current keeper may append husbandry records. Former keepers cannot append new records after transfer completion. Permission must be checked against current keeper information, not merely the record author's past relationship to the snake.
-
-Access to historical records, permission to correct earlier entries, and authorization to submit commitments remain open. Any correction policy must preserve attribution to original authors and respect existing integrity evidence.
+Only the current keeper may add records. Editing or deletion requires both current keeper status and original authorship. Former keepers cannot write after transfer, and the new keeper cannot alter predecessor-authored rows. Never reassign a record's author during transfer or editing. If current keeper evidence is unavailable, do not authorize writes from a cached historical relationship. The local demonstration can show retained history to its role accounts; a production privacy/access system is outside scope.
 
 ## 8. Communication Inside One FastAPI Application
 
@@ -241,11 +240,11 @@ The six backend modules do not imply six Solidity contracts. Contract organizati
 
 A PostgreSQL update and a blockchain transaction cannot be treated as one automatically atomic operation: one may succeed while the other fails.
 
-The design tracks transaction progress and distinguishes submitted, confirmed, and failed outcomes. Modules must use confirmed blockchain state for on-chain facts rather than assuming that submission succeeded. This applies to registration, laboratory authorization, certificates, transfers, and husbandry commitments.
+The design tracks transaction progress and distinguishes submitted, confirmed, and failed outcomes. Modules must use confirmed blockchain state for on-chain facts rather than assuming that submission succeeded. This applies to registration, laboratory setup, certificates, and transfers. Husbandry records have no blockchain transactions.
 
 Backend permission checks help reject invalid requests early. Solidity must independently enforce on-chain authorization and state rules when a transaction executes, including competing transfer actions.
 
-The detailed confirmation, retry, duplicate-request, and recovery policies remain open. The husbandry write policy must also account for a transfer completing near the time a record is added; the exact coordination rule is a Level 2 decision.
+Discuss the minimal local confirmation and failure-handling behavior during the relevant coding task. Read confirmed keeper state before husbandry writes; do not claim that SQL and the blockchain form one atomic system. Production retry infrastructure, general event indexing, and distributed race recovery are not requirements for this sequential local demonstration.
 
 Private keys must not be stored in PostgreSQL or exposed through API responses.
 
@@ -253,21 +252,18 @@ Private keys must not be stored in PostgreSQL or exposed through API responses.
 
 | Area | Question to resolve |
 |---|---|
-| Identity and signing | How are users authenticated, linked to blockchain addresses, and authorized to sign transactions? |
-| Registration | Who may register snakes, how are identifiers assigned, and how is the initial keeper established? |
-| Profile changes | Who may edit identity information, and which fields may change? |
-| Laboratory governance | How are administrators established, and what happens to existing certificates when a laboratory loses authorization? May a deauthorized issuer revise or revoke earlier certificates? |
-| Certificate lifecycle | Within append-only revision and accessible version history, what are the exact supersession and revocation rules? How are status transitions recorded, and does revocation apply to one version or a certificate's full history? |
-| Verification | Is login required? What evidence establishes laboratory authorization at issuance, and how do status and authorization determine certificate validity separately from hash matching? |
-| File access | Where are files stored, who may download current and previous versions, and how long are verification uploads retained? |
-| Transfers | How are transfer attempts identified and their histories presented? What responses should callers receive when competing acceptance, rejection, or cancellation requests encounter a transfer that has already ended? |
-| Husbandry records | Which fields are needed, who may read or correct historical records, and does "keeper records" include anything beyond husbandry? Is the proposed current-keeper-only append policy sufficient? |
-| Husbandry commitments | At Level 2, which records are selected, what data and format are committed, who may submit commitments, when are they submitted, and how are integrity checks and later corrections handled? |
-| Transaction consistency | What confirmation rule, retry behavior, and recovery process should the application use? How are husbandry writes coordinated with confirmed keeper changes? |
-| Contract structure | How will Solidity contracts organize shared identities, authorization, certificates, transfers, and selected husbandry commitments? |
+| Local signing setup | Explain the local role-to-account mapping and development-only signing configuration; never put private keys in SQL or API responses. |
+| Registration identifiers | Agree on the identifier representation when defining registration inputs/outputs. The registering address is already settled as initial keeper. |
+| Certificate evidence | Agree on hash algorithm, identifier encoding, version/status representation, and function inputs/outputs during the certificate task. |
+| File handling | Agree on minimal local storage paths, PDF upload checks, and downloads. Verification uploads need no permanent storage. |
+| Transfer responses | Define minimal responses for ended or invalid transfers during the transfer task; retain the agreed authorization rules. |
+| Transaction confirmation | Define local confirmation and failed-transaction display during the first chain integration task. |
+| Contract organization | Keep the design small; six backend responsibilities do not require six contracts. Agree on the structure before the human inserts contract code. |
 
 Transfer acceptance and rejection by the designated recipient, cancellation by the current keeper, one pending transfer per snake, and traceable keeper history are settled requirements. Transfer expiration is outside the MVP requirements.
 
-Append-only certificate revisions, accessible previous versions, preservation of each version's evidence, separate hash and validity results, off-chain husbandry details, support for selected on-chain commitments, and original author attribution are also settled requirements.
+Append-only certificate revisions, accessible previous files, version evidence, separate hash and lifecycle results, fully off-chain husbandry details, and original author attribution are settled requirements. Current keepers may add records and edit/delete only their own rows; former keeper rows are read-only after transfer. Ordinary husbandry changes keep no content version history.
+
+Do not reopen these decisions as production-platform requirements. Laboratory deauthorization, revocation screens, post-registration profile/photo editing, report-result parsing, and production authentication are outside this demonstration.
 
 Open questions should be resolved in the relevant Level 1 designs and Level 2 specifications before dependent implementation tasks are approved. Any decision that changes Level 0 boundaries or authorization rules requires explicit architecture approval.
