@@ -1,2 +1,11 @@
 /docs/data_example/
 .venv/*
+.env
+.env.*
+!.env.example
+__pycache__/
+.pytest_cache/
+node_modules/
+contracts/cache/
+contracts/artifacts/
+/storage/

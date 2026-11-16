@@ -2,9 +2,11 @@
 
 ## Current State and Reading Order
 
-The design documents and logical diagram are prepared. Application functionality
-has not been implemented. The day numbers below are a suggested sequence, not a
-claim that any implementation or test has been completed.
+The design documents and logical diagram are prepared. The first backend health
+endpoint and its test have been inserted by the human and verified. The human
+also inserted Python database and blockchain connection checks and reported six
+passing backend tests. Streamlit integration remains pending. The day numbers
+below are a suggested sequence; completion is reported explicitly below.
 
 New collaborators should read:
 1. [AGENTS.md](../../AGENTS.md): scope and mandatory human-AI learning rules.
@@ -19,9 +21,35 @@ acceptance cases. Do not treat an empty document as an approved specification.
 
 ## Suggested Coding Sequence
 
+Current small task: [backend health response](../level-2/backend-health.md).
+The human approved GET `/health` -> HTTP 200 with `{"status": "ok"}`.
+The human inserted the code and installed dependencies. On 2026-11-14, the health
+test passed and a temporary Uvicorn server on port 8001 returned the exact agreed
+HTTP response. Port 8000 is occupied by Docker; use 8001 for the local backend.
+Dependency/cache warnings are recorded in the feature document. Other Day 1
+services and frontend work progressed as recorded below.
+
+The independent Compose project `ball-python-demo` runs PostgreSQL at local port
+5433 with a separate volume; the old environment is retained. The human reported
+a healthy database and successful SELECT 1, followed by three passing database/
+health tests. Hardhat runs at 127.0.0.1:8545 with chain ID 31337 and 20 accounts;
+the AI verified those RPC values. After web3.py integration, the human reported
+six passing backend tests. The npm audit warning in the Hardhat dependency tree
+remains unresolved; no automatic dependency fix has been applied.
+
+The human inserted [backend/database readiness](../level-2/backend-readiness.md),
+reported nine passing backend tests, and confirmed the successful live `/ready`
+response. `/health` remains unchanged.
+
+Current approved small task: [minimal Streamlit readiness page](../level-2/frontend-readiness.md).
+Provide the HTTP helper, button page, dependency edits, and frontend tests in
+chat for human insertion. The page checks both backend and database via `/ready`,
+runs on local port 8502, and does not directly access PostgreSQL or blockchain.
+Frontend tests and manual browser validation are pending.
+
 | Stage | Tasks | Acceptance target | Status |
 |---|---|---|---|
-| Day 1: minimal skeleton | Start with a minimal FastAPI response; then connect PostgreSQL, start a local Hardhat chain, and create a simple Streamlit-to-FastAPI view. | The development services run and the page can reach the backend. | Not started |
+| Day 1: minimal skeleton | Start with a minimal FastAPI response; then connect PostgreSQL, start a local Hardhat chain, and create a simple Streamlit-to-FastAPI view. | The development services run and the page can reach the backend. | In progress: health endpoint verified; remaining integrations pending |
 | Day 2: snake registration | Test Solidity registration and keeper queries; connect web3.py and off-chain profile persistence; add a registration view. | Breeder registers one snake and sees its profile and confirmed keeper. | Not started |
 | Day 3: laboratory reports | Implement and test laboratory permissions, certificate issuance and correction; connect PDF storage and upload views. | LAB001 and LAB002 each issue V1; LAB001 appends V2 without replacing V1. | Not started |
 | Day 4: file verification | Calculate a supplied PDF's hash, compare with chain evidence, and display match separately from version status. | Original V2 matches; modified V2 does not. Verification registers nothing. | Not started |

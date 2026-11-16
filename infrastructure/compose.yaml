@@ -1,0 +1,22 @@
+name: ball-python-demo
+
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: ballpython_demo
+      POSTGRES_USER: ballpython
+      POSTGRES_PASSWORD: ${DEMO_DB_PASSWORD:?Set DEMO_DB_PASSWORD in .env}
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "ballpython", "-d", "ballpython_demo"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+volumes:
+  postgres_data:
