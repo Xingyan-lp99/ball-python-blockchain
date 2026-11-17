@@ -1,3 +1,4 @@
+import base64
 import os
 from datetime import date
 from typing import Annotated, Literal
@@ -28,7 +29,11 @@ from backend.snake_registration import (
 
 from urllib.parse import quote
 
-from backend.snake_profiles import get_snake_profile
+from backend.snake_profiles import (
+    get_random_snake_photo_references,
+    get_random_snake_profiles,
+    get_snake_profile,
+)
 
 router = APIRouter(prefix="/api/v1")
 
@@ -219,6 +224,26 @@ class SnakeProfileResponse(SnakeRegistrationRequest):
     photo_url: str
 
 
+class SnakeShowcaseItem(BaseModel):
+    snake_id: str
+    nickname: str | None
+    species: str
+    photo_url: str
+
+
+class SnakeShowcaseResponse(BaseModel):
+    snakes: list[SnakeShowcaseItem]
+
+
+class SnakeShowcaseImage(BaseModel):
+    content_type: Literal["image/jpeg", "image/png"]
+    content_base64: str
+
+
+class SnakeShowcaseImagesResponse(BaseModel):
+    images: list[SnakeShowcaseImage]
+
+
 def _load_stored_profile(snake_id: str) -> dict[str, object] | None:
     password = os.environ.get("DEMO_DB_PASSWORD")
 
@@ -234,6 +259,110 @@ def _load_stored_profile(snake_id: str) -> dict[str, object] | None:
         connect_timeout=5,
     ) as connection:
         return get_snake_profile(connection, snake_id=snake_id)
+
+
+def _load_random_stored_profiles() -> list[dict[str, object]]:
+    password = os.environ.get("DEMO_DB_PASSWORD")
+
+    if not password:
+        raise RuntimeError("Database configuration is unavailable.")
+
+    with psycopg.connect(
+        host="127.0.0.1",
+        port=5433,
+        dbname="ballpython_demo",
+        user="ballpython",
+        password=password,
+        connect_timeout=5,
+    ) as connection:
+        return get_random_snake_profiles(connection, limit=3)
+
+
+def _load_random_photo_references() -> list[str]:
+    password = os.environ.get("DEMO_DB_PASSWORD")
+
+    if not password:
+        raise RuntimeError("Database configuration is unavailable.")
+
+    with psycopg.connect(
+        host="127.0.0.1",
+        port=5433,
+        dbname="ballpython_demo",
+        user="ballpython",
+        password=password,
+        connect_timeout=5,
+    ) as connection:
+        return get_random_snake_photo_references(connection)
+
+
+@router.get(
+    "/snakes/random-profiles",
+    response_model=SnakeShowcaseResponse,
+)
+def read_random_snake_profiles(
+    account: AuthenticatedAccount,
+) -> SnakeShowcaseResponse | JSONResponse:
+    try:
+        profiles = _load_random_stored_profiles()
+    except (psycopg.Error, OSError, RuntimeError):
+        return JSONResponse(
+            status_code=503,
+            content={"detail": "The profile service is unavailable."},
+        )
+
+    return SnakeShowcaseResponse(
+        snakes=[
+            SnakeShowcaseItem(
+                snake_id=profile["snake_id"],
+                nickname=profile["nickname"],
+                species=profile["species"],
+                photo_url=(
+                    f"/api/v1/snakes/{quote(profile['snake_id'], safe='')}/photo"
+                ),
+            )
+            for profile in profiles
+        ]
+    )
+
+
+@router.get(
+    "/snakes/showcase-images",
+    response_model=SnakeShowcaseImagesResponse,
+)
+def read_public_snake_showcase_images() -> SnakeShowcaseImagesResponse | JSONResponse:
+    try:
+        photo_references = _load_random_photo_references()
+        images = []
+        for reference in photo_references:
+            photo_path = get_snake_photo_path(reference)
+            if photo_path is None:
+                continue
+            try:
+                if photo_path.stat().st_size > MAX_PHOTO_BYTES:
+                    continue
+                photo_content = photo_path.read_bytes()
+            except FileNotFoundError:
+                continue
+            content_type = (
+                "image/png"
+                if photo_path.suffix.lower() == ".png"
+                else "image/jpeg"
+            )
+            images.append(
+                SnakeShowcaseImage(
+                    content_type=content_type,
+                    content_base64=base64.b64encode(photo_content).decode("ascii"),
+                )
+            )
+            if len(images) == 3:
+                break
+    except (OSError, psycopg.Error, RuntimeError, ValueError):
+        return JSONResponse(
+            status_code=503,
+            content={"detail": "The profile photo service is unavailable."},
+        )
+
+    return SnakeShowcaseImagesResponse(images=images)
 
 
 # Purpose: expose saved profile fields without exposing local file references.

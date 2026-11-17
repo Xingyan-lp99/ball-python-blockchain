@@ -20,6 +20,12 @@ Completed UI work:
   hierarchy. Registration retains its role-dependent fields and success lock.
 - The workspace header shows the signed-in role and account, the actual lab
   participant ID where applicable, and the existing sign-out action.
+- The Buyer workspace shows up to three randomly selected snake profile photo
+  cards. Selecting a card loads its existing profile; the API reads saved
+  profiles and photographs without adding database fields or chain evidence.
+- The login page displays up to three randomly selected stored snake photos.
+  Its public response contains photo bytes only; no profile details or click
+  navigation are exposed.
 - Snake profile lookup uses a primary button. The retrieved profile groups its
   original photo and basic fields in native columns, then shows descriptions.
   Missing photos/values remain explicit. Keeper Management and Certificate
@@ -61,8 +67,9 @@ history and PDF presentation, laboratory issuance/revision forms, keeper-transfe
 presentation, four husbandry tables/forms, and selective pixel typography. Each
 is a separate proposal and approval, not blanket authorization to implement all
 of them. Buyer PDF verification, basic-profile editing, payments, a marketplace,
-invented profile-list APIs/statistics, and husbandry blockchain evidence remain
-outside scope. Preserve the existing confirmed/unconfirmed state distinctions.
+unrequested profile-list APIs/statistics, and husbandry blockchain evidence
+remain outside scope. Preserve the existing confirmed/unconfirmed state
+distinctions.
 
 The human requested committing and pushing this checkpoint, AGENTS.md, and the
 local design-reference archive to GitHub for collaborator synchronization. Local

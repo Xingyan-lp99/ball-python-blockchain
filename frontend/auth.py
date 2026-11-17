@@ -1,8 +1,13 @@
-import streamlit as st
+from io import BytesIO
 
+import streamlit as st
+from PIL import Image
+
+from frontend.branding import render_pythonpass_logo
 from frontend.api import (
     AccountRequestError,
     SignInRequired,
+    fetch_public_snake_showcase_images,
     sign_in_account,
     sign_out_account,
 )
@@ -27,6 +32,52 @@ def open_registration() -> None:
     st.rerun()
 
 
+def _render_login_snake_showcase() -> None:
+    if "login_snake_showcase_images" not in st.session_state:
+        try:
+            st.session_state["login_snake_showcase_images"] = (
+                fetch_public_snake_showcase_images(api_base_url=API_BASE_URL)
+            )
+        except AccountRequestError:
+            return
+
+    photos = st.session_state["login_snake_showcase_images"]
+    if not photos:
+        return
+
+    valid_photos = []
+    photo_ratios = []
+    for photo in photos:
+        try:
+            with Image.open(BytesIO(photo)) as image:
+                photo_ratios.append(image.width / image.height)
+            valid_photos.append(photo)
+        except (OSError, ZeroDivisionError):
+            continue
+
+    if not photo_ratios:
+        return
+
+    photos = valid_photos
+    scale_height = min(180, 508 / sum(photo_ratios))
+    photo_widths = [
+        max(1, int(ratio * scale_height)) for ratio in photo_ratios
+    ]
+
+    with st.container(horizontal_alignment="center"):
+        with st.container(width=520, key="login_snake_showcase"):
+            columns = st.columns(photo_widths, gap=None)
+            for column, photo, photo_width in zip(
+                columns, photos, photo_widths, strict=True
+            ):
+                with column:
+                    st.image(
+                        photo,
+                        width=photo_width,
+                        alt="Ball python profile photo",
+                    )
+
+
 # Purpose: present sign-in inside a readable, centered card.
 # Workflow: authenticate before exposing any business workspace.
 # Without this function, users cannot access the workspace through sign-in.
@@ -34,6 +85,8 @@ def render_login_page() -> None:
     with st.container(horizontal_alignment="center"):
         with st.container(width=520):
             with st.container(key="login_intro"):
+                with st.container(horizontal_alignment="center"):
+                    render_pythonpass_logo(width_px=260)
                 st.markdown("**Ball Python Blockchain Registry**")
                 st.title("Login")
                 st.write("Sign in to open your role workspace.")
@@ -87,6 +140,8 @@ def render_login_page() -> None:
                     width="stretch",
                 ):
                     open_registration()
+
+            _render_login_snake_showcase()
 
 
 def sign_out_current_account(*, access_token: str) -> None:

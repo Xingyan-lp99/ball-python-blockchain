@@ -1,5 +1,7 @@
-import requests
+import binascii
+import base64
 import json
+import requests
 
 from urllib.parse import quote, urljoin
 from typing import Literal, cast
@@ -101,6 +103,46 @@ def fetch_current_account(*, api_base_url: str, access_token: str) -> dict:
     ):
         raise AccountRequestError("The sign-in service returned an invalid account.")
     return account
+
+
+def fetch_public_snake_showcase_images(*, api_base_url: str) -> list[bytes]:
+    try:
+        response = requests.get(
+            f"{api_base_url.rstrip('/')}/api/v1/snakes/showcase-images",
+            timeout=(3, 10),
+        )
+    except requests.RequestException:
+        raise AccountRequestError("Snake photos are temporarily unavailable.") from None
+
+    if response.status_code != 200:
+        raise AccountRequestError("Snake photos are temporarily unavailable.")
+
+    try:
+        payload = response.json()
+    except ValueError:
+        raise AccountRequestError("The photo service returned an unreadable response.") from None
+
+    items = payload.get("images") if isinstance(payload, dict) else None
+    if not isinstance(items, list) or len(items) > 3:
+        raise AccountRequestError("The photo service returned an invalid response.")
+
+    photos = []
+    for item in items:
+        if (
+            not isinstance(item, dict)
+            or item.get("content_type") not in {"image/jpeg", "image/png"}
+            or not isinstance(item.get("content_base64"), str)
+        ):
+            raise AccountRequestError("The photo service returned an invalid response.")
+        try:
+            content = base64.b64decode(item["content_base64"], validate=True)
+        except (binascii.Error, ValueError):
+            raise AccountRequestError("The photo service returned an invalid image.") from None
+        if not content or len(content) > 5 * 1024 * 1024:
+            raise AccountRequestError("The photo service returned an invalid image.")
+        photos.append(content)
+
+    return photos
 
 
 def sign_out_account(*, api_base_url: str, access_token: str) -> None:
@@ -248,6 +290,33 @@ def fetch_snake_profile(
         return profile, None, "The profile photo is unavailable."
 
     return profile, photo_response.content, None
+
+
+def fetch_random_snake_profiles(
+    *,
+    api_base_url: str,
+    access_token: str,
+) -> list[tuple[dict | None, bytes | None, str | None]]:
+    payload = cast(dict, _account_request(
+        "GET",
+        f"{api_base_url.rstrip('/')}/api/v1/snakes/random-profiles",
+        access_token=access_token,
+    ))
+    items = payload.get("snakes")
+    if not isinstance(items, list) or len(items) > 3:
+        raise AccountRequestError("The profile service returned an invalid list.")
+
+    profiles = []
+    for item in items:
+        if not isinstance(item, dict) or not isinstance(item.get("snake_id"), str):
+            raise AccountRequestError("The profile service returned an invalid list.")
+        profiles.append(fetch_snake_profile(
+            api_base_url=api_base_url,
+            snake_id=item["snake_id"],
+            access_token=access_token,
+        ))
+
+    return profiles
 
 
 class HusbandryRequestError(RuntimeError):

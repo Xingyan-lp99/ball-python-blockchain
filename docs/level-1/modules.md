@@ -20,6 +20,8 @@ Maintain each snake's registered identity and detailed profile.
 
 - Register a snake and its initial keeper.
 - Retrieve a snake's identity and profile.
+- Provide up to three randomly selected existing profiles for Buyer previews through `GET /api/v1/snakes/random-profiles`; profile and photo content remain off-chain.
+- Provide up to three random profile photos on the unauthenticated login page without returning snake identifiers or profile fields.
 - Save the breeder's initial profile and display it. Post-transfer profile and photo editing screens are outside this demonstration.
 - Provide other modules with snake existence and current keeper information.
 

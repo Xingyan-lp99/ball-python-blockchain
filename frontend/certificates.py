@@ -116,32 +116,33 @@ def _render_original_certificate(
 
     attempt = st.session_state.get(attempt_key, 0)
 
-    with st.form(
-        f"certificate_issuance_{account['participant_id']}_{attempt}"
-    ):
-        snake_id = st.text_input(
-            "Snake ID *",
-            disabled=locked,
-        )
-        title = st.text_input(
-            "Report Title *",
-            disabled=locked,
-        )
-        pdf = st.file_uploader(
-            "PDF File *",
-            type=["pdf"],
-            disabled=locked,
-        )
-        st.caption(
-            "Maximum file size: 10 MB. "
-            "The original PDF is stored off-chain; "
-            "its SHA-256 digest is recorded on-chain."
-        )
+    with st.container(key="certificate_issue_form_frame"):
+        with st.form(
+            f"certificate_issuance_{account['participant_id']}_{attempt}"
+        ):
+            snake_id = st.text_input(
+                "Snake ID *",
+                disabled=locked,
+            )
+            title = st.text_input(
+                "Report Title *",
+                disabled=locked,
+            )
+            pdf = st.file_uploader(
+                "PDF File *",
+                type=["pdf"],
+                disabled=locked,
+            )
+            st.caption(
+                "Maximum file size: 10 MB. "
+                "The original PDF is stored off-chain; "
+                "its SHA-256 digest is recorded on-chain."
+            )
 
-        submitted = st.form_submit_button(
-            "Issue Certificate",
-            disabled=locked,
-        )
+            submitted = st.form_submit_button(
+                "Issue Certificate",
+                disabled=locked,
+            )
 
     if not submitted:
         return

@@ -96,3 +96,35 @@ def get_snake_profile(
             (snake_id,),
         )
         return cursor.fetchone()
+
+
+def get_random_snake_profiles(
+    connection: psycopg.Connection,
+    *,
+    limit: int = 3,
+) -> list[dict[str, object]]:
+    with connection.cursor(row_factory=dict_row) as cursor:
+        cursor.execute(
+            """
+            SELECT snake_id, nickname, species, photo_reference
+            FROM snakes
+            ORDER BY RANDOM()
+            LIMIT %s
+            """,
+            (limit,),
+        )
+        return list(cursor.fetchall())
+
+
+def get_random_snake_photo_references(
+    connection: psycopg.Connection,
+) -> list[str]:
+    with connection.cursor() as cursor:
+        cursor.execute(
+            """
+            SELECT photo_reference
+            FROM snakes
+            ORDER BY RANDOM()
+            """
+        )
+        return [row[0] for row in cursor.fetchall()]
