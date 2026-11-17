@@ -88,16 +88,17 @@ On-chain:
 - Certificate file hashes
 - Certificate version references and statuses
 - Keeper transfer state and relevant events
+- Husbandry record IDs, categories, original author addresses, SHA-256 content hashes, and version/deletion evidence
 
 Off-chain:
 - Detailed identity profiles
 - Genetic descriptions
 - Photographs
 - Original certificate PDFs
-- Husbandry records
+- Husbandry record content
 - User-facing metadata
 
-Only certificate file integrity and keeper management rights use blockchain evidence in this iteration. Husbandry records, profile content, and photographs have no on-chain hashes or commitments. Snake identifiers connect the on-chain rights and certificates to the off-chain profile; they do not put the full profile on-chain.
+Certificate file integrity, keeper management rights, and limited husbandry evidence use blockchain state in this iteration. Husbandry content, profile content, and photographs remain off-chain. For each husbandry record, the chain stores only its ID, category, original author address, SHA-256 content hash, and update/deletion evidence; it does not store the record fields themselves. Snake identifiers connect on-chain rights and evidence to off-chain records.
 
 Do not store large PDFs, photographs, or sensitive personal information directly on-chain.
 
@@ -111,6 +112,7 @@ Do not store large PDFs, photographs, or sensitive personal information directly
 - Only the current keeper may initiate a transfer.
 - Only the designated recipient may accept a transfer.
 - Only the current keeper may add husbandry records, and may edit or delete only records they originally authored. Former keeper records are read-only to both parties after transfer. Ordinary husbandry edits retain only the latest content.
+- The husbandry evidence contract records the original author and latest content hash. It allows an update or deletion only when the caller is both the original author and the confirmed current keeper; event history retains prior hashes and deletion evidence.
 - Administrators may manage laboratory authorization but cannot forcibly transfer snake records.
 - A file hash proves byte-level consistency with a recorded hash, not the biological truth of the laboratory's findings.
 
@@ -124,7 +126,7 @@ Do not store large PDFs, photographs, or sensitive personal information directly
 - Use Just to simplify developer commands.
 - Do not introduce additional frameworks without approval.
 - Follow the mandatory human-AI learning workflow in AGENTS.md. The human inserts all program code; the AI may maintain agreed documentation and diagrams.
-- Keep all four husbandry tables simple and off-chain. Their purpose is to demonstrate the practical effect of a keeper transfer, not a complete animal-care product.
+- Keep all four husbandry tables and their content off-chain. Store only minimal authorship and integrity evidence on-chain to demonstrate the effect of a keeper transfer, not a complete animal-care product.
 
 ## 7. Architecture Decisions Requiring Approval
 

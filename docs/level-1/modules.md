@@ -4,7 +4,7 @@
 
 This document describes the six business modules inside the FastAPI backend and how they work together. It follows the architecture and conventions defined in Level 0. Unresolved details are listed as open design questions.
 
-This iteration is a one-week local demonstration, limited to the seven steps in [the logical data model](data-model.md). Module names describe responsibilities inside one application, not six independently built products. Use fixed local Hardhat role accounts and simple Streamlit views. Do not add production login, wallets, payments, marketplace features, report parsing, or husbandry blockchain evidence.
+This iteration is a one-week local demonstration, limited to the seven steps in [the logical data model](data-model.md). Module names describe responsibilities inside one application, not six independently built products. Use fixed local Hardhat role accounts and simple Streamlit views. Do not add production login, wallets, payments, marketplace features, or report parsing. Husbandry record content stays off-chain; only minimal authorship and integrity evidence is on-chain.
 
 The backend is a modular monolith: one FastAPI application containing separate, focused business modules. The modules are parts of the same application, not independently deployed services.
 
@@ -198,17 +198,17 @@ Fields and permissions are defined in [the logical data model](data-model.md). T
 
 ### On-Chain Responsibilities
 
-Read confirmed current keeper information for authorization through Snake Registry. This module submits no blockchain transactions, hashes, or commitments. All husbandry content remains off-chain.
+Use `HusbandryEvidenceRegistry` with Snake Registry's confirmed current keeper state. Adding evidence records the row ID, category, original author address, and SHA-256 content hash. Updating or deleting evidence is allowed only when the caller is both the original author and the confirmed current keeper. The contract preserves prior hashes in update events and a deletion marker in state. Husbandry content remains off-chain.
 
 ### Off-Chain Responsibilities
 
 Store detailed husbandry records in PostgreSQL. Associate each record with its snake and original author, and preserve that attribution when the keeper changes. A transfer must not reassign historical authorship to the new keeper.
 
-Ordinary edits retain only the latest content. A permitted deletion removes the author's husbandry row; it must not cascade into certificate or transfer history. No content revision archive or soft-delete system is required.
+Ordinary edits retain only the latest content in PostgreSQL. The backend coordinates the corresponding evidence transaction; a permitted deletion removes the row content from PostgreSQL while its on-chain author/hash/deletion evidence remains. A husbandry change must not cascade into certificate or transfer history.
 
 ### Dependencies
 
-Snake Registry provides snake identity and confirmed current keeper information. Certificate Verification remains focused on certificates.
+Snake Registry provides snake identity and confirmed current keeper information. Husbandry Evidence stores row authorship and integrity evidence. Certificate Verification remains focused on certificates.
 
 ### Authorization Boundaries
 
@@ -240,7 +240,7 @@ The six backend modules do not imply six Solidity contracts. Contract organizati
 
 A PostgreSQL update and a blockchain transaction cannot be treated as one automatically atomic operation: one may succeed while the other fails.
 
-The design tracks transaction progress and distinguishes submitted, confirmed, and failed outcomes. Modules must use confirmed blockchain state for on-chain facts rather than assuming that submission succeeded. This applies to registration, laboratory setup, certificates, and transfers. Husbandry records have no blockchain transactions.
+The design tracks transaction progress and distinguishes submitted, confirmed, and failed outcomes. Modules must use confirmed blockchain state for on-chain facts rather than assuming that submission succeeded. This applies to registration, laboratory setup, certificates, transfers, and husbandry evidence writes.
 
 Backend permission checks help reject invalid requests early. Solidity must independently enforce on-chain authorization and state rules when a transaction executes, including competing transfer actions.
 
@@ -257,12 +257,13 @@ Private keys must not be stored in PostgreSQL or exposed through API responses.
 | Certificate evidence | Agree on hash algorithm, identifier encoding, version/status representation, and function inputs/outputs during the certificate task. |
 | File handling | Agree on minimal local storage paths, PDF upload checks, and downloads. Verification uploads need no permanent storage. |
 | Transfer responses | Define minimal responses for ended or invalid transfers during the transfer task; retain the agreed authorization rules. |
+| Husbandry hash encoding | Define a deterministic serialization of the approved row fields before the backend calculates SHA-256 content hashes. |
 | Transaction confirmation | Define local confirmation and failed-transaction display during the first chain integration task. |
 | Contract organization | Keep the design small; six backend responsibilities do not require six contracts. Agree on the structure before the human inserts contract code. |
 
 Transfer acceptance and rejection by the designated recipient, cancellation by the current keeper, one pending transfer per snake, and traceable keeper history are settled requirements. Transfer expiration is outside the MVP requirements.
 
-Append-only certificate revisions, accessible previous files, version evidence, separate hash and lifecycle results, fully off-chain husbandry details, and original author attribution are settled requirements. Current keepers may add records and edit/delete only their own rows; former keeper rows are read-only after transfer. Ordinary husbandry changes keep no content version history.
+Append-only certificate revisions, accessible previous files, version evidence, separate hash and lifecycle results, off-chain husbandry content, and immutable original-author attribution are settled requirements. Current keepers may add records and edit/delete only their own rows; former keeper rows are read-only after transfer. PostgreSQL keeps only the latest husbandry content; the chain preserves the latest hash and update/deletion evidence.
 
 Do not reopen these decisions as production-platform requirements. Laboratory deauthorization, revocation screens, post-registration profile/photo editing, report-result parsing, and production authentication are outside this demonstration.
 

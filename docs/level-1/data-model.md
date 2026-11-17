@@ -76,6 +76,7 @@ features; implementation should not add extra care-management workflows.
 | Laboratory issuance permission | laboratory account address and issuance permission | laboratories -> participants.wallet_address; provision the two demo laboratories during setup |
 | Certificate evidence | series/version references; snake identifier; issuer address; file hash; version number; predecessor; lifecycle status | certificate_series and certificate_versions identifiers; do not put the PDF or testing results on-chain |
 | Transfer state and events | transfer reference; snake identifier; from/to addresses; pending/accepted/rejected/cancelled outcome | keeper_transfers and its related blockchain_transactions |
+| Husbandry evidence | snake ID; record ID and category; original author address; SHA-256 hash; current version and deletion status; immutable update/deletion events | husbandry row identity and `created_by`; row content remains in PostgreSQL |
 
 Registration and certificate submission may have local records before confirmation.
 Those records must not be displayed as completed or confirmed chain facts.
@@ -93,10 +94,12 @@ does not change breeder attribution, certificate issuers, or historical authors.
 
 PostgreSQL caches do not grant chain rights. Check confirmed chain state for
 authorization; if that check cannot complete, do not grant a write based only
-on a cached keeper. Solidity enforces certificate and transfer permissions.
-FastAPI enforces off-chain husbandry permissions using current keeper state.
-This is a demonstration of shared evidence and signing authority, not a claim
-that chain and SQL updates are automatically atomic or tamper-proof together.
+on a cached keeper. Solidity enforces certificate, transfer, and husbandry
+evidence permissions. FastAPI stores husbandry content off-chain and enforces
+the same current-keeper and original-author rules. The content hash must be
+calculated from a deterministic representation agreed with the backend. This
+is a demonstration of shared evidence and signing authority, not a claim that
+chain and SQL updates are automatically atomic or tamper-proof together.
 
 ## 4. Record Permissions and Verification
 
@@ -107,11 +110,12 @@ that chain and SQL updates are automatically atomic or tamper-proof together.
 | Delete husbandry row | Allowed | Denied | Denied, including their own old rows |
 | View retained history | Allowed | Allowed | Demo view permitted; no write rights |
 
-Editing keeps only the latest content; deletion removes the permitted husbandry
-row without adding soft-deletion or revision history requirements. Record author
-and snake association are not editable. Husbandry deletion never deletes a snake,
-certificate, certificate file, or transfer history. Buyer editing of basic profile
-fields and photographs is outside the demonstration workflow.
+PostgreSQL keeps only the latest permitted content. The chain keeps the original
+author and latest hash, increments an evidence version on edits, and records a
+deletion marker without removing the evidence. Record author, category, and snake
+association are not editable. Husbandry deletion never deletes a snake,
+certificate, certificate file, or transfer history. Buyer editing of basic
+profile fields and photographs is outside the demonstration workflow.
 
 Verification takes a selected registered certificate version and supplied PDF
 bytes. It compares their calculated hash with the on-chain hash and separately
