@@ -2,6 +2,83 @@
 
 ## Current State and Reading Order
 
+### Latest Approved Checkpoint
+
+The human has now confirmed successful website handover and the post-transfer
+husbandry acceptance workflow: the buyer maintains their own records, prior
+breeder-authored rows remain protected, and the former keeper no longer has
+write rights. The core approved feature implementation is complete. These are
+human-reported manual results, not newly executed automated tests. Unit tests
+remain paused. The detailed implementation checkpoints below retain what the
+agent actually checked at each earlier step.
+
+Current collaboration task: commit and push the complete code, migrations, and
+updated documentation to GitHub on the human's explicit request. Local settings,
+uploaded files, PostgreSQL data, and Hardhat state are not part of Git sharing.
+See the updated README for collaborator setup from migration 003 onward.
+
+The original day-by-day entries below are historical and are not the current
+feature status. The human has confirmed snake registration/query, account
+registration/login, husbandry pages, V1 issuance by both laboratories, and
+LAB001 V2 issuance. Certificate history and original PDF downloads are
+implemented. Buyer-uploaded file verification and its match/mismatch cases
+were explicitly removed from this iteration.
+
+The keeper-transfer branch b527c1c was fetched and reviewed without switching
+branches or merging. Its husbandry evidence contract and architecture changes
+are not adopted. The approved small task adapts only its transfer logic into
+the standalone [KeeperTransfers contract](../level-2/keeper-transfers.md),
+preserving the existing SnakeRegistry and CertificateRegistry deployments.
+The adapted contract compiled successfully; no unit tests were run.
+
+The human approved preparation of backend/setup_keeper_transfers.py. Its syntax,
+import, and required compilation artifacts were checked. The script deploys
+against the existing registry or reuses an explicitly configured transfer
+address. The human confirmed successful execution of this deployment script.
+
+The authoritative keeper reader is implemented in backend/keeper_transfers.py,
+and husbandry add/edit/delete checks now use it while retaining original-author
+checks. Syntax, imports, and one read-only query of SNAKE001 succeeded; the chain
+still showed the breeder as keeper and no pending proposal. FastAPI activation
+requires the new contract address in its startup environment. No database write
+or keeper transfer has been performed by the agent, and unit tests remain paused.
+
+The human also approved breeder submission after an offline sale, buyer
+accept/reject actions, current-keeper cancellation, and current-manager/transfer
+status display in the profile. Migration 007 is prepared with transfer records,
+confirmed-state timestamp constraints, one confirmed pending request per snake,
+and a nullable transaction-to-transfer link. The agent has not applied it;
+human execution is pending. Transfer submission APIs and the page follow in
+separately approved steps.
+
+The separately approved initiation backend is now implemented as POST
+/api/v1/snakes/{snake_id}/keeper-transfers. It resolves a buyer username,
+authorizes the signed-in current keeper, tracks submission, and stores Pending
+only after verifying receipt/event/state evidence. Syntax, imports, OpenAPI,
+and a read-only keeper query were checked. The agent has not executed migration
+007 or submitted a transfer; full initiation remains unverified manually.
+Recipient acceptance/rejection and initiating-keeper cancellation APIs are also
+implemented. Their shared logic verifies receipt events and resolved chain
+state; only acceptance updates the SQL current_keeper_id cache. Syntax,
+imports, and authenticated OpenAPI declarations passed inspection. No write
+routes were invoked, no chain transfers were submitted, and no unit tests ran.
+The current-manager/transfer-status query is implemented as authenticated GET
+/api/v1/snakes/{snake_id}/keeper. It combines live keeper/pending state with
+the latest SQL request and transaction, exposing manager names/usernames and
+explicit unconfirmed results. Syntax, imports, and OpenAPI checks succeeded;
+the SQL-backed endpoint has not been manually exercised by the agent.
+Streamlit Keeper Management is connected below profile fields for Buyer/Breeder,
+with manager/username/status display and identity-dependent initiate, accept,
+reject, and cancel controls. Writes refresh the keeper snapshot; uncertain
+outcomes retain identifiers and lock repeat actions. Frontend syntax/imports
+and the local required API declarations were checked without unit tests or
+actual transfers. The running backend still required a restart at this check.
+The human subsequently confirmed the website handover and post-transfer husbandry
+workflow as recorded in the latest checkpoint above. The agent did not perform
+those write actions or run the paused unit suite.
+
+### Earlier Roadmap Notes
+
 The design documents and logical diagram are prepared. The first backend health
 endpoint and its test have been inserted by the human and verified. The human
 also inserted Python database and blockchain connection checks and reported six
@@ -11,7 +88,7 @@ below are a suggested sequence; completion is reported explicitly below.
 New collaborators should read:
 1. [AGENTS.md](../../AGENTS.md): scope and mandatory human-AI learning rules.
 2. [Architecture](../level-0/architecture.md): stack and storage boundaries.
-3. [Logical data model](../level-1/data-model.md): seven-step demonstration and permissions.
+3. [Logical data model](../level-1/data-model.md): approved demonstration and permissions.
 4. [Combined diagram](../diagram/data-model.drawio): editable overview.
 5. [Backend modules](../level-1/modules.md): responsibilities inside FastAPI.
 

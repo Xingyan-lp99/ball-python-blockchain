@@ -9,11 +9,11 @@ The application is a one-week learning demonstration of ball python identity, la
 Primary participants:
 - Breeders register ball pythons and provide identity information.
 - Two authorized laboratories issue reports in different testing directions; one revises its report once. Both use the same certificate workflow without parsing test results.
-- Buyers verify certificates and may become new keepers.
+- Buyers view certificate history, download original PDFs, and may become new keepers.
 
-The fixed demonstration uses one fictional snake: registration by its breeder, two independently issued reports, one report revision, a matching and a mismatching file verification, one keeper transfer after an offline sale, and buyer creation, editing, and deletion of their own husbandry records. See [the logical data model](../level-1/data-model.md) for the acceptance sequence.
+The fixed demonstration uses one fictional snake: registration by its breeder, two independently issued reports, one report revision, certificate history and original PDF downloads, one keeper transfer after an offline sale, and buyer creation, editing, and deletion of their own husbandry records. Buyer-uploaded file verification was removed from this iteration by the human. See [the logical data model](../level-1/data-model.md) for the acceptance sequence.
 
-Use distinct local Hardhat test accounts for the demonstration roles. A role selector is a local demonstration convenience, not production authentication. Browser wallet integration, payments, marketplace features, production deployment, laboratory deauthorization screens, and report-result parsing are outside this iteration.
+Use distinct local Hardhat test accounts for the demonstration roles. The approved local demonstration includes account registration, sign-in, sign-out, and role-specific workspaces. Accounts bind to the four predefined demonstration participants: BREEDER001, BUYER001, LAB001, and LAB002, with one account per participant. Backend identity checks complement on-chain laboratory and keeper permissions. This is not a production authentication platform. Browser wallet integration, payments, marketplace features, production deployment, laboratory deauthorization screens, and report-result parsing are outside this iteration.
 
 ## 2. Architecture Style
 
@@ -35,8 +35,9 @@ Version control: Git
 ### Streamlit Frontend
 
 - Display ball python profiles.
-- Display certificate history and verification results.
+- Display certificate history and original PDF downloads.
 - Provide registration and transfer workflows.
+- Provide sign-in and account registration entry points, and show the workspace for the signed-in role.
 - Communicate with FastAPI over HTTP.
 - Do not connect directly to PostgreSQL.
 
@@ -44,6 +45,7 @@ Version control: Git
 
 - Expose REST API endpoints.
 - Validate requests and enforce application rules.
+- Validate account credentials and login sessions, and derive the acting participant from the authenticated account.
 - Manage off-chain records and file storage.
 - Calculate hashes of uploaded certificate files.
 - Use web3.py to read blockchain state and submit authorized transactions.
@@ -55,6 +57,7 @@ Version control: Git
 - Store references to photos and certificate files.
 - Store off-chain husbandry records.
 - Store application records linked to blockchain transactions.
+- Store account profiles, password hashes, login token hashes, and session expiry times off-chain.
 
 ### Solidity Smart Contracts
 
@@ -90,6 +93,7 @@ On-chain:
 - Keeper transfer state and relevant events
 
 Off-chain:
+- Account profiles, password hashes, and login session records
 - Detailed identity profiles
 - Genetic descriptions
 - Photographs
@@ -99,10 +103,16 @@ Off-chain:
 
 Only certificate file integrity and keeper management rights use blockchain evidence in this iteration. Husbandry records, profile content, and photographs have no on-chain hashes or commitments. Snake identifiers connect the on-chain rights and certificates to the off-chain profile; they do not put the full profile on-chain.
 
+The approved keeper integration uses a separate KeeperTransfers contract linked immutably to the existing SnakeRegistry. SnakeRegistry retains registrations and initial keeper values; KeeperTransfers falls back to those values until a transfer is accepted, then stores and returns the accepted keeper. After activation, all backend keeper authorization must use KeeperTransfers as the single current-keeper authority. CertificateRegistry continues using the original SnakeRegistry for snake existence, so existing certificate evidence and PDF references need not be recreated. This is an additional contract, not an upgrade or replacement of either deployed registry. See [the keeper contract specification](../level-2/keeper-transfers.md) for implementation and activation status.
+
 Do not store large PDFs, photographs, or sensitive personal information directly on-chain.
 
 ## 5. Trust and Authorization
 
+- Usernames and email addresses are unique ignoring case. Password confirmation is not stored; passwords and reusable login tokens must not be stored in plaintext.
+- Account registration binds an existing demonstration participant without changing snake breeder attribution or historical record authorship. Display names remain in participants.
+- A laboratory account selects LAB001 or LAB002. Account registration does not grant on-chain laboratory issuance permission.
+- The target login flow derives identity from a valid, unexpired backend session. Hiding frontend controls alone does not enforce authorization.
 - Only authorized laboratories can issue certificates.
 - A laboratory may revise or revoke only certificates it issued.
 - Historical certificate versions remain traceable.

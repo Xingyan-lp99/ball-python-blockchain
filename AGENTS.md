@@ -61,7 +61,7 @@ This directory is local reference material and is ignored by Git.
 
 This is a small learning project, intended to be completed in one week.
 The approved demonstration uses one fictional snake, one breeder, two
-laboratories, and one buyer. Follow the seven-step demonstration in
+laboratories, and one buyer. Follow the approved demonstration in
 `docs/level-1/data-model.md`. Build only what is needed for that workflow.
 Do not expand this into a production platform. Use local Hardhat test accounts
 and simple Streamlit pages. Husbandry records, profiles, and photographs are

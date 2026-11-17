@@ -4,7 +4,7 @@
 
 This document describes the six business modules inside the FastAPI backend and how they work together. It follows the architecture and conventions defined in Level 0. Unresolved details are listed as open design questions.
 
-This iteration is a one-week local demonstration, limited to the seven steps in [the logical data model](data-model.md). Module names describe responsibilities inside one application, not six independently built products. Use fixed local Hardhat role accounts and simple Streamlit views. Do not add production login, wallets, payments, marketplace features, report parsing, or husbandry blockchain evidence.
+This iteration is a one-week local demonstration, limited to the approved workflow in [the logical data model](data-model.md). Module names describe responsibilities inside one application, not six independently built products. Use fixed local Hardhat role accounts and simple Streamlit views. Do not add production login, wallets, payments, marketplace features, report parsing, or husbandry blockchain evidence.
 
 The backend is a modular monolith: one FastAPI application containing separate, focused business modules. The modules are parts of the same application, not independently deployed services.
 
@@ -105,7 +105,12 @@ Only authorized laboratories may issue certificates. A laboratory may revise or 
 
 The backend validates requests, while the contracts enforce on-chain permissions independently.
 
-## 5. Certificate Verification
+## 5. Certificate Verification (Deferred)
+
+The human removed buyer-uploaded file verification from the current demonstration.
+The operations below describe a deferred module, not implementation requirements
+for this iteration. Certificate Management provides the approved history and PDF
+download functionality.
 
 ### Business Responsibility
 
@@ -169,7 +174,9 @@ A submitted transaction must not be presented as a completed transfer before the
 
 ### Dependencies
 
-Snake Registry provides snake identity and current keeper queries.
+The existing SnakeRegistry provides identity and initial keeper values. The
+separate KeeperTransfers contract is the authoritative current-keeper source
+after activation; see [the keeper contract specification](../level-2/keeper-transfers.md).
 
 ### Authorization Boundaries
 
@@ -208,7 +215,10 @@ Ordinary edits retain only the latest content. A permitted deletion removes the 
 
 ### Dependencies
 
-Snake Registry provides snake identity and confirmed current keeper information. Certificate Verification remains focused on certificates.
+SnakeRegistry provides identity and initial keeper information. After activation,
+KeeperTransfers provides confirmed current keeper information for all husbandry
+writes. The original-author check remains in the backend and husbandry records
+remain entirely off-chain. Buyer-uploaded certificate verification is deferred.
 
 ### Authorization Boundaries
 

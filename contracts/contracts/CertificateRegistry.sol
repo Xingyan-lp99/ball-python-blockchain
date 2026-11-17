@@ -7,6 +7,9 @@ interface ISnakeRegistry {
     ) external view returns (address);
 }
 
+/// @notice Laboratory permissions and append-only certificate evidence.
+/// @dev The application supplies SHA-256 of the original PDF bytes as fileHash.
+/// The contract stores that digest without validating the file or hash algorithm.
 contract CertificateRegistry {
     enum VersionStatus {
         None,
@@ -42,7 +45,8 @@ contract CertificateRegistry {
         bool exists;
     }
 
-    address public administrator;
+    // The deploying administrator remains fixed; the public getter is unchanged.
+    address public immutable administrator;
     ISnakeRegistry public immutable snakeRegistry;
 
     mapping(address => bool) private authorizedLaboratories;
@@ -67,6 +71,8 @@ contract CertificateRegistry {
 
     event LaboratoryAuthorized(address laboratory);
 
+    // Indexed string fields contain Keccak topics, not readable identifiers.
+    // Keep the submitted identifiers off-chain and read full evidence with getVersion.
     event CertificateIssued(
         string indexed seriesId,
         string indexed versionId,
@@ -180,6 +186,7 @@ contract CertificateRegistry {
         );
     }
 
+    /// @dev Appends to the latest version; the predecessor is selected on-chain.
     function appendRevision(
         string calldata seriesId,
         string calldata versionId,

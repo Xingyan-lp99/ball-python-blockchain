@@ -3,13 +3,20 @@
 A small local learning demonstration built with Streamlit, FastAPI,
 PostgreSQL, Solidity, Hardhat, and web3.py.
 
-The current code provides backend/database checks, breeder registration with a
-photo and on-chain initial keeper, and retrieval of saved profiles and photos.
-Laboratory certificates, verification, keeper transfers, and husbandry records
-belong to the planned demonstration; they are not implemented in the current
-contract or frontend.
+The current code includes account registration/sign-in, role-specific workspaces,
+breeder snake registration with photos, two-laboratory PDF issuance, append-only
+certificate revisions, version history/downloads, keeper transfer requests and
+accept/reject/cancel actions, and four off-chain husbandry record types. Profile
+views display the current manager and transfer status. Husbandry edits/deletions
+require both current keeper rights and original authorship.
 
-Read [AGENTS.md](AGENTS.md) before contributing. The approved seven-step workflow
+The owner has manually verified the main handover and post-transfer husbandry
+workflow. Unit tests were paused by the owner; compilation and Python import
+checks are not a claim that the automated suite passed. Buyer-uploaded PDF
+verification is outside the approved demonstration. Husbandry evidence is not
+stored on-chain.
+
+Read [AGENTS.md](AGENTS.md) before contributing. The approved demonstration
 is in [the logical data model](docs/level-1/data-model.md), and the architecture
 is described in [the architecture document](docs/level-0/architecture.md).
 
@@ -52,7 +59,7 @@ Set-Location ball-python-blockchain
 uv sync --locked --python 3.12
 Set-Location contracts
 npm ci
-npx hardhat compile
+npx.cmd --no-install hardhat compile
 Set-Location ..
 ```
 
@@ -109,8 +116,26 @@ Get-Content -Raw backend/migrations/002_require_snake_sex.sql | docker compose -
 Get-Content -Raw backend/migrations/003_create_blockchain_transactions.sql | docker compose --env-file .env -f infrastructure/compose.yaml exec -T db psql -U ballpython -d ballpython_demo -v ON_ERROR_STOP=1 --single-transaction
 ```
 
-These migrations create the participants, snake profiles, and transaction tables
-and require a nonblank sex description. They are not automatically tracked by a
+```powershell
+Get-Content -Raw backend/migrations/004_create_husbandry_records.sql | docker compose --env-file .env -f infrastructure/compose.yaml exec -T db psql -U ballpython -d ballpython_demo -v ON_ERROR_STOP=1 --single-transaction
+```
+
+```powershell
+Get-Content -Raw backend/migrations/005_create_accounts_and_sessions.sql | docker compose --env-file .env -f infrastructure/compose.yaml exec -T db psql -U ballpython -d ballpython_demo -v ON_ERROR_STOP=1 --single-transaction
+```
+
+```powershell
+Get-Content -Raw backend/migrations/006_create_certificate_records.sql | docker compose --env-file .env -f infrastructure/compose.yaml exec -T db psql -U ballpython -d ballpython_demo -v ON_ERROR_STOP=1 --single-transaction
+```
+
+```powershell
+Get-Content -Raw backend/migrations/007_create_keeper_transfers.sql | docker compose --env-file .env -f infrastructure/compose.yaml exec -T db psql -U ballpython -d ballpython_demo -v ON_ERROR_STOP=1 --single-transaction
+```
+
+An existing clone initialized through migration 003 needs only 004 through 007,
+in order, after confirming they have not already been applied. These add
+husbandry, accounts/sessions, laboratory/certificate, and transfer records.
+The migrations are not automatically tracked by a
 migration runner and are not safe to rerun blindly. If tables already exist,
 first check which migrations have been applied. Do not delete the database to
 work around an error without agreeing how to preserve any existing data.
@@ -121,7 +146,7 @@ Open a dedicated terminal at the repository root, then run:
 
 ```powershell
 Set-Location contracts
-npx hardhat node --network localDemo --hostname 127.0.0.1 --port 8545
+npx.cmd --no-install hardhat node --network localDemo --hostname 127.0.0.1 --port 8545
 ```
 
 Leave this terminal running and rename it `Hardhat` in VS Code. The configured
@@ -160,6 +185,17 @@ The seed maps `BREEDER001`, `LAB001`, `LAB002`, and `BUYER001` to Hardhat accoun
 indexes 1 through 4, respectively. Index 0 deploys the contract. Creating lab
 participant records does not implement laboratory issuance permissions.
 
+Prepare the certificate contract and both laboratory permissions next:
+
+```powershell
+uv run --locked --env-file .env python -m backend.setup_certificates
+```
+
+Retain the printed CertificateRegistry address in your own local settings as
+DEMO_CERTIFICATE_REGISTRY_ADDRESS. If you already have a certificate deployment
+on this same running chain, configure its address before running setup to reuse
+it. Never blindly deploy another instance after an uncertain transaction result.
+
 ### 7. Start FastAPI and Streamlit
 
 In a dedicated terminal at the repository root, start FastAPI:
@@ -188,13 +224,37 @@ Rename this terminal `Streamlit` and leave it running.
    `{"status":"ok","database":"ok"}`. This check does not check the contract,
    database schema, or participant initialization.
 3. Open [API documentation](http://127.0.0.1:8001/docs).
-4. Open [Streamlit](http://127.0.0.1:8502), expand **Connection Status**, and click
-   **Check Backend and Database**.
+4. Open [Streamlit](http://127.0.0.1:8502), register a Breeder account, and sign in.
+   Each role binds to its predefined participant; register one Buyer and staff
+   accounts for LAB001 and LAB002 as needed. Account registration does not
+   authorize laboratories on-chain; the setup script does that separately.
 5. For the first registration, use `SNAKE001`, a fictional breeder internal ID,
    `Python regius`, a sex description, a birth date, a fictional genetic
    description, and a JPEG/PNG photo no larger than 5 MiB.
 6. After confirmed registration, use **View Profile** to retrieve `SNAKE001`.
    Check again after reopening the page to confirm retrieval from saved data.
+
+After SNAKE001 exists, deploy KeeperTransfers in a separate terminal:
+
+```powershell
+uv run --locked --env-file .env python -m backend.setup_keeper_transfers
+```
+
+Retain its printed address as DEMO_KEEPER_TRANSFERS_ADDRESS in your own settings,
+then restart FastAPI with all four settings: DEMO_DB_PASSWORD,
+DEMO_REGISTRY_ADDRESS, DEMO_CERTIFICATE_REGISTRY_ADDRESS, and
+DEMO_KEEPER_TRANSFERS_ADDRESS. This ordering is important for a fresh database:
+registration can run before KeeperTransfers setup, but husbandry writes require
+the deployed transfer contract. Do not run setup against another contributor's
+addresses without confirming those deployments exist on your local chain.
+
+The two lab accounts use New Report to issue separate V1 series. LAB001 uses
+Revise Report with its original Series ID to append V2. Buyer/Breeder profiles
+show Certificate History, selectable original PDFs, and Keeper Management.
+The breeder initiates a handover using the buyer's login username. The buyer
+can accept/reject, and the initiating keeper can cancel. Only confirmed
+acceptance changes the current keeper. After acceptance, the buyer may maintain
+their own husbandry records; original-author restrictions remain in force.
 
 Do not register the same ID again. If a transaction result is unknown or storage
 failed, inspect the transaction and saved state before retrying. Registration
@@ -202,6 +262,11 @@ changes both the local blockchain and database; `/ready` alone cannot confirm
 that these two states agree.
 
 ## Run existing tests
+
+The owner paused unit testing during the current implementation. The commands
+below are reference instructions, not required startup steps or a record of
+passing results. Existing tests may need updates for authenticated APIs and the
+separate KeeperTransfers authority before a future test-maintenance task.
 
 After installing dependencies, initializing the database, compiling the contract,
 and starting PostgreSQL and Hardhat, run from the repository root:
@@ -213,7 +278,7 @@ uv run --locked --env-file .env python -m pytest backend/tests frontend/tests
 For the existing Solidity tests, run from `contracts/` in a separate terminal:
 
 ```powershell
-npx hardhat test
+npx.cmd --no-install hardhat test
 ```
 
 Some Python tests use the real local database and blockchain; deployment and
@@ -255,19 +320,26 @@ The following stay outside Git:
 - `.env`: local settings and database password.
 - `.venv/` and `node_modules/`: recreated from dependency files.
 - `contracts/artifacts/` and `contracts/cache/`: recreated by compilation.
-- `storage/`: uploaded photos; created when a photo is saved.
+- `storage/`: uploaded photos and original certificate PDFs.
 - `docs/data_example/`: optional fictional reference documents, shared separately
   if needed. They are not finalized schemas or confirmed feature requirements.
 - Docker database volumes and the running Hardhat chain: local runtime data.
 
 A fresh clone will not contain another contributor's registered snake or photo.
-Use a separate local registration to exercise the current functionality. Sharing
+Nor will it contain their accounts, sessions, certificate PDFs, or deployed
+contract state. Use a separate local demonstration setup. Sharing
 an existing demonstration state requires a separate coordinated data handoff.
 
 Before pulling updates, check `git status` and preserve your own work. Coordinate
 small tasks and use feature branches and pull requests. Repository AI learning
 rules apply to both contributors: humans insert all program and executable
 configuration changes, and commit/push actions require explicit approval.
+
+The current main integration selectively adapts transfer logic from commit
+b527c1c into the separate KeeperTransfers contract. It does not merge the
+HusbandryEvidenceRegistry or the modified SnakeRegistry from feature/keeper-transfer.
+Use main for the approved off-chain husbandry workflow; do not merge that feature
+branch's broader storage-boundary changes without a separate scope decision.
 
 ## Troubleshooting
 

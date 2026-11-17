@@ -10,6 +10,7 @@ from requests.exceptions import RequestException
 from web3 import Web3
 from web3.exceptions import Web3Exception
 
+from backend.auth import AuthenticatedAccount, BreederAccount
 from backend.photos import (
     MAX_PHOTO_BYTES,
     get_snake_photo_path,
@@ -57,7 +58,7 @@ class SnakeRegistrationResponse(BaseModel):
     initial_keeper: str
 
 
-# Purpose: register a profile and uploaded photo using the demo breeder.
+# Purpose: register a profile and uploaded photo using the signed-in breeder.
 # Workflow: demo step 1, frontend-to-backend registration.
 # Without this route, the registration form cannot save its profile and photo.
 @router.post(
@@ -68,6 +69,7 @@ class SnakeRegistrationResponse(BaseModel):
 def create_snake(
     profile_json: Annotated[str, Form()],
     photo: Annotated[UploadFile, File()],
+    account: BreederAccount,
 ) -> SnakeRegistrationResponse | JSONResponse:
     try:
         request = SnakeRegistrationRequest.model_validate_json(profile_json)
@@ -112,7 +114,7 @@ def create_snake(
                 FROM participants
                 WHERE participant_id = %s
                 """,
-                ("BREEDER001",),
+                (account.participant_id,),
             ).fetchone()
 
             if breeder is None:
@@ -243,6 +245,7 @@ def _load_stored_profile(snake_id: str) -> dict[str, object] | None:
 )
 def read_snake_profile(
     snake_id: str,
+    account: AuthenticatedAccount,
 ) -> SnakeProfileResponse | JSONResponse:
     try:
         profile = _load_stored_profile(snake_id)
@@ -275,6 +278,7 @@ def read_snake_profile(
 )
 def read_snake_photo(
     snake_id: str,
+    account: AuthenticatedAccount,
 ) -> FileResponse | JSONResponse:
     try:
         profile = _load_stored_profile(snake_id)

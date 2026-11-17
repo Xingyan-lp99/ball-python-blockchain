@@ -17,14 +17,20 @@ tables or a requirement for separate contracts.
 | 1 | Breeder registers one fictional snake | Profile is stored off-chain; the registering address becomes the confirmed initial keeper. |
 | 2 | LAB001 and LAB002 each issue one report | Two independent certificate series reference the same snake, each with V1. |
 | 3 | LAB001 corrects its report | Its series gains V2; V1 and its original file remain available. |
-| 4 | Buyer verifies the official V2 file | Its bytes match the selected on-chain V2 hash; version status is shown separately. |
-| 5 | Buyer verifies a modified copy against V2 | Hash mismatch is shown; verification does not register a version. |
-| 6 | Breeder initiates a transfer after the offline sale; buyer accepts | Only confirmed acceptance changes the current keeper. No payment is processed here. |
-| 7 | Buyer adds, edits, and deletes their own husbandry rows | Own rows are writable; breeder-authored rows remain read-only. |
+| 4 | Buyer views certificate history and downloads original PDFs | LAB001 V1 is Superseded, LAB001 V2 and LAB002 V1 are Current; earlier files remain downloadable. |
+| 5 | Breeder initiates a transfer after the offline sale; buyer accepts | Only confirmed acceptance changes the current keeper. No payment is processed here. |
+| 6 | Buyer adds, edits, and deletes their own husbandry rows | Own rows are writable; breeder-authored rows remain read-only. |
+
+The human removed buyer-uploaded PDF verification and the matching/mismatching
+file cases from this iteration. Certificate issuance, revision, history, and
+original PDF downloads remain in scope. Husbandry records remain entirely
+off-chain; the teammate's proposed husbandry evidence contract is not adopted.
 
 Use local Hardhat accounts for breeder, buyer, LAB001, LAB002, and administrative
-setup. Roles do not require separate account types or a login system. Laboratory
-testing directions are descriptive metadata, not different program structures.
+setup. The approved account extension adds local registration, sign-in, sign-out,
+and role-specific workspaces. Each of the four non-administrative demonstration
+participants has at most one account. Laboratory testing directions are
+descriptive metadata, not different program structures.
 The PDFs are opaque documents: no extracted genetics, pathogens, or test-result
 tables are required. Example files are reference material, not final schemas.
 
@@ -37,6 +43,8 @@ column constraints remain a later implementation discussion.
 | Entity | Key and main fields | Relationship / purpose |
 |---|---|---|
 | participants | PK participant_id; display_name; wallet_address | One participant has one local demonstration address. The address identifies the signer, not a stored private key. A participant can be breeder, keeper, or record author. |
+| user_accounts | PK account_id; username; email; password_hash; role; unique FK participant_id -> participants; country_or_region; optional contact; optional breeder_name; optional breeder_region; optional breeder_introduction; created_at | One account binds one existing demonstration participant. Usernames and email addresses are unique ignoring case. Role is buyer, breeder, or lab; breeder_name is required for breeder accounts. Display name remains in participants. |
+| login_sessions | PK token_hash; FK account_id -> user_accounts; expires_at | One account may have multiple sessions. Store only the login token hash; the backend accepts only valid, unexpired sessions. Sign-out invalidates the session. |
 | laboratories | PK laboratory_id; FK participant_id; name; testing_direction | Each laboratory profile belongs to one participant, with one profile per lab participant. LAB001 and LAB002 have different addresses. |
 | snakes | PK snake_id; FK breeder_id -> participants; FK current_keeper_id -> participants (confirmed cache, initially unset until registration confirms); breeder_internal_id; nickname; species; sex; date_of_birth; introduction; genetic_description; sire_description; dam_description; photo_reference; created_at; updated_at | One breeder can register many snakes. The on-chain snake identifier corresponds to snake_id. The breeder remains unchanged by transfer. Photo reference points to off-chain file storage; image bytes are not SQL fields. |
 | certificate_series | PK series_id; FK snake_id; FK laboratory_id; title | One snake and one laboratory can each have many series. A new independent test creates a new series, even for the same snake and laboratory. |
@@ -46,9 +54,28 @@ column constraints remain a later implementation discussion.
 
 The model is deliberately small: no structured genetic results, specimen entity,
 parent-snake relationships, marketplace, payment records, verification history,
-or general-purpose audit system. Verification uploads are processed temporarily,
-not added to the certificate archive. File paths and private keys must not be
+or general-purpose audit system. Buyer-uploaded file verification is outside
+this iteration. File paths and private keys must not be
 exposed as user-facing evidence or included in API responses.
+
+### Local Account Binding
+
+Buyer accounts bind to BUYER001, breeder accounts bind to BREEDER001, and
+laboratory staff choose LAB001 or LAB002. A participant cannot have a second
+account. Laboratory selection identifies the existing participant; it does not
+grant on-chain issuance permission.
+
+Registration stores the supplied display name in participants.display_name.
+It does not replace participant identifiers, wallet addresses, snake breeder
+references, or historical record authors. Country/region, optional contact, and
+breeder-specific profile fields belong to user_accounts. Password confirmation
+is validated but never stored. Password hashes and session token hashes are
+internal authentication data and must not appear in profile responses.
+
+Migration 005 introduces only the account and session tables. Registration,
+password hashing, token issuance, expiry checks, sign-out, and authenticated
+role enforcement are subsequent implementation tasks, not behavior provided by
+the schema alone.
 
 ### Parallel Husbandry Entities
 
@@ -98,7 +125,15 @@ FastAPI enforces off-chain husbandry permissions using current keeper state.
 This is a demonstration of shared evidence and signing authority, not a claim
 that chain and SQL updates are automatically atomic or tamper-proof together.
 
-## 4. Record Permissions and Verification
+The current-keeper integration target is the separate KeeperTransfers contract,
+which references the existing SnakeRegistry for identity and initial keeper
+values. After the first accepted transfer, its own accepted keeper takes
+precedence. All backend keeper checks must switch together when this contract
+is activated. Original SnakeRegistry and CertificateRegistry deployments and
+existing certificate evidence remain intact. Deployment and backend activation
+are separate from compiling the new contract.
+
+## 4. Record Permissions and Certificate History
 
 | Action | Current keeper, own row | Current keeper, predecessor's row | Former keeper |
 |---|---|---|---|
@@ -113,15 +148,11 @@ and snake association are not editable. Husbandry deletion never deletes a snake
 certificate, certificate file, or transfer history. Buyer editing of basic profile
 fields and photographs is outside the demonstration workflow.
 
-Verification takes a selected registered certificate version and supplied PDF
-bytes. It compares their calculated hash with the on-chain hash and separately
-reports issuer and lifecycle status. An old or revoked file may still match its
-own recorded hash. An unavailable chain read is an incomplete check, not a hash
-mismatch. Matching bytes do not prove biological truth, specimen identity, or
-the correctness of a laboratory conclusion.
-
-Use the local original V2 and modified V2 to exercise the match/mismatch cases;
-do not copy the complete local reference documents into tracked documentation.
+Certificate history reads the registered version evidence and shows lifecycle
+status separately for each version. An unavailable chain read is an incomplete
+status check. Selecting a version downloads its preserved original PDF; no
+buyer-uploaded file comparison is included. Neither a recorded digest nor a
+displayed lifecycle status proves the biological truth of a laboratory finding.
 
 ## 5. Implementation and Validation Boundaries
 
@@ -130,7 +161,7 @@ outputs, reasons, and examples; obtain agreement; provide code in chat; the huma
 inserts it. No application code, migrations, tests, or executable configuration
 are introduced by this document or diagram.
 
-Implement the seven demonstration steps in order, one small task at a time.
+Implement the approved demonstration steps in order, one small task at a time.
 Provide relevant test code under the same agreement-and-copy workflow. Include
 negative cases for non-issuer certificate changes, unauthorized transfer actions,
 former keeper writes, and a current keeper editing/deleting a predecessor's row.
