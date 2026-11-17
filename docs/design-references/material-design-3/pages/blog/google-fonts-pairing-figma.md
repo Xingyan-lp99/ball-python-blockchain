@@ -1,0 +1,123 @@
+# You Asked for it—Here Are Some of Our Favorite Font Pairings
+
+Source: https://m3.material.io/blog/google-fonts-pairing-figma
+Content endpoint: https://m3.material.io/page-data/Posts/5661578846404608.json
+Content version: 2026-11-17_08-50-14
+
+This is an upstream documentation snapshot. HTML fragments and media URLs are preserved.
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/96c0b6c59fb590863be71e42ad80e9e770d95802130c16404eb56c3d1d05a414c3e78880c9b766b683eee87fe9249d4923e492990bb9d68a66e1644c6805162f
+
+https://lh3.googleusercontent.com/hNYP_Bjyy6pWjkWH0IGOCmTNfGx4N2SLujRA74KTe1WbSU227F3Jnrd9ebbKjs1Nv7doYCOjW9kvOTRbYy2jOHIaOHL72jspvUImLcbuTbziQ7VGr3M
+
+Sarah Daily
+
+Contributor for Google Fonts
+
+mio-example
+
+<h4>Check out the pairings and download <a href="https://www.figma.com/community/file/1113950611695632368" target="_blank" rel="noopener">templates on Figma</a>!</h4>
+<p>No matter what kind of project you&rsquo;re working on or where you are in the world, everyone should have access to stylish, high-quality fonts. That&rsquo;s why there are over a thousand of them on <a href="https://fonts.google.com/" target="_blank" rel="noopener">Google Fonts</a>. It's also why there are filters for language, category, and font properties to help you narrow down your options. There&rsquo;s also a bunch of guidance for choosing <a href="https://fonts.google.com/knowledge/glossary/typeface" target="_blank" rel="noopener">typefaces</a> from <a href="https://fonts.google.com/knowledge" target="_blank" rel="noopener">Google Fonts Knowledge</a>, like &ldquo;<a href="https://fonts.google.com/knowledge/choosing_type/a_checklist_for_choosing_type" target="_blank" rel="noopener">A checklist for choosing type</a>,&rdquo; by Elliot Jay Stocks.</p>
+<p>But, you&rsquo;ve been asking, &ldquo;what about help with <em>pairing</em> fonts?&rdquo;</p>
+<p>There are <em>millions</em> of possible pairings on fonts.google.com! &ldquo;<a href="https://fonts.google.com/knowledge/choosing_type/pairing_typefaces" target="_blank" rel="noopener">Pairing typefaces</a>&rdquo; (also by Stocks) is a good place to start if you&rsquo;re looking to gain an understanding of how good font pairs are made. Also check out his follow-up articles, &ldquo;<a href="https://fonts.google.com/knowledge/choosing_type/pairing_typefaces_within_a_family_superfamily" target="_blank" rel="noopener">Pairing typefaces within a family &amp; superfamily</a>&rdquo; and &ldquo;<a href="https://fonts.google.com/knowledge/choosing_type/pairing_typefaces_by_the_same_type_designer_or_type_foundry" target="_blank" rel="noopener">Pairing typefaces by the same type designer or type foundry</a>.&rdquo;</p>
+<p>For inspiration, check out the Google Fonts Pairings <a href="https://www.figma.com/community/file/1113950611695632368/google-fonts-pairings" target="_blank" rel="noopener">templates</a> on Figma. The templates are open-source and you can start using them instantly in Figma.</p>
+<h2>Google Fonts: Pairings</h2>
+<p><a href="https://material.io/blog/material-icons-sehee-lee-interview">Sehee Lee</a>, Senior designer at Google Fonts, handpicked the nine pairings to demonstrate a variety of use cases in different contexts. All in all, it&rsquo;s important for font pairings to make sense for what you&rsquo;re trying to achieve, and these pairings help give you a glimpse of what&rsquo;s possible. For example, for apps that need to deliver accurate information, you need fonts that are easily legible and offer various weights and styles. On the other hand, for a book cover design, you might look for more expressive fonts with interesting alternate <a href="https://fonts.google.com/knowledge/glossary/glyph" target="_blank" rel="noopener">glyphs</a>. You may also ask questions like, &ldquo;does the font support multiple languages?&rdquo; or even, &ldquo;what does the font make you feel?&rdquo; On top of all this, a good font pairing will ensure that type is readable and harmonious at every scale.</p>
+<p>&lt;mio-image index=0&gt;&lt;/mio-image&gt;</p>
+<p>Included with each Pairing are extra resources, such as information on the individual typefaces and links to Google Fonts Knowledge articles on typography that might be helpful.</p>
+<h2>Made with Material Design 3</h2>
+<p>Most of the digital mocks used in the templates were made from the <a href="https://www.figma.com/community/file/1035203688168086460" target="_blank" rel="noopener">Material 3 Design Kit</a> (which includes a comprehensive introduction to the design system, with styles and components to help you get started) and <a href="https://www.figma.com/community/plugin/1034969338659738588/Material-Theme-Builder" target="_blank" rel="noopener">Material Theme Builder</a> (which helps you explore dynamic color, brand colors, and type scale).</p>
+<p>&lt;mio-image index=1&gt;&lt;/mio-image&gt;</p>
+<p>&ldquo;I am excited to have had the opportunity to incorporate Material Design resources to develop the pairings,&rdquo; said Lee. &ldquo;It made the template creation so easy and each individual pairing came out flexible, expressive, and unique.&rdquo; Lee created the pairings by applying the baseline type scale and components. From there, she used the Material Theme Builder to create a custom palette for each pairing.</p>
+<p>&ldquo;Consider these as inspiration to start your creative project&rdquo; she said. &ldquo;From the nine pairs we initially set up, you can pick a suitable pair that works for your project or discover a new font that you have not had a chance to try. Perhaps, you can replace another secondary typeface on the top of the set. Use this as a baseline theme and build from there.&rdquo;</p>
+<p>Check out the pairings, download <a href="https://www.figma.com/community/file/1113950611695632368" target="_blank" rel="noopener">templates on Figma</a>, and share your feedback on <a href="https://twitter.com/googlefonts" target="_blank" rel="noopener">twitter.com/googlefonts</a>!</p>
+
+Screenshot of articles showing an array of knowledge cards
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/4f3372f342e704866c3a8f69d9d75da0e69ed4325d3364b8c2fce01d2e5298a1550d1936e64157c57070b82dd99dfae81769a053a91d55542f6f5862e2b3caf1
+
+https://lh3.googleusercontent.com/iXlDF6n5E1SY-2UOIN3wYkHGzco4TOXfqnKdyqehxuroTlrYLmiFFwuz2nPzhQwECmjJi7pY-MZ4XT54naV-QTDcF_kDJGJ3RrEomororquGplgIEw
+
+Screenshot of Material theme builder plugin
+
+Material Theme Builder Figma plugin
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/cdea07035b3056aacd4e0e52e0b2ebbf064221386f69688736f1d114adfb3f57f69191d23396b4134f1782a13562354841aaaa8c0a63a20fa60accad730de275
+
+https://lh3.googleusercontent.com/WX21Zrq6KSQ3Wg9t80MO0a-saeS9-JpZWlSyKAi5w5c3TLEsoIyOt3Qu9jKumIOeGU8W3NdC_C8pjg94KR5_tcvxCstcwAkJiOIgdgGgeg2q1mouV9o
+
+Screenshot of Google Fonts Figma templates showing an array of pairings
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/728d30b046339a70e0dab06498802880cbd471021a056f740b79cfee2738755adc49dbb6a659d0eef75c04da9e08a4aca323cc4d5ef831a19278d038d4e70763
+
+https://lh3.googleusercontent.com/aOqlMj5iSZShiCMopuwUDpII-EnwQ3oimUohubInd9SDEvq6iI8dzy5LapX_yHJj-WknQsCRhirTB7fnC59LNBVg8PXW7cmBUuGRmaBTVq5S2Bnpcms
+
+news tools design fonts
+
+{}
+
+Available now: Nine Google Fonts pairings with in-use examples and instant Figma templates
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/8ddcb93c376324379dbc4f36d9e1adce174192c9b83ed1373155106f3bb6a678bfe4fb94927e48e4a8a34862d5e2da31c28786696e9211793bedc277a6668cbc
+
+https://lh3.googleusercontent.com/rfNmL91P0yq45TJXj7roLS9_-2auSIWAeHOBCp3_UEgpXB76mYhJEbPE8PXZ8PbJFp01KHgWbgGhFdtV-FsnZxziaQnjwhDXw1OcCiI6l8gbTS67Cw
+
+Google Fonts Pairings
+
+2022-06-02T13:00:00
+
+google-fonts-pairing-figma
+
+See our handpicked Google Fonts pairings in use, and start using them now in Figma
+
+You Asked for it—Here Are Some of Our Favorite Font Pairings
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/185df830bbf3b014f09c305918af4e9359427cf0bff97521855b408f22ae96ddc64497972435f85187e14695b5944a91f7b316f3bedaba1959c5ef0a7a8a70fe
+
+https://lh3.googleusercontent.com/jF6rFGI3p1Huh8jk3jsK1J3cfGwM9_C2t4gD1NocFEbjewFXtLVNSUBD10tCT8BbHfANfAeFTZ1rStepQ2r4ruO1By3jCC4XuG9PKaQKIQl-6DiAQWXT
+
+/blog/introducing-symbols
+
+Introducing Material Symbols
+
+Material blog
+
+Material Symbols
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/91902c2ef23164f2f13172dec916c5e02ae37068752c0330a6c45b31dba666dab0cb153d4720efb90a7070ab3495312e6640f2daaaffc2fda195b8259c8a6a71
+
+https://lh3.googleusercontent.com/-G6Fu5uWUn9Xkqz-R7-h4LFNjCa5nC5hrv60jAMOI5uFCuuBjjlnDBLMm146S-0VG-_9TDvF9F8L5YHbbGuIEDzZh53SfagcBtANoOO0GMUeIkmxExw
+
+/blog/roboto-flex
+
+Roboto ... but make it Flex
+
+Material Blog
+
+Roboto ... but make it Flex
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/c47fc7865695a86449f19e1148279454975a5d7c4f6b6e7917ee411604e87279f0f3a1f1ed19a97cb0cfa10db2a830072e452406c8481297f8e4e3915e7d88f0
+
+https://lh3.googleusercontent.com/CqOkQHV6IkWjWVJYZqyTktoGtyfAvNs9A_F8nNfmZG0qrWDqcZlQlTGugKWViMgVlfvdIfsO0agfHFnMulbNC3D8jdSto8GI5Z-AbVUtUKsoxLBNS0L6
+
+/blog/google-fonts-knowledge
+
+Announcing Google Fonts Knowledge
+
+Material Blog
+
+Announcing Google Fonts Knowledge
+
+mio-example

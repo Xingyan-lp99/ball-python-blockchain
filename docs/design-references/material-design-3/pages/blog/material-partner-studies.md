@@ -1,0 +1,245 @@
+# Material Partner Studies
+
+Source: https://m3.material.io/blog/material-partner-studies
+Content endpoint: https://m3.material.io/page-data/Posts/6016881925029888.json
+Content version: 2026-11-17_08-50-14
+
+This is an upstream documentation snapshot. HTML fragments and media URLs are preserved.
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/6d7af15ad53b3dc2a564194c6af86818611f5e202ea712369f90d885bc714e364da08b66b1440ca1ed68fc96cbb5f7fc8be8040df133e820cb10ffa29f5034d7
+
+https://lh3.googleusercontent.com/UA4cn84QGMesPZb6pWYU2ny8NhqYA-2m6yKn4D1PEDtNfvIc2SQA11JTWRGU-0R21DVoDKh6REdSHLgTdfcn5xr4a9zWRy5HbRk1WA
+
+Material Design
+
+mio-example
+
+<p>On any product team, there&rsquo;s often a tension between building things fast and building beautifully. But with the latest Material Design release, teams get the best of both without having to compromise quality. Since we introduced Material Design in 2014, we&rsquo;ve been working with people across Google and around the world to better understand the needs of designers and developers&mdash;we&rsquo;ve conducted hundreds of design reviews and nearly as many design sprints. Collaborating with early access Material partners including Lyft, Genius, NPR, Pocket Casts, and Zappos was another important part of the process.</p>
+<p>The goal has always been to help you build easily and systematically, and now you can with custom Material themes to make your product unique, a growing library of customizable components, and tools that encourage (and simplify) collaboration across teams. A design system only comes to life in the hands of its users, with every touch, tap, and interaction that brings someone&rsquo;s experience off the screen and into daily life. Get to know some of the new components, interactions, and expressive capabilities of Material, by diving into these explorations and interactions developed by our Material partners.</p>
+
+<h2>Lyft: Taking action with the extended FAB</h2>
+<p>&lt;mio-image index=0&gt;&lt;/mio-image&gt;</p>
+<blockquote><strong>&ldquo;We're a new team that just started considering design systems, so to work with a robust design system like Material, especially one that we could learn from and customize, made us feel a lot more confident about the choices we&rsquo;re making.&rdquo;</strong> &mdash; Linzi Berry, Design System Lead, Lyft</blockquote>
+<p>As a ridesharing service,&nbsp;<a href="https://play.google.com/store/apps/details?id=me.lyft.android&amp;hl=en_US">Lyft</a>&nbsp;wants to get people from point A to point B as quickly as possible. This attention to efficiency is central to the app&rsquo;s mobile experience, and manifests in its primary action: booking a ride. The challenge is making that action swift and simple, while still communicating to passengers exactly what they need to know as they move through the process of selecting, requesting, and confirming their Lyft.</p>
+<p>Swapping out the circular floating action button for Material&rsquo;s new extended FAB proved beneficial and solved some critical problems identified by the team. The component serves as a great canvas for the systems that define Lyft&rsquo;s vibrant identity&mdash;incorporating color, type, and shape&mdash;while providing functional benefits as well. An extended FAB can easily accommodate short or long labels that are more descriptive than an icon alone. In Lyft&rsquo;s case these include branded actions for the type of ride someone selects, Lyft or Lyft Line for example, which might be localized for particular markets, or can accommodate extra characters when translated to other languages. The extended FAB&rsquo;s prominent place in the interface ensures that the primary action of the app &ndash; booking a ride &ndash; is visible and easy to find so users can book without thinking twice.</p>
+
+Lyft mobile app showing map route and list of car types above an extended FAB to Request Lyft
+
+Lyft uses the extended FAB component to highlight key actions with rounded edges and a striking gradient
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/4fd14e0d8c7459c0e0e79b809c142c3b0f8d32fdaf0e28cf5f5c12613c1cb6ebcee5b3b7e587f6bb8da297a72076a8b0edaea8a8e77c638911777ab719540834
+
+https://lh3.googleusercontent.com/_7TcBbv1spuE9hwLYl0Mi_vwy_m2m9ovzI6PWsHZRhLSDuLDecTmM-dcqbdGr_uQcimhytuSVZSvk5J7cFM_z3ELlS9tFTGwUjfiOw
+
+RelatedLinkCards
+
+Related article
+
+Wider FAB with a text label
+
+_f68a99ffe9144467a917320028f1ce3b_/_5a6e8348f0a949709d2347ad05d7cc90_/d6fcd75073efb07932cc9aea4d3da19867470cdd27b44599676bc6a5992b25b78235781f3fe79db4f584728b7f58669558470f498e45b8f123227796a3a000f3
+
+https://lh3.googleusercontent.com/BS-NbVrT7-631PsEzVBBZW6ehxXSO1mblhDJLMQOCYge7Z_0Ukv2VpK3-kgINdMGufQqaUmZjSpy4q7z4UC019x6TIp5CZjIBF1NMPM
+
+/components/buttons-floating-action-button
+
+Extended FAB
+
+mio-example
+
+<h2>Genius: Creating a responsive layout grid</h2>
+<p>&lt;mio-image index=0&gt;&lt;/mio-image&gt;</p>
+<blockquote><strong>&ldquo;We worked with Material to develop a responsive grid structure that&rsquo;ll pave the way for creating a consistent experience across our entire brand.&rdquo;</strong> &mdash; Allie Ball, Art Director, Genius</blockquote>
+<p><br />Responsive design isn&rsquo;t always about resizing and stacking content.&nbsp;<a href="https://play.google.com/store/apps/details?id=com.genius.android">Genius</a>&nbsp;&mdash; a community-powered platform for annotating and interpreting music lyrics, takes a unique approach to adapting between mobile and desktop experiences. A Genius user on the go is more likely to look up song lyrics and artists on their phone, while desktop users tend to engage more in sharing commentary and annotations. These two experiences are complementary and platform-aware, but the app&rsquo;s layout grid didn&rsquo;t always adapt as seamlessly as the rest of the interface. To better adapt, Genius recently unified its layout grid across platforms in line with updated Material guidance, making it responsive as you move between devices.</p>
+
+Genius app desktop and mobile screens with layout grid overlays
+
+Genius created a unified, responsive layout grid with Material
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/bc37213311558c4c485d9b438a1d21c7d961c1eb9f2225d6456580d8288fe836aed1d2af496e3c96534e2b388a2037e8b586ce9246e7cce639ecd4718348b044
+
+https://lh3.googleusercontent.com/39LtXbGS_EGsY8hzqonI193dG8A5w68kwvOt7GGQU2OqVeI49rYm7IyUp7itEOpU7CycpqWGiB28m5PNf_MU3jof5ZXwKuWHcFiPuA
+
+RelatedLinkCards
+
+Related article
+
+Adapting to screen size and orientation
+
+_f68a99ffe9144467a917320028f1ce3b_/_5a6e8348f0a949709d2347ad05d7cc90_/d61e765153452a3592dee02ad5dbf3f7f6348e0ed1e1581bd38dd5eebc3ca59c51c7f84137bcbcc473e11ac0c0f4968ff73e43f1c8e5ded60ceb8a5d32860c59
+
+https://lh3.googleusercontent.com/YHBWuECTTlJzpqkenqvobkntOkicF95vb-8iTUHDBP-0FE5XQiY1ceyDyhmYyL427_7oA9w66SkeDIoJmCqU5S4XJGd45qXXASVQ
+
+/design/layout/responsive-layout-grid.html
+
+Layout Grid
+
+mio-example
+
+<h2>NPR: Organizing experience with cards</h2>
+<p>&lt;mio-image index=0&gt;&lt;/mio-image&gt;</p>
+<blockquote><strong>&ldquo;What we're trying to do is reach listeners where they're looking for things, in a more visual and a more organized way.&rdquo;</strong> &mdash; Libby Bawcombe, Senior Product Designer, NPR</blockquote>
+<p><br /><a href="https://play.google.com/store/apps/details?id=org.npr.one">NPR</a>&rsquo;s On Demand screen combines multiple types of content from various sources into one interface, so that people can quickly catch up by reading or listening to curated selections. Previously, everything was contained in a single list and there wasn&rsquo;t a clear differentiation between a wide range of media&mdash;while newscasts, podcasts, and live radio were each split up into different sections. This made content difficult to browse, posing a challenge for both NPR and the app&rsquo;s users.</p>
+<p>NPR needed to create a more flexible and expandable approach to grouping and revealing content in the app, making it both easy to visually parse for the user and easy to manage for editors. The solution was to create customized Material cards. The white cards on a minimal, white background create a visual structure that avoids complication, and the shadows &ldquo;cast&rdquo; by each card further communicate each grouping of content. The team also established a branded shape system using broad, rounded corners. The custom shapes manifest in the mini player, cover art for shows and publications, and the cards themselves. A Material list component inside each card, expands to accommodate related content when needed. Touches of blue emphasize key actions, highlighting the mini player at the bottom of the screen and affordances for accessing other playable content.</p>
+
+NPR mobile app with list of news items
+
+NPR uses cards, lists, and color to organize and simplify the presentation of its content
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/f5d6046c6d756a753307dcc93a8db9e06caacf3850b75e0c9871905ace62a29f1e6f7f0269e567e80440837f5475eeafcd39918676b62236c22c1faa90c7f0e2
+
+https://lh3.googleusercontent.com/3N3KV1FkutQy_RtShkMCw4i37jnXo_HoWeLrt7tcvnFDxnAnqVJmA5Gq3mz2iI2dthWH9zyEOczSdSZZ8IY3vTZVwSjhxHS4DVirHg
+
+RelatedLinkCards
+
+Related article
+
+Containing content & links on a single subject
+
+_f68a99ffe9144467a917320028f1ce3b_/_5a6e8348f0a949709d2347ad05d7cc90_/59b7deefce81822115f5ff10aa9acaaab7e3b02deb294af53159663ad554f49ddfe2fcdec687062fbec5a561aff01728d5d47dc8d329f63f3dbb18765294935a
+
+https://lh3.googleusercontent.com/hXF1iD82nzH836dY-cSMrS3ts0ff2VayuObPEVGyTS2sMQZ7bUaGGUoYtOLmMk5Xntt1cl9JSBJeIDh42tSRsgEr1Emk89txqaPQ
+
+/components/cards
+
+Related Article
+
+Cards
+
+mio-example
+
+<h2>Pocket Casts: Building a better player</h2>
+<p>&lt;mio-image index=0&gt;&lt;/mio-image&gt;</p>
+<blockquote><strong>&ldquo;What we discovered, was that there might be better ways to transition between screens. We had help from some of the motion experts at Google to help us determine some new, interesting ways to transition that weren't relying on just the circle reveal that we&rsquo;d used in the past.&rdquo;</strong> &mdash; Chris Martin, Designer, Pocket Casts</blockquote>
+<p></p>
+<p>Podcast player&nbsp;<a href="https://play.google.com/store/apps/details?id=au.com.shiftyjelly.pocketcasts">Pocket Casts</a>&nbsp;set out with the goal to update and refine their existing interface. Drawing inspiration from our new Material updates, the team refreshed and strengthened its brand expression while cleaning up interactions, and making improvements to the app&rsquo;s use of color and motion. The player component, in particular, now includes more controls and richer behavior patterns. As the player opens, other parts of the app &mdash; including the bottom navigation bar &mdash; cleanly transition out of sight. And player controls &mdash; play, pause, rewind, fast-forward &mdash; use choreography to appear in just the right spot, with plenty of room dedicated to the &ldquo;up next&rdquo; queue and other listening options.</p>
+<p>To strike a balance between expressing its identity and adapting to the varied artwork each podcast provides, Pocket Casts also fine-tuned its approach to color. Color extracted from podcast artwork is reserved for interactive components and progress indicators, while subtle gradients generated from the same palette fill in surfaces like the collapsed player for a flexible but understated aesthetic.</p>
+<p></p>
+
+Pocket Casts mobile app with image tiles and player module above a bottom app bar
+
+Pocket Casts simplified its approach to color and built a better player that affords richer interaction
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/c3914269e853b5cecb3e1e9b4ff45ebc767f389b79983995f6fd9986b7bd2d62d841735b0db62ac1cf5ece9e9c8743b74b9452ea1d95ccbcddb5b233fc3d987f
+
+https://lh3.googleusercontent.com/-R9dxTh6OVy4FBdiMTqAiTG4rUnqj3z2GHMDgFd9srStQnPBfSefu0gzrDyaO86rHZpZAEhyul0K-QiSHkgV6nmA_H82cHa5Ge3z-A
+
+RelatedLinkCards
+
+Related article
+
+Transition patterns & guidance
+
+_f68a99ffe9144467a917320028f1ce3b_/_5a6e8348f0a949709d2347ad05d7cc90_/e9f32261a0e1690b8a23e0dfeeba9210de13f79e122b873e52857582146ddd57db1258bf0bd4654ff0221135d5ec7e375b8cc33ecde4f05457df991ca2cf30be
+
+https://lh3.googleusercontent.com/l0koSkYS73GSjlbfZixJo_WU4ZlSFp73AczStPxsAWB9Y-pKbtlUlO2Ntfmzb8a26JQPLAHNZojWFMtcfxdBZ7Camxwi0VP_KrY4S-8
+
+/design/motion/the-motion-system.html
+
+Related link
+
+Motion System
+
+mio-example
+
+<h2><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Zappos: Creating and preserving context with the backdrop</span></h2>
+<p>&lt;mio-image index=0&gt;&lt;/mio-image&gt;</p>
+<blockquote><strong>&ldquo;Mobile is one of the best platforms, if not the best platform, to deliver personalized experiences. Using [the backdrop] we can provide simple tools for our users to find even more relevant products.&rdquo;</strong> &mdash; Andrew Nguyen, Head of Personalization and Mobile Product, Zappos</blockquote>
+<p></p>
+<p><a href="https://play.google.com/store/apps/details?id=com.zappos.android">Zappos</a>&nbsp;already puts a spotlight on filtering search results in their app, but wanted to reimagine and streamline search and curation interactions using Material Design. The task was to better emphasize the items users are looking for without sacrificing quick access to controls like search that users always want close at hand. The team explored the use of Material&rsquo;s new backdrop, which establishes a strong mental model in the app, helping users understand that search and filtering are always just a tap away, in a dedicated and omnipresent surface in the back layer. Simultaneously, the front layer surfaces results and curated products. Users quickly learn how to access filtering, while the app maintains an emphasis on curated, personalized content.</p>
+
+Zappos mobile app with backdrop and layers for list items and bottom app bar
+
+Zappos adopted the backdrop to create a clear and efficient mental model for finding and managing content in its app
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/095b66aa8125f73fa5073c4148c76197cac69bd50b33beafd4b56e291ab04fdeb22709cb3c3df212cbca11503ba853eaf0a64555300bbbb72af4f4bc0a497b29
+
+https://lh3.googleusercontent.com/fqmwiF5k72FPhukLdkd-M6ccLRDaY5hmxkL3GE9dddIv6FLNZySAHuUXGkOWDadyssT08gV_UBF1XDWbe_mU2P8wwWHBDk_EXd54
+
+RelatedLinkCards
+
+Related article
+
+Displaying contextual & actionable content behind other surfaces
+
+_f68a99ffe9144467a917320028f1ce3b_/_5a6e8348f0a949709d2347ad05d7cc90_/79bc83224f7c120c4514b8c0c221fa6f6747a1a232e37a53ef3f49146f887d7a5dd7dcecff94b5cc4efcfb9165179a41b6b99026f3fd4ab3a20e5ec919955563
+
+https://lh3.googleusercontent.com/Le1tcpGRJoxBBoPcfOzccb6JCH-Nu9iPri9SXnfGsgv7IAv4KBW2kHLtGyyTbZDCc2cXKQ_R5AtkSygVjRC4-BLbKMgSxiBaQ10ibg
+
+/components/backdrop
+
+Related Article
+
+Backdrop
+
+mio-example
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/973348ef82efea9c74445048c589c26c9967876e9036fb070cdd9b0295bb853f0acca1be883cd8c716522b6466c604f890aae2fb1e72415c13f64dd5048be17c
+
+https://lh3.googleusercontent.com/yKO2UrlF62uxxlxfdbuPzbR5rp0Ptr3FEx0pQHP3E3FnYzt5_SqzGo7CMOShk6ZZhCtNQ8NiqWEGjhynm1zWYMoCVmdqd80lXT_fsw
+
+Material Theming, Case study
+
+ 
+
+{}
+
+Learn how apps like Lyft, Genius, NPR, Pocket Casts, and Zappos bring Material’s new expressive capabilities to life
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/9e18eadf65deb71225224be86d7da2eee74b83beac636f2842f0114eccca0add738ca7046add98df7a3f98e27df3449ce1732b049973b268701c34c498719e19
+
+https://lh3.googleusercontent.com/rVVGpIme8a6NvVCowjYc3uMBdeIX0-0mKLc_3Aut3Wa3BhFJXWTpjR2D0IqY8zggNkQtj0ienwg1wodi4JjqfHl8tlgLqn3Ek6UM
+
+Material Partner Studies
+
+2018-05-08T13:00:00
+
+material-partner-studies
+
+Learn how apps like Lyft, Genius, NPR, Pocket Casts, and Zappos bring Material’s new expressive capabilities to life
+
+Material Partner Studies
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/7856674c89b7593762c271225d507d1bcd85a95aba42df6b31353d55b212c73b38347ddad5081667b3c6b21ba72ecadcf4f9876607842b4ebc30dda1dd695227
+
+https://lh3.googleusercontent.com/HqzCRYlqY13E3AOr2PRbEqWAZyr5TMAQ06DXkQZneYChrZ0l9SXaC3oAT7XWD64ObZHHftW1ZwkB2wpfo1Yrn-A3RoQUedx8mgo4mWY
+
+/blog/google-material-custom-theme
+
+Material Blog
+
+How Google created a custom Material theme
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/5819e7635398fe701440954c645d29e6dce64b9fc5f8a42a4b3ad42d96ac2bdc51f26c4d0f4ea2746af4b7501945f9fe5733c354690c1664a9ea95a9ad1e4163
+
+https://lh3.googleusercontent.com/sXsu9m_NFwnYBOfbUlfn2bPDr2r3MfXKg6wTExfeZgnOflBUnmR5SARk-teM-kE2UxQpKSlAV35SKUaRw2kWAEOYgEIrSe44lpAPXQ
+
+/design/material-theming/overview.html
+
+Material Theming
+
+Theming overview
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/6f6a97a70961c27b3ce68a3d2379523ba098f177ab545e4f7f65cba84e81cbcf292ec1b2e0a4e8c7bbf6796837412c05f309f4e0d5bfeef1a961505ac73dc582
+
+https://lh3.googleusercontent.com/32QVXJlStUJhkr7aylDQUKiIONcfRdpI_QBxa79rDTLEFTVjQCsTCn3PEKAQy0JWrtlYoJaXIa0MDggYcXI5ub4gyiz9Y56hfBOsmg
+
+/blog/material-design-blog-welcome/
+
+Material blog
+
+Welcome to the Material Blog—A Letter from the Editor
+
+mio-example

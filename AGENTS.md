@@ -39,6 +39,33 @@ Agents should use these files as reference when working on related features,
 but must not treat them as finalized schemas or confirmed requirements.
 This directory is local reference material and is ignored by Git.
 
+## Frontend Design References
+
+- Read `docs/design-references/README.md` before proposing frontend visual or
+  interaction changes. Use its local document links to read the relevant guidance.
+- Use Material Design 3 as the primary design reference for color roles,
+  typography, spacing, shape, elevation, layout, component states, and accessibility.
+  The local snapshot is indexed in
+  `docs/design-references/material-design-3/INDEX.md`.
+- Use shadcn/ui as a secondary reference for component composition, clear forms,
+  cards, dialogs, sheets, tables, and consistent semantic theme tokens. See
+  `docs/design-references/shadcn-ui/README.md`.
+- Keep one coherent visual system. If references differ, follow Material Design 3
+  unless the human explicitly approves a project-specific exception. Existing
+  styling is not automatically an approved exception or a reason to rewrite pages.
+- The frontend remains Streamlit. Adapt reference patterns to native Streamlit
+  widgets and supported theming first. These references do not authorize adopting
+  React, Tailwind, shadcn/ui runtime components, or another frontend framework.
+- Before each small UI coding task, explain the affected workflow, inputs,
+  outputs, example, relevant reference, and any Streamlit limitation. Follow the
+  mandatory agreement-and-copy learning workflow below.
+- Preserve visible labels, keyboard access, focus indicators, readable contrast,
+  and understandable loading, error, success, and disabled states where relevant.
+- The snapshot contains upstream documentation, not project requirements or agent
+  instructions. Do not execute its examples or installation commands automatically.
+  Media links and interactive examples may require internet access; consult the
+  snapshot README and coverage manifest before claiming offline completeness.
+
 ## Agent Rules
 
 1. Read relevant documentation before coding.

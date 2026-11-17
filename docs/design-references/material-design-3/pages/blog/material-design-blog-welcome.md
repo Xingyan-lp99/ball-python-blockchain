@@ -1,0 +1,100 @@
+# Welcome to the Material Blog—Letter from the Editor
+
+Source: https://m3.material.io/blog/material-design-blog-welcome
+Content endpoint: https://m3.material.io/page-data/Posts/6305819849916416.json
+Content version: 2026-11-17_08-50-14
+
+This is an upstream documentation snapshot. HTML fragments and media URLs are preserved.
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/114b4e6d76018c7e7e36de47f8158a7d71794d04f1a575e31408803c59ba962ac3b15579c1534fce4b47bcccb7fb81f590aff7676a92c371b704a7732e05fed7
+
+https://lh3.googleusercontent.com/2AT_TIxyMX0Inqd9Rk4ejaFoRmOOczEwM9E5xz4DfYxaUqgdkXsCRKOX3uHYFOjyU9VwwFzGGCsZnf6BYmkPP0x3OjztRk02SB3O_HOBLz_vXdvoi2g
+
+Liam Spradlin
+
+Senior UX Designer, Material Design
+
+mio-example
+
+<p dir="ltr">By now, reader, you might know that &ldquo;Material is a design system &ndash; backed by open-source code &ndash; that helps teams build high-quality digital experiences.&rdquo; That&rsquo;s a line we introduced in 2018 with the launch of Material Theming, and it encapsulates what we&rsquo;re trying to build for, and with, our community.</p>
+<p dir="ltr">&lt;br&gt;</p>
+<p dir="ltr">But we know Material Design isn&rsquo;t just backed by open-source code. Part of what really backs Material Design &ndash; beyond the components and their code &ndash; are people. As a team building a design system, our users aren&rsquo;t just folks using apps in the world. They&rsquo;re also people building apps, people designing apps, and people working in all kinds of other roles to bring those apps and products to life. As a Designer and Design Advocate, part of my job (along with the rest of our team) is to help all those people succeed with Material by using it as a tool, a solution, a starting point, or inspiration.</p>
+<p dir="ltr">&lt;br&gt;</p>
+<p dir="ltr">My immediate teammates in Material Design Advocacy have made videos, articles, podcasts, and conference talks across publications and platforms to help do that. But we aren&rsquo;t the only ones who have voices, perspectives, and insights that can help our community build better, faster. Across interaction, visual, and motion design, engineering, research, and tooling, Material is full of brilliant folks with experiences and ideas to share.</p>
+<p dir="ltr">&lt;br&gt;</p>
+<p dir="ltr">Through news updates, step-by-step guides, design explorations, research findings, and partner case studies, this blog will not only describe how to use Material Design, but how the system is made. In exploring topics beyond the guidelines and code, we hope that you, reader, can learn from all the work happening behind them, directly from the people making it happen.</p>
+<p dir="ltr">&lt;br&gt;</p>
+<p dir="ltr">My goal as an Editor is to bring all of these voices and all of these stories together in one place. Welcome to the Material blog.</p>
+<p dir="ltr">&lt;br&gt;</p>
+<p dir="ltr">&lt;br&gt;</p>
+<p dir="ltr">Liam, on behalf of Material Design</p>
+
+Illustration showing the outline of an eye and a floating action button, surrounded by abstract shapes.
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/8b4bb27e94b6b41b638496c068aeea2c0c2664ba8ecce5d88d4b1d05951eb3ea960861748b825e11e21fb2d4aade69265496a1bb1fb48cbe01ecb6b7a5941765
+
+https://lh3.googleusercontent.com/jEnGSii1ALI3l2mLtobU8e0uIfdkf8eg8ic3koughUw5N38UAwe6rLrmIaZo9ee3RmJ50pU8hTSClYXjEJdAtuiFCjiUoDd66aEfSA
+
+ 
+
+{}
+
+A place to learn about Material Design, beyond guidelines and code
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/ed8f92d35ff7ea24d579de89de1f7925380468f0b9b50268252a69388674fc90648e4193153478fca1e7aa81ca6dd506045aad6e813544c462aee8e8478e8061
+
+https://lh3.googleusercontent.com/O15TznNmyF5obgvMK5y-_boJu967qkG6X4AtI8G00YAyimSgwGReS5znNN5jYkIlUSsnCyA1IUxBc1Ex4gH28xvgFLZQ88yBgn_A-9M
+
+Welcome to the Material Blog
+
+2020-09-01T13:00:00
+
+material-design-blog-welcome
+
+Material Design, beyond guidelines and code
+
+Welcome to the Material Blog—Letter from the Editor
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/71b873d3c00ebb9924495297d956b10a057a9bc599d50a0cfd141fb26afb14acc4926b20bd9b32dc491db0aed5c5270426f2c9de5d18d5c70269dca2cefb3ed1
+
+https://lh3.googleusercontent.com/nUJTOrsF4VN5m2UMBM-J4lVD_W7wujCjUKLU8xH4wzikNlr6gdNRmga2okU7_lABELi5Ss3AjDyhSQc7Ay7vCZZ5gZahzB9Use8T3w
+
+/blog/design-material-theme-color
+
+Material Blog
+
+Designing a Material Theme: Color
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/2f95c86bdc1b02ce73d92619c01d8e49eed9376d66b001fefc3322502ceab9d6e0a58b35639ea0777289ba6163c3a79dd95f3108d519fafbc9eea399cb404b58
+
+https://lh3.googleusercontent.com/uX7KzRFGZKbProyCEHQKohPAN8DFI-IJqbRrvvzEMqnoVp06w7g_LW7d5HfKXPXtObG_OD0GVBl69yWS8eWP8DjfnJVHijIApnSW
+
+/blog/android-material-theme-type
+
+Material Blog
+
+Building a Material Theme on Android: Typography
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/94ccae5400c110b59e0a752e8e67a0d911b9ba63ce354ed4a9411a36992dc5866db038eea65fabe74ccef3b02bf04cd09f852f40647e788c30d1ad4501fc7c20
+
+https://lh3.googleusercontent.com/TeLZea0Z3_3eKsf_VU8bMh3Nn_HNmY3gLNl915hP41iP3X6ZVaCZt3UO-n1PbYVSIN09dOanns3gqMM5bJhJ3es1bJt5Zk7Zq_6F8Q
+
+/blog/android-material-motion
+
+Material Blog
+
+Building Beautiful Transitions with Material Motion for Android
+
+mio-example

@@ -1,0 +1,178 @@
+# Adjusting the Focus
+
+Source: https://m3.material.io/blog/inclusive-imagery-at-google
+Content endpoint: https://m3.material.io/page-data/Posts/5033445688082432.json
+Content version: 2026-11-17_08-50-14
+
+This is an upstream documentation snapshot. HTML fragments and media URLs are preserved.
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/dd19e441e0d7510796615db9640bb20db7ba996f9d3acebaa0c337e7daaff4127bef1b18bb3938b623aedca8a1cd1e4879afa7b53fad3089d49491d3a5acb013
+
+https://lh3.googleusercontent.com/WVZkd-2BqR7cmf7vyrYILWzLMpRHruPKhl6x2hv2wUAfhUXWJxIkL_Y2i8fXsU_1B1SbPR2zNsXMEBHPrIdUrFlPsfzGrSInkbMh1FyxkH-CrRBYXFQ
+
+Emily Blank
+
+Senior Art Director, Material Design
+
+mio-example
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/5d60e753f0001fb83ad9d525e057a56f1bddb114a16ddc6e6c6e8a514eced94c2aae3c01fdfa05967760a77857a452a00b0c259e085842f56de155b00e6b5786
+
+https://lh3.googleusercontent.com/-cVJ6qd7QoOFzT-KbBKJBEyvC4ODnzy2-oCK1rO3BH6vKea3i0F5Qudiy0dKSs61DEg0FsXTOhOLeSY80skXBZwV9OGTm-tjweMmmA
+
+Michael Gilbert
+
+Staff UX Researcher, Material Design
+
+mio-example
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/7f4ed9c394fed37d1d8d936138a185ac6956d5d81746651af69be1879cefa433efd87327988b0187c0145f5db14309cd279b8348cbf7c86dbd7cc83d8a915b1b
+
+https://lh3.googleusercontent.com/LSuYarV-MzoTyV5LbIJqBf8TFIAybFMth7zjfJXEWxl_7VyqJc2r4dRwA309R0D2r8VjvZKcTBDTIWhKXN6R8ie0pcQ7q1gIFmC2TjQSU9XPMDv2tQ8
+
+Stacy Braham
+
+Assistant Professor, UC Irvine
+
+mio-example
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/11e9f9b97a72900acd7fa1cbc637e87867aa0bb839c5ecc3a7db64183a1d86539c09a88a942e3d55927210380dbcaa97cee49b31d215917484ef75bb6aeca47e
+
+https://lh3.googleusercontent.com/b42EdlNlMyqTck22-CJR3XnnLHNYVjD7id1HWiDMnOMjjfy4wvDFW_qIEifS-PEbv_R4jMEJIxb_zVhN6vEeFyKYR1nB4hplZpSR23dA0zq2ORM-fw
+
+Emory Edwards
+
+Informatics Ph.D. Candidate, UC Irvine
+
+mio-example
+
+<p>Creating inclusive imagery goes beyond what you are showing. How you show it is just as important.</p>
+<p>It would be easy to create generic, non-representative imagery that avoids addressing the complicated questions around how Google&rsquo;s diverse, global audience looks, acts, and identifies. But avoiding the question doesn&rsquo;t drive our design practice forward. While this task was daunting, and sometimes uncomfortable as we faced our own accidental misrepresentations, we began an exploration into how representation can impact design. That exploration has lead Google in exciting new directions, including the upcoming launch of Janet Mac and Patrick Dias&rsquo; diverse and inclusive avatar collection on the Google Chromebook (some of those images can be seen below).</p>
+<p>This initiative started in 2016 with The Avatar Project - a project developed to provide internal designers and engineers with images of people that visibly embody Google's core values. The program evolved in tandem with Google product needs, and transitioned from photographs of Googlers to illustrative representations focused on highlighting the global diversity of life and experience. Despite this shift in the medium, the core principle remained - to prompt Googlers and external audiences alike to think more critically about inclusivity, evolving our understanding of representation and showing the entirety of human experience; an experience that includes diversity of gender, race, age, socioeconomic status, disability and other identities.</p>
+<p>In order to ensure we were approaching representation and imagery thoughtfully, and knowing we wanted to accurately evolve our image library, we partnered with the <a href="https://stacybranham.com/" target="_blank" rel="noopener">INsite Lab</a>.&nbsp; The INsite Lab is an academic research lab at the University of California, Irvine (UCI) led by Dr. Stacy Branham. The Lab focuses on working with the disabled community on issues including how their complex identities are represented in the technology design process. Dr. Branham&rsquo;s team of students, led by doctoral candidate Emory Edwards, worked with us to host a series of workshops to elicit feedback on our avatar imagery from people with a wide range of identities, including non-binary people of color, low-income people, and people with invisible, physical, or sensory disabilities.&nbsp; Through interviews and focus groups, we amassed findings around how to represent different identities in imagery, and how essential accurate details are to inclusive images.</p>
+<p style="text-align: center;">&lt;mio-image index=0&gt;&lt;/mio-image&gt;</p>
+<p>One participant, who was herself a wheelchair user, pointed out that this wheelchair&rsquo;s headrest was too high, and not realistic. But, she liked, &ldquo;the detail of having the grocery bag on the back of the chair because that's totally something that people use wheelchairs to do, that extra arm."</p>
+<p style="text-align: center;">&lt;mio-image index=1&gt;&lt;/mio-image&gt;</p>
+<p>Similarly, a South Asian participant noted they had mixed feelings about the image of an older South Asian woman wearing a sari and bindi. They acknowledged that they knew people who fit this representation, but they didn&rsquo;t want it to be the only depiction of South Asians.</p>
+<p style="text-align: center;">&lt;mio-image index=2&gt;&lt;/mio-image&gt;</p>
+<p>Finally, another participant applauded the inclusion of details like the coffee cup in this avatar of a white cane user: &ldquo;I don't think of my disability first&hellip; In my experience, so many people get hung up on the fact that you're blind that they don't notice anything else. I could have a sequin dress with blue hair and smoking a cigar, but have a white cane and they're going, &lsquo;Oh, she's blind.&rsquo;&rdquo; Including these extra details reaffirms that people with disabilities are people first.</p>
+<p>These examples show how, by talking with people who share the identities depicted in the imagery, we can root out stereotypes and factual inaccuracies. Moreover, how you represent people isn&rsquo;t just about getting the details right on one element, it is about depicting a whole person, including all of the elements of their character.</p>
+<p>We learned that there is no one-size fits all answer to inclusive imagery and, while it is still a work in progress, after five years, five imagery collections, seven artists&rsquo; points of view, a virtual sprint, several collaborations with both internal and external experts, 12 focus groups, 16 follow-up interviews, and bi-weekly meetings, the Material Design team published internal inclusive imagery guidelines to share with Google teams. These guidelines are a step towards making imagery at Google more representative of our global audience.</p>
+<p>In developing the guidelines, we worked closely with artist Adam Avery to consider scenarios where the smallest change would have an impact on the audiences we are serving. Below we see an image that shows a range of abilities and disabilities in a way that is truly unique and while disability is a part of the narrative, not its main focus. It prompts the viewer to think about devices from both a disabled and abled perspective. Training wheels, for example, while not an assisted device for someone with a physical disability, are an assistive device in a learning process. The juxtaposition of varying assistive devices being used in two very different ways makes this illustration impactful.</p>
+<p>&lt;mio-image index=3&gt;&lt;/mio-image&gt;</p>
+<p>Outcomes of the Google/UCI collaboration benefited both groups. The collaboration provided insightful feedback to our imagery collection, commentary on our internal inclusive imagery guidelines, and even led to publication of a <a href="https://stacybranham.com/2021/06/24/assets21-paper-accepted-image-descriptions-and-disability-identity/">research article</a>, co-authored by the UCI team, Google Senior Art Director Emily Blank and Google researcher Michael Gilbert, about how to write inclusive image descriptions.</p>
+<p>The conversation around representative depictions of the diversity of human experience is an evolving one; who we show and how we do it will be an ever changing narrative. It is our hope that this is the beginning of an ongoing dialogue that inspires you to reflect in a similar manner on your own efforts for representation and inclusion as you consider not just what you are depicting but how you are representing it.</p>
+
+A colorful 3D cartoon-like illustration of an adult with a light skin tone and a blond beard and ponytail using an electric wheelchair against a pale pink background. They are wearing a green shirt and holding some groceries with more hanging from their chair. They have their eyes closed and look calm and happy.
+
+Illustration by Janet Mac & Patrick Dias
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/d298ba71a32c0d55f2c2fc979e2e2d6496677a7dd91e82ad069e477506b665b63afaaae909fd9dc1c84ccc594cca1c8bdb098193aa174362f83b8c0e353a3848
+
+https://lh3.googleusercontent.com/SPSaKT3jVcOeNLBp3C3Jm3B-Wxy9BiPa85D2G2R_UARLfTq5uKROSrVqT8hYthNwVehgCLdvUqXxi-bqFVfhdJ7kc2pSUs5ukiN9t726A_5JKqHZfvLF
+
+A colorful 3D cartoon-like illustration of an older adult with a medium skin tone, long grey hair, and dark-colored eyes, wearing green glasses, a blue sari and a bindi against a yellow background. They are watering plants and smiling slightly.
+
+Illustration by Janet Mac & Patrick Dias
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/9995f18a4175b026a2dc097b85eaeaf7ac7b64e1695349c6680d92396148ca18dff0e3cf11ac1fdcbb45bda7109441838dc67e84f48049ec41cb0a1a27332406
+
+https://lh3.googleusercontent.com/HAB59ShrqN3c7AvDF3yMdQCLsvEoYKl_fgd2UH1Obqr3UAN_Gju467pJqidWGhZFknh4AsVwiPLu5t5LgCFTOCTVufqW_EXftIKx4OYZcufzV82ZZg
+
+A colorful 3D cartoon-like illustration of an adult with a light skin-tone and short blond hair against a red background. They are smirking and wearing sunglasses, holding a white cane in one hand and a steaming coffee in the other. They are wearing a sleeveless blue sports vest over a white long sleeve shirt.
+
+Illustration by Janet Mac & Patrick Dias
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/fdba20b30af7a9beb450aa5c89a66dfae931208199c3af7f32f8c2b18a103542aae5ed44b64afbbcb57904a185b99eaa18bc70902fd5cc382b3f7842164f57dc
+
+https://lh3.googleusercontent.com/acoFIYv2Ho_zTryHspyKRp-dSddPOOJfs_1wcYuaq_UeayirbE2fpNPwsaxVh0r0P5IhEv4ERRAg7uE1qlVpYSw3QWqRlpBeS15ArzOrN50OobRTSA
+
+Man with prosthetic limb teaching a young child how to ride a bike with training wheels on a sidewalk in front of a brown stone
+
+Illustration by Adam Avery
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/31db82c12786249cba41d4fcd14d31e8adcec104fd8e278e119039c9c5596b130a20370491f6c46c973bf9c8ec3bbac2d4ad45cab49b9c547e2e4ff99eec9bb4
+
+https://lh3.googleusercontent.com/MxbHcRFlJEytZB8aoKIJh4PjyKpdVWhH_wHOlBhxRBMi8VEcHEH5oXNT8PoDRa5Baq303tkODEaWWErjve_FFsfDmnQIssMkBQEzAaKo_L5BDkui9AA
+
+Grid of 9 images representing people with various ages, races, identities, disabilities, and personal styles.
+
+Illustration by Adam Avery
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/3101e8aeec0282cd2e735a75b81d5849b47c402f211ad8cb1dc04f5b2465bcd793b322878bd933385640ac8cc69375f1a5538ec924266e0ebcaea129a3d3d92e
+
+https://lh3.googleusercontent.com/mA0FbEuoQeXaghl9kh_J1U25rKcxv82rnodYNZzQa3MVPMHbdHvaqgoxdPMR-sd2ElL4ZZDLI1CPQH2uegXjtNdt5QHiLWEOuaFkotmrrTcrw4a_kb4
+
+ 
+
+{}
+
+How inclusive imagery changes a product from being made for some, to being made for all
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/5fad35d57fcaa12d6eaf3deb32197fdc7bd03211def1f2c5e3ac2e87a04c03587ee05c33858c64085cabb0280e27ff2f36a0aeac34c6a5759eced205d713dbdc
+
+https://lh3.googleusercontent.com/YqAfiw192-vJ0wxTIi1BJBoxSkT_tnLtczJdNC0dFvf586qW8XOmwKcrcM9oNbQ4sP03qdRr3OuT74grKMOhgON4DXjS5xZEAKp987pS-YtvaWePAP9O
+
+Adjusting the focus
+
+2021-09-16T09:00:00
+
+inclusive-imagery-at-google
+
+How inclusive imagery changes a product from being made for some, to being made for all
+
+Adjusting the Focus
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/10670050668c02a15305405869d10261ae9184c4b9943da19db1f77dfec09cbadff181927e3ee1b025e024736848d2c53950c779e44a033489d2f68c57607b44
+
+https://lh3.googleusercontent.com/-WjjawJvR9AIODJEhrs_slzoG32Y_Ip0a0c_qe04DMIR2zS0UGQxrmY7DU0LH8--_G45NFBmIFEmAdGxbVC31KCl4Zw6h3Yz-L3pff45FVFM8rINVFw
+
+Designing Text for the People Who Read It
+
+/blog/designing-text-visual-acuity-research
+
+Material Blog
+
+Designing Text for the People Who Read It
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/5db4375567489317b99cb584a6a93125843e6aecb85c1b97d084b007115d7184f0b03bc53032f4ab323cb64ba1fa83392003ddae1a3197f7cf758720b149754d
+
+https://lh3.googleusercontent.com/qJ-ezFzL0wV2BbLZ2ymeuuSTjXci_aGnZ9MsiWHoEzkrVZkNzTe08UMatqh_MmVJxqRTJcj_B1XW6_wPj6DPKmatpoamabueP1WcHg
+
+/design/communication/imagery.html
+
+Communication
+
+Imagery
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/e4c58908f5cca50a44382e0e6b4bbc7c2c2ad3ce3dc03ee02485ee01c53c3949a27d20fe970735445cce43ee175375ac6a2e0414c7577d46f6aa47227f0de922
+
+https://lh3.googleusercontent.com/qwo_BsI9L1c34OwsxovDKiK2W3RAPwmMXhzpjY-bP53sc0q_gD4QfsL4rXn2dZUWDCE-ePpe83iuTbg6bHCI8E2v4Ox1SxC6iDWyJw
+
+/blog/digital-wellbeing-ux-principles
+
+People-First Principles for Digital Wellbeing
+
+Digital wellbeing
+
+People-First Principles for Digital Wellbeing
+
+mio-example

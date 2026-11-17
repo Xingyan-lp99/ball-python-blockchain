@@ -1,0 +1,212 @@
+# Material Design 3 local document index
+
+Snapshot date: 2026-11-17. See [README](README.md) for scope and limitations.
+
+## Documents
+
+- [Material Design](pages/index.md) - https://m3.material.io/
+- [Material Design Blog](pages/blog.md) - https://m3.material.io/blog
+- [The new Google Fonts: find what you’re looking for](pages/blog/2023-google-fonts-redesign.md) - https://m3.material.io/blog/2023-google-fonts-redesign
+- [The 24-hour Clock Design Challenge](pages/blog/24-hour-clock-design-research.md) - https://m3.material.io/blog/24-hour-clock-design-research
+- [Start Here: 5 Exercises to Prepare Your App for Large Screens](pages/blog/5-steps-large-screen-apps.md) - https://m3.material.io/blog/5-steps-large-screen-apps
+- [Celebrating Global Accessibility Awareness Day](pages/blog/accessibility-awareness-day-2022.md) - https://m3.material.io/blog/accessibility-awareness-day-2022
+- [Building a Material Dark Theme on Android](pages/blog/android-dark-theme-tutorial.md) - https://m3.material.io/blog/android-dark-theme-tutorial
+- [Building Beautiful Transitions with Material Motion for Android](pages/blog/android-material-motion.md) - https://m3.material.io/blog/android-material-motion
+- [Building a Material Theme on Android: Color](pages/blog/android-material-theme-color.md) - https://m3.material.io/blog/android-material-theme-color
+- [Building a Material Theme on Android: Shape](pages/blog/android-material-theme-shape.md) - https://m3.material.io/blog/android-material-theme-shape
+- [Building a Material Theme on Android: Typography](pages/blog/android-material-theme-type.md) - https://m3.material.io/blog/android-material-theme-type
+- [Material Design Components for Android 1.10.0](pages/blog/android-stable-release-1-10-0.md) - https://m3.material.io/blog/android-stable-release-1-10-0
+- [Material Design Components for Android 1.11.0 and 1.12.0](pages/blog/android-stable-release-1-12-0.md) - https://m3.material.io/blog/android-stable-release-1-12-0
+- [Material Components for Android 1.2.0](pages/blog/android-stable-release-1-2.md) - https://m3.material.io/blog/android-stable-release-1-2
+- [Material Design Components for Android 1.3.0](pages/blog/android-stable-release-1-3-0.md) - https://m3.material.io/blog/android-stable-release-1-3-0
+- [Material Design Components for Android 1.4.0](pages/blog/android-stable-release-1-4.md) - https://m3.material.io/blog/android-stable-release-1-4
+- [Material Design Components for Android 1.5.0](pages/blog/android-stable-release-1-5.md) - https://m3.material.io/blog/android-stable-release-1-5
+- [Material Design Components for Android 1.6.1](pages/blog/android-stable-release-1-6-1.md) - https://m3.material.io/blog/android-stable-release-1-6-1
+- [MDC-Android Stable release 1.7.0](pages/blog/android-stable-release-1-7-0.md) - https://m3.material.io/blog/android-stable-release-1-7-0
+- [Material Design Components for Android 1.8.0](pages/blog/android-stable-release-1-8-0.md) - https://m3.material.io/blog/android-stable-release-1-8-0
+- [Material Design Components for Android 1.9.0](pages/blog/android-stable-release-1-9-0.md) - https://m3.material.io/blog/android-stable-release-1-9-0
+- [Unveiling Material You](pages/blog/announcing-material-you.md) - https://m3.material.io/blog/announcing-material-you
+- [Replacing “Users” with People](pages/blog/asset-people-1.md) - https://m3.material.io/blog/asset-people-1
+- [From Placeholders to Genuine Avatars](pages/blog/asset-people-2.md) - https://m3.material.io/blog/asset-people-2
+- [Looking for What’s Missing](pages/blog/asset-people-3.md) - https://m3.material.io/blog/asset-people-3
+- [From Rebranding to Readability with Atkinson Hyperlegible](pages/blog/atkinson-hyperlegible-design.md) - https://m3.material.io/blog/atkinson-hyperlegible-design
+- [First Batch of Color Fonts Arrives on Google Fonts](pages/blog/color-fonts-are-here.md) - https://m3.material.io/blog/color-fonts-are-here
+- [Video: Craft a Dark Theme with Material Design](pages/blog/dark-theme-design-tutorial-video.md) - https://m3.material.io/blog/dark-theme-design-tutorial-video
+- [Top Tips for Data Accessibility](pages/blog/data-visualization-accessibility.md) - https://m3.material.io/blog/data-visualization-accessibility
+- [The Avatar Project: Derek Brahney](pages/blog/derek-brahney-interview.md) - https://m3.material.io/blog/derek-brahney-interview
+- [Designing a Material Theme: Color](pages/blog/design-material-theme-color.md) - https://m3.material.io/blog/design-material-theme-color
+- [Designing a Material Theme: Shape](pages/blog/design-material-theme-shape.md) - https://m3.material.io/blog/design-material-theme-shape
+- [Designing a Material Theme: Typography](pages/blog/design-material-theme-type.md) - https://m3.material.io/blog/design-material-theme-type
+- [The designer’s toolbox](pages/blog/designer-toolbox-figma-android-studio-relay.md) - https://m3.material.io/blog/designer-toolbox-figma-android-studio-relay
+- [Designing Text for the People Who Read It](pages/blog/designing-text-visual-acuity-research.md) - https://m3.material.io/blog/designing-text-visual-acuity-research
+- [Design to Code: Turning Handoffs Into High-fives](pages/blog/designtocode.md) - https://m3.material.io/blog/designtocode
+- [How to Find Device Metrics for Any Screen](pages/blog/device-metrics.md) - https://m3.material.io/blog/device-metrics
+- [What “Digital Wellbeing” Means to Material Design](pages/blog/digital-wellbeing-design-systems.md) - https://m3.material.io/blog/digital-wellbeing-design-systems
+- [Finding Wellbeing in Filters and Selfies](pages/blog/digital-wellbeing-face-retouching.md) - https://m3.material.io/blog/digital-wellbeing-face-retouching
+- [People-First Principles for Digital Wellbeing](pages/blog/digital-wellbeing-ux-principles.md) - https://m3.material.io/blog/digital-wellbeing-ux-principles
+- [Designing Harmony into Dynamic Color](pages/blog/dynamic-color-harmony.md) - https://m3.material.io/blog/dynamic-color-harmony
+- [Finding Ethical Design](pages/blog/finding-ethical-design.md) - https://m3.material.io/blog/finding-ethical-design
+- [Video: Fonts are software](pages/blog/fonts-are-software-video.md) - https://m3.material.io/blog/fonts-are-software-video
+- [Making it easier to get Google Fonts](pages/blog/get-google-fonts-update.md) - https://m3.material.io/blog/get-google-fonts-update
+- [Video: Google Design Tutorials](pages/blog/google-design-tutorial-video.md) - https://m3.material.io/blog/google-design-tutorial-video
+- [Building a Dark Theme for Google Fonts](pages/blog/google-fonts-dark-theme.md) - https://m3.material.io/blog/google-fonts-dark-theme
+- [Announcing Google Fonts Knowledge](pages/blog/google-fonts-knowledge.md) - https://m3.material.io/blog/google-fonts-knowledge
+- [Google Fonts ❤️ Material Icons](pages/blog/google-fonts-material-icons.md) - https://m3.material.io/blog/google-fonts-material-icons
+- [You Asked for it—Here Are Some of Our Favorite Font Pairings](pages/blog/google-fonts-pairing-figma.md) - https://m3.material.io/blog/google-fonts-pairing-figma
+- [Material Design at Google I/O ‘24](pages/blog/google-io-2024.md) - https://m3.material.io/blog/google-io-2024
+- [How Google created a custom Material theme](pages/blog/google-material-custom-theme.md) - https://m3.material.io/blog/google-material-custom-theme
+- [Using the Gemini app with Material Design 3](pages/blog/how-to-gemini-app-compose-material-design-3.md) - https://m3.material.io/blog/how-to-gemini-app-compose-material-design-3
+- [How to make your text more accessible](pages/blog/how-to-make-text-more-accessible.md) - https://m3.material.io/blog/how-to-make-text-more-accessible
+- [Adjusting the Focus](pages/blog/inclusive-imagery-at-google.md) - https://m3.material.io/blog/inclusive-imagery-at-google
+- [How Oddfellows Illustrated Material You](pages/blog/interview-oddfellows-m3-art-style.md) - https://m3.material.io/blog/interview-oddfellows-m3-art-style
+- [Introducing Material Symbols](pages/blog/introducing-symbols.md) - https://m3.material.io/blog/introducing-symbols
+- [Jamie Chung’s Artful, Abstract Photographs for Material Design](pages/blog/jamie-chung-photography-interview.md) - https://m3.material.io/blog/jamie-chung-photography-interview
+- [Jetpack Compose: Now in Beta](pages/blog/jetpack-compose-beta.md) - https://m3.material.io/blog/jetpack-compose-beta
+- [Introducing the Compose Material Catalog](pages/blog/jetpack-compose-catalog.md) - https://m3.material.io/blog/jetpack-compose-catalog
+- [Principles and Techniques for Effective Localization](pages/blog/localization-principles-techniques.md) - https://m3.material.io/blog/localization-principles-techniques
+- [Design for everyone](pages/blog/m3-a11y.md) - https://m3.material.io/blog/m3-a11y
+- [Reinventing the carousel](pages/blog/material-3-carousel-research-design.md) - https://m3.material.io/blog/material-3-carousel-research-design
+- [Material Design 3 for Compose gets new components and features](pages/blog/material-3-compose-1-1.md) - https://m3.material.io/blog/material-3-compose-1-1
+- [Material Design 3 for Compose 1.2](pages/blog/material-3-compose-1-2.md) - https://m3.material.io/blog/material-3-compose-1-2
+- [Material Design 3 for Compose version 1.3](pages/blog/material-3-compose-1-3.md) - https://m3.material.io/blog/material-3-compose-1-3
+- [Material Design 3 for Compose is now stable](pages/blog/material-3-compose-stable.md) - https://m3.material.io/blog/material-3-compose-stable
+- [Introducing the M3 design kit for Figma](pages/blog/material-3-figma-design-kit.md) - https://m3.material.io/blog/material-3-figma-design-kit
+- [Unlocking component flexibility with slots in Figma](pages/blog/material-3-slot-components-figma.md) - https://m3.material.io/blog/material-3-slot-components-figma
+- [Material Design at Android Developer Summit 2022](pages/blog/material-ads-2022.md) - https://m3.material.io/blog/material-ads-2022
+- [Using Material Density on the Web](pages/blog/material-density-web.md) - https://m3.material.io/blog/material-density-web
+- [The Best of Material in 2022](pages/blog/material-design-2022-roundup.md) - https://m3.material.io/blog/material-design-2022-roundup
+- [2021 Material Design Awards](pages/blog/material-design-awards-2021.md) - https://m3.material.io/blog/material-design-awards-2021
+- [Welcome to the Material Blog—Letter from the Editor](pages/blog/material-design-blog-welcome.md) - https://m3.material.io/blog/material-design-blog-welcome
+- [Introducing Material Design Guidance for Large Screens](pages/blog/material-design-for-large-screens.md) - https://m3.material.io/blog/material-design-for-large-screens
+- [Material Design for WordPress](pages/blog/material-design-wordpress-plugin.md) - https://m3.material.io/blog/material-design-wordpress-plugin
+- [Using Block Patterns with Material Design for WordPress](pages/blog/material-design-wordpress-plugin-030.md) - https://m3.material.io/blog/material-design-wordpress-plugin-030
+- [Material Design for XR (Developer Preview)](pages/blog/material-design-xr-dev-preview.md) - https://m3.material.io/blog/material-design-xr-dev-preview
+- [Introducing the Material Design YouTube Channel](pages/blog/material-design-youtube-channel.md) - https://m3.material.io/blog/material-design-youtube-channel
+- [Material Design at Google I/O 2021](pages/blog/material-google-io21.md) - https://m3.material.io/blog/material-google-io21
+- [Join Material Design at I/O ‘22](pages/blog/material-google-io22.md) - https://m3.material.io/blog/material-google-io22
+- [Material Design at I/O ‘23](pages/blog/material-google-io23.md) - https://m3.material.io/blog/material-google-io23
+- [Material Icons: Sehee Lee](pages/blog/material-icons-sehee-lee-interview.md) - https://m3.material.io/blog/material-icons-sehee-lee-interview
+- [Magic, utility, and redesigning Material.io](pages/blog/material-io-redesign.md) - https://m3.material.io/blog/material-io-redesign
+- [Material Partner Studies](pages/blog/material-partner-studies.md) - https://m3.material.io/blog/material-partner-studies
+- [Introducing Material Theme Builder](pages/blog/material-theme-builder.md) - https://m3.material.io/blog/material-theme-builder
+- [An updated theming experience with Material Theme Builder 2.0](pages/blog/material-theme-builder-2-color-match.md) - https://m3.material.io/blog/material-theme-builder-2-color-match
+- [Better design for bigger screens](pages/blog/material-you-large-screens.md) - https://m3.material.io/blog/material-you-large-screens
+- [Announcing the Material Design Award Winners for 2020](pages/blog/mda-2020-winners.md) - https://m3.material.io/blog/mda-2020-winners
+- [Material Design Award Winners 2021](pages/blog/mda-2021-winners.md) - https://m3.material.io/blog/mda-2021-winners
+- [Migrating to Material Components for Android](pages/blog/migrate-android-material-components.md) - https://m3.material.io/blog/migrate-android-material-components
+- [Migrating to Material Design 3](pages/blog/migrating-material-3.md) - https://m3.material.io/blog/migrating-material-3
+- [Choosing the Right Transitions](pages/blog/motion-research-container-transform.md) - https://m3.material.io/blog/motion-research-container-transform
+- [Looking for Noto? It’s now on the Google Fonts website and API](pages/blog/noto-announcement.md) - https://m3.material.io/blog/noto-announcement
+- [Teaming Up to Improve Reading Research](pages/blog/readability-consortium.md) - https://m3.material.io/blog/readability-consortium
+- [Adjusting Grade for Mode](pages/blog/readability-research.md) - https://m3.material.io/blog/readability-research
+- [The Design of Readex Pro](pages/blog/readex-pro-legibility-arabic-type-design.md) - https://m3.material.io/blog/readex-pro-legibility-arabic-type-design
+- [How to Reduce Layout Reflow When Using Web Fonts](pages/blog/reduce-reflow-with-web-fonts.md) - https://m3.material.io/blog/reduce-reflow-with-web-fonts
+- [Announcing Relay Alpha](pages/blog/relay-in-alpha.md) - https://m3.material.io/blog/relay-in-alpha
+- [How Ravn solves design-developer handoff with Relay](pages/blog/relay-ravn-case-study.md) - https://m3.material.io/blog/relay-ravn-case-study
+- [The State of Design Systems: 2020](pages/blog/research-state-of-design-systems-2020.md) - https://m3.material.io/blog/research-state-of-design-systems-2020
+- [Roboto … But Make It Flex](pages/blog/roboto-flex.md) - https://m3.material.io/blog/roboto-flex
+- [Say hello to Roboto Serif](pages/blog/roboto-serif.md) - https://m3.material.io/blog/roboto-serif
+- [The Science of Color & Design](pages/blog/science-of-color-design.md) - https://m3.material.io/blog/science-of-color-design
+- [The Story of Shantell Sans](pages/blog/shantell-martin-variable-font.md) - https://m3.material.io/blog/shantell-martin-variable-font
+- [New SIL Typefaces](pages/blog/sil-typefaces.md) - https://m3.material.io/blog/sil-typefaces
+- [Start building with Material You](pages/blog/start-building-with-material-you.md) - https://m3.material.io/blog/start-building-with-material-you
+- [10 Steps to Translate Your iOS Designs for Android](pages/blog/ten-steps-ios-android-design.md) - https://m3.material.io/blog/ten-steps-ios-android-design
+- [What does your UI say to your users?](pages/blog/testing-material-3.md) - https://m3.material.io/blog/testing-material-3
+- [Introducing Tone-based Surfaces in Material 3](pages/blog/tone-based-surface-color-m3.md) - https://m3.material.io/blog/tone-based-surface-color-m3
+- [What’s new in the M3 design kit](pages/blog/whats-new-design-kit.md) - https://m3.material.io/blog/whats-new-design-kit
+- [Why We Recommend Material Components for Android](pages/blog/why-we-recommend-material-design-components-android.md) - https://m3.material.io/blog/why-we-recommend-material-design-components-android
+- [A Year in the Life of a Material Design Advocate](pages/blog/year-in-the-life-material-design-advocate.md) - https://m3.material.io/blog/year-in-the-life-material-design-advocate
+- [Start building with Material 3 Expressive](pages/building-with-m3-expressive.md) - https://m3.material.io/building-with-m3-expressive
+- [Components](pages/components.md) - https://m3.material.io/components
+- [All buttons](pages/components/all-buttons.md) - https://m3.material.io/components/all-buttons
+- [App bars](pages/components/app-bars.md) - https://m3.material.io/components/app-bars
+- [Badges](pages/components/badges.md) - https://m3.material.io/components/badges
+- [Bottom sheets](pages/components/bottom-sheets.md) - https://m3.material.io/components/bottom-sheets
+- [Button groups](pages/components/button-groups.md) - https://m3.material.io/components/button-groups
+- [Buttons](pages/components/buttons.md) - https://m3.material.io/components/buttons
+- [Cards](pages/components/cards.md) - https://m3.material.io/components/cards
+- [Carousel](pages/components/carousel.md) - https://m3.material.io/components/carousel
+- [Checkbox](pages/components/checkbox.md) - https://m3.material.io/components/checkbox
+- [Chips](pages/components/chips.md) - https://m3.material.io/components/chips
+- [Date pickers](pages/components/date-pickers.md) - https://m3.material.io/components/date-pickers
+- [Dialogs](pages/components/dialogs.md) - https://m3.material.io/components/dialogs
+- [Divider](pages/components/divider.md) - https://m3.material.io/components/divider
+- [Extended FABs](pages/components/extended-fab.md) - https://m3.material.io/components/extended-fab
+- [FAB menu](pages/components/fab-menu.md) - https://m3.material.io/components/fab-menu
+- [FABs](pages/components/floating-action-button.md) - https://m3.material.io/components/floating-action-button
+- [Icon buttons](pages/components/icon-buttons.md) - https://m3.material.io/components/icon-buttons
+- [Lists](pages/components/lists.md) - https://m3.material.io/components/lists
+- [Loading indicator](pages/components/loading-indicator.md) - https://m3.material.io/components/loading-indicator
+- [Menus](pages/components/menus.md) - https://m3.material.io/components/menus
+- [Navigation bar](pages/components/navigation-bar.md) - https://m3.material.io/components/navigation-bar
+- [Navigation drawer](pages/components/navigation-drawer.md) - https://m3.material.io/components/navigation-drawer
+- [Navigation rail](pages/components/navigation-rail.md) - https://m3.material.io/components/navigation-rail
+- [Progress indicators](pages/components/progress-indicators.md) - https://m3.material.io/components/progress-indicators
+- [Radio button](pages/components/radio-button.md) - https://m3.material.io/components/radio-button
+- [Components](pages/components/scroll-fields.md) - https://m3.material.io/components/scroll-fields
+- [Search](pages/components/search.md) - https://m3.material.io/components/search
+- [Segmented buttons](pages/components/segmented-buttons.md) - https://m3.material.io/components/segmented-buttons
+- [Side sheets](pages/components/side-sheets.md) - https://m3.material.io/components/side-sheets
+- [Sliders](pages/components/sliders.md) - https://m3.material.io/components/sliders
+- [Snackbar](pages/components/snackbar.md) - https://m3.material.io/components/snackbar
+- [Split buttons](pages/components/split-button.md) - https://m3.material.io/components/split-button
+- [Switch](pages/components/switch.md) - https://m3.material.io/components/switch
+- [Tabs](pages/components/tabs.md) - https://m3.material.io/components/tabs
+- [Text fields](pages/components/text-fields.md) - https://m3.material.io/components/text-fields
+- [Time pickers](pages/components/time-pickers.md) - https://m3.material.io/components/time-pickers
+- [Toolbars](pages/components/toolbars.md) - https://m3.material.io/components/toolbars
+- [Tooltips](pages/components/tooltips.md) - https://m3.material.io/components/tooltips
+- [Develop](pages/develop.md) - https://m3.material.io/develop
+- [Jetpack Compose](pages/develop/android/jetpack-compose.md) - https://m3.material.io/develop/android/jetpack-compose
+- [Android Views (MDC-Android)](pages/develop/android/mdc-android.md) - https://m3.material.io/develop/android/mdc-android
+- [Flutter](pages/develop/flutter.md) - https://m3.material.io/develop/flutter
+- [Web](pages/develop/web.md) - https://m3.material.io/develop/web
+- [Enhance your component designs with parametric prototyping](pages/enhance-your-component-designs-with-parametric-prototyping.md) - https://m3.material.io/enhance-your-component-designs-with-parametric-prototyping
+- [Foundations](pages/foundations.md) - https://m3.material.io/foundations
+- [Building for all](pages/foundations/building-for-all.md) - https://m3.material.io/foundations/building-for-all
+- [Alt text](pages/foundations/content-design/alt-text.md) - https://m3.material.io/foundations/content-design/alt-text
+- [Global writing](pages/foundations/content-design/global-writing.md) - https://m3.material.io/foundations/content-design/global-writing
+- [Notifications](pages/foundations/content-design/notifications.md) - https://m3.material.io/foundations/content-design/notifications
+- [Content design](pages/foundations/content-design/overview.md) - https://m3.material.io/foundations/content-design/overview
+- [Style guide](pages/foundations/content-design/style-guide.md) - https://m3.material.io/foundations/content-design/style-guide
+- [Customizing Material](pages/foundations/customization.md) - https://m3.material.io/foundations/customization
+- [Design tokens](pages/foundations/design-tokens.md) - https://m3.material.io/foundations/design-tokens
+- [Designing](pages/foundations/designing.md) - https://m3.material.io/foundations/designing
+- [Design for desktop](pages/foundations/desktop.md) - https://m3.material.io/foundations/desktop
+- [Material A-Z](pages/foundations/glossary.md) - https://m3.material.io/foundations/glossary
+- [Gestures](pages/foundations/interaction/gestures.md) - https://m3.material.io/foundations/interaction/gestures
+- [Inputs](pages/foundations/interaction/inputs.md) - https://m3.material.io/foundations/interaction/inputs
+- [Selection](pages/foundations/interaction/selection.md) - https://m3.material.io/foundations/interaction/selection
+- [States](pages/foundations/interaction/states.md) - https://m3.material.io/foundations/interaction/states
+- [Bidirectionality &amp; RTL](pages/foundations/layout/bidirectionality-rtl.md) - https://m3.material.io/foundations/layout/bidirectionality-rtl
+- [Breakpoints](pages/foundations/layout/breakpoints.md) - https://m3.material.io/foundations/layout/breakpoints
+- [Canonical layout examples](pages/foundations/layout/canonical-examples.md) - https://m3.material.io/foundations/layout/canonical-examples
+- [Grids &amp; spacing](pages/foundations/layout/grids-spacing.md) - https://m3.material.io/foundations/layout/grids-spacing
+- [Layout overview](pages/foundations/layout/layout-overview.md) - https://m3.material.io/foundations/layout/layout-overview
+- [Scaffold](pages/foundations/layout/scaffold.md) - https://m3.material.io/foundations/layout/scaffold
+- [Overview](pages/foundations/overview.md) - https://m3.material.io/foundations/overview
+- [Usability](pages/foundations/usability.md) - https://m3.material.io/foundations/usability
+- [Design for watches](pages/foundations/watches.md) - https://m3.material.io/foundations/watches
+- [Writing and text](pages/foundations/writing.md) - https://m3.material.io/foundations/writing
+- [XR components](pages/foundations/xr/components.md) - https://m3.material.io/foundations/xr/components
+- [Design for immersive XR](pages/foundations/xr/design.md) - https://m3.material.io/foundations/xr/design
+- [Get started](pages/get-started.md) - https://m3.material.io/get-started
+- [Adding Motion Physics with Jetpack Compose](pages/m3-expressive-motion-theming.md) - https://m3.material.io/m3-expressive-motion-theming
+- [Material Android is Compose-first](pages/material-is-compose-first.md) - https://m3.material.io/material-is-compose-first
+- [Styles](pages/styles.md) - https://m3.material.io/styles
+- [Advanced customizations](pages/styles/color/advanced.md) - https://m3.material.io/styles/color/advanced
+- [Choosing a scheme](pages/styles/color/choosing-a-scheme.md) - https://m3.material.io/styles/color/choosing-a-scheme
+- [Dynamic color schemes](pages/styles/color/dynamic.md) - https://m3.material.io/styles/color/dynamic
+- [Color resources](pages/styles/color/resources.md) - https://m3.material.io/styles/color/resources
+- [Color roles](pages/styles/color/roles.md) - https://m3.material.io/styles/color/roles
+- [Static color schemes](pages/styles/color/static.md) - https://m3.material.io/styles/color/static
+- [Color system](pages/styles/color/system.md) - https://m3.material.io/styles/color/system
+- [Elevation](pages/styles/elevation.md) - https://m3.material.io/styles/elevation
+- [Icons](pages/styles/icons.md) - https://m3.material.io/styles/icons
+- [Easing and duration](pages/styles/motion/easing-and-duration.md) - https://m3.material.io/styles/motion/easing-and-duration
+- [Motion physics system](pages/styles/motion/overview.md) - https://m3.material.io/styles/motion/overview
+- [Transitions](pages/styles/motion/transitions.md) - https://m3.material.io/styles/motion/transitions
+- [Shape](pages/styles/shape.md) - https://m3.material.io/styles/shape
+- [Spacing](pages/styles/spacing.md) - https://m3.material.io/styles/spacing
+- [Typography](pages/styles/typography.md) - https://m3.material.io/styles/typography
+- [What’s new at Google I/O 2026](pages/whats-new-at-io26.md) - https://m3.material.io/whats-new-at-io26

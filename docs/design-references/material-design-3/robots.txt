@@ -1,0 +1,6 @@
+User-agent: *
+Sitemap: https://m3.material.io/sitemap.xml
+Disallow: /archive
+Disallow: /search.html
+Disallow: /*?*q=
+Disallow: /*?*utm_source=

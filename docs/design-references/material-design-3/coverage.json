@@ -1,0 +1,2688 @@
+[
+  {
+    "url": "https://m3.material.io/",
+    "readable_path": "docs/design-references/material-design-3/pages/index.md",
+    "raw_path": "docs/design-references/material-design-3/raw/index.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog",
+    "readable_path": "docs/design-references/material-design-3/pages/blog.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/2023-google-fonts-redesign",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/2023-google-fonts-redesign.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/2023-google-fonts-redesign.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/24-hour-clock-design-research",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/24-hour-clock-design-research.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/24-hour-clock-design-research.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/5-steps-large-screen-apps",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/5-steps-large-screen-apps.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/5-steps-large-screen-apps.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/accessibility-awareness-day-2022",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/accessibility-awareness-day-2022.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/accessibility-awareness-day-2022.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/android-dark-theme-tutorial",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/android-dark-theme-tutorial.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/android-dark-theme-tutorial.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/android-material-motion",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/android-material-motion.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/android-material-motion.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/android-material-theme-color",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/android-material-theme-color.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/android-material-theme-color.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/android-material-theme-shape",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/android-material-theme-shape.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/android-material-theme-shape.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/android-material-theme-type",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/android-material-theme-type.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/android-material-theme-type.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/android-stable-release-1-10-0",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-10-0.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-10-0.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/android-stable-release-1-12-0",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-12-0.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-12-0.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/android-stable-release-1-2",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-2.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-2.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/android-stable-release-1-3-0",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-3-0.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-3-0.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/android-stable-release-1-4",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-4.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-4.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/android-stable-release-1-5",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-5.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-5.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/android-stable-release-1-6-1",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-6-1.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-6-1.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/android-stable-release-1-7-0",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-7-0.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-7-0.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/android-stable-release-1-8-0",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-8-0.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-8-0.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/android-stable-release-1-9-0",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-9-0.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-9-0.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/announcing-material-you",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/announcing-material-you.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/announcing-material-you.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/asset-people-1",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/asset-people-1.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/asset-people-1.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/asset-people-2",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/asset-people-2.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/asset-people-2.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/asset-people-3",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/asset-people-3.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/asset-people-3.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/atkinson-hyperlegible-design",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/atkinson-hyperlegible-design.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/atkinson-hyperlegible-design.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/color-fonts-are-here",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/color-fonts-are-here.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/color-fonts-are-here.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/dark-theme-design-tutorial-video",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/dark-theme-design-tutorial-video.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/dark-theme-design-tutorial-video.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/data-visualization-accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/data-visualization-accessibility.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/data-visualization-accessibility.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/derek-brahney-interview",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/derek-brahney-interview.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/derek-brahney-interview.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/design-material-theme-color",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/design-material-theme-color.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/design-material-theme-color.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/design-material-theme-shape",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/design-material-theme-shape.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/design-material-theme-shape.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/design-material-theme-type",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/design-material-theme-type.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/design-material-theme-type.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/designer-toolbox-figma-android-studio-relay",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/designer-toolbox-figma-android-studio-relay.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/designer-toolbox-figma-android-studio-relay.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/designing-text-visual-acuity-research",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/designing-text-visual-acuity-research.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/designing-text-visual-acuity-research.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/designtocode",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/designtocode.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/designtocode.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/device-metrics",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/device-metrics.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/device-metrics.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/digital-wellbeing-design-systems",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/digital-wellbeing-design-systems.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/digital-wellbeing-design-systems.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/digital-wellbeing-face-retouching",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/digital-wellbeing-face-retouching.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/digital-wellbeing-face-retouching.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/digital-wellbeing-ux-principles",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/digital-wellbeing-ux-principles.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/digital-wellbeing-ux-principles.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/dynamic-color-harmony",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/dynamic-color-harmony.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/dynamic-color-harmony.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/finding-ethical-design",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/finding-ethical-design.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/finding-ethical-design.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/fonts-are-software-video",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/fonts-are-software-video.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/fonts-are-software-video.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/get-google-fonts-update",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/get-google-fonts-update.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/get-google-fonts-update.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/get-started",
+    "status": "upstream_404",
+    "http_status": 404,
+    "checked_date": "2026-11-17"
+  },
+  {
+    "url": "https://m3.material.io/blog/google-design-tutorial-video",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/google-design-tutorial-video.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/google-design-tutorial-video.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/google-fonts-dark-theme",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/google-fonts-dark-theme.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/google-fonts-dark-theme.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/google-fonts-knowledge",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/google-fonts-knowledge.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/google-fonts-knowledge.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/google-fonts-material-icons",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/google-fonts-material-icons.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/google-fonts-material-icons.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/google-fonts-pairing-figma",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/google-fonts-pairing-figma.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/google-fonts-pairing-figma.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/google-io-2024",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/google-io-2024.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/google-io-2024.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/google-material-custom-theme",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/google-material-custom-theme.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/google-material-custom-theme.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/how-to-gemini-app-compose-material-design-3",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/how-to-gemini-app-compose-material-design-3.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/how-to-gemini-app-compose-material-design-3.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/how-to-make-text-more-accessible",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/how-to-make-text-more-accessible.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/how-to-make-text-more-accessible.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/inclusive-imagery-at-google",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/inclusive-imagery-at-google.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/inclusive-imagery-at-google.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/interview-oddfellows-m3-art-style",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/interview-oddfellows-m3-art-style.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/interview-oddfellows-m3-art-style.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/introducing-symbols",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/introducing-symbols.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/introducing-symbols.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/jamie-chung-photography-interview",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/jamie-chung-photography-interview.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/jamie-chung-photography-interview.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/jetpack-compose-beta",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/jetpack-compose-beta.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/jetpack-compose-beta.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/jetpack-compose-catalog",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/jetpack-compose-catalog.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/jetpack-compose-catalog.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/localization-principles-techniques",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/localization-principles-techniques.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/localization-principles-techniques.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/m3-a11y",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/m3-a11y.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/m3-a11y.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-3-carousel-research-design",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-3-carousel-research-design.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-3-carousel-research-design.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-3-compose-1-1",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-3-compose-1-1.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-3-compose-1-1.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-3-compose-1-2",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-3-compose-1-2.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-3-compose-1-2.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-3-compose-1-3",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-3-compose-1-3.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-3-compose-1-3.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-3-compose-stable",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-3-compose-stable.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-3-compose-stable.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-3-figma-design-kit",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-3-figma-design-kit.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-3-figma-design-kit.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-3-slot-components-figma",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-3-slot-components-figma.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-3-slot-components-figma.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-ads-2022",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-ads-2022.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-ads-2022.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-density-web",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-density-web.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-density-web.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-design-2022-roundup",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-design-2022-roundup.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-design-2022-roundup.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-design-awards-2021",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-design-awards-2021.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-design-awards-2021.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-design-blog-welcome",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-design-blog-welcome.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-design-blog-welcome.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-design-for-large-screens",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-design-for-large-screens.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-design-for-large-screens.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-design-wordpress-plugin",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-design-wordpress-plugin.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-design-wordpress-plugin.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-design-wordpress-plugin-030",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-design-wordpress-plugin-030.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-design-wordpress-plugin-030.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-design-xr-dev-preview",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-design-xr-dev-preview.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-design-xr-dev-preview.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-design-youtube-channel",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-design-youtube-channel.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-design-youtube-channel.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-google-io21",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-google-io21.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-google-io21.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-google-io22",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-google-io22.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-google-io22.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-google-io23",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-google-io23.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-google-io23.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-icons-sehee-lee-interview",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-icons-sehee-lee-interview.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-icons-sehee-lee-interview.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-io-redesign",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-io-redesign.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-io-redesign.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-partner-studies",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-partner-studies.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-partner-studies.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-theme-builder",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-theme-builder.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-theme-builder.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-theme-builder-2-color-match",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-theme-builder-2-color-match.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-theme-builder-2-color-match.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/material-you-large-screens",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/material-you-large-screens.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/material-you-large-screens.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/mda-2020-winners",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/mda-2020-winners.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/mda-2020-winners.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/mda-2021-winners",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/mda-2021-winners.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/mda-2021-winners.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/migrate-android-material-components",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/migrate-android-material-components.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/migrate-android-material-components.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/migrating-material-3",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/migrating-material-3.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/migrating-material-3.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/motion-research-container-transform",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/motion-research-container-transform.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/motion-research-container-transform.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/noto-announcement",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/noto-announcement.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/noto-announcement.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/readability-consortium",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/readability-consortium.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/readability-consortium.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/readability-research",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/readability-research.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/readability-research.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/readex-pro-legibility-arabic-type-design",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/readex-pro-legibility-arabic-type-design.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/readex-pro-legibility-arabic-type-design.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/reduce-reflow-with-web-fonts",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/reduce-reflow-with-web-fonts.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/reduce-reflow-with-web-fonts.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/relay-in-alpha",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/relay-in-alpha.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/relay-in-alpha.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/relay-ravn-case-study",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/relay-ravn-case-study.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/relay-ravn-case-study.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/research-state-of-design-systems-2020",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/research-state-of-design-systems-2020.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/research-state-of-design-systems-2020.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/roboto-flex",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/roboto-flex.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/roboto-flex.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/roboto-serif",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/roboto-serif.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/roboto-serif.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/science-of-color-design",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/science-of-color-design.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/science-of-color-design.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/search.html",
+    "status": "upstream_404",
+    "http_status": 404,
+    "checked_date": "2026-11-17"
+  },
+  {
+    "url": "https://m3.material.io/blog/shantell-martin-variable-font",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/shantell-martin-variable-font.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/shantell-martin-variable-font.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/sil-typefaces",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/sil-typefaces.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/sil-typefaces.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/start-building-with-material-you",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/start-building-with-material-you.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/start-building-with-material-you.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/ten-steps-ios-android-design",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/ten-steps-ios-android-design.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/ten-steps-ios-android-design.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/testing-material-3",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/testing-material-3.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/testing-material-3.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/tone-based-surface-color-m3",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/tone-based-surface-color-m3.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/tone-based-surface-color-m3.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/whats-new-design-kit",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/whats-new-design-kit.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/whats-new-design-kit.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/why-we-recommend-material-design-components-android",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/why-we-recommend-material-design-components-android.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/why-we-recommend-material-design-components-android.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/blog/year-in-the-life-material-design-advocate",
+    "readable_path": "docs/design-references/material-design-3/pages/blog/year-in-the-life-material-design-advocate.md",
+    "raw_path": "docs/design-references/material-design-3/raw/blog/year-in-the-life-material-design-advocate.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/building-with-m3-expressive",
+    "readable_path": "docs/design-references/material-design-3/pages/building-with-m3-expressive.md",
+    "raw_path": "docs/design-references/material-design-3/raw/building-with-m3-expressive.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components",
+    "readable_path": "docs/design-references/material-design-3/pages/components.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/all-buttons",
+    "readable_path": "docs/design-references/material-design-3/pages/components/all-buttons.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/all-buttons.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/app-bars/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/app-bars.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/app-bars.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/app-bars/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/app-bars.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/app-bars.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/app-bars/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/app-bars.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/app-bars.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/app-bars/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/app-bars.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/app-bars.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/badges/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/badges.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/badges.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/badges/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/badges.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/badges.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/badges/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/badges.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/badges.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/badges/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/badges.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/badges.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/bottom-sheets/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/bottom-sheets.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/bottom-sheets.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/bottom-sheets/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/bottom-sheets.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/bottom-sheets.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/bottom-sheets/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/bottom-sheets.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/bottom-sheets.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/bottom-sheets/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/bottom-sheets.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/bottom-sheets.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/button-groups/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/button-groups.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/button-groups.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/button-groups/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/button-groups.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/button-groups.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/button-groups/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/button-groups.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/button-groups.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/button-groups/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/button-groups.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/button-groups.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/buttons/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/buttons.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/buttons.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/buttons/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/buttons.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/buttons.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/buttons/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/buttons.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/buttons.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/buttons/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/buttons.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/buttons.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/cards/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/cards.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/cards.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/cards/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/cards.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/cards.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/cards/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/cards.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/cards.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/cards/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/cards.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/cards.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/carousel/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/carousel.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/carousel.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/carousel/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/carousel.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/carousel.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/carousel/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/carousel.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/carousel.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/carousel/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/carousel.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/carousel.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/checkbox/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/checkbox.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/checkbox.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/checkbox/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/checkbox.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/checkbox.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/checkbox/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/checkbox.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/checkbox.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/checkbox/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/checkbox.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/checkbox.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/chips/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/chips.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/chips.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/chips/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/chips.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/chips.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/chips/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/chips.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/chips.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/chips/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/chips.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/chips.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/date-pickers/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/date-pickers.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/date-pickers.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/date-pickers/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/date-pickers.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/date-pickers.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/date-pickers/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/date-pickers.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/date-pickers.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/date-pickers/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/date-pickers.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/date-pickers.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/dialogs/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/dialogs.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/dialogs.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/dialogs/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/dialogs.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/dialogs.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/dialogs/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/dialogs.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/dialogs.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/dialogs/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/dialogs.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/dialogs.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/divider/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/divider.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/divider.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/divider/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/divider.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/divider.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/divider/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/divider.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/divider.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/divider/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/divider.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/divider.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/extended-fab/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/extended-fab.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/extended-fab.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/extended-fab/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/extended-fab.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/extended-fab.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/extended-fab/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/extended-fab.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/extended-fab.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/extended-fab/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/extended-fab.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/extended-fab.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/fab-menu/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/fab-menu.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/fab-menu.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/fab-menu/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/fab-menu.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/fab-menu.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/fab-menu/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/fab-menu.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/fab-menu.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/fab-menu/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/fab-menu.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/fab-menu.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/floating-action-button/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/floating-action-button.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/floating-action-button.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/floating-action-button/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/floating-action-button.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/floating-action-button.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/floating-action-button/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/floating-action-button.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/floating-action-button.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/floating-action-button/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/floating-action-button.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/floating-action-button.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/icon-buttons/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/icon-buttons.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/icon-buttons.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/icon-buttons/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/icon-buttons.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/icon-buttons.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/icon-buttons/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/icon-buttons.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/icon-buttons.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/icon-buttons/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/icon-buttons.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/icon-buttons.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/lists/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/lists.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/lists.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/lists/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/lists.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/lists.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/lists/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/lists.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/lists.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/lists/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/lists.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/lists.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/loading-indicator/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/loading-indicator.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/loading-indicator.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/loading-indicator/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/loading-indicator.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/loading-indicator.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/loading-indicator/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/loading-indicator.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/loading-indicator.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/loading-indicator/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/loading-indicator.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/loading-indicator.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/menus/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/menus.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/menus.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/menus/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/menus.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/menus.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/menus/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/menus.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/menus.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/menus/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/menus.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/menus.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/navigation-bar/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/navigation-bar.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/navigation-bar.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/navigation-bar/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/navigation-bar.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/navigation-bar.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/navigation-bar/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/navigation-bar.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/navigation-bar.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/navigation-bar/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/navigation-bar.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/navigation-bar.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/navigation-drawer/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/navigation-drawer.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/navigation-drawer.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/navigation-drawer/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/navigation-drawer.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/navigation-drawer.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/navigation-drawer/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/navigation-drawer.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/navigation-drawer.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/navigation-drawer/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/navigation-drawer.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/navigation-drawer.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/navigation-rail/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/navigation-rail.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/navigation-rail.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/navigation-rail/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/navigation-rail.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/navigation-rail.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/navigation-rail/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/navigation-rail.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/navigation-rail.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/navigation-rail/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/navigation-rail.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/navigation-rail.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/progress-indicators/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/progress-indicators.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/progress-indicators.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/progress-indicators/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/progress-indicators.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/progress-indicators.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/progress-indicators/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/progress-indicators.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/progress-indicators.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/progress-indicators/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/progress-indicators.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/progress-indicators.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/radio-button/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/radio-button.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/radio-button.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/radio-button/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/radio-button.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/radio-button.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/radio-button/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/radio-button.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/radio-button.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/radio-button/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/radio-button.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/radio-button.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/scroll-fields/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/scroll-fields.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/scroll-fields.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/scroll-fields/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/scroll-fields.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/scroll-fields.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/scroll-fields/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/scroll-fields.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/scroll-fields.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/scroll-fields/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/scroll-fields.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/scroll-fields.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/search/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/search.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/search.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/search/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/search.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/search.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/search/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/search.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/search.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/search/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/search.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/search.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/segmented-buttons/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/segmented-buttons.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/segmented-buttons.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/segmented-buttons/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/segmented-buttons.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/segmented-buttons.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/segmented-buttons/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/segmented-buttons.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/segmented-buttons.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/segmented-buttons/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/segmented-buttons.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/segmented-buttons.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/side-sheets/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/side-sheets.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/side-sheets.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/side-sheets/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/side-sheets.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/side-sheets.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/side-sheets/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/side-sheets.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/side-sheets.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/side-sheets/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/side-sheets.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/side-sheets.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/sliders/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/sliders.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/sliders.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/sliders/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/sliders.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/sliders.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/sliders/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/sliders.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/sliders.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/sliders/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/sliders.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/sliders.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/snackbar/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/snackbar.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/snackbar.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/snackbar/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/snackbar.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/snackbar.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/snackbar/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/snackbar.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/snackbar.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/snackbar/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/snackbar.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/snackbar.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/split-button/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/split-button.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/split-button.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/split-button/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/split-button.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/split-button.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/split-button/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/split-button.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/split-button.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/split-button/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/split-button.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/split-button.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/switch/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/switch.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/switch.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/switch/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/switch.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/switch.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/switch/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/switch.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/switch.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/switch/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/switch.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/switch.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/tabs/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/tabs.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/tabs.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/tabs/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/tabs.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/tabs.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/tabs/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/tabs.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/tabs.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/tabs/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/tabs.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/tabs.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/text-fields/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/text-fields.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/text-fields.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/text-fields/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/text-fields.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/text-fields.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/text-fields/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/text-fields.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/text-fields.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/text-fields/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/text-fields.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/text-fields.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/time-pickers/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/time-pickers.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/time-pickers.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/time-pickers/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/time-pickers.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/time-pickers.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/time-pickers/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/time-pickers.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/time-pickers.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/time-pickers/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/time-pickers.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/time-pickers.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/toolbars/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/toolbars.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/toolbars.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/toolbars/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/toolbars.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/toolbars.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/toolbars/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/toolbars.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/toolbars.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/toolbars/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/toolbars.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/toolbars.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/tooltips/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/components/tooltips.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/tooltips.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/tooltips/guidelines",
+    "readable_path": "docs/design-references/material-design-3/pages/components/tooltips.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/tooltips.json",
+    "section": "guidelines",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/tooltips/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/components/tooltips.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/tooltips.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/components/tooltips/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/components/tooltips.md",
+    "raw_path": "docs/design-references/material-design-3/raw/components/tooltips.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/develop",
+    "readable_path": "docs/design-references/material-design-3/pages/develop.md",
+    "raw_path": "docs/design-references/material-design-3/raw/develop.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/develop/android/jetpack-compose",
+    "readable_path": "docs/design-references/material-design-3/pages/develop/android/jetpack-compose.md",
+    "raw_path": "docs/design-references/material-design-3/raw/develop/android/jetpack-compose.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/develop/android/mdc-android",
+    "readable_path": "docs/design-references/material-design-3/pages/develop/android/mdc-android.md",
+    "raw_path": "docs/design-references/material-design-3/raw/develop/android/mdc-android.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/develop/flutter",
+    "readable_path": "docs/design-references/material-design-3/pages/develop/flutter.md",
+    "raw_path": "docs/design-references/material-design-3/raw/develop/flutter.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/develop/web",
+    "readable_path": "docs/design-references/material-design-3/pages/develop/web.md",
+    "raw_path": "docs/design-references/material-design-3/raw/develop/web.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/enhance-your-component-designs-with-parametric-prototyping",
+    "readable_path": "docs/design-references/material-design-3/pages/enhance-your-component-designs-with-parametric-prototyping.md",
+    "raw_path": "docs/design-references/material-design-3/raw/enhance-your-component-designs-with-parametric-prototyping.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/building-for-all/co-design",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/building-for-all.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/building-for-all.json",
+    "section": "co-design",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/building-for-all/user-needs",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/building-for-all.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/building-for-all.json",
+    "section": "user-needs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/content-design/alt-text",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/content-design/alt-text.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/content-design/alt-text.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/content-design/global-writing/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/content-design/global-writing.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/content-design/global-writing.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/content-design/global-writing/word-choice",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/content-design/global-writing.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/content-design/global-writing.json",
+    "section": "word-choice",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/content-design/notifications",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/content-design/notifications.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/content-design/notifications.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/content-design/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/content-design/overview.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/content-design/overview.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/content-design/style-guide/grammar-and-punctuation",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/content-design/style-guide.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/content-design/style-guide.json",
+    "section": "grammar-and-punctuation",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/content-design/style-guide/ux-writing-best-practices",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/content-design/style-guide.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/content-design/style-guide.json",
+    "section": "ux-writing-best-practices",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/content-design/style-guide/word-choice",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/content-design/style-guide.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/content-design/style-guide.json",
+    "section": "word-choice",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/customization",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/customization.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/customization.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/design-tokens/how-to-use-tokens",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/design-tokens.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/design-tokens.json",
+    "section": "how-to-use-tokens",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/design-tokens/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/design-tokens.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/design-tokens.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/designing/color-contrast",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/designing.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/designing.json",
+    "section": "color-contrast",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/designing/elements",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/designing.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/designing.json",
+    "section": "elements",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/designing/flow",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/designing.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/designing.json",
+    "section": "flow",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/designing/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/designing.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/designing.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/designing/structure",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/designing.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/designing.json",
+    "section": "structure",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/desktop/components",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/desktop.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/desktop.json",
+    "section": "components",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/desktop/interaction",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/desktop.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/desktop.json",
+    "section": "interaction",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/desktop/layout",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/desktop.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/desktop.json",
+    "section": "layout",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/desktop/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/desktop.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/desktop.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/glossary",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/glossary.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/glossary.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/interaction/gestures",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/interaction/gestures.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/interaction/gestures.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/interaction/inputs",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/interaction/inputs.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/interaction/inputs.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/interaction/selection",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/interaction/selection.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/interaction/selection.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/interaction/states/applying-states",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/interaction/states.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/interaction/states.json",
+    "section": "applying-states",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/interaction/states/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/interaction/states.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/interaction/states.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/interaction/states/state-layers",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/interaction/states.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/interaction/states.json",
+    "section": "state-layers",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/layout/bidirectionality-rtl",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/bidirectionality-rtl.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/layout/bidirectionality-rtl.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/layout/breakpoints/compact",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/breakpoints.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/layout/breakpoints.json",
+    "section": "compact",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/layout/breakpoints/expanded",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/breakpoints.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/layout/breakpoints.json",
+    "section": "expanded",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/layout/breakpoints/large-extra-large",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/breakpoints.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/layout/breakpoints.json",
+    "section": "large-extra-large",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/layout/breakpoints/medium",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/breakpoints.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/layout/breakpoints.json",
+    "section": "medium",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/layout/breakpoints/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/breakpoints.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/layout/breakpoints.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/layout/canonical-examples/feed",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/canonical-examples.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/layout/canonical-examples.json",
+    "section": "feed",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/layout/canonical-examples/list-detail",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/canonical-examples.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/layout/canonical-examples.json",
+    "section": "list-detail",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/layout/canonical-examples/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/canonical-examples.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/layout/canonical-examples.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/layout/canonical-examples/supporting-pane",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/canonical-examples.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/layout/canonical-examples.json",
+    "section": "supporting-pane",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/layout/grids-spacing/density",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/grids-spacing.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/layout/grids-spacing.json",
+    "section": "density",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/layout/grids-spacing/grids",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/grids-spacing.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/layout/grids-spacing.json",
+    "section": "grids",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/layout/grids-spacing/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/grids-spacing.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/layout/grids-spacing.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/layout/grids-spacing/spacing",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/grids-spacing.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/layout/grids-spacing.json",
+    "section": "spacing",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/layout/layout-overview/adaptive-design",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/layout-overview.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/layout/layout-overview.json",
+    "section": "adaptive-design",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/layout/layout-overview/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/layout-overview.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/layout/layout-overview.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/layout/layout-overview/parts-of-layout",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/layout-overview.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/layout/layout-overview.json",
+    "section": "parts-of-layout",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/layout/scaffold/bars",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/scaffold.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/layout/scaffold.json",
+    "section": "bars",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/layout/scaffold/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/scaffold.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/layout/scaffold.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/layout/scaffold/panes",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/scaffold.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/layout/scaffold.json",
+    "section": "panes",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/layout/scaffold/rails",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/scaffold.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/layout/scaffold.json",
+    "section": "rails",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/overview/assistive-technology",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/overview.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/overview.json",
+    "section": "assistive-technology",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/overview/principles",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/overview.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/overview.json",
+    "section": "principles",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/usability/applying-m3-expressive",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/usability.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/usability.json",
+    "section": "applying-m3-expressive",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/usability/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/usability.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/usability.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/watches/foundations",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/watches.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/watches.json",
+    "section": "foundations",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/watches/layout",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/watches.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/watches.json",
+    "section": "layout",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/watches/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/watches.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/watches.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/watches/styles",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/watches.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/watches.json",
+    "section": "styles",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/writing/best-practices",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/writing.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/writing.json",
+    "section": "best-practices",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/writing/text-resizing",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/writing.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/writing.json",
+    "section": "text-resizing",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/writing/text-truncation",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/writing.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/writing.json",
+    "section": "text-truncation",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/xr/components/app-bars",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/xr/components.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/xr/components.json",
+    "section": "app-bars",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/xr/components/dialogs",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/xr/components.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/xr/components.json",
+    "section": "dialogs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/xr/components/nav-bar",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/xr/components.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/xr/components.json",
+    "section": "nav-bar",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/xr/components/nav-rail",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/xr/components.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/xr/components.json",
+    "section": "nav-rail",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/xr/components/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/xr/components.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/xr/components.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/xr/components/toolbars",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/xr/components.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/xr/components.json",
+    "section": "toolbars",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/xr/design/accessibility",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/xr/design.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/xr/design.json",
+    "section": "accessibility",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/xr/design/interaction",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/xr/design.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/xr/design.json",
+    "section": "interaction",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/xr/design/layout",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/xr/design.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/xr/design.json",
+    "section": "layout",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/foundations/xr/design/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/foundations/xr/design.md",
+    "raw_path": "docs/design-references/material-design-3/raw/foundations/xr/design.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/m3-expressive-motion-theming",
+    "readable_path": "docs/design-references/material-design-3/pages/m3-expressive-motion-theming.md",
+    "raw_path": "docs/design-references/material-design-3/raw/m3-expressive-motion-theming.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/material-is-compose-first",
+    "readable_path": "docs/design-references/material-design-3/pages/material-is-compose-first.md",
+    "raw_path": "docs/design-references/material-design-3/raw/material-is-compose-first.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles",
+    "readable_path": "docs/design-references/material-design-3/pages/styles.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/color/advanced/adjust-existing-colors",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/color/advanced.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/color/advanced.json",
+    "section": "adjust-existing-colors",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/color/advanced/apply-colors",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/color/advanced.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/color/advanced.json",
+    "section": "apply-colors",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/color/advanced/define-new-colors",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/color/advanced.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/color/advanced.json",
+    "section": "define-new-colors",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/color/advanced/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/color/advanced.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/color/advanced.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/color/choosing-a-scheme",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/color/choosing-a-scheme.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/color/choosing-a-scheme.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/color/dynamic/choosing-a-source",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/color/dynamic.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/color/dynamic.json",
+    "section": "choosing-a-source",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/color/dynamic/content-based-source",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/color/dynamic.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/color/dynamic.json",
+    "section": "content-based-source",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/color/dynamic/user-generated-source",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/color/dynamic.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/color/dynamic.json",
+    "section": "user-generated-source",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/color/resources",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/color/resources.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/color/resources.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/color/roles",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/color/roles.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/color/roles.json",
+    "section": null,
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/color/static/baseline",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/color/static.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/color/static.json",
+    "section": "baseline",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/color/static/custom-brand",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/color/static.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/color/static.json",
+    "section": "custom-brand",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/color/system/how-the-system-works",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/color/system.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/color/system.json",
+    "section": "how-the-system-works",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/color/system/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/color/system.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/color/system.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/elevation/applying-elevation",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/elevation.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/elevation.json",
+    "section": "applying-elevation",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/elevation/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/elevation.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/elevation.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/elevation/tokens",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/elevation.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/elevation.json",
+    "section": "tokens",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/icons/applying-icons",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/icons.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/icons.json",
+    "section": "applying-icons",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/icons/designing-icons",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/icons.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/icons.json",
+    "section": "designing-icons",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/icons/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/icons.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/icons.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/motion/easing-and-duration/applying-easing-and-duration",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/motion/easing-and-duration.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/motion/easing-and-duration.json",
+    "section": "applying-easing-and-duration",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/motion/easing-and-duration/tokens-specs",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/motion/easing-and-duration.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/motion/easing-and-duration.json",
+    "section": "tokens-specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/motion/overview/how-it-works",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/motion/overview.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/motion/overview.json",
+    "section": "how-it-works",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/motion/overview/specs",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/motion/overview.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/motion/overview.json",
+    "section": "specs",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/motion/transitions/applying-transitions",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/motion/transitions.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/motion/transitions.json",
+    "section": "applying-transitions",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/motion/transitions/transition-patterns",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/motion/transitions.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/motion/transitions.json",
+    "section": "transition-patterns",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/shape/corner-radius-scale",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/shape.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/shape.json",
+    "section": "corner-radius-scale",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/shape/overview-principles",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/shape.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/shape.json",
+    "section": "overview-principles",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/shape/shape-morph",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/shape.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/shape.json",
+    "section": "shape-morph",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/spacing/applying-spacing",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/spacing.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/spacing.json",
+    "section": "applying-spacing",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/spacing/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/spacing.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/spacing.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/spacing/tokens",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/spacing.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/spacing.json",
+    "section": "tokens",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/typography/applying-type",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/typography.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/typography.json",
+    "section": "applying-type",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/typography/editorial-treatments",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/typography.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/typography.json",
+    "section": "editorial-treatments",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/typography/fonts",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/typography.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/typography.json",
+    "section": "fonts",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/typography/overview",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/typography.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/typography.json",
+    "section": "overview",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/styles/typography/type-scale-tokens",
+    "readable_path": "docs/design-references/material-design-3/pages/styles/typography.md",
+    "raw_path": "docs/design-references/material-design-3/raw/styles/typography.json",
+    "section": "type-scale-tokens",
+    "status": "covered"
+  },
+  {
+    "url": "https://m3.material.io/whats-new-at-io26",
+    "readable_path": "docs/design-references/material-design-3/pages/whats-new-at-io26.md",
+    "raw_path": "docs/design-references/material-design-3/raw/whats-new-at-io26.json",
+    "section": null,
+    "status": "covered"
+  }
+]

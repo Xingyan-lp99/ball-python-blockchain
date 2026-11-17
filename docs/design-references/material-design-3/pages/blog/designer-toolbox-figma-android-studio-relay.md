@@ -1,0 +1,256 @@
+# The designer’s toolbox
+
+Source: https://m3.material.io/blog/designer-toolbox-figma-android-studio-relay
+Content endpoint: https://m3.material.io/page-data/Posts/5258494971346944.json
+Content version: 2026-11-17_08-50-14
+
+This is an upstream documentation snapshot. HTML fragments and media URLs are preserved.
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/f8f5d4505a6134a03179186d28af66d67a5a630dbc868aa1d408ee881cba4ae5a27b31d7986a675c32e852be95779df2b33c08b8a9527d6b83c20b1fe6abc9c8
+
+https://lh3.googleusercontent.com/RXEP0DLuwJx1ONV9nlCNa4U0BhrgPdPdZR-5sYiFzZHfR1s24j7ftatnTp3vsodtEgUCg-x_ELpLRy1ctualfPEmk5v1tN2Uzh5fVDssxId2E4cfF7Pd
+
+Ivy Knight
+
+Senior Material Design Advocate
+
+mio-example
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/21db23563995e641781f444ddd094e5154485dddb3c09f128a695db6fb24de1b4345c63c5313ed82bc3790a3d0fa9c6c752ba46c83f818a39a940cf2b3a512f5
+
+https://lh3.googleusercontent.com/iH5mSTXtDMA3gH_rJyr6UiHkYvsrKnEFkacVljhxePXwUUjZg9D79sazDXKNVW0rGqQ3EpCV5P9FStdE9usTzywImtCa6flGvr_48woZync_Vr-BWnk
+
+Euphrates Dahout
+
+Material Systems Design Lead
+
+mio-example
+
+<p>Material Design is an open source design system for creating beautiful projects at Google scale, and we&rsquo;ve been busy making resources tools for you to use Material Design all from your Figma canvas. Read on about how to get the most out of the Figma design resources.</p>
+<h2>Make the Design Kit your own</h2>
+<p>The M3 Figma design kit is a comprehensive tool for getting started with Material Design. Evolving from a Sketch stickersheet into a robust resource with guidance and prototyping.</p>
+<p>The Material Design system is adaptable in use, from a foundation to your own system to only the needed components. So the design kit can be utilized in the same manner: duplicate or remix it for what your product needs. Here are some more ways to utilize the design kit effectively:</p>
+<p>&lt;mio-image index=0&gt;&lt;/mio-image&gt;</p>
+<ul>
+<li>Copy components out of the kit as needed for your app to use as local components.</li>
+<li>Start ideating within the kit, then curate as needed. This will enable you to spin up and test product ideas quickly and more realistically.</li>
+</ul>
+<p>&lt;mio-image index=1&gt;&lt;/mio-image&gt;</p>
+<ul>
+<li>Duplicate the M3 kit file and publish to your team as a component and style library.</li>
+<li>Theming or updating the styles can dramatically shift the look and feel!</li>
+<li>Material includes three theming systems (color, type, shape), but you may have other style attributes. Add them as styles and connect to components.</li>
+<li>Tricks for using components (maybe talk about the building blocks or structure)</li>
+<li>The building blocks are hidden on most components, but can be revealed to show how they are built out at a system level.</li>
+</ul>
+<h2>Start building</h2>
+<p>The design kit is a great place to dive in to learn about M3 components or start building your app.</p>
+<p>Whether starting within the M3 design kit or starting fresh, you&rsquo;ll need to first set up your frames to start designing.</p>
+<p>&lt;mio-image index=2&gt;&lt;/mio-image&gt;</p>
+<p>From here, you can use the kit to start blocking in features along with content. Building up from rough sketches to higher fidelity mockups swapping for real components as you go.</p>
+<p>&lt;mio-image index=3&gt;&lt;/mio-image&gt;</p>
+<p>&lt;mio-image index=4&gt;&lt;/mio-image&gt;</p>
+<p>&lt;mio-image index=5&gt;&lt;/mio-image&gt;</p>
+<p>The design kit and <a href="https://goo.gle/material-theme-builder-figma" target="_blank" rel="noopener">Material Theme Builder</a> (MTB) work together to help you efficiently design and build products, so you can focus on your users and features. By duplicating the design kit to your own Figma account, you get ready-to-use design components set up with Material tokens, and quickly customizable with the Theme Builder.</p>
+<p>&lt;mio-image index=6&gt;&lt;/mio-image&gt;</p>
+<p><strong>Tips and tricks for working with Material Theme Builder and the design kit</strong></p>
+<ul>
+<li>Manage your Figma styles to add or remove themes &ndash; for example, you may want to generate a custom theme and then remove the pre-existing baseline purple theme of the file. The more Figma styles, the larger your Figma files, so add new themes as needed.</li>
+<li>You can select all the components on the components page to swap them to your custom palette as it generates &ndash; two birds, one plugin operation</li>
+<li>Certain generation features are off by default to speed up performance. Turn on features like state layer and surface updating within settings to fully customize everything in the design kit.</li>
+</ul>
+<p>&lt;mio-image index=7&gt;&lt;/mio-image&gt;</p>
+<ul>
+<li>Take advantage of the strengths of both: utilize the already existing elements (like the color schematic) and styles of the design kit, and use the Theme Builder to create and swap new styles and swap</li>
+<li>If you find the Theme Builder isn&rsquo;t operating as expected, here are some common ways to troubleshoot:
+<ul>
+<li>If swapping doesn&rsquo;t seem to be working, try selecting smaller groups or layers. The design kit and plugin have a lot of pieces to them! Sometimes Figma takes a little bit longer to load.</li>
+<li>Close the plugin if it times out, styles are generated first and needed to swap.</li>
+</ul></li>
+</ul>
+<p>&lt;mio-image index=8&gt;&lt;/mio-image&gt;</p>
+<p>For a more in-depth tutorial on using the Material Theme Builder to create a custom theme and apply it to Material components, dive into the <a href="https://goo.gle/customizing-material-color-figma" target="_blank" rel="noopener">Customizing Material color lab</a> on Figma. With this Figma project, you&rsquo;ll learn how to create a custom theme with the Material Theme Builder and apply that theme to design mockups.</p>
+<h2>Need inspiration?</h2>
+<p>&lt;mio-image index=9&gt;&lt;/mio-image&gt;</p>
+<p>If you are looking for some more inspiration and samples, check out some sample projects. Like <a href="https://www.figma.com/community/file/1164313362327941158" target="_blank" rel="noopener">Now in Android</a>, which is the Figma file for the published Now in Android app and gives a thorough view of the app in multiple form factors and themes. Or <a href="https://www.figma.com/community/file/1199784060037728858" target="_blank" rel="noopener">Pesto</a>, a study for advanced theming in Flutter.</p>
+<p>Many of the samples are built with common layout patterns in mind, which can be used as a starting point for your own app. Some even have matching code samples!</p>
+<p>For a more guided approach, try out one of the design labs, they come with sample screens and a walk through of various topics, including dynamic color and variable fonts.</p>
+<p>&lt;mio-image index=10&gt;&lt;/mio-image&gt;</p>
+<h2>Outside the design system</h2>
+<p>&lt;mio-image index=11&gt;&lt;/mio-image&gt;</p>
+<p>Of course any product will extend past the app with app icons, notifications, and other home screen experiences. The newly released <a href="https://www.figma.com/community/file/1237551184114564748" target="_blank" rel="noopener">Android UI Kit</a> helps you craft your app&rsquo;s full user journey.</p>
+<ul>
+<li>The <a href="https://www.figma.com/community/file/1237551184114564748" target="_blank" rel="noopener">Android UI kit</a> helps create full Android user flows to extend your app past the core app experience.</li>
+<li>The kit is divided into components for the system UI elements and templates for full system UI screens.</li>
+<li>Build a notification from one of the template types and copy into the Lockscreen and Notification shade templates.</li>
+<li>Use the <a href="https://www.figma.com/community/file/1131374111452281708/Android-App-Icons" target="_blank" rel="noopener">Adaptive app icon template</a> to design and preview your app icon for adaptive shape and color, plus legacy.</li>
+</ul>
+<h2>Into code</h2>
+<p>With your app built in Figma, we can take a step into implementation by using <a href="https://relay.material.io/" target="_blank" rel="noopener">Relay</a>! Relay packages are like supercharged Figma components that can be used directly in Jetpack Compose projects.</p>
+<p>Some tips to use Relay effectively:</p>
+<ul>
+<li>Each UI package represents a Figma component that can be translated to one composable.</li>
+<li>Packages not only reflect what is on your canvas but also capture additional design intent beyond Figma component properties, like interaction and parametrization.</li>
+<li>Create a named Figma version to keep package definitions stable. You can do this easily in the &ldquo;Share with Developer&rdquo; screen.</li>
+<li>Take a second to give important layers and properties meaningful names.</li>
+<li>Fix any blocking errors to ensure packages build correctly for the developer.</li>
+<li>Talk to your developer about implementing Relay style and component mapping. These features transform your Figma styles and design system components into custom Compose code.</li>
+<li>Work with your developer to make sure your packages have the parameters they need. This is a great way to get on the same page about UI components!</li>
+</ul>
+<p>&lt;mio-image index=12&gt;&lt;/mio-image&gt;</p>
+<p>We&rsquo;re evolving the Material tools and resources to help you create beautiful products with your input. If you have any questions, feedback, or bugs please let us know <a href="https://twitter.com/materialdesign" target="_blank" rel="noopener">@MaterialDesign</a> on Twitter, or link for DK, or <a href="https://goo.gle/MTB-submit-issue" target="_blank" rel="noopener">goo.gle/MTB-submit-issue</a> for MTB.</p>
+<p>Go get started with the <a href="https://goo.gle/m3-design-kit" target="_blank" rel="noopener">Material 3 design kit</a> and try out the <a href="https://goo.gle/material-theme-builder-figma" target="_blank" rel="noopener">Material Theme Builder</a> in Figma.</p>
+
+Collection of components in figma
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/9b0dc1f462592bccbd97fd0010aff5f1fa71e752891d539061f0dbf567ba441ed1fb029d2ea1d5cde48129859e1b8ef6956d9251d8def7fb2e40086826ff14ea
+
+https://lh3.googleusercontent.com/DjAGFd3wUQ3E4FTdyJ3-4gjbgCIDamNLFR9QLiQn9ImGsNJJE-Nsd1gnWuqbHfEwJ-cuoZBTdcyrjidPCp8qyhqdmpyOXdRuy0Y-lMg-kBthNoVbGTtd
+
+Themed components in figma
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/99e5d93e74d7767edfdd8c28fe2a4f8b741e2b74eb5e7ea796512ad200178cc644000f7e00619a8a33332a3ada227dfae31730c2dfeeb502135587d06cc5c277
+
+https://lh3.googleusercontent.com/L9OuEcB_6tnysmGUZ6351SjlX_4dUf8acOKDN2L2d3EYhKz5XN0Yawky2_wjUu7QJmL3GkAF8mNgjDiI9Zv736vyXY0S721qL5sqGSa57wsYOIlhKZY
+
+example figma boards
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/6a336bd1c70715b7b5c4b51410c1ff7c44fd958725bb957a0d3c9fc10e49b871befd8ce766222bd923744c4a2ca0deb7404dd92f9215fc006e81dc18c8438f00
+
+https://lh3.googleusercontent.com/ZLKf1slz9qJt1iSYAwPKCXeBVRUZgHijbR2e6KzZJ0-qW1PteS_LP7emw547lh3AI0o0MQlYucrO28l83zpgvOWfitbwZ4ga7_xJh9UJEaYHCPsCyA
+
+low-fi wireframes
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/e044fbec0f49b49ebf783ebcd4041556465d19054ff9ee89affaba70a023bc6e25a8eca28248af14c23e832e42fa7ec36ce0b063e04c9aff3d9dc42878ceaa38
+
+https://lh3.googleusercontent.com/jDHQUi7hAL24hPlOGliTU2uowOut3MO7N6eJOhQBzY284_dgor5qpvYL2w7UOBAb-NhyJAKlED2itA8KbBy4gPWco6P6WZum57XSMFLpmGDNLBvXkg
+
+mockups with the theme editor overlaid
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/edd3766f9cf9bea00a3ad82ea2f201d153dc67ac9974958b8c0528a79c1117bd6fb39f46b8ab01a52566f7d1d24e03231444202b5f2e91cdaec432bd1964cad0
+
+https://lh3.googleusercontent.com/VAon-2ZWRxlHeAfZ0Yv6nasuEHt2X72cDEoXPDmrWhdL56qEyHiRob13XngENl6iLqF2dt4-qZEemAQn4Q0xO0Uyx8aGmFie3XjRshxWCwtSHnpVGA
+
+animated prototype
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/b4a465e1282626781a23c382e14e22c921be1ef17e2ed485000d083694bdda76e14d090ee11dedeb1635b34f2d79d036f41a5941f62af0b3eb789b5a941d2ca8
+
+https://lh3.googleusercontent.com/_z3TLw15gPoDKdOzjQk6bY88WGzDS0emXyVVjNXNro3JmfXcZUF7GWYYljn83A0oQNrvQuGAAbKkeVC_YdzdLtckZpF1qdSnK46YAvVBd0sUpVsw7ME
+
+themebuilder workflow
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/625dab6b26a65f3d6143c0750d6d452b56bb06ac663c923a0055666df64321cface70aef00587c0edb34d6bb5c1f76507fa6afc0aa9969e350e02b1c9ca24468
+
+https://lh3.googleusercontent.com/khCX7ry7Jm2PSqm7zzOymNpaEFbvKDai6nRINGISp9YVYDCDOzZMw0R-pLDjRqghsvrGEpgmRxONuxaIITSB_-6Dlufr92DBHSgc__lWklg1ucqiTgM
+
+theme builder settings
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/032b157be286f173cc3cf58ed65740d7029feadad0d0c17b4b414cd88a73aa494d3aecdf92c93533ba38525df6372543d66d6fe2d7b3444d4dc12e3eb62e914e
+
+https://lh3.googleusercontent.com/iEFFX3N15r35ojS5hl20acxLGQkRxE4wDdEIbKWm7eaN9wZTRukfAedsO8EDFPIlDOVrpnapxSyGrsdaZx2IIEubpqYA93eGoAiz3UtbGmQKLGQwz7c
+
+cover for the customizing material color design lab
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/e44c35b2b0a785530b19f31780ad77e2aa9bfe08496007f02c0b82b05dfcdc3d2f04082aedf3b85ddd0e7a8c37d4fc1deff3c3dff515fd29830aefea336fa74c
+
+https://lh3.googleusercontent.com/pefQAIqxzUpiXBR2VXSPN2kQd5g2P3jSFBrPqTP2FkoYTUFRg_0pBaTvx66exHE-NYsKkASpGpIQJwA8TiynCkn1vcj3HHRh6OlN5UpU-BOsfuOosQ
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/e5ebc36afc3b85a9840395b18dbda7881c85234ebf51e930372715494278d553502e77926a638b6def74c62a0b227c7da2bfed085ecca79ef466dd0472733b56
+
+https://lh3.googleusercontent.com/K0DQFSjCjGKbc6gSTOH9fDDLLk7rqh9Y0jPorTMtupF23GxoNSEsVyHPV5UZiTnO_5TvbWfMKm_72RUgTxiiYz2czALid21bquoyeusQAd3snHZMaeg
+
+pesto sample screenshots
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/73fb7aae49a0dc8efa519bb8f6e4b5c2061389ef3159b70df0950d0adec623e399884fdbeb342af92869d2179500d65b7f4b4aba39d4b90ca0537e79960164f3
+
+https://lh3.googleusercontent.com/1fm_V6P2s0KRBZcP6yHFOzjHO7uN48e9P7T1I6k9m1wUs4A4rVVpxA9Lc0l_psAPN2xUOhVYltiKZD9NuLVgqw9rvhPo_6XX2DRKALw-ZaDsnxx6JA
+
+Android UI kit
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/46c134994b68c37a909eafc9af59e4f9b4d5e1e4d7bd6936617e8bbfbc057060d6dcfcfe4f8fa402d605d322eb163ede218eb62b20be598967aba57e324439ed
+
+https://lh3.googleusercontent.com/cD4aoWLgjtUDc6a6ItDVsCkgg8_unBsxULzyOp3YPqE66VmcJ6i0qmf7YwOwh6kgOpvq1UoGD8veu2hoBTMZS300AEN5zJM3XSLEXZ2qu_0iVBPwH4g
+
+Relay settings
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/ac2d70ace36ca7ac5b646d28d12548a1aeb5018e03086a6a82f4cac5e2f4636af022bf06c5bb4eaf04b1d7efc3be8af6b735be74dfeb6c507368cb74659b4ae4
+
+https://lh3.googleusercontent.com/gCMFXIINbG11W0GjBW_TjWXpyFbRc6WBupjUqCKjJk9vaKrQKBqCMh69KU4CnLcHeZ7lz6zVV292xt1zu4xumXcPKPLBOtBL4yKC1Z_odgGjl6LTJHM
+
+illustrated pencils rolling off a flat surface
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/a2100894b27ecb32d8663d6c74d087416285fc915e12502ed299003106db24854ba7e1e639b5382401af0875797db8a623e57d0a8a202cd45ab5f78d4b47af52
+
+https://lh3.googleusercontent.com/Z0IATfRw5STUP_pa6UUh0hGJ5jaRuJuXSzuqVJHsxav2rAWFKMaZGrvqb5NJBjRO5D2ykfLKuKt3Zrzq95YW6bBKWt__FEg0OyvzVOYq2QSuK2F0ag
+
+guides,design
+
+{}
+
+Learn how Material resources work together, from customizing the design kit to Android Studio and Relay.
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/e06af4a82c63d52709ee8373e911cbb52881d77121535722ba339b9485b8e1b7b786b268363026d9c81a228758c85b849cc42d4b50180dd800d14ba5f54f8c0c
+
+https://lh3.googleusercontent.com/bu_tHbo_Y9H4ZSFit_akH5AlyCg6jA70gjRVYYBbMmWjT-o54bjpTTo-XvB2VJC6yts9uayA8jfMd8wsgqb7yY5OXpznNBkMHLv1CqtgeCJqCoYcV6w
+
+The Designer’s Toolbox: Figma, Android Studio, Relay
+
+2023-05-26T13:00:00
+
+designer-toolbox-figma-android-studio-relay
+
+How Material resources work together, from customizing the design kit to Android Studio and Relay
+
+The designer’s toolbox
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/431dfac6c5ce89665d484592b44c8066d4b009ee23e07ac7f8e6295313ad9ece46f3b390755cd81685be2f44f2ea784fbe82eefdf5fdd401d8430fc8a4b543cf
+
+https://lh3.googleusercontent.com/hwCFDEfbHlMM92sX1YWje3r5Df9KOiUg-xrF9cZf4YFka-4O83DEv1wYT38uoV509-Oet5dYl0jTXsriDvfN5sTjlLlLbvIsH2vhJNgaZXg3ZCXcwA
+
+/blog/material-3-figma-design-kit
+
+Introducing the M3 design kit for Figma
+
+Material Blog
+
+Introducing the M3 design kit for Figma
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/81bc31677758f8fb3d9290c0e069372520fcc958031a42913a7538b54c8375fad5d1f69f1c6394959a91d99e83ae29a408620b14d98aaa71813a0afdd4ad60df
+
+https://lh3.googleusercontent.com/1bE495Z6UCD8NGSYagtDpIh6qW_plIr8QexRWrWZBvra92ShW_WI8XIJr7X208r1fBSpUwHMNW40rjrG7EHXBsbgDIwPoDIelV7p4eEHu3wuDCYwikSN
+
+/blog/relay-in-alpha
+
+Announcing Relay Alpha
+
+Material Blog
+
+Announcing Relay Alpha
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/65eb24e15db793a9979b3362479941e134cf7e84a8c02f1540c76285b9f5056fa73ee4c8509539daaec7f04f45e7c679939207093d563da44070be712b24ba3f
+
+https://lh3.googleusercontent.com/hDfP5g5Ut41VqyixQKIcr13kE1eayotW7oFOcdXCaZNvtZqC30XZAuIIq2yP_bFx6eBf1sPsFzTEOZ_ij5yWLhKrwhnO3KLzEa8zEgkPUZSPV2lJzg
+
+/blog/material-3-compose-stable
+
+Material Design 3 for Compose is now stable
+
+Material Blog
+
+Material Design 3 for Compose is now stable
+
+mio-example

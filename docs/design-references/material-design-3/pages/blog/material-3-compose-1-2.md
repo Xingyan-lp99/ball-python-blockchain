@@ -1,0 +1,161 @@
+# Material Design 3 for Compose 1.2
+
+Source: https://m3.material.io/blog/material-3-compose-1-2
+Content endpoint: https://m3.material.io/page-data/Posts/5668225645412352.json
+Content version: 2026-11-17_08-50-14
+
+This is an upstream documentation snapshot. HTML fragments and media URLs are preserved.
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/e542d55e05d06e63bbf3dadd467d6f4889a15a6c2c43b46c812a48b6ee2adf7ff126e17cb0d3c04d4d2f24d216f00138ed4cd9cbf209538cb1bd0f4fd7ac7f15
+
+https://lh3.googleusercontent.com/ECgal03qq-GPHfoWRZft82d97qPwwB-M4z1d-igDCWWAMWhJteOVP4HzaU2XhhQVfG9ME-_0DWTFA1eK28kgnTgTHBpSnTIhLK8TQKwE0zyq_lFckrs
+
+James Williams
+
+Material Developer Advocate
+
+mio-example
+
+<p>The 1.2 release of Compose Material 3 is here, and with it comes new components, some component changes and an expansion of the Material3 color system.</p>
+<h2>Component Changes, Demotions and Promotions</h2>
+<p><code>Segmented Button</code> is a new experimental component. There are single select and multiple selection variants.</p>
+<p style="text-align: center;">&lt;mio-image index=0&gt;&lt;/mio-image&gt;</p>
+<p style="text-align: center;">&lt;mio-image index=1&gt;&lt;/mio-image&gt;</p>
+<p><code>BottomAppBar</code> has a <code>BottomAppBarScrollBehavior</code> to auto-hide itself when content is scrolled.</p>
+<p><code>SwipeToDismiss</code> has been refactored into <code>SwipeDismissBox</code> and remains in experimental status.</p>
+<p><code>Badge</code> and <code>BadgedBox</code> have been promoted to stable.</p>
+<p>&lt;mio-image index=2&gt;&lt;/mio-image&gt;</p>
+<p>The <code>Chip</code> APIs have been promoted to stable.</p>
+<p>&lt;mio-image index=3&gt;&lt;/mio-image&gt;</p>
+<h2>Color Changes</h2>
+<p>Material3 Compose 1.2 has an expanded color set giving you more ways to personalize your apps. Notable additions are more surface options to represent emphasis of information in your UIs. Components have been updated to make fuller use of the new surface values.</p>
+<p>&lt;mio-image index=4&gt;&lt;/mio-image&gt;</p>
+<p>&lt;mio-image index=5&gt;&lt;/mio-image&gt;</p>
+<p>A small implementation note is that the ColorScheme object is now immutable allowing Jetpack Compose to skip it and possibly optimize successive compositions when the object hasn&rsquo;t changed.</p>
+<p>If your code currently modifies the colors in <a href="https://developer.android.com/reference/kotlin/androidx/compose/material3/ColorScheme" target="_blank" rel="noopener">ColorScheme</a> directly, you will need to make use of the <a href="https://developer.android.com/reference/kotlin/androidx/compose/material3/ColorScheme#copy(androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color,androidx.compose.ui.graphics.Color)" target="_blank" rel="noopener">copy</a> method now to change colors.</p>
+<h4>Surfaces</h4>
+<p>Previously in Material, we provided a single surface value and calculated interpolated variants of it at runtime by blending with the primary color. This was frustrating for developers and designers when it came to implementing UIs because they were unable to assign those colors directly.</p>
+<p>Color roles simulating different elevation levels have been added to theming. There are now three surface color options and five surface container options.</p>
+<p>&lt;mio-image index=6&gt;&lt;/mio-image&gt;</p>
+<p><code>Surface Bright</code> is guaranteed to be the lightest surface color. It is not currently in use by any of our provided components.</p>
+<p><code>Surface</code> was the former backing color for many components. It has been replaced largely by the five surface container in 1.2. It is still in the spec so your components using it will not break.</p>
+<p><code>Surface Dim</code> is guaranteed to be the darkest surface color. Like Surface Bright, they are not in use in any existing components.</p>
+<p><code>Surface Container Lowest</code>, <code>Low</code>, <code>High</code> and <code>Highest</code> are additional color roles that can provide more or less emphasis in contrast to Surface Container.</p>
+<p>The new color roles are already available in <a href="https://material-foundation.github.io/material-theme-builder/" target="_blank" rel="noopener">Material Theme Builder</a>.</p>
+<h2>Where can I find more information about Material Compose ?</h2>
+<p>The components or features we highlight in these posts are only a fraction of the work that lands in each release. Check out the <a href="https://developer.android.com/jetpack/androidx/releases/compose-material3" target="_blank" rel="noopener">release notes</a> for a full listing.</p>
+<p>You can file <a href="https://b.corp.google.com/issues/new?component=742043&amp;template=1346811" target="_blank" rel="noopener">bug reports</a> and follow <a href="https://b.corp.google.com/issues?q=componentid:742043%20status:open" target="_blank" rel="noopener">open issues</a> on Buganizer. You can also follow the progress of new versions on <a href="https://cs.android.com/androidx/platform/frameworks/support/+/androidx-main:compose/material3/material3/src/commonMain/kotlin/androidx/compose/material3/;bpv=1;bpt=0" target="_blank" rel="noopener">cs.android.com</a>. Check out the <a href="https://play.google.com/store/apps/details?id=androidx.compose.material.catalog" target="_blank" rel="noopener">catalog app</a> to see the components in action.</p>
+
+segmented button
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/b31335607019ea8df7f6c3d7cb6ec7a5f12a1c21c94a451b65a81ee7be8d33a084f90724012b6dc1e06cb69a666c1815c751f0e989ae6e3d67ad0adddf40dc4e
+
+https://lh3.googleusercontent.com/MRGpPtlLR_oFFP5q9tXAcF_G6gcFGi_r1jnFTvg4SOntdC7Am9DVO15PgHkuBA0j0gh09F4rG9isWXUkbe0uG50KWzWw_K_LkhPXS82flPHXTEjDL9k
+
+segmented button with two items selected
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/ece103fc5e2085d72f94e6f61db940f0565d1a336ee3e3ac9fcdd8a85df620734d14a0f37d7e5e441a16c1b9f6d018f1ac31f942e08f99397ac86f40735a1e10
+
+https://lh3.googleusercontent.com/j8sTaLIqknCT9c2yqitgk2zF4W_HaOkYHW2g07Hjn-UWDytZNTCTz6MrSUJeBoI6VkwUnBEEckpF3Xz5L1Fw-NbawkpJaPTBJ1mslD2yTE986QO1hbY
+
+Badge on icon
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/011a8953b1c5aa20f51cb989d633c50a44668f9414b66f4e7ea9ea73f5f6f961f25f5bc14ca962263f5f8fb586b79c01aff02de134f074cb32627a415d6bf6a7
+
+https://lh3.googleusercontent.com/oPc29x-FxE_KGdXW0B3AqQ8vgDJVuQzA_SjnKMKUEtbrfD7PW1YEQbRw0EzKyyPBJoMNsyFUPCR7yYzRVeXlbTIsBhxXy5FLFqj7ZzczxnsGhobyaw
+
+Chips
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/2a8045f6df9e6442cd96c95d5ed9eabedd001375423451d9843b087fde1b4ee3d7d2e282c9600eb2532b42131b26df3fa9bb960157497549ade347815a8d2823
+
+https://lh3.googleusercontent.com/2MxUFjAePtUPSAh_nqoOLP5CdnjlploeyoFwlMYJ8quSmima8XmJYSpK5UGv62Z-e72wx6PqYHP9NKWzrXlrbITXWeLc4TUu6whTehBInpJsSUSEibx9
+
+Light scheme
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/3603827446d162fb886ea9c8c4e7149d525abf1fc4d2a04f2937b60555606112c97cc54156bca5a5fbcb177dc2f031874f57fc4099c31435d2db57342eb5de03
+
+https://lh3.googleusercontent.com/jAliy_eXJWNsSEZei7ySjjja4IptR2gCM-8efiykeYXP9aP2VC_Z_xx0Vry1UD7TSEI-H3wNLZWaBOWd5h3D3mIXofFPu13-6OqkHM93XeX_jtV6Qxw
+
+Dark scheme
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/2ff48bf6831ecf42e63c448f499759f8ffa61bdfc15f600f3b6c13c314c38042648437c62e5eef3b9a0f5e82ca1b537f7edc33e64187ee7306aa450a52daf4f8
+
+https://lh3.googleusercontent.com/6YedDwTRqxhyco3sDt_0zfAq_BpA2PgWiY5Npblf5fJHuV8HXN0yP3UHwDU9CCLjPzEImikuZAC1Ly0dKA4oKUBiW8T97PRYpu5cuVPucSpVdHX3l-S1
+
+Surface roles from a light color scheme
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/e6675620a3e3c0b73a42f4f86edcd3db33009fabf59876de1c3674397cf2ff715a191635111eb7c0bff479ed5449b62770e2451beace6aca94aab961e50189f1
+
+https://lh3.googleusercontent.com/DPXzSGYraDha9ZwQi0WMQnWIhx_YrPkMUf6H5Yys4FVzVBXTt25UQFd19F0qUx2-yMH3nkVtMqkoUm3Gsw-8hJ6WrIAPNfThqEZRTIY41Oh6ebJjCSQ
+
+Latest releases
+
+abstract illustration pale green and peach tones
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/4c59b78d755cec59061e1195c3cab89a6486a579290eb7f288080918a28820921c95d0d136c0b1a5b0a939cdcdd587407df3256d6e005435c4bafc9f57b94176
+
+https://lh3.googleusercontent.com/s3xVT-1wuUuzcoWJpUphvitXeO1RI2It2CvsRpJeizKORSkVbuCJ3Zen8kPJqj04iU9_Q31zeecGiaAyQeWuSRt22_IZejbkjPKMQAQqOgZn_gPJPhYI
+
+compose material 1.2 stable release components
+
+{}
+
+Explore the 1.2 release of Material Design 3 for Compose. Discover the newest update for Material Design 3.
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/d0afe9762d05246c177291a041ae943a3fa077d56b902d8d71095881208248a1ba1135c352e5946020d5e11d5d891880625d8596d919a4df52b158b965d86946
+
+https://lh3.googleusercontent.com/XXSmWJNnKe9rjbLIc9_wrzp7-Ct_j5ArQG4edQyrJsGwTYJZLALRiYF2s-qGFC5ah34C2in8NSXihOEv1VYSAHrxkOQRd5kaRpQhkMIERVQMKiI-Zg
+
+Material Design 3 for Compose 1.2
+
+2024-02-07T13:00:00
+
+material-3-compose-1-2
+
+Exploring the 1.2 release of Material Design 3 for Compose
+
+Material Design 3 for Compose 1.2
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/03f43c3f14652a8e9bee38690538720b8dbd7fc4e47675904b9dd2d81063ffefb64879a2ebfd60f37daebbe085146d17665ec19113a38944b7da26334b8cacf9
+
+https://lh3.googleusercontent.com/1Fr9X-XhqVHWpk5en2RERTS6KKbpusvP62vrFKYRlityztGx5i1lOUeQWWYfEkULZhfzZGG-76gkPqWliZpkxoSAoUn6hVKCO9sKM_ygGnwbcEkfGQ0
+
+/blog/android-stable-release-1-10-0
+
+Material Blog
+
+Material Design Components for Android 1.10.0
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/bce055b0ea8ebae5049b0f2ebd5489ea36bf2ce4133c7d1c4d7e93c033b71dc716ab99ba8cf4f4ed8136841f1eaf75c7d757d299a20af2c82a69a4f1362ccb0e
+
+https://lh3.googleusercontent.com/RbHShPvohW9p32Ep0kbI_56p-2tXwOP39xcwIGHjjatuYPO0h5t_kmbK0uIcGNTBb6QLBmJUhJbALaQhZ3u5AtVv9r9E6bP2KS6APUfjUKm_33n3SZI
+
+/blog/material-theme-builder-2-color-match
+
+Material Blog
+
+An updated theming experience with Material Theme Builder 2.0
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/cd8c9e0ca5aa68ef80c0a31efa58c001aa94297e2d136d9cf8f3f3ed343d38c0acc83e523c982a5ca93688f2f31d9bb8b2ec0983afe492c5f279bdb486892112
+
+https://lh3.googleusercontent.com/m5z1z1wKD9x1FNKc0WyO1vMQjH8jrxs3eSkealr2NW3JI-we22rhV787nJc7lbPrxWqzaoiS-JUsuTTztMUJ8t18AoTWmq2ZWVtia4inx_H-MoLqeg
+
+/blog/tone-based-surface-color-m3
+
+Material Blog
+
+Introducing Tone-based Surfaces in Material 3
+
+mio-example

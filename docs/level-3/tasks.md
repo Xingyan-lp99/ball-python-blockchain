@@ -2,6 +2,75 @@
 
 ## Current State and Reading Order
 
+### Frontend Design Checkpoint - 2026-11-17
+
+The human approved a visual and interaction cleanup of the existing Streamlit
+frontend, retaining the current APIs, account/session checks, role permissions,
+submission locks, and explicit uncertain blockchain outcomes. No backend,
+contract, database, dependency, or business-interface changes are part of this
+frontend checkpoint.
+
+Completed UI work:
+- `.streamlit/config.toml` defines the native light theme, 16px sans-serif body
+  text, monospaced code, and square corners.
+- `frontend/styles.py` centralizes semantic CSS variables and the shared card,
+  primary/secondary button, hover, focus, and disabled styles. The application
+  entry point loads these styles once per rerun.
+- Login and account registration use centered cream cards and clearer action
+  hierarchy. Registration retains its role-dependent fields and success lock.
+- The workspace header shows the signed-in role and account, the actual lab
+  participant ID where applicable, and the existing sign-out action.
+- Snake profile lookup uses a primary button. The retrieved profile groups its
+  original photo and basic fields in native columns, then shows descriptions.
+  Missing photos/values remain explicit. Keeper Management and Certificate
+  History continue below the profile using their existing calls.
+
+Material Design 3 is the primary reference and shadcn/ui is the secondary
+composition reference; read [the reference guide](../design-references/README.md)
+before proposing the next UI task. They are documentation references, not
+installed runtime components. The human explicitly requested the project-specific
+yellow/purple retro pixel treatment: background #F1EAFE, surfaces #FFFDF3,
+text/outline/hard shadow #291344, emphasis #6330BA, primary actions/selected tags
+#F4EF48, ordinary tags #E2D3FA, and secondary text #6E627D. Square corners, roughly
+2px borders and 4px offset hard shadows are deliberate approved visual choices.
+Preserve readable sans-serif body/forms/tables, monospaced identifiers, and
+realistic snake photos. Pixel fonts for branding and selected headings have not
+yet been implemented. Reference-image buttons, names, statuses, and sample data
+are not additional requirements.
+
+Validation performed during these small tasks:
+- TOML parsing and native Streamlit 1.67.0 theme loading succeeded.
+- The changed Python files parsed and the shared style helper imported.
+- Focused, in-memory AppTest checks used mocked requests/accounts/results for
+  login validation, registration role switching and invalid/successful submits,
+  success locking, role-specific workspace rendering, explicit readiness/sign-out
+  clicks, session failures, profile query triggering, missing data, and query
+  failures. They sent no real backend requests and made no chain/database writes.
+- The shared CSS variable references resolve; the 14 values match the approved
+  styling, and overlapping native-theme colors agree with config.toml.
+- The human confirmed the login/registration appearance and return navigation.
+  The latest profile layout, including narrow-window behavior, still needs human
+  browser verification. AppTest does not establish browser CSS rendering.
+
+These focused checks were not added as repository test files. The pre-existing
+full automated suite remains paused and was not run for this checkpoint. Its
+historical readiness-page tests do not establish coverage of the current UI.
+
+Remaining UI work includes the breeder snake-registration form, certificate
+history and PDF presentation, laboratory issuance/revision forms, keeper-transfer
+presentation, four husbandry tables/forms, and selective pixel typography. Each
+is a separate proposal and approval, not blanket authorization to implement all
+of them. Buyer PDF verification, basic-profile editing, payments, a marketplace,
+invented profile-list APIs/statistics, and husbandry blockchain evidence remain
+outside scope. Preserve the existing confirmed/unconfirmed state distinctions.
+
+The human requested committing and pushing this checkpoint, AGENTS.md, and the
+local design-reference archive to GitHub for collaborator synchronization. Local
+settings, uploaded files, database data, and Hardhat state are not shared by Git.
+Task-specific permission given in this chat to directly edit particular UI files
+does not transfer to another collaborator or authorize later coding tasks; follow
+AGENTS.md and obtain that collaborator's agreement for the next small task.
+
 ### Latest Approved Checkpoint
 
 The human has now confirmed successful website handover and the post-transfer

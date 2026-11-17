@@ -1,0 +1,78 @@
+# Video: Google Design Tutorials
+
+Source: https://m3.material.io/blog/google-design-tutorial-video
+Content endpoint: https://m3.material.io/page-data/Posts/5243360368132096.json
+Content version: 2026-11-17_08-50-14
+
+This is an upstream documentation snapshot. HTML fragments and media URLs are preserved.
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/6d7af15ad53b3dc2a564194c6af86818611f5e202ea712369f90d885bc714e364da08b66b1440ca1ed68fc96cbb5f7fc8be8040df133e820cb10ffa29f5034d7
+
+https://lh3.googleusercontent.com/UA4cn84QGMesPZb6pWYU2ny8NhqYA-2m6yKn4D1PEDtNfvIc2SQA11JTWRGU-0R21DVoDKh6REdSHLgTdfcn5xr4a9zWRy5HbRk1WA
+
+Material Design
+
+mio-example
+
+<div style="text-align: center; position: relative; padding-bottom: 56.25%; max-width: 100%; height: 0;"><iframe style="border-radius: 16px; position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLJ21zHI2TNh9clapWNyWUCyiu1oVD-9ri" frameborder="0" allowfullscreen=""></iframe></div>
+<p>Design, tools, and implementation &ndash; our series of hands-on tutorial videos has you covered. Check out the playlist above for tips on creating a <a href="https://material.io/design/material-theming/overview.html#material-theming">Material theme</a>, collaborating in <a href="https://material.io/resources/gallery">Gallery</a>, and building with <a href="https://material.io/components">Material Design Components</a> across platforms.</p>
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/0fcf14f2fdff655bf1c0bf47f93af9a879511d5e690de86228fd0efb727f5746de732b6e4f5fb9d4795e50798d284dbd5e6591944bd802466e920f7dad35d5e0
+
+https://lh3.googleusercontent.com/BaImr1pw4sYYzHmW0M7U8eLZVRf7z8dZSxvM61m9oNa0ZeycaVAdqXZ-72-sZe4q5miQj3pcTeqivf8ZQ0dtRS_FPzeSQnRF_x4K5zUWzc-bIMwud4Q
+
+ 
+
+{}
+
+2019-09-01T13:01:00
+
+google-design-tutorial-video
+
+A series of hands-on tutorial videos covering design, tooling, and implementation
+
+Video: Google Design Tutorials
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/6cf22561c1cf6685fd88b87dba9262d0317bea10b616f2eae32fd44768613c0f1f3185ea98b2a4ab42311f301fa690ce8437af2fe3ce84686aee159c38e952f6
+
+https://lh3.googleusercontent.com/sug69DZgHwvlMkv3T0Wa3x2ZHYqQDdZiI8VJiVMdoInbwBUeJZT48jKAHZqLxsHuQnoMR1NMVOmvIPfA_CjxEQYjfpCNqcYLeOhjzw
+
+/resources/tutorials
+
+Resources
+
+All Developer Tutorials
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/71b873d3c00ebb9924495297d956b10a057a9bc599d50a0cfd141fb26afb14acc4926b20bd9b32dc491db0aed5c5270426f2c9de5d18d5c70269dca2cefb3ed1
+
+https://lh3.googleusercontent.com/nUJTOrsF4VN5m2UMBM-J4lVD_W7wujCjUKLU8xH4wzikNlr6gdNRmga2okU7_lABELi5Ss3AjDyhSQc7Ay7vCZZ5gZahzB9Use8T3w
+
+/blog/design-material-theme-color
+
+Material Blog
+
+Designing a Material Theme: Color
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/2f95c86bdc1b02ce73d92619c01d8e49eed9376d66b001fefc3322502ceab9d6e0a58b35639ea0777289ba6163c3a79dd95f3108d519fafbc9eea399cb404b58
+
+https://lh3.googleusercontent.com/uX7KzRFGZKbProyCEHQKohPAN8DFI-IJqbRrvvzEMqnoVp06w7g_LW7d5HfKXPXtObG_OD0GVBl69yWS8eWP8DjfnJVHijIApnSW
+
+/blog/android-material-theme-type
+
+Material Blog
+
+Building a Material Theme on Android: Typography
+
+mio-example

@@ -1,0 +1,2 @@
+# Preserve upstream snapshot bytes so manifest checksums survive checkout.
+docs/design-references/** -text

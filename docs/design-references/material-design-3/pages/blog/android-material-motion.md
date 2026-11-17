@@ -1,0 +1,291 @@
+# Building Beautiful Transitions with Material Motion for Android
+
+Source: https://m3.material.io/blog/android-material-motion
+Content endpoint: https://m3.material.io/page-data/Posts/5851801742737408.json
+Content version: 2026-11-17_08-50-14
+
+This is an upstream documentation snapshot. HTML fragments and media URLs are preserved.
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/d5cfbc517c9e67712ca19c5cc360a03ef016ca2afc20fd57763e89672c9cc0556cfaac2044b8c92cfa7c382c73b13b604797675e6f270085dcd2298f0c90fa46
+
+https://lh3.googleusercontent.com/ZpoPSoS8g6I4qfsC87Jua5Fm9u2LpILkrwddul4BFXg5sdr3YFipZvuGKw1m534zdf7lRJOZIKAWlrA1MOwMJiGd7iqlJcev39iC
+
+Hunter Stich
+
+Material Android Developer
+
+mio-example
+
+```xml
+<!--email_item_layout.xml-->
+
+
+android:transitionName="@{@string/email_card_transition_name(email.id)}"
+```
+
+```xml
+<!--email_fragment.xml-->
+
+
+android:transitionName="@string/email_card_detail_transition_name"
+```
+
+```xml
+// EmailFragment.kt
+
+sharedElementEnterTransition = MaterialContainerTransform().apply {
+   // The drawing view is the id of the view above which the container transform 
+   // will play in z-space.
+   drawingViewId = R.id.nav_host_fragment
+   duration = resources.getInteger(R.integer.reply_motion_duration_large).toLong()
+   // Set the color of the scrim to transparent as we also want to animate the 
+   // list fragment out of view
+   scrimColor = Color.TRANSPARENT
+   setAllContainerColors(requireContext().themeColor(R.attr.colorSurface))
+}
+```
+
+```xml
+// HomeFragment.kt
+
+override fun onEmailClicked(cardView: View, email: Email) {
+     exitTransition = MaterialElevationScale(false).apply {
+         duration = resources.getInteger(
+            R.integer.reply_motion_duration_large
+         ).toLong()
+     }
+     reenterTransition = MaterialElevationScale(true).apply {
+           duration = resources.getInteger(
+            R.integer.reply_motion_duration_large
+         ).toLong()
+     }
+     val emailCardDetailTransitionName = getString(
+         R.string.email_card_detail_transition_name
+     )
+     val extras = FragmentNavigatorExtras(
+         cardView to emailCardDetailTransitionName
+     )
+     val directions = HomeFragmentDirections
+         .actionHomeFragmentToEmailFragment(email.id)
+     findNavController().navigate(directions, extras)
+ }
+```
+
+```xml
+// HomeFragment.kt
+
+postponeEnterTransition()
+view.doOnPreDraw { startPostponedEnterTransition() }
+```
+
+```xml
+// MainActivity.kt
+
+currentNavigationFragment?.apply {
+   exitTransition = MaterialSharedAxis(
+      MaterialSharedAxis.Z, 
+      /* forward= */ true
+   ).apply {
+      duration = resources.getInteger(R.integer.reply_motion_duration_large).toLong()
+   }
+   reenterTransition = MaterialSharedAxis(
+      MaterialSharedAxis.Z, 
+      /* forward= */ false
+   ).apply {
+       duration =resources.getInteger(R.integer.reply_motion_duration_large).toLong()
+   }
+}
+```
+
+```xml
+// SearchFragment.kt
+
+enterTransition = MaterialSharedAxis(
+   MaterialSharedAxis.Z, 
+   /* forward= */ true
+).apply {
+   duration = resources.getInteger(R.integer.reply_motion_duration_large).toLong()
+}
+returnTransition = MaterialSharedAxis(
+   MaterialSharedAxis.Z, 
+   /* forward= */ false
+).apply {
+   duration = resources.getInteger(R.integer.reply_motion_duration_large).toLong()
+}
+```
+
+```xml
+// MainActivity.kt
+
+currentNavigationFragment?.apply {
+   exitTransition = MaterialFadeThrough().apply {
+       duration = resources.getInteger(R.integer.reply_motion_duration_large).toLong()
+   }
+}
+```
+
+```xml
+// HomeFragment.kt
+
+enterTransition = MaterialFadeThrough().apply {
+   duration = resources.getInteger(R.integer.reply_motion_duration_large).toLong()
+}
+```
+
+<p dir="ltr">The <a href="https://material.io/design/motion/the-motion-system.html">Material motion system</a>, recently released as part of the <a href="https://material.io/blog/android-stable-release-1-2">MDC-Android library (v 1.2.0)</a><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">, distills common transitions into a group of simple patterns for a smoother, more understandable user experience. Material motion currently includes four transitions:</span></p>
+<ul>
+<li dir="ltr"><a href="https://material.io/design/motion/the-motion-system.html#container-transform">Container transform</a></li>
+<li dir="ltr"><a href="https://material.io/design/motion/the-motion-system.html#shared-axis">Shared axis&nbsp;</a></li>
+<li dir="ltr"><a href="https://material.io/design/motion/the-motion-system.html#fade-through">Fade through</a></li>
+<li dir="ltr"><a href="https://material.io/design/motion/the-motion-system.html#fade">Fade</a></li>
+</ul>
+<p>We&rsquo;ve implemented these transitions on top of the <a href="https://developer.android.com/reference/android/transition/package-summary">Android platform</a> &amp; <a href="https://developer.android.com/reference/androidx/transition/package-summary">AndroidX Transition system</a> so they can easily be used when moving between Activities, Fragments, and Views.</p>
+<p dir="ltr">This post introduces each pattern and explains how to add them to your app. I&rsquo;ll illustrate each step by implementing it for our example app <a href="https://material.io/design/material-studies/reply.html">Reply</a>, a simple and easy-to-use email client. Three of the app&rsquo;s flows will get the motion transitions: <strong>opening an email, opening the search page, </strong>and<strong> switching mailboxes</strong>.</p>
+<p dir="ltr">If you&rsquo;re more of a hands-on learner and want to get right into the code, then consider doing the <a href="https://codelabs.developers.google.com/codelabs/material-motion-android">Material motion codelab</a>, which lets you practice these techniques by executing each step as you go along.</p>
+<h2 dir="ltr">Container transform: Opening an email</h2>
+<p style="text-align: center;"><span id="docs-internal-guid-d7a65eee-7fff-4f7a-5b50-98776c3ecb5e">&lt;mio-image index=0&gt;&lt;/mio-image&gt;</span></p>
+<p>The &ldquo;hero&rdquo; of transitions, container transform is used when one thing turns into another thing. Examples include a list item that expands into a details page, a <a href="https://material.io/components/buttons-floating-action-button">FAB</a> that morphs into a toolbar, or a <a href="https://material.io/components/chips">chip</a> that expands into a floating <a href="https://material.io/components/cards">card</a>. In each case there is one component transforming into another, maintaining a shared &ldquo;outer&rdquo; container while animating a swap of &ldquo;inner&rdquo; content. Using a container transform to animate between views can help reinforce their relationship and maintain a user&rsquo;s <a href="https://material.io/design/navigation/navigation-transitions.html#hierarchical-transitions">navigational context</a>.</p>
+<p>In Reply, we&rsquo;re adding a container transform between a Fragment holding a list of emails (<a href="https://github.com/material-components/material-components-android-examples/blob/develop/Reply/app/src/main/java/com/materialstudies/reply/ui/home/HomeFragment.kt"><code>HomeFragment</code></a>) and an email details fragment (<code><a href="https://github.com/material-components/material-components-android-examples/blob/develop/Reply/app/src/main/java/com/materialstudies/reply/ui/email/EmailFragment.kt">EmailFragment</a></code>). If you&rsquo;re familiar with <a href="https://developer.android.com/training/transitions/start-activity">Android shared element transitions</a>, the setup is pretty similar!</p>
+<p>Start by identifying our two shared element views and give them each a <a href="https://developer.android.com/reference/android/view/View#attr_android:transitionName">transition name</a>. The first is a single email list item card where we will use <a href="https://developer.android.com/topic/libraries/data-binding">Data Binding</a> to make sure each item has a unique transition name.</p>
+<p><span id="docs-internal-guid-d4369fd5-7fff-b7a4-9b90-bf1426382c00">&lt;mio-code-snippet index=0-&gt;&lt;/mio-code-snippet&gt; </span></p>
+<p>The second is the full-screen card inside of our <code><a href="https://github.com/material-components/material-components-android-examples/blob/develop/Reply/app/src/main/java/com/materialstudies/reply/ui/email/EmailFragment.kt">EmailFragment</a></code>, which can be given a static transition name since it&rsquo;s the only one in the view hierarchy. Note that our first and second shared elements don&rsquo;t need to use the same transition name.</p>
+<p><span id="docs-internal-guid-33c6b28e-7fff-0b5c-3e66-95313db24710"></span></p>
+<p><span id="docs-internal-guid-83308df3-7fff-62a5-43ef-35a7e2ed71f7"></span></p>
+<p>&lt;mio-code-snippet index=1&gt;&lt;/mio-code-snippet&gt;</p>
+<p>These two views will be picked up by our container transform. Under the hood, both will be placed inside a drawable whose bounds are clipped inside a &ldquo;container&rdquo; that animates its shape from a list item to a details page. During the transition, the container&rsquo;s contents (the list item and the details page) are swapped by fading the incoming screen in on top of the outgoing screen.</p>
+<p>Now that we&rsquo;ve marked our shared element views, let&rsquo;s create and set our destination Fragment&rsquo;s <a href="https://developer.android.com/reference/androidx/fragment/app/Fragment#setSharedElementEnterTransition%28java.lang.Object%29"><code>sharedElementEnterTransition</code></a> to a new instance of <code><a href="https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/transition/MaterialContainerTransform.java">MaterialContainerTransform</a></code>. By default, this <code>sharedElementEnterTransition</code>&nbsp;will also be automatically reversed and played when going back from the details page.</p>
+<p><span id="docs-internal-guid-e40bad6f-7fff-7f2d-b94d-85e0421cf44c"></span></p>
+<p><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">&lt;mio-code-snippet index=2&gt;&lt;/mio-code-snippet&gt;</span></p>
+<p><em>For details on <code>MaterialContainerTransform</code> parameters, see the <a href="https://github.com/material-components/material-components-android/blob/master/docs/theming/Motion.md#container-transform">motion documentation</a>.</em></p>
+<p>Now when an email is clicked, all we need to do is supply our Fragment transaction with mappings between our start and end view transition names. With this information, the detail fragment&rsquo;s shared element transition is able to find and animate the two views using our supplied <code>MaterialContainerTransform</code>.</p>
+<p><span id="docs-internal-guid-4c62442e-7fff-28da-99ce-9960a17460a7"></span></p>
+<p><span id="docs-internal-guid-0e9f2a83-7fff-a42c-bc7a-1cd92930bc5f"></span></p>
+<p dir="ltr">&lt;mio-code-snippet index=3&gt;&lt;/mio-code-snippet&gt;</p>
+<p dir="ltr"><em>In the above snippet, we&rsquo;re also setting an exit and reenter transition for the outgoing list fragment. Material Components provides two helper transitions to smoothly animate a Fragment that is being replaced: <code><a href="https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/transition/Hold.java">Hold</a></code> and <code><a href="https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/transition/MaterialElevationScale.java">MaterialElevationScale</a></code>. In addition to a fade, <code>MaterialElevationScale</code> will scale out our list of emails when exiting and scale them back in when reentering. <code>Hold</code> would simply keep our list of emails in place. Without setting an exit transition, our list of emails would immediately be removed and disappear from view.</em></p>
+<p dir="ltr">If we were to run the code at this point and navigate back to our list of emails from the details page, the return transition wouldn&rsquo;t run. This is because the transition system isn&rsquo;t able to find the two views which are mapped to our transition names, since the email list adapter hasn&rsquo;t yet been populated when our transition starts. Luckily, we have two handy methods at our disposal: <code>postponeEnterTransition</code> and <code>startPostponedEnterTransition</code>. These allow us to delay the transition until we know our shared elements are laid out and can be found by the transition system. In Reply, we can postpone until we are sure our <code>RecyclerView</code> adapter has been populated and our list items have been bound with transition names using the following snippet:</p>
+<p dir="ltr"><span id="docs-internal-guid-49d12d6a-7fff-b339-1755-5a4781b9c8c9"></span></p>
+<p dir="ltr"><span id="docs-internal-guid-f32108ff-7fff-2845-4d3d-6eae9a31a77c"></span></p>
+<p dir="ltr">&lt;mio-code-snippet index=4&gt;&lt;/mio-code-snippet&gt;</p>
+<p dir="ltr">In your own app, you may need to experiment with these two methods to find the right time to start postponed transitions depending on how and when you&rsquo;re populating your UI. If you find your return animation isn&rsquo;t running, starting transitions before a shared element is ready is likely the cause.</p>
+<p dir="ltr">Moving on to our search screen!</p>
+<h2 dir="ltr">Shared Axis: Opening the search page</h2>
+<p><span id="docs-internal-guid-0548a24e-7fff-44cf-4a20-a2a1de7858a9"></span></p>
+<p style="text-align: center;">&lt;mio-image index=1&gt;&lt;/mio-image&gt;</p>
+<p>The shared axis pattern is used for transitions between UI elements that have a spatial or navigational relationship. In Reply, opening search takes the user to a new page that sits on top of the list of emails. To illustrate this 3-dimensional model, we can use a shared z-axis transition between the list of emails (<code><a href="https://github.com/material-components/material-components-android-examples/blob/develop/Reply/app/src/main/java/com/materialstudies/reply/ui/home/HomeFragment.kt">HomeFragment</a></code>) and the search page (<code><a href="https://github.com/material-components/material-components-android-examples/blob/develop/Reply/app/src/main/java/com/materialstudies/reply/ui/search/SearchFragment.kt">SearchFragment</a></code>).</p>
+<p>Shared axis transitions operate on two targets simultaneously to create the final, choreographed transition. This means that &ldquo;pairs&rdquo; of transitions run together to create a continuous, &ldquo;directional&rdquo; animation. For fragments, these pairs are</p>
+<ul>
+<li>FragmentA&rsquo;s <code>exitTransition</code>&nbsp;and Fragment B&rsquo;s <code>enterTransition</code></li>
+<li>FragmentA&rsquo;s <code>reenterTransition</code>&nbsp;and FragmentB&rsquo;s <code>returnTransition</code></li>
+</ul>
+<p><a href="https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/transition/MaterialSharedAxis.java"><code>MaterialSharedAxis</code></a>, the class implementing the shared axis pattern, accepts a property called <code>forward</code> to control this concept of directionality. For each transition pair, <code>forward</code>&nbsp;must be set to the same value to have the pair&rsquo;s animations coordinate correctly.</p>
+<p><em><span id="docs-internal-guid-8734a809-7fff-c284-f301-a01a1eb9a14c">See the <a href="https://github.com/material-components/material-components-android/blob/master/docs/theming/Motion.md#shared-axis">motion documentation</a> for more details on shared axis directionality.</span></em></p>
+<p><span id="docs-internal-guid-6b992e4f-7fff-d958-3f6a-0f8a71fe8384">In Reply, here&rsquo;s how we can set up the exit and reenter transitions for our current fragment (<a href="https://github.com/material-components/material-components-android-examples/blob/develop/Reply/app/src/main/java/com/materialstudies/reply/ui/home/HomeFragment.kt"><code>HomeFragment</code></a>).</span></p>
+<p>&lt;mio-code-snippet index=5&gt;&lt;/mio-code-snippet&gt;</p>
+<p><span id="docs-internal-guid-b381d8d6-7fff-37af-68dc-4adfff68c9db"></span></p>
+<p dir="ltr">In our destination fragment (<a href="https://github.com/material-components/material-components-android-examples/blob/develop/Reply/app/src/main/java/com/materialstudies/reply/ui/search/SearchFragment.kt"><code>SearchFragment</code></a>), we set up the enter and return transitions.</p>
+<p dir="ltr">&lt;mio-code-snippet index=6&gt;&lt;/mio-code-snippet&gt;</p>
+<p dir="ltr">Notice the current fragment&rsquo;s exit transition and the search fragment&rsquo;s enter transition use the same value for <code>forward</code> &ndash;  true. The same goes for the current fragment&rsquo;s reenter transition and the search fragment&rsquo;s return transition.</p>
+<p dir="ltr">Next, by default, transitions run on all child views within their scene root hierarchy. This means that a shared axis transition will be applied to each email in the list page and each child of the search page. This can be a neat feature if you want to &ldquo;propagate&rdquo; or &ldquo;<a href="https://material.io/archive/guidelines/motion/choreography.html#choreography-creation">stagger</a>&rdquo; animations, but since we want to animate the root of each fragment as a whole, we need to set `android:transitionGroup="true"` on both our <a href="https://github.com/material-components/material-components-android-examples/blob/develop/Reply/app/src/main/res/layout/fragment_home.xml#L18">email list <code>RecyclerView</code></a> and our <a href="https://github.com/material-components/material-components-android-examples/blob/develop/Reply/app/src/main/res/layout/fragment_search.xml#L17">search page root view group</a>.</p>
+<p dir="ltr">With that, we should have a nice shared z-axis transition to and from our search page! Shared axis is a really flexible transition that can work in a lot of different scenarios  &ndash;  from page transitions, to smart reply selections, to onboarding or vertical stepper flows. Now that you have the set up configured, you can also experiment with <code>MaterialSharedAxis</code>&rsquo; s `axis` parameter to check out what the other axis animations look like.</p>
+<p dir="ltr"><span id="docs-internal-guid-b7839664-7fff-9e53-f678-f27a418e3ed1"></span></p>
+<h2 dir="ltr">Fade Through: Switching mailboxes</h2>
+<p style="text-align: center;">&lt;mio-image index=2&gt;&lt;/mio-image&gt;</p>
+<p>The last pattern we&rsquo;ll cover is the fade through pattern. A fade through can be used to transition between UI elements that do not have a strong relationship. When transitioning between mailboxes, we don&rsquo;t want the user to think their sent emails are navigationally related to their inbox. Since each mailbox is a top-level destination, fade through is an appropriate choice. In Reply, we&rsquo;ll be replacing the list of emails (<a href="https://github.com/material-components/material-components-android-examples/blob/develop/Reply/app/src/main/java/com/materialstudies/reply/ui/home/HomeFragment.kt"><code>HomeFragment</code></a>) with a different list of emails (<a href="https://github.com/material-components/material-components-android-examples/blob/develop/Reply/app/src/main/java/com/materialstudies/reply/ui/home/HomeFragment.kt"><code>HomeFragment</code></a>&nbsp;with new arguments).</p>
+<p>Since <a href="https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/transition/MaterialFadeThrough.java"><code>MaterialFadeThrough</code></a> doesn&rsquo;t have the idea of directionality, the set up is even easier. We can just set an exit transition on our outgoing fragment and an enter transition on our incoming fragment.</p>
+<p dir="ltr"><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">&lt;mio-code-snippet index=7&gt;&lt;/mio-code-snippet&gt;</span></p>
+<p>&lt;mio-code-snippet index=8&gt;&lt;/mio-code-snippet&gt;</p>
+<p>The need to set <strong><code>android:transitionGroup="true"</code></strong>&nbsp;on our <a href="https://github.com/material-components/material-components-android-examples/blob/develop/Reply/app/src/main/res/layout/fragment_home.xml#L25">list of email&rsquo;s <code>RecyclerView</code></a> also applies here, but this has already been taken care of during our shared axis configuration step.</p>
+<p>That&rsquo;s it for the fade through transition! Find fun places to use the fade through pattern in your own apps &ndash; like switching between bottom navigation destinations, swapping a list of items, or replacing a toolbar menu.</p>
+<h2 dir="ltr">Keep on moving!</h2>
+<p>That&rsquo;s a brief look into the Material motion system on Android. There are lots of things you can do to <a href="https://material.io/design/motion/customization.html">customize motion</a> using the patterns provided, making motion a part of your brand&rsquo;s experience. Also keep in mind that while we looked at Fragment transitions, the motion system can be used to transition between Activities all the way down to Views. Check out the full <a href="https://material.io/design/motion/the-motion-system.html">motion spec</a> for some inspiring examples to get you thinking about where you might be able topolish your app&rsquo;s core experience or add some extra delight in small places.</p>
+<p dir="ltr"><span id="docs-internal-guid-57a5977a-7fff-8364-df40-67aa7e4d3a34"></span></p>
+<p dir="ltr">To keep learning, check out the following additional resources:</p>
+<p dir="ltr"><a href="https://github.com/material-components/material-components-android/blob/master/docs/theming/Motion.md">Material Motion Developer Documentation</a></p>
+<p dir="ltr">Lots of customization options and tips on animating between Activities and Views can be found in Material Android&rsquo;s motion documentation!</p>
+<p dir="ltr"><span id="docs-internal-guid-e4f732d6-7fff-b876-4763-d621d774b3e2"></span></p>
+<p dir="ltr"><a href="https://codelabs.developers.google.com/codelabs/material-motion-android/#0">Material Motion Codelab</a></p>
+<p dir="ltr">A full, step-by-step developer tutorial covering how to add Material motion to Reply.</p>
+<p dir="ltr"><span id="docs-internal-guid-9984bbd3-7fff-d4bc-be8e-576bd74554d7"></span></p>
+<p dir="ltr"><a href="https://play.google.com/store/apps/details?id=com.google.android.apps.docs">Google Drive for Android</a></p>
+<p dir="ltr">Take a look at Google Drive on Android to see the motion system in action. Clicking on folders, opening search, and navigating between bottom navigation destinations all use transitions from MDC-Android.</p>
+<p dir="ltr"><span id="docs-internal-guid-c8809ccc-7fff-f117-3b13-7be72d42f15c"></span></p>
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/58dfa0c7330e6f143125640778b884a317e859c44de3b90a45315c239d3e3155fbdd79fc46a0dc50085f50007dc5b5affe0750abbe0d832f70ab65b83980b962
+
+https://lh3.googleusercontent.com/AnhVnJUJrCtLcWWWn6T8ZKSfClW20_1oSGc1eNtTEgAJdGiy2xlhkyjpuALSrhZhDKkojVyGc1sGjBIXd7HsxRJE7OXqbKMIkaHQUw
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/97342fefa73a945bcb71e7bfbff66f2ed2de35ab39420d173e1a47a2cf134cc7b0afe93628eb174b8588bb01f857b420b7ac0abb0257aeb486743f80fdfa8523
+
+https://lh3.googleusercontent.com/RZWkyHEl4Gd7-6ay5-RtpEmT4KuQZM1iHx-C_q4XOtkU6qHInwzGP3cUbkhpzE2igDuvaityQQXAy17ETtqcF8M6ht37quartcwEVw
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/65da16fcd27c4d4494db97fc6bc5ef8b349f8c1b5caf82dae46162521c8f3c1d908a555a43aa8106c2b475ba211c92a4ac63c368442d881a1cf3fd46d49f8b5a
+
+https://lh3.googleusercontent.com/cHY9pZOafRsr48xcMbF5Z5C97ikL_EQVay4jHafJy6wsPL9o3Xoa4wOErBjlmg371UOBGvCaDCMh3aEDhZwlLLdYrKmebb6JjKQNY-8
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/3216ff3183070c233c0ad40bfb228dbf93d1f5574dc98eae72cb1c5e31a4db699e51393ca7ae7b509e79bef3546bf3548b9986949555a443fbfe60d753b27861
+
+https://lh3.googleusercontent.com/dS_AmHPhlU7QlWQB8Ra69FyHf8_7rO8BdTBkOlp2sE0_MUYTqvdAXj7oy4dDIpbNTSosYjyHvH91lpo0wO5WoRccqfIGCBO0l3efAw
+
+Android, Motion, How-to
+
+{}
+
+Building transitions with Material Motion for Android. Learn about four transition patterns and how to add them to your Android app.
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/b4e2e99764ad8438863cf3b76f0e6fb4cdf331b0e375b853db45df52af47209df20c38a0526319ff92afa574c541f988710cf491ab1bc4e11fe9ef97d531db84
+
+https://lh3.googleusercontent.com/SInHrYBMDtsLp91OavDkkMFaDcg1FfCceCefNlxAigmAjgA5MBKNyB9q87PdWE83FGglW0T9mlDVAoxpQCS3iaZFaqsFkn7SneHoNw
+
+Building Transitions with Material Motion for Android
+
+2020-09-01T13:02:00
+
+android-material-motion
+
+Introducing four transition patterns and how to add them to your app
+
+Building Beautiful Transitions with Material Motion for Android
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/322f01ff2da66ef8d840aa17c0488c1fc16607708532e5f7368081ea4338d44dba54bd48c2126c6c0b8ded52e71d6ca8a5a703347e11a03f62cc7165524de507
+
+https://lh3.googleusercontent.com/bfMMbed8nKlqbMiG9hWNElSG3sJSQdRAh1BxNNKVjumHRzwqMjn8JATE5YlgtiAfFZjyBeD4XLgNsT19JubwOawwvoC7AyGDNRBFmzQ
+
+/blog/android-material-theme-color
+
+Material Blog
+
+Building a Material Theme on Android: Color
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/71b873d3c00ebb9924495297d956b10a057a9bc599d50a0cfd141fb26afb14acc4926b20bd9b32dc491db0aed5c5270426f2c9de5d18d5c70269dca2cefb3ed1
+
+https://lh3.googleusercontent.com/nUJTOrsF4VN5m2UMBM-J4lVD_W7wujCjUKLU8xH4wzikNlr6gdNRmga2okU7_lABELi5Ss3AjDyhSQc7Ay7vCZZ5gZahzB9Use8T3w
+
+/blog/design-material-theme-color
+
+Material Blog
+
+Designing a Material Theme: Color
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/2f95c86bdc1b02ce73d92619c01d8e49eed9376d66b001fefc3322502ceab9d6e0a58b35639ea0777289ba6163c3a79dd95f3108d519fafbc9eea399cb404b58
+
+https://lh3.googleusercontent.com/uX7KzRFGZKbProyCEHQKohPAN8DFI-IJqbRrvvzEMqnoVp06w7g_LW7d5HfKXPXtObG_OD0GVBl69yWS8eWP8DjfnJVHijIApnSW
+
+/blog/android-material-theme-type
+
+Material Blog
+
+Building a Material Theme on Android: Typography
+
+mio-example

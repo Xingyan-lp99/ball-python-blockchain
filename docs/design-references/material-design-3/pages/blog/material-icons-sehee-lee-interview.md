@@ -1,0 +1,128 @@
+# Material Icons: Sehee Lee
+
+Source: https://m3.material.io/blog/material-icons-sehee-lee-interview
+Content endpoint: https://m3.material.io/page-data/Posts/5309157368135680.json
+Content version: 2026-11-17_08-50-14
+
+This is an upstream documentation snapshot. HTML fragments and media URLs are preserved.
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/114b4e6d76018c7e7e36de47f8158a7d71794d04f1a575e31408803c59ba962ac3b15579c1534fce4b47bcccb7fb81f590aff7676a92c371b704a7732e05fed7
+
+https://lh3.googleusercontent.com/2AT_TIxyMX0Inqd9Rk4ejaFoRmOOczEwM9E5xz4DfYxaUqgdkXsCRKOX3uHYFOjyU9VwwFzGGCsZnf6BYmkPP0x3OjztRk02SB3O_HOBLz_vXdvoi2g
+
+Liam Spradlin
+
+Senior UX Designer, Material Design
+
+mio-example
+
+<p>Sehee Lee is a Senior Visual Designer on Material Design, leading iconography and design systems for Google Fonts. Originally from Seoul, Korea, Lee is based in Brooklyn, NY.</p>
+<p>Lee has been with Material since before it was Material, contributing to the original launch of the system back in 2014. During that period, as platform guidelines, navigation patterns, and components took shape, it became clear that there was no central system for creating action icons.</p>
+<p>The effort to build more structure into the creation of these icons, which appear frequently throughout every Material interface, continued into the buildup to 2018&rsquo;s Material Theming launch, when Lee took ownership of creating Google&rsquo;s first proprietary icon set and open-sourcing five different styles of Material icons that stayed true to the system while tweaking parameters that could create new types of expression.</p>
+<p>Four years later, the team has <a href="https://material.io/blog/introducing-symbols">introduced Material Symbols</a>, a variable font that captures over 2,500 individual glyphs with multiple stylistic axes in a single font file, exploding the expressive capacity of Material Icons. Coinciding with the launch, I got a chance to speak with Lee about her work, the project, and what it&rsquo;s like to design something iconic.</p>
+<p></p>
+<h2>Designing an icon</h2>
+<p><strong>Iconography is already a complex topic - so let&rsquo;s start with how you conceptualize icons in the first place.</strong></p>
+<p>The key is to capture the essence of the term or action I&rsquo;m trying to represent as an icon. The first goal would be to find intuitive, actionable and easily understood metaphors. And this ideation portion would definitely be the most time consuming part.</p>
+<p><strong>How does the process look, from start to finish?</strong></p>
+<p>I start with an image search with the term to understand the metaphor. The reason for doing a search is so that I can have a universal perspective as metaphors can be shaped based on my background, location or even age.</p>
+<p>Once I pick a few suitable representations, I establish a base shape using the 4 design metrics: keyline shapes, material grid, stroke weight and radii corners. Then I add my essential lines to create the image. Last but not least, I subtract the unnecessary details from the completed image if they are not absolutely necessary. Squinting my eyes definitely helps to eliminate unnecessary details.</p>
+<p>To publish the icon, I name the icon file according to our naming convention and add icon metadata that helps with searching for the icon in our platform. I consider icon discovery a critical feature as users won&rsquo;t use the icon if they can&rsquo;t find it!&nbsp; Then I upload the asset to our repository which then goes in our icon pipeline. The pipeline auto generates SVGs, PNGs and icon fonts. Finally, the icon is linked to the repository and will be published at fonts.google.com/icons.</p>
+<p><strong>This must be especially complex for a product like Material Icons, where the library wants to support all sorts of use cases - applications built all over the world for different audiences, even physical spaces. How is that accounted for in the work?</strong></p>
+<p>This is why we take a systematic approach to handle the majority of our edge cases. And for the most part, the Material Design System provides a clear cut way to create icons that can fit 99% of our use cases. However, it&rsquo;s also important to recognize the metaphor that can be offensive or have different contexts in different areas of the world. For example, we had user feedback from a Cyrillic native speaker and the user informed us about our 4k icon at the time. For English speakers, it was just an icon with &lsquo;4k&rsquo; letters but those letters could be interpreted differently in Cyrillic. It turned out that the icon could be seen as a symbol of Secret Police working under Lenin. We had no idea! As soon as we heard of the feedback, we took an immediate action by modifying the icon so that it properly reads as 4k even in Cyrillic languages. So, sometimes we have unforeseeable events like this but our goal is to always create and maintain iconography that is socially unbiased and universally applicable.</p>
+<p><strong>How do you maintain an editorial perspective when the catalog has over 2,000 glyphs across 5 styles, and especially now that there are variable axes to work with?</strong></p>
+<p>The reason our iconography is popular with our users is because using our Material Design metrics and system grid, new icons can easily be created in the Material Design style. The way I think about this is essentially, by sticking to a system that&rsquo;s proven to produce icons with consistent style, our iconography was able to reach millions of users while maintaining objectivity throughout the process.</p>
+<h2>From Material Icons to Material Symbols</h2>
+<p><strong>Making the icons variable opens up a new dimension of possibility, but also of complexity - how were the axes chosen and designed?</strong></p>
+<p>I wouldn&rsquo;t say this is complexity but it is in fact flexibility. Because one can always choose not to utilize the new features but only take advantage of the file size reduction. Also, we&rsquo;re providing SVGs as well for those who want to use Material Symbols as before without changing their integration process.</p>
+<p>For v1 of Material Symbols, we chose the axes based on popularity and what worked best in the context of icons. The four axes we chose for Material Symbols were what users were most familiar with and would work best in terms of offering design flexibility.</p>
+<p><strong>Why was Material Symbols created, what is the utility?</strong></p>
+<p>I was intrigued by variable fonts when I first learned about its capabilities for fonts and thought about carrying over these awesome capabilities over to our icons.</p>
+<p>We saw high-value opportunities in evolving our traditional icon format to Material Symbols using the Variable Font technology to improve icons&rsquo; design flexibility, user experience, and accessibility benefits. In fact, Google Fonts developed numerous Variable fonts and it is common in typography, but applying the Variable Font concept to icons seemed like a wild idea in the beginning. We spent a lot of time researching and prototyping the new symbols to find the right approach to develop the Material Symbols.</p>
+<p>There are 2 big benefits we considered for creating Material Symbols. First, Material Symbols don&rsquo;t require additional files for more variants and are therefore optimized for size and speed. Second, Material Symbols offer an ability to make adjustments that weren&rsquo;t possible previously with the traditional icon format.</p>
+<p>For designers, it provides subtle yet invaluable adjustments for optimizing the user experience and accessibility benefits; the four axes Material Symbols provide enables a wide range of styles for icon styles that opens up design flexibility greatly.</p>
+<p>For developers, Traditional font/symbol storage requires multiple files, and takes up large amounts of storage space and network latency. Variable fonts can put all variations in one file, optimizing for storage space.</p>
+<p>For both, when using variable fonts, there&rsquo;s a benefit of not having to choose just one or a few styles to speed up performance. Variable fonts are able to provide users with all available styles with just one file, which also means that now you can do CSS animation between different styles of icons with one file.</p>
+<p><strong>How does it work?</strong></p>
+<p>Traditionally icons are designed by hand one by one. If we needed icons with different stroke weights, those would be created manually. Material Symbols are technically a new font and not a simple vector drawing. Since Material Symbols are created in a font development tool, the produced symbols also have the characteristics only seen in fonts and users are able to take advantage of features like the 4 stylistic attributes: Fill, Optical Size, Weight and Grade.</p>
+<h2>Identifying with icons</h2>
+<p><strong>Have you ever been surprised by where Material Icons show up, or how people are using them, whether it&rsquo;s the context, or the meaning ascribed to them?</strong></p>
+<p>The material icons are everywhere in the digital and physical world! Our icons are open source icons and it&rsquo;s truly amazing to see them on physical digital screens and randomly see them while browsing the web. If you ever visit and walk around NYC, you would see our Material icons on LinkNYC machine, which is a public digital billboard on the streets. On the other hand, we partnered up with MoMa design studio to use Material icons as the museum&rsquo;s physical navigational signages, which was an incredible sight to see.</p>
+<p><strong>Where do you see yourself reflected in the work? Your perspective, personality, experience, etc?</strong></p>
+<p>My personality is actually the opposite of what I do for icons. I&rsquo;m clumsy, would spill coffee everywhere and don&rsquo;t stick to schedules. I think my icon creation speaks to my inner Hyde where I need to stick to a strict system, be pixel perfect and work for every context imaginable. As funny as it sounds, I believe icons are sort of an outlet for me to be more balanced in my life.</p>
+
+Illustration showing SeHee interacting with abstract graphic elements
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/35682898379716c67e4c4bdf6ef92096e5b82458cb42a2fc32bd302f4791171ecb831d19c5f3a5b3793174ed6304bcf306ff4fe91bbc39717d7d466c4b3ae9de
+
+https://lh3.googleusercontent.com/GT3F4Oj3YQOOZr2GtR7PL_AAkvMBuf_E2EdPfra77TwbRepf7IBoQxygVVTHNMNfyyQlGGtkTbxwmacljHDjueZRtLxI3CIKapiFFqBvlGKIuC9z-Q
+
+ 
+
+{}
+
+An interview with Senior Visual Designer leading icons and design systems for Google Fonts
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/ddecb9fa4361cf39ea95d92a90e6ccd48dec58258f90da8f79721001e8f382a4c627b3d60877719583ab9940afeba7d0e8482835119c501e5696f190b6acccd5
+
+https://lh3.googleusercontent.com/8rgydTpSRr6Tk9iguMduA4rXov6trh220yLpyZ0oPz7XXRRbqrEkrBEKr9ab5-lvQIJCkvaQWbwoBHa2yWy2B0Mymt6fQ1eInW6lWV3eWAbc0Yi9sK8
+
+Material Icons: Sehee Lee
+
+2022-05-11T10:00:00
+
+material-icons-sehee-lee-interview
+
+An interview with Senior Visual Designer leading icons and design systems for Google Fonts, Sehee Lee
+
+Material Icons: Sehee Lee
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/185df830bbf3b014f09c305918af4e9359427cf0bff97521855b408f22ae96ddc64497972435f85187e14695b5944a91f7b316f3bedaba1959c5ef0a7a8a70fe
+
+https://lh3.googleusercontent.com/jF6rFGI3p1Huh8jk3jsK1J3cfGwM9_C2t4gD1NocFEbjewFXtLVNSUBD10tCT8BbHfANfAeFTZ1rStepQ2r4ruO1By3jCC4XuG9PKaQKIQl-6DiAQWXT
+
+/blog/introducing-symbols
+
+Introducing Material Symbols
+
+Material blog
+
+Material Symbols
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/c47fc7865695a86449f19e1148279454975a5d7c4f6b6e7917ee411604e87279f0f3a1f1ed19a97cb0cfa10db2a830072e452406c8481297f8e4e3915e7d88f0
+
+https://lh3.googleusercontent.com/CqOkQHV6IkWjWVJYZqyTktoGtyfAvNs9A_F8nNfmZG0qrWDqcZlQlTGugKWViMgVlfvdIfsO0agfHFnMulbNC3D8jdSto8GI5Z-AbVUtUKsoxLBNS0L6
+
+/blog/google-fonts-knowledge
+
+Announcing Google Fonts Knowledge
+
+Material Blog
+
+Announcing Google Fonts Knowledge
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/cb89a76898de6e89c4b5871b74a9c5af1dedd18b9d06022242786ac567b924c50a6909ccefec0d5ed1a6a24647942e3eb4d09528b35d6ac3409b02f9ec66d943
+
+https://lh3.googleusercontent.com/73iO8YmQkBvE-z_OPQdm0gRC1XUeIOtUzaw4TlE3EZasN2WSmY1c0Q0Db2ssfcXEFBp12motVhIHff5qk1UEXUrOuzxvpilXXn3w
+
+Google Fonts loves Material Icons
+
+/blog/google-fonts-material-icons
+
+Material Blog
+
+Google Fonts ❤️ Material Icons
+
+mio-example

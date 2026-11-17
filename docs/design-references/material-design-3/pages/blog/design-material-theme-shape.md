@@ -1,0 +1,156 @@
+# Designing a Material Theme: Shape
+
+Source: https://m3.material.io/blog/design-material-theme-shape
+Content endpoint: https://m3.material.io/page-data/Posts/5102095135670272.json
+Content version: 2026-11-17_08-50-14
+
+This is an upstream documentation snapshot. HTML fragments and media URLs are preserved.
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/114b4e6d76018c7e7e36de47f8158a7d71794d04f1a575e31408803c59ba962ac3b15579c1534fce4b47bcccb7fb81f590aff7676a92c371b704a7732e05fed7
+
+https://lh3.googleusercontent.com/2AT_TIxyMX0Inqd9Rk4ejaFoRmOOczEwM9E5xz4DfYxaUqgdkXsCRKOX3uHYFOjyU9VwwFzGGCsZnf6BYmkPP0x3OjztRk02SB3O_HOBLz_vXdvoi2g
+
+Liam Spradlin
+
+Senior UX Designer, Material Design
+
+mio-example
+
+<p>Shape, like color and typography, can be a powerful tool for creating a beautiful, usable interface. Unlike color and typography, shape is often subtle. Everything in an interface has a shape, sure, but the ways in which shape can work to guide users, suggest interaction, and visually distinguish elements on screen is often unnoticed.</p>
+<p>&lt;mio-image index=0&gt;&lt;/mio-image&gt;</p>
+<p>Intentional use of shape can create visual hierarchy among components, separating content from key actions like the FAB.</p>
+<p>&lt;mio-image index=1&gt;&lt;/mio-image&gt;</p>
+<p>Shape can also suggest interactivity, hinting with an asymmetric corner that some affordance is present.</p>
+<p>&lt;mio-image index=2&gt;&lt;/mio-image&gt;</p>
+<p>And, of course, shape can be another tool in your kit for creating an experience that feels like it belongs to your brand, elevating the expression of your app&rsquo;s unique identity with an extra custom touch.</p>
+<p>Material Theming introduced a wide variety of possibilities for shaping elements in your UI and, like the other systems we&rsquo;ve covered in similar guides, shape can be defined and controlled at a global level, creating a comprehensive shape theme that automatically sets the appearance of every Material Component in your app.</p>
+<h2>Shape in Material</h2>
+<p>Material Design supports two primary shape families by default: rounded and angled. Once a shape family is selected, the size of the corner shape can be adjusted for shape expressions that are subtle or dramatic.</p>
+<p>&lt;mio-image index=3&gt;&lt;/mio-image&gt;</p>
+<p>Material Components are divided into three categories: small, medium, and large.</p>
+<p>Components in the &ldquo;small&rdquo; category include things like buttons, chips, floating action buttons, snackbars, and tooltips. Components in the &ldquo;medium&rdquo; category include cards, dialogs, image list items, and menus. And components like the backdrop, modal navigation drawer, and sheets belong to the &ldquo;large&rdquo; category.</p>
+<p>Grouping components this way allows for the creation of a shape theme that&rsquo;s comprehensive (applied to all components) but thoughtful (applied differently based on the size and prominence of each component). Optically, applying a 4dp rounded corner to a button and a nav drawer would end up feeling very different. For the button, which is 40dp tall, one rounded corner represents 10% of its total height. For a nav drawer that spans the entire vertical space of the screen, this is 0.6% of the total height or less. So treating different sized components with different shape styles allows your app to have an optically balanced and sensible approach to shape, in addition to leaving space for shape to act as a tool in the ways described above.</p>
+<h2>Creating your shape theme</h2>
+<p>When deciding which shape family to use for your app, you can look to other elements of the brand for inspiration. A good starting point is the logo.</p>
+<p>&lt;mio-image index=4&gt;&lt;/mio-image&gt;</p>
+<p>The <a href="https://material.io/design/material-studies/about-our-material-studies.html">Material Studies</a> (example apps designed around real world use cases and product constraints) often borrow shape inspiration from each app&rsquo;s logo. The roundness of <a href="https://material.io/design/material-studies/owl.html">Owl</a>&rsquo;s bird logo, for example, informs corner treatments for selected cards and the round playlist button in the bottom right corner of some screens.</p>
+<p>&lt;mio-image index=5&gt;&lt;/mio-image&gt;</p>
+<p>As we saw before, the angular forms of <a href="https://material.io/design/material-studies/shrine.html">Shrine</a>&rsquo;s diamond logo influences the shape of everything from buttons to backdrops.</p>
+<p>Your product&rsquo;s typography can also serve as inspiration. For example, if you&rsquo;re using a typeface with rounded corners or terminals, the shape family you choose can either amplify or contrast that geometry, depending on your preferred expression.</p>
+<p style="text-align: center;"><iframe style="height: 720px; width: 100%; border: 1px solid #e0e0e0;" src="https://material.io/inline-tools/shape/" frameborder="0"></iframe></p>
+<p>To get a feel for how each shape family might look, check out <a href="https://material.io/design/shape/about-shape.html#shape-customization-tool">the shape tool</a> from the Material Design guidance on shape. The tool will give you a feel for how different shape families and values will impact Material Components, allowing you to make informed decisions about your shape theme before visualizing it in Figma or in code.</p>
+<h2>Visualizing your theme</h2>
+<p>To visualize your new shape theme in a design environment, it will be useful to refer to the component groupings described in <a href="https://material.io/design/shape/applying-shape-to-ui.html#shape-scheme">the shape guidance on material.io</a>, applying the desired shapes and values to your components as needed.</p>
+<p>To get started with a full Material Design stickersheet, make a copy of our <a href="https://www.figma.com/@materialdesign">Baseline Design Kit for Figma</a>. On the Components page, you&rsquo;ll find the main components that serve as parents for all the Material Components shown on the Stickersheet page.</p>
+<p>&lt;mio-image index=7&gt;&lt;/mio-image&gt;</p>
+<p>Here, you can begin applying shape values to components by changing the corner radius values in the panel on the right side of the screen for each component&rsquo;s States, Color, and Elevation layers.</p>
+<h2>What&rsquo;s next?</h2>
+<p>From here, start placing shaped components into your mockups to see how they fit in. Try experimenting with asymmetric shapes and different values to heighten both the appearance and function of shaped components within your app.</p>
+
+Android screen with bottom app bar and two cards containing images, title and secondary text
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/832281a4a667dee9626faac3dfaadf904bf4ae993edfc164006dbb2ecc6bb8a3676d27a809ab8c0a2ac152fd0638e6f7753c8ab163361708d0e701d4ab97cf72
+
+https://lh3.googleusercontent.com/svJ4gR0Gwp_kcmdEJqpV3iZTIlNAdzRIqJDMKftCk-RI_k8PqDM6g9dZ5enKgQREdHxXnE77Jh-vQJmdu8GFG3vd1yoyAr4GwSuRzOg
+
+Backdrop pattern used to access the menu in the Shrine app
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/6aa74b22c4a6fa18f6afdfa3a3f5dac9481441082ad8051a7b6a7c15f4c9639749f5633588edcfb0ec2e3cc866c48824d69d5a9aa8e609d72559d4c2c0719503
+
+https://lh3.googleusercontent.com/WcQwxd_ga2M5AuWK0jIhZRYQcAYnbmYgw2jf4wviVl22IIUnX2F98b8FeMdLzmaCqi33fbe00F-EBVwdwkAhTOeiG7-VplHUVuaQ0A
+
+Shrine logo and Shrine app screen. Tapping the logo reveals the backdrop
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/4c77517cee307c7acb102ad64b92bd75710ce9cd43cf75a50d57fad2a751bbf0cc714340f448777b69f57bce9f605ef00651874356b4191d7f4a474aff11df6a
+
+https://lh3.googleusercontent.com/_vqi2auEgDaEYP8D7CtLeqrED53qA5NRiXiuD6-oT9vPEFQwEXUSlL2pYBQvRuddSzClPQu2WHgWgfycddVObU3i6IRkYrurtnh4-w
+
+9 shapes illustrating the range of shape options from very rounded to slightly rounded, sharp, and cut
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/31764b81c233fc415e7d4018af2e930bab4eb54ef68b5603f702ebe600de380d0f9c696d1d9b3612f3c1d5c6b66dd5a8ab3a9e4646b653460a4768b0d215682a
+
+https://lh3.googleusercontent.com/uD1MPmDKKNhbsryU05FrtMp2SMT-MQLiW6qtDIVerrNseseUhfww4IlsPyIoyWwyR60l4Dz44VKwLosQUkA6jviQ7_4fVpRVGpzq8w
+
+Owl app logo and components including the top app bar, list, buttons, and cards
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/18dc829c09405878a43c503088a1565d77dc8d0a2f79149b2a8c0907fd91bcf750c554273d64ccf39755376c4bcb5038134250bd9a8edf647f577b07f4afda5b
+
+https://lh3.googleusercontent.com/E68r4iOW7KMBIODWuEqDwi7vDAaeX4ph4ly-cxjUV0Bl-_lXARgZA74fSanqBjbkqKv7ZL1j_QFemIKVDQ1qRV25xrEbmlclwToEog
+
+Shrine app logo and components including app bars, list, buttons, cards, and chips
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/54e397c606fe2bddfe305985b0cfdb076abe86194ae65f94e3d4c3369781a5e6f2123f7a0524ceef1b754f7e7c9cf44e900d98759253bc851d62768cdf78d1d4
+
+https://lh3.googleusercontent.com/XO8SXbVc8ab0v5ZJX-jOT-XIB4iaMPmk5HzSliz9Rchm5orIsGYbOORj-PMZBQoiS6SDIotn5WhkY4qhcDcb4-Ysp0HSp9xVdYvq
+
+Screenshot of the shape customization tool from Material.io
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/1bb0ff22b114364326b969f4aa9b0ed644af8160e28c8f02b9bcf560a4252198ac481c2025e20c1d49db48681cd43f5c1064b23f0f49ce21ef61bd1727262db0
+
+https://lh3.googleusercontent.com/yQZfWfKZrnDT0-i8nvowbrARNES7GmUzhAWLh2e_Mbbgnt4Rf8rGE-5FXQ9flcENGBsXXtqgeQXfKlHVk90pZYYCY8WZRKm0vwCiqA
+
+Material baseline design kit in Figma showing button components and editing module
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/2179bbf81432554e109b30fb18840e137a51553ed7be8c46c3d0145cc0d10296147cdbfe5baaf81125d614d6ca76964562b00f603272504d8e153e2f161857a6
+
+https://lh3.googleusercontent.com/R9_2KknIkD0kmFakfmticDs2sVV6Q4geuMY0512vJQSXintAh6PaIAsAUp2AdK44VcATD6bXHZcfbBwF5zyvHy0nqjyDHd188PRZvmM
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/b2b7b50525a5ea0782606f09a81bab9aeaf1dc87d26aae5711e7a8526b4e65447dfcbae3a0a0cb771d16f8efd57184d57aabf570a60672a018fad2e46c1eab38
+
+https://lh3.googleusercontent.com/eDkSmsI2fH-LaxjLooxE4US4WlJ2RYul60PfZhunjsMlzTnp24gQv6_7u0D0Zzi9QGGWzf5x9xdr8H6pxFw3E6sXRKWntSKd4bEC
+
+ 
+
+{}
+
+2020-09-01T13:04:00
+
+design-material-theme-shape
+
+Rounded or angled? Choosing the right shape family with Material Design and Figma
+
+Designing a Material Theme: Shape
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/1a22d1f6b1218d5a2e18535bbdf793f184a27980c1b8063006968aac95a521b95baddadeb3c14a6a2e07398ab15d597c962454f22abdb5f8a8d1e233725cd5d3
+
+https://lh3.googleusercontent.com/Xvk1QwDoH9IbK1BQIKCiF08ViXB3y9X9CRNZ_CiPM2XrgjCzF9ZJHBPlhH15ylunDGKg_AwatpSGTE3JkZnQyyzlTHgBTRFpqjVQ
+
+/blog/android-material-theme-shape
+
+Material blog
+
+Building a Material Theme on Android: Shape
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/61721ca9c7dba79a0edc8fa874afc4b83f0bfcb878fa513fb3841e8eb0e9a3c4abb0774c0699bbec1b6a4545b900bb207bea8be55168efd9be21965253107cfb
+
+https://lh3.googleusercontent.com/5Kk4oIGKBCYRZ5FcDwnv2inn-RtHo94IaVk7FzGUU0e9BqGP2WTHXKhCY6NZ7V4x6hD24bFKFzWnMxl7hYllcEO2MdQhKt1JjfLOEw
+
+/design/shape/about-shape.html
+
+Shape
+
+About shape
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/6f6a97a70961c27b3ce68a3d2379523ba098f177ab545e4f7f65cba84e81cbcf292ec1b2e0a4e8c7bbf6796837412c05f309f4e0d5bfeef1a961505ac73dc582
+
+https://lh3.googleusercontent.com/32QVXJlStUJhkr7aylDQUKiIONcfRdpI_QBxa79rDTLEFTVjQCsTCn3PEKAQy0JWrtlYoJaXIa0MDggYcXI5ub4gyiz9Y56hfBOsmg
+
+/blog/material-design-blog-welcome/
+
+Material blog
+
+Welcome to the Material Blog—A Letter from the Editor
+
+mio-example

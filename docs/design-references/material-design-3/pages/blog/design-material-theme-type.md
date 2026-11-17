@@ -1,0 +1,202 @@
+# Designing a Material Theme: Typography
+
+Source: https://m3.material.io/blog/design-material-theme-type
+Content endpoint: https://m3.material.io/page-data/Posts/5026888144388096.json
+Content version: 2026-11-17_08-50-14
+
+This is an upstream documentation snapshot. HTML fragments and media URLs are preserved.
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/114b4e6d76018c7e7e36de47f8158a7d71794d04f1a575e31408803c59ba962ac3b15579c1534fce4b47bcccb7fb81f590aff7676a92c371b704a7732e05fed7
+
+https://lh3.googleusercontent.com/2AT_TIxyMX0Inqd9Rk4ejaFoRmOOczEwM9E5xz4DfYxaUqgdkXsCRKOX3uHYFOjyU9VwwFzGGCsZnf6BYmkPP0x3OjztRk02SB3O_HOBLz_vXdvoi2g
+
+Liam Spradlin
+
+Senior UX Designer, Material Design
+
+mio-example
+
+<p>When reading a book, you aren&rsquo;t likely to stop and think, &ldquo;what an interesting font this book is using.&rdquo; Well-executed typography can be invisible, serving as the scaffolding for communicating ideas, actions, instructions, stories, and feelings. But that doesn&rsquo;t mean that the typography in your app should be purely utilitarian. Material Design&rsquo;s typography system provides a structure that allows text styles in your app to communicate clearly and effectively, with enough room to express a unique brand, identity, and tone.</p>
+<h2>Typography in Material</h2>
+<p>Material Design&rsquo;s type system is centered on the <a href="https://material.io/design/typography/the-type-system.html#type-scale">type scale</a>. A type scale is a selection of font styles that can be reused across an app, providing enough stylistic flexibility to accommodate a range of purposes while remaining consistent and recognizable.</p>
+<p>&lt;mio-image index=0&gt;&lt;/mio-image&gt;</p>
+<p>The Material type scale includes a series of reusable styles from headlines to captions, as well as specialized styles for components like buttons.</p>
+<p>&lt;mio-image index=1&gt;&lt;/mio-image&gt;</p>
+<p>When customizing a type style, the change cascades down to all the components that use that style. Changing the &ldquo;button&rdquo; style, for example, will inform the typography on all components that use the button typography style &ndash; like dialogs, extended FABs, and tab labels.</p>
+<p>Other styles are more flexible &ndash; for example, the type scale includes multiple headline styles to accommodate a rich information hierarchy and a range of options for presenting headline content. To see this in action, take a look at the Material Study <a href="https://material.io/design/material-studies/fortnightly.html">Fortnightly</a>, an example newspaper app built around real product and design constraints.</p>
+<p>&lt;mio-image index=2&gt;&lt;/mio-image&gt;</p>
+<p>Fortnightly's front page mostly uses the app&rsquo;s H4 headline style. The smaller headline style works there because there are many article headlines to parse, so space and attention are at a premium. But on the single article page above, for example, we see a more expressive H3 style. It&rsquo;s larger, bolder, and more opinionated than its front page counterpart because the article has space enough for more vivid expression.</p>
+<p>&lt;mio-image index=3&gt;&lt;/mio-image&gt;</p>
+<p>Having multiple body styles can come in handy when presenting content at similar sizes but with different purposes or meanings. In Fortnightly, the Body 1 style is used for article text, while Body 2 is used for content that supplements the text of the article with additional information.</p>
+<p>&lt;mio-image index=4&gt;&lt;/mio-image&gt;</p>
+<p>You might notice that Fortnightly uses a combination of two fonts across its type scale. <a href="https://fonts.google.com/specimen/Libre+Franklin">Libre Franklin</a> and <a href="https://fonts.google.com/specimen/Merriweather">Merriweather</a> are present across Headline and Body styles. While the baseline type scale is based on Roboto, adding a second typeface can create additional levels of distinction. Pairing fonts this way can help users understand what type of content they&rsquo;re seeing across an app and segment that information more easily.</p>
+<p>In the example above, the text &ldquo;US &ndash; Poverty&rdquo; is set in Libre Franklin, making it distinct from the Merriweather text surrounding it. This distinction helps the user recognize that it is secondary to article content and navigational in nature, rather than a caption or part of the headline.</p>
+<h2>Creating your type theme</h2>
+<p><strong>Starting from scratch</strong></p>
+<p>Without established brand typography for your app, you might be starting your type theme from scratch. Similar to creating your color theme from scratch, a good starting point is to think about the nature and tone of your app. Specifically, think about the content the app is presenting and how it contributes to the app&rsquo;s personality and voice. In the other <a href="https://material.io/design/material-studies/about-our-material-studies.html">Material Studies</a>, you can see a variety of approaches to typography based on content and personality.</p>
+<p>&lt;mio-image index=5&gt;&lt;/mio-image&gt;</p>
+<p>Is your app task-based like the email app <a href="https://material.io/design/material-studies/reply.html">Reply</a>, aiming to get users through their inbox as efficiently as possible? Consider a type scale that optimizes for readable typefaces, using multiple styles from a single type family to present content consistently without distraction.</p>
+<p>&lt;mio-image index=6&gt;&lt;/mio-image&gt;</p>
+<p>Does your app have an editorial opinion to express, like the news app <a href="https://material.io/design/material-studies/fortnightly.html">Fortnightly</a>? Consider pairing highly readable typefaces with more expressive typefaces for key moments and content in the app.</p>
+<p>&lt;mio-image index=7&gt;&lt;/mio-image&gt;</p>
+<p>If your app has very strong visual expression through color and imagery, like the educational app <a href="https://material.io/design/material-studies/owl.html">Owl</a>, consider using a readable typeface that maintains some playfulness. Owl uses heavier weights of Rubik across the type scale, mimicking shapes from its logo while remaining simple and predictable.</p>
+<p>&lt;mio-image index=8&gt;&lt;/mio-image&gt;</p>
+<p>If your app&rsquo;s voice and content seek to convey elegance and modernity, like the shopping app <a href="https://material.io/design/material-studies/shrine.html">Shrine</a>, consider a type scale that focuses primarily on lighter weights at larger sizes, while ensuring readability for body, caption, and subtitle styles.</p>
+<p>When looking for typefaces to use in your theme, consider starting with <a href="http://fonts.google.com">Google Fonts</a>. The catalog has thousands of free fonts to use, and developers can easily pull from the catalog in code.</p>
+<p dir="ltr"><strong>Type pairing techniques</strong></p>
+<p>If you&rsquo;ve found a typeface that works for your app, but want to expand your type scale with another typeface, one technique for pairing fonts is to think of them as existing on a color wheel.</p>
+<p>Try finding a typeface that has characteristics adjacent or related to your first typeface (for instance similar terminal shapes or letter forms), or a typeface that contrasts those characteristics (for instance pairing serif and sans serif fonts, or a human, expressive font with something more rationalized).</p>
+<h2 dir="ltr">Create your type scale</h2>
+<p dir="ltr">If you&rsquo;re using Google Fonts, you can quickly create a type scale with Material using the <a href="https://material.io/design/typography/the-type-system.html#type-scale">type tool</a>, embedded below. Just select your chosen typefaces in the panel on the right. (You can type in the name of the typeface to autocomplete.)</p>
+<p style="text-align: center;"><iframe style="height: 616px; width: 100%; border: 1px solid #e0e0e0;" src="https://material.io/inline-tools/typography/" frameborder="0"></iframe></p>
+<p dir="ltr"><strong>If you already have brand typefaces</strong></p>
+<p>If you already have brand typefaces, then you may already have a branded type scale. If this is the case, compare your existing type scale to the typographic styles used in Material Design, and select styles from your type scale that can map to the stylistic slots available.</p>
+<p>If you have branded typography but don&rsquo;t have a type scale yet, explore the styles available in your brand typefaces using the techniques outlined above to create a type scale that customizes the baseline scale with your chosen styles.</p>
+<h2>Visualizing your theme</h2>
+<p>Once you have a type scale, it&rsquo;s time to visualize your new type theme in a design environment. To start, make a copy of our <a href="https://www.figma.com/@materialdesign">Baseline Design Kit for Figma</a>. On the Material Theme page within the kit, you&rsquo;ll see a frame called Typography which gives a comprehensive look at your type scale.</p>
+<p>&lt;mio-image index=10&gt;&lt;/mio-image&gt;</p>
+<p>On the right side of the screen, you&rsquo;ll see a panel that contains global styles matching the styles in your theme under Text Styles. To start plugging new text styles into your theme, click the edit icon next to each style. Refer back to your type scale in the type tool on material.io and copy each value in the tool into the appropriate styles in Figma.</p>
+<h2>What&rsquo;s next?</h2>
+<p>Once your styles are added to Figma, you&rsquo;ll see them propagate through every component on the Stickersheet page. From there, you can start applying your new styles to content in your app, experimenting with the range of styles afforded by the type scale to see what works best. You can learn more about techniques for setting text in your app in our <a href="https://material.io/design/typography/understanding-typography.html#type-properties">typography guidance</a>.</p>
+
+Diagram of the baseline Material Design type scale
+
+The baseline Material type scale
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/2367eddf4996a1f3c45a5d5d023cad45e5dd491512786aa066f8d0fa9286b32b2cf2858afe70860cd23642cc6b8375281b163c3617d53551d8b21ea85543c60e
+
+https://lh3.googleusercontent.com/-xFpmz-s2DUM1AUDTxqbjox4xURmKtJIoGgzoqikg3UqoWLbEhcIlY6taH307449xx8pNeL0VgLYBmO_US4ATKeetbqqwz7W-j0lkw
+
+Animated diagram depicting how type styles can map to a card showing a weather forecast
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/a3cc9a946901196381b67c165a4c7f77c7a2d0bed41650ac1e4f1eff549068d5d06af927eac01fab4df03e9915d173e1f2edb8e984bf04c7487fbe62e3eb3804
+
+https://lh3.googleusercontent.com/kvaMoCi2jQWHPJhOryAadro9Y_F_jBjwJnUVeZ6iRuuy4lB0NOVCA9_dIOYL4fnH2YomezbPgSrUK7_bTfkuLSoWWBPmHbmilaY4
+
+Screen from Fortnightly app with hero image and article “Poverty to Empowerment in Chicago” by Betty Eghan
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/c337bdc158474df158fa5e832b8b32866f6469c95f92c8c0814a12b47966b658ced066026913bec4ee200a941e6d6cb3793aef50e900d95002569d1ff18a3b65
+
+https://lh3.googleusercontent.com/63wDIS3-GRtsF-K6amQhoqT4aHIxR0a1cdAMp7pO7l-ROOC4Ez8DmSN0knLI2eVxo9d93SBLFLjRpe5uLwTsekDlSoIVncb9tfCX
+
+Screen from Fortnightly app with a name highlighted in body text and a bottom navigation drawer displaying the person’s biography
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/226944f5f96462356cb954d405cade945c4aedb9f3ac6ea7e414668048f79a9c7006b154ed480bb90fb64bb3fa7d155a34d84a624293ab026dd7bd6c20b053a1
+
+https://lh3.googleusercontent.com/hZZg6Zlk5au6LgcXdZvIUe-bZMsxN8F5Mz8-eNywbcywVD-N7PQmPTzQz3z2muIb84k_H_6TFKSkxc1Rcg0qIeJGX2hPQxplmRO9_ds
+
+Diagram showing Fortnightly's custom type scale
+
+Fortnightly's custom type scale
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/4facb72f177e058ab4ce202359c08923294a2ef809d857e0d4b7cd1484e1b42649d04e7a78d4723a471d555d9d528caf05e33c42aa55573eee665831f6954027
+
+https://lh3.googleusercontent.com/9BdkyQQnR0prGBNQZ8EFOA6Xsd0uc49XYrZ1SPxMgZJUZoC5sfgnlXd9TMgOlMC0uKHS-y-4EsRKoO0HSDHrVanI2uZwf3qcLxAjpw
+
+Screens from the Reply app showing different header articles, layouts and type styles
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/f726cc2376899b8c028d784812236015acfc4be6ec44245ae2e0f9928ec90dd3b485eb4821e3a5381dbdf5f9dd913f4b628ce2f9f42c419f747fafae46fe7074
+
+https://lh3.googleusercontent.com/3sysWyo02ySeZ-fIRVnrnnUvQqVDwzXW3ZTrJK22LzVuK6igWARmr3_Yy9QMUoHjHFMymQtBqTLY7j18s77X9uH5YaqarCjlWkwzxg
+
+Screens from the Fortnightly app showing different header articles, layouts and type styles
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/84ea3d1d56e592abe18c0e1b3224718e41cd7ef4f97684ee46c7d2584bf5e141164428148adc3bb037018af411bb34f241b3f50f01926d0c2e1ccea33ad5fab5
+
+https://lh3.googleusercontent.com/vImwY-bKxtxdWH3hA-xD2qqo2SW-aqQmekePR8WBAGjQQENEraoMEdUU1ZEAPYQlxPRvRkv1qMZK3kxvBiF4VPBFlMzycSjzcEBKbw
+
+Screens from theOwl app showing different header articles, layouts and type styles
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/e5cf4346cea569f4507a43f1f350e4877154d9d321f72f2965b148642a73e5c84051cba7270767adeb03d42622e6e42fe52a088af457e058865597ffe757ab72
+
+https://lh3.googleusercontent.com/nKWdzaiOwsglOgdEYkoxBBQsYcBEqs-ZkDOc6i6V4IrVXDDBwK5nNxxQIPZaCVSRwMQI6CchzUJi2aHip6dgfX4LcG_r7k5_uP6o
+
+Screens from the Shrine app showing different header articles, layouts and type styles
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/d051538d6086b7b6bd259e609bc81586a94158bf9b80c8ab7d6473470f69a9fed424f61547583bcc6ce47049d21fa8b210179cc21b8e878604d13b72c38679fb
+
+https://lh3.googleusercontent.com/srg0KjLE-gYZEDjzkzhxH-7BOWpIyoHsDZxufO7FrHhzGt0rm3BCC6FR8WB-8LRpErIfw2lOwat_cs3PNxfUnNU-fJ7XTPta0RYg4A
+
+Screenshot of the type scale tool from Material.io
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/377e31a0c8e9f3da96569530131648777e402d62ecc984f8e5ffd67e3f33b2d9c25ca98ce13d417b9b75fc236a620978acd9a6b1a56587e5bc4a637514ac8b49
+
+https://lh3.googleusercontent.com/LuqeTezEu6JrSUuYQCg4NJQqdwfgs7jnBBExnCwlqZZPRIYvc0_mxDVbQZIxUhPMVq4oZv0hsNtM1Kgk9Qz0wYzfYHW2VQjZDWoOgg
+
+Type scale in the Material baseline design kit in Figma showing edit styles for Headline 1 set to Roboto
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/f3c2335b3ea565ee5c2ddb5295318604db11ccbdccabc10aa242e6a35445321e264b90519a67642b3dc2b987020d63b1654ea6b842b3e94b3c9c1ebbb63ffe69
+
+https://lh3.googleusercontent.com/uF1m2otNZxNEoDsGL9X-iGJ-LyhhguvaZkwZn8KtMvgFjYWKUipySYU1Lb7FWq4GvpdyRVQVPeBdoa4JVyNHZuUPwfU2K8K20LLs
+
+Illustration depicting various elements of typography
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/c0f59cf682ba918f4ea4ae23050cddae432f64950f7a1bcb70d0d4574f0818935aa03d3d0a6a236504e7e36dc6c17238a506e0b5ec1f5d33b438a33f476c5d27
+
+https://lh3.googleusercontent.com/n34a-EytCCSC3lu2skTYXmY1E6s_5oadqEcrQGxh5aYclnWcoqRfysXFtn2XOFuDQ-jeJ3euEoKSpe5ZBIzOXf_UYYcj8TWN9gO-
+
+Material Theming, Typography, How-to
+
+ 
+
+{}
+
+Tailoring your typography with Material Design and Figma
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/5f8592ec5f7f033b470f63bcd55afc821b975dc6aa1e8f6b4c0b3e80e668d33cd1f16c7732f5310cec04c2dedfbb74aea29eb1780879d40165dcd2a1da676500
+
+https://lh3.googleusercontent.com/4afcaMBDb54rMezs4ySIH9Oah_AKHdrBhCESw6CCa0_fnNswGaolIkSrphjzSv7FPaI5pzdebCjRPbTjE1TO_PFn3tUzmMOaTRvbdtM
+
+Design a Material typography theme
+
+2020-09-01T13:06:00
+
+design-material-theme-type
+
+Tailoring your typography with Material Design and Figma
+
+Designing a Material Theme: Typography
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/2f95c86bdc1b02ce73d92619c01d8e49eed9376d66b001fefc3322502ceab9d6e0a58b35639ea0777289ba6163c3a79dd95f3108d519fafbc9eea399cb404b58
+
+https://lh3.googleusercontent.com/uX7KzRFGZKbProyCEHQKohPAN8DFI-IJqbRrvvzEMqnoVp06w7g_LW7d5HfKXPXtObG_OD0GVBl69yWS8eWP8DjfnJVHijIApnSW
+
+/blog/android-material-theme-type
+
+Material Blog
+
+Building a Material Theme on Android: Typography
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/b3ba7a68fbda805ebc7c5fbd26bd7d5ff2978797b1d733b66819e9b8d1d7771cd1f439e96f766b499ed83b924d677c90132fa71f828b2f0e323528f8d688602f
+
+https://lh3.googleusercontent.com/nLnu3NrhONUqGTIRjC-WCHLE0MAtC6IeU6kTa4CD9QBL943wg29dvvXpO7YRWiyS3lrFGFRaQhR7xtdIRDzt-T1rqw4EQw13YDy3
+
+/design/typography/the-type-system.html
+
+Typography
+
+The type system
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/6f6a97a70961c27b3ce68a3d2379523ba098f177ab545e4f7f65cba84e81cbcf292ec1b2e0a4e8c7bbf6796837412c05f309f4e0d5bfeef1a961505ac73dc582
+
+https://lh3.googleusercontent.com/32QVXJlStUJhkr7aylDQUKiIONcfRdpI_QBxa79rDTLEFTVjQCsTCn3PEKAQy0JWrtlYoJaXIa0MDggYcXI5ub4gyiz9Y56hfBOsmg
+
+/blog/material-design-blog-welcome/
+
+Material blog
+
+Welcome to the Material Blog—A Letter from the Editor
+
+mio-example

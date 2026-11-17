@@ -1,0 +1,183 @@
+# From Rebranding to Readability with Atkinson Hyperlegible
+
+Source: https://m3.material.io/blog/atkinson-hyperlegible-design
+Content endpoint: https://m3.material.io/page-data/Posts/4675578724745216.json
+Content version: 2026-11-17_08-50-14
+
+This is an upstream documentation snapshot. HTML fragments and media URLs are preserved.
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/369c95fe5019b07e689d250a71b99f23e954b4b1e7288cc521f9534e2f1b26e3402000d0d9b0ec2b449c286617c23522d81fa4a5aad5de6e88a30a6f158b944d
+
+https://lh3.googleusercontent.com/WXzPP98RdDrDneOh7QCxSdNkjwk9_ACKefFU5vhW7DtED5EeHavMyWl7ttNSOzpRiLZqvYoZCQxVwxJ7Bi47CN8h4tj_nqxjuTsH1szGG5nt1dZgwtr1
+
+Susanna Zaraysky
+
+Content Strategist, Fonts
+
+mio-example
+
+<p>According to the <a href="https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment#:~:text=Globally%2C%20at%20least%202.2%20billion,uncorrected%20refractive%20errors%20and%20cataracts" target="_blank" rel="noopener">World Health Organization</a> (WHO), at least 2.2 billion people have a vision impairment. Major financial burdens can occur when people can&rsquo;t read fluently or work to their full potential. For example, the WHO estimates that &ldquo;losses associated with vision impairment from uncorrected myopia and presbyopia alone were estimated to be US$ 244 billion and US$ 25.4 billion, respectively.&rdquo; Typeface design can help.</p>
+<p>When Braille Institute hired <a href="http://helloapplied.com/people#whoweare" target="_blank" rel="noopener">Applied Design Works</a> to create a new brand identity and branding strategy to coincide with their 2019 centennial anniversary, the firm looked for a beautiful and functional font specifically designed for improved <a href="https://fonts.google.com/knowledge/glossary/legibility_readability" target="_blank" rel="noopener">legibility and readability</a>. Brad Scott and Elliott Scott of Applied Design Works were concerned about typefaces that look a little like old ransom notes, where each letter and number were dramatically different from each other. They wondered if, despite designers&rsquo; intentions, these typefaces could actually be more difficult to read for some people. They decided that no existing typeface met their legibility, readability, and branding goals. So they endeavored to create a new typeface called Atkinson Hyperlegible, named after the organization&rsquo;s founder J. Robert Atkinson. The work would go on to be recognized with a <a href="https://www.fastcompany.com/90389166/innovation-by-design-2019-winners" target="_blank" rel="noopener">2019 Fast Company &lsquo;Innovation by Design&rsquo; Award</a>.</p>
+<p>&lt;mio-image index=0&gt;&lt;/mio-image&gt;</p>
+<p>The typeface&rsquo;s circular elements evoke the dot shapes that are the basis of the Braille writing system. In addition to the Braille reference, the designers thought the <a href="https://fonts.google.com/knowledge/glossary/typeface" target="_blank" rel="noopener">typeface</a> should resemble some of the physical qualities of the Braille Institute building, which was made in the brutalist architecture style with hard edges and straight lines. They determined that a mid-century modernist and <a href="https://fonts.google.com/knowledge/glossary/grotesque_neo_grotesque" target="_blank" rel="noopener">neo-grotesque</a> typeface was suitable. However, modernist fonts posed a problem since they have uniform <a href="https://fonts.google.com/knowledge/glossary/letterform" target="_blank" rel="noopener">letterforms</a>, and the designers&rsquo; goal was the opposite of uniformity; they wanted the letterforms to be in the same style, yet distinct enough so low-vision readers could differentiate the letterforms. Applied Design Works compared each letter, number, symbol, and punctuation mark, and found ways to make each of them visually distinct from each other.</p>
+<p>&lt;mio-image index=1&gt;&lt;/mio-image&gt;</p>
+<p>Here are some examples of what Applied Design Works did to reduce confusion between letterforms.</p>
+<h4>Using different geometric shapes</h4>
+<p>To prevent readers from confusing the uppercase &ldquo;B&rdquo; and number 8, Applied Design Works made sure to use different geometric shapes.</p>
+<p>&lt;mio-image index=2&gt;&lt;/mio-image&gt;</p>
+<h4>Distinguishing letters, numbers and punctuation marks with dots, <a href="https://fonts.google.com/knowledge/glossary/serif" target="_blank" rel="noopener">serifs</a>, spurs, curved <a href="https://fonts.google.com/knowledge/glossary/terminal">terminals</a>, and increased inter-letter spacing</h4>
+<p>To clarify potential misreading, some letterforms are exaggerated.</p>
+<p>Atkinson Hyperlegible is a <a href="https://fonts.google.com/knowledge/glossary/sans_serif" target="_blank" rel="noopener">sans-serif</a> typeface. However, the <a href="https://fonts.google.com/knowledge/glossary/type_designer" target="_blank" rel="noopener">type designers</a> added selective serifs to increase legibility for certain letterforms.</p>
+<p>Increased spaces prevent forms from bleeding together.</p>
+<p>&lt;mio-image index=3&gt;&lt;/mio-image&gt;</p>
+<h4>Avoiding letter flipping by changing spurs and descenders</h4>
+<p>Lowercase b, d, p, and q are commonly confused letters because people can flip the letters in their heads. To increase letter recognition and define a distinctive style, Atkinson Hyperlegible has asymmetrical spurs. The typeface&rsquo;s exaggerated descenders help distinguish letterforms from one another.</p>
+<p>&lt;mio-image index=4&gt;&lt;/mio-image&gt;</p>
+<h4>Making the font attractive</h4>
+<p>The type designers wanted to make the font attractive to people who were losing their vision and still appeal to a wide variety of audiences.</p>
+<p>&ldquo;The problem is that often fonts that are designed for low-vision readers are difficult for readers without vision impairments to read," explained Elliott Scott, Creative Director at Applied Design Works. &ldquo;Characters are too exaggerated or drawn in unconventional ways. One of the goals of Atkinson Hyperlegible was to develop a font that readers without vision impairments could easily read too, and ideally not realize they were reading with a &lsquo;legibility&rsquo; font.&rdquo;</p>
+<p>The goal of making a product both accessible and appealing is common in the field of accessibility. Those with disabilities don&rsquo;t necessarily want &ldquo;the accessible product&rdquo; that sets them apart from everyone else. They want to use the same products that other people do. This is similar to how people who need extra support for their feet may avoid wearing bulky and comfortable orthopedic shoes that are not fashionable.</p>
+<h4>Global audience</h4>
+<p>Expanding the font to the Latin extended alphabet presented the designers with another challenge: how to avoid the problems of the letterforms blending and blurring together with accent or diacritic marks.</p>
+<p>To reduce crowding between letters and diacritics, the designers used these four techniques:</p>
+<ol>
+<li>Circular shapes instead of square-like marks</li>
+<li>Increasing the space between the letter and mark</li>
+<li>Making the marks larger than usual</li>
+<li>Increasing the contrast between the letter and mark</li>
+</ol>
+<p>&lt;mio-image index=5&gt;&lt;/mio-image&gt;</p>
+<p>Beyond improving readability, the type designers see the font as a way to build awareness about the needs of people with vision impairments. &ldquo;It really is as much about the conversation as it is about the font. As people age, they may have a harder time seeing. When people talk about how they tried out this font to help them read better, they are opening up about their vision problems and it becomes less taboo or uncomfortable to discuss reading and visual difficulties,"&nbsp;<span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">said Brad Scott, Founder and Managing Director at Applied Design Works.</span></p>
+<p style="text-align: left;">&ldquo;I&rsquo;d love for Atkinson Hyperlegible to be able to help readers across the vision acuity spectrum to be able to continue&mdash;or return to&mdash;reading,&rdquo; said Elliott Scott.</p>
+<p>"Braille Institute's mission is to positively transform the lives of those with vision loss and we therefore decided to make the font available for anyone to use without cost," said Sandy Shin, VP of Marketing &amp; Communication at Braille Institute. &ldquo;We would love Atkinson Hyperlegible to be ubiquitous and to help those with low vision continue to enjoy the written word."</p>
+<p>Atkinson Hyperlegible is available without payment with the SIL Open Font license and via <a href="https://fonts.google.com/specimen/Atkinson+Hyperlegible#about" target="_blank" rel="noopener">Google Fonts</a> in <a href="https://fonts.google.com/knowledge/glossary/regular_upright" target="_blank" rel="noopener">Regular</a>, <a href="https://fonts.google.com/knowledge/glossary/bold" target="_blank" rel="noopener">Bold</a>, <a href="https://fonts.google.com/knowledge/glossary/italic" target="_blank" rel="noopener">Italic</a> and Bold Italic, with extended <a href="https://fonts.google.com/knowledge/glossary/latin" target="_blank" rel="noopener">Latin</a> accent characters supporting 27 languages. The typeface is also available on Google Docs, Sheets, and Slides in Google Workspace.</p>
+<p>Google has a variety of <a href="https://www.google.com/accessibility/products-features/" target="_blank" rel="noopener">accessibility features and products</a>. Google Fonts is delighted to offer Atkinson Hyperlegible as one of the many tools available to assist those with reading challenges. Please share your feedback about the Atkinson Hyperlegible font on&nbsp; <a href="https://twitter.com/googlefonts" target="_blank" rel="noopener">twitter.com/googlefonts</a>.</p>
+<p><em>Founded in 2015, Applied Design Works is based in New York City and specializes in all aspects of design, planning, strategy, and implementation. Applied&rsquo;s clients include a broad range of mission-driven organizations. (Brad Scott and Elliott Scott are not related.)&nbsp;&nbsp;</em></p>
+<p>Learn more <a href="https://brailleinstitute.org/freefont" target="_blank" rel="noopener">about Atkinson Hyperlegible</a>&nbsp;and <a href="https://helloapplied.com" target="_blank" rel="noopener">Applied Design Works</a>.</p>
+<h5>Disclaimer: The opinions and claims contained in this article are presented for informational purposes only, and do not constitute agreement or endorsement on the part of Google or any of Google&rsquo;s affiliated entities. The Google Fonts website offers a variety of fonts for users to choose from to fit their needs.</h5>
+
+8, i, a with circle on top, e with two dots on top, question mark, and period
+
+Atkinson Hyperlegible uses circular shapes to reference Braille dots.
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/3003828c5b24a9279e0430210146f3c7416e24b32570445cca5822fd1fd99b8613285887eca14a05490bc036611bef2a599f09e062771bac03ba072de0c049d8
+
+https://lh3.googleusercontent.com/FQYpk2TLTaPMNdZOTjz3NXlYsmIYuUtxXaNzpPM37ojqZYsZ54kCe_zTKvoAxgd1oD6Am5xH5nM9X-v7uH-kAzvoEWYz5OIozlIRBULLNFw-qWZRyA
+
+Beige building with Braille Institute sign, cars parked in front. Image courtesy of Braille Institute
+
+Brutalist architecture style of the Braille Institute
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/f76674a599b5deacdb3ba2b2a29ccbc38089218bafe94712232243034345e1d72cf036216d15d73cab61024031d38929a8e53b8972c4d001480ade9ac9d752ea
+
+https://lh3.googleusercontent.com/ZHRf5kDwfQ9DOFG4c5JnGo0ML5kr-2AEAhYvnk-Rygp1LD3FfZzD-zuU-jseBeY1E4faatZTa9nlQWK2js3YLegknuhP6IK_v--xv3fVyP-inQWg9w
+
+Light blue background, B and 8 in black
+
+The number 8 has a small circle on top of an oval, making it look very different from the uppercase “B” with its two bowl shapes.
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/31aef5c43cb3fd25d6504b96d656a7cae871cfaa8a91a12e90882f35182110e7dc5b88130da6e923aaaa818ab6feb2a4f2c7861aec2694c98cf4be7a4a699fbd
+
+https://lh3.googleusercontent.com/OjhTmljJxuKEJrkpxc_Pn6arQu-6kAKFNK6qOMUgcJVnqQD-R2MolyjwRZ_Qrp-_YEuHIAcVUmuCcNIzh3jAkTW3rCDlkkdo6JIuDObhiObh9KVIi1o
+
+Light blue background, blue dotted circles around parts of letters, number, and punctuation mark
+
+The lowercase “j” has an exaggerated tail, the uppercase “I” has serifs. The lowercase “i” has a spur on the top left of the stem. The lowercase “l” has a curved terminal at the bottom right. There is more space than usual between the bottom of the exclamation mark and the dot.
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/b987c2ea2cb3372061eab9e37ecdca3b3300357f44a2d298b85dbe978859e8985eaf37cb446638bd2fa0a5e042dc2170670c8f93aa9aaa606ecf96c21273caad
+
+https://lh3.googleusercontent.com/TF4oM2HSSypwGVQ9xB1FchZrC3eYzsVM8vyK5XZ1TUfH6TSVehJZW9Qx6-Ms-MwvII2f0_hSiV6fywFIxLPLjKlDOS-aXSlAaFigOYy6KSUklcp_NbI
+
+Blue dotted circles on black letters, explanatory text in blue
+
+To differentiate between the lowercase b and d, Atkinson Hyperlegible has an asymmetric spur on the “d”. To make the lowercase “p” and “q” distinct, the lowercase “q” has an exaggerated descender.
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/9cdb2030f58fb397d59f287d557d9a191e51bda96b6fb86de49baea7cfddbf04ba5b6a75bc44ebfac500a7ed011f4d9197220f86549f29b86824abe763a5657d
+
+https://lh3.googleusercontent.com/gKrkr4ZmxREMEojEgZjsUSpZz1rL62S_qAE8NKknrQJ5VnFthYw4JvQMl5Zq2olUkmvjDxrtGEfB-EkX0fwuiwRAIGyI0KIiMaY5tbENBJc6RYpj-Q
+
+The letters a, e, s, and u with diacritic marks
+
+For extended Latin, the typeface uses large diacritic marks, circles to reflect the Braille origins of the font, increased space, and high contrast between the letter and diacritic mark.
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/6303891e460bfa14a9ab1ea90c53bc8426ab681e855d39bdc3003a77e1ba5b84d6c873c952ede7f23ae45ad285bec284db694d3c7ca5aa15b177ea13c00cadab
+
+https://lh3.googleusercontent.com/zXUhMfTlqCuQEGKyuVk5bepCUa98CWvfB1hXUGj0WxehCsz08krlyMMoCSevOH6V_4qgM3lfUNeqq7mhf4Zb7cs-CVHDHRDXb8wOPzMwcg5chD85GNY
+
+4 styles, 27 languages supported, clear and blurry versions of letters and numbers
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/c30f11b9ac5aba215d9b5695de76fa2eb9800d613fb8e122ecd827f388bb852b6d936711d137b3b88a50ea6b2746e2b3a31f5215d25079cd7cce850d509322bf
+
+https://lh3.googleusercontent.com/ZVYXhlo26gl0P89xfOKYaxj5fK6O0Gnqje9qeX8j1FKUWsGWHoXhoYHIM24wYyVPUCNKRvXKppo5c3zEnFeJn-3QEixiWw4OS9qbbg9sI1yKYaWg0n0
+
+design fonts editorial
+
+{}
+
+Distinct and modern, the Atkinson Hyperlegible typeface aims to deliver both legibility and readability.
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/b039837b3a997c5f9c06d853be8e190ab789e0ac804898935d4349f7062cd3d18067b293359cc5d62d4e456c166c1801273262757b695f2cc385d2f6efd33339
+
+https://lh3.googleusercontent.com/DFekY3AdzTgDfGEqzj40fyHS1B6vq07U8-UrdC5QhSQtDW6eqN1bzHBKdp1iWsGiW2q03Eoelc2QWga4tBYtmAzh4SzFqJXVFG0TzSgis_BpthuhgQ
+
+From rebranding to readability with Atkinson Hyperlegible
+
+2022-06-09T13:00:00
+
+atkinson-hyperlegible-design
+
+Distinct and modern, the Atkinson Hyperlegible typeface aims to deliver both legibility and readability
+
+From Rebranding to Readability with Atkinson Hyperlegible
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/6e7eec708fb5c1794eda7db3f0982e30c908fba4773e693836bd8a78e2c7a9d55b4905ed8963d701ad731a190f0169ff8ddb3f415e98b2ba57d6ba9732e73b41
+
+https://lh3.googleusercontent.com/zvHQAODkXrk7n5wVwZXxjt8hIf0yCPm9wBgEtG6ZjANrYCAsLGRHSlNolT1fLQG0QweUaOnclPrBbKzf8ItZ3XpDubtUH6N0fPZUhZea34N8a0NxxIE
+
+Say hello to Roboto Serif
+
+/blog/roboto-serif
+
+Say hello to Roboto Serif
+
+Material Blog
+
+Say hello to Roboto Serif
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/91902c2ef23164f2f13172dec916c5e02ae37068752c0330a6c45b31dba666dab0cb153d4720efb90a7070ab3495312e6640f2daaaffc2fda195b8259c8a6a71
+
+https://lh3.googleusercontent.com/-G6Fu5uWUn9Xkqz-R7-h4LFNjCa5nC5hrv60jAMOI5uFCuuBjjlnDBLMm146S-0VG-_9TDvF9F8L5YHbbGuIEDzZh53SfagcBtANoOO0GMUeIkmxExw
+
+/blog/roboto-flex
+
+Roboto ... but make it Flex
+
+Material Blog
+
+Roboto ... but make it Flex
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/c47fc7865695a86449f19e1148279454975a5d7c4f6b6e7917ee411604e87279f0f3a1f1ed19a97cb0cfa10db2a830072e452406c8481297f8e4e3915e7d88f0
+
+https://lh3.googleusercontent.com/CqOkQHV6IkWjWVJYZqyTktoGtyfAvNs9A_F8nNfmZG0qrWDqcZlQlTGugKWViMgVlfvdIfsO0agfHFnMulbNC3D8jdSto8GI5Z-AbVUtUKsoxLBNS0L6
+
+/blog/google-fonts-knowledge
+
+Announcing Google Fonts Knowledge
+
+Material Blog
+
+Announcing Google Fonts Knowledge
+
+mio-example

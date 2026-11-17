@@ -1,0 +1,20 @@
+[theme]
+base = "light"
+
+# Shared colors for the application and input surfaces.
+backgroundColor = "#F1EAFE"
+secondaryBackgroundColor = "#FFFDF3"
+textColor = "#291344"
+primaryColor = "#6330BA"
+borderColor = "#291344"
+
+# Keep body text readable and technical identifiers monospaced.
+font = "sans-serif"
+baseFontSize = 16
+headingFont = "sans-serif"
+codeFont = "monospace"
+
+# Use square corners and visible input borders.
+baseRadius = "none"
+buttonRadius = "none"
+showWidgetBorder = true

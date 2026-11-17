@@ -1,0 +1,198 @@
+# Reinventing the carousel
+
+Source: https://m3.material.io/blog/material-3-carousel-research-design
+Content endpoint: https://m3.material.io/page-data/Posts/5158713158664192.json
+Content version: 2026-11-17_08-50-14
+
+This is an upstream documentation snapshot. HTML fragments and media URLs are preserved.
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/73bfd8781cd9f1d75338c8ca19f6a358360865c6edbcc442b3d863fdf9e2be7462ff5e4d4122d9b0f47915f946ba68b8f45afe25a1b2c72beeaa9a47efbd0e42
+
+https://lh3.googleusercontent.com/S_cFY1shz9XVw7G0N_CRcWV84TMij9npZJSUs_orMJDaEp2q2dDULWfWGox_9PB5huMB40flftvnKbF6tHj_gcNHL6sJ46gAGyJ2Ojaw1OaZ8TTJElDQ
+
+Julia Feldman
+
+Senior UX Researcher, Material Design
+
+mio-example
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/5d60e753f0001fb83ad9d525e057a56f1bddb114a16ddc6e6c6e8a514eced94c2aae3c01fdfa05967760a77857a452a00b0c259e085842f56de155b00e6b5786
+
+https://lh3.googleusercontent.com/-cVJ6qd7QoOFzT-KbBKJBEyvC4ODnzy2-oCK1rO3BH6vKea3i0F5Qudiy0dKSs61DEg0FsXTOhOLeSY80skXBZwV9OGTm-tjweMmmA
+
+Michael Gilbert
+
+Staff UX Researcher, Material Design
+
+mio-example
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/9a78dfdb48562d64da290e76576aa2aaa9c379bc36c6e20b1d58d29c196a3daf778c085fec25ef02fda585478c7a34f2b019cc9c334ce2ad2fb1a380669b09ae
+
+https://lh3.googleusercontent.com/jgailweQJzwMMDESY3z4lilGsYHA4PIPDetjLyrWvb2Y0x3Xh6ZF7BIWxq0NkpcWgrZtxBjO6o8hhhpHlp_v58_HVFJwFcbKNlTx1g1JejKorMShJw
+
+Adam Riddle
+
+Senior Interaction Designer, Material Design
+
+mio-example
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/d5cfbc517c9e67712ca19c5cc360a03ef016ca2afc20fd57763e89672c9cc0556cfaac2044b8c92cfa7c382c73b13b604797675e6f270085dcd2298f0c90fa46
+
+https://lh3.googleusercontent.com/ZpoPSoS8g6I4qfsC87Jua5Fm9u2LpILkrwddul4BFXg5sdr3YFipZvuGKw1m534zdf7lRJOZIKAWlrA1MOwMJiGd7iqlJcev39iC
+
+Hunter Stich
+
+Material Android Developer
+
+mio-example
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/62019a063792646b2b266298907b09feecc082b651fd0317efe9e16299168acf0a8642b06d5ab89b8e4ecf4030cb47afc2dd9bc7d60d4e02c227701c68aed90c
+
+https://lh3.googleusercontent.com/hJURdtmM_vBvGQA9oVmDcgmEKE0k8QJAqF_vhvwO_VuXFiZS3EKjHe7r5RImwobkafKavRiPDhiR40Pw6SWyLnZCIAP-uvcpL1odhJdZkAE_eLveWB9V
+
+Michael Mauzy
+
+Senior Technical Writer, Android
+
+mio-example
+
+<p>For many users, there's nothing like relaxing after a long day by scrolling through some of their favorite content. Maybe they're feeling nostalgic, looking through photos of an old vacation they fondly remember. Scrolling horizontally back and forth, they can piece together the shape of those earlier days, recalling the exact moments the images captured.</p>
+<p>Or picture this scene: a user wields their remote to scroll through movies or shows to watch. They're probably not going to watch most of the content they scroll by, but they value seeing the broad selection all at once, and the available choices can help them decide on what they want to watch for the next two hours.</p>
+<p>What do those two scenarios have in common? The ubiquitous carousel, of course.</p>
+<p>&lt;mio-image index=0&gt;&lt;/mio-image&gt;</p>
+<p><em>"<a href="https://upload.wikimedia.org/wikipedia/commons/a/a2/Carousel_longshot_Philly.JPG" target="_blank" rel="noopener">Carousel longshot Philly</a>" by <a href="https://commons.wikimedia.org/wiki/User:Smallbones" target="_blank" rel="noopener">Smallbones</a> used under the <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0 1.0 Universal (CC0 1.0) Public Domain Dedication</a></em></p>
+<p>No, not <em>that</em> type of carousel! What we&rsquo;re referring to is the carousel component - a pattern that you&rsquo;ve probably seen many times across desktop or mobile devices. Consider this ubiquitous carousel:</p>
+<p style="text-align: center;">&lt;mio-video index=0&gt;&lt;/mio-video&gt;</p>
+<p>A carousel component is a rotating array of content that allows users to scroll horizontally to view a list of items that aren't immediately visible on the screen&ndash;for example, recipes, videos, and news.</p>
+<p>For such a simple sounding interaction, there are a lot of details that need to be attended to for this component to work well for everyone, in all the products that may adopt it. For instance, how many items should a carousel component have? Is three too few? Is 15 too many? Or what about 50, or 100? And how does the amount of content influence the perception of scrolling through that content? Should pace be a function of length, or should the type of content or the product context (for example., a media player versus a news app) be a stronger determining factor for the <strong>feeling</strong> of scrolling through the list?</p>
+<p>Imagine a user browsing an online store for the latest novel in a mystery series, scrolling available books in a carousel. What's the right level of detail to present in that carousel to enable them to decide whether to buy the book, but not too much detail that might make the interaction feel crowded or unpleasant? Or what about a user scrolling through a carousel of short videos - what&rsquo;s the right level of detail that allows them to confidently decide, &ldquo;I&rsquo;m gonna watch this,&rdquo; without being overwhelming? And for both cases, how can a carousel support browsing, finding, and consuming, separately and together, sensitive to the content that a user is scrolling through?</p>
+<p>When we built the new Material Design carousel, we took into account all these possible user concerns and frustrations with the primary goal of building something both usable and expressive! Furthermore, we endeavored to build a component that is not only flexible with various content types, but also offers users a smooth experience.</p>
+<h2>How did we approach the design?</h2>
+<ol>
+<li>To tackle this challenge, the Material Design team audited and identified the myriad ways in which carousels are currently implemented, the types of products they&rsquo;re implemented in, and the types of interactions and product journeys they support.</li>
+<li>From this baseline, we set out to build something that could support existing use cases while also embracing a more usable, accessible, and expressive design. Our designers incorporated aspects of Material Design&rsquo;s <a href="https://m3.material.io/styles/shape/overview" target="_blank" rel="noopener">shape system</a>, embracing a visual style that makes the carousel component more consistent and cohesive with other aspects of Material Design&rsquo;d products. We also sought to incorporate aspects from the Material <a href="https://m3.material.io/styles/motion/overview" target="_blank" rel="noopener">motion system</a>, aiming to ensure that interacting with the component just feels right, responsive and alive.</li>
+<li>Beyond the visual style, our designers also reimagined the interaction pattern for a modern carousel. We varied the peek size&mdash;the size of the last visible element on a carousel&mdash;to more effectively communicate to users, &ldquo;There&rsquo;s more content here!&rdquo; We modified the container shape of items within the carousel, allowing us to maximize the number of items shown, while also providing a visual hierarchy to help the user focus on the most important things. And although the smallest items don't show the full picture, the cropped carousel container can still highlight the most salient part of the carousel item.</li>
+</ol>
+<p>&lt;mio-video index=1&gt;&lt;/mio-video&gt;</p>
+<p>Throughout all these explorations, our primary goal was to ensure that the carousel was easy to use, easy to understand, and&mdash;if we can be so bold&mdash; delightful, expressive, and fun to use!</p>
+<p>To make sure we could meet these goals, we relied on research.</p>
+<h2>Research</h2>
+<p>Our next step was to test with our users. We conducted two research studies, one quantitative and the other qualitative,&nbsp; to investigate the usability and desirability of the many carousel designs.</p>
+<p><strong>Phase 1: Quantitative study of five design variants</strong></p>
+<p>First, we conducted a quantitative study that investigated five variants of the carousel component. 202 participants answered questions as to whether they agreed with certain design characteristics, and to indicate their expectations for the number of items in each variant. We also showed them the carousel designs outside the context of a normal product and asked them: Where would you expect to find this? What type of content would you expect to see in this carousel?</p>
+<p>We used data from these studies to determine how usable each variant of the carousel was. We also analyzed how users perceived specific design characteristics in terms of how they might approach using each variant, and the types of products where they would expect to find each variant. Ultimately, we identified the characteristics that lead to a more usable, delightful carousel experience that can be flexible given the needs of any product experience!</p>
+<p>Moreover, we found that the different designs functioned similarly in quite a few ways. Participants across a range of ages knew how to use all new variants of this carousel. More specifically, they intuitively knew how to use horizontal or vertical scrolling to view hidden items, and they could anticipate what would happen if they clicked or tapped an item. They perceived their interactions with all the new carousel variants as largely positive, with participants ranking each variant on scales to identify how appealing or enjoyable each interaction was.</p>
+<p>We noticed differences in perceptions of the new carousels in two specific ways. Regarding the number of items expected, our participants showed more uncertainty both in the vertical variant of the carousel or a variant that presented only a single image as very large (in other words, a hero image version). In all of the other "single advance" (moving one at a time) or "multi advance" (moving multiple at a time) horizontal variants that we tested, participants showed certainty as to how many items they expected.</p>
+<p>Another difference we noticed was that certain carousel variants were better for certain contexts. For example, while one variant was frequently described as helping &ldquo;to better tell me what&rsquo;s coming up next,&rdquo; others were described as being ideal for very specific interaction patterns: &ldquo;good for when looking for a photo album,&rdquo; and &ldquo;for browsing news articles.&rdquo;</p>
+<p><strong>Phase 2: Qualitative study of two design variants</strong></p>
+<p>To gain a deeper understanding of how users felt about these new designs, we also ran a qualitative study where participants could talk through their initial thoughts and expectations of items and interactions. For this study, we focused on two carousel designs that performed best in the earlier quantitative analysis.</p>
+<p>Through this second study, we realized that aesthetic preference didn't impact which carousel fit a context. Knowing how to use the carousel also didn&rsquo;t impact which carousel fit a context because both carousel types were intuitively understood by the participants, who felt that both variants appropriately signaled to them what was coming up next in the carousels.</p>
+<p>Our participants let us know that there were two factors that were important for determining which variant of carousel they wanted to use for each context. The first factor depended on whether they needed to do a deep browse versus grabbing a quick item&mdash;for instance, reading through a carousel of news headlines versus swiping through a set of images of possible recipes to cook for dinner. The second factor depended on the weight of the commitment they were making by interacting with the carousel content&mdash;for example, selecting a movie from a carousel that might involve watching that content for two hours.</p>
+<p>If it was a very big decision, participants explained that they wouldn&rsquo;t want to swipe through too much content at once, or to do so too quickly. They explained that the multi-swipe option with previews was particularly helpful for tasks like grabbing an item and making a quick, non-critical decision, compared to browsing old photos or choosing what two hour movie to watch. More broadly, the current level of commitment and the predicted future level of commitment both had an impact on the designs of carousels that participants considered most desirable, and the contexts where participants felt those carousels could be most effectively used in.</p>
+<h2>Conclusion</h2>
+<p>Without further ado, we're proud to introduce the new and very first <a href="https://m3.material.io/components/carousel/overview" target="_blank" rel="noopener">Material design carousel</a>! The design details of this component lean into the most expressive parts of Material 3, including drawing from the rounded corners of the Material shape system, and the smooth, responsive flow from the Material motion system. It uses adaptive shape morphing and dynamic scrolling to create a parallax effect to give users a unique and fresh experience for a familiar pattern.</p>
+<p>The multi-browse carousel is now available in the <a href="https://github.com/material-components/material-components-android" target="_blank" rel="noopener">Material Android Views library</a>, and we plan to follow up with more variants in both Compose and Views. If you&rsquo;d like to see it in action, keep your eyes open for its first implementation in Google Photos, or feel free to try it out yourself to build more dynamic, expressive products!</p>
+
+photo of an amusement park carousel
+
+Figure 1: A different type of carousel
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/bb826f39eb493f2a9549c2b687cc0fa5f2816d9d1abf920f6c5ba8f1ee9049ef1d5ca0431e6d7688e252b26fdc8517fc72a5d6dfad3a5424a53f331e81374171
+
+https://lh3.googleusercontent.com/hH8gBZ-B__uJr6iR3RYBE2E1mGjXPgsUiatz25xdZWfQkAkkNYTqJtmtPAIkmn-HAaNr3de_IOjfgmOxvzxIGyhnc2ZEgWJuS0vTtULFeSgbTg3shtQ
+
+material 3 carousel component on a vertical screen
+
+Figure 2: An example of the Material 3 carousel component
+
+Carousel_motion_-_playlist.mp4
+
+https://storage.googleapis.com/material-io-design/m2/assets/downloads/ac6972a66851452f3490fb8a7765e552384297077e63dc5af8ffcf1e0ab88f817d36cc9e781fafadd87abf031fba22a6387f1e9575fadb75845fbe61f9135b8b.mp4
+
+Material 3 carousel component on blue background
+
+Figure 3: An example of the Material 3 carousel component, highlighting the Material shape, motion, and parallax scrolling
+
+1P-carousel_behavior_overview-1.mp4
+
+https://storage.googleapis.com/material-io-design/m2/assets/downloads/14f27301775a6b8eee1db676295d94f16d42181bfb2f4a63fb1f2af8b15fdac29839c9dd6e24adfa092713c1cf85eab1e85d570107e7a84f2988922fec5a48dc.mp4
+
+carousel component
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/a5809e7d2b45ccaecdfa80759063ba483c8f460f3a76ff0621fb5b939f16acf08c50da31e8e986b5f539f9197f9e844e26af327a759640b1fe710e0d51f235fa
+
+https://lh3.googleusercontent.com/Aye14jOntTfsKdL9I63t77P6_JpKMBsG8Pw2GWdz6wuIpzGtiQtR_45EsDWJcTygvMOW_NT0SjWtuUkKsISNf9QH28LIsIFxbWvCeZqJ5rDVAQDjvDZ4
+
+news components material releases design
+
+ 
+
+{}
+
+The research and design behind the evolution of the Material 3 carousel
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/d3c89e6d4d483f9018090ec13ae962b9cf66e62f8575f0dcaad677b5932106a97c4805789d4212a101844eeb49128ef96775348c5c8d2f7ed35a4f489c663c5b
+
+https://lh3.googleusercontent.com/xXIH6HCl83ptYq0A9rqhIshASLH9wk05RSfmMQ-ryq5hVYgYYle_Li2elQsQ7Ik_labxNGzjSn9uEmX61i0csjc8ehHaDe3stZAYRigB7Ukkwq8BZYA
+
+Reinventing the carousel
+
+2023-05-10T13:00:00
+
+material-3-carousel-research-design
+
+The research and design behind the evolution of the Material 3 carousel
+
+Reinventing the carousel
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/bfad53d691a1f43e9cea15cfd332e17e3b9822fdf1a3615c2f425e515eb203d6deda45a602902a68649aa40b9949ebfd5f53fa44753a65a90f482e3b28ad8fa3
+
+https://lh3.googleusercontent.com/akWbxMk7Ej8LzrOeta5H4yIskf77vyHpXbwovyFrWEPe2WKTr8uRMldrZsPKTsMWPPrai8PQODLt8qDBftgcGfdS7yJJLSBHIKqHnEbvJ6gvmBoiPw
+
+/blog/material-google-io23
+
+Material Blog
+
+Material Design at I/O ‘23
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/7abbcfa5ee839d89879701fe8793fabcad6eee0d7b68804464e58dac78821eb2ecb9bdbb8a82972a40f056b867e966897618f36d6d63631b200146b59b8a1d56
+
+https://lh3.googleusercontent.com/khMx4Ahoh9hQi-mXDDhKmK_kRoE0qpYj5dBATOTBKjsCRVJD3cz8UQ4bkTaAZxHuGvjlrGs0WssQzu_icP75PIlmwLuqgxVrBrXkZw7JysAOpZ9D_2a1
+
+/blog/material-3-compose-1-1
+
+Material Blog
+
+Material Design 3 for Compose gets new components and features
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/b0af7868f875886b47f96f80ab4407beda3fb0fefdb5450451cc6de73c862c30820708f813fb9e74076de28ab3c8a2e1b07d025c73b987764ae1285eafe31d76
+
+https://lh3.googleusercontent.com/CHpOx1NNo2e-TMDp_j8doShD-REUb2VcLXEgWzBoD9Lmii239pOQ-oIs0qgg3ngAaZzLYCpopvIGwOQNCchzfq806eplz-HIlv51dYdhE8eJc1QQRw
+
+/blog/24-hour-clock-design-research
+
+Material Blog
+
+The 24-hour Clock Design Challenge
+
+mio-example

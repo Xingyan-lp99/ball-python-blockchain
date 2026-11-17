@@ -27,42 +27,66 @@ def open_registration() -> None:
     st.rerun()
 
 
-# Purpose: authenticate before exposing any business workspace.
-# Without this page, users have no entry point for the backend login flow.
+# Purpose: present sign-in inside a readable, centered card.
+# Workflow: authenticate before exposing any business workspace.
+# Without this function, users cannot access the workspace through sign-in.
 def render_login_page() -> None:
-    st.title("Login")
-    st.caption("Ball Python Blockchain Registry")
+    with st.container(horizontal_alignment="center"):
+        with st.container(width=520):
+            with st.container(key="login_intro"):
+                st.markdown("**Ball Python Blockchain Registry**")
+                st.title("Login")
+                st.write("Sign in to open your role workspace.")
 
-    notice = st.session_state.pop("auth_notice", None)
-    if notice:
-        st.info(notice)
+            with st.container(border=False, key="login_card"):
+                notice = st.session_state.pop("auth_notice", None)
+                if notice:
+                    st.info(notice)
 
-    with st.form("account_login", clear_on_submit=True):
-        username = st.text_input("Username *")
-        password = st.text_input("Password *", type="password", max_chars=1024)
-        submitted = st.form_submit_button("Sign In")
-
-    if submitted:
-        if not username.strip() or not password:
-            st.error("Please enter your username and password.")
-        else:
-            try:
-                with st.spinner("Signing in..."):
-                    session = sign_in_account(
-                        api_base_url=API_BASE_URL,
-                        username=username.strip(),
-                        password=password,
+                with st.form(
+                    "account_login",
+                    clear_on_submit=True,
+                    border=False,
+                ):
+                    username = st.text_input("Username *")
+                    password = st.text_input(
+                        "Password *",
+                        type="password",
+                        max_chars=1024,
                     )
-            except AccountRequestError as error:
-                st.error(str(error))
-            else:
-                st.session_state.clear()
-                st.session_state["auth_session"] = session
-                st.rerun()
+                    submitted = st.form_submit_button(
+                        "Sign In",
+                        type="primary",
+                        key="sign_in",
+                        width="stretch",
+                    )
 
-    st.write("Do not have an account?")
-    if st.button("Create Account", key="open_account_registration"):
-        open_registration()
+                if submitted:
+                    if not username.strip() or not password:
+                        st.error("Please enter your username and password.")
+                    else:
+                        try:
+                            with st.spinner("Signing in..."):
+                                session = sign_in_account(
+                                    api_base_url=API_BASE_URL,
+                                    username=username.strip(),
+                                    password=password,
+                                )
+                        except AccountRequestError as error:
+                            st.error(str(error))
+                        else:
+                            st.session_state.clear()
+                            st.session_state["auth_session"] = session
+                            st.rerun()
+
+                st.divider()
+                st.write("Do not have an account?")
+                if st.button(
+                    "Create Account",
+                    key="open_account_registration",
+                    width="stretch",
+                ):
+                    open_registration()
 
 
 def sign_out_current_account(*, access_token: str) -> None:

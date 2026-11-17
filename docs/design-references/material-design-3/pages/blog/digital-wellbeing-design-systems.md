@@ -1,0 +1,120 @@
+# What “Digital Wellbeing” Means to Material Design
+
+Source: https://m3.material.io/blog/digital-wellbeing-design-systems
+Content endpoint: https://m3.material.io/page-data/Posts/5698678290120704.json
+Content version: 2026-11-17_08-50-14
+
+This is an upstream documentation snapshot. HTML fragments and media URLs are preserved.
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/5d60e753f0001fb83ad9d525e057a56f1bddb114a16ddc6e6c6e8a514eced94c2aae3c01fdfa05967760a77857a452a00b0c259e085842f56de155b00e6b5786
+
+https://lh3.googleusercontent.com/-cVJ6qd7QoOFzT-KbBKJBEyvC4ODnzy2-oCK1rO3BH6vKea3i0F5Qudiy0dKSs61DEg0FsXTOhOLeSY80skXBZwV9OGTm-tjweMmmA
+
+Michael Gilbert
+
+Staff UX Researcher, Material Design
+
+mio-example
+
+<h5><em>"Digital wellbeing" is the state of satisfaction you feel when technology positively supports your health, happiness, and prosperity. In an ongoing series of articles, Material Design explores the ways design choices &ndash; and design systems &ndash; can foster digital wellbeing.</em></h5>
+<p>Maybe you&rsquo;ve had this experience: you&rsquo;re in bed at night and ready to go to sleep, but rather than putting your phone away and closing your eyes, you check your social media feeds one last time. You watch a few videos, you refresh the news, and perhaps start scrolling through discussion boards, from page 1 to 5 to, eventually, 20. Considering the events of recent months, deferring sleep in favor of checking the news can lead to stress or anxiety from the information overload.</p>
+<p>The dictionary even has a new word for this activity: <a href="https://www.merriam-webster.com/words-at-play/doomsurfing-doomscrolling-words-were-watching">doomscrolling</a>. Design interventions intended to reduce anxiety resulting from doomscrolling comprise one example of what Material thinks of as <em>digital wellbeing</em>.</p>
+<h2>Why think about digital wellbeing?</h2>
+<p>For starters, it&rsquo;s unavoidable. Every interaction a user has with an app or device is a point of impact that has consequences. It&rsquo;s possible that the impact will be positive &ndash; your product could allow a child to keep in touch with parents more effectively, or allow students to track their progress toward an upcoming deadline. But it might also be negative, encouraging the child to message friends late into the night, or incentivizing the student to work 14-hour days to meet that same deadline. It&rsquo;s necessary to think through the possibilities in advance and design for better outcomes.</p>
+<p>Even poor usability can have an impact on digital wellbeing. I experienced this kind of impact recently while trying to rent a car online: rather than being able to search for all cars available across all locations, the interface forced me to click into each location and redo my search in order to check another location. What I had hoped would take five minutes took an hour, and by the end of the process, I was frustrated. And a feeling of annoyance or frustration, if it&rsquo;s something you&rsquo;ve felt as well, impacts your overall wellbeing.</p>
+<p>In other cases, products are designed to impact your behavior more intentionally. For example, consider the range of techniques employed to &ldquo;gamify&rdquo; interactions. A typical strategy for a gamified experience might be to award &ldquo;points&rdquo; or other rewards for product interactions, with the thinking being that those points &ndash; a clear, extrinsic, and often socially visible reward &ndash; would increase the quantity or quality of your interactions with the product. As much prior research in persuasive technology [1] has shown, this type of persuasion can be very effective.</p>
+<p>This means that <strong>any interaction with a digital technology has the capacity to impact your mood, your mind, and your wellbeing.</strong> This may or may not be intentional on your part (for instance, being frustrated at a poorly designed interaction versus daily use of a mindfulness app), and it may or may not be intentional on the product creator&rsquo;s part (for instance, gamification to increase user engagement, or simply not testing properly before shipping). What we can safely say is that the impact of digital tools on individual wellbeing is unavoidable.</p>
+<h2>Focusing on fundamental needs</h2>
+<p>If any interaction with technology has the capacity to impact an individual&rsquo;s wellbeing, either positively or negatively, what strategies can we use &ndash; as developers, designers, researchers, and makers of all disciplines &ndash; to build with digital wellbeing in mind?</p>
+<p>The strategy I&rsquo;ve adopted is to approach digital wellbeing through the lens of cultivating the fundamental needs of our users. These fundamental needs come from cognitive psychology&rsquo;s Self-Determination Theory, which has been around &ndash; in some form &ndash; since the 1970s [2,3].</p>
+<p>These needs include:</p>
+<ul>
+<li>Competence (or ability): improvement or mastery of an interaction</li>
+<li>Relatedness (or connectedness): where we fit within a larger whole</li>
+<li>Autonomy: the ability to act in accordance with your own organic desire</li>
+</ul>
+<p>Thinking in these terms has benefits for our work in design and design systems.</p>
+<p>For design, it means we don&rsquo;t need to reinvent the wheel. Researchers have already shown the link between a balance of these fundamental needs, positive psychological outcomes, and, in turn, positive health outcomes. So instead of focusing on the ambiguous goal of improving digital wellbeing in an app, we can instead focus on a more tractable goal: ensuring that users have the ability to do the thing they want to do, according to their own desire (autonomy).</p>
+<p>For research and evaluation, understanding these fundamental needs means that when we evaluate a product or an interaction, we don&rsquo;t need to start from the beginning every time. We don&rsquo;t need to get out the heart rate monitors and the galvanic skin response probes to test whether a new design direction is causing anxiety in our users. It&rsquo;s often simpler to instead measure how a new design direction impacts a user&rsquo;s ability to complete tasks (competence) or to complete a task in the way they want to (autonomy). <em>Note: For the researchers out there, there are already validated scales that exist to measure things like competence and autonomy, making it relatively straightforward&nbsp; to measure them directly.</em></p>
+<p>Understanding competence might lead to a product that&rsquo;s designed to foster confidence by emphasizing intuitive interaction. Relatedness may inform a product that&rsquo;s sensitive not only to how it fits within an individual&rsquo;s digital ecosystem, but also how it fits within their particular context, while awareness of autonomy can foster the creation of a product that aligns with personal values and desires.</p>
+<h2>Where to begin?</h2>
+<p>In this post, we&rsquo;ve only explored the tip of the iceberg: a set of sensitizing concerns for design. In future posts we&rsquo;ll give additional examples on how to design with sensitivity to these fundamental needs, and where this takes place in the design and development process.</p>
+<p>In the meantime, this is what Material Design means by &ldquo;digital wellbeing&rdquo;: a state of satisfaction that people achieve when digital technology supports individual wellbeing, incorporating the consideration of user needs that extend beyond a single product experience, and the definition of user needs as a holistic set of concerns that bring physical and mental wellness into view when making product decisions.</p>
+<p></p>
+<h2>Cited</h2>
+<h5>[1] Fogg, B. J. (2002). Persuasive Technology: Using Computers to Change What We Think and Do. Ubiquity, 2002 (December), 2.</h5>
+<h5>[2] <a href="https://en.wikipedia.org/wiki/Self-determination_theory">https://en.wikipedia.org/wiki/Self-determination_theory</a></h5>
+<h5>[3] Ryan, R. M., &amp; Deci, E. L. (2017). Self-determination theory: Basic psychological needs in motivation, development, and wellness. Guilford Publications.</h5>
+<p></p>
+
+Illustration by Jaedoo Lee
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/2ea79855cfc7058952225afd1ea826914dd67156b62eb79b5385b02e9b8288cbfe82677548b53a53e5ca51a26d91b553d3ef3931c6eba8cbbcd4c816ef0ad865
+
+https://lh3.googleusercontent.com/pWI__ft2pjVs3ECo0EaClqZZevZHSXcCuQiNZh-3yriZqa5Q5eybA9SP2Law_vIdk-onnSm4nJu7W1OVdDN8S1vu2eYrHL70oojWVN8
+
+Digital-Wellbeing Design Research
+
+ 
+
+{}
+
+Promote wellbeing by focusing on fundamental needs, not just clicks
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/deeb6cf6ba8ea4c249c47b51d1565a05b6788ca6b1ee5a757f1dcf3e286a9b8ef30c31a4e565449e7006bf42419f610f954bd8c1ebd9d3a896f6f04f247cf570
+
+https://lh3.googleusercontent.com/i7K8ddLGnaD-hb6d6YCltaznsA-o1N7j5r7TtMn1pfXjTdrb-tb6ynMBwiVsR0C4QjSfmvcJsUU4Sf2RkYTtYxbIEr4jvpSRBKc8tQ
+
+What “Digital Wellbeing” Means to Material Design
+
+2020-09-16T11:00:00
+
+digital-wellbeing-design-systems
+
+Promote wellbeing by focusing on fundamental needs, not just clicks
+
+What “Digital Wellbeing” Means to Material Design
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/8d86c03a697cda71fef8a635511beaac0afd8cc1525bf9a58c463604c04d94043442e5514c69c0b290fbed89e0381818b473f41f31caa2ff6cd5e83c31a5b0ce
+
+https://lh3.googleusercontent.com/P5yuAkqJt699qGbcw1uLTOHMdzLMnMI6m7I_Ig75FALDP3eS4m0mYKkxfespu53DvHtu16YorQznqZuaLYVI8eDsTCjn3p_zXGdI-g
+
+/blog/dark-theme-design-tutorial-video
+
+Material blog
+
+Craft a Dark Theme
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/94ccae5400c110b59e0a752e8e67a0d911b9ba63ce354ed4a9411a36992dc5866db038eea65fabe74ccef3b02bf04cd09f852f40647e788c30d1ad4501fc7c20
+
+https://lh3.googleusercontent.com/TeLZea0Z3_3eKsf_VU8bMh3Nn_HNmY3gLNl915hP41iP3X6ZVaCZt3UO-n1PbYVSIN09dOanns3gqMM5bJhJ3es1bJt5Zk7Zq_6F8Q
+
+/blog/android-material-motion
+
+Material Blog
+
+Building Beautiful Transitions with Material Motion for Android
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/6f6a97a70961c27b3ce68a3d2379523ba098f177ab545e4f7f65cba84e81cbcf292ec1b2e0a4e8c7bbf6796837412c05f309f4e0d5bfeef1a961505ac73dc582
+
+https://lh3.googleusercontent.com/32QVXJlStUJhkr7aylDQUKiIONcfRdpI_QBxa79rDTLEFTVjQCsTCn3PEKAQy0JWrtlYoJaXIa0MDggYcXI5ub4gyiz9Y56hfBOsmg
+
+/blog/material-design-blog-welcome/
+
+Material blog
+
+Welcome to the Material Blog—A Letter from the Editor
+
+mio-example

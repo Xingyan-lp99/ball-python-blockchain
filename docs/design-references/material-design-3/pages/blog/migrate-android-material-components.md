@@ -1,0 +1,656 @@
+# Migrating to Material Components for Android
+
+Source: https://m3.material.io/blog/migrate-android-material-components
+Content endpoint: https://m3.material.io/page-data/Posts/5572471263330304.json
+Content version: 2026-11-17_08-50-14
+
+This is an upstream documentation snapshot. HTML fragments and media URLs are preserved.
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/18a6db2775f36a6a1b0cae6a88e8df282b27cf4a9db808be9c693fd35bdd3314798a1545d32d424a38e33f75b203165168f010c199ce63799b5e91d6309969a3
+
+https://lh3.googleusercontent.com/m-PDSndGA4cUhtNjSl4HXPqXIaHxvYG28BPPcal5dnXUge1Po6SJJw2I3RjrIYyKBY6exL4bXnjaDt9dusnuDVO_anSC8lzVK7pCvWo
+
+Nick Rout
+
+Material Developer Advocate
+
+mio-example
+
+```xml
+<style name="Theme.App" parent="Theme.AppCompat.*">
+    <item name="colorPrimary">@color/navy_700</item>
+    <item name="colorPrimaryDark">@color/navy_900</item>
+    <item name="colorAccent">@color/green_300</item>
+</style>
+```
+
+```
+-implementation ‘com.android.support:design:28.0.0’
++implementation ‘com.google.android.material:material:1.0.0’
+```
+
+```
+-<style name="Theme.App" parent="Theme.AppCompat.*">
++<style name="Theme.App" parent="Theme.MaterialComponents.*">
+    ...
+</style>
+```
+
+```xml
+<Button
+    android:id="@+id/containedButton"
+    android:background="@drawable/bg_button_gradient"
+    android:textColor="@android:color/white"
+    ... />
+<Button
+    android:id="@+id/textButton"
+    style=”?attr/borderlessButtonStyle”
+    ... />
+```
+
+```
+-implementation ‘com.google.android.material:material:1.0.0’
++implementation ‘com.google.android.material:material:1.1.0’
+```
+
+```xml
+<com.google.android.material.textfield.TextInputLayout
+    ...
++    style="@style/Widget.Design.TextInputLayout">
+    ...
+</com.google.android.material.textfield.TextInputLayout>
+```
+
+```
+<style name="Theme.App" parent="Theme.MaterialComponents.*">
+    ...
++    <item name=”textInputStyle”>@style/Widget.App.TextInputLayout</item>
+</style>
+
++<style name=”Widget.App.TextInputLayout” parent=”Widget.Design.TextInputLayout”>
++    <!-- Custom attrs -->
++</style>
+```
+
+```
+-<androidx.cardview.widget.CardView
++<com.google.android.material.card.MaterialCardView
+    android:id="@+id/card"
+    ...>
+    ...
+-</androidx.cardview.widget.CardView>
++</com.google.android.material.card.MaterialCardView>
+
+-<androidx.appcompat.widget.SwitchCompat
++<com.google.android.material.switch.SwitchMaterial
+    android:id="@+id/switch"
+    ... />
+```
+
+```
+<item name="colorAccent">?attr/colorSecondary</item>
+```
+
+```
+<style name="Theme.App" parent="Theme.MaterialComponents.*">
+    ...
+    <item name="colorPrimary">@color/navy_700</item>
+-    <item name="colorPrimaryDark">@color/navy_900</item>
++    <item name="colorPrimaryVariant">@color/navy_900</item>
+-    <item name="colorAccent">@color/green_300</item>
++    <item name="colorSecondary">@color/green_300</item>
++    <item name=”colorSecondaryVariant”>@color/green_500</item>
++    <item name="android:statusBarColor">@color/navy_900</item>
+</style>
+```
+
+```
+<Button
+-    android:textColor="@android:color/white"
++    android:textColor="?attr/colorOnPrimary"
+    ... />
+```
+
+```
+<com.google.android.material.card.MaterialCardView
+    ...>
+    ...
+    <TextView
+        android:id=”@+id/headerText”
+-        android:textAppearance="@style/TextAppearance.AppCompat.Title"
++        android:textAppearance="?attr/textAppearanceHeadline6"
+        ... />
+    <TextView
+        android:id=”@+id/subheadText”
+        android:textColor="?android:attr/textColorSecondary"
+-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
++        android:textAppearance="?attr/textAppearanceBody2"
+        ... />
+    <TextView
+        android:id=”@+id/supportingText”
+        android:textColor="?android:attr/textColorSecondary"
+-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
++        android:textAppearance="?attr/textAppearanceBody2"
+        ... />
+</com.google.android.material.card.MaterialCardView>
+```
+
+```
+<style name="Theme.App" parent="Theme.MaterialComponents.*">
+    ...
++    <item name="textAppearanceHeadline6">@style/TextAppearance.App.Headline6</item>
++    <item name="textAppearanceBody2">@style/TextAppearance.App.Body2</item>
+</style>
+
++<style name="TextAppearance.App.Headline6"
++    parent="TextAppearance.MaterialComponents.Headline6">
++    <item name="fontFamily">@font/roboto_mono_medium</item>
++</style>
++<style name="TextAppearance.App.Body2"
++    parent="TextAppearance.MaterialComponents.Body2">
++    <item name="fontFamily">@font/roboto_mono_regular</item>
++</style>
+```
+
+```
+<item name="android:background">@null</item>
+```
+
+```
+<com.google.android.material.bottomnavigation.BottomNavigationView
+-    android:background="@android:color/white"
+    ... />
+
+<com.google.android.material.card.MaterialCardView
+-    app:cardCornerRadius="2dp"
+    ...>
+    ...
+</com.google.android.material.card.MaterialCardView>
+```
+
+```
+<style name="Theme.App" parent="Theme.MaterialComponents.*">
+    ...
++    <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.App.SmallComponent</item>
++    <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.App.MediumComponent</item>
++    <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.App.LargeComponent</item>
+</style>
+
++<style name="ShapeAppearance.App.SmallComponent"
++   parent="ShapeAppearance.MaterialComponents.SmallComponent">
++    <item name="cornerFamily">rounded</item>
++    <item name="cornerSize">8dp</item>
++</style>
++<style name="ShapeAppearance.App.MediumComponent"
++    parent="ShapeAppearance.MaterialComponents.MediumComponent">
++    <item name="cornerFamily">rounded</item>
++    <item name="cornerSize">12dp</item>
++</style>
++<style name="ShapeAppearance.App.LargeComponent"
++    parent="ShapeAppearance.MaterialComponents.LargeComponent">
++    <item name="cornerFamily">rounded</item>
++    <item name="cornerSize">16dp</item>
++</style>
+```
+
+```
+-<Button
++<androidx.appcompat.widget.AppCompatButton
+    android:background="@drawable/bg_button_gradient"
++    android:textAppearance="?attr/textAppearanceButton"
+    ... />
+```
+
+```
+<Button
+    android:background="@drawable/bg_button_gradient"
++    app:backgroundTint="@null"
+    ... />
+```
+
+<p id="3139" data-selectable-paragraph="">We recently&nbsp;<a href="https://medium.com/google-design/material-design-components-for-android-1-1-0-are-now-available-45e1d576037c" target="_blank" rel="noopener">announced</a>&nbsp;<a href="https://github.com/material-components/material-components-android" target="_blank" rel="noopener nofollow">Material Design Components</a> (MDC) <code>1.0.0</code>&nbsp;&mdash; a library update that brings <a href="https://material.io/design/material-theming/overview.html" target="_blank" rel="noopener nofollow">Material Theming</a>, new widgets, dark theme support and other exciting features to your Android app.</p>
+<p id="c849" data-selectable-paragraph="">MDC replaces the Design Support Library. This guide will show you how to migrate your codebase so you can make use of the new attributes, styles, and widgets. If you&rsquo;re on MDC <code>1.0.0</code> this also provides the necessary migration steps to <code>1.1.0</code>. Be sure to check out our corresponding <a href="https://www.youtube.com/watch?v=64OD1PAqELg&amp;feature=youtu.be">video guide</a> as well!</p>
+<h2>A simplified theming example</h2>
+<p id="174e" data-selectable-paragraph="">This guide uses a simplified app to demonstrate the migration process. It uses an AppCompat theme, widgets from the Design Support Library (including a button with a custom background), and various other elements that require migration. We&rsquo;ll start with an app theme which uses the traditional AppCompat template:</p>
+<p data-selectable-paragraph="">&lt;mio-code-snippet index=0&gt;&lt;/mio-code-snippet&gt;</p>
+<p data-selectable-paragraph="">&lt;mio-image index=0&gt;&lt;/mio-image&gt;</p>
+<h2>Migrating from the Support Library to Jetpack</h2>
+<p>&lt;mio-image index=1&gt;&lt;/mio-image&gt;</p>
+<p id="c5c6" data-selectable-paragraph="">Before you can use MDC, you need to migrate from the Support Library to&nbsp;<a href="https://developer.android.com/jetpack/" target="_blank" rel="noopener nofollow">Android Jetpack</a>. Jetpack uses the new <code>androidx.*</code>&nbsp;namespace and splits the previous Support Library packages into separately maintained, semantically versioned libraries, providing feature parity as well as new libraries. MDC is built with AndroidX libraries so migration is mandatory.</p>
+<p id="902f" data-selectable-paragraph="">To migrate to AndroidX, we recommend following the&nbsp;<a href="https://developer.android.com/jetpack/androidx/migrate" target="_blank" rel="noopener nofollow">official developer documentation</a>&nbsp;or watching the&nbsp;<a href="https://www.youtube.com/watch?v=Hyt7LR5mXLc" target="_blank" rel="noopener nofollow">&ldquo;Migrating to AndroidX: The time is right&rdquo; talk</a>&nbsp;from Android Dev Summit &rsquo;19. The&nbsp;&lsquo;<strong>Refactor</strong> <strong>&gt; Migrate to AndroidX</strong>&rsquo;&nbsp;tool in Android Studio will refactor your Design Support Library dependency to MDC.</p>
+<p id="6c2a" data-selectable-paragraph=""><em>Note: Jetpack and MDC artifacts with version&nbsp;</em><code><em>1.0.0</em></code><em style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> are binary compatible with the Support Library&nbsp;</em><code><em>28.0.0</em></code><em style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">&nbsp;artifacts. If you&rsquo;re not on version 28 then we recommend upgrading to this first and then migrating.</em></p>
+<h2>Updating to MDC 1.0.0</h2>
+<p>&lt;mio-image index=2&gt;&lt;/mio-image&gt;</p>
+<p id="eaf5" data-selectable-paragraph="">If you used the Android Studio &lsquo;Refactor &gt; Migrate to AndroidX&rsquo; tool during Jetpack migration, your Design Support Library dependency should have mapped to MDC <code>1.0.0</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">&nbsp;and you can skip this section.</span></p>
+<p id="e737" data-selectable-paragraph="">If not, you will need to manually update your dependency:</p>
+<p data-selectable-paragraph="">&lt;mio-code-snippet index=1&gt;&lt;/mio-code-snippet&gt;</p>
+<p data-selectable-paragraph="">You will also need to change the package namespace of any usages of the Design Support Library classes (in XML layouts and in code) from <code>android.support.design.*</code> to <code>com.google.android.material.*</code>. To do so, take a look at the&nbsp;<a href="https://developer.android.com/jetpack/androidx/migrate/class-mappings#androidsupportdesign" target="_blank" rel="noopener nofollow">class mapping table</a>.</p>
+<h2>Changing your theme(s)</h2>
+<p>You need to ensure that your app theme inherits from a Material Components theme. The same applies to any additional themes and&nbsp;<a href="https://medium.com/androiddevelopers/android-styling-themes-overlay-1ffd57745207" target="_blank" rel="noopener">theme overlays</a>&nbsp;you may have in your project.</p>
+<p>&lt;mio-code-snippet index=2&gt;&lt;/mio-code-snippet&gt;</p>
+<p id="8889" data-selectable-paragraph="">If you were previously using an <code>AppCompat</code><span style="font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;"> theme variant, the MDC-Android theme variants map one-to-one with these. In most cases, simply swap out the AppCompat portion of the parent with&nbsp;</span><code>MaterialComponents</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">.</span></p>
+<p id="2737" data-selectable-paragraph="">See the full theme and theme overlay mapping tables below:</p>
+<p data-selectable-paragraph="">&lt;mio-table index=0&gt;&lt;/mio-table&gt;</p>
+<p data-selectable-paragraph="">&lt;mio-table index=1&gt;&lt;/mio-table&gt;</p>
+<h2>Example updates</h2>
+<p>&lt;mio-image index=11&gt;&lt;/mio-image&gt;</p>
+<h2>Button changes</h2>
+<p>Having changed our dependency to MDC <code>1.0.0</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> and our app theme to inherit from&nbsp;</span><code>Theme.MaterialComponents.*</code>,<span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">&nbsp;we can observe some unexpected changes to buttons in our example app. We have lost our custom background! They now mostly make use of the green accent color and have wider letter spacing in their text labels.</span></p>
+<p>&lt;mio-image index=3&gt;&lt;/mio-image&gt;</p>
+<p id="bec2" data-selectable-paragraph="">To understand why this has happened, we need to start by taking a look at how we&rsquo;ve added these buttons in our layout (as framework <code>&amp;lt;Button&amp;gt;</code>s<span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">):</span></p>
+<p data-selectable-paragraph="">&lt;mio-code-snippet index=3&gt;&lt;/mio-code-snippet&gt;</p>
+<p id="a294" data-selectable-paragraph="">So, what&rsquo;s going on? 🤔</p>
+<h2>MDC widgets and auto-inflation</h2>
+<p>Like AppCompat, MDC will replace some framework widgets with MDC equivalents at inflation time. This makes it possible to ship new features and bugfixes without having to swap all your declarations for a new type. This is done via <code><a href="https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/theme/MaterialComponentsViewInflater.java">MaterialComponentsViewInflater</a>,</code> an extension of <a href="https://developer.android.com/reference/androidx/appcompat/app/AppCompatViewInflater">AppCompatViewInflater</a>.</p>
+<p id="b3c1" data-selectable-paragraph="">See the full widget auto-inflation mapping table below:</p>
+<p data-selectable-paragraph="">&lt;mio-table index=2&gt;&lt;/mio-table&gt;</p>
+<p id="1824" data-selectable-paragraph=""><em>Note: In MDC&nbsp;</em><code><em>1.0.0</em></code><em style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">&nbsp;only&nbsp;</em><em class="lx" style="box-sizing: inherit; font-family: Menlo, Monaco, 'Courier New', Courier, monospace; font-size: 15.75px; letter-spacing: -0.063px;">Button</em><em style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">s were replaced. The other widgets above were added in subsequent versions of the library.</em></p>
+<p id="e584" data-selectable-paragraph="">Our example app was previously replacing the framework <code>&amp;lt;Button&amp;gt;</code>s with <code>&amp;lt;AppCompatButton&amp;gt;</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">s</span> because we had a <code>Theme.AppCompat.*</code> theme. Having migrated to a <code>Theme.MaterialComponents.*</code> theme, this has changed to <code>&amp;lt;MaterialButton&amp;gt;</code>s which has an updated default style.</p>
+<p id="f52c" data-selectable-paragraph="">Unlike <code>AppCompatButton</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">,&nbsp;</span><code>MaterialButton</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">&nbsp;did not support custom backgrounds until&nbsp;</span><a style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" href="https://github.com/material-components/material-components-android/releases/tag/1.2.0-alpha06" target="_blank" rel="noopener nofollow">release&nbsp;</a><a style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" href="https://github.com/material-components/material-components-android/releases/tag/1.2.0-alpha06" target="_blank" rel="noopener nofollow">1.2.0-alpha06</a><a style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" href="https://github.com/material-components/material-components-android/releases/tag/1.2.0-alpha06" target="_blank" rel="noopener nofollow">&nbsp;of MDC-Android</a><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">. This is covered in more detail, along with a workaround, in the&nbsp;&ldquo;</span><strong style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Shape</strong><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">&rdquo;&nbsp;section below.</span></p>
+<p id="f52c" data-selectable-paragraph=""></p>
+<p id="51fb" data-selectable-paragraph="">We will keep this as is for now.</p>
+<h2>Updating to MDC 1.1.0</h2>
+<p id="cb1e" data-selectable-paragraph="">A&nbsp;<em>lot</em>&nbsp;has&nbsp;<a href="https://github.com/material-components/material-components-android/releases/tag/1.1.0" target="_blank" rel="noopener nofollow">changed</a> in MDC between <code>1.0.0</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> and&nbsp;</span><code>1.1.0</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">! The new features include:</span></p>
+<ul>
+<li id="b85d" data-selectable-paragraph="">Full&nbsp;<a href="https://material.io/design/material-theming/overview.html#material-theming" target="_blank" rel="noopener nofollow">Material Theming</a>&nbsp;support for color, typography, and shape</li>
+<li id="deed" data-selectable-paragraph=""><a href="https://developer.android.com/guide/topics/ui/look-and-feel/darktheme" target="_blank" rel="noopener nofollow">Dark theme</a>&nbsp;support</li>
+<li id="8731" data-selectable-paragraph="">Android 10&nbsp;<a href="https://developer.android.com/guide/navigation/gesturenav" target="_blank" rel="noopener nofollow">gesture navigation</a>&nbsp;insets in widgets</li>
+<li id="4ff0" data-selectable-paragraph="">New widgets like the&nbsp;<a href="https://material.io/develop/android/components/extended-floating-action-button/" target="_blank" rel="noopener nofollow">extended FAB</a>,&nbsp;<a href="https://material.io/develop/android/components/picker/" target="_blank" rel="noopener nofollow">date picker</a>,&nbsp;<a href="https://material.io/develop/android/components/badging/" target="_blank" rel="noopener nofollow">badges</a>, and&nbsp;<a href="https://material.io/develop/android/components/buttons/#toggle-button" target="_blank" rel="noopener nofollow">toggle buttons</a></li>
+<li id="1ae4" data-selectable-paragraph="">Accessibility improvements, bug fixes, and more</li>
+</ul>
+<p id="ffd4" data-selectable-paragraph="">We&rsquo;re now ready to bump our MDC dependency version to <code>1.1.0</code>:</p>
+<p data-selectable-paragraph="">&lt;mio-code-snippet index=4&gt;&lt;/mio-code-snippet&gt;</p>
+<p data-selectable-paragraph=""><span class="jy lw" style="font-family: medium-content-serif-font, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: 21px; letter-spacing: -0.003em; box-sizing: inherit; font-weight: bold;"><em class="lx" style="box-sizing: inherit;">Note:</em></span><em class="lx" style="font-family: medium-content-serif-font, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: 21px; letter-spacing: -0.003em; box-sizing: inherit;">&nbsp;Some AndroidX dependencies, such as AppCompat, may also need updating at this time. While not strictly required, we recommend updating to the latest&nbsp;</em><a class="cq gk gl gm gn go" style="font-family: medium-content-serif-font, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: 21px; letter-spacing: -0.003em; box-sizing: inherit; text-decoration-line: none; -webkit-tap-highlight-color: transparent; background-repeat: repeat-x; background-size: 1px 1px; background-position: 0px calc(1em + 1px);" href="https://developer.android.com/jetpack/androidx/versions/stable-channel" target="_blank" rel="noopener nofollow"><em class="lx" style="box-sizing: inherit;">stable versions</em></a><em class="lx" style="font-family: medium-content-serif-font, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: 21px; letter-spacing: -0.003em; box-sizing: inherit;">&nbsp;if possible.</em></p>
+<p id="dcdd" class="jw jx as jy b hk jz ka kb hn kc kd ke kf kg hs kh ki kj hv kk kl km hy kn ko fm eh" style="box-sizing: inherit; margin: 2em 0px -0.46em; font-weight: 400; color: #292929; word-break: break-word; line-height: 32px; letter-spacing: -0.003em; font-family: medium-content-serif-font, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: 21px; background-color: #ffffff;" data-selectable-paragraph=""></p>
+<h2>Some expected changes and common issues</h2>
+<p id="e198" data-selectable-paragraph="">MDC <code>1.1.0</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">&nbsp;changes some default widget styling to better comply with the Material Design guidelines. After upgrading you may, however, notice some unexpected changes to certain widget colors and other attributes.</span></p>
+<p data-selectable-paragraph="">&lt;mio-image index=12&gt;&lt;/mio-image&gt;</p>
+<p id="a1f1" data-selectable-paragraph="">In our example above, buttons have changed once again, the colors of text and icons have changed, FABs are now a shade of teal, and the text field looks entirely different. Oh dear! Don&rsquo;t worry, your theme is likely missing some of the important MDC attributes while also having some AppCompat or framework attributes you no longer need. Let&rsquo;s understand these issues by going through some common migration scenarios.</p>
+<h2>Text field changes</h2>
+<p id="ae89" data-selectable-paragraph="">The default style for text fields has changed in MDC to a new, improved version backed by&nbsp;<a href="https://medium.com/google-design/the-evolution-of-material-designs-text-fields-603688b3fe03" target="_blank" rel="noopener">user research</a>.</p>
+<p data-selectable-paragraph="">&lt;mio-image index=4&gt;&lt;/mio-image&gt;</p>
+<p id="42e5" data-selectable-paragraph="">We recommend sticking with this version for improved usability and configurability. However, we realize that this may not immediately fit with your brand and design system.</p>
+<p id="626f" data-selectable-paragraph="">To revert back to the legacy text field, adjust the style in your layout to use the Design Support Library version:</p>
+<p data-selectable-paragraph="">&lt;mio-code-snippet index=5&gt;&lt;/mio-code-snippet&gt;</p>
+<p id="315c" data-selectable-paragraph="">Alternatively, you can make this the default style for all text fields in your theme(s):</p>
+<p data-selectable-paragraph="">&lt;mio-code-snippet index=6&gt;&lt;/mio-code-snippet&gt;</p>
+<p data-selectable-paragraph="">&lt;mio-image index=5&gt;&lt;/mio-image&gt;</p>
+<h2>Prefer MDC styles and widgets</h2>
+<p id="f6ca" data-selectable-paragraph="">As we&rsquo;ve seen above, widgets previously in the Design Support Library have since become part of MDC. In most cases there are new <code>Widget.MaterialComponents.*</code> styles that replace <code>Widget.Design.*</code>&nbsp;styles, along with new attributes that enable additional features. While opting out is possible, we recommend adopting the new MDC styles.</p>
+<p id="a833" data-selectable-paragraph="">For components that were not part of the Design Support Library, in some cases there is now a Material version of the class. We saw this above with <code>AppCompatButton</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> and&nbsp;</span><code>MaterialButton</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">. We recommend using MDC classes over AppCompat or framework equivalents, if available. These widgets use updated Material Design design guidelines by default and support the full set of MDC attributes, which enable Material Theming and other features.</span></p>
+<p id="0942" data-selectable-paragraph="">There are a few scenarios you should consider:</p>
+<ul>
+<li id="6f5d" data-selectable-paragraph="">Widgets used directly in layouts should change to MDC versions (see the&nbsp;&ldquo;<strong>MDC widgets and auto-inflation</strong>&rdquo;&nbsp;section above to see which widgets can be kept as framework tags)</li>
+<li id="fbe8" data-selectable-paragraph="">Any styles, default styles and default style attributes should change to MDC versions</li>
+<li id="8e56" data-selectable-paragraph="">Any widgets used programmatically or as parents for custom classes should change to MDC versions</li>
+</ul>
+<p id="f7ba" data-selectable-paragraph="">See the full widget and style mapping tables below:</p>
+<p data-selectable-paragraph="">&lt;mio-table index=3&gt;&lt;/mio-table&gt;</p>
+<p data-selectable-paragraph="">&lt;mio-table index=4&gt;&lt;/mio-table&gt;</p>
+<p id="fe0f" data-selectable-paragraph="">Be sure to also check out the full list of&nbsp;<a href="https://material.io/develop/android/components" target="_blank" rel="noopener nofollow">Android components</a>&nbsp;for widgets new to MDC as well as usage documentation.</p>
+<h2>Example updates</h2>
+<p><strong>Replaces widgets with MDC versions</strong></p>
+<p id="a383" data-selectable-paragraph="">In our example, we need to change some of the widgets in our layout to use MDC versions:</p>
+<p data-selectable-paragraph="">&lt;mio-code-snippet index=7&gt;&lt;/mio-code-snippet&gt;</p>
+<h2>Color</h2>
+<p><strong>New attributes</strong></p>
+<p id="4fb9" data-selectable-paragraph="">The MDC color palette draws directly from the&nbsp;<a href="https://material.io/design/color/" target="_blank" rel="noopener nofollow">Material Design color system</a>.</p>
+<p id="88fe" data-selectable-paragraph="">As a result of the shared history between MDC-Android, AppCompat and the framework, the resulting set of color attributes comprises the following:</p>
+<ul>
+<li id="b792" data-selectable-paragraph="">Existing attributes from the framework that are appropriately named (eg. <code>android:colorBackground</code>)</li>
+<li id="b213" data-selectable-paragraph="">Existing attributes from AppCompat that are appropriately named (eg. <code>colorPrimary</code> and <code>colorError</code>)</li>
+<li id="c95c" data-selectable-paragraph="">New attributes introduced by MDC (eg. <code>colorSurface</code>, <code>colorOnPrimary</code>, etc.)</li>
+</ul>
+<p>&lt;mio-image index=6&gt;&lt;/mio-image&gt;</p>
+<p>&lt;mio-image index=7&gt;&lt;/mio-image&gt;</p>
+<p id="adde" data-selectable-paragraph="">These attributes are used by MDC widgets to tint their backgrounds, text, icons and more. Knowing which widgets use which colors requires inspecting the default widget styles in the&nbsp;<a href="https://github.com/material-components/material-components-android" target="_blank" rel="noopener nofollow">source code</a>.</p>
+<p id="0903" data-selectable-paragraph="">There are also colors from AppCompat and the framework that still exist but no longer apply to this new system. The <code>Theme.MaterialComponents.*</code>&nbsp;themes do their best to backport these old attributes for widgets that still rely on them, eg.</p>
+<p data-selectable-paragraph="">&lt;mio-code-snippet index=8&gt;&lt;/mio-code-snippet&gt;</p>
+<p id="3df2" data-selectable-paragraph="">However, you should consider these attributes deprecated; either use a more appropriate MDC attribute or phase them out.</p>
+<p id="06bb" data-selectable-paragraph="">See the full color attribute mapping table below:</p>
+<p data-selectable-paragraph="">&lt;mio-table index=5&gt;&lt;/mio-table&gt;</p>
+<h2>Example updates</h2>
+<p><strong>Update to new color attributes</strong></p>
+<p>In our example, we need to update our app theme to override the preferred color attributes:</p>
+<p>&lt;mio-code-snippet index=9&gt;&lt;/mio-code-snippet&gt;</p>
+<p id="6e97" data-selectable-paragraph=""><em>Note: We have not overridden all of the color attributes and are relying on the defaults for&nbsp;</em><em><code>colorSurface</code>,&nbsp;<code>colorError</code></em><em style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><span style="font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;">, etc, which is perfectly acceptable. We have also not specified a dark theme palette.</span></em></p>
+<p id="d8a3" data-selectable-paragraph="">Use &ldquo;on&rdquo; color attributes where appropriate</p>
+<p id="e95f" data-selectable-paragraph="">We should also switch from using an <code>@color</code>&nbsp;to one of the new &ldquo;on&rdquo; color attributes for our contained button text color:</p>
+<p data-selectable-paragraph="">&lt;mio-code-snippet index=10&gt;&lt;/mio-code-snippet&gt;</p>
+<p data-selectable-paragraph="">&lt;mio-image index=13&gt;&lt;/mio-image&gt;</p>
+<h2>Typography</h2>
+<p><strong>New&nbsp;</strong><code><strong>TextAppearance </strong></code><strong style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">styles/attributes</strong></p>
+<p id="ea9a" data-selectable-paragraph="">The MDC type scales draw directly from the&nbsp;<a href="https://material.io/design/typography/" target="_blank" rel="noopener nofollow">Material Design type system</a>.</p>
+<p id="ab9e" data-selectable-paragraph="">A new set of <code>TextAppearance.MaterialComponents.*</code> styles and corresponding <code>textAppearance*</code>&nbsp;theme attributes have been introduced, which replace existing AppCompat / framework styles.</p>
+<p data-selectable-paragraph="">&lt;mio-image index=8&gt;&lt;/mio-image&gt;</p>
+<p id="fd61" data-selectable-paragraph="">These attributes are used by MDC widgets to style text. Knowing which widgets use which type scales requires inspecting the default widget styles in the&nbsp;<a href="https://github.com/material-components/material-components-android" target="_blank" rel="noopener nofollow">source code</a>.</p>
+<p id="5935" data-selectable-paragraph="">See the full type style and attribute mapping table below:</p>
+<p data-selectable-paragraph="">&lt;mio-table index=6&gt;&lt;/mio-table&gt;</p>
+<h2 id="cb95" data-selectable-paragraph="">Example updates</h2>
+<p id="06c7" data-selectable-paragraph=""><strong>Update to new type attributes</strong></p>
+<p id="e0da" data-selectable-paragraph="">In our example, we need to update the <code>TextView</code>s<span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">&nbsp;within the card in the layout to use the preferred type attributes:</span></p>
+<p data-selectable-paragraph="">&lt;mio-code-snippet index=11&gt;&lt;/mio-code-snippet&gt;</p>
+<p id="14d0" data-selectable-paragraph=""><strong>Customize type scales with font family</strong></p>
+<p id="bb18" data-selectable-paragraph="">We can also optionally override type scales in our app theme to use a custom font family, with&nbsp;<a href="https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml" target="_blank" rel="noopener nofollow">XML</a>&nbsp;or&nbsp;<a href="https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts" target="_blank" rel="noopener nofollow">downloadable</a>&nbsp;fonts via Android Studio:</p>
+<p data-selectable-paragraph="">&lt;mio-code-snippet index=12&gt;&lt;/mio-code-snippet&gt;</p>
+<p id="082e" data-selectable-paragraph=""><em>Note:&nbsp;For this example, we have only overridden some of the type scales. If you&rsquo;re using a custom font, we recommend overriding&nbsp;<a href="https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/typography/res/values/attrs.xml" target="_blank" rel="noopener nofollow">all of the type scales</a> for brand consistency.</em></p>
+<p data-selectable-paragraph="">&lt;mio-image index=14&gt;&lt;/mio-image&gt;</p>
+<h2 id="3188">Shape</h2>
+<p><code><strong>ShapeAppearance </strong></code><strong>styles/attributes</strong></p>
+<p id="4805" data-selectable-paragraph="">The&nbsp;<a href="https://material.io/design/shape/" target="_blank" rel="noopener nofollow">Material Design shape system</a>&nbsp;is a way to apply treatments to the corners of MDC widgets, split into small, medium and large component categories.</p>
+<p id="3ef4" data-selectable-paragraph="">This takes the form of Android <code>ShapeAppearance.*</code> styles with corresponding theme attributes. They include a <code>cornerFamily</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> &mdash;&nbsp;</span><code>rounded</code> <span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">or&nbsp;</span><code>cut</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> &mdash; and&nbsp;</span><code>cornerSize*</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">&nbsp;as a dimension.</span></p>
+<p data-selectable-paragraph="">&lt;mio-image index=9&gt;&lt;/mio-image&gt;</p>
+<p id="1ce3" data-selectable-paragraph="">These attributes are used by MDC widgets to style their backgrounds. Knowing which widgets apply to which shape categories requires inspecting the default widget styles in the&nbsp;<a href="https://github.com/material-components/material-components-android" target="_blank" rel="noopener nofollow">source code</a>.</p>
+<h2 id="8b92" data-selectable-paragraph="">Widget backgrounds</h2>
+<p id="5b22" data-selectable-paragraph="">The class that implements this functionality is <code><a href="https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/shape/MaterialShapeDrawable.java">MaterialShapeDrawable</a></code>. All MDC widgets use this drawable as their background by default and you can also consider using it for custom views. It handles shape theming, backported shadow rendering, dark theme elevation overlays and more.</p>
+<p id="553e" data-selectable-paragraph="">As a result, we advise against using <code>android:background</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> with custom XML drawables on MDC widgets as this will override the&nbsp;</span><code>MaterialShapeDrawable</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">. You may notice that the default styles for most MDC widgets specify</span></p>
+<p data-selectable-paragraph="">&lt;mio-code-snippet index=13&gt;&lt;/mio-code-snippet&gt;</p>
+<p id="8ff2" data-selectable-paragraph="">to specifically avoid this. Rather, prefer using <code>shapeAppearance</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> /&nbsp;</span><code>shapeAppearanceOverlay</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> and&nbsp;</span><code>backgroundTint</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">&nbsp;attributes to adjust background shape and color.</span></p>
+<p id="5420" data-selectable-paragraph="">However, there are exceptions:</p>
+<ul>
+<li id="1848" data-selectable-paragraph="">As mentioned above, <code>MaterialButton</code>&nbsp;<a href="https://issuetracker.google.com/issues/127420890" target="_blank" rel="noopener">ignored <code>android:background</code></a>&nbsp;until&nbsp;<a href="https://github.com/material-components/material-components-android/releases/tag/1.2.0-alpha06" target="_blank" rel="noopener nofollow">release&nbsp;</a><a href="https://github.com/material-components/material-components-android/releases/tag/1.2.0-alpha06" target="_blank" rel="noopener nofollow">1.2.0-alpha06</a><a href="https://github.com/material-components/material-components-android/releases/tag/1.2.0-alpha06" target="_blank" rel="noopener nofollow">&nbsp;of MDC-Android</a>. If you require this functionality while using earlier versions of the library, we advise explicitly using <code>AppCompatButton</code>&nbsp;in your layout(s).</li>
+<li id="d620" data-selectable-paragraph=""><code>MaterialShapeDrawable</code> <a href="https://issuetracker.google.com/issues/134526677" target="_blank" rel="noopener nofollow">doesn&rsquo;t support gradients</a>. If your brand requires this, using <code>android:background</code>&nbsp;with a <code>GradientDrawable</code>&nbsp;is your best bet.</li>
+</ul>
+<h2 id="ebac" data-selectable-paragraph="">Example updates</h2>
+<p id="0b2d" data-selectable-paragraph=""><strong>Remove background attrs that do not work with shape theming</strong></p>
+<p id="c119" data-selectable-paragraph="">In our example, we can remove some widget attributes that are now handled by shape theming:</p>
+<p data-selectable-paragraph="">&lt;mio-code-snippet index=14&gt;&lt;/mio-code-snippet&gt;</p>
+<p id="56dd" data-selectable-paragraph=""><strong>Customize shape with corner family and size</strong></p>
+<p id="b3c7" data-selectable-paragraph="">We can also optionally override shape styles in our app theme to express our brand:</p>
+<p data-selectable-paragraph="">&lt;mio-code-snippet index=15&gt;&lt;/mio-code-snippet&gt;</p>
+<p data-selectable-paragraph="">&lt;mio-image index=15&gt;&lt;/mio-image&gt;</p>
+<p id="eb8a" data-selectable-paragraph=""><strong>Restore button custom gradient background</strong></p>
+<p data-selectable-paragraph="">Finally, here&rsquo;s how to restore our button&rsquo;s custom gradient background by explicitly using&nbsp;<span style="background-color: #f2f2f2; color: #292929; font-family: Menlo, Monaco, 'Courier New', Courier, monospace; font-size: 15.75px; letter-spacing: -0.063px;">AppCompatButton</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">&nbsp;(along with the new MDC button type theming attribute):</span></p>
+<p data-selectable-paragraph="">&lt;mio-code-snippet index=16&gt;&lt;/mio-code-snippet&gt;</p>
+<p data-selectable-paragraph="">If you&rsquo;re using MDC-Android <code>1.2.0-alpha-06</code> (or later) then you can rely on <code>MaterialButton</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> respecting&nbsp;</span><code>android:background</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">. Keep in mind that you may need to clear the&nbsp;</span><code>backgroundTint</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> (which is set to&nbsp;</span><code>colorPrimary</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> in the <code>Widget.MaterialComponents.Button</code></span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">&nbsp;default style):</span></p>
+<p data-selectable-paragraph="">&lt;mio-code-snippet index=17&gt;&lt;/mio-code-snippet&gt;</p>
+<p data-selectable-paragraph="">&lt;mio-image index=10&gt;&lt;/mio-image&gt;</p>
+<h2 id="54aa">What&rsquo;s next?</h2>
+<p id="e716" data-selectable-paragraph="">We&rsquo;ve successfully gone through the process of migrating from the Design Support Library, to MDC <code>1.0.0</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> and finally to MDC&nbsp;</span><code>1.1.0</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">. We&rsquo;ve migrated our usages of AppCompat and have made use of Material Theming.</span></p>
+<p id="d78d" data-selectable-paragraph="">We encourage you to try out new widgets and features in MDC that were not part of the Design Support Library.</p>
+<p id="8032" data-selectable-paragraph="">The next feature release of MDC&nbsp;<span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">&mdash;</span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"><code>1.2.0</code>&mdash; is well underway with multiple alpha releases out at the time of writing. Exciting new updates include <code><a href="https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/slider/Slider.java">Slider</a></code></span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"> and <code><a href="https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/imageview/ShapeableImageView.java">ShapeableImageView</a></code></span><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">&nbsp;components along with the first Android release of the&nbsp;</span><a style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" href="https://material.io/design/motion/the-motion-system.html" target="_blank" rel="noopener nofollow">Material motion system</a><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">!</span></p>
+<p id="2e17" data-selectable-paragraph="">As always, we encourage you to file&nbsp;<a href="https://github.com/material-components/material-components-android/issues/new?assignees=&amp;labels=bug&amp;template=bug_report.md&amp;title=%5BComponent+name%5D+Short+description+of+issue" target="_blank" rel="noopener nofollow">bug reports</a>&nbsp;and&nbsp;<a href="https://github.com/material-components/material-components-android/issues/new?assignees=&amp;labels=feature+request&amp;template=feature_request.md&amp;title=%5BComponent+name%5D+Short+description+of+request" target="_blank" rel="noopener nofollow">feature requests</a>&nbsp;on GitHub. Also be sure to check out our Android&nbsp;<a href="https://github.com/material-components/material-components-android-examples" target="_blank" rel="noopener nofollow">companion example apps</a>&nbsp;and&nbsp;<a href="https://github.com/material-components/material-components-android-examples/tree/develop/MaterialThemeBuilder" target="_blank" rel="noopener nofollow">Build a Material Theme</a>.</p>
+<p data-selectable-paragraph="">We highly encourage migrating to MDC <code>1.1.0</code><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">&nbsp;(or later). If you&rsquo;ve successfully migrated or if you&rsquo;re having trouble doing so, reach out to us on Twitter&nbsp;</span><a style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" href="https://twitter.com/materialdesign" target="_blank" rel="noopener nofollow">@MaterialDesign</a><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">&nbsp;and&nbsp;</span><a style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" href="https://twitter.com/AndroidDev" target="_blank" rel="noopener nofollow">@AndroidDev</a><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">.</span></p>
+
+Example app using AppCompat and the Design Support Library
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/6a6089b61b8155537e5bcfff75ef9ac8491ba4e73e82fcb6fad974cbb2117b0b6a17442f8b1a2d540dd17a572e710726a6377f874bff3e9d073317647d37fa55
+
+https://lh3.googleusercontent.com/jxABbUblfF9Rxp7z1FEac9e0wTryA4MdWjX8dRBwHgzwgDiTP7W5Eb_Ub478o-6jqW5xZEF3_VOwJE8fDDHIZ9E6Z7rW46omj8UjE-o
+
+Jetpack logo
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/be9f89ea58242974f9f6392c94c24fe03b97508c8c49d7de9a62a546a67ffca9059743a5039928b402b084828ae8a80fd18e4ec9b035330ea33adca743f6fc71
+
+https://lh3.googleusercontent.com/nNZ1ajOjy9BGfdfTKwrM0egjOx81LgSORYnHlDR8ZjbATkd_dYz5_SkMkzGKJeSe07Nm4NKX0uLvOgdP_PyB0mjJhn9yhCHxRWEIVw
+
+MDC logo
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/fd9e1370e3766d1339acf0abef819a13a275fb345ae7dcd40f178082ba728d20be28d3ed6b6c514bedf553e26e5acdc7feafa57af0b80b7043010d6b0debff26
+
+https://lh3.googleusercontent.com/3JffhgWoz4JlxhhurL2HmqlSsQy5wKiMcoF6QPr4zVodXEiIPCjgpPvVVCLSlCah4DaaOJdfsvz1ws1azDTkqoPJ3MCT6_6nWUr-Rg
+
+Contained button with green background and text button with green label made in MDC 1.0.0
+
+Buttons in MDC 1.0.0
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/2d91470e9b88ffa6ba188135ebc012978d1ad2b95632f67d1cee09ab69bc58787453339a4752e831fb426b91d72c7dad1417c0a7ceeb96862abe949f38d8f384
+
+https://lh3.googleusercontent.com/y_sKWqyO_3CUA5mubek7cGCxTsl3mZcO4tTo4OllRjGWY5FlTe_XXiHenj0O9fqvW3X8ZP9-Xnjl35Yf4KvBt_A5Y3ciXQQXEQphlw
+
+Filled text field with a light grey background and dark grey label and underline
+
+Text fields in MDC 1.1.0+
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/b84bcf65cad0daeeb15246a3be70a0cba4668494f6acabac544360f3475c860f7cfe7f9b7faf4974927189f5b05d21174976a5642248a07edb1088c539eacdfa
+
+https://lh3.googleusercontent.com/dlAnwSNxiU_7rrRsauKLpy2_96iCHId9g06ytGv_8GY2iGzwjMDFhf1YdOrwS1cUL059lIZAMdzenTAxWlyiqV8E-M1d3b1VnYGSww
+
+Text field with no background and light green label and underline
+
+Legacy Design Support Library text field
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/586f5bb0b1770802c9973b6c49cb8ebbadbfaf61f8972ec4e664ae40b2270ab3ea345e427634a48677528faa67c6781269be0bca2f49edef3f52f3fb45bf19ea
+
+https://lh3.googleusercontent.com/pu46z5fYoMF3F4_pOMmHz8P8XU3VVtlBw53BBbsjdofhQ3vbJPzHxmAXH7HdWrJHoQKd3nVsqnjfsIQR8dp52Hc1HNeSoEVkEXRHe3A
+
+MDC color attributes with baseline light theme values
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/976a2c96ccf19090249b3c84fbe66dc4096c44f510fb2c0bf990acc7a16c6ee9809dec1370061b98ee3efa1e7917712895b4166505c6a508935d028306af817e
+
+https://lh3.googleusercontent.com/-TPxpuz8VekaDIBXt82KPR5CINvorOwyWeHZqtS8vYBukNd3U55yb3Y94xhyl5ccCvkOXiyqVF_zmTiK_KCB2HLP8gDvLCCuaZF8xQ
+
+MDC color attributes with baseline dark theme values
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/b4bd6962f1edcd2ce26cbeaa8f3c8dceac78e11ed9a3da0936f12c1deec7354f6da7e29800683029d5f54479df7c41752f8448f9c896e057d9199218887d8701
+
+https://lh3.googleusercontent.com/pzC7LmlBrPCRI8-fLVWfDBfE5JcHU7EJSB6Mz3TuXxv87EZ15xRn2IrsOIfETOhNj1t0RnqGvZX_yzpQ0OzwSh4cvS5SfbkAVzglakM
+
+MDC type attributes
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/5e784b3fc070d44469260baa36ae484e57d4d64aefafdc3e02e6b07670bf6a43222a0fadf0eb72da9d394d2a77175baefec1ecd8aa72b9f4daa7b9be0884497c
+
+https://lh3.googleusercontent.com/CccIZ19u-AdYm0qSTZtMRW9usB69oGOaMajZacWp3ghDrr3088o5ctMEFODJ3YjiMrzNTt-v-zIK43W6ER3iWv0cb7k-RNXgfkwRkQ
+
+ShapeAppearanceSmallComponent with rounded, 4 dp corners. ShapeAppearanceMediumComponent with rounded, 4 dp corners. ShapeAppearanceLargeComponent with rounded, 0 dp corners.
+
+MDC shape attributes
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/89df83c5588f1bc90ab0c9da96772e521fbe80d1f36254c6e5d7e35795455df069c9d4754bee42597fc21bcead7bad5964528a8dbee007154da3b3da9967fa4b
+
+https://lh3.googleusercontent.com/Q6wRjWraO35KbX5fgislPpxWQMjMjI4e3tJdHdcvYraxGHXzQz-8uBrYlB8AnegN9g4GVt0LSw6ggUtvwtC7gTtKnI2_zUcU5rDQ
+
+Button with restored custom gradient background
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/2f59c50ab864dff92e65171a3ab006afe6e42cfb959c5c3798367084347f4d62a412cbbc0dd5925dd6bd1599e628bc3039556f81149459a7b945b5cee768c057
+
+https://lh3.googleusercontent.com/SpnQk5TWuwxkVnE-1LdiXgVGvSxrClOHXH4gf9PW5i5iz9SCzgeSuJLjQCsrlKnoCo0MrMUqXF2cZQI3sJZN4jmS_1Rf28N__7_awHU
+
+Example app using MDC 1.0.0 and Theme.MaterialComponents.* theme
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/10e32fcd89d34b226d9c331b07f98853a6deec3362c2530b84bbba7792f191dd7c9b5a0b17f2e3a2ba37a56f2a283087a6a0675ece76823c790e029d65b32a78
+
+https://lh3.googleusercontent.com/Q9hXH0ygdl3uD1BrIrm3ixD9lM7ZrzOkvcI8B52KHsVEpxdPbGI9EFlPEdxQFwareZSYOvANO2VVyJgwygkqDmUyvI09sTGKzL5OsA
+
+Example app using MDC 1.1.0
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/7ac981e8957f8cd4028a53dcbdedc7ea7dd74eb532b9b4fc0ca2ee7b14fff6217ab35e24124c212c38279a7b173cd5d40902d173dcba2ad5987f540adf3faa3d
+
+https://lh3.googleusercontent.com/rGX4_Mg4_J45bBPtx8UyFoA0xt2W-joljwic8DC_uiZGZAzlNSDiiDlxsYpgwWSirEfxBX9x_uxboyL4nctSOR1vVaPKnZIlnEHF8A
+
+Example app with updated MDC color attributes (fixed FAB color)
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/a4559b4a4a0da4361fc702e3da305f36992261b6cec6069a25fe5543a97c76b97b7da0e1dfd96c8c3c4c4cba2c6f1315337bc661b9b493ce527cc1d7fe64cd21
+
+https://lh3.googleusercontent.com/3LXtutEHAlEMDvFc6jirulQem42q2tr9Y3NvHDrFdcrCaqPhrOh7t2f-22dV-T2ehEYM_TkFvsXQwZqgB0jPgD5QjFJMg4hTeWqcciU
+
+Example app with updated MDC type attributes (updated font family)
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/d0053c0355b9b22dc23eb2fd21905a5b88ce075550fb1c5b62201e5cc5a7f143fe5ea3eb9c6d63798c5dd339372618de9aba5469c015a27e60e613dae9a26564
+
+https://lh3.googleusercontent.com/SKKJ6Z-FW5-qYfJg-8K4micBec0wq6CW9Oy4YcQ95SNXlx6r4jPMjpOzvAZLG5lC5BagJuWx-I6XfDqQHxTsaVDf69muopIaHHdy
+
+Example app with updated MDC shape attributes (updated corner radii)
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/8aa3833605103e5fb7c1134c2de065f097fa824c2489745868436a937ff507469812024c586ffac841929ba263f387afdde5017ce9b366e99b0b58d44385b773
+
+https://lh3.googleusercontent.com/CSyt6ZqTdbRHoco1mvb_RIbqVmCkNB6Ztk3T3LChL4sxNVN3HtVjyo2So0KFKjl6EZ0Wph1qhwB2Uw2m2FMGttEk0HCTQ62VybAF
+
+<!-- Copyright 2020 Google LLC.
+   SPDX-License-Identifier: Apache-2.0 -->
+| AppCompat theme | MDC-Android theme |
+| --------------- | ----------------- |
+| `Theme.AppCompat` | `Theme.MaterialComponents` |
+| `Theme.AppCompat.NoActionBar` | `Theme.MaterialComponents.NoActionBar` |
+| `Theme.AppCompat.Dialog.*` | `Theme.MaterialComponents.Dialog.*` |
+| `Theme.AppCompat.DialogWhenLarge` | `Theme.MaterialComponents.DialogWhenLarge` |
+| `Theme.AppCompat.Light` | `Theme.MaterialComponents.Light` |
+| `Theme.AppCompat.Light.DarkActionBar` | `Theme.MaterialComponents.Light.DarkActionBar` |
+| `Theme.AppCompat.Light.NoActionBar` | `Theme.MaterialComponents.Light.NoActionBar` |
+| `Theme.AppCompat.Light.Dialog.*` | `Theme.MaterialComponents.Light.Dialog.*` |
+| `Theme.AppCompat.Light.DialogWhenLarge` | `Theme.MaterialComponents.Light.DialogWhenLarge` |
+| `Theme.AppCompat.DayNight` | `Theme.MaterialComponents.DayNight` |
+| `Theme.AppCompat.DayNight.DarkActionBar` | `Theme.MaterialComponents.DayNight.DarkActionBar` |
+| `Theme.AppCompat.DayNight.NoActionBar` | `Theme.MaterialComponents.DayNight.NoActionBar` |
+| `Theme.AppCompat.DayNight.Dialog.*` | `Theme.MaterialComponents.DayNight.Dialog.*` |
+| `Theme.AppCompat.DayNight.DialogWhenLarge` | `Theme.MaterialComponents.DayNight.DialogWhenLarge` |
+
+<!-- Copyright 2020 Google LLC.
+   SPDX-License-Identifier: Apache-2.0 -->
+| AppCompat theme overlay | MDC-Android theme overlay |
+| ----------------------- | ------------------------- |
+| `ThemeOverlay.AppCompat` | `ThemeOverlay.MaterialComponents` |
+| `ThemeOverlay.AppCompat.Light` | `ThemeOverlay.MaterialComponents.Light` |
+| `ThemeOverlay.AppCompat.Dark` | `ThemeOverlay.MaterialComponents.Dark` |
+| `ThemeOverlay.AppCompat.*.ActionBar` | `ThemeOverlay.MaterialComponents.*.ActionBar.*` |
+| `ThemeOverlay.AppCompat.Dialog.*` | `ThemeOverlay.MaterialComponents.Dialog.*` |
+| N/A | `ThemeOverlay.MaterialComponents.*.BottomSheetDialog` |
+| N/A | `ThemeOverlay.MaterialComponents.MaterialAlertDialog.*` |
+| N/A | `ThemeOverlay.MaterialComponents.MaterialCalendar.*` |
+| N/A | `ThemeOverlay.MaterialComponents.Toolbar.*` |
+
+<!-- Copyright 2020 Google LLC.
+   SPDX-License-Identifier: Apache-2.0 -->
+| Framework widget | AppCompat widget (replaced by [`AppCompatViewInflater`](https://developer.android.com/reference/androidx/appcompat/app/AppCompatViewInflater)) | MDC-Android widget (replaced by [`MaterialComponentsViewInflater`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/theme/MaterialComponentsViewInflater.java)) |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Button` | [`AppCompatButton`](https://developer.android.com/reference/androidx/appcompat/widget/AppCompatButton) | [`MaterialButton`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/button/MaterialButton.java) |
+| `CheckBox` | [`AppCompatCheckBox`](https://developer.android.com/reference/androidx/appcompat/widget/AppCompatCheckBox) | [`MaterialCheckBox`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/checkbox/MaterialCheckBox.java) |
+| `RadioButton` | [`AppCompatRadioButton`](https://developer.android.com/reference/androidx/appcompat/widget/AppCompatRadioButton) | [`MaterialRadioButton`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/radiobutton/MaterialRadioButton.java) |
+| `TextView` | [`AppCompatTextView`](https://developer.android.com/reference/androidx/appcompat/widget/AppCompatTextView) | [`MaterialTextView`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/textview/MaterialTextView.java) |
+| `AutoCompleteTextView` | [`AppCompatAutoCompleteTextView`](https://developer.android.com/reference/androidx/appcompat/widget/AppCompatAutoCompleteTextView) | [`MaterialAutoCompleteTextView`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/textfield/MaterialAutoCompleteTextView.java) |
+
+<!-- Copyright 2020 Google LLC.
+   SPDX-License-Identifier: Apache-2.0 -->
+| MDC-Android widget (moved from Design Support Library) | Design Support Library default style | MDC-Android default style | Default style attr |
+| ------------------------------------------------------ | ------------------------------------ | ------------------------- | ------------------ |
+| [`AppBarLayout`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/appbar/AppBarLayout.java) | `Widget.Design.AppBarLayout` | `Widget.MaterialComponents.AppBarLayout.*` | `appBarLayoutStyle` |
+| [`BottomNavigationView`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/bottomnavigation/BottomNavigationView.java) | `Widget.Design.BottomNavigationView` | `Widget.MaterialComponents.BottomNavigationView` | `bottomNavigationStyle` |
+| [`BottomSheetBehavior`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/bottomsheet/BottomSheetBehavior.java) | `Widget.Design.BottomSheet.Modal` | `Widget.MaterialComponents.BottomSheet.*` | `bottomSheetStyle` |
+| [`BottomSheetDialog`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/bottomsheet/BottomSheetDialog.java)<br>[`BottomSheetDialogFragment`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/bottomsheet/BottomSheetDialogFragment.java) | `Theme.Design.Light.BottomSheetDialog` | `Theme.MaterialComponents.*.BottomSheetDialog`<br>`ThemeOverlay.MaterialComponents.*.BottomSheetDialog` | `bottomSheetDialogTheme` |
+| [`CollapsingToolbarLayout`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/appbar/CollapsingToolbarLayout.java) | `Widget.Design.CollapsingToolbar` | N/A | N/A |
+| [`FloatingActionButton`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/floatingactionbutton/FloatingActionButton.java) | `Widget.Design.FloatingActionButton` | `Widget.MaterialComponents.FloatingActionButton` | `floatingActionButtonStyle` |
+| [`NavigationView`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/navigation/NavigationView.java) | `Widget.Design.NavigationView` | `Widget.MaterialComponents.NavigationView` | `navigationViewStyle` |
+| [`Snackbar`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/snackbar/Snackbar.java) | `Widget.Design.Snackbar` | `Widget.MaterialComponents.Snackbar` | `snackbarStyle` |
+| [`TabLayout`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/tabs/TabLayout.java)<br>[`TabItem`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/tabs/TabItem.java) | `Widget.Design.TabLayout` | `Widget.MaterialComponents.TabLayout` | `tabStyle` |
+| [`TextInputLayout`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/textfield/TextInputLayout.java)<br>[`TextInputEditText`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/textfield/TextInputEditText.java) | `Widget.Design.TextInputLayout` | `Widget.MaterialComponents.TextInputLayout.*` | `textInputStyle` |
+
+<!-- Copyright 2020 Google LLC.
+   SPDX-License-Identifier: Apache-2.0 -->
+| AppCompat widget | AppCompat default style | AppCompat default style attr | MDC-Android widget | MDC-Android default style | MDC-Android default style attr |
+| ---------------- | ----------------------- | ---------------------------- | ------------------ | ------------------------- | ------------------------------ |
+| [`AlertDialog.Builder`](https://developer.android.com/reference/androidx/appcompat/app/AlertDialog.Builder) | `AlertDialog.AppCompat`<br>`ThemeOverlay.AppCompat.Dialog.Alert` | `alertDialogStyle`<br>`alertDialogTheme` | [`MaterialAlertDialogBuilder`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/dialog/MaterialAlertDialogBuilder.java) | `MaterialAlertDialog.MaterialComponents`<br>`ThemeOverlay.MaterialComponents.MaterialAlertDialog` | `alertDialogStyle`<br>`materialAlertDialogTheme` |
+| [`AppCompatAutoCompleteTextView`](https://developer.android.com/reference/androidx/appcompat/widget/AppCompatAutoCompleteTextView) | `Widget.AppCompat.AutoCompleteTextView` | `autoCompleteTextViewStyle` | [`MaterialAutoCompleteTextView`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/textfield/MaterialAutoCompleteTextView.java) | `Widget.MaterialComponents.AutoCompleteTextView.*`<br>`ThemeOverlay.MaterialComponents.AutoCompleteTextView.*` | `autoCompleteTextViewStyle` |
+| [`AppCompatButton`](https://developer.android.com/reference/androidx/appcompat/widget/AppCompatButton) | `Widget.AppCompat.Button` | `buttonStyle` | [`MaterialButton`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/button/MaterialButton.java) | `Widget.MaterialComponents.Button` | `materialButtonStyle` |
+| [`AppCompatCheckBox`](https://developer.android.com/reference/androidx/appcompat/widget/AppCompatCheckBox) | `Widget.AppCompat.CompoundButton.CheckBox` | `checkboxStyle` | [`MaterialCheckbox`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/checkbox/MaterialCheckBox.java) | `Widget.MaterialComponents.CompoundButton.CheckBox` | `checkboxStyle` |
+| [`AppCompatImageView`](https://developer.android.com/reference/androidx/appcompat/widget/AppCompatImageView) | N/A | N/A | [`ShapeableImageView`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/imageview/ShapeableImageView.java) | `Widget.MaterialComponents.ShapeableImageView` | N/A |
+| [`AppCompatRadioButton`](https://developer.android.com/reference/androidx/appcompat/widget/AppCompatRadioButton) | `Widget.AppCompat.CompoundButton.RadioButton` | `radioButtonStyle` | [`MaterialRadioButton`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/radiobutton/MaterialRadioButton.java) | `Widget.MaterialComponents.CompoundButton.RadioButton` | `radioButtonStyle` |
+| [`AppCompatTextView`](https://developer.android.com/reference/androidx/appcompat/widget/AppCompatTextView) | `Widget.AppCompat.TextView` | N/A | [`MaterialTextView`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/textview/MaterialTextView.java) | `Widget.MaterialComponents.TextView` | N/A |
+| [`CardView`](https://developer.android.com/reference/androidx/cardview/widget/CardView) | `CardView` | `cardViewStyle` | [`MaterialCardView`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/card/MaterialCardView.java) | `Widget.MaterialComponents.CardView` | `materialCardViewStyle` |
+| [`PopupMenu`](https://developer.android.com/reference/androidx/appcompat/widget/PopupMenu) | `Widget.AppCompat.PopupMenu.*` | `popupMenuStyle` | N/A | `Widget.MaterialComponents.PopupMenu.*` | `popupMenuStyle` |
+| [`SwitchCompat`](https://developer.android.com/reference/androidx/appcompat/widget/SwitchCompat) | `Widget.AppCompat.CompoundButton.Switch` | `switchStyle` | [`SwitchMaterial`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/switchmaterial/SwitchMaterial.java) | `Widget.MaterialComponents.CompoundButton.Switch` | `switchStyle` |
+| [`Toolbar`](https://developer.android.com/reference/androidx/appcompat/widget/Toolbar) | `Widget.AppCompat.Toolbar` | `toolbarStyle` | [`MaterialToolbar`](https://github.com/material-components/material-components-android/blob/master/lib/java/com/google/android/material/appbar/MaterialToolbar.java) | `Widget.MaterialComponents.Toolbar` | `toolbarStyle` |
+
+<!-- Copyright 2020 Google LLC.
+   SPDX-License-Identifier: Apache-2.0 -->
+| AppCompat / framework color attr | MDC-Android color attr |
+| -------------------- | ---------------------- |
+| `colorPrimary` | `colorPrimary` | Keep |
+| `colorPrimaryDark` | `colorPrimaryVariant`<br>(specify `android:statusBarColor` explicitly) |
+| N/A | `colorOnPrimary` |
+| `colorAccent` | `colorSecondary` |
+| N/A | `colorSecondaryVariant` |
+| N/A | `colorOnSecondary` |
+| N/A | `colorSurface` |
+| N/A | `colorOnSurface` |
+| `android:colorBackground` | `android:colorBackground` |
+| N/A | `colorOnBackground` |
+| `colorError` | `colorError` |
+| N/A | `colorOnError` |
+| `android:textColorPrimary`, `android:textColorSecondary`, etc. | N/A<br>(prefer MDC "on" attrs or use defaults) |
+| `colorControlNormal`, `colorControlHighlight`, `colorControlActivated` | N/A<br>(prefer MDC "on" attrs or use defaults)<br>_**Note:** These are still used to tint [`MaterialCheckBox`](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/checkbox/MaterialCheckBox.java#L119), [`MaterialRadioButton`](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/radiobutton/MaterialRadioButton.java#L110), [`SwitchMaterial`](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/switchmaterial/SwitchMaterial.java#L148) and [`MaterialToolbar` icons](https://github.com/material-components/material-components-android/tree/master/lib/java/com/google/android/material/appbar/res/values/styles.xml#L78)._ |
+
+<!-- Copyright 2020 Google LLC.
+   SPDX-License-Identifier: Apache-2.0 -->
+| AppCompat text style | MDC-Android text style | MDC-Android text attr |
+| -------------------- | ---------------------- | --------------------- |
+| `TextAppearance.AppCompat.Display4` | `TextAppearance.MaterialComponents.Headline1` | `textAppearanceHeadline1` |
+| `TextAppearance.AppCompat.Display3` | `TextAppearance.MaterialComponents.Headline2` | `textAppearanceHeadline2` |
+| `TextAppearance.AppCompat.Display2` | `TextAppearance.MaterialComponents.Headline3` | `textAppearanceHeadline3` |
+| `TextAppearance.AppCompat.Display1` | `TextAppearance.MaterialComponents.Headline4` | `textAppearanceHeadline4` |
+| `TextAppearance.AppCompat.Headline` | `TextAppearance.MaterialComponents.Headline5` | `textAppearanceHeadline5` |
+| `TextAppearance.AppCompat.Title`<br>`TextAppearance.AppCompat.Large` | `TextAppearance.MaterialComponents.Headline6` | `textAppearanceHeadline6` |
+| `TextAppearance.AppCompat.Subhead`<br>`TextAppearance.AppCompat.Menu` | `TextAppearance.MaterialComponents.Subtitle1` | `textAppearanceSubtitle1` |
+| `TextAppearance.AppCompat.Small` | `TextAppearance.MaterialComponents.Subtitle2` | `textAppearanceSubtitle2` |
+| `TextAppearance.AppCompat.Body1` | `TextAppearance.MaterialComponents.Body1` | `textAppearanceBody1` |
+| `TextAppearance.AppCompat.Body2` | `TextAppearance.MaterialComponents.Body2` | `textAppearanceBody2` |
+| `TextAppearance.AppCompat.Button` | `TextAppearance.MaterialComponents.Button` | `textAppearanceButton` |
+| `TextAppearance.AppCompat.Caption` | `TextAppearance.MaterialComponents.Caption` | `textAppearanceCaption` |
+| N/A | `TextAppearance.MaterialComponents.Overline` | `textAppearanceOverline` |
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/5dbf44089ea3489a261be2a236d64affbf5ad20d4bbb60c26710e8adf552bc3117ffe8907751fd2444dea3e50475c904bb85e6388d1486e4a51758620ac3c0e9
+
+https://lh3.googleusercontent.com/Vrmz8X7tAk7W7ghz6oQ9Ik2Z95UtS6LPPR1mUYWjtTNcdMDJvelHxTgfVeWj5hRMa1iVriE0vTp3HHKNfRC8CzObwSLwGS14WPw87g
+
+Android, Components, How-to
+
+{}
+
+Discover the benefits of upgrading to Material Design Components for your Android app, including improved visual design, enhanced user experience, and increased search rankings.
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/8245a0c9e7f6d1730566c578b9325aad7aa2c3382ca17be4d90e4a61ceba8de6b33f8950fb200f8435e2103ae49692da8ff05b4d04aeb382687fc7ef6c22142f
+
+https://lh3.googleusercontent.com/0JoUy7P_RK0o6HFHxnj_K9DaSbZnj4bM0qhZPORnqkPGZh5X4J7XPen-nBy_FxCUPh2il7QiJNvSjA7zkUVut_3Jgz502JIGfPXTRyk
+
+Migrating to Material Components for Android
+
+2020-04-16T13:00:00
+
+migrate-android-material-components
+
+From Design Support Library 👉 MDC 1.0.0 👉 MDC 1.1.0 and beyond
+
+Migrating to Material Components for Android
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/94ccae5400c110b59e0a752e8e67a0d911b9ba63ce354ed4a9411a36992dc5866db038eea65fabe74ccef3b02bf04cd09f852f40647e788c30d1ad4501fc7c20
+
+https://lh3.googleusercontent.com/TeLZea0Z3_3eKsf_VU8bMh3Nn_HNmY3gLNl915hP41iP3X6ZVaCZt3UO-n1PbYVSIN09dOanns3gqMM5bJhJ3es1bJt5Zk7Zq_6F8Q
+
+/blog/android-material-motion
+
+Material Blog
+
+Building Beautiful Transitions with Material Motion for Android
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/2f95c86bdc1b02ce73d92619c01d8e49eed9376d66b001fefc3322502ceab9d6e0a58b35639ea0777289ba6163c3a79dd95f3108d519fafbc9eea399cb404b58
+
+https://lh3.googleusercontent.com/uX7KzRFGZKbProyCEHQKohPAN8DFI-IJqbRrvvzEMqnoVp06w7g_LW7d5HfKXPXtObG_OD0GVBl69yWS8eWP8DjfnJVHijIApnSW
+
+/blog/android-material-theme-type
+
+Material Blog
+
+Building a Material Theme on Android: Typography
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/1a22d1f6b1218d5a2e18535bbdf793f184a27980c1b8063006968aac95a521b95baddadeb3c14a6a2e07398ab15d597c962454f22abdb5f8a8d1e233725cd5d3
+
+https://lh3.googleusercontent.com/Xvk1QwDoH9IbK1BQIKCiF08ViXB3y9X9CRNZ_CiPM2XrgjCzF9ZJHBPlhH15ylunDGKg_AwatpSGTE3JkZnQyyzlTHgBTRFpqjVQ
+
+/blog/android-material-theme-shape
+
+Material blog
+
+Building a Material Theme on Android: Shape
+
+mio-example

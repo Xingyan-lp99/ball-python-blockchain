@@ -1,0 +1,146 @@
+# Say hello to Roboto Serif
+
+Source: https://m3.material.io/blog/roboto-serif
+Content endpoint: https://m3.material.io/page-data/Posts/5984499829309440.json
+Content version: 2026-11-17_08-50-14
+
+This is an upstream documentation snapshot. HTML fragments and media URLs are preserved.
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/96c0b6c59fb590863be71e42ad80e9e770d95802130c16404eb56c3d1d05a414c3e78880c9b766b683eee87fe9249d4923e492990bb9d68a66e1644c6805162f
+
+https://lh3.googleusercontent.com/hNYP_Bjyy6pWjkWH0IGOCmTNfGx4N2SLujRA74KTe1WbSU227F3Jnrd9ebbKjs1Nv7doYCOjW9kvOTRbYy2jOHIaOHL72jspvUImLcbuTbziQ7VGr3M
+
+Sarah Daily
+
+Contributor for Google Fonts
+
+mio-example
+
+<p>Get it <a href="https://fonts.google.com/specimen/Roboto+Serif" target="_blank" rel="noopener">on Google Fonts</a> and check out the specimen: <a href="https://storage.googleapis.com/material-design/downloads/Roboto_Serif_Specimen.pdf" target="_blank" rel="noopener">Getting Comfortable With Roboto Serif</a>.</p>
+<p>It's been almost 20 years since the introduction of Matthew Carter&rsquo;s Georgia&mdash;one of the first <a href="https://fonts.google.com/knowledge/glossary/serif" target="_blank" rel="noopener">serif typefaces</a> designed to make reading easier on the low-resolution screens of the time. That year (1993), Americans with Internet access spent <a href="https://slate.com/technology/2009/02/the-unrecognizable-internet-of-1996.html#:~:text=In%201996%2C%20Americans%20with%20Internet,online%2C%20according%20to%20Nielsen.)" target="_blank" rel="noopener">fewer than 30 minutes</a> a month surfing the Web. Now we spend almost <a href="https://www.forbes.com/sites/johnkoetsier/2020/09/26/global-online-content-consumption-doubled-in-2020/?sh=677258762fde" target="_blank" rel="noopener">seven hours <em>a day</em></a>.</p>
+<p>Thankfully, reading on-screen has gotten a lot more comfortable since the 90&rsquo;s. For one thing, you can pick up your device and move over to the sofa. <a href="https://fonts.google.com/knowledge/glossary/letterform" target="_blank" rel="noopener">Letterforms</a> are also crisper, smoother, and more legible on today&rsquo;s screens/devices&mdash;and they render more quickly. But another huge (though perhaps less obvious) factor in all of this is the advancement of font technology. Georgia was one of the first eleven &ldquo;Core Fonts for the Web&rdquo; that paved the way for <a href="https://fonts.google.com/knowledge/glossary/open_type" target="_blank" rel="noopener">OpenType</a> and, eventually, <a href="https://fonts.google.com/knowledge/glossary/variable_fonts" target="_blank" rel="noopener">variable fonts</a>. Today, a well-designed, OpenType serif can be just as readable on-screen as it is in print. And a well-designed variable serif can give readers additional benefits on-screen. Enter: <a href="https://fonts.google.com/specimen/Roboto" target="_blank" rel="noopener">Roboto Serif</a>.</p>
+<div style="text-align: center; position: relative; padding-bottom: 56.25%; max-width: 100%; height: 0;"><iframe style="border-radius: 16px; position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/wtBS5wRpaHg" frameborder="0" allowfullscreen=""></iframe></div>
+<h4>&ldquo;Our aim has been to make a typeface that you could use for long-form journalism or a novel&mdash;something very long and involved; an immersive piece of text that you read on your phone&mdash;without wanting to complain about it.&rdquo; <br />&mdash;Greg Gazdowicz, Commercial Type</h4>
+<p>Roboto Serif joins the functional Roboto <a href="https://fonts.google.com/knowledge/glossary/superfamily" target="_blank" rel="noopener">superfamily</a> alongside <a href="https://fonts.google.com/?query=roboto" target="_blank" rel="noopener">Roboto (sans serif), Mono, Slab, and Condensed</a>. But unlike Roboto Slab, the design of which was derived directly from Roboto, this newest serif brings its own identity to the collection. &ldquo;We wanted it to feel comfortable next to a <a href="https://fonts.google.com/knowledge/glossary/sans_serif" target="_blank" rel="noopener">sans-serif</a>, and not to feel cluttered. It doesn't need to have serifs everywhere to drive home the point that, &lsquo;I am a serif and have serifs in all the places serifs go,&rdquo; said Rob Giampietro (formerly of Google Fonts, now a UX manager at Google). Giampietro initiated and guided the early development of the typeface with <a href="https://commercialtype.com/about/greg_gazdowicz" target="_blank" rel="noopener">Greg Gazdowicz</a> of <a href="https://commercialtype.com/" target="_blank" rel="noopener">Commercial Type</a>. With their extensive experience in developing typefaces for longform publications (The Guardian, Vanity Fair, Helsingin Sanomat et al.), Commercial Type was a natural fit for the Google Fonts project.</p>
+<p>&lt;mio-image index=0&gt;&lt;/mio-image&gt;</p>
+<p>Gazdowicz and his team took an unconventional approach to type design with Roboto Serif. Instead of building off of an existing or historical typeface, they &ldquo;atomized&rdquo; the letterforms, breaking down the serif typeface to its elemental parts. Then they built them back up by experimenting with various <a href="https://fonts.google.com/knowledge/glossary/typeface" target="_blank" rel="noopener">proportions</a>, <a href="https://fonts.google.com/knowledge/glossary/contrast" target="_blank" rel="noopener">contrast</a> types, <a href="https://fonts.google.com/knowledge/glossary/terminal" target="_blank" rel="noopener">terminal</a> shapes, and serif shapes to find out what was most <a href="https://fonts.google.com/knowledge/glossary/legibility_readability" target="_blank" rel="noopener">legible</a> for each character. &ldquo;It was really a matter of stripping out subtleties to find very deliberate shapes&mdash;and make deliberate decisions,&rdquo; said Gazdowicz.</p>
+<p>&lt;mio-image index=1&gt;&lt;/mio-image&gt;</p>
+<p>Challenging the basic assumptions about the elements of type design, he asked, &ldquo;Do ball terminals need to be balls? Do serifs need to be serifs? Which shapes could work well here, brackets or not? What level of contrast works well? We&rsquo;re not just looking at the highest quality screens, or developing for lower quality ones, but asking, &lsquo;what is native to reading on screen?&rsquo;&rdquo;</p>
+<p>Each letterform was drawn from scratch to create a typeface that &ldquo;thinks about <a href="https://fonts.google.com/specimen/Roboto" target="_blank" rel="noopener">Roboto</a>, but is a new and original design,&rdquo; said Giampietro.</p>
+<h4>&ldquo;Often, when a type designer talks about doing something experimental, they mean doing something weird or distressed, or a funny letter form. But this was experimental in the sense of coming up with thesis statements&mdash;and then testing them.&rdquo; <br />&mdash;Greg Gazdowicz, Commercial Type</h4>
+<p>The resulting aesthetic harmonizes with the rest of the Roboto superfamily instead of duplicating it in serif form. With curves anchored to decisive <a href="https://fonts.google.com/knowledge/glossary/terminal" target="_blank" rel="noopener">terminals</a>, it&rsquo;s minimal with just a &ldquo;whisper&rdquo; of a serif. This minimalism separates it from other variable serif fonts made for on-screen reading (e.g. another favorite, <a href="https://fonts.google.com/specimen/Literata?query=literata" target="_blank" rel="noopener">Literata by TypeTogether</a>, which has a slightly more intricate design) and makes it more versatile. In fact, Gazdowicz wanted to create a serif for contexts where they usually don&rsquo;t work at all. &ldquo;If you pick Roboto Serif for a project, you can use it &lsquo;on the side&rsquo; of your UI for infographics, or even menus,&rdquo; he said.</p>
+<p>In addition to its minimal design that works well at any scale, Roboto Serif was created as a variable font with <a href="https://fonts.google.com/knowledge/glossary/weight" target="_blank" rel="noopener">weight</a>, <a href="https://fonts.google.com/knowledge/glossary/width" target="_blank" rel="noopener">width</a>, <a href="https://variablefonts.typenetwork.com/topics/grades/variations" target="_blank" rel="noopener">grade</a>, and <a href="https://fonts.google.com/knowledge/glossary/optical_sizes" target="_blank" rel="noopener">optical size axes</a>.</p>
+<p>&lt;mio-image index=2&gt;&lt;/mio-image&gt;</p>
+<p>Roboto Serif&rsquo;s Optical Size axis is especially noteworthy. Optical sizes are different versions of a typeface optimized for use at specific sizes or size ranges.&nbsp;In order to include an optical size axis in a variable font, type designers draw the typeface at least twice&mdash;once for small applications (e.g. <a href="https://fonts.google.com/knowledge/glossary/body" target="_blank" rel="noopener">body</a> text) and another for large applications (e.g. <a href="https://fonts.google.com/knowledge/glossary/display" target="_blank" rel="noopener">display</a> text). Then the user can designate any point in between those two extremes to optimize the design for the size of their text.</p>
+<p>&lt;mio-image index=3&gt;&lt;/mio-image&gt;</p>
+<p>Small optical sizes tend to have lower stroke contrast, more open spacing, taller x-heights, and exaggerated details in comparison their display counterparts, but these transformations aren't necessarily linear from micro to text and from text to display. For Roboto Serif, Commercial included six optical sizes (micro, small text, text, deck, display, and poster). This level of refinement across such a wide range of optical sizes makes it a perfect workhorse; a go-to typeface for almost anything at any size. And, with the CSS property &ldquo;<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-optical-sizing" target="_blank" rel="noopener">font-optical-sizing</a>&rdquo; that&rsquo;s now on by default in every major browser, type displayed with a variable font like Roboto Serif optimizes automatically for on-screen readability.</p>
+<h4>&ldquo;In some ways, this is a proof of concept in the world for variable fonts. We wanted to make a showpiece of a vanilla text typeface for comfortable reading that can be finely adjusted.&rdquo; <br />&mdash;Greg Gazdowicz, Commercial Type</h4>
+<p>Roboto Serif is Open source and available now from Google Fonts. Try it out and let us know what you think!</p>
+<p>Illustrations by Kyle Platts, Art direction by Elana Schlenker, Animations by Q Choi</p>
+<h2>About the type designer</h2>
+<p>Greg Gazdowicz (b. 1988) hails from the suburbs of Gaithersburg, Maryland. He studied graphic design at the Maryland Institute College of Art, then completed the Type@Cooper Extended program in 2014, months after joining the design staff of Commercial Type. Greg has designed custom typefaces for Mailchimp, La Repubblica, Google, and New York magazine, and has released several families through Commercial Type, including Robinson and the ambitious Terza family.</p>
+<h2>About the type foundry</h2>
+<p>Based in New York and London, Commercial Type is a joint venture between Paul Barnes and Christian Schwartz, who have collaborated since 2004 on various typeface projects, beginning with the award winning Guardian Egyptian, through to typefaces for clients worldwide including Vanity Fair; Helsingin Sanomat; T, The New York Times Style Magazine; MoMA; Visa; and Chobani. Commercial Type has also published typefaces that have helped to define the look of the last 10 years, including Graphik, Druk, and Dala Floda.</p>
+<p></p>
+
+Illustration of a dog holding a tablet with Roboto Serif characters
+
+Roboto Serif is a minimal workhorse for comfortable reading by Commercial Type and Google Fonts.
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/e2775526a474686e58a224594326f7e20544e93c6a74f5b1c1984a642034364bd2db910800279bba25384f229bfd30cd23bc646c3915f08c216c8f35af72d2b2
+
+https://lh3.googleusercontent.com/6soF1BF8ULbAzsfhih9SwLqWrgIAs1JieK8Ibndo6Q0PxfgkHqEk9N8VxjQ0n1rzln-e_HJsykS-miFAcREO62hX-xFC4iM0T8wZoufP4ObPejBtzOg
+
+Illustration of a person chiseling the Roboto Serif “M” in their workshop
+
+Roboto Serif was created by experimenting with different shapes and proportions to find out what was most readable.
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/4654a13ac3016ec6a2c4b1bf22e394f4c3d57d703e229a9486c6ef83f159e8b319a1fce80285f5116129dccee9888bf22a837fbcec6e34fedb65e47f9675d642
+
+https://lh3.googleusercontent.com/ZY4sGHWIrCdia7ZFAHbuk6_KEjsbTqa8w3fYrs3kFQTEqV6rLnrny2Tl4J6SNSsY9pE8W5ICbYibKylU3J1_Jsky_FybQ2JjkSEnAUrB-Dw7yKLGmwg
+
+Roboto Serif automatically optimizes to be most legible for the point size you choose.
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/5224a92471aa0ad94819a33a10fca20677a57927389aa65a2ef283df635b833b7c3300a3b7c403d8e8bfe2b7497125c3475a53eda285c4ba6129323dc741b3cd
+
+https://lh3.googleusercontent.com/Dz59C55hWNn7bUef2BZEXwSb08sJFbga7jM1WU3W8fu9JvTkP9JLW3hfoVricvTiaYHumh6cewgSCS4OMHFKN-GToZOasag3KtL2VZHatN8qvl5j5UQ
+
+144pt “optical size” set in both 144pt optical size (left) and 8pt optical size (right), with illustrations
+
+144pt Roboto Serif set in 144pt optical size (left) and 8pt optical size (right)
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/d335d1be375c21fb8abe5fd649f727180c8abf67e7abe9fc8f60388670c91f97a1bb69048ae3c9b9f14609972a911b8f8760036d9eec42fb9c957134651bf844
+
+https://lh3.googleusercontent.com/OKyWtrS86ncDFSlBN2mW9pYxV3CMDclNNp32KfUPZ_CnJQPeN-kvzRuFKBX0OpS8Q5dnor_5PcdgdUL6_gEnN2xIzP_PAYLyMV3GW20nEttqcGTySl26
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/78117307934bc41fe711efd126e468a57f59528dcf755a0a860565dc2ed240a3aedf51f10c4eac3c2887ee21a14fa64977e70f281f235d72948c4822d0e43c74
+
+https://lh3.googleusercontent.com/c9g6hmATZbh4zbNGJzTheQB5xSMAb5V-5qScScebsPru-oXmtXtV5QCEqA1qfA71riID46K_UQBOWlsDflXtC57JTEOossFTfFZ71JbxKri945OqvA
+
+{}
+
+Roboto Serif  - The newest member of the Roboto superfamily is designed to make reading more comfortable at any size, in any format.
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/a8d77c94be6c1c3ec6ff323da97f3717456283480159b1d37fc7be53e0a54081c1e276b693098341c196c5e7c4688b5261e7ccd26a2a570393e18f8e7e0796b6
+
+https://lh3.googleusercontent.com/WFrCzMVDM3wtNQ7PmZ11HGGHw0xufZ8mCF4GRBImagsbXJKKoiccOdtc-g_gT0BRo0x7QUU1IBlXMjiTocSC_MzblDofdZi_m9L2lf0jiO2U4Ngf2CgR
+
+Say hello to Roboto Serif - Material Design 3
+
+2022-02-16T10:00:00
+
+roboto-serif
+
+The newest member of the Roboto superfamily is designed to make reading more comfortable at any size, in any format.
+
+Say hello to Roboto Serif
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/c47fc7865695a86449f19e1148279454975a5d7c4f6b6e7917ee411604e87279f0f3a1f1ed19a97cb0cfa10db2a830072e452406c8481297f8e4e3915e7d88f0
+
+https://lh3.googleusercontent.com/CqOkQHV6IkWjWVJYZqyTktoGtyfAvNs9A_F8nNfmZG0qrWDqcZlQlTGugKWViMgVlfvdIfsO0agfHFnMulbNC3D8jdSto8GI5Z-AbVUtUKsoxLBNS0L6
+
+/blog/google-fonts-knowledge
+
+Announcing Google Fonts Knowledge
+
+Material Blog
+
+Announcing Google Fonts Knowledge
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/10670050668c02a15305405869d10261ae9184c4b9943da19db1f77dfec09cbadff181927e3ee1b025e024736848d2c53950c779e44a033489d2f68c57607b44
+
+https://lh3.googleusercontent.com/-WjjawJvR9AIODJEhrs_slzoG32Y_Ip0a0c_qe04DMIR2zS0UGQxrmY7DU0LH8--_G45NFBmIFEmAdGxbVC31KCl4Zw6h3Yz-L3pff45FVFM8rINVFw
+
+Designing Text for the People Who Read It
+
+/blog/designing-text-visual-acuity-research
+
+Material Blog
+
+Designing Text for the People Who Read It
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/4180aa4fb3c63b75aa9d71456c3de2018bc7c8b267e6830039ebbb7d5cecff37d2ab59e8e8ee75db0f415b921951e5bd201336dd9b04ca9ffc9894042fd2755a
+
+https://lh3.googleusercontent.com/9ECmYVdpqX5LaYTjMOohOg7903tlfqSQNtCxBA8YXAHr6zwYwALvESiJHmkadHEUrN_QXzbEXbzSRbqxMVQBIlmsctM2ecnyh7gCwTFX-NhM5hXjang
+
+/blog/noto-announcement
+
+Noto now on Google Fonts Website
+
+Material Blog
+
+Looking for Noto? It’s now on the Google Fonts website and API
+
+mio-example

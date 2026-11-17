@@ -1,0 +1,124 @@
+# Announcing the Material Design Award Winners for 2020
+
+Source: https://m3.material.io/blog/mda-2020-winners
+Content endpoint: https://m3.material.io/page-data/Posts/6336736650854400.json
+Content version: 2026-11-17_08-50-14
+
+This is an upstream documentation snapshot. HTML fragments and media URLs are preserved.
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/abaff4635752991dc1937a8775f6c3c7a537929d441f2c7de29026451c7df4684a40caced3a79377da39741823baced3332d5fb57dc1d072ae755bff76a3c39e
+
+https://lh3.googleusercontent.com/w66t2MIGWk8KNQlOx0Brc1qgrhluj-i1FkUg31Q23hbJLyamIFe77ulcqDd5OhVhu0Fer2tM2azfxxpgrzL_2gwMoD6DKTsqdghAAw
+
+Rich Fulcher
+
+Director of UX, Material Design
+
+mio-example
+
+<h2>Announcing the Material Design Award Winners for 2020</h2>
+<p>It&rsquo;s time once again to celebrate the product teams who used ingenuity and creativity to bring Material to life. The Material Design Award winners serve as great examples of Material Design in action, using the system as a flexible, customizable foundation for beautiful, usable experiences.</p>
+<p>This year&rsquo;s winners were selected from hundreds of open nominations, across three specific categories: Material theming, motion, and dark theme. They&rsquo;ve each adapted Material in meaningful ways &ndash; from designing a gentle app for those living with epilepsy, to building a comprehensive approach to color, imagery, and components that helps users navigate an online store with ease.</p>
+<p>Read about each of the winners below, and stay tuned for more in-depth content on how each team created their award-winning experiences.</p>
+<h2><em>Material Theming</em> Winner: Moooi.com</h2>
+<p>&lt;mio-video index=0&gt;&lt;/mio-video&gt;</p>
+<p>In keeping with their namesake, the Dutch word for "beauty," <a href="https://www.moooi.com/">Moooi</a> focuses on aesthetic fundamentals to create an immersive experience for their digital flagship. As purveyors of design-forward lighting and furnishing, they work with full bleed color, typography, and scale, using a number of reusable components to balance expressiveness and practicality.</p>
+<p>Large, graphic headlines and body text set in Sang Bleu are complemented by body text set in Gill Sans. Choosing two large type families gives Moooi&rsquo;s type system a broad expressive range for conveying product information, site navigation, and editorial headlines across the site.</p>
+<p>Moooi&rsquo;s approach to color is restrained&mdash;moments of full-bleed color blocking are used to indicate where a visitor is within the site, and the simple palettes of taupe, white, and black are mirrored by immersive imagery that introduces products and collections. The homepage is led by a dark background and immersive imagery, transitioning into lighter backgrounds and images as one continues down the page.</p>
+<p>Underpinning Moooi&rsquo;s approaches to typography, color, and imagery, a series of reusable components allow users to confidently navigate the site and perform actions like filtering and reviewing product specifications.</p>
+<p>We can't highlight Moooi's application of Material Theming without commending them for their accessibility effort. They are using accessible color contrast between text, iconography and background colors, and have invested in a multimodal approach that uses clear hierarchy and semantics which allows users to navigate with their keyboard or voice to move through the site.</p>
+<h2><em>Material Motion</em> Winner: Epsy</h2>
+<p>&lt;mio-video index=1&gt;&lt;/mio-video&gt;</p>
+<p>For an app whose aim is to better the lives of those living with epilepsy, <a href="https://www.epsyhealth.com/">Epsy</a> uses motion meaningfully, guiding users through critical tasks to better their quality of life, like logging triggers, taking medication, and building community connection.</p>
+<p>Motion serves a clear purpose in Epsy, and is crafted with care and restraint; from gentle inter-screen choreography to custom animated progress indicators and icons in the bottom navigation bar.</p>
+<p>Most animations in the app use longer timing to impart a feeling of calmness and ease. Typically utilitarian elements and features like a calendar grid that might otherwise feel clinical instead become more engaging and meaningful with motion.</p>
+<p>These touches don&rsquo;t just help to guide users toward more confident mental models when navigating the app &ndash; they provide subtle encouragement to continually take actions that help power the experience. Epsy&rsquo;s thoughtful application of motion design facilitates a richer environment for keeping record of an individual&rsquo;s experience with epilepsy, aiming to help create better outcomes outside the digital environment.</p>
+<h2><em>Dark Theme</em> Winner: KAYAK</h2>
+<p>&lt;mio-video index=2&gt;&lt;/mio-video&gt;</p>
+<p><a href="https://www.kayak.com/mobile">KAYAK</a> has taken their comprehensive price comparison and travel booking experience to the next level by translating their brand into a dark theme, using subtle but intentional applications of color. Their unique orange brand color is used sparingly to give prominent elements, such as their most important navigation icons, top hierarchy, leaving the majority of space dedicated to dark surfaces. KAYAK&rsquo;s custom dark background mixes in a hint of blue that works in harmony with secondary blue accents found throughout the app.</p>
+<p>With the use of the dark blue-grey surfaces - rather than pure black - KAYAK is able to retain the same elevation model across light and dark themes. The higher their surfaces are elevated, the closer they are to an implied light source, which is displayed through a subtly lighter surface color. KAYAK&rsquo;s dark theme also accurately renders cast shadows in a dark environment &ndash; they are still dark. The surface is dark enough to display light text on their highest and lightest elevated surface, maintaining accessible color contrasts throughout.</p>
+<p>KAYAK has taken a considered look at the various needs and experiences of the people using their product, and integrated those considerations directly by making dark theme a pivotal part of their redesign.</p>
+
+Moooi-crop-02.mp4
+
+https://storage.googleapis.com/material-io-design/m2/assets/downloads/4f6a7143cffb298fd44f09ae67792b2be4f52221237fb06a96379a0b91ce779605a796adbcf3ae7e24759b4b45ab008811b27c6dd94102e40be7dda9290cdd8c.mp4
+
+EPSY-crop-02.mp4
+
+https://storage.googleapis.com/material-io-design/m2/assets/downloads/830ce5bdf28c1a31d3d8c6ef5c608cb087ec8b410df29580103050e87a78271c28819d129941d398dbf575e39b7079852a7cdec62e65df502f05c704179c8ee2.mp4
+
+KAYAK-crop_3.mp4
+
+https://storage.googleapis.com/material-io-design/m2/assets/downloads/d5f0eb3c0e3b744d8de84ec87c61d8b2e96fbfa4681e8f3e6ab8f36a79fe2a8fe27a1d2fd33257c505bce830120e2adb1f6969d266e50e2967e064f2ad81595f.mp4
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/91ba0b35e6779c8d045106044c4e1a5451a3638d5f695db70875aadc362408052f928826bbf55eed54dc5e494d73ea3bd147764dd11315bfb82102e9bbcd09e2
+
+https://lh3.googleusercontent.com/WdXw7Oap9phzDPXmTs0XG04nxO8Pe7inIyVNAfeVp6eQBwyXjn_frfGMgfLwubTL-DyMvR_HLpgkhiaatIM42NmmoH87IILH_cTzVQ
+
+news announcements partners
+
+ 
+
+{}
+
+Celebrating the product teams that bring Material to life
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/96b74724ec78723c17580d39f60174eb98bb6211829f9287f1bbb34f66aac49828df18acc30c6d9e0e1adc26b00bd71902a787f038b8458e66dde6d28b585039
+
+https://lh3.googleusercontent.com/zKBI9FHIOUSFt6l7ZxzKx7yDdPpD2R-l9MxNl8PqpTUNusDuhdSyKhBpYZ46ANyyNixgJOnZ515VyPZjpFX1YrtxCLvBKJvKpGhcvQ
+
+Announcing the Material Design Award Winners for 2020
+
+2020-12-14T09:00:00
+
+mda-2020-winners
+
+Celebrating the product teams that bring Material to life
+
+Announcing the Material Design Award Winners for 2020
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/105822866388ad44d4cceef66e124794d6e0e08dd929c6502d70cfcb8ad9ac90a94f6163ee20918cc4b4afc4a96ca391eb957cab5fbfdc267e8531aaeb2c0be9
+
+https://lh3.googleusercontent.com/J9qZ5CW5m_hIUn30JlgkglFiHXjIW8UvMJRPPnJIZQq2G97u3DmZhFz5iumanqSnjkwRj_Epf2wnHGK1iyidiczzgzQIqrq3_l6-zw
+
+/blog/material-design-youtube-channel
+
+Introducing the Material Design YouTube Channel
+
+Material Blog
+
+Introducing the Material Design YouTube Channel
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/94ccae5400c110b59e0a752e8e67a0d911b9ba63ce354ed4a9411a36992dc5866db038eea65fabe74ccef3b02bf04cd09f852f40647e788c30d1ad4501fc7c20
+
+https://lh3.googleusercontent.com/TeLZea0Z3_3eKsf_VU8bMh3Nn_HNmY3gLNl915hP41iP3X6ZVaCZt3UO-n1PbYVSIN09dOanns3gqMM5bJhJ3es1bJt5Zk7Zq_6F8Q
+
+/blog/android-material-motion
+
+Material Blog
+
+Building Beautiful Transitions with Material Motion for Android
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/8d86c03a697cda71fef8a635511beaac0afd8cc1525bf9a58c463604c04d94043442e5514c69c0b290fbed89e0381818b473f41f31caa2ff6cd5e83c31a5b0ce
+
+https://lh3.googleusercontent.com/P5yuAkqJt699qGbcw1uLTOHMdzLMnMI6m7I_Ig75FALDP3eS4m0mYKkxfespu53DvHtu16YorQznqZuaLYVI8eDsTCjn3p_zXGdI-g
+
+/blog/dark-theme-design-tutorial-video
+
+Material blog
+
+Craft a Dark Theme
+
+mio-example

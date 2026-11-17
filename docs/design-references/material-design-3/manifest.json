@@ -1,0 +1,2708 @@
+{
+  "retrieved_at_utc": "2026-11-17T18:13:44.473608+00:00",
+  "content_version": "2026-11-17_08-50-14",
+  "route_bundle_url": "https://m3.material.io/static/angular/main.7b04c9960e6358df.js",
+  "documents": [
+    {
+      "url": "https://m3.material.io/",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/a513b32c-174e-4b85-8553-60701c021797.json",
+      "path": "docs/design-references/material-design-3/raw/index.json",
+      "readable_path": "docs/design-references/material-design-3/pages/index.md",
+      "kind": "carbon",
+      "title": "Material Design",
+      "bytes": 36710,
+      "sha256": "5f51062e7d90b1b901f63c18aeb8aa2f2ebbca7436f5065bf7c1469de3eb5581"
+    },
+    {
+      "url": "https://m3.material.io/blog",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/3d61a289-baf3-444d-8ed7-f2ad681ea9a5.json",
+      "path": "docs/design-references/material-design-3/raw/blog.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog.md",
+      "kind": "carbon",
+      "title": "Material Design Blog",
+      "bytes": 184073,
+      "sha256": "3b0a8da0a91a284925576fd3352d748997a3c0f75d80efe914567158e6846e8f"
+    },
+    {
+      "url": "https://m3.material.io/blog/2023-google-fonts-redesign",
+      "source_url": "https://m3.material.io/page-data/Posts/5214061699661824.json",
+      "path": "docs/design-references/material-design-3/raw/blog/2023-google-fonts-redesign.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/2023-google-fonts-redesign.md",
+      "kind": "legacy",
+      "title": "The new Google Fonts: find what you’re looking for",
+      "bytes": 10847,
+      "sha256": "bf5edee203d881c3a85d33070edd29c3affdc20d0185745a3face9e2d9afbc23"
+    },
+    {
+      "url": "https://m3.material.io/blog/24-hour-clock-design-research",
+      "source_url": "https://m3.material.io/page-data/Posts/5937855834750976.json",
+      "path": "docs/design-references/material-design-3/raw/blog/24-hour-clock-design-research.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/24-hour-clock-design-research.md",
+      "kind": "legacy",
+      "title": "The 24-hour Clock Design Challenge",
+      "bytes": 17540,
+      "sha256": "c7bcd6273bfe5368d265fd509264edc5b4991288147d5f6fb764b8581ffbc18b"
+    },
+    {
+      "url": "https://m3.material.io/blog/5-steps-large-screen-apps",
+      "source_url": "https://m3.material.io/page-data/Posts/5176362010411008.json",
+      "path": "docs/design-references/material-design-3/raw/blog/5-steps-large-screen-apps.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/5-steps-large-screen-apps.md",
+      "kind": "legacy",
+      "title": "Start Here: 5 Exercises to Prepare Your App for Large Screens",
+      "bytes": 27624,
+      "sha256": "e9e130da1142f62f8a4e2e2180603ef9c70217c3664930d22a1cd0cfe8e65969"
+    },
+    {
+      "url": "https://m3.material.io/blog/accessibility-awareness-day-2022",
+      "source_url": "https://m3.material.io/page-data/Posts/6412661855879168.json",
+      "path": "docs/design-references/material-design-3/raw/blog/accessibility-awareness-day-2022.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/accessibility-awareness-day-2022.md",
+      "kind": "legacy",
+      "title": "Celebrating Global Accessibility Awareness Day",
+      "bytes": 8188,
+      "sha256": "64b8214da90e84f8c68040190bc5873ed248856753ad10a6b876baa4104db656"
+    },
+    {
+      "url": "https://m3.material.io/blog/android-dark-theme-tutorial",
+      "source_url": "https://m3.material.io/page-data/Posts/4897180022996992.json",
+      "path": "docs/design-references/material-design-3/raw/blog/android-dark-theme-tutorial.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/android-dark-theme-tutorial.md",
+      "kind": "legacy",
+      "title": "Building a Material Dark Theme on Android",
+      "bytes": 29663,
+      "sha256": "7d5c53a733492713cc29ea555680a6b4365787385dd17eb7fad9bae1ac10a324"
+    },
+    {
+      "url": "https://m3.material.io/blog/android-material-motion",
+      "source_url": "https://m3.material.io/page-data/Posts/5851801742737408.json",
+      "path": "docs/design-references/material-design-3/raw/blog/android-material-motion.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/android-material-motion.md",
+      "kind": "legacy",
+      "title": "Building Beautiful Transitions with Material Motion for Android",
+      "bytes": 28607,
+      "sha256": "c482e0c1e6a5d369603646aff6b0e5e21341115499529d880ffb75f9199810eb"
+    },
+    {
+      "url": "https://m3.material.io/blog/android-material-theme-color",
+      "source_url": "https://m3.material.io/page-data/Posts/6218501906497536.json",
+      "path": "docs/design-references/material-design-3/raw/blog/android-material-theme-color.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/android-material-theme-color.md",
+      "kind": "legacy",
+      "title": "Building a Material Theme on Android: Color",
+      "bytes": 31734,
+      "sha256": "bbf120efad6be403d2c05ff1121f1ff93e49edeb4e0e12af239515505e7cc403"
+    },
+    {
+      "url": "https://m3.material.io/blog/android-material-theme-shape",
+      "source_url": "https://m3.material.io/page-data/Posts/5703648154484736.json",
+      "path": "docs/design-references/material-design-3/raw/blog/android-material-theme-shape.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/android-material-theme-shape.md",
+      "kind": "legacy",
+      "title": "Building a Material Theme on Android: Shape",
+      "bytes": 36720,
+      "sha256": "b11e0a214e788473fac2abd0b21f7861ba7006d31fc1a095ff58ad03dcab2ed2"
+    },
+    {
+      "url": "https://m3.material.io/blog/android-material-theme-type",
+      "source_url": "https://m3.material.io/page-data/Posts/5312679798112256.json",
+      "path": "docs/design-references/material-design-3/raw/blog/android-material-theme-type.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/android-material-theme-type.md",
+      "kind": "legacy",
+      "title": "Building a Material Theme on Android: Typography",
+      "bytes": 27215,
+      "sha256": "6ffcc3f65fe07e6261025e9f3d449b38a437308f0bf16f74c6964c9f79c68601"
+    },
+    {
+      "url": "https://m3.material.io/blog/android-stable-release-1-10-0",
+      "source_url": "https://m3.material.io/page-data/Posts/4743734110060544.json",
+      "path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-10-0.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-10-0.md",
+      "kind": "legacy",
+      "title": "Material Design Components for Android 1.10.0",
+      "bytes": 12927,
+      "sha256": "6b380cd8d70926cbb2985fff2331f5d52633121b3c56546821dd58659b80e80a"
+    },
+    {
+      "url": "https://m3.material.io/blog/android-stable-release-1-12-0",
+      "source_url": "https://m3.material.io/page-data/Posts/5836138581721088.json",
+      "path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-12-0.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-12-0.md",
+      "kind": "legacy",
+      "title": "Material Design Components for Android 1.11.0 and 1.12.0",
+      "bytes": 31690,
+      "sha256": "d40f2e3084c2d02318c57c5b9d5204caab421b715c49b9a963735cabf995d88e"
+    },
+    {
+      "url": "https://m3.material.io/blog/android-stable-release-1-2",
+      "source_url": "https://m3.material.io/page-data/Posts/5174296018944000.json",
+      "path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-2.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-2.md",
+      "kind": "legacy",
+      "title": "Material Components for Android 1.2.0",
+      "bytes": 22472,
+      "sha256": "9cd0591738c28f794c2e9c296e5675e36fafa0a23cdfcc1c17407276e4c3da7a"
+    },
+    {
+      "url": "https://m3.material.io/blog/android-stable-release-1-3-0",
+      "source_url": "https://m3.material.io/page-data/Posts/6503505239736320.json",
+      "path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-3-0.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-3-0.md",
+      "kind": "legacy",
+      "title": "Material Design Components for Android 1.3.0",
+      "bytes": 20532,
+      "sha256": "b28ae89f94982c83bfcc46cc01981255b2536aeb116c0377bb01d4ec8200f9e4"
+    },
+    {
+      "url": "https://m3.material.io/blog/android-stable-release-1-4",
+      "source_url": "https://m3.material.io/page-data/Posts/5349126482690048.json",
+      "path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-4.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-4.md",
+      "kind": "legacy",
+      "title": "Material Design Components for Android 1.4.0",
+      "bytes": 15762,
+      "sha256": "c7c1e51257cd6d764cc8c52e9dfd6c0acc3788aaed271efe554f7f8dbcb2ad10"
+    },
+    {
+      "url": "https://m3.material.io/blog/android-stable-release-1-5",
+      "source_url": "https://m3.material.io/page-data/Posts/5731438242299904.json",
+      "path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-5.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-5.md",
+      "kind": "legacy",
+      "title": "Material Design Components for Android 1.5.0",
+      "bytes": 13632,
+      "sha256": "55c3c192d7729fac4a93e6ac6ee44797a57020d64bb5da89bc965e09f7623064"
+    },
+    {
+      "url": "https://m3.material.io/blog/android-stable-release-1-6-1",
+      "source_url": "https://m3.material.io/page-data/Posts/5843048915402752.json",
+      "path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-6-1.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-6-1.md",
+      "kind": "legacy",
+      "title": "Material Design Components for Android 1.6.1",
+      "bytes": 13650,
+      "sha256": "257c89af398e7637ccb9d39921857df6d3005ece5bd280f1d2b0fae4717cb398"
+    },
+    {
+      "url": "https://m3.material.io/blog/android-stable-release-1-7-0",
+      "source_url": "https://m3.material.io/page-data/Posts/6724211708133376.json",
+      "path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-7-0.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-7-0.md",
+      "kind": "legacy",
+      "title": "MDC-Android Stable release 1.7.0",
+      "bytes": 11985,
+      "sha256": "bbf838a7636517b9cf945e5bce7ad32184e7443b8a2a530b016e174864874250"
+    },
+    {
+      "url": "https://m3.material.io/blog/android-stable-release-1-8-0",
+      "source_url": "https://m3.material.io/page-data/Posts/4605957596381184.json",
+      "path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-8-0.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-8-0.md",
+      "kind": "legacy",
+      "title": "Material Design Components for Android 1.8.0",
+      "bytes": 14255,
+      "sha256": "0538b12634fb231bdc04ddf9577cc1e4293ca3da255418f8a1cc485085deab89"
+    },
+    {
+      "url": "https://m3.material.io/blog/android-stable-release-1-9-0",
+      "source_url": "https://m3.material.io/page-data/Posts/5473462043934720.json",
+      "path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-9-0.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-9-0.md",
+      "kind": "legacy",
+      "title": "Material Design Components for Android 1.9.0",
+      "bytes": 11859,
+      "sha256": "fa3baaf4e139956339262de95c0cbca8cbb41644a0fa3d00e966af74445dc085"
+    },
+    {
+      "url": "https://m3.material.io/blog/announcing-material-you",
+      "source_url": "https://m3.material.io/page-data/Posts/5624662777921536.json",
+      "path": "docs/design-references/material-design-3/raw/blog/announcing-material-you.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/announcing-material-you.md",
+      "kind": "legacy",
+      "title": "Unveiling Material You",
+      "bytes": 16440,
+      "sha256": "767cb333a02a5c47260e7c69a73a4342c06ab1027ca400c1a418ca3ba59cc0b6"
+    },
+    {
+      "url": "https://m3.material.io/blog/asset-people-1",
+      "source_url": "https://m3.material.io/page-data/Posts/4835882078830592.json",
+      "path": "docs/design-references/material-design-3/raw/blog/asset-people-1.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/asset-people-1.md",
+      "kind": "legacy",
+      "title": "Replacing “Users” with People",
+      "bytes": 14982,
+      "sha256": "70104bb82458aecbf1c0d376f102756ca51617218acb60028dc8c1c10882b53f"
+    },
+    {
+      "url": "https://m3.material.io/blog/asset-people-2",
+      "source_url": "https://m3.material.io/page-data/Posts/6211535843885056.json",
+      "path": "docs/design-references/material-design-3/raw/blog/asset-people-2.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/asset-people-2.md",
+      "kind": "legacy",
+      "title": "From Placeholders to Genuine Avatars",
+      "bytes": 11142,
+      "sha256": "b22fb3d2092352240bcac011dde0c7979c042070ac95bc2987714c2dac899a22"
+    },
+    {
+      "url": "https://m3.material.io/blog/asset-people-3",
+      "source_url": "https://m3.material.io/page-data/Posts/6427919005777920.json",
+      "path": "docs/design-references/material-design-3/raw/blog/asset-people-3.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/asset-people-3.md",
+      "kind": "legacy",
+      "title": "Looking for What’s Missing",
+      "bytes": 18567,
+      "sha256": "b5bd08fc99959a12b49873998928154c5cd345028f8b6c19192ac33fe312e84c"
+    },
+    {
+      "url": "https://m3.material.io/blog/atkinson-hyperlegible-design",
+      "source_url": "https://m3.material.io/page-data/Posts/4675578724745216.json",
+      "path": "docs/design-references/material-design-3/raw/blog/atkinson-hyperlegible-design.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/atkinson-hyperlegible-design.md",
+      "kind": "legacy",
+      "title": "From Rebranding to Readability with Atkinson Hyperlegible",
+      "bytes": 19294,
+      "sha256": "f87fd2d3a8845fb05559b43fa5502bd834bb926f94fa7d3db035044c71d928fe"
+    },
+    {
+      "url": "https://m3.material.io/blog/color-fonts-are-here",
+      "source_url": "https://m3.material.io/page-data/Posts/4818064474505216.json",
+      "path": "docs/design-references/material-design-3/raw/blog/color-fonts-are-here.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/color-fonts-are-here.md",
+      "kind": "legacy",
+      "title": "First Batch of Color Fonts Arrives on Google Fonts",
+      "bytes": 20504,
+      "sha256": "32310522a537c8250ba6996d8208023d2b26b849c41f32a2a5c11404126e1855"
+    },
+    {
+      "url": "https://m3.material.io/blog/dark-theme-design-tutorial-video",
+      "source_url": "https://m3.material.io/page-data/Posts/6019490452865024.json",
+      "path": "docs/design-references/material-design-3/raw/blog/dark-theme-design-tutorial-video.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/dark-theme-design-tutorial-video.md",
+      "kind": "legacy",
+      "title": "Video: Craft a Dark Theme with Material Design",
+      "bytes": 5417,
+      "sha256": "336b417b37f36c8f480ae2a6cea4d942d8c4ba4a6d043519782e7bb26c05139e"
+    },
+    {
+      "url": "https://m3.material.io/blog/data-visualization-accessibility",
+      "source_url": "https://m3.material.io/page-data/Posts/5048380078292992.json",
+      "path": "docs/design-references/material-design-3/raw/blog/data-visualization-accessibility.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/data-visualization-accessibility.md",
+      "kind": "legacy",
+      "title": "Top Tips for Data Accessibility",
+      "bytes": 16697,
+      "sha256": "edc093f31e17564dad786325a6627cb027feea3100e256ff9f8c779d30bd1c3b"
+    },
+    {
+      "url": "https://m3.material.io/blog/derek-brahney-interview",
+      "source_url": "https://m3.material.io/page-data/Posts/5154165085044736.json",
+      "path": "docs/design-references/material-design-3/raw/blog/derek-brahney-interview.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/derek-brahney-interview.md",
+      "kind": "legacy",
+      "title": "The Avatar Project: Derek Brahney",
+      "bytes": 13309,
+      "sha256": "e1e567d84fc3f10e6a51654318a6fcd92f16e34b5547cc835c57aa737d63c358"
+    },
+    {
+      "url": "https://m3.material.io/blog/design-material-theme-color",
+      "source_url": "https://m3.material.io/page-data/Posts/5158805642674176.json",
+      "path": "docs/design-references/material-design-3/raw/blog/design-material-theme-color.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/design-material-theme-color.md",
+      "kind": "legacy",
+      "title": "Designing a Material Theme: Color",
+      "bytes": 22282,
+      "sha256": "7857e71d56157bab91fad787c0cfdeaec305fb41f37945d12c376fa24ca67229"
+    },
+    {
+      "url": "https://m3.material.io/blog/design-material-theme-shape",
+      "source_url": "https://m3.material.io/page-data/Posts/5102095135670272.json",
+      "path": "docs/design-references/material-design-3/raw/blog/design-material-theme-shape.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/design-material-theme-shape.md",
+      "kind": "legacy",
+      "title": "Designing a Material Theme: Shape",
+      "bytes": 14248,
+      "sha256": "dfa6ce8d6f8d85d0962bae0a62fec011699de17d9790a00157eeb83cd1d3bab8"
+    },
+    {
+      "url": "https://m3.material.io/blog/design-material-theme-type",
+      "source_url": "https://m3.material.io/page-data/Posts/5026888144388096.json",
+      "path": "docs/design-references/material-design-3/raw/blog/design-material-theme-type.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/design-material-theme-type.md",
+      "kind": "legacy",
+      "title": "Designing a Material Theme: Typography",
+      "bytes": 19982,
+      "sha256": "f6c3c52907021d7eb445ebb871915f68908b0c036ef63815df97c0cedc074b28"
+    },
+    {
+      "url": "https://m3.material.io/blog/designer-toolbox-figma-android-studio-relay",
+      "source_url": "https://m3.material.io/page-data/Posts/5258494971346944.json",
+      "path": "docs/design-references/material-design-3/raw/blog/designer-toolbox-figma-android-studio-relay.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/designer-toolbox-figma-android-studio-relay.md",
+      "kind": "legacy",
+      "title": "The designer’s toolbox",
+      "bytes": 20961,
+      "sha256": "22a51ccba7fcd2bd905211af0f9b193ecabadc20f1f8006947ee0b8ce9b8cda1"
+    },
+    {
+      "url": "https://m3.material.io/blog/designing-text-visual-acuity-research",
+      "source_url": "https://m3.material.io/page-data/Posts/4654308022550528.json",
+      "path": "docs/design-references/material-design-3/raw/blog/designing-text-visual-acuity-research.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/designing-text-visual-acuity-research.md",
+      "kind": "legacy",
+      "title": "Designing Text for the People Who Read It",
+      "bytes": 31764,
+      "sha256": "08bf9829f1a231f45de8f2f0ae5655e18e2a2457cc001117841dad7a43c653c7"
+    },
+    {
+      "url": "https://m3.material.io/blog/designtocode",
+      "source_url": "https://m3.material.io/page-data/Posts/5125582148599808.json",
+      "path": "docs/design-references/material-design-3/raw/blog/designtocode.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/designtocode.md",
+      "kind": "legacy",
+      "title": "Design to Code: Turning Handoffs Into High-fives",
+      "bytes": 9194,
+      "sha256": "446681d896f2d99cfb11657f8be1e35092b4bc4a36cff4d3e8ee8b8bcb0e599d"
+    },
+    {
+      "url": "https://m3.material.io/blog/device-metrics",
+      "source_url": "https://m3.material.io/page-data/Posts/6017960135884800.json",
+      "path": "docs/design-references/material-design-3/raw/blog/device-metrics.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/device-metrics.md",
+      "kind": "legacy",
+      "title": "How to Find Device Metrics for Any Screen",
+      "bytes": 12187,
+      "sha256": "b4dcfb9cf838331018eefdf784c1006389b8ca6da41bae1188c7008276ded5f7"
+    },
+    {
+      "url": "https://m3.material.io/blog/digital-wellbeing-design-systems",
+      "source_url": "https://m3.material.io/page-data/Posts/5698678290120704.json",
+      "path": "docs/design-references/material-design-3/raw/blog/digital-wellbeing-design-systems.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/digital-wellbeing-design-systems.md",
+      "kind": "legacy",
+      "title": "What “Digital Wellbeing” Means to Material Design",
+      "bytes": 11986,
+      "sha256": "1f1b2b3a45a07f445d9cfec429d976cf8987e83813073875bc5cd1a2d29080b2"
+    },
+    {
+      "url": "https://m3.material.io/blog/digital-wellbeing-face-retouching",
+      "source_url": "https://m3.material.io/page-data/Posts/5866947047325696.json",
+      "path": "docs/design-references/material-design-3/raw/blog/digital-wellbeing-face-retouching.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/digital-wellbeing-face-retouching.md",
+      "kind": "legacy",
+      "title": "Finding Wellbeing in Filters and Selfies",
+      "bytes": 16830,
+      "sha256": "3f4638001a479bfeb05799676044c8f0bf397e3ae77f159956bb18ab378816dc"
+    },
+    {
+      "url": "https://m3.material.io/blog/digital-wellbeing-ux-principles",
+      "source_url": "https://m3.material.io/page-data/Posts/4753554093637632.json",
+      "path": "docs/design-references/material-design-3/raw/blog/digital-wellbeing-ux-principles.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/digital-wellbeing-ux-principles.md",
+      "kind": "legacy",
+      "title": "People-First Principles for Digital Wellbeing",
+      "bytes": 14346,
+      "sha256": "cf9ebc4bc6ad6b1d3ceedee26b2ffb95e593898ea8863ccaf9141cd40b550ee7"
+    },
+    {
+      "url": "https://m3.material.io/blog/dynamic-color-harmony",
+      "source_url": "https://m3.material.io/page-data/Posts/5121173452750848.json",
+      "path": "docs/design-references/material-design-3/raw/blog/dynamic-color-harmony.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/dynamic-color-harmony.md",
+      "kind": "legacy",
+      "title": "Designing Harmony into Dynamic Color",
+      "bytes": 20420,
+      "sha256": "04903a7db143f3e8001c602601d9c64aff8e224f4fbda5a9d1c85c9ce7819f5b"
+    },
+    {
+      "url": "https://m3.material.io/blog/finding-ethical-design",
+      "source_url": "https://m3.material.io/page-data/Posts/5591366685687808.json",
+      "path": "docs/design-references/material-design-3/raw/blog/finding-ethical-design.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/finding-ethical-design.md",
+      "kind": "legacy",
+      "title": "Finding Ethical Design",
+      "bytes": 10529,
+      "sha256": "d5af18352e64c8f07f9867df53d385090962ae150e88336d7cc655f8ea7de2e4"
+    },
+    {
+      "url": "https://m3.material.io/blog/fonts-are-software-video",
+      "source_url": "https://m3.material.io/page-data/Posts/6450636571934720.json",
+      "path": "docs/design-references/material-design-3/raw/blog/fonts-are-software-video.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/fonts-are-software-video.md",
+      "kind": "legacy",
+      "title": "Video: Fonts are software",
+      "bytes": 6592,
+      "sha256": "415fdbb6f05c5164b9bcc61749051687bd96d8b0807f036d3e53fcc144eac2db"
+    },
+    {
+      "url": "https://m3.material.io/blog/get-google-fonts-update",
+      "source_url": "https://m3.material.io/page-data/Posts/5660525826015232.json",
+      "path": "docs/design-references/material-design-3/raw/blog/get-google-fonts-update.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/get-google-fonts-update.md",
+      "kind": "legacy",
+      "title": "Making it easier to get Google Fonts",
+      "bytes": 15048,
+      "sha256": "678cb906ec37030624b4680aa70d980691ba7c978b51b50754fbcf0bdea28da0"
+    },
+    {
+      "url": "https://m3.material.io/blog/google-design-tutorial-video",
+      "source_url": "https://m3.material.io/page-data/Posts/5243360368132096.json",
+      "path": "docs/design-references/material-design-3/raw/blog/google-design-tutorial-video.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/google-design-tutorial-video.md",
+      "kind": "legacy",
+      "title": "Video: Google Design Tutorials",
+      "bytes": 4674,
+      "sha256": "7b0c0d934e2a1424ff21e0d72010b894de86360dbaec4406b7e2a06c17c03555"
+    },
+    {
+      "url": "https://m3.material.io/blog/google-fonts-dark-theme",
+      "source_url": "https://m3.material.io/page-data/Posts/5760435980337152.json",
+      "path": "docs/design-references/material-design-3/raw/blog/google-fonts-dark-theme.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/google-fonts-dark-theme.md",
+      "kind": "legacy",
+      "title": "Building a Dark Theme for Google Fonts",
+      "bytes": 13921,
+      "sha256": "4896f24506be0c857dcf33c70f1fc75aa5ab6cd246c23a6be4a7b751cfeb2287"
+    },
+    {
+      "url": "https://m3.material.io/blog/google-fonts-knowledge",
+      "source_url": "https://m3.material.io/page-data/Posts/6083643885486080.json",
+      "path": "docs/design-references/material-design-3/raw/blog/google-fonts-knowledge.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/google-fonts-knowledge.md",
+      "kind": "legacy",
+      "title": "Announcing Google Fonts Knowledge",
+      "bytes": 8247,
+      "sha256": "8b305c79ca991dc92c74065b8bf5fc02989a3898a20dba29dd009f4e6b7e89e9"
+    },
+    {
+      "url": "https://m3.material.io/blog/google-fonts-material-icons",
+      "source_url": "https://m3.material.io/page-data/Posts/6050796774621184.json",
+      "path": "docs/design-references/material-design-3/raw/blog/google-fonts-material-icons.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/google-fonts-material-icons.md",
+      "kind": "legacy",
+      "title": "Google Fonts ❤️ Material Icons",
+      "bytes": 11840,
+      "sha256": "2096632f9441e924b12287616d2d147693666c5f58500dda72d60a319b565df6"
+    },
+    {
+      "url": "https://m3.material.io/blog/google-fonts-pairing-figma",
+      "source_url": "https://m3.material.io/page-data/Posts/5661578846404608.json",
+      "path": "docs/design-references/material-design-3/raw/blog/google-fonts-pairing-figma.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/google-fonts-pairing-figma.md",
+      "kind": "legacy",
+      "title": "You Asked for it—Here Are Some of Our Favorite Font Pairings",
+      "bytes": 11076,
+      "sha256": "8f21c840cdf7be2de803aaff560401e90c0b12dbb3f36b4e96da901815ac6f90"
+    },
+    {
+      "url": "https://m3.material.io/blog/google-io-2024",
+      "source_url": "https://m3.material.io/page-data/Posts/5459080356954112.json",
+      "path": "docs/design-references/material-design-3/raw/blog/google-io-2024.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/google-io-2024.md",
+      "kind": "legacy",
+      "title": "Material Design at Google I/O ‘24",
+      "bytes": 8216,
+      "sha256": "a68e1e1ce8169de2de8ee7bf07197b4be4122592ed06909dd8a424c97c6489ea"
+    },
+    {
+      "url": "https://m3.material.io/blog/google-material-custom-theme",
+      "source_url": "https://m3.material.io/page-data/Posts/5822975157469184.json",
+      "path": "docs/design-references/material-design-3/raw/blog/google-material-custom-theme.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/google-material-custom-theme.md",
+      "kind": "legacy",
+      "title": "How Google created a custom Material theme",
+      "bytes": 24803,
+      "sha256": "3107213a1c2d553ebd3fab1ccff5cb409fa087bd23a6f2426d2370281c8e3604"
+    },
+    {
+      "url": "https://m3.material.io/blog/how-to-gemini-app-compose-material-design-3",
+      "source_url": "https://m3.material.io/page-data/Posts/5572176225107968.json",
+      "path": "docs/design-references/material-design-3/raw/blog/how-to-gemini-app-compose-material-design-3.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/how-to-gemini-app-compose-material-design-3.md",
+      "kind": "legacy",
+      "title": "Using the Gemini app with Material Design 3",
+      "bytes": 21439,
+      "sha256": "4a1973fd9d9111cdb2a4fe25fc499c44ed7c85c124601f42eb80e867c7e69b90"
+    },
+    {
+      "url": "https://m3.material.io/blog/how-to-make-text-more-accessible",
+      "source_url": "https://m3.material.io/page-data/Posts/6578576280387584.json",
+      "path": "docs/design-references/material-design-3/raw/blog/how-to-make-text-more-accessible.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/how-to-make-text-more-accessible.md",
+      "kind": "legacy",
+      "title": "How to make your text more accessible",
+      "bytes": 16436,
+      "sha256": "294279072d6da9118f773a392dca07353d03f86cb386e377bfd80f1020c276ac"
+    },
+    {
+      "url": "https://m3.material.io/blog/inclusive-imagery-at-google",
+      "source_url": "https://m3.material.io/page-data/Posts/5033445688082432.json",
+      "path": "docs/design-references/material-design-3/raw/blog/inclusive-imagery-at-google.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/inclusive-imagery-at-google.md",
+      "kind": "legacy",
+      "title": "Adjusting the Focus",
+      "bytes": 16196,
+      "sha256": "9e38f0f6b9a33983b4c1847e2457042891921fef56b2db538b55c5dbc8008942"
+    },
+    {
+      "url": "https://m3.material.io/blog/interview-oddfellows-m3-art-style",
+      "source_url": "https://m3.material.io/page-data/Posts/4790143600558080.json",
+      "path": "docs/design-references/material-design-3/raw/blog/interview-oddfellows-m3-art-style.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/interview-oddfellows-m3-art-style.md",
+      "kind": "legacy",
+      "title": "How Oddfellows Illustrated Material You",
+      "bytes": 16661,
+      "sha256": "f6c5373801720c4213680fd75a29fbec2bcd8eb29d1237dcae0ea0ca8254895e"
+    },
+    {
+      "url": "https://m3.material.io/blog/introducing-symbols",
+      "source_url": "https://m3.material.io/page-data/Posts/5866765657309184.json",
+      "path": "docs/design-references/material-design-3/raw/blog/introducing-symbols.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/introducing-symbols.md",
+      "kind": "legacy",
+      "title": "Introducing Material Symbols",
+      "bytes": 16784,
+      "sha256": "23d22832535c0b55c25acf3132039d66cfc0039a9bc7ce689c3ad8b2b56363bd"
+    },
+    {
+      "url": "https://m3.material.io/blog/jamie-chung-photography-interview",
+      "source_url": "https://m3.material.io/page-data/Posts/5295591924039680.json",
+      "path": "docs/design-references/material-design-3/raw/blog/jamie-chung-photography-interview.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/jamie-chung-photography-interview.md",
+      "kind": "legacy",
+      "title": "Jamie Chung’s Artful, Abstract Photographs for Material Design",
+      "bytes": 10746,
+      "sha256": "e95b9ddf7ba6345862496f6b4d0a30eea3d5a213d2a168c792bae8686b86d41b"
+    },
+    {
+      "url": "https://m3.material.io/blog/jetpack-compose-beta",
+      "source_url": "https://m3.material.io/page-data/Posts/6465524856520704.json",
+      "path": "docs/design-references/material-design-3/raw/blog/jetpack-compose-beta.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/jetpack-compose-beta.md",
+      "kind": "legacy",
+      "title": "Jetpack Compose: Now in Beta",
+      "bytes": 29443,
+      "sha256": "55e65667f85a8f7a91567f0a676ce58865b8066196cfac8b6674402a5efdcdc0"
+    },
+    {
+      "url": "https://m3.material.io/blog/jetpack-compose-catalog",
+      "source_url": "https://m3.material.io/page-data/Posts/5254593229094912.json",
+      "path": "docs/design-references/material-design-3/raw/blog/jetpack-compose-catalog.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/jetpack-compose-catalog.md",
+      "kind": "legacy",
+      "title": "Introducing the Compose Material Catalog",
+      "bytes": 11725,
+      "sha256": "557ab0c5df29ae6eb31c7f06f0e5d38e3209f064b019ff2bb1a3265c6e568b12"
+    },
+    {
+      "url": "https://m3.material.io/blog/localization-principles-techniques",
+      "source_url": "https://m3.material.io/page-data/Posts/5550732958498816.json",
+      "path": "docs/design-references/material-design-3/raw/blog/localization-principles-techniques.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/localization-principles-techniques.md",
+      "kind": "legacy",
+      "title": "Principles and Techniques for Effective Localization",
+      "bytes": 27882,
+      "sha256": "ccddfe3a197781a37760eaf95ff534b72ad01bc56da1290adee7634c79c70d58"
+    },
+    {
+      "url": "https://m3.material.io/blog/m3-a11y",
+      "source_url": "https://m3.material.io/page-data/Posts/6034538337402880.json",
+      "path": "docs/design-references/material-design-3/raw/blog/m3-a11y.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/m3-a11y.md",
+      "kind": "legacy",
+      "title": "Design for everyone",
+      "bytes": 7237,
+      "sha256": "9278845f45a9cde80225a9ba204814fa2c2c877d49beb688b7e57dcdce400148"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-3-carousel-research-design",
+      "source_url": "https://m3.material.io/page-data/Posts/5158713158664192.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-3-carousel-research-design.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-3-carousel-research-design.md",
+      "kind": "legacy",
+      "title": "Reinventing the carousel",
+      "bytes": 20449,
+      "sha256": "a24243ca8fff412ab789ccb8b039cf598bd59bc5b95a22e2f5801b19e044db4f"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-3-compose-1-1",
+      "source_url": "https://m3.material.io/page-data/Posts/6692554092445696.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-3-compose-1-1.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-3-compose-1-1.md",
+      "kind": "legacy",
+      "title": "Material Design 3 for Compose gets new components and features",
+      "bytes": 31146,
+      "sha256": "9d13313febf826ff20fedfd09193197e6f11a05ff6d91f6c84a3fd482334d544"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-3-compose-1-2",
+      "source_url": "https://m3.material.io/page-data/Posts/5668225645412352.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-3-compose-1-2.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-3-compose-1-2.md",
+      "kind": "legacy",
+      "title": "Material Design 3 for Compose 1.2",
+      "bytes": 14072,
+      "sha256": "e5ef8f234ec91cbf09703214d058094ec336d77e7106a0019c4e9fabe026598c"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-3-compose-1-3",
+      "source_url": "https://m3.material.io/page-data/Posts/5479866587021312.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-3-compose-1-3.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-3-compose-1-3.md",
+      "kind": "legacy",
+      "title": "Material Design 3 for Compose version 1.3",
+      "bytes": 29551,
+      "sha256": "7bf2f29348c0084b55dda7ce7a42fffc68bc4a1074c3c6e8e45662ae63935762"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-3-compose-stable",
+      "source_url": "https://m3.material.io/page-data/Posts/5527854674739200.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-3-compose-stable.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-3-compose-stable.md",
+      "kind": "legacy",
+      "title": "Material Design 3 for Compose is now stable",
+      "bytes": 22749,
+      "sha256": "8e1acd1e1a7a78eca037d675788df5b2e15d9e8743294e27e2c1d5a916fbaf99"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-3-figma-design-kit",
+      "source_url": "https://m3.material.io/page-data/Posts/5910056902197248.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-3-figma-design-kit.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-3-figma-design-kit.md",
+      "kind": "legacy",
+      "title": "Introducing the M3 design kit for Figma",
+      "bytes": 9323,
+      "sha256": "bd158bee7fbf59fd7683c50120990553e68688cee7ddd75a1d5d9bbed7b2f1e6"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-3-slot-components-figma",
+      "source_url": "https://m3.material.io/page-data/Posts/5965893380472832.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-3-slot-components-figma.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-3-slot-components-figma.md",
+      "kind": "legacy",
+      "title": "Unlocking component flexibility with slots in Figma",
+      "bytes": 11284,
+      "sha256": "4fa6a23150de57b2c0bca67d7b7df94c8a8be4b758f631eb233c6a5ed9fdd16f"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-ads-2022",
+      "source_url": "https://m3.material.io/page-data/Posts/6322084691181568.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-ads-2022.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-ads-2022.md",
+      "kind": "legacy",
+      "title": "Material Design at Android Developer Summit 2022",
+      "bytes": 10884,
+      "sha256": "6191a52ce1dab09e5f2b1f43475422c57c3a9cd050e2e5585926add804680633"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-density-web",
+      "source_url": "https://m3.material.io/page-data/Posts/6660569227329536.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-density-web.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-density-web.md",
+      "kind": "legacy",
+      "title": "Using Material Density on the Web",
+      "bytes": 14687,
+      "sha256": "b06afd2819d5e67c1a9055c03b04d335d6f8f6353b8f9ad871cbdf08b8dbdc98"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-design-2022-roundup",
+      "source_url": "https://m3.material.io/page-data/Posts/6608555042013184.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-design-2022-roundup.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-design-2022-roundup.md",
+      "kind": "legacy",
+      "title": "The Best of Material in 2022",
+      "bytes": 23050,
+      "sha256": "cf3ade3040049b598c789f09dac6bfee4fceaa1e3a0566cb250ce7380578eda7"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-design-awards-2021",
+      "source_url": "https://m3.material.io/page-data/Posts/5385015262969856.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-design-awards-2021.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-design-awards-2021.md",
+      "kind": "legacy",
+      "title": "2021 Material Design Awards",
+      "bytes": 13410,
+      "sha256": "177051c06623479f2ff742bf9a0591b2a047e7d625a1eacde427c93ee14dfa45"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-design-blog-welcome",
+      "source_url": "https://m3.material.io/page-data/Posts/6305819849916416.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-design-blog-welcome.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-design-blog-welcome.md",
+      "kind": "legacy",
+      "title": "Welcome to the Material Blog—Letter from the Editor",
+      "bytes": 6770,
+      "sha256": "2d6da4ebda8f2150f9736a4521236c8b35c1e14735503de5fcd65f1f215aec91"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-design-for-large-screens",
+      "source_url": "https://m3.material.io/page-data/Posts/5364221464018944.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-design-for-large-screens.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-design-for-large-screens.md",
+      "kind": "legacy",
+      "title": "Introducing Material Design Guidance for Large Screens",
+      "bytes": 14728,
+      "sha256": "b5c0cca202fc2ff7377db5025fe2d8848914404c5ac96d6c9c27670be14abaf4"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-design-wordpress-plugin",
+      "source_url": "https://m3.material.io/page-data/Posts/6234795288559616.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-design-wordpress-plugin.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-design-wordpress-plugin.md",
+      "kind": "legacy",
+      "title": "Material Design for WordPress",
+      "bytes": 16276,
+      "sha256": "4744b8bf6beabdcc7b712fbbb33b5c332aa716c246d4c938933665256e0803e4"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-design-wordpress-plugin-030",
+      "source_url": "https://m3.material.io/page-data/Posts/4817998753562624.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-design-wordpress-plugin-030.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-design-wordpress-plugin-030.md",
+      "kind": "legacy",
+      "title": "Using Block Patterns with Material Design for WordPress",
+      "bytes": 8843,
+      "sha256": "71b0d7c99094da7df9f394882928be5726984caa12f8866d4b99510a4028b001"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-design-xr-dev-preview",
+      "source_url": "https://m3.material.io/page-data/Posts/4514989311131648.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-design-xr-dev-preview.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-design-xr-dev-preview.md",
+      "kind": "legacy",
+      "title": "Material Design for XR (Developer Preview)",
+      "bytes": 22196,
+      "sha256": "d667e35acc0c9650593212d5f2a79b53ec6a00133b6ea43fcb62fa0e936dfdc4"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-design-youtube-channel",
+      "source_url": "https://m3.material.io/page-data/Posts/6386999802724352.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-design-youtube-channel.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-design-youtube-channel.md",
+      "kind": "legacy",
+      "title": "Introducing the Material Design YouTube Channel",
+      "bytes": 5876,
+      "sha256": "d7d02f538b72d126472b0ac03811c1b2791c4e5b3203a452572833c84fda0d0b"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-google-io21",
+      "source_url": "https://m3.material.io/page-data/Posts/5474193665425408.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-google-io21.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-google-io21.md",
+      "kind": "legacy",
+      "title": "Material Design at Google I/O 2021",
+      "bytes": 13063,
+      "sha256": "12221717433c6f902623f36d073b43a1f0ec81de68ea85d0352000bbb329415d"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-google-io22",
+      "source_url": "https://m3.material.io/page-data/Posts/4861119382159360.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-google-io22.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-google-io22.md",
+      "kind": "legacy",
+      "title": "Join Material Design at I/O ‘22",
+      "bytes": 10136,
+      "sha256": "706441b1b67a2ae6b2ba047f386e100056c0a90acbbd6ae2153449a75410a532"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-google-io23",
+      "source_url": "https://m3.material.io/page-data/Posts/6041192958656512.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-google-io23.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-google-io23.md",
+      "kind": "legacy",
+      "title": "Material Design at I/O ‘23",
+      "bytes": 11754,
+      "sha256": "208e4797d54d365c8806fa8603d962d93a6ad37dbe97041ee8ffce6b5b1c9790"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-icons-sehee-lee-interview",
+      "source_url": "https://m3.material.io/page-data/Posts/5309157368135680.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-icons-sehee-lee-interview.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-icons-sehee-lee-interview.md",
+      "kind": "legacy",
+      "title": "Material Icons: Sehee Lee",
+      "bytes": 14089,
+      "sha256": "11e341ba97ebf1ceaae1d68bbf8e4d4fe3d0efdc656ce207cefef6ef2f79b584"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-io-redesign",
+      "source_url": "https://m3.material.io/page-data/Posts/6105825437417472.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-io-redesign.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-io-redesign.md",
+      "kind": "legacy",
+      "title": "Magic, utility, and redesigning Material.io",
+      "bytes": 27969,
+      "sha256": "017285cc4f89aa1760883dc946bbea7b9cfa52ae55b8db2f3f346e6ead478d48"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-partner-studies",
+      "source_url": "https://m3.material.io/page-data/Posts/6016881925029888.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-partner-studies.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-partner-studies.md",
+      "kind": "legacy",
+      "title": "Material Partner Studies",
+      "bytes": 21471,
+      "sha256": "356159704c91ba3f7dc50db5196f8cabbcae34c3f16901a88b539bf476ffb0d6"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-theme-builder",
+      "source_url": "https://m3.material.io/page-data/Posts/5876903831142400.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-theme-builder.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-theme-builder.md",
+      "kind": "legacy",
+      "title": "Introducing Material Theme Builder",
+      "bytes": 15909,
+      "sha256": "662927a7b52e6bf7ee4c8132d70866ffd295ddcf376a9b68e49afdc2791c0299"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-theme-builder-2-color-match",
+      "source_url": "https://m3.material.io/page-data/Posts/6233415106560000.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-theme-builder-2-color-match.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-theme-builder-2-color-match.md",
+      "kind": "legacy",
+      "title": "An updated theming experience with Material Theme Builder 2.0",
+      "bytes": 14764,
+      "sha256": "88d3ef11e410d5e5e739995313a930326d18f2489f47f790e9c193a383735250"
+    },
+    {
+      "url": "https://m3.material.io/blog/material-you-large-screens",
+      "source_url": "https://m3.material.io/page-data/Posts/5587246423080960.json",
+      "path": "docs/design-references/material-design-3/raw/blog/material-you-large-screens.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/material-you-large-screens.md",
+      "kind": "legacy",
+      "title": "Better design for bigger screens",
+      "bytes": 12170,
+      "sha256": "f35bf179d74ab81aa61bf72c3c831b296cb3779ebe9d349e96f859be886bf90f"
+    },
+    {
+      "url": "https://m3.material.io/blog/mda-2020-winners",
+      "source_url": "https://m3.material.io/page-data/Posts/6336736650854400.json",
+      "path": "docs/design-references/material-design-3/raw/blog/mda-2020-winners.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/mda-2020-winners.md",
+      "kind": "legacy",
+      "title": "Announcing the Material Design Award Winners for 2020",
+      "bytes": 11708,
+      "sha256": "8d91b536570627d45abc9f1d1f14c19453ab6e8005b7368cb94eb49275751ce8"
+    },
+    {
+      "url": "https://m3.material.io/blog/mda-2021-winners",
+      "source_url": "https://m3.material.io/page-data/Posts/4776628026343424.json",
+      "path": "docs/design-references/material-design-3/raw/blog/mda-2021-winners.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/mda-2021-winners.md",
+      "kind": "legacy",
+      "title": "Material Design Award Winners 2021",
+      "bytes": 19796,
+      "sha256": "83fda8909a665e0b89920e428902a5e338f9b755229d6caf0370407be864ebeb"
+    },
+    {
+      "url": "https://m3.material.io/blog/migrate-android-material-components",
+      "source_url": "https://m3.material.io/page-data/Posts/5572471263330304.json",
+      "path": "docs/design-references/material-design-3/raw/blog/migrate-android-material-components.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/migrate-android-material-components.md",
+      "kind": "legacy",
+      "title": "Migrating to Material Components for Android",
+      "bytes": 76956,
+      "sha256": "edf5eb14bc370c46134bd83a1a3b0500f40a3d313e7169357ddd0f93076f0410"
+    },
+    {
+      "url": "https://m3.material.io/blog/migrating-material-3",
+      "source_url": "https://m3.material.io/page-data/Posts/5025319425409024.json",
+      "path": "docs/design-references/material-design-3/raw/blog/migrating-material-3.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/migrating-material-3.md",
+      "kind": "legacy",
+      "title": "Migrating to Material Design 3",
+      "bytes": 34978,
+      "sha256": "c5b27137e535246c0373b6e255090d3551252dd6449045b7f58bba878026618f"
+    },
+    {
+      "url": "https://m3.material.io/blog/motion-research-container-transform",
+      "source_url": "https://m3.material.io/page-data/Posts/6705236567392256.json",
+      "path": "docs/design-references/material-design-3/raw/blog/motion-research-container-transform.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/motion-research-container-transform.md",
+      "kind": "legacy",
+      "title": "Choosing the Right Transitions",
+      "bytes": 11338,
+      "sha256": "3da97158c9c491540b6765b25e66ddaaf5cda925fba718cbc2b181e2c6a272a7"
+    },
+    {
+      "url": "https://m3.material.io/blog/noto-announcement",
+      "source_url": "https://m3.material.io/page-data/Posts/6730987974950912.json",
+      "path": "docs/design-references/material-design-3/raw/blog/noto-announcement.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/noto-announcement.md",
+      "kind": "legacy",
+      "title": "Looking for Noto? It’s now on the Google Fonts website and API",
+      "bytes": 9604,
+      "sha256": "9b9740a9984124147fa34e221b58494f56b9c4682b2bca70e1bd9cb0b1d529fc"
+    },
+    {
+      "url": "https://m3.material.io/blog/readability-consortium",
+      "source_url": "https://m3.material.io/page-data/Posts/5184897614086144.json",
+      "path": "docs/design-references/material-design-3/raw/blog/readability-consortium.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/readability-consortium.md",
+      "kind": "legacy",
+      "title": "Teaming Up to Improve Reading Research",
+      "bytes": 9352,
+      "sha256": "38f0a5bd0409587db4e8cf6a8cd00ed5f7115c47a02c3fff9c93723f11070545"
+    },
+    {
+      "url": "https://m3.material.io/blog/readability-research",
+      "source_url": "https://m3.material.io/page-data/Posts/5915993901367296.json",
+      "path": "docs/design-references/material-design-3/raw/blog/readability-research.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/readability-research.md",
+      "kind": "legacy",
+      "title": "Adjusting Grade for Mode",
+      "bytes": 25804,
+      "sha256": "968474de5bd5babeb41239c9c9559b34fdf33e92fa8cfc4e96620c548a613d07"
+    },
+    {
+      "url": "https://m3.material.io/blog/readex-pro-legibility-arabic-type-design",
+      "source_url": "https://m3.material.io/page-data/Posts/5048271741517824.json",
+      "path": "docs/design-references/material-design-3/raw/blog/readex-pro-legibility-arabic-type-design.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/readex-pro-legibility-arabic-type-design.md",
+      "kind": "legacy",
+      "title": "The Design of Readex Pro",
+      "bytes": 33943,
+      "sha256": "ab5bdf331e0ebc31a51822fc6ebc8091fe61cfb95674a0981646436b8c82ade3"
+    },
+    {
+      "url": "https://m3.material.io/blog/reduce-reflow-with-web-fonts",
+      "source_url": "https://m3.material.io/page-data/Posts/4901981369663488.json",
+      "path": "docs/design-references/material-design-3/raw/blog/reduce-reflow-with-web-fonts.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/reduce-reflow-with-web-fonts.md",
+      "kind": "legacy",
+      "title": "How to Reduce Layout Reflow When Using Web Fonts",
+      "bytes": 10893,
+      "sha256": "13fc1a3b096f64aad6381c8364e8b785359b9db40afaf410abd20db18396c0a0"
+    },
+    {
+      "url": "https://m3.material.io/blog/relay-in-alpha",
+      "source_url": "https://m3.material.io/page-data/Posts/5726260789641216.json",
+      "path": "docs/design-references/material-design-3/raw/blog/relay-in-alpha.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/relay-in-alpha.md",
+      "kind": "legacy",
+      "title": "Announcing Relay Alpha",
+      "bytes": 7028,
+      "sha256": "78aa8c6982b6ba5ce13a1720e8f63c05349de2f4e88ff3ae31e110dbe781b744"
+    },
+    {
+      "url": "https://m3.material.io/blog/relay-ravn-case-study",
+      "source_url": "https://m3.material.io/page-data/Posts/4664350895898624.json",
+      "path": "docs/design-references/material-design-3/raw/blog/relay-ravn-case-study.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/relay-ravn-case-study.md",
+      "kind": "legacy",
+      "title": "How Ravn solves design-developer handoff with Relay",
+      "bytes": 11642,
+      "sha256": "124f81a5f99cf7f31d91a04e8e465f237c56b9570d514f8ae76f0311d3267b70"
+    },
+    {
+      "url": "https://m3.material.io/blog/research-state-of-design-systems-2020",
+      "source_url": "https://m3.material.io/page-data/Posts/4884660150337536.json",
+      "path": "docs/design-references/material-design-3/raw/blog/research-state-of-design-systems-2020.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/research-state-of-design-systems-2020.md",
+      "kind": "legacy",
+      "title": "The State of Design Systems: 2020",
+      "bytes": 24976,
+      "sha256": "67cdb7bc42359163c21da2289b746dcb0ea8d96e1bef8e6b31c1c9e0d0cc69a6"
+    },
+    {
+      "url": "https://m3.material.io/blog/roboto-flex",
+      "source_url": "https://m3.material.io/page-data/Posts/4811536769744896.json",
+      "path": "docs/design-references/material-design-3/raw/blog/roboto-flex.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/roboto-flex.md",
+      "kind": "legacy",
+      "title": "Roboto … But Make It Flex",
+      "bytes": 31843,
+      "sha256": "a28fa035eb2b3c6891700dd772bb54248d88bcee9874003e9b0c7a70dc0af09e"
+    },
+    {
+      "url": "https://m3.material.io/blog/roboto-serif",
+      "source_url": "https://m3.material.io/page-data/Posts/5984499829309440.json",
+      "path": "docs/design-references/material-design-3/raw/blog/roboto-serif.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/roboto-serif.md",
+      "kind": "legacy",
+      "title": "Say hello to Roboto Serif",
+      "bytes": 18383,
+      "sha256": "f8c0856ebd1b2e59468d26c13d66c900f1ca90861d88bed025333346c5f37261"
+    },
+    {
+      "url": "https://m3.material.io/blog/science-of-color-design",
+      "source_url": "https://m3.material.io/page-data/Posts/6502590191501312.json",
+      "path": "docs/design-references/material-design-3/raw/blog/science-of-color-design.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/science-of-color-design.md",
+      "kind": "legacy",
+      "title": "The Science of Color & Design",
+      "bytes": 23153,
+      "sha256": "c7d19536015e43418ee3c2db6b102e614820d69e648d1c115737e43086ee0341"
+    },
+    {
+      "url": "https://m3.material.io/blog/shantell-martin-variable-font",
+      "source_url": "https://m3.material.io/page-data/Posts/6739758443266048.json",
+      "path": "docs/design-references/material-design-3/raw/blog/shantell-martin-variable-font.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/shantell-martin-variable-font.md",
+      "kind": "legacy",
+      "title": "The Story of Shantell Sans",
+      "bytes": 38963,
+      "sha256": "d52af39b86d0ad9cf903fcd2f4e0b1b0fd29ef7076201cc5c916648481ff5e04"
+    },
+    {
+      "url": "https://m3.material.io/blog/sil-typefaces",
+      "source_url": "https://m3.material.io/page-data/Posts/5106909641310208.json",
+      "path": "docs/design-references/material-design-3/raw/blog/sil-typefaces.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/sil-typefaces.md",
+      "kind": "legacy",
+      "title": "New SIL Typefaces",
+      "bytes": 29855,
+      "sha256": "3e535a9fcf04f102f4a7a4ff88330f9a6589d65ba647ae2d12c47a4b7ba6ff8c"
+    },
+    {
+      "url": "https://m3.material.io/blog/start-building-with-material-you",
+      "source_url": "https://m3.material.io/page-data/Posts/6548103502757888.json",
+      "path": "docs/design-references/material-design-3/raw/blog/start-building-with-material-you.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/start-building-with-material-you.md",
+      "kind": "legacy",
+      "title": "Start building with Material You",
+      "bytes": 15192,
+      "sha256": "a30503b0a565b4f7fbf89403e559c502a91e2844a01eb7d4c748d5bf2dedf768"
+    },
+    {
+      "url": "https://m3.material.io/blog/ten-steps-ios-android-design",
+      "source_url": "https://m3.material.io/page-data/Posts/5318562916597760.json",
+      "path": "docs/design-references/material-design-3/raw/blog/ten-steps-ios-android-design.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/ten-steps-ios-android-design.md",
+      "kind": "legacy",
+      "title": "10 Steps to Translate Your iOS Designs for Android",
+      "bytes": 25328,
+      "sha256": "a905d836c61f3ff65b1dfa91fcb23f8bbf603f16d80897a1ecae51cc7fcdf6c9"
+    },
+    {
+      "url": "https://m3.material.io/blog/testing-material-3",
+      "source_url": "https://m3.material.io/page-data/Posts/5444478474780672.json",
+      "path": "docs/design-references/material-design-3/raw/blog/testing-material-3.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/testing-material-3.md",
+      "kind": "legacy",
+      "title": "What does your UI say to your users?",
+      "bytes": 16504,
+      "sha256": "6db28a1d916b694afeb43961448884f35eac33bf02528ef8e59eff0e5739f39c"
+    },
+    {
+      "url": "https://m3.material.io/blog/tone-based-surface-color-m3",
+      "source_url": "https://m3.material.io/page-data/Posts/5454212709351424.json",
+      "path": "docs/design-references/material-design-3/raw/blog/tone-based-surface-color-m3.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/tone-based-surface-color-m3.md",
+      "kind": "legacy",
+      "title": "Introducing Tone-based Surfaces in Material 3",
+      "bytes": 10303,
+      "sha256": "34545ab93dc879c202ea54d3190630f30e6304c87059c31e3eabba2df8fd1104"
+    },
+    {
+      "url": "https://m3.material.io/blog/whats-new-design-kit",
+      "source_url": "https://m3.material.io/page-data/Posts/5820541975003136.json",
+      "path": "docs/design-references/material-design-3/raw/blog/whats-new-design-kit.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/whats-new-design-kit.md",
+      "kind": "legacy",
+      "title": "What’s new in the M3 design kit",
+      "bytes": 12529,
+      "sha256": "178fc99e4b006d0f6138f860b65b8e6191d3079480ade191700db9b1c2b5fcb0"
+    },
+    {
+      "url": "https://m3.material.io/blog/why-we-recommend-material-design-components-android",
+      "source_url": "https://m3.material.io/page-data/Posts/5693645939015680.json",
+      "path": "docs/design-references/material-design-3/raw/blog/why-we-recommend-material-design-components-android.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/why-we-recommend-material-design-components-android.md",
+      "kind": "legacy",
+      "title": "Why We Recommend Material Components for Android",
+      "bytes": 14940,
+      "sha256": "18ef9c8366fd22d24c2ac0c8374d9ae2ab60d231fdf8df53714c0d1d5144581e"
+    },
+    {
+      "url": "https://m3.material.io/blog/year-in-the-life-material-design-advocate",
+      "source_url": "https://m3.material.io/page-data/Posts/6687258700414976.json",
+      "path": "docs/design-references/material-design-3/raw/blog/year-in-the-life-material-design-advocate.json",
+      "readable_path": "docs/design-references/material-design-3/pages/blog/year-in-the-life-material-design-advocate.md",
+      "kind": "legacy",
+      "title": "A Year in the Life of a Material Design Advocate",
+      "bytes": 23982,
+      "sha256": "fd7f70d7d2bbdda57207213eb99bddcff84c45a039071badec97bc04994e3d72"
+    },
+    {
+      "url": "https://m3.material.io/building-with-m3-expressive",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/dd671163-5c9d-42c2-9737-048c191ed507.json",
+      "path": "docs/design-references/material-design-3/raw/building-with-m3-expressive.json",
+      "readable_path": "docs/design-references/material-design-3/pages/building-with-m3-expressive.md",
+      "kind": "carbon",
+      "title": "Start building with Material 3 Expressive",
+      "bytes": 55432,
+      "sha256": "207a925bf3febd2aab51205e98ede515c4601e71831c0ac2325bf797edbb28eb"
+    },
+    {
+      "url": "https://m3.material.io/components",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/763ccaaf-ec58-403b-b025-a10cd080fd97.json",
+      "path": "docs/design-references/material-design-3/raw/components.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components.md",
+      "kind": "carbon",
+      "title": "Components",
+      "bytes": 58660,
+      "sha256": "d1d628da4c00d08506873ceba343ff8940969545b08b79198da7348895304e25"
+    },
+    {
+      "url": "https://m3.material.io/components/all-buttons",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/276f1bd7-d048-49fd-8483-f267f2ece13d.json",
+      "path": "docs/design-references/material-design-3/raw/components/all-buttons.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/all-buttons.md",
+      "kind": "carbon",
+      "title": "All buttons",
+      "bytes": 23458,
+      "sha256": "d42517d11903617eb08d9d338f3468ea29b9dcd314e86f4c264c9a5cf86ef044"
+    },
+    {
+      "url": "https://m3.material.io/components/app-bars",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/4135ef28-314c-44dc-b829-6e94a36b69f2.json",
+      "path": "docs/design-references/material-design-3/raw/components/app-bars.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/app-bars.md",
+      "kind": "carbon",
+      "title": "App bars",
+      "bytes": 257725,
+      "sha256": "00784ed2ac3a0b1fc3a985c8c981afaf4003c990107bc08d1c90df130f728419"
+    },
+    {
+      "url": "https://m3.material.io/components/badges",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/e18a73ff-b00d-46e7-af20-ab9dd24bf579.json",
+      "path": "docs/design-references/material-design-3/raw/components/badges.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/badges.md",
+      "kind": "carbon",
+      "title": "Badges",
+      "bytes": 88019,
+      "sha256": "743661fc055b3f95cb9227abe6b2abc15676e495035b1cd972137da16967a707"
+    },
+    {
+      "url": "https://m3.material.io/components/bottom-sheets",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/aa6f9af2-d539-4b22-9af5-838e7cfc4a85.json",
+      "path": "docs/design-references/material-design-3/raw/components/bottom-sheets.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/bottom-sheets.md",
+      "kind": "carbon",
+      "title": "Bottom sheets",
+      "bytes": 142887,
+      "sha256": "03b130bd88b7d1d8193a341f1b57b1ccd6c55f0fc8186460815b94660cbe0652"
+    },
+    {
+      "url": "https://m3.material.io/components/button-groups",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/93a2bf4e-18ac-49a4-8560-8d2a7dffc678.json",
+      "path": "docs/design-references/material-design-3/raw/components/button-groups.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/button-groups.md",
+      "kind": "carbon",
+      "title": "Button groups",
+      "bytes": 139629,
+      "sha256": "2e672a2a9a1a5b032bb2493d0c96e8f80314a41061f4088ec4b9f64a3d873765"
+    },
+    {
+      "url": "https://m3.material.io/components/buttons",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/e31df68a-59d4-41dc-8743-8c48b476d4f8.json",
+      "path": "docs/design-references/material-design-3/raw/components/buttons.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/buttons.md",
+      "kind": "carbon",
+      "title": "Buttons",
+      "bytes": 218291,
+      "sha256": "8a7bafda83ec399a466edfb6183619b33c763f57e5c75fd78f64759b90ec3333"
+    },
+    {
+      "url": "https://m3.material.io/components/cards",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/1a23fbe7-0474-444c-abfb-717bb148d3a8.json",
+      "path": "docs/design-references/material-design-3/raw/components/cards.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/cards.md",
+      "kind": "carbon",
+      "title": "Cards",
+      "bytes": 192552,
+      "sha256": "1f24722006d1f051ee573095fe2dc7c947d5768e7238648e28577dfc9282edbe"
+    },
+    {
+      "url": "https://m3.material.io/components/carousel",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/b0726223-2639-4157-84ae-cb84c07ee2e5.json",
+      "path": "docs/design-references/material-design-3/raw/components/carousel.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/carousel.md",
+      "kind": "carbon",
+      "title": "Carousel",
+      "bytes": 186127,
+      "sha256": "4663af5d062704bb5b8d2448d3c797e1dfe3f26827795413fe3beef2fd0d3502"
+    },
+    {
+      "url": "https://m3.material.io/components/checkbox",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/c0332583-8417-4b80-a0a1-e283781d31c6.json",
+      "path": "docs/design-references/material-design-3/raw/components/checkbox.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/checkbox.md",
+      "kind": "carbon",
+      "title": "Checkbox",
+      "bytes": 78042,
+      "sha256": "59210ef5042b772c56a945e76303a0098fb2e6ee9d58117a500b092514d97c00"
+    },
+    {
+      "url": "https://m3.material.io/components/chips",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/592d28d0-0c82-4642-a203-556b1e0581b0.json",
+      "path": "docs/design-references/material-design-3/raw/components/chips.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/chips.md",
+      "kind": "carbon",
+      "title": "Chips",
+      "bytes": 236283,
+      "sha256": "4a2d2750e46501e38ea47d43781245178c0ad35cd49245516a5820e2c0558cff"
+    },
+    {
+      "url": "https://m3.material.io/components/date-pickers",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/523144a0-9184-44bd-93f0-5b4c7355f421.json",
+      "path": "docs/design-references/material-design-3/raw/components/date-pickers.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/date-pickers.md",
+      "kind": "carbon",
+      "title": "Date pickers",
+      "bytes": 189504,
+      "sha256": "83c70743afe18083410036420ba789ccb6ed7a2e3761b1d1bfd4555c1a7f0c24"
+    },
+    {
+      "url": "https://m3.material.io/components/dialogs",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/79c01ab5-d09a-4f6c-9aca-f76d310583bc.json",
+      "path": "docs/design-references/material-design-3/raw/components/dialogs.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/dialogs.md",
+      "kind": "carbon",
+      "title": "Dialogs",
+      "bytes": 212881,
+      "sha256": "0c7c8e7222f4aa2a8c46404319327a0618b01d287bb3ede86613917f1a3d8a17"
+    },
+    {
+      "url": "https://m3.material.io/components/divider",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/843ffaa9-e73e-45a7-bff7-f198cac0a7c8.json",
+      "path": "docs/design-references/material-design-3/raw/components/divider.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/divider.md",
+      "kind": "carbon",
+      "title": "Divider",
+      "bytes": 56496,
+      "sha256": "554dcc6159baba5dd39c4a410bde7859c37a4821c6827f34c1c2f9861e2b5309"
+    },
+    {
+      "url": "https://m3.material.io/components/extended-fab",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/94487cf5-eb79-43b1-b6b1-470512cfcc88.json",
+      "path": "docs/design-references/material-design-3/raw/components/extended-fab.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/extended-fab.md",
+      "kind": "carbon",
+      "title": "Extended FABs",
+      "bytes": 161564,
+      "sha256": "3a82e864cf2ea9bbddbf29fb3c33c72f7e0bdfd8a814b47b06e45d08d8258fa2"
+    },
+    {
+      "url": "https://m3.material.io/components/fab-menu",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/f00af5db-3477-49da-bae5-44b90b3dd7ba.json",
+      "path": "docs/design-references/material-design-3/raw/components/fab-menu.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/fab-menu.md",
+      "kind": "carbon",
+      "title": "FAB menu",
+      "bytes": 135315,
+      "sha256": "d31cfd0dc41b5565ec399b079372c463aa9dc0567599a32c011023b054ed2e73"
+    },
+    {
+      "url": "https://m3.material.io/components/floating-action-button",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/1e52f150-575c-45fa-8f5f-75868c5ab068.json",
+      "path": "docs/design-references/material-design-3/raw/components/floating-action-button.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/floating-action-button.md",
+      "kind": "carbon",
+      "title": "FABs",
+      "bytes": 142764,
+      "sha256": "1324790d785f236852d648284eb48314c9843d7d5a47813557e4b83ec1d53ee9"
+    },
+    {
+      "url": "https://m3.material.io/components/icon-buttons",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/71391cd0-92f8-4a8e-a625-828f5413a221.json",
+      "path": "docs/design-references/material-design-3/raw/components/icon-buttons.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/icon-buttons.md",
+      "kind": "carbon",
+      "title": "Icon buttons",
+      "bytes": 161748,
+      "sha256": "a4de7efd844aed0ef2c60c39206cd6bc2fde2ee77836181b94801de32c13f26e"
+    },
+    {
+      "url": "https://m3.material.io/components/lists",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/6d4033c2-f92c-4c43-b585-b3bce8468d48.json",
+      "path": "docs/design-references/material-design-3/raw/components/lists.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/lists.md",
+      "kind": "carbon",
+      "title": "Lists",
+      "bytes": 276126,
+      "sha256": "0302dfe77765c4bd0aa25246b13bb8fddd561d3a10162256adc13a1eda226812"
+    },
+    {
+      "url": "https://m3.material.io/components/loading-indicator",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/eb6cf431-55ab-4d41-b3c5-cf4da1bae66f.json",
+      "path": "docs/design-references/material-design-3/raw/components/loading-indicator.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/loading-indicator.md",
+      "kind": "carbon",
+      "title": "Loading indicator",
+      "bytes": 104553,
+      "sha256": "79b51c48c7c7b58aab5ad993baadc6386535eeb51bd848165313d483a89da31b"
+    },
+    {
+      "url": "https://m3.material.io/components/menus",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/24b60c3f-1ec7-48df-b175-0d8e011a8106.json",
+      "path": "docs/design-references/material-design-3/raw/components/menus.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/menus.md",
+      "kind": "carbon",
+      "title": "Menus",
+      "bytes": 201366,
+      "sha256": "9a21e690e517888803185665d269fb3e7a013a4a5e4dff2b66516c4aae97b10d"
+    },
+    {
+      "url": "https://m3.material.io/components/navigation-bar",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/9e4cdffa-f7fd-425f-9915-867aafbcc7d6.json",
+      "path": "docs/design-references/material-design-3/raw/components/navigation-bar.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/navigation-bar.md",
+      "kind": "carbon",
+      "title": "Navigation bar",
+      "bytes": 228970,
+      "sha256": "62189f1b8b50b69ac49ae1c4e4d8b101a7981a0b8b0b6e90c03f5ca56a57f12e"
+    },
+    {
+      "url": "https://m3.material.io/components/navigation-drawer",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/d2a1a290-0db4-4622-8a4b-bd11b6a4ec8d.json",
+      "path": "docs/design-references/material-design-3/raw/components/navigation-drawer.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/navigation-drawer.md",
+      "kind": "carbon",
+      "title": "Navigation drawer",
+      "bytes": 173521,
+      "sha256": "182c1c90e6e560ccc64d3247d74eaac418c0f7fbb2e766ec255bbbc816dfc1d3"
+    },
+    {
+      "url": "https://m3.material.io/components/navigation-rail",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/98fe42bd-9bb1-4307-9e92-e61e57c3e9da.json",
+      "path": "docs/design-references/material-design-3/raw/components/navigation-rail.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/navigation-rail.md",
+      "kind": "carbon",
+      "title": "Navigation rail",
+      "bytes": 249377,
+      "sha256": "d33e560852f066798a55c2d71b7dc8ebfac803fb9c247d8e68207d3ca8858a07"
+    },
+    {
+      "url": "https://m3.material.io/components/progress-indicators",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/9a92bb46-ccc8-4752-a144-b770d47fe1dd.json",
+      "path": "docs/design-references/material-design-3/raw/components/progress-indicators.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/progress-indicators.md",
+      "kind": "carbon",
+      "title": "Progress indicators",
+      "bytes": 125296,
+      "sha256": "43e4b7658e43104b05d4569aaed55afdeb1c29e21c5bab5acdeb584db764ac22"
+    },
+    {
+      "url": "https://m3.material.io/components/radio-button",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/091d4b7c-1ab2-4050-963a-4e2558ee5d08.json",
+      "path": "docs/design-references/material-design-3/raw/components/radio-button.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/radio-button.md",
+      "kind": "carbon",
+      "title": "Radio button",
+      "bytes": 85969,
+      "sha256": "412eed3c3dfc7a7479209f6dba63a34e85096a9cfeb30e88e858b3e8aa1e67ce"
+    },
+    {
+      "url": "https://m3.material.io/components/scroll-fields",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/1624d6a1-96ea-437d-b846-dc6f00ebb49c.json",
+      "path": "docs/design-references/material-design-3/raw/components/scroll-fields.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/scroll-fields.md",
+      "kind": "carbon",
+      "title": "Components",
+      "bytes": 93665,
+      "sha256": "d22e2b5f56ef6197a34eb6071ee2bd95371257e3324c0b81114ffb72ec2f3808"
+    },
+    {
+      "url": "https://m3.material.io/components/search",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/22081e54-b56a-47b2-b137-9ba82953f05e.json",
+      "path": "docs/design-references/material-design-3/raw/components/search.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/search.md",
+      "kind": "carbon",
+      "title": "Search",
+      "bytes": 188103,
+      "sha256": "c538c42f85ef4941f4a2aa917cc56553aac70e82331689ae9bb270249266bf49"
+    },
+    {
+      "url": "https://m3.material.io/components/segmented-buttons",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/409b50be-403a-4846-932c-706a9b2137dd.json",
+      "path": "docs/design-references/material-design-3/raw/components/segmented-buttons.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/segmented-buttons.md",
+      "kind": "carbon",
+      "title": "Segmented buttons",
+      "bytes": 115373,
+      "sha256": "d0ce8587ebcff6ff0489f0e23a1ef53114cc86e14a689fcc4734ddaa3f027bb9"
+    },
+    {
+      "url": "https://m3.material.io/components/side-sheets",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/040dabe3-ed0f-4759-824d-812224e78af3.json",
+      "path": "docs/design-references/material-design-3/raw/components/side-sheets.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/side-sheets.md",
+      "kind": "carbon",
+      "title": "Side sheets",
+      "bytes": 103869,
+      "sha256": "670c7d533748c695ffcd8a7f4a27732fb4133c0d073da65b00d4dffab425bcdd"
+    },
+    {
+      "url": "https://m3.material.io/components/sliders",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/4d160e88-c954-4614-8d11-4ec3ed399c92.json",
+      "path": "docs/design-references/material-design-3/raw/components/sliders.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/sliders.md",
+      "kind": "carbon",
+      "title": "Sliders",
+      "bytes": 137226,
+      "sha256": "83259f4ec9562620655e57925ba4c7deddca5f3f3fb7c2a0788040500c6b4154"
+    },
+    {
+      "url": "https://m3.material.io/components/snackbar",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/26cf2750-80f7-43f8-a155-834aa01276df.json",
+      "path": "docs/design-references/material-design-3/raw/components/snackbar.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/snackbar.md",
+      "kind": "carbon",
+      "title": "Snackbar",
+      "bytes": 122509,
+      "sha256": "b54b350305d626169e8093e47df2c0631fcc02e8169024df3e308a89b669861f"
+    },
+    {
+      "url": "https://m3.material.io/components/split-button",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/1341051a-3131-40d4-abbf-69e37b307651.json",
+      "path": "docs/design-references/material-design-3/raw/components/split-button.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/split-button.md",
+      "kind": "carbon",
+      "title": "Split buttons",
+      "bytes": 110926,
+      "sha256": "c427e84c6a7854dd76d02f077fad0c8b864b7bbaf00050d3482b746e9667341f"
+    },
+    {
+      "url": "https://m3.material.io/components/switch",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/a4ad43f1-5c39-44b2-ae15-a7110bdf4fa6.json",
+      "path": "docs/design-references/material-design-3/raw/components/switch.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/switch.md",
+      "kind": "carbon",
+      "title": "Switch",
+      "bytes": 111185,
+      "sha256": "5d181e144b00817da10999a0bdfe8817a067368ab19c1f7b5abcb493c21c10dd"
+    },
+    {
+      "url": "https://m3.material.io/components/tabs",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/f37f47ba-8e67-4f1e-98a3-3bea94879e52.json",
+      "path": "docs/design-references/material-design-3/raw/components/tabs.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/tabs.md",
+      "kind": "carbon",
+      "title": "Tabs",
+      "bytes": 135906,
+      "sha256": "3b7a96ed176b32c403e78ec3d2b2d5d8dde459d889c406d9a6178f286079cba9"
+    },
+    {
+      "url": "https://m3.material.io/components/text-fields",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/8741ef66-1a80-4b39-adb1-66bea5e6992f.json",
+      "path": "docs/design-references/material-design-3/raw/components/text-fields.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/text-fields.md",
+      "kind": "carbon",
+      "title": "Text fields",
+      "bytes": 175021,
+      "sha256": "451794bfb4668c2c53f8785ab11afab5a5a083999f1c3212a29ac303f5bb7793"
+    },
+    {
+      "url": "https://m3.material.io/components/time-pickers",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/ec8e6da4-b726-403d-bab7-3fb660b6ef86.json",
+      "path": "docs/design-references/material-design-3/raw/components/time-pickers.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/time-pickers.md",
+      "kind": "carbon",
+      "title": "Time pickers",
+      "bytes": 229534,
+      "sha256": "13f6109838ac266248bca9594c5b5fb72b666bb1d5904d54d8604f5d6cadadad"
+    },
+    {
+      "url": "https://m3.material.io/components/toolbars",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/4dc1681d-978a-4927-9ffa-8e2bd3796f64.json",
+      "path": "docs/design-references/material-design-3/raw/components/toolbars.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/toolbars.md",
+      "kind": "carbon",
+      "title": "Toolbars",
+      "bytes": 255156,
+      "sha256": "f02af5c45c0c5e55ddc440f8d0b73c2710de7d92af81f98a5ab843293decb8a4"
+    },
+    {
+      "url": "https://m3.material.io/components/tooltips",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/cb07b841-eae0-4959-bbab-25b1971714ca.json",
+      "path": "docs/design-references/material-design-3/raw/components/tooltips.json",
+      "readable_path": "docs/design-references/material-design-3/pages/components/tooltips.md",
+      "kind": "carbon",
+      "title": "Tooltips",
+      "bytes": 102714,
+      "sha256": "2651f8a97d82d5ef8fcc7df857705d0435f845dbe6ece05d4f2f2e7531a43288"
+    },
+    {
+      "url": "https://m3.material.io/develop",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/c3d29ede-a66a-427b-8efc-afe353e8d513.json",
+      "path": "docs/design-references/material-design-3/raw/develop.json",
+      "readable_path": "docs/design-references/material-design-3/pages/develop.md",
+      "kind": "carbon",
+      "title": "Develop",
+      "bytes": 18065,
+      "sha256": "63cc339d1dfbaae4eb884b38632531c788f01f272caa33074c17924da955dcd3"
+    },
+    {
+      "url": "https://m3.material.io/develop/android/jetpack-compose",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/dfec5d08-385a-4b2d-ad23-e44cc3410cef.json",
+      "path": "docs/design-references/material-design-3/raw/develop/android/jetpack-compose.json",
+      "readable_path": "docs/design-references/material-design-3/pages/develop/android/jetpack-compose.md",
+      "kind": "carbon",
+      "title": "Jetpack Compose",
+      "bytes": 26056,
+      "sha256": "bcafe2ffc15c6034dd12c40e9d61947ecdb9059b3511e738f4db4a496f14e268"
+    },
+    {
+      "url": "https://m3.material.io/develop/android/mdc-android",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/dc7f3bb6-9507-43d3-b8f8-7c68888fc7fa.json",
+      "path": "docs/design-references/material-design-3/raw/develop/android/mdc-android.json",
+      "readable_path": "docs/design-references/material-design-3/pages/develop/android/mdc-android.md",
+      "kind": "carbon",
+      "title": "Android Views (MDC-Android)",
+      "bytes": 18085,
+      "sha256": "66dbd319b507802ca058c43de85d038bca5b86c709f5168ca34943f14552cf53"
+    },
+    {
+      "url": "https://m3.material.io/develop/flutter",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/d1fb318b-1f4a-43bf-b3b5-35543257b935.json",
+      "path": "docs/design-references/material-design-3/raw/develop/flutter.json",
+      "readable_path": "docs/design-references/material-design-3/pages/develop/flutter.md",
+      "kind": "carbon",
+      "title": "Flutter",
+      "bytes": 20902,
+      "sha256": "6503f4180e680147705317de261a837fb790afc1ae624718d092a2348d61c941"
+    },
+    {
+      "url": "https://m3.material.io/develop/web",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/510dbdc8-6dae-4e5e-8d5f-dd93176cc7dd.json",
+      "path": "docs/design-references/material-design-3/raw/develop/web.json",
+      "readable_path": "docs/design-references/material-design-3/pages/develop/web.md",
+      "kind": "carbon",
+      "title": "Web",
+      "bytes": 11451,
+      "sha256": "c0f430a41c77d2c470896c6ceaa383646d86ceac3c0ad8855b7bc8f1ac22b43b"
+    },
+    {
+      "url": "https://m3.material.io/enhance-your-component-designs-with-parametric-prototyping",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/3f65dd8a-6971-4060-87c2-7f8edce64317.json",
+      "path": "docs/design-references/material-design-3/raw/enhance-your-component-designs-with-parametric-prototyping.json",
+      "readable_path": "docs/design-references/material-design-3/pages/enhance-your-component-designs-with-parametric-prototyping.md",
+      "kind": "carbon",
+      "title": "Enhance your component designs with parametric prototyping",
+      "bytes": 31191,
+      "sha256": "c07f3c894e0ab39555688405aad33b6fcb3a54423ed9c6de16da38a109d74198"
+    },
+    {
+      "url": "https://m3.material.io/foundations",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/4b25a580-a734-4c2c-9f51-90c7431d2a66.json",
+      "path": "docs/design-references/material-design-3/raw/foundations.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations.md",
+      "kind": "carbon",
+      "title": "Foundations",
+      "bytes": 11571,
+      "sha256": "394862d1e1a4b8b950e3edd4823356feac48e0cce782a135b28a86df4650262a"
+    },
+    {
+      "url": "https://m3.material.io/foundations/building-for-all",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/3b4b956e-da36-419d-bf59-c1c0455601af.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/building-for-all.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/building-for-all.md",
+      "kind": "carbon",
+      "title": "Building for all",
+      "bytes": 16822,
+      "sha256": "e90aac531aefa87779b106b18977a34749e68ba7cfb7e99a32289e63c83c92c2"
+    },
+    {
+      "url": "https://m3.material.io/foundations/content-design/alt-text",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/5a576ba1-d2c8-4708-a167-2a10d0260f72.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/content-design/alt-text.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/content-design/alt-text.md",
+      "kind": "carbon",
+      "title": "Alt text",
+      "bytes": 63168,
+      "sha256": "0005e36f2caaed1f4237f3ce356ce713c32c7cbd4673ec10f5874175f04b2269"
+    },
+    {
+      "url": "https://m3.material.io/foundations/content-design/global-writing",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/33c706d8-c9b9-4190-a403-d028a56da5cb.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/content-design/global-writing.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/content-design/global-writing.md",
+      "kind": "carbon",
+      "title": "Global writing",
+      "bytes": 34544,
+      "sha256": "9c415ce1c83d3d25797caa924319754e5199d60413f9f01a318db23810610a84"
+    },
+    {
+      "url": "https://m3.material.io/foundations/content-design/notifications",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/844999f2-e85f-4f25-bca4-6fb422a3853d.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/content-design/notifications.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/content-design/notifications.md",
+      "kind": "carbon",
+      "title": "Notifications",
+      "bytes": 47104,
+      "sha256": "90b6ef57cc35409ee1772d59682f5a73cc5374a6dce35fc2355324b8e4d66d1b"
+    },
+    {
+      "url": "https://m3.material.io/foundations/content-design/overview",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/e34bf326-f486-4b48-8b76-db3b0ce8a7a7.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/content-design/overview.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/content-design/overview.md",
+      "kind": "carbon",
+      "title": "Content design",
+      "bytes": 8174,
+      "sha256": "6b9d661dd8673ef7325716675e723a316e61559c72013ab372443850fb731877"
+    },
+    {
+      "url": "https://m3.material.io/foundations/content-design/style-guide",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/09101f02-d770-422e-ad62-1031f867c1aa.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/content-design/style-guide.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/content-design/style-guide.md",
+      "kind": "carbon",
+      "title": "Style guide",
+      "bytes": 75687,
+      "sha256": "a2412875002c4b345d78a1097cdbd8af8c2ae1c3958b3f0fb79371aacf32442a"
+    },
+    {
+      "url": "https://m3.material.io/foundations/customization",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/d82ab2cd-75e3-4cd0-8117-ff5ccbc8de85.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/customization.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/customization.md",
+      "kind": "carbon",
+      "title": "Customizing Material",
+      "bytes": 27313,
+      "sha256": "c07c3f95eb3db6ff330376ce408167bd1cd9642ecf60eccd2d5cfed0891dc8d8"
+    },
+    {
+      "url": "https://m3.material.io/foundations/design-tokens",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/abae98fd-d828-44f8-bb66-9ee8746f6073.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/design-tokens.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/design-tokens.md",
+      "kind": "carbon",
+      "title": "Design tokens",
+      "bytes": 84947,
+      "sha256": "a4d54d8c5ca7d4d3af25ab2518c823553ff79dde55d05c0da03affa9d3ea39d4"
+    },
+    {
+      "url": "https://m3.material.io/foundations/designing",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/d352451b-8348-4816-abac-4d7983f72f88.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/designing.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/designing.md",
+      "kind": "carbon",
+      "title": "Designing",
+      "bytes": 107069,
+      "sha256": "ffc6958877879d9f4fee1f89e975958af0d0bfa71c69f81c05011b445dcd669a"
+    },
+    {
+      "url": "https://m3.material.io/foundations/desktop",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/26e4a646-c6c2-4d82-9be7-6bff035b0006.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/desktop.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/desktop.md",
+      "kind": "carbon",
+      "title": "Design for desktop",
+      "bytes": 93753,
+      "sha256": "ffe052925d91903f4db4f5c473aeaca5bbedaf0692db184ac9f0b4ffcf7e2b97"
+    },
+    {
+      "url": "https://m3.material.io/foundations/glossary",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/e168c820-1e32-47af-8b0f-8960299aff3c.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/glossary.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/glossary.md",
+      "kind": "carbon",
+      "title": "Material A-Z",
+      "bytes": 92777,
+      "sha256": "e0ed8e76c0e9b68cfa95596e106ebbdd9de8cae0395239b9bc23f43e6192f4d6"
+    },
+    {
+      "url": "https://m3.material.io/foundations/interaction/gestures",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/0f6a68e6-a217-4f0e-8a7e-3f292c84a230.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/interaction/gestures.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/interaction/gestures.md",
+      "kind": "carbon",
+      "title": "Gestures",
+      "bytes": 30760,
+      "sha256": "52aa2f74491d5875214a5638ca31e15880f1897463365415f0c6511dc0c806a2"
+    },
+    {
+      "url": "https://m3.material.io/foundations/interaction/inputs",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/e82cd926-292d-409b-892a-1553f01be9a8.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/interaction/inputs.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/interaction/inputs.md",
+      "kind": "carbon",
+      "title": "Inputs",
+      "bytes": 87286,
+      "sha256": "83929edd3df6da13cec86727f93d4b9e2029f1e6ea576a84d8acc0d43cef2666"
+    },
+    {
+      "url": "https://m3.material.io/foundations/interaction/selection",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/0dfa5930-0695-4d99-a58a-2a7705c79d66.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/interaction/selection.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/interaction/selection.md",
+      "kind": "carbon",
+      "title": "Selection",
+      "bytes": 23897,
+      "sha256": "d86f03fde12cb1e9b292c53746f33bff31ba6789745bfe9591fb103dd09753b4"
+    },
+    {
+      "url": "https://m3.material.io/foundations/interaction/states",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/b3339b30-4a6d-49b6-9a8b-8e581b2b1204.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/interaction/states.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/interaction/states.md",
+      "kind": "carbon",
+      "title": "States",
+      "bytes": 129112,
+      "sha256": "c74df376b873c1d26bd432691d3b968a1985099edb55c47eab41eadf5aa1155d"
+    },
+    {
+      "url": "https://m3.material.io/foundations/layout/bidirectionality-rtl",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/35f8449d-9b29-4224-95ac-65a0708c8722.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/layout/bidirectionality-rtl.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/bidirectionality-rtl.md",
+      "kind": "carbon",
+      "title": "Bidirectionality &amp; RTL",
+      "bytes": 62538,
+      "sha256": "e471e20697e14e2dc6924f85ea76f389d9c44a7b05058321a43d53a783717590"
+    },
+    {
+      "url": "https://m3.material.io/foundations/layout/breakpoints",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/16281dc1-7630-4e78-abaf-c9bc8be69663.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/layout/breakpoints.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/breakpoints.md",
+      "kind": "carbon",
+      "title": "Breakpoints",
+      "bytes": 157330,
+      "sha256": "ddb23b160d7be47a32f7d5ecc12fad9161a74e22406ecac7bbf283a6effb39c5"
+    },
+    {
+      "url": "https://m3.material.io/foundations/layout/canonical-examples",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/23b84814-755b-469b-83a9-771fe027b0c0.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/layout/canonical-examples.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/canonical-examples.md",
+      "kind": "carbon",
+      "title": "Canonical layout examples",
+      "bytes": 101885,
+      "sha256": "8eb14cb34fece05ce60646274128bbcb374c428795d423ae73d883c258063e5d"
+    },
+    {
+      "url": "https://m3.material.io/foundations/layout/grids-spacing",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/b375cd8c-5506-4ce1-8caa-9cc23eb2d996.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/layout/grids-spacing.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/grids-spacing.md",
+      "kind": "carbon",
+      "title": "Grids &amp; spacing",
+      "bytes": 121300,
+      "sha256": "adddef1ac1a48e92223b2a2d7d3904486eb5b42526d6304827706832f65bcf20"
+    },
+    {
+      "url": "https://m3.material.io/foundations/layout/layout-overview",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/a12b2de7-b2c4-4a79-8503-d3b1e8d4d601.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/layout/layout-overview.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/layout-overview.md",
+      "kind": "carbon",
+      "title": "Layout overview",
+      "bytes": 264163,
+      "sha256": "513fdaab0f5f5b3000f93f2cbb94f32c655731c1ae05246e7fbdfd20dc8f8c95"
+    },
+    {
+      "url": "https://m3.material.io/foundations/layout/scaffold",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/7490d3ef-a222-47be-870a-3050bfcc5c59.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/layout/scaffold.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/layout/scaffold.md",
+      "kind": "carbon",
+      "title": "Scaffold",
+      "bytes": 114061,
+      "sha256": "b46a944af3bb8ca9e9145fbd4a58a3c64ec37d7a2524fc0939723935394672b0"
+    },
+    {
+      "url": "https://m3.material.io/foundations/overview",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/4101047f-0a57-42f9-b537-2f1dcd7d1fa7.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/overview.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/overview.md",
+      "kind": "carbon",
+      "title": "Overview",
+      "bytes": 19602,
+      "sha256": "c543cbf2c698480c3780a864496a5994c77ec52b1b79365c5474a987a1f22375"
+    },
+    {
+      "url": "https://m3.material.io/foundations/usability",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/a6c4f773-9a84-4c74-aeed-7c915916827d.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/usability.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/usability.md",
+      "kind": "carbon",
+      "title": "Usability",
+      "bytes": 96719,
+      "sha256": "89e7ed0637c9dccef9d8e9230b47af8dc6f8aa38a8be72461c83c56cc60aee33"
+    },
+    {
+      "url": "https://m3.material.io/foundations/watches",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/ece8884d-3ef7-4f41-af54-9a402b3bd527.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/watches.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/watches.md",
+      "kind": "carbon",
+      "title": "Design for watches",
+      "bytes": 106714,
+      "sha256": "844f6d0e55d3ace3177e24817ab0cfe73d199b2a3f1dff79c843cddc8bdc10b7"
+    },
+    {
+      "url": "https://m3.material.io/foundations/writing",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/672aa1bf-2faf-4bf9-b0b5-7a9d782da071.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/writing.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/writing.md",
+      "kind": "carbon",
+      "title": "Writing and text",
+      "bytes": 63435,
+      "sha256": "a85fe3d9eb0cbb957289b9d5384a7d511516b22ca1641e01e5610936468ac5c8"
+    },
+    {
+      "url": "https://m3.material.io/foundations/xr/components",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/eef0dedf-83d1-41d0-a4b0-7072b620e5ac.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/xr/components.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/xr/components.md",
+      "kind": "carbon",
+      "title": "XR components",
+      "bytes": 244590,
+      "sha256": "660e89ddf6e1435989ac554a6c584ac7e8b8caef919a7e61ef13ac5dcb057dd3"
+    },
+    {
+      "url": "https://m3.material.io/foundations/xr/design",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/95a7d4f6-3a81-47b3-9e99-083b5daf66be.json",
+      "path": "docs/design-references/material-design-3/raw/foundations/xr/design.json",
+      "readable_path": "docs/design-references/material-design-3/pages/foundations/xr/design.md",
+      "kind": "carbon",
+      "title": "Design for immersive XR",
+      "bytes": 100796,
+      "sha256": "497c67e6bec916a394d3823c01ab4ec0a317d22ef454435e3843268048e26a61"
+    },
+    {
+      "url": "https://m3.material.io/get-started",
+      "source_url": "https://m3.material.io/guide-page-content",
+      "path": "docs/design-references/material-design-3/raw/get-started.json",
+      "readable_path": "docs/design-references/material-design-3/pages/get-started.md",
+      "kind": "guide",
+      "title": "Get started",
+      "bytes": 27185,
+      "sha256": "9e0c5afb1edb4906bf5fe55014a5c09a97959df2cd50f2fcb57c8df41d1f8ec2"
+    },
+    {
+      "url": "https://m3.material.io/m3-expressive-motion-theming",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/db985439-a4b8-4b9e-bb86-6fb113b99d92.json",
+      "path": "docs/design-references/material-design-3/raw/m3-expressive-motion-theming.json",
+      "readable_path": "docs/design-references/material-design-3/pages/m3-expressive-motion-theming.md",
+      "kind": "carbon",
+      "title": "Adding Motion Physics with Jetpack Compose",
+      "bytes": 69434,
+      "sha256": "b111c9b1c8b839eec4e2e3c626f9fcc777d462e74d52f8fc49b30f293002c6b6"
+    },
+    {
+      "url": "https://m3.material.io/material-is-compose-first",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/52808ced-97c2-4719-a022-baf4d5a60509.json",
+      "path": "docs/design-references/material-design-3/raw/material-is-compose-first.json",
+      "readable_path": "docs/design-references/material-design-3/pages/material-is-compose-first.md",
+      "kind": "carbon",
+      "title": "Material Android is Compose-first",
+      "bytes": 26498,
+      "sha256": "dd5adcdb0ee4dcda1dc896bebc0ffac6790bf6e9dac3d69c9dbb6e0956905717"
+    },
+    {
+      "url": "https://m3.material.io/styles",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/fb17261d-e51b-4919-951b-1ac53484b19e.json",
+      "path": "docs/design-references/material-design-3/raw/styles.json",
+      "readable_path": "docs/design-references/material-design-3/pages/styles.md",
+      "kind": "carbon",
+      "title": "Styles",
+      "bytes": 9193,
+      "sha256": "8da9cf608a382fa28aa441e1a16a252c02cfbc50331fc48d6e83d7ae36fb2c7b"
+    },
+    {
+      "url": "https://m3.material.io/styles/color/advanced",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/eee5a035-c309-4c67-afb5-6b4c6dd8ec4e.json",
+      "path": "docs/design-references/material-design-3/raw/styles/color/advanced.json",
+      "readable_path": "docs/design-references/material-design-3/pages/styles/color/advanced.md",
+      "kind": "carbon",
+      "title": "Advanced customizations",
+      "bytes": 79603,
+      "sha256": "7addb6a08a78340f4f70b93fa09d9fe23ec74badb676d83ef6a1319d0d0d4a92"
+    },
+    {
+      "url": "https://m3.material.io/styles/color/choosing-a-scheme",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/a4aa0cf5-4017-4dea-ae51-edb8e950bd2c.json",
+      "path": "docs/design-references/material-design-3/raw/styles/color/choosing-a-scheme.json",
+      "readable_path": "docs/design-references/material-design-3/pages/styles/color/choosing-a-scheme.md",
+      "kind": "carbon",
+      "title": "Choosing a scheme",
+      "bytes": 21791,
+      "sha256": "33990ae39b97d999a17ddc40d7dff76dd75c6bba9e262ccd32668401b55425ac"
+    },
+    {
+      "url": "https://m3.material.io/styles/color/dynamic",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/03571013-d450-49cc-8300-4c7ee70bb4ca.json",
+      "path": "docs/design-references/material-design-3/raw/styles/color/dynamic.json",
+      "readable_path": "docs/design-references/material-design-3/pages/styles/color/dynamic.md",
+      "kind": "carbon",
+      "title": "Dynamic color schemes",
+      "bytes": 41859,
+      "sha256": "651c223ab0ab7fd6e3f161526d06d46732bb0116da6b7d8f5d9507e9b7bc1152"
+    },
+    {
+      "url": "https://m3.material.io/styles/color/resources",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/e5cd1701-c004-498e-a4ec-620446227c51.json",
+      "path": "docs/design-references/material-design-3/raw/styles/color/resources.json",
+      "readable_path": "docs/design-references/material-design-3/pages/styles/color/resources.md",
+      "kind": "carbon",
+      "title": "Color resources",
+      "bytes": 6772,
+      "sha256": "43a013e1026674d482b6bd342e136d750af342899fa41e06889564f80985e985"
+    },
+    {
+      "url": "https://m3.material.io/styles/color/roles",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/ced25aa3-a367-44c6-a47e-439bc9e59d68.json",
+      "path": "docs/design-references/material-design-3/raw/styles/color/roles.json",
+      "readable_path": "docs/design-references/material-design-3/pages/styles/color/roles.md",
+      "kind": "carbon",
+      "title": "Color roles",
+      "bytes": 109712,
+      "sha256": "06a7d87e3ea962ec84b919880ad3d8f3356ac457b1484d0e2e08eaf4640e9c12"
+    },
+    {
+      "url": "https://m3.material.io/styles/color/static",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/247d635f-924c-4e83-8383-94965fe769e2.json",
+      "path": "docs/design-references/material-design-3/raw/styles/color/static.json",
+      "readable_path": "docs/design-references/material-design-3/pages/styles/color/static.md",
+      "kind": "carbon",
+      "title": "Static color schemes",
+      "bytes": 32762,
+      "sha256": "183dd528430ac2d3991f2ceeb922de6c39506104d26d6d990e37f410ba6076e2"
+    },
+    {
+      "url": "https://m3.material.io/styles/color/system",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/89e1e9ce-0d9c-4391-9182-818434527cda.json",
+      "path": "docs/design-references/material-design-3/raw/styles/color/system.json",
+      "readable_path": "docs/design-references/material-design-3/pages/styles/color/system.md",
+      "kind": "carbon",
+      "title": "Color system",
+      "bytes": 130183,
+      "sha256": "87b8f4d024ede3b8f080b608dceaa36511ae268c7313df98c414649c596b8e1a"
+    },
+    {
+      "url": "https://m3.material.io/styles/elevation",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/38354be9-206b-4988-96a8-0f2a88074511.json",
+      "path": "docs/design-references/material-design-3/raw/styles/elevation.json",
+      "readable_path": "docs/design-references/material-design-3/pages/styles/elevation.md",
+      "kind": "carbon",
+      "title": "Elevation",
+      "bytes": 69700,
+      "sha256": "c4347979e22a8736ae08923def214b429adfb3c8e141f8be8c7db6ce9d56f7d6"
+    },
+    {
+      "url": "https://m3.material.io/styles/icons",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/17aed561-a58a-44d4-852e-1e5be253a641.json",
+      "path": "docs/design-references/material-design-3/raw/styles/icons.json",
+      "readable_path": "docs/design-references/material-design-3/pages/styles/icons.md",
+      "kind": "carbon",
+      "title": "Icons",
+      "bytes": 169195,
+      "sha256": "68ae3da716116006801928b5bc23fc3ab3bbc0c65d48aab7277febd72a77e1a5"
+    },
+    {
+      "url": "https://m3.material.io/styles/motion/easing-and-duration",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/1d658c3f-ba19-48be-9b71-872c72c7166e.json",
+      "path": "docs/design-references/material-design-3/raw/styles/motion/easing-and-duration.json",
+      "readable_path": "docs/design-references/material-design-3/pages/styles/motion/easing-and-duration.md",
+      "kind": "carbon",
+      "title": "Easing and duration",
+      "bytes": 80673,
+      "sha256": "552d316b034b16ee16d0dde4856b5f840d0d233f534c72a05b8fe4316b6432a1"
+    },
+    {
+      "url": "https://m3.material.io/styles/motion/overview",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/ccf2c3e9-82b5-4c4a-9570-b0d08d95c0c1.json",
+      "path": "docs/design-references/material-design-3/raw/styles/motion/overview.json",
+      "readable_path": "docs/design-references/material-design-3/pages/styles/motion/overview.md",
+      "kind": "carbon",
+      "title": "Motion physics system",
+      "bytes": 62664,
+      "sha256": "cb87e986c66c98c6463baa850cc579f754a99859273b3777ff07f81a9b8742db"
+    },
+    {
+      "url": "https://m3.material.io/styles/motion/transitions",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/2b9bdc79-df8e-4ad2-bdca-e0a3f083cd33.json",
+      "path": "docs/design-references/material-design-3/raw/styles/motion/transitions.json",
+      "readable_path": "docs/design-references/material-design-3/pages/styles/motion/transitions.md",
+      "kind": "carbon",
+      "title": "Transitions",
+      "bytes": 136501,
+      "sha256": "d70790f9876cb332706fb79a664fe023d3c4acec17470b27cb1f87cd06d06e4b"
+    },
+    {
+      "url": "https://m3.material.io/styles/shape",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/5e04e8f6-7da6-475e-a1b0-3818021c0cea.json",
+      "path": "docs/design-references/material-design-3/raw/styles/shape.json",
+      "readable_path": "docs/design-references/material-design-3/pages/styles/shape.md",
+      "kind": "carbon",
+      "title": "Shape",
+      "bytes": 80161,
+      "sha256": "3767cfb024716780f2b8c046d33158a4b14fd45acc5a30acdf70d31a8f7c271f"
+    },
+    {
+      "url": "https://m3.material.io/styles/spacing",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/36e81931-9b87-406f-9ec5-c0cc049564d8.json",
+      "path": "docs/design-references/material-design-3/raw/styles/spacing.json",
+      "readable_path": "docs/design-references/material-design-3/pages/styles/spacing.md",
+      "kind": "carbon",
+      "title": "Spacing",
+      "bytes": 64316,
+      "sha256": "63af82004d239ea105047bba73ebb22d269cca8f7ae00f86933e5a2883f74cf7"
+    },
+    {
+      "url": "https://m3.material.io/styles/typography",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/f6a1d89a-1bbf-46d1-a177-f13b074897a5.json",
+      "path": "docs/design-references/material-design-3/raw/styles/typography.json",
+      "readable_path": "docs/design-references/material-design-3/pages/styles/typography.md",
+      "kind": "carbon",
+      "title": "Typography",
+      "bytes": 252011,
+      "sha256": "a19348f2c70744554e6e2428615a6b3574c81c6457d58345b2e1ae56d4a4c617"
+    },
+    {
+      "url": "https://m3.material.io/whats-new-at-io26",
+      "source_url": "https://m3.material.io/_dsm/content/m3/2026-11-17_08-50-14/b7e5c2b2-d343-45e6-8516-ca0ddf93c743.json",
+      "path": "docs/design-references/material-design-3/raw/whats-new-at-io26.json",
+      "readable_path": "docs/design-references/material-design-3/pages/whats-new-at-io26.md",
+      "kind": "carbon",
+      "title": "What’s new at Google I/O 2026",
+      "bytes": 32201,
+      "sha256": "933de14ccafb6219d6cb1ad30ba07e306ab16f5abe055bb864a39b7264a66dd0"
+    }
+  ],
+  "failures": [],
+  "resources": [
+    {
+      "resource_name": "designSystems/20543ce18892f7d9",
+      "module_type": "COLOR",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/COLOR.20543ce18892f7d9.json",
+      "path": "docs/design-references/material-design-3/resources/COLOR.20543ce18892f7d9.json",
+      "bytes": 2590273,
+      "sha256": "ecb8e97b000ce38cd92e1c40b5da3a5d3e66e6352a8e87279b5de2feb25b4101"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9",
+      "module_type": "ELEVATION",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/ELEVATION.20543ce18892f7d9.json",
+      "path": "docs/design-references/material-design-3/resources/ELEVATION.20543ce18892f7d9.json",
+      "bytes": 143758,
+      "sha256": "479f612352d5e370c796b51ae94fccee65936b0352009243607442f505b93192"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9",
+      "module_type": "MEASUREMENT",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/MEASUREMENT.20543ce18892f7d9.json",
+      "path": "docs/design-references/material-design-3/resources/MEASUREMENT.20543ce18892f7d9.json",
+      "bytes": 90840,
+      "sha256": "f8a23dc4ba68f2c0e2ef83f27bfda91f9aec473ff633043b9cb11b364d6d8c5b"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/0045edb815f2325e",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.0045edb815f2325e.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.0045edb815f2325e.json",
+      "bytes": 2598222,
+      "sha256": "446b8bfd55d2c8ca4f334dac1293b39625cbe41d18d77545d8815ca8b256661d"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/01c5310367774eb8",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.01c5310367774eb8.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.01c5310367774eb8.json",
+      "bytes": 7100692,
+      "sha256": "0cdfad21688e14af99d88f91e7985e27269a364c9c76e8a07c1e1109a6c480c5"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/06c2c925cf96adca",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.06c2c925cf96adca.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.06c2c925cf96adca.json",
+      "bytes": 945476,
+      "sha256": "9900a29b8a8a05328cec86ea78e1f9b7f18b6d314cce0ea615eeae2ef1ec08e2"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/07341534518f78d0",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.07341534518f78d0.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.07341534518f78d0.json",
+      "bytes": 1824121,
+      "sha256": "2b31ab965206e809dacc9db4d260905594d4b894a05f08cb35e338aac3a194d3"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/082d7fd6e058b011",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.082d7fd6e058b011.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.082d7fd6e058b011.json",
+      "bytes": 182142,
+      "sha256": "63977c82ec139dc6460a0a983fb90a774a9301dbf7b9a26312d32d7c7dc6193a"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/0b1e39a67d5bafdc",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.0b1e39a67d5bafdc.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.0b1e39a67d5bafdc.json",
+      "bytes": 3285317,
+      "sha256": "002cd231ef726b1369ab9211347ccab07bb8ca8255f4269e565a9613ba4bbf36"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/0fe2282006ae098b",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.0fe2282006ae098b.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.0fe2282006ae098b.json",
+      "bytes": 12767645,
+      "sha256": "d41e09f453772a82cfb9a98ea55505cd6b936e50c7db6931eea9c71df73e967b"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/100ebfb4332adab1",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.100ebfb4332adab1.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.100ebfb4332adab1.json",
+      "bytes": 1970162,
+      "sha256": "18ed9ddb44c3b67bae5bcfe807efc05b3bd1df2cfe6325b19bb0daa96f35c5ad"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/1a076cec8bc202c2",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.1a076cec8bc202c2.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.1a076cec8bc202c2.json",
+      "bytes": 4062197,
+      "sha256": "4883f8606425dde9480b227a1b468ec3acb533ea8f579daf0286c4d288cd362a"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/1c4257f8804f9478",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.1c4257f8804f9478.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.1c4257f8804f9478.json",
+      "bytes": 19939972,
+      "sha256": "e48855b4f62e7dc703170cbb4e888defb357213eecf516e39abf6c78f8c94bf7"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/2956a7939bf0879c",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.2956a7939bf0879c.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.2956a7939bf0879c.json",
+      "bytes": 3933552,
+      "sha256": "631a51038ad86252491828238b717be15440ab04838124bc72b3c0a5015ee9d4"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/31f16b44fe03b0c0",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.31f16b44fe03b0c0.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.31f16b44fe03b0c0.json",
+      "bytes": 2641090,
+      "sha256": "986fef30d92564ad81087ec5f8df94f2124e183ef7525c222827a2cda761d5a0"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/33b1b2925d9ff561",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.33b1b2925d9ff561.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.33b1b2925d9ff561.json",
+      "bytes": 2302349,
+      "sha256": "30777cc7eb606258e9a956fc5069c05c0c651e71cbaedd0475e0bcf2108f5a3c"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/346ae12a744b45dd",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.346ae12a744b45dd.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.346ae12a744b45dd.json",
+      "bytes": 1258778,
+      "sha256": "ebfe483dcb2ec52f8bd43ea76524969ce095314a09abb535a8f4d857081f0a56"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/36500f77b86d20a5",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.36500f77b86d20a5.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.36500f77b86d20a5.json",
+      "bytes": 8934591,
+      "sha256": "314a524369a8cf111030ebcd6f9ef754a941c49d675eb43f55bbaf421233d183"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/376969f91547be8e",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.376969f91547be8e.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.376969f91547be8e.json",
+      "bytes": 2437953,
+      "sha256": "191c97ffa6ae7cbf4183191721ef605183c2164d08ee5366773d18d80409bd81"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/37697297db0555a6",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.37697297db0555a6.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.37697297db0555a6.json",
+      "bytes": 1987901,
+      "sha256": "631ab397ee305fe5b9f32ea8ccc41dfdecc363f2ec7491e27fee7c800d6525e1"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/385a28e5d3bb3dd0",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.385a28e5d3bb3dd0.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.385a28e5d3bb3dd0.json",
+      "bytes": 9241711,
+      "sha256": "54ae6469898e49ceae02b3e66d669542b85b8e85f211d6a674fe5d945b0af58a"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/39f4b152dd9bd292",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.39f4b152dd9bd292.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.39f4b152dd9bd292.json",
+      "bytes": 7496265,
+      "sha256": "a7d409147aa9e8d8fee3e03827a4f959d31df27d02138e0cf6a78dcb1305a5b1"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/3ec622835c7987b5",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.3ec622835c7987b5.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.3ec622835c7987b5.json",
+      "bytes": 3806866,
+      "sha256": "44043b36f6b7c7621f164ccc1c58f874211feefb25eb4e50a08ee988a7cf4196"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/41587918e51cca98",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.41587918e51cca98.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.41587918e51cca98.json",
+      "bytes": 10378160,
+      "sha256": "a7ee1b6e67d9fddfd68ee0e3a7423f5f92a384738f2055ee368b544b1acaf928"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/42f95ef205743188",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.42f95ef205743188.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.42f95ef205743188.json",
+      "bytes": 968270,
+      "sha256": "1e326b39ad405691daafe496bbdff6dfdb803e373f16bf558f75c344d0aa4987"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/43a124d2adc8a2ef",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.43a124d2adc8a2ef.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.43a124d2adc8a2ef.json",
+      "bytes": 765570,
+      "sha256": "fd51a1e97c0ddb80200f81350f9ae7f03d5614b8a3fde7c532644ad8b5aa51f2"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/484a63be03b01a17",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.484a63be03b01a17.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.484a63be03b01a17.json",
+      "bytes": 11591363,
+      "sha256": "46cb8c35520ce3499a9a2b4e13100a72fc7d444b07a00961f54eefdde3ac1f3d"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/52865380210a9b69",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.52865380210a9b69.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.52865380210a9b69.json",
+      "bytes": 2913571,
+      "sha256": "bef270748c66a8e4b0cdca1eec520dc93f176d82c28690d5af77a5c3fec4c108"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/59a1b3a9a90ca8b3",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.59a1b3a9a90ca8b3.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.59a1b3a9a90ca8b3.json",
+      "bytes": 393685,
+      "sha256": "ce498f6670b44fdfb80571b6543c0f8cd978020ec4cabf655b4c64bb9eeca95b"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/5b55bd7cc1ea6e29",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.5b55bd7cc1ea6e29.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.5b55bd7cc1ea6e29.json",
+      "bytes": 3538232,
+      "sha256": "471f478518bd0a88ef8f9cddf25aa441f486cd333fb2b75aa34f3b88fda91ef7"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/6039f0080a95df1e",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.6039f0080a95df1e.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.6039f0080a95df1e.json",
+      "bytes": 2960801,
+      "sha256": "6a218b3681154973ff3623583e8d55a13b220010f70781611d9e28e921ef519f"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/60990dd98dea0998",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.60990dd98dea0998.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.60990dd98dea0998.json",
+      "bytes": 22303995,
+      "sha256": "469ac7a185f3de75d7dd6ee2be11ded696e332e30f3a794deeb539b002024c21"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/624e8f2da4007fc8",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.624e8f2da4007fc8.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.624e8f2da4007fc8.json",
+      "bytes": 9768416,
+      "sha256": "5cc71464918914f366ca16caa444b748d4ef5d5d9ac0e08c58af0931c4aade45"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/67e2613d87ca6f98",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.67e2613d87ca6f98.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.67e2613d87ca6f98.json",
+      "bytes": 1948065,
+      "sha256": "59eb35774ee16bce5be3def465c051fb335cf2756fbf35c24aadbc7556baaac2"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/68895be451a51c31",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.68895be451a51c31.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.68895be451a51c31.json",
+      "bytes": 306676,
+      "sha256": "eb0567e9cb3b1406bd7befe13aef3b77654ec3199657b1e40a77400977ad8b55"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/6acb269a58d5f93f",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.6acb269a58d5f93f.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.6acb269a58d5f93f.json",
+      "bytes": 1013720,
+      "sha256": "98694743e7f80ceee207d0c8cb27422bd91666adb43eb61a28ca6fd429c8ab9d"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/6c818a16475113bd",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.6c818a16475113bd.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.6c818a16475113bd.json",
+      "bytes": 6305433,
+      "sha256": "ad2e463e800414b63d50a4913901e6f12111eab47bc700701c2db9f8d19b58fa"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/6f51f7ab7775a392",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.6f51f7ab7775a392.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.6f51f7ab7775a392.json",
+      "bytes": 772035,
+      "sha256": "b21af85402864dcd4bc7ad73567ad06ca5bb427937f7154c17f627f7c7d5bbf9"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/75e530a1014802b3",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.75e530a1014802b3.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.75e530a1014802b3.json",
+      "bytes": 279035,
+      "sha256": "7fde9c85da00af34a99befdff0815d6a729fd0eaa425316fc44ea78e0afd0dc3"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9/components/77f7657eb270e53d",
+      "module_type": "TOKEN_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TABLE.77f7657eb270e53d.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.77f7657eb270e53d.json",
+      "bytes": 95843,
+      "sha256": "de1ba0e8a7136ed7ea971f2acc3b7a390469293977e8b8b5b20996674500b92a"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9",
+      "module_type": "TOKEN_TYPE_UNSPECIFIED",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TOKEN_TYPE_UNSPECIFIED.20543ce18892f7d9.json",
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TYPE_UNSPECIFIED.20543ce18892f7d9.json",
+      "bytes": 284422,
+      "sha256": "172055394a578d849c83c854fb5ae9dccd5a5475ce6ca01d12cbaf4e8a67a54b"
+    },
+    {
+      "resource_name": "designSystems/20543ce18892f7d9",
+      "module_type": "TYPOGRAPHY",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/TYPOGRAPHY.20543ce18892f7d9.json",
+      "path": "docs/design-references/material-design-3/resources/TYPOGRAPHY.20543ce18892f7d9.json",
+      "bytes": 7743300,
+      "sha256": "1dee10de57f9f5e1fc95ece474bd3189968981ea234e676157474fa7eb3640b2"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/0c68159e11eed87a",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_0c68159e11eed87a.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_0c68159e11eed87a.json",
+      "bytes": 2188,
+      "sha256": "62e6792a1834e11b10e2734d6abef5ff0985adc15007b19bb3498b15313b1419"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/0fe2e78f2f029241",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_0fe2e78f2f029241.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_0fe2e78f2f029241.json",
+      "bytes": 2170,
+      "sha256": "07570830640857a6afcbddc3753154a0e3456ca4f9fb5a5a6eb81b4e4030ff1f"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/11cb6b2ed0f6dee4",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_11cb6b2ed0f6dee4.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_11cb6b2ed0f6dee4.json",
+      "bytes": 3439,
+      "sha256": "03350db0fd65731a19479cf8bd61afbb94eeeb37bb6e2987146fb4ab8011aec6"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/13ab9956d1c04e88",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_13ab9956d1c04e88.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_13ab9956d1c04e88.json",
+      "bytes": 2187,
+      "sha256": "fd30fe751def0eafdd0313d5c47ebfa8e0eceb180d2f8cf414d14524c8fd9d4e"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/160bdd9a0f6fe596",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_160bdd9a0f6fe596.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_160bdd9a0f6fe596.json",
+      "bytes": 2212,
+      "sha256": "d0042ba82c3447c2f06eeb6740ea50d276ec0cbbd87a8519636b30e771fd20a2"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/1747ec3c98bda4e2",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_1747ec3c98bda4e2.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_1747ec3c98bda4e2.json",
+      "bytes": 2206,
+      "sha256": "2f57e7d65944389fd900a5d2d0886088097f36f5faf2804b225f6120fffc4437"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/18d50ef91649dead",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_18d50ef91649dead.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_18d50ef91649dead.json",
+      "bytes": 3528,
+      "sha256": "89355abba18cfc6b8eafe193a4f736fbeacc6acd9fa4e56067b832ca2923941e"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/18e98bbdcbc43596",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_18e98bbdcbc43596.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_18e98bbdcbc43596.json",
+      "bytes": 2199,
+      "sha256": "8d56aacfc27db33f25ef3acd24a6e5a215e0f74c2d30ea87010edbf2feb67e47"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/1b4f73b814f85df6",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_1b4f73b814f85df6.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_1b4f73b814f85df6.json",
+      "bytes": 2066,
+      "sha256": "3f77c5dec037d5e8a48d0cf296959d5f4a0d8d71a9c5cea195d3474e8b0edb8d"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/1ddd05a1e6a16969",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_1ddd05a1e6a16969.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_1ddd05a1e6a16969.json",
+      "bytes": 1859,
+      "sha256": "c0344900c8dee0e8a1b392923cfccf2555789a64ee4d7e865d1c92af2e3c77f4"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/20c468ba5d00e74d",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_20c468ba5d00e74d.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_20c468ba5d00e74d.json",
+      "bytes": 2120,
+      "sha256": "90b5252fcf499aea34175a27a023d7f22a7478c7a9d99665cbfc035c0bb8466a"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/24b1bcdfc66a3784",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_24b1bcdfc66a3784.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_24b1bcdfc66a3784.json",
+      "bytes": 3937,
+      "sha256": "d0ca831c4fbf5b4a187fe0cde040cdcad0a418d1b51fe6a7e1ac4685db44d18b"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/26aa7eca29c81c71",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_26aa7eca29c81c71.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_26aa7eca29c81c71.json",
+      "bytes": 2157,
+      "sha256": "22c64b76e7e1b44528be729a7329624607d91ed13661128192f89f2b207a0c4e"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/27634f809ff5f396",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_27634f809ff5f396.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_27634f809ff5f396.json",
+      "bytes": 2068,
+      "sha256": "158c55f7891f147abf933e59f7e8b51eddae1c9eba3958ac117e3a137a69b972"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/2fd9de395ed49bc3",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_2fd9de395ed49bc3.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_2fd9de395ed49bc3.json",
+      "bytes": 3727,
+      "sha256": "504210146cc718d0d5d2895120b6ca3eb2fde96b5b5c4d1dac25eec4763b2744"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/30edd26d5082040a",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_30edd26d5082040a.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_30edd26d5082040a.json",
+      "bytes": 3320,
+      "sha256": "d8d0153498177befa7f6e86e502d288107fd2a4cc070107f64b926039d1cc76e"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/39c920b4035522f5",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_39c920b4035522f5.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_39c920b4035522f5.json",
+      "bytes": 3662,
+      "sha256": "cfae1ecdaf6f60ab2bd967edd62b7f93088e59cb2c54cb338f5bda818a79c94f"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/3fb6515e512e5c09",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_3fb6515e512e5c09.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_3fb6515e512e5c09.json",
+      "bytes": 2098,
+      "sha256": "ccf51f5fb5000d3abad1351ced5182bcacfa0a7935fa44a5ff292a8a239bbc58"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/411b03efa2256026",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_411b03efa2256026.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_411b03efa2256026.json",
+      "bytes": 3331,
+      "sha256": "a6fd844652be2ef1b41a03ae0d684848e66d528b5137be4fa22b2185c8a8aa67"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/41c723c0c0347dee",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_41c723c0c0347dee.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_41c723c0c0347dee.json",
+      "bytes": 3550,
+      "sha256": "b8739f71ef945d4724af7d2c712605bb538a93421f868c559d4c9503c83ee778"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/455af1b95b07ca01",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_455af1b95b07ca01.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_455af1b95b07ca01.json",
+      "bytes": 3782,
+      "sha256": "6fc4768b10900a1579aa5ce8d5e9e039d1b383c306643f22551169f920679789"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/4611eb61fa32c0e5",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_4611eb61fa32c0e5.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_4611eb61fa32c0e5.json",
+      "bytes": 2056,
+      "sha256": "ee97b8584de2ee2a973aa3cf37b086be2489d9de482c88c6cc2c16ad933802ab"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/4c66f2c4b2f2cb18",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_4c66f2c4b2f2cb18.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_4c66f2c4b2f2cb18.json",
+      "bytes": 3699,
+      "sha256": "318c8b0ec1b43f25f9cdb14ab98256b3804ab3b96987efd3ff55bdb7ae29425a"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/522fd47a354cd2f0",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_522fd47a354cd2f0.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_522fd47a354cd2f0.json",
+      "bytes": 2201,
+      "sha256": "7af5571295357f9b0382d29c5ff885420d270245274f1f7a4e71136f6a5f03f0"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/5577d088b97dd803",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_5577d088b97dd803.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_5577d088b97dd803.json",
+      "bytes": 1952,
+      "sha256": "362ab9921bf7da343a6c0ba813ba708523aaf10da063c332c2ce9c765fe2e330"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/56df27a2f3576bb1",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_56df27a2f3576bb1.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_56df27a2f3576bb1.json",
+      "bytes": 1999,
+      "sha256": "258ce72c8e4fd7b3159863df43da6ef7aec697b212b88de9fd4cb320fb4aa6ac"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/589af604996f7a3e",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_589af604996f7a3e.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_589af604996f7a3e.json",
+      "bytes": 2203,
+      "sha256": "519c95ddb047aba2d82ae6391c4a69f3a419560110b484b106359f79940fb2fe"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/59e0e5381ea8f766",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_59e0e5381ea8f766.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_59e0e5381ea8f766.json",
+      "bytes": 3487,
+      "sha256": "e997f9f9a258a61d0a6801d945ce2213f8846120cf47c7f27d30681ed9acf24c"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/5cae57e703105f6a",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_5cae57e703105f6a.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_5cae57e703105f6a.json",
+      "bytes": 3172,
+      "sha256": "2e34d2917c94dec09f7ce8bfcb469ae42f511dae39efc3176728f7ab028ede5f"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/5f54b6f53da7ecda",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_5f54b6f53da7ecda.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_5f54b6f53da7ecda.json",
+      "bytes": 2206,
+      "sha256": "34ba24aa293747e8354d0f9e49c42375c2d3eb79fa6c9d081307e17807dab3c1"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/6073fa0062bb7074",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_6073fa0062bb7074.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_6073fa0062bb7074.json",
+      "bytes": 3501,
+      "sha256": "30c004d76016114de8e7cc19f7be1441d07143c54b0f2b3a6a77b0040306c823"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/65e10af8626a2059",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_65e10af8626a2059.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_65e10af8626a2059.json",
+      "bytes": 3779,
+      "sha256": "a45ee4f0c0b05a7df4b7d9cd72d1531811491e892b27e1cec8d3c6b17790c64d"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/6608f8e8a72ac160",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_6608f8e8a72ac160.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_6608f8e8a72ac160.json",
+      "bytes": 2261,
+      "sha256": "8ad8b83d38e9feeb6eb0f6c70b63bf1a44df67c40fe0c46c4aad64fbc712f162"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/69586a0d0e3bfa32",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_69586a0d0e3bfa32.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_69586a0d0e3bfa32.json",
+      "bytes": 2095,
+      "sha256": "8957950bf4fc2093887c9e30ce2078a0afd124a83945560af551904a2d79534d"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/748fae37c92f9134",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_748fae37c92f9134.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_748fae37c92f9134.json",
+      "bytes": 2185,
+      "sha256": "23eb60e2c3309171259c300accbf5cc47c499e4e8e6043541f45c2d275aaaa09"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/7851d4a3eb38c46d",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_7851d4a3eb38c46d.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_7851d4a3eb38c46d.json",
+      "bytes": 1988,
+      "sha256": "d93627b9ca12a47db62e177cdfcbb961a59f1e4e4188fc2a9678d6b4d5abbf54"
+    },
+    {
+      "resource_name": "designSystems/030656e0a1083ef1/components/7e21db5b95eb4a2e",
+      "module_type": "STATUS_TABLE",
+      "source_url": "https://m3.material.io/_dsm/data/dsdb-m3/2026-11-17_08-50-14/designSystems_030656e0a1083ef1_components_7e21db5b95eb4a2e.json",
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_7e21db5b95eb4a2e.json",
+      "bytes": 2041,
+      "sha256": "1fd76254080bf103873d858d545a0f66cee4354a012fce48bf10365d8805a514"
+    }
+  ],
+  "resource_failures": [],
+  "sitemap_url_count": 384,
+  "covered_url_count": 382,
+  "media_url_count": 4580,
+  "media_downloaded": false,
+  "upstream_404_count": 2
+}

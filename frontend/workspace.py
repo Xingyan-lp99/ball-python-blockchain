@@ -139,7 +139,14 @@ def _render_snake_registration(api_base_url: str, access_token: str) -> None:
     st.rerun()
 
 
-def _render_snake_profile(api_base_url: str, access_token: str, account: dict) -> None:
+# Purpose: display the saved photo and profile in clearly grouped sections.
+# Workflow: query a registered snake before viewing its rights and certificates.
+# Without this function, users cannot retrieve profiles through the workspace.
+def _render_snake_profile(
+    api_base_url: str,
+    access_token: str,
+    account: dict,
+) -> None:
     st.divider()
     st.subheader("Snake Profile")
 
@@ -147,7 +154,11 @@ def _render_snake_profile(api_base_url: str, access_token: str, account: dict) -
         snake_id = st.text_input(
             "Snake ID", value="SNAKE001", key="profile_lookup_id"
         )
-        submitted = st.form_submit_button("View Profile")
+        submitted = st.form_submit_button(
+            "View Profile",
+            type="primary",
+            key="view_profile",
+        )
 
     if submitted:
         if snake_id == "":
@@ -171,29 +182,50 @@ def _render_snake_profile(api_base_url: str, access_token: str, account: dict) -
         st.error(error)
         return
 
-    st.subheader(f"Profile: {profile['snake_id']}")
-    if photo_content is not None:
-        st.image(photo_content, width=320)
-    if error is not None:
-        st.warning(error)
+    with st.container(border=False, key="snake_profile_card"):
+        st.subheader(profile.get("nickname") or profile["snake_id"])
+        st.caption(f"Snake ID: {profile['snake_id']}")
 
-    fields = [
-        ("Snake ID", "snake_id"),
-        ("Breeder", "breeder_name"),
-        ("Breeder Internal ID", "breeder_internal_id"),
-        ("Nickname", "nickname"),
-        ("Species", "species"),
-        ("Sex", "sex"),
-        ("Date of Birth", "date_of_birth"),
-        ("Genetic Description", "genetic_description"),
-        ("Introduction", "introduction"),
-        ("Sire Description", "sire_description"),
-        ("Dam Description", "dam_description"),
-    ]
-    st.table([
-        {"Field": label, "Value": profile.get(field) or "Not provided"}
-        for label, field in fields
-    ])
+        if error is not None:
+            st.warning(error)
+
+        photo_column, details_column = st.columns(2, gap="large")
+
+        with photo_column:
+            if photo_content is not None:
+                st.image(photo_content, width="stretch")
+            else:
+                st.info("Profile photo is unavailable.")
+
+        with details_column:
+            st.markdown("**Basic Information**")
+            basic_fields = [
+                ("Snake ID", "snake_id"),
+                ("Breeder", "breeder_name"),
+                ("Breeder Internal ID", "breeder_internal_id"),
+                ("Species", "species"),
+                ("Sex", "sex"),
+                ("Date of Birth", "date_of_birth"),
+            ]
+            st.table([
+                {
+                    "Field": label,
+                    "Value": profile.get(field) or "Not provided",
+                }
+                for label, field in basic_fields
+            ])
+
+        st.divider()
+        st.markdown("**Profile Details**")
+        description_fields = [
+            ("Genetic Description", "genetic_description"),
+            ("Introduction", "introduction"),
+            ("Sire Description", "sire_description"),
+            ("Dam Description", "dam_description"),
+        ]
+        for label, field in description_fields:
+            st.markdown(f"**{label}**")
+            st.write(profile.get(field) or "Not provided")
 
     render_keeper_transfer_section(
         api_base_url=api_base_url,
@@ -220,16 +252,23 @@ def render_workspace(
         "lab": "Laboratory Workspace",
     }
     role = account["role"]
-    st.title(titles[role])
-    st.caption(f"Signed in as {account['display_name']} ({account['username']})")
+    with st.container(border=False, key="workspace_header"):
+        with st.container(horizontal=True, vertical_alignment="center", gap="large"):
+            with st.container(width="stretch"):
+                st.markdown("**Ball Python Blockchain Registry**")
+                st.title(titles[role])
+                st.caption(
+                    f"Signed in as {account['display_name']} ({account['username']})"
+                )
+                if role == "lab":
+                    st.caption(f"Laboratory: {account['participant_id']}")
 
-    if st.button("Sign Out", key="account_sign_out"):
-        sign_out_current_account(access_token=access_token)
+            if st.button("Sign Out", key="account_sign_out", type="secondary"):
+                sign_out_current_account(access_token=access_token)
 
     _render_connection_status(api_base_url)
 
     if role == "lab":
-        st.subheader(f"Laboratory: {account['participant_id']}")
         render_certificate_issuance(
             api_base_url=api_base_url,
             account=account,

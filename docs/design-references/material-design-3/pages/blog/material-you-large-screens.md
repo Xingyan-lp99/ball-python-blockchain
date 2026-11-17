@@ -1,0 +1,154 @@
+# Better design for bigger screens
+
+Source: https://m3.material.io/blog/material-you-large-screens
+Content endpoint: https://m3.material.io/page-data/Posts/5587246423080960.json
+Content version: 2026-11-17_08-50-14
+
+This is an upstream documentation snapshot. HTML fragments and media URLs are preserved.
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/15f0c8854500044aebe8b7ae32d202a914cf24f2b796cf3001a5370010d73ffd0153f1746f5e8478395ef8b8e3bfc9611844a75e07ff8a08b8154d0f51f739c0
+
+https://lh3.googleusercontent.com/bSCS76hA4EIKCPKXBBPX7ik3R6amw-3yZVw4HL15ekHWNBpOltFJs1rBcSxBzf6CtqlkjihMYiDRyWZ0GzNrCeZzVIAXm0fTqu4LmjiFd_9X-F-kVn0
+
+Ryan Kiley
+
+Designer
+
+mio-example
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/c9e4a65ced74640f2aa5d5f4e0a72625978fb933e29c480c449a3f90762c2a6522f3188688d483776d929590f7abeb83128c387d7bc83fd55c276f91bd60f1dc
+
+https://lh3.googleusercontent.com/ZCl9MpBvO5iTxojVxpSV2BUTiJMh6JEFunfWeUZYbMVSsYDcRn58_Ze47JVI0NaWeIk06TFWVQHSXtgvCpkRqppcHW4QuDV4H-VVc4eNB6Xx4uQPI10
+
+Javier Lopez
+
+Designer
+
+mio-example
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/5efce30550d992d71fdbc0a4f5cde65c07a9d0c74c3910a80a543cc169cc9d59b4050c97a518484acab95c9c40ada543274b6e71f4d003f141286baccf3aa43f
+
+https://lh3.googleusercontent.com/x5zhkg_9PF8pDS8VLAJAT0O-rUvWBKmgIL3oTISu2lHFXL-y4y1b9zwn-1NDq4Wa5WCBxABt5RkegV4-LJoxlY2uvlOhbUFY1eQGOASTcdfUx7g6RTw
+
+Anna Pfoertsch
+
+Product Manager
+
+mio-example
+
+<p>In recent years, we&rsquo;ve seen a growing trend towards larger screens. This is due in part to the increasing popularity of tablets, larger smartphones, and desktops.</p>
+<p>At Google I/O this year, Material Design is diving into the latest updates to large screen guidelines for designers and developers. Look out for our talk and read on to learn how Material helps you meet the challenges and opportunities of designing for multiple devices to meet the rising demand from app users.</p>
+<h2>Design foundation: Window size classes</h2>
+<p>One of the top challenges of designing for large screens is creating layouts that are both visually appealing and user-friendly &ndash; without completely redesigning your app for each form factor. So, rather than design for an ever-increasing number of formats, we created Window Size Classes to ensure layouts adapt seamlessly across a range of devices.</p>
+<p>&lt;mio-image index=0&gt;&lt;/mio-image&gt;</p>
+<p>For more complex layout scenarios, you can also&nbsp; consider incorporating width and height classes. However, for most apps, especially those with a vertically scrolling UI, the three window width size classes can meet your needs. Learn more in <a href="https://developer.android.com/guide/topics/large-screens/support-different-screen-sizes#window_size_classes" target="_blank" rel="noopener">Android&rsquo;s Window Class Size documentation</a>.</p>
+<h2>Layout anatomy</h2>
+<p>A typical app&rsquo;s layout is made of two parts: the navigation and the body.</p>
+<p>&lt;mio-image index=1&gt;&lt;/mio-image&gt;</p>
+<p>When it comes to balancing your design with user needs like ergonomics, selecting the best navigation component for your screen is an important step.</p>
+<p>Panes are best-suited for the need to organize the body of an app. Panes help organize content and create a clear containment structure for components. They can be fixed or flexible; they can hold persistent components, such as a top app bar or search bar, and context-specific elements, such as images, text, lists, cards, and buttons.</p>
+<p>Content in a pane can be aligned and displayed in multiple columns. Columns are exclusive to a pane and are not used at the window level, allowing more granular control of layout within a pane. Learn more about how Material Design defines <a href="https://m3.material.io/foundations/layout/understanding-layout/parts-of-layout" target="_blank" rel="noopener">parts of a layout</a>.</p>
+<h2>Hardware</h2>
+<p>New hardware is always exciting&ndash;but also brings challenges for handling new, unexpected use cases. Material&rsquo;s updated guidance looks at how your design can adapt to a range of hardware specs with less work to customize and adapt your layout.</p>
+<p>&lt;mio-image index=2&gt;&lt;/mio-image&gt;</p>
+<p>One example of a seemingly tricky hardware factor shows up on folding devices with a center hinge that divides your screen into two halves. With some folding devices, there&rsquo;s no display hardware in this region, so the screen will operate as two distinct panes. When opening a foldable device, an app should transition from the front screen to the unfolded screen automatically and within seconds.</p>
+<p>Display cutouts, such&nbsp; front-facing cameras, are also an example of a constraint to consider since this can obstruct some of your screen design. In these scenarios, it helps to offset the <a href="https://m3.material.io/foundations/layout/understanding-layout/parts-of-layout#40dd6409-2b4d-4354-976b-452006d5615f" target="_blank" rel="noopener">body region</a> to make sure no part of the UI is obscured.</p>
+<h2>A look at the future of Material for large screens</h2>
+<p>The future of how Material Design is planning for large screen design and development is a continuation of the visual language of Material You. Our goal is to continue to release spirited, adaptive elements for large screen experiences that are grounded in the ethos of M3.</p>
+<p>Stay tuned for <a href="https://io.google/2023/program/456db54e-d72e-44e2-9522-958f17cf5ece/" target="_blank" rel="noopener">I/O 2023</a> to see some of Material Design&rsquo;s work in progress ideas!</p>
+
+There are three window size classes: compact, medium, and expanded
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/8ec42a2b537a5167ee422c7fe1d8af1dfce2b3e6879fc1f6dc7850907f3e9fb96bdba119d514c2f9dcae560d59a4a0b30aca5be52ace3db341058e356a12d938
+
+https://lh3.googleusercontent.com/FFzfrTw11l9Zs8d9ON2ms7f4WRGHf9dOjEhnjsHTEEwCHjdji_GCTThZHZoFXDiAf1W9_jcGi47KBgaysha1GrDymBjMFXNa0m-7eKhY9kywEYj2K50
+
+Compact devices use a navigation bar, medium devices can use a navigation rail, and expanded devices can take advantage of a navigation drawer
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/2cbb88dadba9b134dd77d0da5459b858e7f341fa9b674427fab9f668b745ad0f3dd04b57f82925aca59a39c79031ec9b084ed7f2cf9a7a49c1b64d359afba062
+
+https://lh3.googleusercontent.com/OdxbwYv4pA7vT5w9hd49Pqh4jnmuFbUgJooqIqKS8ByHFcYsuLF34FhSW6qjuh6KNzI4oxPC78Dl6gFWjk_r97xRVAXfvBmZt6cyCfNnT7QNI3kv-KmV
+
+New hardware comes with new challenges: hinges, on-screen cameras, and rapidly changing window size classes
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/7cbdf3fa54795452bf740deefd4276a4919f2ecbb656977bd40cf5de74defa57b6f8ed61130c266ad75d7e72fae5ff26280e8fa6c1d7e219bcda5adeb5596cb2
+
+https://lh3.googleusercontent.com/E7-U2j_dicT3wUuNCf4kgkZ04nQl-FKXdtr3qTsCXO7SeJ-52gOO4S3M_aXXzRPygNa5sQNJ6rzmSPjMBE23q-9vdh_tspxUqTPsA0Srf9FXyt7VeuNb
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/fe32d4d4fcbdcfd27eb85ca37fff18e38ca046f3bddbf853dab05eccd3048d2e398966bf3215dc13bd051ccc443d5e098b884db2546d1d84bc32dba0aea1bbaf
+
+https://lh3.googleusercontent.com/l5dbxlkHHyjIZmFk13LRS1l2YxNyby31QoCYaDwI4sb3oHbVT6t-5-FhTsoj5YR49TZyL_hgEPGB_nyX-0T169HLIp9N_JjlUlKslgA5KkPjwmi_Qw
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/9e5803decae4861038fc058dc4c1f6ce7c559b982cb88777023ad694044c6526ebcc51f1d6e95e351f3922a0e3ee664d46ec2fc3cbd2ccbeb479c1b655cce0e6
+
+https://lh3.googleusercontent.com/_mkKRboDKzkH_IzsVklwbVxksh3ZXWFDoZkHE0T6WxRh0IkqJxZRwVde-kTVy-NFc0ciYVHNGsIwBnVJK9XL75UqHocdiwE8qaODHx79NaWAtybXOFE
+
+layout, large screen
+
+ 
+
+{}
+
+How Material You supports beautiful, efficient tablet and foldable experiences
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/3a2570354f610670aa190afc8dac1701a55c558ead8de58c7f71466e859250403b8369056fcbc2d671a9f0eeefcbb709afe47a4774f6a8922f73756bc4c3769f
+
+https://lh3.googleusercontent.com/ZraZKFHMRTsdJwtU4ry2iRk3aELp3PEg8SPqMVXN342RtOUkf0A5JET3w_jzrBrx6iTrg5JCRgSnYBuyFWnbcXDGtRf0B16ry6jThtoABIQihG023UgK
+
+Better design for bigger screens
+
+2023-04-29T13:00:00
+
+material-you-large-screens
+
+How Material You supports beautiful, efficient tablet and foldable experiences
+
+Better design for bigger screens
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/d9991c1ae9e5742bc4f7bafd24452d41b2dcb6f79f384745188f56d9c4956b06e4e0bfbce92c04019c6298185a6f438b3bc4ddb384fc6e0a373e129cd46384a6
+
+https://lh3.googleusercontent.com/Q9G2AKK71t1BkAC1W4IHbjkPOQrHFpLlDVyQPWvwFZMNPhXcUlY1k0prZvOdf-mHK_u1cc-GBiNGjJKLHPdO7fawI89mq4fA16SF5TaxwwaeNuV3CbM
+
+/blog/readability-consortium
+
+Material Blog
+
+Teaming Up to Improve Reading Research
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/5cb0f0974a2eb242483cf7d985a7c040fd476bc926b463a7babb0c8e7c01659a0990075ecbcdac692b36a62625159da0b8966c6a84af5af3f732ee13abaac391
+
+https://lh3.googleusercontent.com/IuzB6mc_EC-UJOz-xYOM7s98M-Bu_ITGjza00wLhl3CHGtK7fgJlenXTT_r0EjrMoWjs0gs1LzBPfOgxzCB-KCZhNt7U-YfkxW-Wle9lL_u21rWASCM
+
+/blog/atkinson-hyperlegible-design
+
+Material Blog
+
+From Rebranding to Readability with Atkinson Hyperlegible
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/ef250c115c9abb21553b2ae258a6a5b479a01d9076358a9fa886d625396ef7bae8a2819235d4596d2cad99c1ee2291314f6c10832b12944621bdae1839205f69
+
+https://lh3.googleusercontent.com/DfKWElr8WS_6nt0H5tL9wqqS7MfmwDUAWpbjF03HOT4ggF2wBPhSaGDDBes_QumgtN5ATWUK6br2IyqjAqQHab4HjjcYVmwh2hJmb1uXIDLw5khJuWA
+
+/blog/readex-pro-legibility-arabic-type-design
+
+Material Blog
+
+The Design of Readex Pro
+
+mio-example

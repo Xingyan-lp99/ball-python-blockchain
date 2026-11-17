@@ -2,10 +2,12 @@ import streamlit as st
 
 from frontend.api import AccountRequestError, SignInRequired, fetch_current_account
 from frontend.auth import API_BASE_URL, render_login_page, return_to_login
+from frontend.styles import apply_styles
 from frontend.workspace import render_workspace
 
 
 st.set_page_config(page_title="Ball Python Registry")
+apply_styles()
 
 # Validate the backend session before rendering any cached business content.
 session = st.session_state.get("auth_session")

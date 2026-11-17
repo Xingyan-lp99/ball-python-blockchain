@@ -1,0 +1,370 @@
+# The Story of Shantell Sans
+
+Source: https://m3.material.io/blog/shantell-martin-variable-font
+Content endpoint: https://m3.material.io/page-data/Posts/6739758443266048.json
+Content version: 2026-11-17_08-50-14
+
+This is an upstream documentation snapshot. HTML fragments and media URLs are preserved.
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/62399ad2020abede0f2f582166c63dc75d5937727e03f3aabe88bfba84bb3e036054b3fb49c75b55b0e36c475e24dad5ae7d8fb392630859131807a901cb0192
+
+https://lh3.googleusercontent.com/HavcUY1WB183cYkaKkVUTihbc0NQaO_A7rudT2hYFiO3MLa_Sgk576t4HQR86KhZX2puNvqQVVZdKilUKcAsih0C6H6G0YprjZqRSXV17T-LaBe4MEQ
+
+Shantell Martin
+
+mio-example
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/b45f36fb53bbe924171f6ca647c7cd4b46f59181e967dd5d288b48ee0fa5409c88fb19c9995c87bbeabf7b9043cc612a24849c3ac2d3688bc2c702475c0e6058
+
+https://lh3.googleusercontent.com/xiUCE-OGAozB6E0w4pw48wUAMr4Y-GDZCv-PC14Dg7uW_ewGBght01Iw-zxSWXc0aBuQeoCKJYUuDObK8F8mUQ3JqCp0T3F3pthpP72c2fYJrhPXcjg
+
+Stephen Nixon
+
+ArrowType
+
+mio-example
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/f3366ec098b4bae93f458a77664c244b731c7a663b9cd756b092d6422701deb102b302c20d21519525d9163f700fb0b52419dc03e13139d011115bcc903d775e
+
+https://lh3.googleusercontent.com/PmXuB2iQIB0rFtR6LJUV8uZd63ir7Aivs5J5MOlcb5ZQUa1YP6-ZPgb3Ias8mhCQVNOtrj7zXijWx3k-VsTSS-FZA5rs3jZ7dAn9uJ4CecSUinvWxA
+
+Anya Danilova
+
+Type Designer
+
+mio-example
+
+Authors
+
+_f68a99ffe9144467a917320028f1ce3b_/_50ac3cbb26fa4c21a9967e26675f94c5_/369c95fe5019b07e689d250a71b99f23e954b4b1e7288cc521f9534e2f1b26e3402000d0d9b0ec2b449c286617c23522d81fa4a5aad5de6e88a30a6f158b944d
+
+https://lh3.googleusercontent.com/WXzPP98RdDrDneOh7QCxSdNkjwk9_ACKefFU5vhW7DtED5EeHavMyWl7ttNSOzpRiLZqvYoZCQxVwxJ7Bi47CN8h4tj_nqxjuTsH1szGG5nt1dZgwtr1
+
+Susanna Zaraysky
+
+Content Strategist, Fonts
+
+mio-example
+
+<h3><strong>Shantell Sans is available <a href="http://fonts.google.com/specimen/Shantell+Sans/" target="_blank" rel="noopener">on Google Fonts</a>.</strong></h3>
+<p>British visual artist and philosopher <a href="https://shantellmartin.art/" target="_blank" rel="noopener">Shantell Martin</a> is famous for using words in her artwork in the <a href="https://shantellmartin.art/work/the-oculus/" target="_blank" rel="noopener">Oculus</a> at the World Trade Center, in New York City, and for her <a href="https://shantellmartin.art/work/x-kendrick-lamar/" target="_blank" rel="noopener">music and art collaboration with Kendrick Lamar</a> at Art Basel in Miami. Her art has taken over the <a href="https://observer.com/2020/02/shantell-martin-times-square-midnight-moment-billboards/" target="_blank" rel="noopener">screens of New York&rsquo;s Times Square</a> and the <a href="https://shantellmartin.art/work/new-york-city-ballet/" target="_blank" rel="noopener">Lincoln Center stage</a>, home of the New York City Ballet.</p>
+<p>Back in school, she was scared of spelling tests. However, outside of school, she felt that words were art and provided emotional relief. A discovery in her early 20s opened her eyes to why reading and writing were so difficult for her, and set in motion her desire to create the <a href="https://fonts.google.com/specimen/Shantell+Sans" target="_blank" rel="noopener">Shantell Sans</a> typeface. To inspire others to have fun with writing and words, she teamed up with Stephen Nixon of <a href="https://www.arrowtype.com/" target="_blank" rel="noopener">Arrow Type</a> to create Shantell Sans.</p>
+<p>Shantell Martin, Stephen Nixon, and Anya Danilova share their experiences of the making of Shantell Sans.</p>
+<h2>Why make a new font?</h2>
+<p><strong>Shantell Martin, Artist</strong></p>
+<p>&lt;mio-image index=0&gt;&lt;/mio-image&gt;</p>
+<p>One of my first relationships with words was back in elementary school. We did spelling tests every week. Since I never passed them, I had to sit in detention.</p>
+<p>Despite being scared of the spelling tests, I loved words. I wrote and drew a lot. I knew that words helped me to express my feelings and feel better. Since I was writing for myself, I didn't have to care about spelling.</p>
+<p>When I was 20 or 21, I found out that I was dyslexic. When I started my art degree at <a href="https://www.arts.ac.uk/colleges/central-saint-martins" target="_blank" rel="noopener">Central Saint Martins</a> in London, I was in an environment where it felt like the majority of people were dyslexic.&nbsp; I was instantly part of a cool group of creative people. However, I was disappointed about the number of teachers who had never spotted my reading challenges. Instead of supporting me to learn to read and write, they punished me.</p>
+<p>Creating my own font was a way to empower people to read and write, despite their relationship to words. What if I take my words, or my handwriting or the letters that I've created, and make a typeface that is fun and playful, but also professional and usable? I wanted to make a font that feels accessible and open to remind people, including myself, that words are drawings and that words can exist on our own terms.</p>
+<p>I was inspired by the Comic Sans typeface. Since I was a kid, I have liked how playful and easy it was to read text in Comic Sans, especially for me as a dyslexic.</p>
+<p>I think we have an emotional response to fonts. A font might feel easier to read, or more welcoming. Or it might feel like something I want to look at or pick up. I definitely like fonts that have a little bit more space, because they feel more approachable. If you have a really tiny, fancy font, I don't want to touch it.</p>
+<p>The usage of a font can make it take on a certain personality. If you're very dyslexic, you're likely not going to pick up a book printed in a tiny font with words very close together. It feels intimidating. Or if the font is very plain and boring, it doesn't capture your attention enough to want to spend time with it.</p>
+<p>To start this project, Stephen Nixon sent me a template with lines on it for me to handwrite all of the Latin alphabet, numbers, and symbols. He used that handwriting to create a digital font.</p>
+<p><strong>Giving the font away</strong></p>
+<p>To make the font visible and successful, I am releasing Shantell Sans under an <a href="https://fonts.google.com/knowledge/glossary/licensing" target="_blank" rel="noopener">open font license</a> with Google Fonts. It&rsquo;s my gift to the world. Having the font be available without charge on Google Fonts means that a wide variety of people will have access to Shantell Sans.</p>
+<blockquote><strong>I wanted to create a typeface by a living artist, and perhaps inspire other living artists to create their own typography. </strong></blockquote>
+<p>I'm curious to see what people will do with it. I'm giving up control over something that is innately mine since Shantell Sans is based on my handwriting and is quite personal.</p>
+<p>I would really love to see children and young adults use Shantell Sans and learn about how it came about. I want to see it being used for personal projects, or even bigger design projects. I think with something like this, when you put it out into the wild, it's going to be used in ways that you probably didn't even think of.</p>
+<p>I have started to use Shantell Sans in some of my projects. I designed key tags with Shantell Sans type for the <a href="https://shantellmartin.art/work/x-whitney-museum-shop/" target="_blank" rel="noopener">Whitney Museum shop</a> in New York City. I also did a project with Cash App, a financial services platform, to create a cash card. The cash tag and the numbers and everything on the back of the card is in Shantell Sans.</p>
+<p>&lt;mio-image index=1&gt;&lt;/mio-image&gt;</p>
+<h2>Design process</h2>
+<p><strong>Stephen Nixon, Type Designer</strong></p>
+<p>When Shantell reached out and said, &ldquo;Let&rsquo;s make a marker font,&rdquo; I was on board from the start.</p>
+<p>I first encountered Shantell&rsquo;s work in a large mural, which I love for its exploratory, semi-spontaneous, and playful line artwork.</p>
+<p>Shantell Sans is a marker font, such as Comic Sans. Marker fonts are designed to mimic the appearance of <a href="https://fonts.google.com/knowledge/glossary/handwriting" target="_blank" rel="noopener">handwriting</a> done with a marker. Although they elicit an emotional response, they are an underappreciated genre of type design.</p>
+<p>To make a great marker font with widespread adoption, I had these five goals:</p>
+<ol>
+<li>Appeal to everyday computer users</li>
+<li>Function well in a wide variety of communication (display and text)</li>
+<li>Do something new</li>
+<li>Be legible, accessible, and easy to read</li>
+<li>Be an adaptation of Shantell&rsquo;s marker handwriting</li>
+</ol>
+<p><strong>1. Appeal</strong></p>
+<p>For it to be easy to use, Shantell Sans had to have the proportions and styles of a modern font.</p>
+<p>Shantell Sans matches the general average for proportions and <a href="https://fonts.google.com/knowledge/glossary/weight" target="_blank" rel="noopener">weights</a> of most modern, common <a href="https://fonts.google.com/knowledge/glossary/sans_serif" target="_blank" rel="noopener">sans-serif</a> fonts. This familiarity helps make it easy for designers to use in a wide variety of projects.</p>
+<p>&lt;mio-image index=2&gt;&lt;/mio-image&gt;</p>
+<p><strong>2. Function for different types of communication&nbsp;</strong></p>
+<p>The <a href="https://fonts.google.com/knowledge/glossary/spaces" target="_blank" rel="noopener">spacing</a> had to work well for small text. The letters are a little wider than an average font, and the spacing between them isn&rsquo;t too tight. Also, the <a href="https://fonts.google.com/knowledge/glossary/kerning_kerning_pairs" target="_blank" rel="noopener">kerning</a> is optimized for smallish sizes. The typeface had to support a wide range of languages (380+) and be open-source.</p>
+<p>&lt;mio-image index=3&gt;&lt;/mio-image&gt;</p>
+<p><strong>3. Explore new territory</strong></p>
+<p>To offer flexibility, the font should have a good range of weights and be a <a href="https://fonts.google.com/knowledge/glossary/variable_fonts" target="_blank" rel="noopener">variable font</a>. I brought the spontaneous and vibrant quality of Shantell&rsquo;s work into some experimental variable axes. For detailed <a href="https://fonts.google.com/knowledge/glossary/typography" target="_blank" rel="noopener">typography</a> for densely-packed information, such as on a business card, the typeface had to include <a href="https://fonts.google.com/knowledge/glossary/open_type" target="_blank" rel="noopener">OpenType</a> features like tabular vs proportional figures, fractions, and localized forms.</p>
+<p>&lt;mio-image index=4&gt;&lt;/mio-image&gt;</p>
+<p><strong>4. Easy to read&nbsp;</strong></p>
+<p>To make sure the font met Shantell&rsquo;s goals of making an easy-to-read font, I made sure that the characters could be distinguished from one another. Shantell naturally writes letters like &ldquo;b&rdquo;, &ldquo;d&rdquo;, &ldquo;p&rdquo;, &ldquo;q&rdquo; and &ldquo;n&rdquo; and &ldquo;u&rdquo; that are clearly differentiated from one another through a contrast of simple shapes and well-placed exit <a href="https://fonts.google.com/knowledge/glossary/stroke" target="_blank" rel="noopener">strokes</a>. Shantell sometimes writes the uppercase &ldquo;I&rdquo; and numeral &ldquo;1&rdquo; as only straight lines. To keep these letters distinct, I added serifs to the uppercase &ldquo;I&rdquo; and a flag to &ldquo;1.&rdquo;</p>
+<p>The lowercase &ldquo;n&rdquo; and &ldquo;u&rdquo; are differentiated because the &ldquo;n&rdquo; has a typical, "zig-zag" form, while the u has a simplified form without a tail or exit stroke.</p>
+<p>&lt;mio-image index=5&gt;&lt;/mio-image&gt;</p>
+<p>As you might expect in a handwritten font, the &ldquo;a&rdquo; and &ldquo;g&rdquo; use the single-story forms that kids tend to learn in school, keeping the font friendly and familiar.</p>
+<p>&lt;mio-image index=6&gt;&lt;/mio-image&gt;</p>
+<p>To ensure that Shantell Sans stays readable in blocks of text, the <a href="https://fonts.google.com/knowledge/glossary/glyph" target="_blank" rel="noopener">glyph</a> <a href="https://fonts.google.com/knowledge/glossary/width" target="_blank" rel="noopener">widths</a> and margins are slightly generous.</p>
+<p><strong>5. Adaptation of marker handwriting&nbsp;</strong></p>
+<p>We didn&rsquo;t want to replicate Shantell&rsquo;s handwriting. We wanted to create a successful font with Shantell&rsquo;s writing as a core inspiration.</p>
+<p>Shantell chose her favorite medium-sized felt tip marker (Staedtler Lumocolor M) and wrote several uppercase and lowercase pangrams (sentences including all letters of the alphabet). She also wrote strings of numbers, punctuation, and symbols, plus a few words with <a href="https://fonts.google.com/knowledge/glossary/diacritic_accent_marks" target="_blank" rel="noopener">diacritics/accent marks</a>.</p>
+<p><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">&lt;mio-image index=7&gt;&lt;/mio-image&gt;</span></p>
+<p>I traced Shantell&rsquo;s writing samples and then converted her handwriting into a digital font. The sizing and spacing of Shantell&rsquo;s handwritten letters varied. To retain the personality of Shantell&rsquo;s handwriting and make the letterforms more uniform and readable, I subtly modified the character proportions to have consistent heights, widths, spacing, and upright balance, while keeping the best and most unique gestures.</p>
+<p><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">&lt;mio-image index=8&gt;&lt;/mio-image&gt;</span></p>
+<p>The strokes are drawn with a little bit of the sharpness and contrast that helps make Shantell&rsquo;s writing so engaging. They are also made a little more uniform in thickness and given softened, semi-rounded endings.</p>
+<p><strong>New axes&nbsp;</strong></p>
+<p>Shantell Sans includes stylistic axes for Bounce, Informality, and Spacing. These axes don&rsquo;t yet exist in other variable fonts, but hopefully they will someday!</p>
+<p>For the Bouncy axes, the glyphs are shifted up or down. In the Informality axis, the glyph shapes go between normalized and informal drawings. Together, these axes subtly shift text towards the irregular proportions and quirks in Shantell&rsquo;s handwriting.</p>
+<p>Both of these axes have several alternates of letters, numerals, and key symbols. These alternates are automatically put into text, allowing for a randomized appearance of the letters.&nbsp; This is similar to what naturally occurs when someone writes by hand and some of the same letters take different shapes in different words.</p>
+<p>&lt;mio-image index=9&gt;&lt;/mio-image&gt;</p>
+<p>&lt;mio-image index=10&gt;&lt;/mio-image&gt;</p>
+<p>The Spacing axis adds extra spacing between letters. This axis opens up new possibilities for animating this parameter alongside the font&rsquo;s Weight, Italic, Bounce, and Informality axes.</p>
+<p>&lt;mio-image index=11&gt;&lt;/mio-image&gt;</p>
+<p><strong>Extending the typeface for Google Fonts and open-source release</strong></p>
+<p>With funding from Google Fonts, we extended the fonts to include wider language support for more Latin-script languages, including Vietnamese, and to include many more currency symbols. We also added <a href="https://fonts.google.com/knowledge/glossary/cyrillic" target="_blank" rel="noopener">Cyrillic</a> with the help of type designer Anya Danilova.</p>
+<h2>Designing Shantell Sans Cyrillic</h2>
+<p><strong>Anya Danilova, Type Designer</strong></p>
+<p>&lt;mio-image index=12&gt;&lt;/mio-image&gt;</p>
+<p>Translating handwriting typefaces from one script to another feels somewhat similar to translating poetry. Just like a translator deliberates how to save the meaning and the rhythm of the poetry and ponders about which words and phrases are characteristic of the author or idiomatic, I wondered about how to maintain Shantell&rsquo;s identity in Cyrillic.</p>
+<p>Cyrillic is the script for many Eurasian languages: Bulgarian, Serbian, Russian, Belarussian, Ukrainian, Tatar, Bashkir, and many more.</p>
+<p>Some Cyrillic letters have different shapes for <a href="https://fonts.google.com/knowledge/glossary/regular_upright" target="_blank" rel="noopener">upright</a> (regular), <a href="https://fonts.google.com/knowledge/glossary/italic" target="_blank" rel="noopener">italic</a>, and cursive (<a href="https://fonts.google.com/knowledge/glossary/handwriting" target="_blank" rel="noopener">handwriting</a>) letterforms.</p>
+<p>&lt;mio-image index=13&gt;&lt;/mio-image&gt;</p>
+<p>Shantell&rsquo;s handwriting is a mixture of cursive and printed shapes. Since she writes only using the <a href="https://fonts.google.com/knowledge/glossary/latin" target="_blank" rel="noopener">Latin script</a>, I had to think about how to translate her shapes into Cyrillic. Which ones would be cursive? Which ones would be upright?</p>
+<p>I asked Shantell to write a couple of Russian sentences to see her approach to unfamiliar shapes. I asked her to write one word with different shapes of letters.</p>
+<p>&lt;mio-image index=14&gt;&lt;/mio-image&gt;</p>
+<p>I used Shantell&rsquo;s writing to inform what kind of shapes felt more natural for the Cyrillic version of the font. To decide on which shapes to use, I compared Shantell&rsquo;s handwritten letters to the ones I had drawn in a font editor and the Latin glyphs that Stephen Nixon had made.</p>
+<p>&lt;mio-image index=15&gt;&lt;/mio-image&gt;</p>
+<p>I consulted with other Cyrillic type designers: Maria Doreuli, Krista Radoeva, Alexey Vanyashin, and Jovanna Jocić. They helped me decide on alternate versions of letterforms that are specific to other languages using the Cyrillic alphabet, such as Bulgarian and Serbian.</p>
+<p>&lt;mio-image index=16&gt;&lt;/mio-image&gt;</p>
+<p>It was an incredible pleasure to work on this project.&nbsp; There were many challenges but they made creating Shantell Sans Cyrillic more interesting.</p>
+<p style="text-align: center;">&mdash;</p>
+<p>Learning the background of Shantell Sans may help you have a deeper appreciation of not only this typeface, but of the type design process more generally.</p>
+<p>Do you have a creative idea that needs a font with some personality? Want to just take a new font for a spin and see where it takes you? Give Shantell Sans a try!</p>
+<p><strong>Check out Shantell Sans <a href="http://fonts.google.com/specimen/Shantell+Sans/" target="_blank" rel="noopener">on Google Fonts</a>.</strong></p>
+<p>Use Shantell Sans on Google Docs and other Workspace products:</p>
+<ol>
+<li>Open the font menu and select "More Fonts"</li>
+<li>Type "Shantell Sans&rdquo; in the search bar</li>
+<li>Click on the family to add it to your fonts menu</li>
+</ol>
+<p>&lt;mio-image index=17&gt;&lt;/mio-image&gt;</p>
+<p>Learn more about Shantell Sans at <a href="https://shantellsans.com" target="_blank" rel="noopener">shantellsans.com</a> and the <a href="http://github.com/arrowtype/shantell-sans" target="_blank" rel="noopener">Shantell Sans repo on GitHub</a>.</p>
+<p style="text-align: center;">&mdash;</p>
+<p><a href="https://shantellmartin.art/info/" target="_blank" rel="noopener">Shantell Martin</a> is a public speaker, curator,&nbsp; philosopher, cultural facilitator, teacher, choreographer, performer, and more. From fashion and celebrity collaborations to positions at MIT Media Lab, NYU Tisch ITP, Columbia University&rsquo;s Brown Institute, and choreographing a ballet at the Boston Ballet, Shantell&rsquo;s drawn LINE constantly evolves. Creating new connections between fine art, education, design, philosophy, and technology, Shantell explores themes such as intersectionality, identity, and play.</p>
+<p>Stephen Nixon operates <a href="https://www.arrowtype.com/" target="_blank" rel="noopener">Arrow Type</a>, a practice based in Brooklyn, NY which specializes in custom type, type design, and font development. Previously, Stephen worked in digital product design and brand experience design at IBM. In 2018, Stephen graduated with a Master&rsquo;s degree in Type and Media from The Royal Academy of Art (KABK) in The Hague, Netherlands. In 2019, Google Fonts commissioned and published Arrow Type&rsquo;s first release, <a href="https://www.recursive.design" target="_blank" rel="noopener">Recursive</a>. Today, Arrow Type has a focus on creating fonts that are beautiful, uniquely useful, and tell a story.</p>
+<p><a href="https://anyadanilova.com/" target="_blank" rel="noopener">Anya Danilova</a> is a type designer based in The Hague, Netherlands. She studied at the Moscow State University of Printing Arts, attending Alexander Tarbeev&rsquo;s type design workshop. In 2019, she obtained her Master&rsquo;s degree in Type and Media at The Royal Academy of Art in The Hague. In 2020, she won a Gerard Unger scholarship with her MA graduation typeface Rezak. Apart from working with typefaces, she loves writing and talking about them. She has written articles about various sides of typography and type design.</p>
+
+Woman holding a marker with a large drawing behind her
+
+Shantell Martin, Photo credit Michelle Mosqueda
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/71b25326288925e46183d6b9620e81c8fe5f651a6fc6c6987b3a1718fa18ea7240995ad91f2df66b7cc9156df08a4968a4161831f61d12d40c6c0beb073bb56e
+
+https://lh3.googleusercontent.com/DE6cZaNJl9qD_zaYxZyP4ZeVkompMoBvlS87qDyX0iOOa-7Gpegq3RfKDHAvTfac0YcOuWWumyQQvqskWtgmsCoyNQizs8qtLFb9ya8qNLtYfEYwc9I
+
+Five gray and black key tags with words and drawings
+
+Key tags for the Whitney Shop, by Various Keytags, featuring artwork by Shantell Martin and text in Shantell Sans
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/ad225f60d98e5b575f01b8f9c077ed81b38acc2901e372dcde19a8202be851b6909a5f87bd2deec88fd68846a46f7b1ba4d2ab2e9868eff1445a8cf66074eb75
+
+https://lh3.googleusercontent.com/4dGL9xumQClNaXcG_754BQwZbF4xqJX4DPDj6HBzy3aigw1eCN6jQHv0Iwd8xJyCEYbVDnjCYXJFp70IY7qPqK9jHy5ykaxMcv7J6V_JIuWnc5918cc
+
+Two columns of six lines of text in Shantell Sans and Roboto
+
+(1) Shantell Sans and (2) Roboto share similar overall proportions
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/c0c005d845da91df1499bfbc1eea975a25da2a396bbbbf1a1be5620290b25d7c6cf2b9d63a870b26acbcbad5084aa62cf5a86dc43eef5060251e2f20e4abb2c4
+
+https://lh3.googleusercontent.com/CPRxGsUQX5itBOIuhbFg07lYtd0imkfxVLY3yX67DpUdFD9S47kiN-7fdaDP-xzYOshpXY1e9lCUqjousSpXW1Dzcm6XMfhI0_DtzLr1oS6oN-oXHA
+
+All human beings are born free and equal in dignity and rights, in different languages on 14 lines
+
+Text in some of the languages supported by Shantell Sans
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/eda33a2c43dfe34227fb77169cdfe33d1f1ceb4440161010aa4d0e7e863e9b7a5c2479d8d56c4c60a88dac546edcf2a17128c26935a28c90d58255a7cbd8b714
+
+https://lh3.googleusercontent.com/makkFqk3kHP4kDaMxifJI8pybrvJuRHP1N8u4IQ_8pMXOVGxFznbr5ddi8-6Qutu5KFdyg6OLXt8NnmCDNxFBiKp_9QpuvwKeSR_Cib9KfcWTMy7hHXH
+
+“Typography is kinetic” text changing shape
+
+Animation of all five variable axes of Shantell Sans: Weight, Italic, Informality, Bounce, and Spacing
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/f4888895ec2af450ac0e90529012d4b0551d83e38b42687cd1f73e0f2c36ab50fedb393a67b992213de9728368dbeaadf65aebdfde30d0e31add393fced04519
+
+https://lh3.googleusercontent.com/SV0zUwrOsZou0vlcp0NcNnA-xgXctoiH9GCTZBBTQCeWQbiayUsAIW38mlA29QW1MM_z9sY4s_q7gguXii31LmgaZUPy5wAtMlBLC69XqP_UP16tZQ
+
+Nine letterforms on two lines of text
+
+Carefully-placed exit strokes, serifs, and flags help differentiate letters that might otherwise have similar structures. 
+
+(1) The uppercase “I”, lowercase “l”, and numeral “1” are differentiated with a serif, exit stroke, and flag 
+(2) The lowercase “n” is in a traditional form and the lowercase “u” is tailless 
+(3) Lowercase “b,” “d,” “p,” and “q” are differentiated through the placement of exit strokes on the “d” and “q”
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/6d210249647633be01a5b6e86c0fc1ccd23dd44a1e57c29564a3d51c1ca03716963e1a09ed58b183578a39fee36947f77d75d6d518cb5b34a740cbb58630b112
+
+https://lh3.googleusercontent.com/eLsjXMZd3Iu5a9BJvpCR5Ol3n-l-D9qiC6gXuSYDPFFEmlGDBkS0BvDzHVPV3FB9Jqz432IZ129BzYQt9L4hgESdgbV9LsZJfiZH6U_CHRlu4waNOw
+
+The “a” and “g” highlighted in the word “amazing”
+
+(1) Single-story lowercase “a” (2) Single-story lowercase “g”
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/78950e038ed551a45a0837b0555d1364ed74867e7e4259168db30c2bf1ac42c0c429559db0c2c2b4ec2d43ca89e20736a4bc212bd1c9a397f3f244b8b008b6dd
+
+https://lh3.googleusercontent.com/s-CrdqszuV0H_BNPJ0d4tuvOX4oQbirz3AcEPf6UHK3D9wfeweoyKEIh6Wo_eYkBDyW8Mu-SiZQXngqtfPnfio79RToOM1l8ZHO9taHpYvhwb5-CkgLR
+
+Right hand holding two markers, paper with handwriting
+
+Shantell Martin holding a Staedtler Lumocolor M, the same marker used to write the sample text (pictured in the background). The markers are custom-printed with Shantell Sans
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/1527e2430ec13f1d6da5cf6ac6af82e5afceb08cdf7b00e62314f3fe56f63a94e46fdc6d7f7e754b65c06dbc9ae675cccef8a316ab32a4909e12c702b35aff95
+
+https://lh3.googleusercontent.com/LeC7L12mCCA7l1bmI9-M2_eBLTPWy66q2diz9hYpB1aeunSkomlwObeFdlKihEt0rACdticJJfclWL3cVnqD_OT8sYYAmVBbIgVHklxLK80dOnq-v0U
+
+Letters “r, f, t, G, P, A, R, M, W” on two lines
+
+(1) Characters from Shantell Martin’s handwriting (2) Characters from Shantell Sans Semibold
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/35e95b1800428ac8fd0755a1274be30ffd37b549708e5bd87807983fe09b6da5f07aea700c80fd3e8df709a8e445c2948163d82f531210ab6144528cb13ce7eb
+
+https://lh3.googleusercontent.com/_KiplE4ufZLeSyk-NQo-4jv9GSQCRSulu8U66KpP5Dv0lc-uER8iGJ7AWOzPaDG05TWaEZFjH7wkg37j-_LOoWQ2yLtFW0-5FKpu-cr58Z2XoR8tGQ
+
+The words “Fonts are Cool!” on two lines of text
+
+The animation shows the Weight and Bounce axes. Both lines cycle between Light and ExtraBold weights. The bottom line also cycles between Bounce -100 and +100.
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/0ebd085691e865bbc92747d2f0e30ccd845f123dccc2a7ac033be9b4a250f4b4ba198f28b8daf1aae63760435a565baeca29032cbb74430ead6d468a8a918a2a
+
+https://lh3.googleusercontent.com/iyE8LLg53DLMiID8x6e9srjBH4JfTmSj-FGobnEJthzYp8-3qGLDzEFVINKD0UejdCLy1yfeCRHMm7QlwiJ67QRyLVvTJDmRwalTCdb3og-iJex6NEg3
+
+The words “A little less formality” on two lines of text
+
+This animation shows the Weight and Informality axes. Both text blocks cycle between Light and ExtraBold weights. The bottom text also cycles between Informality 0 and 100.
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/5fa8532b745f3a1b0e06e060682296ec3234d961983631365b07db5c6451b1a5cee22905b231f6e90c1e9276db27eb2d679b0ec5fa863e5bd08c2389f5c95ae5
+
+https://lh3.googleusercontent.com/FBEOB3OWtrM3cLUM5zTiqhtyQbzgyy38PT6DtVmxQFt4VqgqcamiCwmbOOZTIq1arK2f42nbPcTVb-bwI0GhjZBHebArjtVaz1L10ItfvC-J0WHndQk3
+
+The word “spacing” on two lines of text
+
+The animation shows the Weight and Spacing axes. Both lines cycle between Light and ExtraBold weights. The bottom line also cycles between Spacing 0 and 100.
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/0cf36be8d183420747ea29b8293b8f7c1df65d116118b3faab2bc70b2d25b4efd5280cc22d270e24176afc315e5bc1149aec7144830b0ba597db239dbb1e03d0
+
+https://lh3.googleusercontent.com/9iNG_TnaOYd4WobbDRdSYW8NbFpjmONJY3McYPU_6ubXkQfuweaXOOQ6P5J4nyPOSVv_68LuKqRRIAgNEk8JVjjyjBwR3OgJ_NtTdv6z64cjZX2qE5qy
+
+Ten lines of letterforms
+
+Shantell Sans Cyrillic character set
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/547d64b21e91d8674525c4afb8a929ba304f52ccbfd7aba4f6516a6026c0b4f709629f445cee566eea03ad134510b7e539adba311123e2ce1b0ee3bc9b381961
+
+https://lh3.googleusercontent.com/j5kHVaiUBNkRU83qKMyowCwcNnTCyuhRNLU4CRPyJP1wnNR2zo6KfDX7U7QRKIqr5mKRPhgW7KPk6iKm60ZKIti8sYqx64DQ7JIoQ1YYyWtpcDKApnbr
+
+Three lines of six letters
+
+The same lowercase Cyrillic letters have different forms in different styles of writing: (1) Upright (2) Italic (3) Cursive
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/6af5356d2ca016da3d8fa780a2e4521c73622daa6ab033705ca2ad27610984f1d78bddf62d698eb6c2dbc0e297f13cc72b5c3df6988f806a0832ddb6dd6c1f30
+
+https://lh3.googleusercontent.com/5hS8Lygx8JkCnbTAu6CpSXuf8yHKNcC8NQdQLeMQg16XR8ZTfYC1qV8IcKTsvykhsSqAtrRCvvTVZLaOzpFLvWc1JbmqMdXrdkz-At5mj451ZnRXjMo
+
+Two lines with five words
+
+Shantell’s writing in Cyrillic had different shapes for the same letters. Words pictured: жаба (zhaba) for frog, овод (ovod)  for gadfly
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/e118d4b91fc87b9da478864bd63b91421159332ebc07789948ecfef9f07f39ad3a97d72215ca368824d750bde9f04452b6f3f74cd8ba43dd5a3552dc1b6729e7
+
+https://lh3.googleusercontent.com/qjuRdKWxMs2c2cW8W_aSAekb3eNkC5xPzz_MfCX5pN1s_rs_ubJjrvcLnGY_racExfmvUKj51s6M2FXUfFSedttl3JKgc2uD44myNmvvkdi9pjNWHt9z
+
+Two lines of text in Latin and Cyrillic
+
+(1) First version of the letter д (“d” sound) (2) First version of the letter ж (“zh” sound) (3) Final version of the letter д (“d” sound) (4) Final version of the letter ж (“zh” sound), Russian word дождь (rain)
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/5bdda146112524e3449d5122c9a97051aaacc6254b8c2088e8487beef3532fe373252d3a544785be9b4f223c1abe293ce83952248e73af6ec08b1eadfcb2b29b
+
+https://lh3.googleusercontent.com/y4Howvxm6Q3lJKrLwGnJYgobkB2j4TCI8QyAUST-PAL8A-jD8IqovHXlk0Ci4622GDbQUKBqVidSXNuUimUx0XPzIqAYpCV8OHsIA8WcogDQNdOc5w
+
+Six Cyrillic letters in black on gray background
+
+(1) Default lowercase shape for letter “в” (“v” sound) | (2) Bulgarian lowercase shape for letter “в” (“v” sound) | (3) Default lowercase shape for letter “г” (“g” sound) | (4) Bulgarian lowercase shape for letter “г” (“g” sound) | (5) Default lowercase shape for letter “б” (“b” sound) | (6) Serbian lowercase shape for letter “б” (“b” sound)
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/bbcb12cf85c0b3f10ba135fbfc5f52a8260d82f1ce7efed8478c87e694a7bcb35146af6575038fa6e89c5c65558cde931b599e0b8d7e6ef056b8515f032958d0
+
+https://lh3.googleusercontent.com/iFiqUPXFs0bNhpBZQRLyFsyiQdXZRC569l4x3-pSZ78HV-RU5qTER0NHqCVgWXGNynRdgPPfCirCQBQGMN-L3PaNJzIEM-1u3PbQ1l8UbsCzoJK_rA
+
+Animation of text in a Google Doc. Cursor selects “More” Fonts menu, user types in “Shantell Sans” in the search bar, selects font.
+
+How to add Shantell Sans to the font menu
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/a30106a739398f335eb3bef6e2df04bf5eb3991fff7357a3220fa50d91375d1f672a7f2e2826b6e2e2288bc4eeaecbb8d0cbe6aa0a2f009ea21d0774956502d2
+
+https://lh3.googleusercontent.com/HcXJcwXZHdJYa871FgmogKLBb2IDqJc-0AJFAB2CU1LxwqNgN6uEFWhT5bzNTtFB67uuFeU8i051yt4klwayr_WPdRXydxXfhk3KnbyC1gxRLTEH0KY
+
+"Shantell Sans, a font for you" written on an illustration by Shantell Martin
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/66a478d8f5ad69cb1f5cb6a83189b4890f27dca67c9cb0ff6765f0e2451d37e555d3666670e655f2fb5ff3bb094a66bd67a57068a2df43c9d2d410713ca23f81
+
+https://lh3.googleusercontent.com/cHy28WI3xTJQV6u7NoWoQzy2tto013E18vi_tXj24nkclyQ_OaJZh9VUmSg1EhZvwj5PKP1cEtCzSc_J39uMM7mu7Yan-LEA3dvcNT-IGO7MVPOvkA
+
+{}
+
+Unleash your creativity with Shantell Martin's innovative variable font. How an artist created a typeface in Latin and Cyrillic.
+
+_f68a99ffe9144467a917320028f1ce3b_/_f3e8a4f639ce4c5aafa231fcb8daa630_/d7b485ac7a36fd5b2b9e2da9e0baca56f47171faa8a3f5a05893e333ba8f447c10fa72661a91efb698cb1a79c5eb2521011209a4a04a98deec223dfb62177787
+
+https://lh3.googleusercontent.com/S5u_6nvZUFFPCfYyt6rYitgV8Phhp0etS-p56ylT6xJR9mabekuCQ_FB2amLOsSSJyiJx4TYqeRUZ-ni5bEz-4fj2EA56NEgwyhG5FJs9_CpXiY3vggd
+
+The Story of Shantell Sans - Material Design 3
+
+2023-03-07T13:00:00
+
+shantell-martin-variable-font
+
+How an artist created a typeface in Latin and Cyrillic
+
+The Story of Shantell Sans
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/e608f38c10c9b804c54dfd1f6cd5437a8d90dd369ef292cdecd8f4f81925e29ce537d0c221aa34d6892fb1ade68d817251297ab6e7a46503c4e0203eed7532e6
+
+https://lh3.googleusercontent.com/Ln8zQ7wN4qsaQ9dhWBIFFSmDZG6wT1LgumPrVq8zCYgrLYxPOCbKXcljb-Bpa7wqdrQRGYcE2uJ8YXl3uGY-h6s-AWvsfDhZ6gPU59e8HD44K-23GA
+
+/blog/material-icons-sehee-lee-interview
+
+Material Icons: Sehee Lee
+
+Material Blog
+
+Material Icons: Sehee Lee
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/5cb0f0974a2eb242483cf7d985a7c040fd476bc926b463a7babb0c8e7c01659a0990075ecbcdac692b36a62625159da0b8966c6a84af5af3f732ee13abaac391
+
+https://lh3.googleusercontent.com/IuzB6mc_EC-UJOz-xYOM7s98M-Bu_ITGjza00wLhl3CHGtK7fgJlenXTT_r0EjrMoWjs0gs1LzBPfOgxzCB-KCZhNt7U-YfkxW-Wle9lL_u21rWASCM
+
+/blog/atkinson-hyperlegible-design
+
+Material Blog
+
+From Rebranding to Readability with Atkinson Hyperlegible
+
+mio-example
+
+UpNextItems
+
+_f68a99ffe9144467a917320028f1ce3b_/_67af19389b5f45048ff0f3b64759ab41_/c9c3c673b1230d9b34085be4542963b86e2e9100d70d71f57e5df4251f2030e9e2009c3ed2e06c68e5198e68469330c48e2d8c1435c0ffed80199f4b7157fc73
+
+https://lh3.googleusercontent.com/wOW3Q-zJKL_ec_r_1OJpgX3-XKKRqYc5Rd0Y-U9IUwfQsYpp3m9MIH1E_V4wiw35pqmsarlmobgNEz_a0qYUjvdC5ELEqHiEeI69Jd8mz9GXajlXDg
+
+/blog/color-fonts-are-here
+
+Material Blog
+
+First Batch of Color Fonts Arrives on Google Fonts
+
+mio-example
