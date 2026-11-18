@@ -120,14 +120,19 @@ def _render_original_certificate(
         with st.form(
             f"certificate_issuance_{account['participant_id']}_{attempt}"
         ):
-            snake_id = st.text_input(
-                "Snake ID *",
-                disabled=locked,
-            )
-            title = st.text_input(
-                "Report Title *",
-                disabled=locked,
-            )
+            id_column, title_column = st.columns(2, gap="medium")
+
+            with id_column:
+                snake_id = st.text_input(
+                    "Snake ID *",
+                    disabled=locked,
+                )
+
+            with title_column:
+                title = st.text_input(
+                    "Report Title *",
+                    disabled=locked,
+                )
             pdf = st.file_uploader(
                 "PDF File *",
                 type=["pdf"],
@@ -141,6 +146,7 @@ def _render_original_certificate(
 
             submitted = st.form_submit_button(
                 "Issue Certificate",
+                type="primary",
                 disabled=locked,
             )
 
@@ -349,7 +355,11 @@ def _render_certificate_revision(
             "Maximum file size: 10 MB. "
             "The next version number is assigned automatically."
         )
-        submitted = st.form_submit_button("Issue Revision", disabled=locked)
+        submitted = st.form_submit_button(
+            "Issue Revision",
+            type="primary",
+            disabled=locked,
+        )
 
     if not submitted:
         return

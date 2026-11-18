@@ -5,7 +5,6 @@ import streamlit as st
 
 from frontend.api import (
     AccountRequestError,
-    check_backend_readiness,
     fetch_random_snake_profiles,
     fetch_snake_profile,
     submit_snake_registration,
@@ -22,21 +21,6 @@ MONTH_NAMES = (
     "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December",
 )
-
-
-def _render_connection_status(api_base_url: str) -> None:
-    with st.expander("Connection Status"):
-        if st.button("Check Backend and Database"):
-            result = check_backend_readiness(f"{api_base_url}/ready")
-            messages = {
-                "database_unavailable": "The database is not ready.",
-                "backend_unavailable": "Cannot connect to the backend.",
-                "unexpected_response": "The backend returned an unexpected response.",
-            }
-            if result == "ok":
-                st.success("Backend and database are ready.")
-            else:
-                st.error(messages[result])
 
 
 def _render_snake_registration(api_base_url: str, access_token: str) -> None:
@@ -208,9 +192,14 @@ def _render_snake_profile(
     st.divider()
     st.subheader("Snake Profile")
 
+    st.session_state.setdefault("profile_lookup_id", "SNAKE001")
+    selected_id = st.session_state.pop("buyer_selected_snake_id", None)
+    if selected_id is not None:
+        st.session_state["profile_lookup_id"] = selected_id
+
     with st.form("view_snake_profile"):
         snake_id = st.text_input(
-            "Snake ID", value="SNAKE001", key="profile_lookup_id"
+            "Snake ID", key="profile_lookup_id"
         )
         submitted = st.form_submit_button(
             "View Profile",
@@ -282,6 +271,33 @@ def _render_snake_profile(
         for label, field in description_fields:
             st.markdown(f"**{label}**")
             st.write(profile.get(field) or "Not provided")
+
+    if account["role"] in {"buyer", "breeder"}:
+        with st.container(key="buyer_profile_sections"):
+            certificates, keeper, husbandry = st.tabs([
+                "Certificate History", "Keeper Management", "Husbandry Records"
+            ])
+            with certificates:
+                render_certificate_history(
+                    api_base_url=api_base_url,
+                    snake_id=profile["snake_id"],
+                    access_token=access_token,
+                )
+            with keeper:
+                render_keeper_transfer_section(
+                    api_base_url=api_base_url,
+                    snake_id=profile["snake_id"],
+                    account=account,
+                    access_token=access_token,
+                )
+            with husbandry:
+                render_husbandry_section(
+                    api_base_url=api_base_url,
+                    account=account,
+                    access_token=access_token,
+                    snake_id=profile["snake_id"],
+                )
+        return
 
     render_keeper_transfer_section(
         api_base_url=api_base_url,
@@ -388,13 +404,14 @@ def _render_buyer_snake_showcase(
                     )
 
                 if clicked:
-                    st.session_state["profile_lookup_id"] = snake_id
                     with st.spinner("Opening the snake profile..."):
                         _select_snake_profile(
                             api_base_url=api_base_url,
                             snake_id=snake_id,
                             access_token=access_token,
                         )
+                    st.session_state["buyer_selected_snake_id"] = snake_id
+                    st.rerun()
 
 
 # Purpose: display only the signed-in role's business operations.
@@ -432,8 +449,6 @@ def render_workspace(
             if st.button("Sign Out", key="account_sign_out", type="secondary"):
                 sign_out_current_account(access_token=access_token)
 
-    _render_connection_status(api_base_url)
-
     if role == "lab":
         with st.container(key="lab_certificate_workspace"):
             render_certificate_issuance(
@@ -446,15 +461,10 @@ def render_workspace(
     if role == "breeder":
         _render_snake_registration(api_base_url, access_token)
 
+    _render_snake_profile(api_base_url, access_token, account)
+
     if role == "buyer":
         _render_buyer_snake_showcase(
             api_base_url=api_base_url,
             access_token=access_token,
         )
-
-    _render_snake_profile(api_base_url, access_token, account)
-    render_husbandry_section(
-        api_base_url=api_base_url,
-        account=account,
-        access_token=access_token,
-    )

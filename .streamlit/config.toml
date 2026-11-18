@@ -6,15 +6,25 @@ backgroundColor = "#F1EAFE"
 secondaryBackgroundColor = "#FFFDF3"
 textColor = "#291344"
 primaryColor = "#6330BA"
-borderColor = "#291344"
+borderColor = "#6330BA"
 
-# Keep body text readable and technical identifiers monospaced.
-font = "sans-serif"
+# Use the shared body font; pixel titles are styled separately.
+font = "Space Grotesk"
 baseFontSize = 16
-headingFont = "sans-serif"
-codeFont = "monospace"
+baseFontWeight = 400
+headingFont = "Space Grotesk"
+codeFont = "Space Grotesk"
 
 # Use square corners and visible input borders.
 baseRadius = "none"
 buttonRadius = "none"
 showWidgetBorder = true
+
+[[theme.fontFaces]]
+family = "Space Grotesk"
+url = "app/static/SpaceGrotesk.ttf"
+weight = "300 700"
+style = "normal"
+
+[server]
+enableStaticServing = true

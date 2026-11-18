@@ -1,16 +1,13 @@
-from io import BytesIO
-
 import streamlit as st
-from PIL import Image
 
 from frontend.branding import render_pythonpass_logo
 from frontend.api import (
     AccountRequestError,
     SignInRequired,
-    fetch_public_snake_showcase_images,
     sign_in_account,
     sign_out_account,
 )
+from frontend.login_gallery import render_login_gallery
 
 
 API_BASE_URL = "http://127.0.0.1:8001"
@@ -32,116 +29,97 @@ def open_registration() -> None:
     st.rerun()
 
 
-def _render_login_snake_showcase() -> None:
-    if "login_snake_showcase_images" not in st.session_state:
-        try:
-            st.session_state["login_snake_showcase_images"] = (
-                fetch_public_snake_showcase_images(api_base_url=API_BASE_URL)
-            )
-        except AccountRequestError:
-            return
-
-    photos = st.session_state["login_snake_showcase_images"]
-    if not photos:
-        return
-
-    valid_photos = []
-    photo_ratios = []
-    for photo in photos:
-        try:
-            with Image.open(BytesIO(photo)) as image:
-                photo_ratios.append(image.width / image.height)
-            valid_photos.append(photo)
-        except (OSError, ZeroDivisionError):
-            continue
-
-    if not photo_ratios:
-        return
-
-    photos = valid_photos
-    scale_height = min(180, 508 / sum(photo_ratios))
-    photo_widths = [
-        max(1, int(ratio * scale_height)) for ratio in photo_ratios
-    ]
-
-    with st.container(horizontal_alignment="center"):
-        with st.container(width=520, key="login_snake_showcase"):
-            columns = st.columns(photo_widths, gap=None)
-            for column, photo, photo_width in zip(
-                columns, photos, photo_widths, strict=True
-            ):
-                with column:
-                    st.image(
-                        photo,
-                        width=photo_width,
-                        alt="Ball python profile photo",
-                    )
-
-
-# Purpose: present sign-in inside a readable, centered card.
+# Purpose: pair a welcome message and photo showcase with the sign-in card.
 # Workflow: authenticate before exposing any business workspace.
 # Without this function, users cannot access the workspace through sign-in.
 def render_login_page() -> None:
     with st.container(horizontal_alignment="center"):
-        with st.container(width=520):
-            with st.container(key="login_intro"):
-                with st.container(horizontal_alignment="center"):
-                    render_pythonpass_logo(width_px=260)
-                st.markdown("**Ball Python Blockchain Registry**")
-                st.title("Login")
-                st.write("Sign in to open your role workspace.")
-
-            with st.container(border=False, key="login_card"):
-                notice = st.session_state.pop("auth_notice", None)
-                if notice:
-                    st.info(notice)
-
-                with st.form(
-                    "account_login",
-                    clear_on_submit=True,
-                    border=False,
-                ):
-                    username = st.text_input("Username *")
-                    password = st.text_input(
-                        "Password *",
-                        type="password",
-                        max_chars=1024,
-                    )
-                    submitted = st.form_submit_button(
-                        "Sign In",
-                        type="primary",
-                        key="sign_in",
-                        width="stretch",
-                    )
-
-                if submitted:
-                    if not username.strip() or not password:
-                        st.error("Please enter your username and password.")
-                    else:
-                        try:
-                            with st.spinner("Signing in..."):
-                                session = sign_in_account(
-                                    api_base_url=API_BASE_URL,
-                                    username=username.strip(),
-                                    password=password,
-                                )
-                        except AccountRequestError as error:
-                            st.error(str(error))
-                        else:
-                            st.session_state.clear()
-                            st.session_state["auth_session"] = session
-                            st.rerun()
-
+        with st.container(width=1100):
+            with st.container(key="login_intro", gap=0):
+                render_pythonpass_logo(width_px=240)
                 st.divider()
-                st.write("Do not have an account?")
-                if st.button(
-                    "Create Account",
-                    key="open_account_registration",
-                    width="stretch",
-                ):
-                    open_registration()
 
-            _render_login_snake_showcase()
+            with st.container(
+                key="login_layout",
+                horizontal=True,
+                horizontal_alignment="center",
+                vertical_alignment="distribute",
+                gap=48,
+            ):
+                with st.container(
+                    width=600,
+                    height="stretch",
+                    key="login_gallery_column",
+                ):
+                    with st.container(key="login_marketing_copy", gap=16):
+                        st.title("Every python has a story.")
+                        st.write(
+                            "Discover the records behind every ball python."
+                        )
+
+                    render_login_gallery()
+
+                with st.container(
+                    width=420,
+                    height="stretch",
+                    key="login_form_column",
+                ):
+                    with st.container(
+                        border=False,
+                        height="stretch",
+                        key="login_card",
+                    ):
+                        st.subheader("WELCOME BACK")
+                        st.write("Sign in to open your workspace.")
+
+                        notice = st.session_state.pop("auth_notice", None)
+                        if notice:
+                            st.info(notice)
+
+                        with st.form(
+                            "account_login",
+                            clear_on_submit=True,
+                            border=False,
+                        ):
+                            username = st.text_input("Username *")
+                            password = st.text_input(
+                                "Password *",
+                                type="password",
+                                max_chars=1024,
+                            )
+                            submitted = st.form_submit_button(
+                                "Sign In",
+                                type="primary",
+                                key="sign_in",
+                                width="stretch",
+                            )
+
+                        if submitted:
+                            if not username.strip() or not password:
+                                st.error("Please enter your username and password.")
+                            else:
+                                try:
+                                    with st.spinner("Signing in..."):
+                                        session = sign_in_account(
+                                            api_base_url=API_BASE_URL,
+                                            username=username.strip(),
+                                            password=password,
+                                        )
+                                except AccountRequestError as error:
+                                    st.error(str(error))
+                                else:
+                                    st.session_state.clear()
+                                    st.session_state["auth_session"] = session
+                                    st.rerun()
+
+                        st.divider()
+                        st.write("New to PythonPass?")
+                        if st.button(
+                            "Create Account",
+                            key="open_account_registration",
+                            width="stretch",
+                        ):
+                            open_registration()
 
 
 def sign_out_current_account(*, access_token: str) -> None:

@@ -15,6 +15,9 @@ def apply_styles() -> None:
         / "PressStart2P-Regular.ttf"
     )
     font_data = base64.b64encode(font_path.read_bytes()).decode("ascii")
+    jersey_font_data = base64.b64encode(
+        (font_path.parent / "Jersey10-Regular.ttf").read_bytes()
+    ).decode("ascii")
 
     st.html(
         f"""
@@ -22,6 +25,14 @@ def apply_styles() -> None:
         @font-face {{
             font-family: "Press Start 2P";
             src: url("data:font/ttf;base64,{font_data}") format("truetype");
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+        }}
+
+        @font-face {{
+            font-family: "Jersey 10";
+            src: url("data:font/ttf;base64,{jersey_font_data}") format("truetype");
             font-style: normal;
             font-weight: 400;
             font-display: swap;
@@ -35,116 +46,159 @@ def apply_styles() -> None:
         }}
 
         .st-key-login_intro [data-testid="stImage"] img {{
-            width: 260px !important;
+            width: 240px !important;
+            max-width: 100%;
             height: auto !important;
             object-fit: contain;
         }}
 
-        .st-key-login_snake_showcase [data-testid="stImage"] {{
-            display: table;
-            width: fit-content !important;
-            border: 2px solid #291344;
-            box-shadow: 3px 3px 0 #291344;
-            line-height: 0;
-            margin: 0 auto;
+        .st-key-login_intro hr {{
+            margin: 8px 0 32px;
         }}
 
         .st-key-login_snake_showcase {{
-            width: min(520px, 100%) !important;
-            max-width: 100%;
+            flex: 1;
+            align-self: stretch;
+            grid-auto-rows: minmax(128px, 1fr);
         }}
 
-        .st-key-login_snake_showcase [data-testid="stImage"] img {{
-            display: block;
-            width: auto;
-            height: auto;
-            max-width: 100%;
+        [class*="st-key-login_photo_slot_"] {{
+            position: relative;
+            min-height: 128px;
+            box-sizing: border-box;
+            padding: 8px;
+            background-color: var(--registry-surface);
+            border: var(--registry-border);
         }}
 
-        .st-key-lab_certificate_workspace h3 {{
-            color: #291344;
-            font-family: "Press Start 2P", monospace;
-            font-size: 0.9rem;
-            line-height: 1.8;
+        [class*="st-key-login_photo_slot_"] img {{
+            position: absolute;
+            inset: 8px;
+            width: calc(100% - 16px);
+            height: calc(100% - 16px);
+            object-fit: contain;
         }}
 
-        .st-key-lab_certificate_workspace [role="tab"],
-        .st-key-lab_certificate_workspace [role="tab"] *,
-        .st-key-lab_certificate_workspace [data-baseweb="tab"],
-        .st-key-lab_certificate_workspace [data-baseweb="tab"] * {{
-            color: #291344 !important;
-            font-family: "Press Start 2P", monospace !important;
-            font-size: 9px;
-            line-height: 1.8;
+        /* Keep native image wrappers from becoming the sizing reference. */
+        [class*="st-key-login_photo_slot_"]
+            :is([data-testid="stElementContainer"], :has(> [data-testid="stImage"])) {{
+            position: static;
         }}
 
-        .st-key-lab_certificate_workspace [role="tab"],
-        .st-key-lab_certificate_workspace [data-baseweb="tab"] {{
-            background-color: #F4EF48 !important;
-            border: 2px solid #291344 !important;
-            border-radius: 0 !important;
-            box-shadow: 4px 4px 0 #291344 !important;
+        [class*="st-key-login_photo_slot_"] p {{
+            color: var(--registry-muted-text);
+            text-align: center;
+            overflow-wrap: anywhere;
+        }}
+
+        .st-key-login_gallery_column h1,
+        .st-key-login_card h3 {{
+            font-family: "Jersey 10", sans-serif;
+            font-weight: 400;
+            font-synthesis: none;
+            line-height: 1.2;
+            letter-spacing: normal;
+            word-spacing: normal;
+        }}
+
+        .st-key-login_gallery_column h1 {{
+            font-size: clamp(1.5rem, 3.5vw, 3rem);
+            white-space: nowrap;
+            margin: 0;
+            padding: 0;
+        }}
+
+        .st-key-login_card h3 {{
+            font-size: clamp(1.25rem, 2.5vw, 2rem);
+        }}
+
+        @media (max-width: 1100px) {{
+            .st-key-login_layout > :has(> .st-key-login_form_column) {{
+                order: -1;
+            }}
+        }}
+
+        .st-key-role_workspace h3,
+        :is(.st-key-lab_certificate_workspace, .st-key-buyer_profile_sections) [role="tab"],
+        :is(.st-key-lab_certificate_workspace, .st-key-buyer_profile_sections) [role="tab"] p {{
+            font-family: "Jersey 10", sans-serif;
+            font-weight: 400;
+            font-synthesis: none;
+            line-height: 1.25;
+            color: var(--registry-on-surface);
+        }}
+
+        .st-key-role_workspace h3 {{
+            font-size: 2rem;
+        }}
+
+        :is(.st-key-lab_certificate_workspace, .st-key-buyer_profile_sections) [role="tab"] {{
+            font-size: 1.375rem;
+            background-color: var(--registry-surface);
+            border: var(--registry-border);
+            border-radius: var(--registry-radius);
             min-height: 44px;
             padding: 0.5rem 1.25rem;
         }}
 
-        .st-key-lab_certificate_workspace [role="tab"]:hover,
-        .st-key-lab_certificate_workspace [data-baseweb="tab"]:hover {{
-            box-shadow: 2px 2px 0 #291344 !important;
-            transform: translate(2px, 2px);
+        :is(.st-key-lab_certificate_workspace, .st-key-buyer_profile_sections) [role="tab"] p {{
+            font-size: 1.375rem;
         }}
 
-        .st-key-lab_certificate_workspace [role="tab"]:focus-visible,
-        .st-key-lab_certificate_workspace [data-baseweb="tab"]:focus-visible {{
-            outline: 3px solid #6330BA;
-            outline-offset: 4px;
+        :is(.st-key-lab_certificate_workspace, .st-key-buyer_profile_sections)
+            [role="tab"][aria-selected="true"] {{
+            background-color: var(--registry-action);
         }}
 
-        .st-key-lab_certificate_workspace [data-testid="stFormSubmitButton"] button:not(:disabled),
-        .st-key-lab_certificate_workspace [data-testid="stFileUploader"] button:not(:disabled),
-        .st-key-lab_certificate_workspace [data-testid="stFileUploaderDropzone"] button:not(:disabled) {{
-            background-color: #F4EF48 !important;
-            color: #291344 !important;
-            border: 2px solid #291344 !important;
-            border-radius: 0 !important;
-            box-shadow: 4px 4px 0 #291344 !important;
-            font-family: "Press Start 2P", monospace !important;
-            font-size: 7px !important;
+        :is(.st-key-lab_certificate_workspace, .st-key-buyer_profile_sections)
+            [role="tab"]:hover:not([aria-selected="true"]) {{
+            background-color: var(--registry-secondary-hover);
         }}
 
-        .st-key-lab_certificate_workspace [data-testid="stFormSubmitButton"] button:not(:disabled):hover,
-        .st-key-lab_certificate_workspace [data-testid="stFileUploader"] button:not(:disabled):hover,
-        .st-key-lab_certificate_workspace [data-testid="stFileUploaderDropzone"] button:not(:disabled):hover {{
-            box-shadow: 2px 2px 0 #291344 !important;
-            transform: translate(2px, 2px);
+        :is(.st-key-lab_certificate_workspace, .st-key-buyer_profile_sections) [data-testid="stForm"] {{
+            background-color: var(--registry-surface);
+            border: var(--registry-border);
+            border-radius: var(--registry-radius);
+            box-shadow: var(--registry-shadow);
+            padding: var(--registry-card-padding);
         }}
 
-        .st-key-lab_certificate_workspace [data-testid="stFormSubmitButton"] button:focus-visible,
-        .st-key-lab_certificate_workspace [data-testid="stFileUploader"] button:focus-visible,
-        .st-key-lab_certificate_workspace [data-testid="stFileUploaderDropzone"] button:focus-visible {{
-            outline: 3px solid #6330BA;
-            outline-offset: 4px;
+        :is(.st-key-lab_certificate_workspace, .st-key-buyer_profile_sections)
+            :is([data-testid="stFormSubmitButton"],
+                [data-testid="stFileUploader"]) button {{
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: var(--registry-radius);
         }}
 
-        .st-key-certificate_issue_form_frame [data-testid="stForm"] {{
-            background-color: #6330BA;
-            border: 2px solid #291344;
-            border-radius: 0;
-            box-shadow: 4px 4px 0 #291344;
-            padding: 1.5rem;
+        :is(.st-key-lab_certificate_workspace, .st-key-buyer_profile_sections)
+            [data-testid="stFormSubmitButton"] button:not(:disabled) {{
+            background-color: var(--registry-action);
+            color: var(--registry-on-action);
+            border: var(--registry-border);
+            box-shadow: var(--registry-shadow);
         }}
 
-        .st-key-certificate_issue_form_frame [data-testid="stWidgetLabel"] *,
-        .st-key-certificate_issue_form_frame [data-testid="stWidgetLabel"] {{
-            color: #FFFDF3 !important;
-            font-family: "Press Start 2P", monospace !important;
-            font-size: 14px !important;
-            line-height: 1.8;
+        :is(.st-key-lab_certificate_workspace, .st-key-buyer_profile_sections)
+            [data-testid="stFileUploader"] button:not(:disabled) {{
+            background-color: var(--registry-surface);
+            color: var(--registry-on-surface);
+            border: var(--registry-border);
         }}
 
-        .st-key-certificate_issue_form_frame [data-testid="stCaptionContainer"],
-        .st-key-certificate_issue_form_frame [data-testid="stCaptionContainer"] * {{
-            color: #FFFDF3 !important;
+        :is(.st-key-lab_certificate_workspace, .st-key-buyer_profile_sections)
+            :is([data-testid="stFormSubmitButton"],
+                [data-testid="stFileUploader"]) button p {{
+            color: inherit;
+        }}
+
+        :is(.st-key-lab_certificate_workspace, .st-key-buyer_profile_sections)
+            :is([role="tab"],
+                [data-testid="stFormSubmitButton"] button,
+                [data-testid="stFileUploader"] button):focus-visible {{
+            outline: 3px solid var(--registry-focus);
+            outline-offset: 3px;
         }}
 
         .workspace-account {{
@@ -269,7 +323,7 @@ def apply_styles() -> None:
             --registry-surface: #FFFDF3;
             --registry-on-surface: #291344;
             --registry-muted-text: #6E627D;
-            --registry-outline: #291344;
+            --registry-outline: #6330BA;
 
             --registry-action: #F4EF48;
             --registry-on-action: #291344;
@@ -279,6 +333,7 @@ def apply_styles() -> None:
             --registry-border: 2px solid var(--registry-outline);
             --registry-radius: 0;
             --registry-shadow: 4px 4px 0 var(--registry-outline);
+            --registry-card-shadow: var(--registry-shadow);
             --registry-shadow-hover: 2px 2px 0 var(--registry-outline);
 
             --registry-card-padding: 1.5rem;
@@ -357,7 +412,7 @@ def apply_styles() -> None:
             background-color: var(--registry-surface);
             border: var(--registry-border);
             border-radius: var(--registry-radius);
-            box-shadow: var(--registry-shadow);
+            box-shadow: var(--registry-card-shadow);
             padding: var(--registry-card-padding);
         }
 
@@ -387,6 +442,46 @@ def apply_styles() -> None:
         .st-key-registration_card .st-key-registration_back_to_login,
         .st-key-registration_card .st-key-registered_back_to_login {
             margin-bottom: var(--registry-small-gap);
+        }
+        </style>
+        """
+    )
+
+    st.html(
+        """
+        <style>
+        [data-testid="stAppViewContainer"] {
+            color: #291344;
+            letter-spacing: normal;
+            line-height: 1.5;
+        }
+
+        [data-testid="stWidgetLabel"] p {
+            font-weight: 500;
+        }
+
+        [data-testid="stAppViewContainer"] button,
+        [data-testid="stAppViewContainer"] button p {
+            font-weight: 600;
+        }
+
+        [data-testid="stCaptionContainer"] p,
+        [data-testid="stFileUploaderDropzone"] small {
+            font-size: 14px;
+            color: #6E627D;
+            line-height: 1.5;
+        }
+
+        [data-testid="stMarkdownContainer"] p {
+            line-height: 1.5;
+        }
+
+        :is(.st-key-lab_certificate_workspace, .st-key-buyer_profile_sections)
+            [role="tab"],
+        :is(.st-key-lab_certificate_workspace, .st-key-buyer_profile_sections)
+            [role="tab"] p {
+            font-weight: 400;
+            line-height: 1.25;
         }
         </style>
         """

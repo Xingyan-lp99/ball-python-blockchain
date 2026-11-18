@@ -225,12 +225,16 @@ def _render_record_tab(
 # Workflow: maintain care records while preserving the breeder's profile.
 # Without this section, users cannot manage records through the demo page.
 def render_husbandry_section(
-    *, api_base_url: str, account: dict, access_token: str
+    *, api_base_url: str, account: dict, access_token: str,
+    snake_id: str | None = None,
 ) -> None:
-    st.divider()
+    if snake_id is None:
+        st.divider()
     st.subheader("Husbandry Records")
 
-    state = st.session_state.setdefault("husbandry_section", {
+    bound_profile = snake_id is not None
+    state_key = f"husbandry_section_{snake_id}" if bound_profile else "husbandry_section"
+    state = st.session_state.setdefault(state_key, {
         "snake_id": None,
         "records": {},
         "errors": {},
@@ -246,9 +250,12 @@ def render_husbandry_section(
         else:
             st.error(message)
 
-    snake_id = st.text_input(
-        "Snake ID", value="SNAKE001", key="husbandry_snake_id"
-    )
+    if bound_profile:
+        st.caption(f"Snake ID: {snake_id}")
+    else:
+        snake_id = st.text_input(
+            "Snake ID", value="SNAKE001", key="husbandry_snake_id"
+        )
     participant_id = account["participant_id"]
     st.caption(f"Acting as {account['display_name']} ({account['username']})")
     st.caption(
@@ -256,7 +263,11 @@ def render_husbandry_section(
         "you can only edit or delete records you authored."
     )
 
-    if st.button("Load Records", key="load_husbandry_records"):
+    reload_requested = st.button(
+        "Refresh Records" if bound_profile else "Load Records",
+        key=f"refresh_husbandry_{snake_id}" if bound_profile else "load_husbandry_records",
+    )
+    if reload_requested or (bound_profile and state["snake_id"] is None):
         if snake_id == "":
             st.error("Please enter a snake ID.")
             return

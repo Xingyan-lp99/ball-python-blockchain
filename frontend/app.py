@@ -6,7 +6,15 @@ from frontend.styles import apply_styles
 from frontend.workspace import render_workspace
 
 
-st.set_page_config(page_title="Ball Python Registry")
+st.set_page_config(
+    page_title="Ball Python Registry",
+    layout=(
+        "wide"
+        if st.session_state.get("auth_session") is None
+        and st.session_state.get("auth_view") != "register"
+        else "centered"
+    ),
+)
 apply_styles()
 
 # Validate the backend session before rendering any cached business content.
@@ -32,11 +40,21 @@ if session is not None:
 
 
 def workspace_page() -> None:
-    render_workspace(
-        api_base_url=API_BASE_URL,
-        account=account,
-        access_token=session["access_token"],
-    )
+    is_wide = account["role"] in {"lab", "buyer", "breeder"}
+
+    if is_wide:
+        st.set_page_config(layout="wide")
+
+    with st.container(horizontal_alignment="center"):
+        with st.container(
+            width=1100 if is_wide else "stretch",
+            key="role_workspace",
+        ):
+            render_workspace(
+                api_base_url=API_BASE_URL,
+                account=account,
+                access_token=session["access_token"],
+            )
 
 
 if account is not None:

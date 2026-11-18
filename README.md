@@ -11,16 +11,23 @@ views display the current manager and transfer status. Husbandry edits/deletions
 require both current keeper rights and original authorship.
 
 The owner has manually verified the main handover and post-transfer husbandry
-workflow. Unit tests were paused by the owner; compilation and Python import
-checks are not a claim that the automated suite passed. Buyer-uploaded PDF
-verification is outside the approved demonstration. Husbandry evidence is not
-stored on-chain.
+workflow. The November 19 audit also passed an isolated end-to-end workflow and
+19 focused tests; the historical full suite has not been rerun. Buyer-uploaded
+PDF verification is outside the approved demonstration. Husbandry evidence is
+not stored on-chain.
 
 Read [AGENTS.md](AGENTS.md) before contributing. The approved demonstration
 is in [the logical data model](docs/level-1/data-model.md), and the architecture
 is described in [the architecture document](docs/level-0/architecture.md).
 
 ## Local environment
+
+For the November 19 frontend update, included Logo/photos/fonts, safe Git sync,
+role-page preview, and a ready-to-forward Codex prompt, see the
+[collaborator handoff](docs/collaborator-handoff-2026-11-19.md).
+Git transfers source/static assets; it does not transfer accounts, uploaded
+reports, PostgreSQL data, or a running Hardhat chain. Each collaborator starts
+their own services and opens their local `http://127.0.0.1:8502` URL.
 
 These instructions use Windows PowerShell in VS Code and assume Git, uv,
 Node.js/npm, and Docker Desktop with Docker Compose are already installed.
@@ -263,10 +270,11 @@ that these two states agree.
 
 ## Run existing tests
 
-The owner paused unit testing during the current implementation. The commands
-below are reference instructions, not required startup steps or a record of
-passing results. Existing tests may need updates for authenticated APIs and the
-separate KeeperTransfers authority before a future test-maintenance task.
+The November 19 audit passed an opt-in isolated full workflow test and 19
+focused existing tests. See the [audit report](docs/level-3/functional-audit-2026-11-19.md)
+for exact coverage, commands, and current-chain limitations. The historical full
+suite below was not run in that audit; some older tests describe previous API/UI
+versions and may need maintenance. The commands are not required startup steps.
 
 After installing dependencies, initializing the database, compiling the contract,
 and starting PostgreSQL and Hardhat, run from the repository root:
