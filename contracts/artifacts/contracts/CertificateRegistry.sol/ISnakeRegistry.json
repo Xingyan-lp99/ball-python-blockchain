@@ -1,0 +1,33 @@
+{
+  "_format": "hh3-artifact-1",
+  "contractName": "ISnakeRegistry",
+  "sourceName": "contracts/CertificateRegistry.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "snakeId",
+          "type": "string"
+        }
+      ],
+      "name": "getCurrentKeeper",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {},
+  "immutableReferences": {},
+  "inputSourceName": "project/contracts/CertificateRegistry.sol",
+  "buildInfoId": "solc-0_8_28-3907c0b6eb38d805a71b7152f473f007ffd264d7"
+}

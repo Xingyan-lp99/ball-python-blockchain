@@ -4,6 +4,7 @@ from frontend.api import (
     CertificateRequestError,
     fetch_certificate_history,
     fetch_certificate_pdf,
+    fetch_laboratory_reports,
     submit_certificate_issuance,
     submit_certificate_revision,
 )
@@ -124,7 +125,7 @@ def _render_original_certificate(
 
             with id_column:
                 snake_id = st.text_input(
-                    "Snake ID *",
+                    "Pet ID *",
                     disabled=locked,
                 )
 
@@ -136,10 +137,11 @@ def _render_original_certificate(
             pdf = st.file_uploader(
                 "PDF File *",
                 type=["pdf"],
+                max_upload_size=10,
                 disabled=locked,
             )
             st.caption(
-                "Maximum file size: 10 MB. "
+                "Maximum file size: 10 MiB (10,485,760 bytes). "
                 "The original PDF is stored off-chain; "
                 "its SHA-256 digest is recorded on-chain."
             )
@@ -154,7 +156,7 @@ def _render_original_certificate(
         return
 
     if not snake_id or not title.strip() or pdf is None:
-        st.error("Please provide the Snake ID, report title, and PDF file.")
+        st.error("Please provide the Pet ID, report title, and PDF file.")
         return
 
     content = pdf.getvalue()
@@ -220,12 +222,6 @@ def render_certificate_history(
         st.info("No certificate reports have been uploaded for this snake.")
         return
 
-    if history["chain_block_number"] is not None:
-        st.caption(
-            f"Version status checked at chain block {history['chain_block_number']}. "
-            "Use Refresh Certificates to read the latest status."
-        )
-
     for series in history["series"]:
         st.markdown(f"**{series['laboratory_id']}: {series['title']}**")
         st.caption(f"Series ID: {series['series_id']}")
@@ -243,46 +239,29 @@ def render_certificate_history(
             for version in versions
         ])
 
-        by_id = {version["version_id"]: version for version in versions}
-        version_id = st.selectbox(
-            "Report Version",
-            options=list(by_id),
-            index=len(versions) - 1,
-            format_func=lambda value, versions_by_id=by_id: (
-                f"V{versions_by_id[value]['version_number']} "
-                f"({_version_status_label(versions_by_id[value])})"
-            ),
-            key=f"download_version_{series['series_id']}",
-        )
-        version = by_id[version_id]
-        with st.expander("Selected Version Details"):
-            st.json({
-                "version_id": version_id,
-                "previous_version_id": version["previous_version_id"],
-                "stored_sha256": version["file_hash"],
-                "issuer_address": version["issuer_address"],
-                "evidence_status": version["evidence_status"],
-            })
+        for version in versions:
+            version_id = version["version_id"]
+            st.caption(f"V{version['version_number']} - {_version_status_label(version)}")
+            file_key = f"certificate_pdf_{version_id}"
+            try:
+                if file_key not in st.session_state:
+                    st.session_state[file_key] = fetch_certificate_pdf(
+                        api_base_url=api_base_url,
+                        version_id=version_id,
+                        access_token=access_token,
+                    )
+            except CertificateRequestError as error:
+                st.error(str(error))
+                continue
 
-        file_key = f"certificate_pdf_{version_id}"
-        try:
-            if file_key not in st.session_state:
-                st.session_state[file_key] = fetch_certificate_pdf(
-                    api_base_url=api_base_url,
-                    version_id=version_id,
-                    access_token=access_token,
-                )
-        except CertificateRequestError as error:
-            st.error(str(error))
-            continue
-
-        st.download_button(
-            "Download Original PDF",
-            data=st.session_state[file_key],
-            file_name=f"{version_id}.pdf",
-            mime="application/pdf",
-            key=f"download_certificate_{version_id}",
-        )
+            st.download_button(
+                "Download Original PDF",
+                data=st.session_state[file_key],
+                file_name=f"{version_id}.pdf",
+                mime="application/pdf",
+                key=f"download_certificate_{version_id}",
+                type="primary",
+            )
 
 
 # Purpose: append a corrected PDF while retaining the original report and series.
@@ -295,7 +274,7 @@ def _render_certificate_revision(
 ) -> None:
     st.subheader("Revise a Certificate")
     st.caption(
-        "Use a Series ID issued by your laboratory. "
+        "Select a report previously issued by your laboratory. "
         "The correction appends a new version and preserves earlier PDFs."
     )
 
@@ -321,7 +300,7 @@ def _render_certificate_revision(
             detail = payload.get("detail")
             st.error(
                 detail if isinstance(detail, str)
-                else "Check the Series ID and revised PDF."
+                else "Check the selected report and revised PDF."
             )
             identifiers = {
                 field: payload[field]
@@ -336,23 +315,31 @@ def _render_certificate_revision(
                     "Check the existing transaction before continuing."
                 )
 
-    original = st.session_state.get(
-        f"certificate_issue_result_{account['participant_id']}", {}
-    )
-    default_series_id = (
-        original.get("payload", {}).get("series_id", "")
-        if original.get("status_code") == 201 else ""
-    )
+    try:
+        reports = fetch_laboratory_reports(api_base_url=api_base_url, access_token=access_token)
+    except CertificateRequestError as error:
+        st.error(str(error))
+        return
+    if not reports:
+        st.info("Your laboratory has not uploaded any reports yet.")
+        return
+    by_id = {report["series_id"]: report for report in reports}
 
     with st.form(f"certificate_revision_{account['participant_id']}"):
-        series_id = st.text_input(
-            "Series ID *", value=default_series_id, disabled=locked
+        series_id = st.selectbox(
+            "Report Title *", options=list(by_id), index=None,
+            placeholder="Select a report to revise", disabled=locked,
+            format_func=lambda value: (
+                f"{by_id[value]['title']} · {by_id[value]['snake_id']} · "
+                f"V{by_id[value]['latest_version_number']} · {value}"
+            ),
+            key=f"revision_report_{account['participant_id']}",
         )
         pdf = st.file_uploader(
-            "Revised PDF *", type=["pdf"], disabled=locked
+            "Revised PDF *", type=["pdf"], max_upload_size=10, disabled=locked
         )
         st.caption(
-            "Maximum file size: 10 MB. "
+            "Maximum file size: 10 MiB (10,485,760 bytes). "
             "The next version number is assigned automatically."
         )
         submitted = st.form_submit_button(
@@ -364,8 +351,8 @@ def _render_certificate_revision(
     if not submitted:
         return
 
-    if not series_id.strip() or pdf is None:
-        st.error("Please provide the Series ID and revised PDF.")
+    if series_id is None or pdf is None:
+        st.error("Please select a report and provide the revised PDF.")
         return
 
     content = pdf.getvalue()

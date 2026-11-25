@@ -71,8 +71,7 @@ class KeeperTransferStatusResponse(BaseModel):
     detail: str | None
 
 
-# Purpose: share database access and safe failure responses for transfer writes.
-# Without this helper, the four operations could report uncertainty differently.
+# Submit demo transfers using the authenticated participant and local test account.
 def _execute_transfer_write(
     *,
     operation: Callable[..., dict],

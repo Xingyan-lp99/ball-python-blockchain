@@ -112,10 +112,10 @@ def fetch_public_snake_showcase_images(*, api_base_url: str) -> list[bytes]:
             timeout=(3, 10),
         )
     except requests.RequestException:
-        raise AccountRequestError("Snake photos are temporarily unavailable.") from None
+        raise AccountRequestError("Pet photos are temporarily unavailable.") from None
 
     if response.status_code != 200:
-        raise AccountRequestError("Snake photos are temporarily unavailable.")
+        raise AccountRequestError("Pet photos are temporarily unavailable.")
 
     try:
         payload = response.json()
@@ -252,7 +252,7 @@ def fetch_snake_profile(
     _check_session_response(response)
 
     if response.status_code == 404:
-        return None, None, "Snake profile not found."
+        return None, None, "Pet profile not found."
 
     if response.status_code != 200:
         return None, None, "The profile service is unavailable."
@@ -687,8 +687,32 @@ def fetch_certificate_history(
     return payload
 
 
-# Purpose: retrieve the selected version's PDF using the login session.
-# Without this helper, Streamlit cannot offer an authenticated file download.
+# Retrieve revision choices from the signed-in laboratory, not from browser history.
+def fetch_laboratory_reports(*, api_base_url: str, access_token: str) -> list[dict]:
+    response = _get_certificate_response(
+        url=f"{api_base_url.rstrip('/')}/api/v1/laboratories/me/certificate-series",
+        access_token=access_token,
+    )
+    try:
+        reports = response.json()
+    except ValueError:
+        reports = None
+    if (
+        not isinstance(reports, list)
+        or any(
+            not isinstance(report, dict)
+            or any(not isinstance(report.get(key), str) or not report[key] for key in ("series_id", "snake_id", "title", "laboratory_id"))
+            or type(report.get("latest_version_number")) is not int
+            or report["latest_version_number"] < 0
+            for report in reports
+        )
+        or len({report["series_id"] for report in reports}) != len(reports)
+    ):
+        raise CertificateRequestError("The certificate service returned an invalid report list.")
+    return reports
+
+
+# Retrieve a historical version's original PDF using the login session.
 def fetch_certificate_pdf(
     *, api_base_url: str, version_id: str, access_token: str
 ) -> bytes:

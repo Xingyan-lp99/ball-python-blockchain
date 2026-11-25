@@ -42,7 +42,7 @@ startup output for compatibility messages on your machine.
 | Component | Local address | How it runs |
 |---|---|---|
 | PostgreSQL | `127.0.0.1:5433` | Docker Compose, service `db` |
-| Hardhat JSON-RPC | `http://127.0.0.1:8545` | Dedicated terminal; chain ID `31337` |
+| Persistent Anvil JSON-RPC | `http://127.0.0.1:8545` | Local state directory; chain ID `31337` |
 | FastAPI | `http://127.0.0.1:8001` | Dedicated terminal |
 | Streamlit | `http://127.0.0.1:8502` | Dedicated terminal |
 
@@ -149,16 +149,18 @@ work around an error without agreeing how to preserve any existing data.
 
 ### 5. Start the local blockchain
 
-Open a dedicated terminal at the repository root, then run:
+From the repository root, start the persistent demonstration node:
 
 ```powershell
-Set-Location contracts
-npx.cmd --no-install hardhat node --network localDemo --hostname 127.0.0.1 --port 8545
+uv run --locked python -m backend.demo_chain start
 ```
 
-Leave this terminal running and rename it `Hardhat` in VS Code. The configured
-chain ID is 31337. Hardhat displays public development accounts and keys; these
-are for this local demonstration only.
+On Windows this uses Anvil v1.10.0, downloaded from the official Foundry release
+and checked against its published SHA-256 on first installation. It runs hidden
+with key output suppressed. The local demo accounts and chain ID 31337 remain
+compatible with the existing participant mappings. Hardhat remains the Solidity
+compiler and contract-test tool; do not start its temporary node on port 8545.
+Existing unrelated listeners are preserved rather than replaced automatically.
 
 ### 6. Deploy the contract and initialize participants
 
@@ -297,18 +299,35 @@ registration on another computer.
 
 ## Daily startup and shutdown
 
-With existing dependencies and database tables, start Docker Desktop and run
-the database startup command from step 3. Do not repeat the migrations. If the
-same Hardhat process is still running and its contract is intact, reuse its
-deployment and `.env` address, then start FastAPI and Streamlit as in step 7.
+For an initialized demonstration, start Docker Desktop, then use `just up`.
+It starts PostgreSQL, starts/reuses the managed persistent node, validates the
+three contracts and lab permissions, then starts the website. Do not repeat
+migrations or deployments for a normal restart. Fresh setup still follows the
+ordered first-time instructions above before `just up` can pass validation.
 
-Stopping Hardhat with Ctrl+C loses its in-memory blockchain state. PostgreSQL
-and uploaded photos persist independently. After a Hardhat restart, deploy the
-contract again and update `.env`; the same-looking address does not prove that
-the old registrations survived. Existing database profiles may refer to lost
-chain registrations. Agree how to reconcile the demo state before continuing;
-this project currently has no automatic restore or reset workflow. Do not
-automatically delete the database volume or files.
+Chain state is saved every two seconds under ignored `storage/chain/state.json`.
+`just chain-save` creates an atomic explicit checkpoint. `just chain-stop` saves
+before stopping the verified managed process. `just chain` restores the newest
+checkpoint, including blocks, transaction receipts/logs, contract storage and
+historical states. A corrupt checkpoint stops startup instead of creating an
+empty chain. Abrupt termination can lose writes after the last periodic save;
+use explicit checkpoints and coordinated backups before important shutdowns.
+
+For a coordinated local backup, stop FastAPI first, then run `just backup`.
+It refuses to back up while the backend is reachable, exports PostgreSQL using
+the existing `ball-python-demo-db-1` container, and copies photos, PDFs, and the
+chain checkpoint into `storage/backups/<UTC timestamp>/`. A completion manifest
+records public contract addresses and a chain fingerprint, but no environment
+file or credentials. Backups contain account data/password hashes and stay local.
+Restart FastAPI afterward. A chain change during backup causes failure rather
+than labeling an inconsistent backup complete. Restore the matching database,
+uploads and chain checkpoint together with services stopped; never overwrite
+live data or selectively treat an unrelated chain as historical recovery.
+
+The November 20 conversion preserved the existing database/uploads and backed
+them up before creating new persistent-chain deployments. It could not restore
+previously lost Hardhat registrations, certificate evidence or transfers. Those
+old records remain explicitly unconfirmed. No business transaction was replayed.
 
 Ctrl+C in the FastAPI or Streamlit terminal stops that application. To stop
 PostgreSQL while retaining its volume:
@@ -350,6 +369,25 @@ Use main for the approved off-chain husbandry workflow; do not merge that featur
 branch's broader storage-boundary changes without a separate scope decision.
 
 ## Troubleshooting
+
+Apply `backend/migrations/009_remove_breeder_internal_id.sql` when updating an
+existing database. Breeder Internal ID has been removed from registration and
+all profiles; `snake_id` remains the registry identifier.
+
+Public registration supports Buyer and Breeder accounts only. Laboratory staff
+sign in with preconfigured LAB001/LAB002 demonstration accounts; the public
+account API rejects laboratory registration. Existing laboratory logins and
+on-chain laboratory permissions are unchanged.
+
+### Local demonstration transfers
+
+No browser wallet extension is required. Sign in, open **Keeper Management**,
+and initiate, accept, reject, or cancel a transfer. The backend submits through
+local unlocked test accounts associated with the signed-in participants.
+The Solidity contract still checks sender permissions and records transfer events;
+SQL is synchronized after confirmation. This demonstrates contract authorization,
+not independent wallet approval by each person. Use local demonstration accounts
+only; no real funds are needed.
 
 | Symptom | Check |
 |---|---|

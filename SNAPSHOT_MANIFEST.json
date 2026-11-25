@@ -1,0 +1,3265 @@
+{
+  "created_utc": "2026-11-25T11:30:57.953586+00:00",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 107,
+      "sha256": "edd95fb2657b6daeecd094de1d9c9bc63aed02ec3d326d9f1bc5704a26036287"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 143,
+      "sha256": "480d2e43aa548c91cd62d4902e4124ed8ca6a979c844119dfed7759f9a3d3ec3"
+    },
+    {
+      "path": ".streamlit/config.toml",
+      "bytes": 742,
+      "sha256": "348469b5f3b12ad3c69e1672aa831e058e3cb51f2fbc1fed74156b02ef99a79c"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 6466,
+      "sha256": "1e11448e9c7ddadfe6a22991d43c59f16be35e8167a2556409da54ec64db838c"
+    },
+    {
+      "path": "backend/account_routes.py",
+      "bytes": 3101,
+      "sha256": "0312cfe75ce580549c5b8bddc933fe6dd670caf92b7e61fde904bfe0b1f362c1"
+    },
+    {
+      "path": "backend/accounts.py",
+      "bytes": 7754,
+      "sha256": "fc1cec07ee1864881911f4e87eedddf30bb67969501340a798a53954f85bc141"
+    },
+    {
+      "path": "backend/auth.py",
+      "bytes": 2468,
+      "sha256": "b800eb92d5214a7e0037ac1522e7d44b21fbb3f256e2862d940359ce72079c11"
+    },
+    {
+      "path": "backend/blockchain.py",
+      "bytes": 3638,
+      "sha256": "75abc0d59c1bda538c1c2bb179a687b24fc70c0c52502d79a7cd426692567c45"
+    },
+    {
+      "path": "backend/certificate_chain.py",
+      "bytes": 11999,
+      "sha256": "e878bb43395dc4ebfea432a01a17450549284cb2824dc3bb15c044c24cbb9f18"
+    },
+    {
+      "path": "backend/certificate_files.py",
+      "bytes": 1824,
+      "sha256": "9a30a7e6d96378d092898befa498ada7aebc229b067ebc2a44e212b44f8cde5a"
+    },
+    {
+      "path": "backend/certificate_routes.py",
+      "bytes": 10729,
+      "sha256": "038977ffa8ea7e0935f78eb9ee1b6e29bc24213728e7dfd16a2bd0483a61a1d9"
+    },
+    {
+      "path": "backend/certificates.py",
+      "bytes": 22624,
+      "sha256": "252bcee30b89deffe1004077135deee8e9ade9251cce2a5a89c3c6938f879a2c"
+    },
+    {
+      "path": "backend/check_demo_readiness.py",
+      "bytes": 4178,
+      "sha256": "20f68da83437cbaa03f68c19202ab199142bd49a3c5c52d8e2a12d64660683bb"
+    },
+    {
+      "path": "backend/database.py",
+      "bytes": 1396,
+      "sha256": "143f605918c8290ff8b16a13042739563f0f54df34e6025ddf7e5cfe1482f38f"
+    },
+    {
+      "path": "backend/demo_backup.py",
+      "bytes": 2835,
+      "sha256": "0f92a3c8f60f9445dea2df9716447dfaaa45e11d71c52d507db90be94b174c03"
+    },
+    {
+      "path": "backend/demo_chain.py",
+      "bytes": 7066,
+      "sha256": "67d5ecb1d61e70cd2bd6e6dc5dc0f848a764eff3564aaa04b08afcb75fe1cf45"
+    },
+    {
+      "path": "backend/deploy_registry.py",
+      "bytes": 3290,
+      "sha256": "6e2be69ad77c2ab51c6f09d05037cc07d2e8f80f9b79ef57c7668a18072b2f3e"
+    },
+    {
+      "path": "backend/husbandry.py",
+      "bytes": 8458,
+      "sha256": "8ffc1417373cc96eff4827a22cb5fab30e2943caf6448abf4d3d44023b2a8839"
+    },
+    {
+      "path": "backend/husbandry_routes.py",
+      "bytes": 5087,
+      "sha256": "972f56c6cfb363f439502604280266c70fefcd5ed76ccebf5097e68f1db89b29"
+    },
+    {
+      "path": "backend/keeper_transfer_requests.py",
+      "bytes": 14147,
+      "sha256": "eab5dace851121d9ae67e7d64615b262a3b8d3625d6fb08efae9b58f7f62a956"
+    },
+    {
+      "path": "backend/keeper_transfer_routes.py",
+      "bytes": 8949,
+      "sha256": "b088423f41d28d5cf98908ffdbd6ecaca9861ce296de37fac9a7b3ecbaaabe56"
+    },
+    {
+      "path": "backend/keeper_transfer_status.py",
+      "bytes": 7289,
+      "sha256": "6a416b9a0776f0fe3dd2cd8f74b15926eef495986082546d68e4f274868eb2ba"
+    },
+    {
+      "path": "backend/keeper_transfers.py",
+      "bytes": 14034,
+      "sha256": "7c65a6fcd3e79d76044d2e68eba85240410687998dbd18f2bae84cdcd7caa7d7"
+    },
+    {
+      "path": "backend/main.py",
+      "bytes": 2039,
+      "sha256": "9e9d6276cbf3eb53d4e7875b87285640fb1e9143c6147a0abb5fe2228d5e1179"
+    },
+    {
+      "path": "backend/migrations/001_create_participants_and_snakes.sql",
+      "bytes": 1345,
+      "sha256": "3523177be0b92458b7577669b3b75493ab0a6806f21cccc84188f59e58023d89"
+    },
+    {
+      "path": "backend/migrations/002_require_snake_sex.sql",
+      "bytes": 199,
+      "sha256": "a0e0fe8767e5fbd4454ab96c868950fcbe1ccb023fd64e3e1bf79fd2975d7d7d"
+    },
+    {
+      "path": "backend/migrations/003_create_blockchain_transactions.sql",
+      "bytes": 392,
+      "sha256": "06a0e03aa5780afae916d0adb176a73a6fa0aa0bb7a9c5de921ccb2c8fe93cff"
+    },
+    {
+      "path": "backend/migrations/004_create_husbandry_records.sql",
+      "bytes": 2166,
+      "sha256": "3ad191973b87a89379f5ce19e5c4d28c5bd6b2718f2c06995706b31447600698"
+    },
+    {
+      "path": "backend/migrations/005_create_accounts_and_sessions.sql",
+      "bytes": 1644,
+      "sha256": "d802188f0b9fb9b7b5d342c09ff64ffcd352834eff3f36b014031b6168ff6491"
+    },
+    {
+      "path": "backend/migrations/006_create_certificate_records.sql",
+      "bytes": 1783,
+      "sha256": "640582a90e0b597a93759fb7a2a920600e93a723ecf730917844e115a1e3ecfc"
+    },
+    {
+      "path": "backend/migrations/007_create_keeper_transfers.sql",
+      "bytes": 1622,
+      "sha256": "b5828e2de48c02ab6b19fc792bed41147c79b57be5f3ed6a7527b702d07b747c"
+    },
+    {
+      "path": "backend/migrations/008_create_wallet_challenges.sql",
+      "bytes": 714,
+      "sha256": "e344da7665dc6ea24783ab5b427fee4fe5b5cca7b91d7f174cb02844bd4da4a9"
+    },
+    {
+      "path": "backend/migrations/009_remove_breeder_internal_id.sql",
+      "bytes": 213,
+      "sha256": "4ac69ad5ed1330d23b1063d87668c86a764e889fa513e3df3bc9953896cbfd69"
+    },
+    {
+      "path": "backend/migrations/010_allow_nullable_genetic_description.sql",
+      "bytes": 284,
+      "sha256": "eae4f285673bf2ea5e58e9af6d793ee8aed3e2003fb3fb9063cb71e5330a9fa2"
+    },
+    {
+      "path": "backend/photos.py",
+      "bytes": 1977,
+      "sha256": "31c5ce8d1fbd6cd24fbe0b44a8bb29327e50362f0f4208f8a791a26b7da6267e"
+    },
+    {
+      "path": "backend/register_snake.py",
+      "bytes": 4820,
+      "sha256": "c9275be46d530a2f0e0c6983f3082cea0fec07ec443250fd1ef7cfc2be474584"
+    },
+    {
+      "path": "backend/seed_participants.py",
+      "bytes": 2657,
+      "sha256": "243a46f73e4608849e8f825f6ec41f46f17d0c087c7c38efb6bfe28149af1ff4"
+    },
+    {
+      "path": "backend/session_routes.py",
+      "bytes": 4281,
+      "sha256": "898e9cdaad3cb82f042199491e1b502b9db133c655ffb64dc41f35c5e3c8a3da"
+    },
+    {
+      "path": "backend/sessions.py",
+      "bytes": 4271,
+      "sha256": "c8ffbd83afcad3aea0756b4deca994dc849b0ec1768fe34914a4320f7b9535ae"
+    },
+    {
+      "path": "backend/setup_certificates.py",
+      "bytes": 8763,
+      "sha256": "9abb396ba59f26fa891da264e45e7433437fe4511f411af4e658791eff4f41ce"
+    },
+    {
+      "path": "backend/setup_keeper_transfers.py",
+      "bytes": 7721,
+      "sha256": "2fb94fd72701c02357e7c18aba4759af8e75d24c16f3ee0ff8209cba0c70ddf4"
+    },
+    {
+      "path": "backend/snake_profiles.py",
+      "bytes": 3589,
+      "sha256": "cd6f1c320bc74ae9293a55be857ce922804bdb3039b0de985f508a15d69cc138"
+    },
+    {
+      "path": "backend/snake_registration.py",
+      "bytes": 4450,
+      "sha256": "d84729fdf26f971698db6367620703da7338f5f8ed3f7816f776ffd4df902311"
+    },
+    {
+      "path": "backend/snake_routes.py",
+      "bytes": 13629,
+      "sha256": "1c7cfae36e0965213c0619e956175b830c0d57ffd55e54bec52817c5c67c1c02"
+    },
+    {
+      "path": "backend/tests/test_blockchain.py",
+      "bytes": 1946,
+      "sha256": "fdc41c532be6bd81d13b44918ee17ed044b4eba6cf476f328e1f7a200b58991d"
+    },
+    {
+      "path": "backend/tests/test_chain_persistence.py",
+      "bytes": 3787,
+      "sha256": "25b3341ce5d35236c39c228c99408b42845b02930ab8c1c53c912f06a32fe0f4"
+    },
+    {
+      "path": "backend/tests/test_database.py",
+      "bytes": 1410,
+      "sha256": "553248ac3f62dce7067fa66cb2470d815cefa84d48fc275c5ec13bfc1f8760c9"
+    },
+    {
+      "path": "backend/tests/test_demo_readiness.py",
+      "bytes": 2558,
+      "sha256": "90aa8424b8efb9c19f4178d80241da23d7e1e4e135514779f47b25eee55e48eb"
+    },
+    {
+      "path": "backend/tests/test_demo_workflow_audit.py",
+      "bytes": 18958,
+      "sha256": "6d2d7d710a70e09f5e281cf78630ccc39a1a770161d2bddec921e332d0f65d42"
+    },
+    {
+      "path": "backend/tests/test_deploy_registry.py",
+      "bytes": 5284,
+      "sha256": "f8c9d3a046633d9ae860f2b6b05310768e11865280a01501db5f89fbe6cfdc68"
+    },
+    {
+      "path": "backend/tests/test_health.py",
+      "bytes": 454,
+      "sha256": "21ce7df8f1ac2c1eebd996c80ee02e35ccf471ac5b7ee7d6cb5a9e144dfeb3d4"
+    },
+    {
+      "path": "backend/tests/test_persistent_chain_safety.py",
+      "bytes": 1449,
+      "sha256": "1c32a783e856d80a63c3c93d831d646f2753f8cdbd86c442a3dbf79fb68e5a47"
+    },
+    {
+      "path": "backend/tests/test_profile_schema.py",
+      "bytes": 6104,
+      "sha256": "49a89ee9aa46efb22d3fc36c000ee4dbe47239dfa2b0328824985ff57fe809f2"
+    },
+    {
+      "path": "backend/tests/test_public_registration.py",
+      "bytes": 810,
+      "sha256": "530635e1df8f7ba381e39a3d5e2ecf3457c436ba2aca50051282110eed51e05d"
+    },
+    {
+      "path": "backend/tests/test_ready.py",
+      "bytes": 2236,
+      "sha256": "f5214ba013158d7900c29defbe5100172e05ff7e640169951c2c76ca0722145f"
+    },
+    {
+      "path": "backend/tests/test_register_snake.py",
+      "bytes": 6854,
+      "sha256": "f686b7ee92209a495baa5f8cde9551eda2fed77cd5a4aa84869918b3bc737f20"
+    },
+    {
+      "path": "backend/tests/test_snake_routes.py",
+      "bytes": 6788,
+      "sha256": "2ce9f4e9bd7c1792f3d8c093289cc5cdcdc943668f4a7463a59bb44e00bb6ccd"
+    },
+    {
+      "path": "contracts/artifacts/artifacts.d.ts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "contracts/artifacts/build-info/solc-0_8_28-3907c0b6eb38d805a71b7152f473f007ffd264d7.json",
+      "bytes": 50028,
+      "sha256": "9a01d665556295b84d5db90f31ec60ce392a36f432b2ea7b6467fbcd2822ece2"
+    },
+    {
+      "path": "contracts/artifacts/build-info/solc-0_8_28-3907c0b6eb38d805a71b7152f473f007ffd264d7.output.json",
+      "bytes": 1924351,
+      "sha256": "00787b20715aa5c069bc75ed5aac38d98c3d8881bfd165d06d7654984175b8e0"
+    },
+    {
+      "path": "contracts/artifacts/contracts/CertificateRegistry.sol/artifacts.d.ts",
+      "bytes": 50639,
+      "sha256": "81e4d2d8057a782cefbb7e039b76f6e50392492e673332a1d5ddbfc613a6c02a"
+    },
+    {
+      "path": "contracts/artifacts/contracts/CertificateRegistry.sol/CertificateRegistry.json",
+      "bytes": 54159,
+      "sha256": "7a1648aa6ec642c15601f4056fb2bd1daf1daa7950ef6129cff9cdc280f0474d"
+    },
+    {
+      "path": "contracts/artifacts/contracts/CertificateRegistry.sol/ISnakeRegistry.json",
+      "bytes": 788,
+      "sha256": "33b50f46189e5b38fe34357f4376a4bc90116cbfc318eabaff9c5396de22550e"
+    },
+    {
+      "path": "contracts/artifacts/contracts/CertificateRegistry.t.sol/CertificateRegistryTest.json",
+      "bytes": 109171,
+      "sha256": "0c1b0e19d5ecaec3fda12021558f49e6ee462d9ef6a4c903a93781a8d7fc9d23"
+    },
+    {
+      "path": "contracts/artifacts/contracts/CertificateRegistry.t.sol/VmCertificateRegistryTest.json",
+      "bytes": 1221,
+      "sha256": "82dd94af6e5a976a7778085f1640ca0f5a2d37140177fb94591a4ffaa28f6b75"
+    },
+    {
+      "path": "contracts/artifacts/contracts/KeeperTransfers.sol/artifacts.d.ts",
+      "bytes": 24818,
+      "sha256": "7022abcd80651362e3df728d30b08b69ae04b0433cff721a965a07362a7ed53f"
+    },
+    {
+      "path": "contracts/artifacts/contracts/KeeperTransfers.sol/IInitialKeeperRegistry.json",
+      "bytes": 788,
+      "sha256": "ff773948227f5e9b32b3e584c9f5f85573e7afee76dbf41fabb795c3f12d7d15"
+    },
+    {
+      "path": "contracts/artifacts/contracts/KeeperTransfers.sol/KeeperTransfers.json",
+      "bytes": 25964,
+      "sha256": "f1f637a5718fc266dca4bba05aaa8c9864cdfd397f493554d16dcaf321bf5d37"
+    },
+    {
+      "path": "contracts/artifacts/contracts/KeeperTransfers.t.sol/KeeperTransfersTest.json",
+      "bytes": 111389,
+      "sha256": "05a8b435194bbf7dc24bc02c2e0fc373273aa9320fbe876b72c87e7f046b8f55"
+    },
+    {
+      "path": "contracts/artifacts/contracts/KeeperTransfers.t.sol/VmKeeperTransfersTest.json",
+      "bytes": 1658,
+      "sha256": "27eec3a39d076e8b2257fd02803d5a24af9f542b2e83e75727695e949a457184"
+    },
+    {
+      "path": "contracts/artifacts/contracts/SnakeRegistry.sol/artifacts.d.ts",
+      "bytes": 6563,
+      "sha256": "bc314f212e8cb12ff2f8ec9051cf65d39f7603d2e495b450d2deed8c9633d751"
+    },
+    {
+      "path": "contracts/artifacts/contracts/SnakeRegistry.sol/SnakeRegistry.json",
+      "bytes": 6644,
+      "sha256": "4c552b646a870f491fd92747ed83424123591074f5746aa62ea33d724b9e948e"
+    },
+    {
+      "path": "contracts/artifacts/contracts/SnakeRegistry.t.sol/SnakeRegistryTest.json",
+      "bytes": 43038,
+      "sha256": "c6a543ec54e2234e77ba45cca8ec3410481e1624196aa6d4b47b89f5ac871c58"
+    },
+    {
+      "path": "contracts/artifacts/contracts/SnakeRegistry.t.sol/Vm.json",
+      "bytes": 1635,
+      "sha256": "4ed1ec0090549e6e824fd19632a3335e3907682ee7387e6722cc1089558bd0c5"
+    },
+    {
+      "path": "contracts/contracts/CertificateRegistry.sol",
+      "bytes": 11504,
+      "sha256": "4d12bf4b969e51e85000cbb910567f365c288ba28bb94a567834f505e4282314"
+    },
+    {
+      "path": "contracts/contracts/CertificateRegistry.t.sol",
+      "bytes": 8702,
+      "sha256": "761b3692a383345b349a14ae7ea8ae1cf6a284dfb994fcaafbcfc0f54aabb0dd"
+    },
+    {
+      "path": "contracts/contracts/KeeperTransfers.sol",
+      "bytes": 7880,
+      "sha256": "b051b136b3303a483da5c8e5cf08bbacd0bb492d70ce160122232b58f3ed2f61"
+    },
+    {
+      "path": "contracts/contracts/KeeperTransfers.t.sol",
+      "bytes": 11062,
+      "sha256": "b29e65b017b6d633ab3e3e511472ecb09e6f34519203b5e325da42bdf798ebf2"
+    },
+    {
+      "path": "contracts/contracts/SnakeRegistry.sol",
+      "bytes": 2460,
+      "sha256": "081845d2468dad10271a4e408fa1c74e77d2bb074c583de3161322dbbfac8acf"
+    },
+    {
+      "path": "contracts/contracts/SnakeRegistry.t.sol",
+      "bytes": 3887,
+      "sha256": "0b593e6cf85fdddf61a1d00b154d90bc5815590879832cdfd4fbd4087051f6dd"
+    },
+    {
+      "path": "contracts/hardhat.config.ts",
+      "bytes": 231,
+      "sha256": "911ce98af420489165e24c57cc9778f3be436860c0a2b8e50c6f3ccb3c98af8c"
+    },
+    {
+      "path": "contracts/package-lock.json",
+      "bytes": 43560,
+      "sha256": "86900f5014da93c02dcbae7d36d74fc98244c258ac509cb80beac009f7755996"
+    },
+    {
+      "path": "contracts/package.json",
+      "bytes": 135,
+      "sha256": "bab64560f3383e2f0decb4fcfe24eaca454bab04a159c34e38ace83abd45a37a"
+    },
+    {
+      "path": "docs/collaborator-handoff-2026-11-19.md",
+      "bytes": 8050,
+      "sha256": "56ab78ece920b7dbfc8b26c886894bb966e327b8cc77ff524235a1f90c4892d1"
+    },
+    {
+      "path": "docs/design-previews/login-font-comparison-2026-11-18.png",
+      "bytes": 25468,
+      "sha256": "6a60f3050cf92f407a4c8e6c4457c170b519e21e832f40666de987a8a9457d83"
+    },
+    {
+      "path": "docs/design-references/material-design-3/coverage.json",
+      "bytes": 126607,
+      "sha256": "27b6dcefdf13055d6c4e7cb97e0d67754ec362cd5caf9f023b3b7c858cbc9158"
+    },
+    {
+      "path": "docs/design-references/material-design-3/guide-entry.json",
+      "bytes": 421,
+      "sha256": "7b3f11b544a36a9514a9d123c2625f08d71fa0eaabf4a85b895f2a5556994628"
+    },
+    {
+      "path": "docs/design-references/material-design-3/INDEX.md",
+      "bytes": 25720,
+      "sha256": "d17fa30a98e94dfd939bfd2e23288c855b5d9c74a4a36d1c6440ce275c230731"
+    },
+    {
+      "path": "docs/design-references/material-design-3/manifest.json",
+      "bytes": 156233,
+      "sha256": "3e4aea7b890e71b59caea973800748ad5f0aad842960c51c6ba970db54becae9"
+    },
+    {
+      "path": "docs/design-references/material-design-3/media-links.json",
+      "bytes": 1095149,
+      "sha256": "552963cdf56a8541792cf9cc640c6fa89da4c4e9126243b26aafdbcf58468f4d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/2023-google-fonts-redesign.md",
+      "bytes": 8770,
+      "sha256": "caecb901a0ec1bd1deff684cb244dfc787c30ec28fab8b687ff1dfc62e2fd2a1"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/24-hour-clock-design-research.md",
+      "bytes": 14953,
+      "sha256": "cfebb509c99f89204ef530c2271c40fd3b79501fee908308114010d11ddb5971"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/5-steps-large-screen-apps.md",
+      "bytes": 24226,
+      "sha256": "c5c91598d87aee97b434b54686841c84a1d832215f54f021543f787b68916116"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/accessibility-awareness-day-2022.md",
+      "bytes": 6919,
+      "sha256": "f2923b60450ff534632a17f1e3cfb136e9e207bc42c1e069ca4fbb1b9a793613"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/android-dark-theme-tutorial.md",
+      "bytes": 27252,
+      "sha256": "c32be058952496b0c18fbebe71dc43955c5039f33b7c67991a6c85f6076f8a35"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/android-material-motion.md",
+      "bytes": 26733,
+      "sha256": "46038b4d61a3c8e62ed58248c5641f60f3556fd90a83ebdd3cdc495894b9b8fd"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/android-material-theme-color.md",
+      "bytes": 29014,
+      "sha256": "eb64fbcb6b1fc0aabccdd792b9aaa9257c6105c6a73928f98666293cffe3039b"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/android-material-theme-shape.md",
+      "bytes": 33786,
+      "sha256": "54fdb6c6bf1b43d7bd7b002de4c3d226fb9ea6715ad1ada3fec95623d0e596dd"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/android-material-theme-type.md",
+      "bytes": 24613,
+      "sha256": "2c86612fce07c5c5ef48e0946ce485706432c5f9b7d7520a5d33856b943d05dd"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-10-0.md",
+      "bytes": 10867,
+      "sha256": "a0da8bc3d15acf859e007cbe1a25b8cdf8b57a9be1b4a0589813a54b526916fa"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-12-0.md",
+      "bytes": 28599,
+      "sha256": "3594c45128224b7a85c1ca8234ce9a8ae139b6dca49f867161fdf82f93354260"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-2.md",
+      "bytes": 20396,
+      "sha256": "36badec9b078f249f450ef86fc8287c746eb5bf3bbfd437043f0dc80c618c2e7"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-3-0.md",
+      "bytes": 18894,
+      "sha256": "1154caaa8482fa5be9d4120d3d5b72af5df2df36b52644d78bf8ec5fe8dddbff"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-4.md",
+      "bytes": 13864,
+      "sha256": "6dd07f3ee4133b73f2a5c95d0e1fe01ee0654bffec8da87e1dadee78d18fc60e"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-5.md",
+      "bytes": 11470,
+      "sha256": "b5e78da81a10495904d967a196f1141511723c7c60dde7c031f2de0cbfe36bde"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-6-1.md",
+      "bytes": 11693,
+      "sha256": "c58b2016a9b1467c2f060a787ea3ae3f69a4217fbd34be76b217d672c42c8dca"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-7-0.md",
+      "bytes": 10099,
+      "sha256": "f6484e710616db698e22c0494c88f2e79fc68341d66ca22cc66ec7b613c8174e"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-8-0.md",
+      "bytes": 12152,
+      "sha256": "87fc58e59ddbcb9495a96b9f7abf4becb65bb0a96be2c332a8813a3d9b04c25b"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/android-stable-release-1-9-0.md",
+      "bytes": 9809,
+      "sha256": "92ee248fae5e62c3b0e0eb69e14c795e698aa2b2ab23433bf41f59639e481387"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/announcing-material-you.md",
+      "bytes": 13752,
+      "sha256": "479fb465f62b3de2572658d1fa63026d29022384863608e43fb4be6c3e3cf97a"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/asset-people-1.md",
+      "bytes": 12915,
+      "sha256": "311d8e45843ff4c87f4c36236ceef27c54666c17828d2df2704531e1d1a752bd"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/asset-people-2.md",
+      "bytes": 9491,
+      "sha256": "1e9db87a98fe954ef2612b810c6dcc5700abdd585afd7dd7943abd142121b92d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/asset-people-3.md",
+      "bytes": 16116,
+      "sha256": "19334725104d07986ac21476ae1f69cd164651836f902e0dc52d286ea5937dc0"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/atkinson-hyperlegible-design.md",
+      "bytes": 17152,
+      "sha256": "dc9f1499332e8e3cd6cbb929209ff239a147179324731a210230b16ca8f6036f"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/color-fonts-are-here.md",
+      "bytes": 17435,
+      "sha256": "20151b1d7dc93596a4cd95d69b5f894bfb1018be8e1f1f805c5363129b51e534"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/dark-theme-design-tutorial-video.md",
+      "bytes": 4147,
+      "sha256": "6cd23ab35c3878ba8833a645981278ca0e25ce1c1ed0ef014cf94dc36641659c"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/data-visualization-accessibility.md",
+      "bytes": 14406,
+      "sha256": "29aea53772be2c39ec06ac80e810a2ffd726513ee0cd48e8a0ee00791f57d862"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/derek-brahney-interview.md",
+      "bytes": 11394,
+      "sha256": "8eb45585186ae32e18948ae50cf8312427784cee9451e0a356d14b1f75db1b92"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/design-material-theme-color.md",
+      "bytes": 19900,
+      "sha256": "d44b6c808254445a699a2c7aebb8a0bd60d9fb59e102322ef9ab23e293aeb22e"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/design-material-theme-shape.md",
+      "bytes": 11947,
+      "sha256": "5f7dfc0a125a99607f8ee196ed54d7238a3d0b42c30ec6e70ee355fc41275f6f"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/design-material-theme-type.md",
+      "bytes": 17244,
+      "sha256": "fb617e9559633528765edac3354e99acd1e7827146c342d74bf99b9e876ccd56"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/designer-toolbox-figma-android-studio-relay.md",
+      "bytes": 17753,
+      "sha256": "4923a8c0c62ab43d8f8a2099ac9c1f95899aa5a7b3a3ec469d05a3bd3d4ece8f"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/designing-text-visual-acuity-research.md",
+      "bytes": 29540,
+      "sha256": "cd4ada39fc727566d0f695d461e5b7239985879e51afd3b7f4caf966f4f628f2"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/designtocode.md",
+      "bytes": 7688,
+      "sha256": "3a1b61c4eebcc5af64915da630a5a7710bb2bc0ca68345b1368632898cdb5f8b"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/device-metrics.md",
+      "bytes": 10841,
+      "sha256": "70bcdb64f298536218dceaf55b10ad8563a12d2225293a331a275fb00f4df664"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/digital-wellbeing-design-systems.md",
+      "bytes": 10738,
+      "sha256": "63c8fab101811d1f8a498d8d7a2528d184d461e866ff24b8dda4a50ef00326f4"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/digital-wellbeing-face-retouching.md",
+      "bytes": 14332,
+      "sha256": "9971e9a4a862a2a4ca9af7561ce76eea7dc9758eae91ac3e3fad4b30d40406dd"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/digital-wellbeing-ux-principles.md",
+      "bytes": 12153,
+      "sha256": "6c6e4ff371a5870a2e3dce5db3857ac03a47f85d76401857dd432666c504103d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/dynamic-color-harmony.md",
+      "bytes": 17726,
+      "sha256": "4db9d8295d1089a4c01dfe1dfb705c8871f7aafb0abce9a4f7a2866508c29501"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/finding-ethical-design.md",
+      "bytes": 8994,
+      "sha256": "3863824888fb752e41a9331e97d7cc181abafd63a5226025f696a0131b1ae173"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/fonts-are-software-video.md",
+      "bytes": 5298,
+      "sha256": "11db6252790aecf1431924e7e521a2b2df60a0588639dcfc9d3e1fb1aef1d5d5"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/get-google-fonts-update.md",
+      "bytes": 12751,
+      "sha256": "f9410afce7ade06ca8fd4b0ceec3f701961678b7fa7487bd4a882199582ec5e8"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/google-design-tutorial-video.md",
+      "bytes": 3420,
+      "sha256": "1b7ab62b47b6eac7feacc4b8b1142e3456a82580c131a196e11bd66f9a4caad0"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/google-fonts-dark-theme.md",
+      "bytes": 12188,
+      "sha256": "bf69d1a9f50caeb55ac334a9411f16d76649744d13df5a05c09dd1b16e2cfec1"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/google-fonts-knowledge.md",
+      "bytes": 6810,
+      "sha256": "78d7583be964fb93f68506110e9ddcc659be7c15696301f47b06fe7f73a05d32"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/google-fonts-material-icons.md",
+      "bytes": 9715,
+      "sha256": "5960bba61c2401a952c96ff246c8def139ecb045899d3cb517b38c716ff6b779"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/google-fonts-pairing-figma.md",
+      "bytes": 9514,
+      "sha256": "0d5a7aab2f9afc713f197b8a79002c399e247c625d1689669affd6e1e5f82815"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/google-io-2024.md",
+      "bytes": 6901,
+      "sha256": "d1f70edfcf01d2f7fc4d52494f68ff0b302e2ef09b609e488831e96a3129acd5"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/google-material-custom-theme.md",
+      "bytes": 20041,
+      "sha256": "f9e7c9d69ad362ef8571d5d374f84e44988dda172913a587ebf5c65c4604af74"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/how-to-gemini-app-compose-material-design-3.md",
+      "bytes": 19947,
+      "sha256": "aed3daf61b14f360584a72fd87925050331b9d57a477c1becad72b934f386b35"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/how-to-make-text-more-accessible.md",
+      "bytes": 14905,
+      "sha256": "532613a2ccf12e7f890117c44dd57f9a650865faee48dedc3892d73e9438f4a3"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/inclusive-imagery-at-google.md",
+      "bytes": 13863,
+      "sha256": "e7515cb3b5995ed190f3150751dab2878f07ddec01aea2c2c8b2f392d0c0626f"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/interview-oddfellows-m3-art-style.md",
+      "bytes": 14507,
+      "sha256": "76e84eda63de7eb98e8f101500f95fc7b6babfedafe12a46182433f6825d69b2"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/introducing-symbols.md",
+      "bytes": 14444,
+      "sha256": "9a7a028278b9e5133cb0f8d3f95d100994003d297a7399ba9af15a53bbc0c385"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/jamie-chung-photography-interview.md",
+      "bytes": 9706,
+      "sha256": "5e521950bab028b5c9992f4fe7908d6fb27bc90e8fec9feaf4ad43170d0ab11c"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/jetpack-compose-beta.md",
+      "bytes": 27406,
+      "sha256": "5e5f5f7041821a01c4551bfacc4b962bd6715d8850456dc8373da3a4f6efb5de"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/jetpack-compose-catalog.md",
+      "bytes": 10036,
+      "sha256": "44e3fcba2f018625827da858b4d2b848a84b63b7a308539d85762b30ddb04b8a"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/localization-principles-techniques.md",
+      "bytes": 24350,
+      "sha256": "900164426da5d75314e5c68293ede2d44aab22834d41cb1c76362c71ffb7eaa4"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/m3-a11y.md",
+      "bytes": 5931,
+      "sha256": "001cb61fc5824088400c25d24a0b06e26b6ab7d4b8c80f0c970d4a79b3c96ffb"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-3-carousel-research-design.md",
+      "bytes": 17611,
+      "sha256": "6c5983bb260470dbd1ec1f94120020483ff4d796f5dcfa4c748c867eb20d7af2"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-3-compose-1-1.md",
+      "bytes": 28141,
+      "sha256": "1f2949857a5536354ecaf9170239e9d35e56cbdc814a6d44e58623ec23ade0c1"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-3-compose-1-2.md",
+      "bytes": 11854,
+      "sha256": "ba103584b32a08d999744d77b4e1c65c75e16218a1a731c10339ed220a0e4fac"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-3-compose-1-3.md",
+      "bytes": 25617,
+      "sha256": "0daa2ad6953ba0c68f394662fd91c5672d2573d43f07d4196ee5bc2bb4143209"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-3-compose-stable.md",
+      "bytes": 20158,
+      "sha256": "f50b4983d6ff064b8a671a2b766a2fb249879a92d6c2e8b704f41d0109b76716"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-3-figma-design-kit.md",
+      "bytes": 7473,
+      "sha256": "1d23d8152e93d10a9b24b5bcca5c83679dc2127d0ffa0d28e958807bb9e81223"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-3-slot-components-figma.md",
+      "bytes": 9516,
+      "sha256": "3ca30ea10dcc6f1c3443c0de1232b7f36865bfa06b567e5e2df5ae04dd4d8d65"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-ads-2022.md",
+      "bytes": 9166,
+      "sha256": "6d1a36e14598647d3bee1b8334769583f7b9982048f7fd4ef505ccb6b9ba3b02"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-density-web.md",
+      "bytes": 12729,
+      "sha256": "a1873a6304f1b6fd83588552c85adc150e99e0010395e63fe3ff17e45dfed539"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-design-2022-roundup.md",
+      "bytes": 20874,
+      "sha256": "9cf0a7384763ef49f4ab8d64c02cb3a114f96409644cc6d0ebcb99c469be2911"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-design-awards-2021.md",
+      "bytes": 11570,
+      "sha256": "c5f242f6a3ca12991e5785a9283dfa02d90a821a0e4a1e473a49641a548c04c1"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-design-blog-welcome.md",
+      "bytes": 5500,
+      "sha256": "c2479e207858e88becb003e1b1cd1250f8d6d86e276d5a497a11c7a5e8d17dd4"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-design-for-large-screens.md",
+      "bytes": 13213,
+      "sha256": "de1821df0df1273ac23b5db7133a39235073183397cce704be1058fcad8b36fc"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-design-wordpress-plugin-030.md",
+      "bytes": 7521,
+      "sha256": "dd6937b9e7ced14f03089fc1cc4969afd5ea7ffed04ea3437cdb63d6661a26b6"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-design-wordpress-plugin.md",
+      "bytes": 14569,
+      "sha256": "ec369d8938c61e5cbe5b3c9bab3c1becebbc644f3ab119fd6c4d2ba75a686dec"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-design-xr-dev-preview.md",
+      "bytes": 19636,
+      "sha256": "a53e7f134126fd080957d6c6d6dd3200ee86eeea9e45ab5d08a35db4f61ab4d8"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-design-youtube-channel.md",
+      "bytes": 4615,
+      "sha256": "a15e805c96ac1f3da2b1ed6058c9c3dc1a3971969da3a3dcf9942fad246a92fd"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-google-io21.md",
+      "bytes": 11267,
+      "sha256": "3b9497247ab5945a99809afb251c0001ca31d543c5b09d66bf79cf1d250b4490"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-google-io22.md",
+      "bytes": 8792,
+      "sha256": "c46506e9860f1c4ead998ccfc6ca2cd29053a3194b613ec38781fce166d212f3"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-google-io23.md",
+      "bytes": 10354,
+      "sha256": "409e6c4238dd03ed6583bd7a6a4142f25daea8c06625ef56e4bf0424c8d703ba"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-icons-sehee-lee-interview.md",
+      "bytes": 12833,
+      "sha256": "11f324c14e12e6c5faebac6f6bb776480cf3811a1935fbd6e4a7c0d6e713ca78"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-io-redesign.md",
+      "bytes": 21702,
+      "sha256": "4fedb6f341d20594aac054a81b3add9574ee62528920520f6afb2d79495f2507"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-partner-studies.md",
+      "bytes": 17681,
+      "sha256": "d08cfccb90c2319545ae87ff9a8acf15ca0997c4e8d7e17af7f4c0bd5224ed0e"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-theme-builder-2-color-match.md",
+      "bytes": 12296,
+      "sha256": "0dfc11e77cb1378465ce121b6591edbef518aa096ae9108d6e6be375307fc9b8"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-theme-builder.md",
+      "bytes": 13498,
+      "sha256": "0205e5f2f986dcff22d23d13423ec71b1ee68c47c648677b4f8237a8d358f141"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/material-you-large-screens.md",
+      "bytes": 9979,
+      "sha256": "6a1a7e0eeed43fe7e809df2a145bbf04a65daa36968752d61c3a75fd34712b0d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/mda-2020-winners.md",
+      "bytes": 9434,
+      "sha256": "782a6f85d10cafe39b73eb9854503747db5bbca3fcc59a90c6bc2a6baec8a412"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/mda-2021-winners.md",
+      "bytes": 16326,
+      "sha256": "d553248cab2e950d636f189c82be7a66b44df489d9b3f44945bde1b6f63863a8"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/migrate-android-material-components.md",
+      "bytes": 72561,
+      "sha256": "aa7d4b3eea4fdbbfcf51652833985de30bcea4516153da0280d14bd9be003035"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/migrating-material-3.md",
+      "bytes": 31146,
+      "sha256": "e7b09ce47434b7f25e45ea1e2e9ae8db4984f04b28d8d5ad13683fa7d3309e38"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/motion-research-container-transform.md",
+      "bytes": 9191,
+      "sha256": "e93d9056f7f94c8c183ad2dd61b922fd818b6417720c162a1a86775dd082219d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/noto-announcement.md",
+      "bytes": 8205,
+      "sha256": "4ba897d1d3834c8c766cc7a8123f50d16324f91af1d8ec070b2d3586e8ee0ec5"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/readability-consortium.md",
+      "bytes": 8021,
+      "sha256": "20b04934400349352e8d55f845092149562dd5315a027c12f8381fa4b69d97b3"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/readability-research.md",
+      "bytes": 23048,
+      "sha256": "b0288aa3857d5b997ae808207166f379c137a27a3985b353fa9208f5271f57db"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/readex-pro-legibility-arabic-type-design.md",
+      "bytes": 30592,
+      "sha256": "d004b1a06c36950a8c057e3b74ec0e50ebe3c8efd3f5b43f481cd0e3a3e23151"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/reduce-reflow-with-web-fonts.md",
+      "bytes": 9554,
+      "sha256": "21827a6d79509eabb67dab600b52da5f296981472a25123128c487891b7fa775"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/relay-in-alpha.md",
+      "bytes": 5706,
+      "sha256": "13c47f1a5557a3e9467f1051786f62dadac451ad30060e467cab0bfaf3a198d4"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/relay-ravn-case-study.md",
+      "bytes": 10214,
+      "sha256": "5b2ad60d3c8307b7149c67d09d0f614dc03b152d71fa65998d274f2326e16bbf"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/research-state-of-design-systems-2020.md",
+      "bytes": 22182,
+      "sha256": "921f2631fa8fe8ba1e957422a77b2f045ee51d1c3f76cb26726a57948817cedb"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/roboto-flex.md",
+      "bytes": 28860,
+      "sha256": "ff81ccd0c5874d5afc306d334f58dbd54dc52b49941fe29cfeb4314b2df00336"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/roboto-serif.md",
+      "bytes": 16407,
+      "sha256": "18f41e0ed008eeb28d6c13a9d82e91a08ff58674dc732e134aff4f5da0b89efc"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/science-of-color-design.md",
+      "bytes": 20727,
+      "sha256": "df6034e3106b95d3241d6e6e235beb87623c15f0ba2223e966edf85a6cde6dde"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/shantell-martin-variable-font.md",
+      "bytes": 34311,
+      "sha256": "67be29342df94401fe4a51840c2000d48165e84d37e34f29a200548fde24f930"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/sil-typefaces.md",
+      "bytes": 26538,
+      "sha256": "5cb906498fca209270ef811b133b183122b667929a481abd5a988f104096e87e"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/start-building-with-material-you.md",
+      "bytes": 13171,
+      "sha256": "cd4663d279cedc0cd75c8d1d74213abed023275cf192c073ab5b14f30146555f"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/ten-steps-ios-android-design.md",
+      "bytes": 21883,
+      "sha256": "8114961b748ba5e2db540abe354782572459627c61ee5c821335ee832b7b7bc3"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/testing-material-3.md",
+      "bytes": 14545,
+      "sha256": "8b9bac26e870e120ae3d27c8d78ef0a0f4ae3d5b1dfb57001e032d85d3ac639b"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/tone-based-surface-color-m3.md",
+      "bytes": 7999,
+      "sha256": "c3a8a177b9f49e168e4a36d4d01311b0c2430638f2f68ae8ebed6af01b0ca57a"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/whats-new-design-kit.md",
+      "bytes": 10600,
+      "sha256": "c53d4c7151bd17e140e0b9ccc71f0e7f473044f99558ec0edf06ce3e4c6f4c84"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/why-we-recommend-material-design-components-android.md",
+      "bytes": 13146,
+      "sha256": "d144dfc93a9da99a4cb5db08c4fcbf1aa0f30ecb14b16cd7769769aeba58869c"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog/year-in-the-life-material-design-advocate.md",
+      "bytes": 21414,
+      "sha256": "837b5c76eca8de8e81192bf740b3be9c475811c7f9a97aee7d4df9ecc38af102"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/blog.md",
+      "bytes": 61059,
+      "sha256": "40c827cb6e154a78084c25c6cc3d10e94c221563354fb9e65247ded77ff49a37"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/building-with-m3-expressive.md",
+      "bytes": 16770,
+      "sha256": "950a0cb3098cdf4038b8a02438cf71620248cfc618466a3f7d442b0106a4680a"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/all-buttons.md",
+      "bytes": 9175,
+      "sha256": "250741b7eca710b4d43d742edc0a5be63994c55145f8daa92df65e94143a5bee"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/app-bars.md",
+      "bytes": 60001,
+      "sha256": "f6ca69c70333c800a76a4310d7db7b79619aac6e2f9e644eedf0877655fd60ff"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/badges.md",
+      "bytes": 22751,
+      "sha256": "a63549383f0dd4ca3bad876d2de37895fd65cc80ef40d539e2999af239598452"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/bottom-sheets.md",
+      "bytes": 54482,
+      "sha256": "667dc43bf717c36e88d2b578e4645e5d8b7f74e8c76e453a7fdfd01ca6335559"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/button-groups.md",
+      "bytes": 36857,
+      "sha256": "30966c887414f44bcf24a6106a667e1456ff1f7ba5ca757ad2799ec1e0a767cc"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/buttons.md",
+      "bytes": 51110,
+      "sha256": "b0287909ee14a1db09cdc1bc6127c811b5709d622d804d3f1e470743fe21424a"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/cards.md",
+      "bytes": 51890,
+      "sha256": "a50620c71fc04a49cca3806c55ddeaf222598081174dfe4a516ca7600d9d4236"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/carousel.md",
+      "bytes": 52721,
+      "sha256": "1265ad98c1c04dfdf1a45a3352aa1fd05a040dd0d782a28a59aabe5596fcb52d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/checkbox.md",
+      "bytes": 18021,
+      "sha256": "144ab4698bdcfc970d562bc6649e87ceb3f3e4bae8e90d137c58d7bacd459080"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/chips.md",
+      "bytes": 66810,
+      "sha256": "78f8d59ccb374a654d7a8da8d5b8e76a93ed0df1dd386fe96a8dac09ca9b00f7"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/date-pickers.md",
+      "bytes": 52827,
+      "sha256": "3fe786f12bd0e727f5fb40e378dd16f07486dd158985b045b54f7d4243ab0c7a"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/dialogs.md",
+      "bytes": 60675,
+      "sha256": "3b24569bcb81d20fc1c4afc0cb32cc45817148d12eefaa1fca9d904e10431d45"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/divider.md",
+      "bytes": 12654,
+      "sha256": "c74acb729c6947a1c337e89c02de80a5102ddd823a6f83d077f9f88486e54080"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/extended-fab.md",
+      "bytes": 36840,
+      "sha256": "7d5be8616f764f131e5cbfe3b423b6a59c40e4e6f579d22ce71facd831367dd3"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/fab-menu.md",
+      "bytes": 30304,
+      "sha256": "4e449bf667ca38bbd71d59bc4ee2014612bb63050dfa095d36d1d1c216c2d495"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/floating-action-button.md",
+      "bytes": 36791,
+      "sha256": "b0322c2fc77c40766f5735fafcf16301c96025d98ad57fe9778c690a67165c63"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/icon-buttons.md",
+      "bytes": 41498,
+      "sha256": "e8f7c5a8ecd9114cbf9eaaa00ff509871b59e36702da603628c2ab61d9647670"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/lists.md",
+      "bytes": 73049,
+      "sha256": "4d40a0d878e4557eb63675baf175243fe61149814d7a7f90a2cc7c9042980202"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/loading-indicator.md",
+      "bytes": 25128,
+      "sha256": "be308af888c0816601870d7e2cf79642f95205613cfaf095e8659be207f21423"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/menus.md",
+      "bytes": 50796,
+      "sha256": "a862417ab7e4c583d89f7fd31c4c87126ffbaa4140522874ba30515fe9d9f6dc"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/navigation-bar.md",
+      "bytes": 58021,
+      "sha256": "74542ef14afe70596fb08819fa4357a0ae5161168bb4f8a27be292d09ebc1251"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/navigation-drawer.md",
+      "bytes": 51117,
+      "sha256": "6df6ac432ddd934ba104d96c3c94c15ab5aa465b537f1e303e427ae873c42caf"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/navigation-rail.md",
+      "bytes": 69446,
+      "sha256": "51dc6191b0defbb2d4b3b286c3e4d6c533b0a336dd8c1a405ccdba18a738a7e5"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/progress-indicators.md",
+      "bytes": 29307,
+      "sha256": "5df41b188d51794a07520c17b1f5db4a7d3335e3bdb615c8f1e0b256ec5106dd"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/radio-button.md",
+      "bytes": 20333,
+      "sha256": "4efe8722b157f075afb006c054c0b11ca3f7f552bd0aadffc8435416ee146f4d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/scroll-fields.md",
+      "bytes": 20055,
+      "sha256": "9699d3dbdf68f15c5c976dd5d0cbe427dac9efae137873d0c002d8d3fc87bacb"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/search.md",
+      "bytes": 47483,
+      "sha256": "a09077016d6218ee6f34eac025a7c7633b22deadd413fbecb9e277b3041a2880"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/segmented-buttons.md",
+      "bytes": 28755,
+      "sha256": "6c618cb631efc7f281681b3fe516bc541009d896c74dc4b050661d02351df3e5"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/side-sheets.md",
+      "bytes": 29339,
+      "sha256": "eb1d36c7f47193caa3ac5a1cd61e8d27d2b55c92a6eeb85630389ec8e979b823"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/sliders.md",
+      "bytes": 31505,
+      "sha256": "9297436eecdc6e2cc03cbfae372258c087c4b421ec77f7d5f0d114f99a838f3d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/snackbar.md",
+      "bytes": 31813,
+      "sha256": "786ad7322afbacf048c6f45fedbda9a64742ffd9d7ad8ed045837e0ee89dbd4f"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/split-button.md",
+      "bytes": 27547,
+      "sha256": "71e610bdb4f99d6b0c22ef0cb602002d137289196ec12309cd49e4690e6d6502"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/switch.md",
+      "bytes": 31099,
+      "sha256": "982575e5423d3daa6a3808d10a08bde74ea09067e75b8e201fcb4b619fe06f57"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/tabs.md",
+      "bytes": 37704,
+      "sha256": "cd00c44fdcf78220cea82fc1ce8729e9a036e875e1fba19230e048cc6127e5aa"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/text-fields.md",
+      "bytes": 49948,
+      "sha256": "91bd842403e6480de82de25516751b1b091059e30c4698f8a255f47402a2c275"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/time-pickers.md",
+      "bytes": 56593,
+      "sha256": "18ad4683c91107eeb2af2d9719c9bbc718a0db4b93ba3e38ca585f04449233f1"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/toolbars.md",
+      "bytes": 62737,
+      "sha256": "e0da245c7265435bfa4e57b4902428b1fc71aca5ba0509dff3b61eaf2ce5a678"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components/tooltips.md",
+      "bytes": 24162,
+      "sha256": "f653105c8e0cd3a28d858db37be9552d589f8eb2634d0c986d09be9c4bf591bd"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/components.md",
+      "bytes": 16895,
+      "sha256": "163b1b8c78946c9a1ae0e22d5ccf1b14326251aae0ca5e8ecf503b92e9d71360"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/develop/android/jetpack-compose.md",
+      "bytes": 8751,
+      "sha256": "3fc64d7ad0ea95d6106b641df2b8c0e3c73c9afd5c174b15aa31c2569a512f55"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/develop/android/mdc-android.md",
+      "bytes": 5686,
+      "sha256": "63b398355602764983798df469751d9b7b41dacb71b344ff62e2c11af5bef590"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/develop/flutter.md",
+      "bytes": 5736,
+      "sha256": "294ee40cd5a4a5ee1ff37a5fb7d75c3ab1ce3dee477da8781942053e2bf048f6"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/develop/web.md",
+      "bytes": 3697,
+      "sha256": "cfce10176178351e98e776fce2a0c40edfb709c6d8f3896260ba0865aee1a9a2"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/develop.md",
+      "bytes": 5003,
+      "sha256": "8b030f4947cd8544e965000e4fe92622945340e209afac914d6cab7603c65897"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/enhance-your-component-designs-with-parametric-prototyping.md",
+      "bytes": 8688,
+      "sha256": "60113500411ce303d99a390a2cf34c301d959cb1d16a0c46a8400e94a7d52a7d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/building-for-all.md",
+      "bytes": 3859,
+      "sha256": "8e25e41c8e9d1a958f8cbf151a8d0d30cc8972d80a829b7d42bc469e316d4726"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/content-design/alt-text.md",
+      "bytes": 20025,
+      "sha256": "132b67ee49fe7b5ad328f8ad6df0a3877bba1160e1e1dee11d1939f496fa7410"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/content-design/global-writing.md",
+      "bytes": 8538,
+      "sha256": "37d2fd5f7291fa7eb3ee26acee3f822d62decb7a39c73136e9713cc908449285"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/content-design/notifications.md",
+      "bytes": 15443,
+      "sha256": "7b0e16acdb61d5ddae1bdbf50489586e9be4fa2955bc140662c1a70c0138c55d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/content-design/overview.md",
+      "bytes": 1306,
+      "sha256": "e1e40ca034f23557831f11d4583ff197f19994f2b186280095e3a9383d21cad1"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/content-design/style-guide.md",
+      "bytes": 21488,
+      "sha256": "1606ad3e70f3c4e9e7abba194f37855f2df674612a63ef869981472849ca7f10"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/customization.md",
+      "bytes": 9087,
+      "sha256": "7fddfaa32194e7200f88676ece7e545ca06931aae489bc2b8e107012a8ee4f97"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/design-tokens.md",
+      "bytes": 28622,
+      "sha256": "6f5bd259fbf47fcfc4b8873dde46924c5b7dd414bd71d2f7cfe00853c1d15016"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/designing.md",
+      "bytes": 29216,
+      "sha256": "d476a045271c09f6532a8aeb6be776612cb18ec1dd00d2f90501564dfcbec31b"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/desktop.md",
+      "bytes": 29998,
+      "sha256": "d2ab088a8e4b8e997a676732e033aa7eeed6a1cfa1a53a42c3f62b31b40a3aea"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/glossary.md",
+      "bytes": 18272,
+      "sha256": "4fd499befb00cc37572540790c922ea8f2bccd22616135e683966a615254e94d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/interaction/gestures.md",
+      "bytes": 7693,
+      "sha256": "8036b7eee001646cc4ceb92df4e50b52a905965b5ce4d716bc2f15451ede2b5e"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/interaction/inputs.md",
+      "bytes": 19668,
+      "sha256": "be00695aa53402851bba77691effc950826d9b7b725f426088ce3a62583b235e"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/interaction/selection.md",
+      "bytes": 6369,
+      "sha256": "985fbf230b33d44ee82c0f45adaeffb51c84c00cb241685fff9a119b41253214"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/interaction/states.md",
+      "bytes": 29639,
+      "sha256": "01ff6e62389f28b55d3921f160c666f0e638423d94cb5a1e4585f7398c9aba6a"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/layout/bidirectionality-rtl.md",
+      "bytes": 17705,
+      "sha256": "3b64cc69f771d0b5cca150b8e0c6360d3bbc0f26721f654dd5ad04cc51d32e31"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/layout/breakpoints.md",
+      "bytes": 38717,
+      "sha256": "fb5876215f8a9fa266f42b5533e18c8cce47d4e6702fbf05054550d808b7f41f"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/layout/canonical-examples.md",
+      "bytes": 22317,
+      "sha256": "ce768a949de6847265e8ea41f5afc8b4e4e221264aa69e6cf6e2e22ae6181494"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/layout/grids-spacing.md",
+      "bytes": 29519,
+      "sha256": "3bc4f9c889e22606419e8624e6f361071881ceef6c723cd747322763a6f22e57"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/layout/layout-overview.md",
+      "bytes": 67648,
+      "sha256": "c4bbdacce371cd52bab3708dc251901e6dfc55650c92c1a5ff9e0f477d54cae9"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/layout/scaffold.md",
+      "bytes": 32678,
+      "sha256": "76158eed8999bd26ecbbb81634b338959042aa6c715792503ec9c08fa931a96d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/overview.md",
+      "bytes": 6150,
+      "sha256": "472192260d94ef6634e344cda928090fc5bdbaebc77654143bd64675045591b7"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/usability.md",
+      "bytes": 28392,
+      "sha256": "f34a027b62bcd9cd1a1f72387aaadb508850a15a94d364ff181b19bd6ffa1d4d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/watches.md",
+      "bytes": 29496,
+      "sha256": "0b7ea7357611441605f0082f8c39f884179af2d14462c644373592204ee560e1"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/writing.md",
+      "bytes": 17008,
+      "sha256": "9edf584b35d5d6d66c81725c8658038c2cbfa1106c12c86979544ad538cd1bff"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/xr/components.md",
+      "bytes": 59307,
+      "sha256": "6c69385fc5d3a031fda4bbef6ee3d31d39c9fd786cd5b6962df68e7eadc3ffee"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations/xr/design.md",
+      "bytes": 29078,
+      "sha256": "e483265051d546cac0439606e4227da863944ece006376ceee74c58ee31eace3"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/foundations.md",
+      "bytes": 4206,
+      "sha256": "9c6280702d74f4e02b02df04f301336337454e42bb7f625691258d15d53859a7"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/get-started.md",
+      "bytes": 20247,
+      "sha256": "367b706cb8ff91845c96bc5deb7324b171111ad56f03e183fa2d178e107cee16"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/index.md",
+      "bytes": 11525,
+      "sha256": "dabe033951b3cc6ce76e538c344c0db4c860a7068665ae1c5cc98f754ad90082"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/m3-expressive-motion-theming.md",
+      "bytes": 19789,
+      "sha256": "c17fc12d851faa44a42f35b821c5a21dcdf8c63f07725d1114a7f4f82b87b770"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/material-is-compose-first.md",
+      "bytes": 9406,
+      "sha256": "98e8d831f8252cf9f71843666a7c62dbb96a16550d399ae511bf72c5cac0c80c"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/styles/color/advanced.md",
+      "bytes": 31391,
+      "sha256": "21843df392d59cb8170334ba24134c06d13ab95f83415d1d5468ee128d7449a1"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/styles/color/choosing-a-scheme.md",
+      "bytes": 6447,
+      "sha256": "9a3014b22bdcecc41b9efec1f400c8e339da93924c392a10c6d57a756cdce6dc"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/styles/color/dynamic.md",
+      "bytes": 14474,
+      "sha256": "60a67211010cf362fbc7213bdd3fe089295df333a4cace722ce74eba6e0d2a21"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/styles/color/resources.md",
+      "bytes": 2354,
+      "sha256": "0d561dd7a4c8cda8b780e92d7ef18a0ad34f9a540176afffa2e944e86467fba9"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/styles/color/roles.md",
+      "bytes": 33685,
+      "sha256": "350f7cfbeb1fcc75f4a95ae49437403c5246955a958f62559aa7b7a399fff538"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/styles/color/static.md",
+      "bytes": 13134,
+      "sha256": "5bdb0c89960aa3f4c3a4525695b44cc188714613c1caa01f81217744e261ec8d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/styles/color/system.md",
+      "bytes": 39612,
+      "sha256": "b36424cf83639133726b4628d5373638280a722bd26a37ea99a57018118da2cd"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/styles/elevation.md",
+      "bytes": 16500,
+      "sha256": "c764db1c7872da30bc87a6fa13d2133c3fa330f76a2569d059ca0703fef7e98c"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/styles/icons.md",
+      "bytes": 40988,
+      "sha256": "949dadc1d35b8e5bc069acf14d025d9eff6a7838a64676d2794b9544807a2a5a"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/styles/motion/easing-and-duration.md",
+      "bytes": 22005,
+      "sha256": "3fb946d327bfc83f1c787c15f0833d031c1cc961057aa9477eacfd5c59a77e0c"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/styles/motion/overview.md",
+      "bytes": 18627,
+      "sha256": "86e7f30e5c0c0b4eb80b641ce67b96b078ce738dcb1c688be76a44ec0f86923c"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/styles/motion/transitions.md",
+      "bytes": 35885,
+      "sha256": "cebfb63d8158cf8f5c9c25ad476b038d52cb01280dc238ce2c4e45daa60aa0da"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/styles/shape.md",
+      "bytes": 20437,
+      "sha256": "ec6e8056674d652ce7fafdd7d985f3025d898474d8255995488a75d6567d613c"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/styles/spacing.md",
+      "bytes": 16488,
+      "sha256": "255ad8becda782ea88b50d8c82c5352e740e71f5e7faa48d3c1dab956403e2b0"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/styles/typography.md",
+      "bytes": 68697,
+      "sha256": "820d648ed53a1ee8101d9f84cd140fb7788696bd890fede2ffb7f0897d1bf61a"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/styles.md",
+      "bytes": 3571,
+      "sha256": "6e7a4e82ce8f727f382e0c87286d17e656c5f7490b931464091d6e4f583a7d0b"
+    },
+    {
+      "path": "docs/design-references/material-design-3/pages/whats-new-at-io26.md",
+      "bytes": 8005,
+      "sha256": "b38916db1bf88fa68517cf4c5bb9a9a2d66030935d92e0d165c62852ed073f2c"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/2023-google-fonts-redesign.json",
+      "bytes": 10847,
+      "sha256": "bf5edee203d881c3a85d33070edd29c3affdc20d0185745a3face9e2d9afbc23"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/24-hour-clock-design-research.json",
+      "bytes": 17540,
+      "sha256": "c7bcd6273bfe5368d265fd509264edc5b4991288147d5f6fb764b8581ffbc18b"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/5-steps-large-screen-apps.json",
+      "bytes": 27624,
+      "sha256": "e9e130da1142f62f8a4e2e2180603ef9c70217c3664930d22a1cd0cfe8e65969"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/accessibility-awareness-day-2022.json",
+      "bytes": 8188,
+      "sha256": "64b8214da90e84f8c68040190bc5873ed248856753ad10a6b876baa4104db656"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/android-dark-theme-tutorial.json",
+      "bytes": 29663,
+      "sha256": "7d5c53a733492713cc29ea555680a6b4365787385dd17eb7fad9bae1ac10a324"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/android-material-motion.json",
+      "bytes": 28607,
+      "sha256": "c482e0c1e6a5d369603646aff6b0e5e21341115499529d880ffb75f9199810eb"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/android-material-theme-color.json",
+      "bytes": 31734,
+      "sha256": "bbf120efad6be403d2c05ff1121f1ff93e49edeb4e0e12af239515505e7cc403"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/android-material-theme-shape.json",
+      "bytes": 36720,
+      "sha256": "b11e0a214e788473fac2abd0b21f7861ba7006d31fc1a095ff58ad03dcab2ed2"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/android-material-theme-type.json",
+      "bytes": 27215,
+      "sha256": "6ffcc3f65fe07e6261025e9f3d449b38a437308f0bf16f74c6964c9f79c68601"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-10-0.json",
+      "bytes": 12927,
+      "sha256": "6b380cd8d70926cbb2985fff2331f5d52633121b3c56546821dd58659b80e80a"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-12-0.json",
+      "bytes": 31690,
+      "sha256": "d40f2e3084c2d02318c57c5b9d5204caab421b715c49b9a963735cabf995d88e"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-2.json",
+      "bytes": 22472,
+      "sha256": "9cd0591738c28f794c2e9c296e5675e36fafa0a23cdfcc1c17407276e4c3da7a"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-3-0.json",
+      "bytes": 20532,
+      "sha256": "b28ae89f94982c83bfcc46cc01981255b2536aeb116c0377bb01d4ec8200f9e4"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-4.json",
+      "bytes": 15762,
+      "sha256": "c7c1e51257cd6d764cc8c52e9dfd6c0acc3788aaed271efe554f7f8dbcb2ad10"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-5.json",
+      "bytes": 13632,
+      "sha256": "55c3c192d7729fac4a93e6ac6ee44797a57020d64bb5da89bc965e09f7623064"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-6-1.json",
+      "bytes": 13650,
+      "sha256": "257c89af398e7637ccb9d39921857df6d3005ece5bd280f1d2b0fae4717cb398"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-7-0.json",
+      "bytes": 11985,
+      "sha256": "bbf838a7636517b9cf945e5bce7ad32184e7443b8a2a530b016e174864874250"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-8-0.json",
+      "bytes": 14255,
+      "sha256": "0538b12634fb231bdc04ddf9577cc1e4293ca3da255418f8a1cc485085deab89"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/android-stable-release-1-9-0.json",
+      "bytes": 11859,
+      "sha256": "fa3baaf4e139956339262de95c0cbca8cbb41644a0fa3d00e966af74445dc085"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/announcing-material-you.json",
+      "bytes": 16440,
+      "sha256": "767cb333a02a5c47260e7c69a73a4342c06ab1027ca400c1a418ca3ba59cc0b6"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/asset-people-1.json",
+      "bytes": 14982,
+      "sha256": "70104bb82458aecbf1c0d376f102756ca51617218acb60028dc8c1c10882b53f"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/asset-people-2.json",
+      "bytes": 11142,
+      "sha256": "b22fb3d2092352240bcac011dde0c7979c042070ac95bc2987714c2dac899a22"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/asset-people-3.json",
+      "bytes": 18567,
+      "sha256": "b5bd08fc99959a12b49873998928154c5cd345028f8b6c19192ac33fe312e84c"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/atkinson-hyperlegible-design.json",
+      "bytes": 19294,
+      "sha256": "f87fd2d3a8845fb05559b43fa5502bd834bb926f94fa7d3db035044c71d928fe"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/color-fonts-are-here.json",
+      "bytes": 20504,
+      "sha256": "32310522a537c8250ba6996d8208023d2b26b849c41f32a2a5c11404126e1855"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/dark-theme-design-tutorial-video.json",
+      "bytes": 5417,
+      "sha256": "336b417b37f36c8f480ae2a6cea4d942d8c4ba4a6d043519782e7bb26c05139e"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/data-visualization-accessibility.json",
+      "bytes": 16697,
+      "sha256": "edc093f31e17564dad786325a6627cb027feea3100e256ff9f8c779d30bd1c3b"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/derek-brahney-interview.json",
+      "bytes": 13309,
+      "sha256": "e1e567d84fc3f10e6a51654318a6fcd92f16e34b5547cc835c57aa737d63c358"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/design-material-theme-color.json",
+      "bytes": 22282,
+      "sha256": "7857e71d56157bab91fad787c0cfdeaec305fb41f37945d12c376fa24ca67229"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/design-material-theme-shape.json",
+      "bytes": 14248,
+      "sha256": "dfa6ce8d6f8d85d0962bae0a62fec011699de17d9790a00157eeb83cd1d3bab8"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/design-material-theme-type.json",
+      "bytes": 19982,
+      "sha256": "f6c3c52907021d7eb445ebb871915f68908b0c036ef63815df97c0cedc074b28"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/designer-toolbox-figma-android-studio-relay.json",
+      "bytes": 20961,
+      "sha256": "22a51ccba7fcd2bd905211af0f9b193ecabadc20f1f8006947ee0b8ce9b8cda1"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/designing-text-visual-acuity-research.json",
+      "bytes": 31764,
+      "sha256": "08bf9829f1a231f45de8f2f0ae5655e18e2a2457cc001117841dad7a43c653c7"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/designtocode.json",
+      "bytes": 9194,
+      "sha256": "446681d896f2d99cfb11657f8be1e35092b4bc4a36cff4d3e8ee8b8bcb0e599d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/device-metrics.json",
+      "bytes": 12187,
+      "sha256": "b4dcfb9cf838331018eefdf784c1006389b8ca6da41bae1188c7008276ded5f7"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/digital-wellbeing-design-systems.json",
+      "bytes": 11986,
+      "sha256": "1f1b2b3a45a07f445d9cfec429d976cf8987e83813073875bc5cd1a2d29080b2"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/digital-wellbeing-face-retouching.json",
+      "bytes": 16830,
+      "sha256": "3f4638001a479bfeb05799676044c8f0bf397e3ae77f159956bb18ab378816dc"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/digital-wellbeing-ux-principles.json",
+      "bytes": 14346,
+      "sha256": "cf9ebc4bc6ad6b1d3ceedee26b2ffb95e593898ea8863ccaf9141cd40b550ee7"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/dynamic-color-harmony.json",
+      "bytes": 20420,
+      "sha256": "04903a7db143f3e8001c602601d9c64aff8e224f4fbda5a9d1c85c9ce7819f5b"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/finding-ethical-design.json",
+      "bytes": 10529,
+      "sha256": "d5af18352e64c8f07f9867df53d385090962ae150e88336d7cc655f8ea7de2e4"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/fonts-are-software-video.json",
+      "bytes": 6592,
+      "sha256": "415fdbb6f05c5164b9bcc61749051687bd96d8b0807f036d3e53fcc144eac2db"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/get-google-fonts-update.json",
+      "bytes": 15048,
+      "sha256": "678cb906ec37030624b4680aa70d980691ba7c978b51b50754fbcf0bdea28da0"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/google-design-tutorial-video.json",
+      "bytes": 4674,
+      "sha256": "7b0c0d934e2a1424ff21e0d72010b894de86360dbaec4406b7e2a06c17c03555"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/google-fonts-dark-theme.json",
+      "bytes": 13921,
+      "sha256": "4896f24506be0c857dcf33c70f1fc75aa5ab6cd246c23a6be4a7b751cfeb2287"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/google-fonts-knowledge.json",
+      "bytes": 8247,
+      "sha256": "8b305c79ca991dc92c74065b8bf5fc02989a3898a20dba29dd009f4e6b7e89e9"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/google-fonts-material-icons.json",
+      "bytes": 11840,
+      "sha256": "2096632f9441e924b12287616d2d147693666c5f58500dda72d60a319b565df6"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/google-fonts-pairing-figma.json",
+      "bytes": 11076,
+      "sha256": "8f21c840cdf7be2de803aaff560401e90c0b12dbb3f36b4e96da901815ac6f90"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/google-io-2024.json",
+      "bytes": 8216,
+      "sha256": "a68e1e1ce8169de2de8ee7bf07197b4be4122592ed06909dd8a424c97c6489ea"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/google-material-custom-theme.json",
+      "bytes": 24803,
+      "sha256": "3107213a1c2d553ebd3fab1ccff5cb409fa087bd23a6f2426d2370281c8e3604"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/how-to-gemini-app-compose-material-design-3.json",
+      "bytes": 21439,
+      "sha256": "4a1973fd9d9111cdb2a4fe25fc499c44ed7c85c124601f42eb80e867c7e69b90"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/how-to-make-text-more-accessible.json",
+      "bytes": 16436,
+      "sha256": "294279072d6da9118f773a392dca07353d03f86cb386e377bfd80f1020c276ac"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/inclusive-imagery-at-google.json",
+      "bytes": 16196,
+      "sha256": "9e38f0f6b9a33983b4c1847e2457042891921fef56b2db538b55c5dbc8008942"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/interview-oddfellows-m3-art-style.json",
+      "bytes": 16661,
+      "sha256": "f6c5373801720c4213680fd75a29fbec2bcd8eb29d1237dcae0ea0ca8254895e"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/introducing-symbols.json",
+      "bytes": 16784,
+      "sha256": "23d22832535c0b55c25acf3132039d66cfc0039a9bc7ce689c3ad8b2b56363bd"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/jamie-chung-photography-interview.json",
+      "bytes": 10746,
+      "sha256": "e95b9ddf7ba6345862496f6b4d0a30eea3d5a213d2a168c792bae8686b86d41b"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/jetpack-compose-beta.json",
+      "bytes": 29443,
+      "sha256": "55e65667f85a8f7a91567f0a676ce58865b8066196cfac8b6674402a5efdcdc0"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/jetpack-compose-catalog.json",
+      "bytes": 11725,
+      "sha256": "557ab0c5df29ae6eb31c7f06f0e5d38e3209f064b019ff2bb1a3265c6e568b12"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/localization-principles-techniques.json",
+      "bytes": 27882,
+      "sha256": "ccddfe3a197781a37760eaf95ff534b72ad01bc56da1290adee7634c79c70d58"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/m3-a11y.json",
+      "bytes": 7237,
+      "sha256": "9278845f45a9cde80225a9ba204814fa2c2c877d49beb688b7e57dcdce400148"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-3-carousel-research-design.json",
+      "bytes": 20449,
+      "sha256": "a24243ca8fff412ab789ccb8b039cf598bd59bc5b95a22e2f5801b19e044db4f"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-3-compose-1-1.json",
+      "bytes": 31146,
+      "sha256": "9d13313febf826ff20fedfd09193197e6f11a05ff6d91f6c84a3fd482334d544"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-3-compose-1-2.json",
+      "bytes": 14072,
+      "sha256": "e5ef8f234ec91cbf09703214d058094ec336d77e7106a0019c4e9fabe026598c"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-3-compose-1-3.json",
+      "bytes": 29551,
+      "sha256": "7bf2f29348c0084b55dda7ce7a42fffc68bc4a1074c3c6e8e45662ae63935762"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-3-compose-stable.json",
+      "bytes": 22749,
+      "sha256": "8e1acd1e1a7a78eca037d675788df5b2e15d9e8743294e27e2c1d5a916fbaf99"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-3-figma-design-kit.json",
+      "bytes": 9323,
+      "sha256": "bd158bee7fbf59fd7683c50120990553e68688cee7ddd75a1d5d9bbed7b2f1e6"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-3-slot-components-figma.json",
+      "bytes": 11284,
+      "sha256": "4fa6a23150de57b2c0bca67d7b7df94c8a8be4b758f631eb233c6a5ed9fdd16f"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-ads-2022.json",
+      "bytes": 10884,
+      "sha256": "6191a52ce1dab09e5f2b1f43475422c57c3a9cd050e2e5585926add804680633"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-density-web.json",
+      "bytes": 14687,
+      "sha256": "b06afd2819d5e67c1a9055c03b04d335d6f8f6353b8f9ad871cbdf08b8dbdc98"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-design-2022-roundup.json",
+      "bytes": 23050,
+      "sha256": "cf3ade3040049b598c789f09dac6bfee4fceaa1e3a0566cb250ce7380578eda7"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-design-awards-2021.json",
+      "bytes": 13410,
+      "sha256": "177051c06623479f2ff742bf9a0591b2a047e7d625a1eacde427c93ee14dfa45"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-design-blog-welcome.json",
+      "bytes": 6770,
+      "sha256": "2d6da4ebda8f2150f9736a4521236c8b35c1e14735503de5fcd65f1f215aec91"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-design-for-large-screens.json",
+      "bytes": 14728,
+      "sha256": "b5c0cca202fc2ff7377db5025fe2d8848914404c5ac96d6c9c27670be14abaf4"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-design-wordpress-plugin-030.json",
+      "bytes": 8843,
+      "sha256": "71b0d7c99094da7df9f394882928be5726984caa12f8866d4b99510a4028b001"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-design-wordpress-plugin.json",
+      "bytes": 16276,
+      "sha256": "4744b8bf6beabdcc7b712fbbb33b5c332aa716c246d4c938933665256e0803e4"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-design-xr-dev-preview.json",
+      "bytes": 22196,
+      "sha256": "d667e35acc0c9650593212d5f2a79b53ec6a00133b6ea43fcb62fa0e936dfdc4"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-design-youtube-channel.json",
+      "bytes": 5876,
+      "sha256": "d7d02f538b72d126472b0ac03811c1b2791c4e5b3203a452572833c84fda0d0b"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-google-io21.json",
+      "bytes": 13063,
+      "sha256": "12221717433c6f902623f36d073b43a1f0ec81de68ea85d0352000bbb329415d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-google-io22.json",
+      "bytes": 10136,
+      "sha256": "706441b1b67a2ae6b2ba047f386e100056c0a90acbbd6ae2153449a75410a532"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-google-io23.json",
+      "bytes": 11754,
+      "sha256": "208e4797d54d365c8806fa8603d962d93a6ad37dbe97041ee8ffce6b5b1c9790"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-icons-sehee-lee-interview.json",
+      "bytes": 14089,
+      "sha256": "11e341ba97ebf1ceaae1d68bbf8e4d4fe3d0efdc656ce207cefef6ef2f79b584"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-io-redesign.json",
+      "bytes": 27969,
+      "sha256": "017285cc4f89aa1760883dc946bbea7b9cfa52ae55b8db2f3f346e6ead478d48"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-partner-studies.json",
+      "bytes": 21471,
+      "sha256": "356159704c91ba3f7dc50db5196f8cabbcae34c3f16901a88b539bf476ffb0d6"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-theme-builder-2-color-match.json",
+      "bytes": 14764,
+      "sha256": "88d3ef11e410d5e5e739995313a930326d18f2489f47f790e9c193a383735250"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-theme-builder.json",
+      "bytes": 15909,
+      "sha256": "662927a7b52e6bf7ee4c8132d70866ffd295ddcf376a9b68e49afdc2791c0299"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/material-you-large-screens.json",
+      "bytes": 12170,
+      "sha256": "f35bf179d74ab81aa61bf72c3c831b296cb3779ebe9d349e96f859be886bf90f"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/mda-2020-winners.json",
+      "bytes": 11708,
+      "sha256": "8d91b536570627d45abc9f1d1f14c19453ab6e8005b7368cb94eb49275751ce8"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/mda-2021-winners.json",
+      "bytes": 19796,
+      "sha256": "83fda8909a665e0b89920e428902a5e338f9b755229d6caf0370407be864ebeb"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/migrate-android-material-components.json",
+      "bytes": 76956,
+      "sha256": "edf5eb14bc370c46134bd83a1a3b0500f40a3d313e7169357ddd0f93076f0410"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/migrating-material-3.json",
+      "bytes": 34978,
+      "sha256": "c5b27137e535246c0373b6e255090d3551252dd6449045b7f58bba878026618f"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/motion-research-container-transform.json",
+      "bytes": 11338,
+      "sha256": "3da97158c9c491540b6765b25e66ddaaf5cda925fba718cbc2b181e2c6a272a7"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/noto-announcement.json",
+      "bytes": 9604,
+      "sha256": "9b9740a9984124147fa34e221b58494f56b9c4682b2bca70e1bd9cb0b1d529fc"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/readability-consortium.json",
+      "bytes": 9352,
+      "sha256": "38f0a5bd0409587db4e8cf6a8cd00ed5f7115c47a02c3fff9c93723f11070545"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/readability-research.json",
+      "bytes": 25804,
+      "sha256": "968474de5bd5babeb41239c9c9559b34fdf33e92fa8cfc4e96620c548a613d07"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/readex-pro-legibility-arabic-type-design.json",
+      "bytes": 33943,
+      "sha256": "ab5bdf331e0ebc31a51822fc6ebc8091fe61cfb95674a0981646436b8c82ade3"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/reduce-reflow-with-web-fonts.json",
+      "bytes": 10893,
+      "sha256": "13fc1a3b096f64aad6381c8364e8b785359b9db40afaf410abd20db18396c0a0"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/relay-in-alpha.json",
+      "bytes": 7028,
+      "sha256": "78aa8c6982b6ba5ce13a1720e8f63c05349de2f4e88ff3ae31e110dbe781b744"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/relay-ravn-case-study.json",
+      "bytes": 11642,
+      "sha256": "124f81a5f99cf7f31d91a04e8e465f237c56b9570d514f8ae76f0311d3267b70"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/research-state-of-design-systems-2020.json",
+      "bytes": 24976,
+      "sha256": "67cdb7bc42359163c21da2289b746dcb0ea8d96e1bef8e6b31c1c9e0d0cc69a6"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/roboto-flex.json",
+      "bytes": 31843,
+      "sha256": "a28fa035eb2b3c6891700dd772bb54248d88bcee9874003e9b0c7a70dc0af09e"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/roboto-serif.json",
+      "bytes": 18383,
+      "sha256": "f8c0856ebd1b2e59468d26c13d66c900f1ca90861d88bed025333346c5f37261"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/science-of-color-design.json",
+      "bytes": 23153,
+      "sha256": "c7d19536015e43418ee3c2db6b102e614820d69e648d1c115737e43086ee0341"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/shantell-martin-variable-font.json",
+      "bytes": 38963,
+      "sha256": "d52af39b86d0ad9cf903fcd2f4e0b1b0fd29ef7076201cc5c916648481ff5e04"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/sil-typefaces.json",
+      "bytes": 29855,
+      "sha256": "3e535a9fcf04f102f4a7a4ff88330f9a6589d65ba647ae2d12c47a4b7ba6ff8c"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/start-building-with-material-you.json",
+      "bytes": 15192,
+      "sha256": "a30503b0a565b4f7fbf89403e559c502a91e2844a01eb7d4c748d5bf2dedf768"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/ten-steps-ios-android-design.json",
+      "bytes": 25328,
+      "sha256": "a905d836c61f3ff65b1dfa91fcb23f8bbf603f16d80897a1ecae51cc7fcdf6c9"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/testing-material-3.json",
+      "bytes": 16504,
+      "sha256": "6db28a1d916b694afeb43961448884f35eac33bf02528ef8e59eff0e5739f39c"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/tone-based-surface-color-m3.json",
+      "bytes": 10303,
+      "sha256": "34545ab93dc879c202ea54d3190630f30e6304c87059c31e3eabba2df8fd1104"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/whats-new-design-kit.json",
+      "bytes": 12529,
+      "sha256": "178fc99e4b006d0f6138f860b65b8e6191d3079480ade191700db9b1c2b5fcb0"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/why-we-recommend-material-design-components-android.json",
+      "bytes": 14940,
+      "sha256": "18ef9c8366fd22d24c2ac0c8374d9ae2ab60d231fdf8df53714c0d1d5144581e"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog/year-in-the-life-material-design-advocate.json",
+      "bytes": 23982,
+      "sha256": "fd7f70d7d2bbdda57207213eb99bddcff84c45a039071badec97bc04994e3d72"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/blog.json",
+      "bytes": 184073,
+      "sha256": "3b0a8da0a91a284925576fd3352d748997a3c0f75d80efe914567158e6846e8f"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/building-with-m3-expressive.json",
+      "bytes": 55432,
+      "sha256": "207a925bf3febd2aab51205e98ede515c4601e71831c0ac2325bf797edbb28eb"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/all-buttons.json",
+      "bytes": 23458,
+      "sha256": "d42517d11903617eb08d9d338f3468ea29b9dcd314e86f4c264c9a5cf86ef044"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/app-bars.json",
+      "bytes": 257725,
+      "sha256": "00784ed2ac3a0b1fc3a985c8c981afaf4003c990107bc08d1c90df130f728419"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/badges.json",
+      "bytes": 88019,
+      "sha256": "743661fc055b3f95cb9227abe6b2abc15676e495035b1cd972137da16967a707"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/bottom-sheets.json",
+      "bytes": 142887,
+      "sha256": "03b130bd88b7d1d8193a341f1b57b1ccd6c55f0fc8186460815b94660cbe0652"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/button-groups.json",
+      "bytes": 139629,
+      "sha256": "2e672a2a9a1a5b032bb2493d0c96e8f80314a41061f4088ec4b9f64a3d873765"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/buttons.json",
+      "bytes": 218291,
+      "sha256": "8a7bafda83ec399a466edfb6183619b33c763f57e5c75fd78f64759b90ec3333"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/cards.json",
+      "bytes": 192552,
+      "sha256": "1f24722006d1f051ee573095fe2dc7c947d5768e7238648e28577dfc9282edbe"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/carousel.json",
+      "bytes": 186127,
+      "sha256": "4663af5d062704bb5b8d2448d3c797e1dfe3f26827795413fe3beef2fd0d3502"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/checkbox.json",
+      "bytes": 78042,
+      "sha256": "59210ef5042b772c56a945e76303a0098fb2e6ee9d58117a500b092514d97c00"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/chips.json",
+      "bytes": 236283,
+      "sha256": "4a2d2750e46501e38ea47d43781245178c0ad35cd49245516a5820e2c0558cff"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/date-pickers.json",
+      "bytes": 189504,
+      "sha256": "83c70743afe18083410036420ba789ccb6ed7a2e3761b1d1bfd4555c1a7f0c24"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/dialogs.json",
+      "bytes": 212881,
+      "sha256": "0c7c8e7222f4aa2a8c46404319327a0618b01d287bb3ede86613917f1a3d8a17"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/divider.json",
+      "bytes": 56496,
+      "sha256": "554dcc6159baba5dd39c4a410bde7859c37a4821c6827f34c1c2f9861e2b5309"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/extended-fab.json",
+      "bytes": 161564,
+      "sha256": "3a82e864cf2ea9bbddbf29fb3c33c72f7e0bdfd8a814b47b06e45d08d8258fa2"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/fab-menu.json",
+      "bytes": 135315,
+      "sha256": "d31cfd0dc41b5565ec399b079372c463aa9dc0567599a32c011023b054ed2e73"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/floating-action-button.json",
+      "bytes": 142764,
+      "sha256": "1324790d785f236852d648284eb48314c9843d7d5a47813557e4b83ec1d53ee9"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/icon-buttons.json",
+      "bytes": 161748,
+      "sha256": "a4de7efd844aed0ef2c60c39206cd6bc2fde2ee77836181b94801de32c13f26e"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/lists.json",
+      "bytes": 276126,
+      "sha256": "0302dfe77765c4bd0aa25246b13bb8fddd561d3a10162256adc13a1eda226812"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/loading-indicator.json",
+      "bytes": 104553,
+      "sha256": "79b51c48c7c7b58aab5ad993baadc6386535eeb51bd848165313d483a89da31b"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/menus.json",
+      "bytes": 201366,
+      "sha256": "9a21e690e517888803185665d269fb3e7a013a4a5e4dff2b66516c4aae97b10d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/navigation-bar.json",
+      "bytes": 228970,
+      "sha256": "62189f1b8b50b69ac49ae1c4e4d8b101a7981a0b8b0b6e90c03f5ca56a57f12e"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/navigation-drawer.json",
+      "bytes": 173521,
+      "sha256": "182c1c90e6e560ccc64d3247d74eaac418c0f7fbb2e766ec255bbbc816dfc1d3"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/navigation-rail.json",
+      "bytes": 249377,
+      "sha256": "d33e560852f066798a55c2d71b7dc8ebfac803fb9c247d8e68207d3ca8858a07"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/progress-indicators.json",
+      "bytes": 125296,
+      "sha256": "43e4b7658e43104b05d4569aaed55afdeb1c29e21c5bab5acdeb584db764ac22"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/radio-button.json",
+      "bytes": 85969,
+      "sha256": "412eed3c3dfc7a7479209f6dba63a34e85096a9cfeb30e88e858b3e8aa1e67ce"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/scroll-fields.json",
+      "bytes": 93665,
+      "sha256": "d22e2b5f56ef6197a34eb6071ee2bd95371257e3324c0b81114ffb72ec2f3808"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/search.json",
+      "bytes": 188103,
+      "sha256": "c538c42f85ef4941f4a2aa917cc56553aac70e82331689ae9bb270249266bf49"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/segmented-buttons.json",
+      "bytes": 115373,
+      "sha256": "d0ce8587ebcff6ff0489f0e23a1ef53114cc86e14a689fcc4734ddaa3f027bb9"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/side-sheets.json",
+      "bytes": 103869,
+      "sha256": "670c7d533748c695ffcd8a7f4a27732fb4133c0d073da65b00d4dffab425bcdd"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/sliders.json",
+      "bytes": 137226,
+      "sha256": "83259f4ec9562620655e57925ba4c7deddca5f3f3fb7c2a0788040500c6b4154"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/snackbar.json",
+      "bytes": 122509,
+      "sha256": "b54b350305d626169e8093e47df2c0631fcc02e8169024df3e308a89b669861f"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/split-button.json",
+      "bytes": 110926,
+      "sha256": "c427e84c6a7854dd76d02f077fad0c8b864b7bbaf00050d3482b746e9667341f"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/switch.json",
+      "bytes": 111185,
+      "sha256": "5d181e144b00817da10999a0bdfe8817a067368ab19c1f7b5abcb493c21c10dd"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/tabs.json",
+      "bytes": 135906,
+      "sha256": "3b7a96ed176b32c403e78ec3d2b2d5d8dde459d889c406d9a6178f286079cba9"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/text-fields.json",
+      "bytes": 175021,
+      "sha256": "451794bfb4668c2c53f8785ab11afab5a5a083999f1c3212a29ac303f5bb7793"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/time-pickers.json",
+      "bytes": 229534,
+      "sha256": "13f6109838ac266248bca9594c5b5fb72b666bb1d5904d54d8604f5d6cadadad"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/toolbars.json",
+      "bytes": 255156,
+      "sha256": "f02af5c45c0c5e55ddc440f8d0b73c2710de7d92af81f98a5ab843293decb8a4"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components/tooltips.json",
+      "bytes": 102714,
+      "sha256": "2651f8a97d82d5ef8fcc7df857705d0435f845dbe6ece05d4f2f2e7531a43288"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/components.json",
+      "bytes": 58660,
+      "sha256": "d1d628da4c00d08506873ceba343ff8940969545b08b79198da7348895304e25"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/develop/android/jetpack-compose.json",
+      "bytes": 26056,
+      "sha256": "bcafe2ffc15c6034dd12c40e9d61947ecdb9059b3511e738f4db4a496f14e268"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/develop/android/mdc-android.json",
+      "bytes": 18085,
+      "sha256": "66dbd319b507802ca058c43de85d038bca5b86c709f5168ca34943f14552cf53"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/develop/flutter.json",
+      "bytes": 20902,
+      "sha256": "6503f4180e680147705317de261a837fb790afc1ae624718d092a2348d61c941"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/develop/web.json",
+      "bytes": 11451,
+      "sha256": "c0f430a41c77d2c470896c6ceaa383646d86ceac3c0ad8855b7bc8f1ac22b43b"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/develop.json",
+      "bytes": 18065,
+      "sha256": "63cc339d1dfbaae4eb884b38632531c788f01f272caa33074c17924da955dcd3"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/enhance-your-component-designs-with-parametric-prototyping.json",
+      "bytes": 31191,
+      "sha256": "c07f3c894e0ab39555688405aad33b6fcb3a54423ed9c6de16da38a109d74198"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/building-for-all.json",
+      "bytes": 16822,
+      "sha256": "e90aac531aefa87779b106b18977a34749e68ba7cfb7e99a32289e63c83c92c2"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/content-design/alt-text.json",
+      "bytes": 63168,
+      "sha256": "0005e36f2caaed1f4237f3ce356ce713c32c7cbd4673ec10f5874175f04b2269"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/content-design/global-writing.json",
+      "bytes": 34544,
+      "sha256": "9c415ce1c83d3d25797caa924319754e5199d60413f9f01a318db23810610a84"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/content-design/notifications.json",
+      "bytes": 47104,
+      "sha256": "90b6ef57cc35409ee1772d59682f5a73cc5374a6dce35fc2355324b8e4d66d1b"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/content-design/overview.json",
+      "bytes": 8174,
+      "sha256": "6b9d661dd8673ef7325716675e723a316e61559c72013ab372443850fb731877"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/content-design/style-guide.json",
+      "bytes": 75687,
+      "sha256": "a2412875002c4b345d78a1097cdbd8af8c2ae1c3958b3f0fb79371aacf32442a"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/customization.json",
+      "bytes": 27313,
+      "sha256": "c07c3f95eb3db6ff330376ce408167bd1cd9642ecf60eccd2d5cfed0891dc8d8"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/design-tokens.json",
+      "bytes": 84947,
+      "sha256": "a4d54d8c5ca7d4d3af25ab2518c823553ff79dde55d05c0da03affa9d3ea39d4"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/designing.json",
+      "bytes": 107069,
+      "sha256": "ffc6958877879d9f4fee1f89e975958af0d0bfa71c69f81c05011b445dcd669a"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/desktop.json",
+      "bytes": 93753,
+      "sha256": "ffe052925d91903f4db4f5c473aeaca5bbedaf0692db184ac9f0b4ffcf7e2b97"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/glossary.json",
+      "bytes": 92777,
+      "sha256": "e0ed8e76c0e9b68cfa95596e106ebbdd9de8cae0395239b9bc23f43e6192f4d6"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/interaction/gestures.json",
+      "bytes": 30760,
+      "sha256": "52aa2f74491d5875214a5638ca31e15880f1897463365415f0c6511dc0c806a2"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/interaction/inputs.json",
+      "bytes": 87286,
+      "sha256": "83929edd3df6da13cec86727f93d4b9e2029f1e6ea576a84d8acc0d43cef2666"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/interaction/selection.json",
+      "bytes": 23897,
+      "sha256": "d86f03fde12cb1e9b292c53746f33bff31ba6789745bfe9591fb103dd09753b4"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/interaction/states.json",
+      "bytes": 129112,
+      "sha256": "c74df376b873c1d26bd432691d3b968a1985099edb55c47eab41eadf5aa1155d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/layout/bidirectionality-rtl.json",
+      "bytes": 62538,
+      "sha256": "e471e20697e14e2dc6924f85ea76f389d9c44a7b05058321a43d53a783717590"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/layout/breakpoints.json",
+      "bytes": 157330,
+      "sha256": "ddb23b160d7be47a32f7d5ecc12fad9161a74e22406ecac7bbf283a6effb39c5"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/layout/canonical-examples.json",
+      "bytes": 101885,
+      "sha256": "8eb14cb34fece05ce60646274128bbcb374c428795d423ae73d883c258063e5d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/layout/grids-spacing.json",
+      "bytes": 121300,
+      "sha256": "adddef1ac1a48e92223b2a2d7d3904486eb5b42526d6304827706832f65bcf20"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/layout/layout-overview.json",
+      "bytes": 264163,
+      "sha256": "513fdaab0f5f5b3000f93f2cbb94f32c655731c1ae05246e7fbdfd20dc8f8c95"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/layout/scaffold.json",
+      "bytes": 114061,
+      "sha256": "b46a944af3bb8ca9e9145fbd4a58a3c64ec37d7a2524fc0939723935394672b0"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/overview.json",
+      "bytes": 19602,
+      "sha256": "c543cbf2c698480c3780a864496a5994c77ec52b1b79365c5474a987a1f22375"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/usability.json",
+      "bytes": 96719,
+      "sha256": "89e7ed0637c9dccef9d8e9230b47af8dc6f8aa38a8be72461c83c56cc60aee33"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/watches.json",
+      "bytes": 106714,
+      "sha256": "844f6d0e55d3ace3177e24817ab0cfe73d199b2a3f1dff79c843cddc8bdc10b7"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/writing.json",
+      "bytes": 63435,
+      "sha256": "a85fe3d9eb0cbb957289b9d5384a7d511516b22ca1641e01e5610936468ac5c8"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/xr/components.json",
+      "bytes": 244590,
+      "sha256": "660e89ddf6e1435989ac554a6c584ac7e8b8caef919a7e61ef13ac5dcb057dd3"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations/xr/design.json",
+      "bytes": 100796,
+      "sha256": "497c67e6bec916a394d3823c01ab4ec0a317d22ef454435e3843268048e26a61"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/foundations.json",
+      "bytes": 11571,
+      "sha256": "394862d1e1a4b8b950e3edd4823356feac48e0cce782a135b28a86df4650262a"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/get-started.json",
+      "bytes": 27185,
+      "sha256": "9e0c5afb1edb4906bf5fe55014a5c09a97959df2cd50f2fcb57c8df41d1f8ec2"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/index.json",
+      "bytes": 36710,
+      "sha256": "5f51062e7d90b1b901f63c18aeb8aa2f2ebbca7436f5065bf7c1469de3eb5581"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/m3-expressive-motion-theming.json",
+      "bytes": 69434,
+      "sha256": "b111c9b1c8b839eec4e2e3c626f9fcc777d462e74d52f8fc49b30f293002c6b6"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/material-is-compose-first.json",
+      "bytes": 26498,
+      "sha256": "dd5adcdb0ee4dcda1dc896bebc0ffac6790bf6e9dac3d69c9dbb6e0956905717"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/styles/color/advanced.json",
+      "bytes": 79603,
+      "sha256": "7addb6a08a78340f4f70b93fa09d9fe23ec74badb676d83ef6a1319d0d0d4a92"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/styles/color/choosing-a-scheme.json",
+      "bytes": 21791,
+      "sha256": "33990ae39b97d999a17ddc40d7dff76dd75c6bba9e262ccd32668401b55425ac"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/styles/color/dynamic.json",
+      "bytes": 41859,
+      "sha256": "651c223ab0ab7fd6e3f161526d06d46732bb0116da6b7d8f5d9507e9b7bc1152"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/styles/color/resources.json",
+      "bytes": 6772,
+      "sha256": "43a013e1026674d482b6bd342e136d750af342899fa41e06889564f80985e985"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/styles/color/roles.json",
+      "bytes": 109712,
+      "sha256": "06a7d87e3ea962ec84b919880ad3d8f3356ac457b1484d0e2e08eaf4640e9c12"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/styles/color/static.json",
+      "bytes": 32762,
+      "sha256": "183dd528430ac2d3991f2ceeb922de6c39506104d26d6d990e37f410ba6076e2"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/styles/color/system.json",
+      "bytes": 130183,
+      "sha256": "87b8f4d024ede3b8f080b608dceaa36511ae268c7313df98c414649c596b8e1a"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/styles/elevation.json",
+      "bytes": 69700,
+      "sha256": "c4347979e22a8736ae08923def214b429adfb3c8e141f8be8c7db6ce9d56f7d6"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/styles/icons.json",
+      "bytes": 169195,
+      "sha256": "68ae3da716116006801928b5bc23fc3ab3bbc0c65d48aab7277febd72a77e1a5"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/styles/motion/easing-and-duration.json",
+      "bytes": 80673,
+      "sha256": "552d316b034b16ee16d0dde4856b5f840d0d233f534c72a05b8fe4316b6432a1"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/styles/motion/overview.json",
+      "bytes": 62664,
+      "sha256": "cb87e986c66c98c6463baa850cc579f754a99859273b3777ff07f81a9b8742db"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/styles/motion/transitions.json",
+      "bytes": 136501,
+      "sha256": "d70790f9876cb332706fb79a664fe023d3c4acec17470b27cb1f87cd06d06e4b"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/styles/shape.json",
+      "bytes": 80161,
+      "sha256": "3767cfb024716780f2b8c046d33158a4b14fd45acc5a30acdf70d31a8f7c271f"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/styles/spacing.json",
+      "bytes": 64316,
+      "sha256": "63af82004d239ea105047bba73ebb22d269cca8f7ae00f86933e5a2883f74cf7"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/styles/typography.json",
+      "bytes": 252011,
+      "sha256": "a19348f2c70744554e6e2428615a6b3574c81c6457d58345b2e1ae56d4a4c617"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/styles.json",
+      "bytes": 9193,
+      "sha256": "8da9cf608a382fa28aa441e1a16a252c02cfbc50331fc48d6e83d7ae36fb2c7b"
+    },
+    {
+      "path": "docs/design-references/material-design-3/raw/whats-new-at-io26.json",
+      "bytes": 32201,
+      "sha256": "933de14ccafb6219d6cb1ad30ba07e306ab16f5abe055bb864a39b7264a66dd0"
+    },
+    {
+      "path": "docs/design-references/material-design-3/README.md",
+      "bytes": 3961,
+      "sha256": "192349f839302f20785c527a9fa24e112714e85499304e95b2b775b501c19b9f"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resource-names.json",
+      "bytes": 4850,
+      "sha256": "4ce3a693e91a01329cbce9b378d67c1a34f6b0d28a71c2e784a0064874941975"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/COLOR.20543ce18892f7d9.json",
+      "bytes": 2590273,
+      "sha256": "ecb8e97b000ce38cd92e1c40b5da3a5d3e66e6352a8e87279b5de2feb25b4101"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_0c68159e11eed87a.json",
+      "bytes": 2188,
+      "sha256": "62e6792a1834e11b10e2734d6abef5ff0985adc15007b19bb3498b15313b1419"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_0fe2e78f2f029241.json",
+      "bytes": 2170,
+      "sha256": "07570830640857a6afcbddc3753154a0e3456ca4f9fb5a5a6eb81b4e4030ff1f"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_11cb6b2ed0f6dee4.json",
+      "bytes": 3439,
+      "sha256": "03350db0fd65731a19479cf8bd61afbb94eeeb37bb6e2987146fb4ab8011aec6"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_13ab9956d1c04e88.json",
+      "bytes": 2187,
+      "sha256": "fd30fe751def0eafdd0313d5c47ebfa8e0eceb180d2f8cf414d14524c8fd9d4e"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_160bdd9a0f6fe596.json",
+      "bytes": 2212,
+      "sha256": "d0042ba82c3447c2f06eeb6740ea50d276ec0cbbd87a8519636b30e771fd20a2"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_1747ec3c98bda4e2.json",
+      "bytes": 2206,
+      "sha256": "2f57e7d65944389fd900a5d2d0886088097f36f5faf2804b225f6120fffc4437"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_18d50ef91649dead.json",
+      "bytes": 3528,
+      "sha256": "89355abba18cfc6b8eafe193a4f736fbeacc6acd9fa4e56067b832ca2923941e"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_18e98bbdcbc43596.json",
+      "bytes": 2199,
+      "sha256": "8d56aacfc27db33f25ef3acd24a6e5a215e0f74c2d30ea87010edbf2feb67e47"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_1b4f73b814f85df6.json",
+      "bytes": 2066,
+      "sha256": "3f77c5dec037d5e8a48d0cf296959d5f4a0d8d71a9c5cea195d3474e8b0edb8d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_1ddd05a1e6a16969.json",
+      "bytes": 1859,
+      "sha256": "c0344900c8dee0e8a1b392923cfccf2555789a64ee4d7e865d1c92af2e3c77f4"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_20c468ba5d00e74d.json",
+      "bytes": 2120,
+      "sha256": "90b5252fcf499aea34175a27a023d7f22a7478c7a9d99665cbfc035c0bb8466a"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_24b1bcdfc66a3784.json",
+      "bytes": 3937,
+      "sha256": "d0ca831c4fbf5b4a187fe0cde040cdcad0a418d1b51fe6a7e1ac4685db44d18b"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_26aa7eca29c81c71.json",
+      "bytes": 2157,
+      "sha256": "22c64b76e7e1b44528be729a7329624607d91ed13661128192f89f2b207a0c4e"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_27634f809ff5f396.json",
+      "bytes": 2068,
+      "sha256": "158c55f7891f147abf933e59f7e8b51eddae1c9eba3958ac117e3a137a69b972"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_2fd9de395ed49bc3.json",
+      "bytes": 3727,
+      "sha256": "504210146cc718d0d5d2895120b6ca3eb2fde96b5b5c4d1dac25eec4763b2744"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_30edd26d5082040a.json",
+      "bytes": 3320,
+      "sha256": "d8d0153498177befa7f6e86e502d288107fd2a4cc070107f64b926039d1cc76e"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_39c920b4035522f5.json",
+      "bytes": 3662,
+      "sha256": "cfae1ecdaf6f60ab2bd967edd62b7f93088e59cb2c54cb338f5bda818a79c94f"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_3fb6515e512e5c09.json",
+      "bytes": 2098,
+      "sha256": "ccf51f5fb5000d3abad1351ced5182bcacfa0a7935fa44a5ff292a8a239bbc58"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_411b03efa2256026.json",
+      "bytes": 3331,
+      "sha256": "a6fd844652be2ef1b41a03ae0d684848e66d528b5137be4fa22b2185c8a8aa67"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_41c723c0c0347dee.json",
+      "bytes": 3550,
+      "sha256": "b8739f71ef945d4724af7d2c712605bb538a93421f868c559d4c9503c83ee778"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_455af1b95b07ca01.json",
+      "bytes": 3782,
+      "sha256": "6fc4768b10900a1579aa5ce8d5e9e039d1b383c306643f22551169f920679789"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_4611eb61fa32c0e5.json",
+      "bytes": 2056,
+      "sha256": "ee97b8584de2ee2a973aa3cf37b086be2489d9de482c88c6cc2c16ad933802ab"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_4c66f2c4b2f2cb18.json",
+      "bytes": 3699,
+      "sha256": "318c8b0ec1b43f25f9cdb14ab98256b3804ab3b96987efd3ff55bdb7ae29425a"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_522fd47a354cd2f0.json",
+      "bytes": 2201,
+      "sha256": "7af5571295357f9b0382d29c5ff885420d270245274f1f7a4e71136f6a5f03f0"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_5577d088b97dd803.json",
+      "bytes": 1952,
+      "sha256": "362ab9921bf7da343a6c0ba813ba708523aaf10da063c332c2ce9c765fe2e330"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_56df27a2f3576bb1.json",
+      "bytes": 1999,
+      "sha256": "258ce72c8e4fd7b3159863df43da6ef7aec697b212b88de9fd4cb320fb4aa6ac"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_589af604996f7a3e.json",
+      "bytes": 2203,
+      "sha256": "519c95ddb047aba2d82ae6391c4a69f3a419560110b484b106359f79940fb2fe"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_59e0e5381ea8f766.json",
+      "bytes": 3487,
+      "sha256": "e997f9f9a258a61d0a6801d945ce2213f8846120cf47c7f27d30681ed9acf24c"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_5cae57e703105f6a.json",
+      "bytes": 3172,
+      "sha256": "2e34d2917c94dec09f7ce8bfcb469ae42f511dae39efc3176728f7ab028ede5f"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_5f54b6f53da7ecda.json",
+      "bytes": 2206,
+      "sha256": "34ba24aa293747e8354d0f9e49c42375c2d3eb79fa6c9d081307e17807dab3c1"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_6073fa0062bb7074.json",
+      "bytes": 3501,
+      "sha256": "30c004d76016114de8e7cc19f7be1441d07143c54b0f2b3a6a77b0040306c823"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_65e10af8626a2059.json",
+      "bytes": 3779,
+      "sha256": "a45ee4f0c0b05a7df4b7d9cd72d1531811491e892b27e1cec8d3c6b17790c64d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_6608f8e8a72ac160.json",
+      "bytes": 2261,
+      "sha256": "8ad8b83d38e9feeb6eb0f6c70b63bf1a44df67c40fe0c46c4aad64fbc712f162"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_69586a0d0e3bfa32.json",
+      "bytes": 2095,
+      "sha256": "8957950bf4fc2093887c9e30ce2078a0afd124a83945560af551904a2d79534d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_748fae37c92f9134.json",
+      "bytes": 2185,
+      "sha256": "23eb60e2c3309171259c300accbf5cc47c499e4e8e6043541f45c2d275aaaa09"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_7851d4a3eb38c46d.json",
+      "bytes": 1988,
+      "sha256": "d93627b9ca12a47db62e177cdfcbb961a59f1e4e4188fc2a9678d6b4d5abbf54"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/designSystems_030656e0a1083ef1_components_7e21db5b95eb4a2e.json",
+      "bytes": 2041,
+      "sha256": "1fd76254080bf103873d858d545a0f66cee4354a012fce48bf10365d8805a514"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/ELEVATION.20543ce18892f7d9.json",
+      "bytes": 143758,
+      "sha256": "479f612352d5e370c796b51ae94fccee65936b0352009243607442f505b93192"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/MEASUREMENT.20543ce18892f7d9.json",
+      "bytes": 90840,
+      "sha256": "f8a23dc4ba68f2c0e2ef83f27bfda91f9aec473ff633043b9cb11b364d6d8c5b"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.0045edb815f2325e.json",
+      "bytes": 2598222,
+      "sha256": "446b8bfd55d2c8ca4f334dac1293b39625cbe41d18d77545d8815ca8b256661d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.01c5310367774eb8.json",
+      "bytes": 7100692,
+      "sha256": "0cdfad21688e14af99d88f91e7985e27269a364c9c76e8a07c1e1109a6c480c5"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.06c2c925cf96adca.json",
+      "bytes": 945476,
+      "sha256": "9900a29b8a8a05328cec86ea78e1f9b7f18b6d314cce0ea615eeae2ef1ec08e2"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.07341534518f78d0.json",
+      "bytes": 1824121,
+      "sha256": "2b31ab965206e809dacc9db4d260905594d4b894a05f08cb35e338aac3a194d3"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.082d7fd6e058b011.json",
+      "bytes": 182142,
+      "sha256": "63977c82ec139dc6460a0a983fb90a774a9301dbf7b9a26312d32d7c7dc6193a"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.0b1e39a67d5bafdc.json",
+      "bytes": 3285317,
+      "sha256": "002cd231ef726b1369ab9211347ccab07bb8ca8255f4269e565a9613ba4bbf36"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.0fe2282006ae098b.json",
+      "bytes": 12767645,
+      "sha256": "d41e09f453772a82cfb9a98ea55505cd6b936e50c7db6931eea9c71df73e967b"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.100ebfb4332adab1.json",
+      "bytes": 1970162,
+      "sha256": "18ed9ddb44c3b67bae5bcfe807efc05b3bd1df2cfe6325b19bb0daa96f35c5ad"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.1a076cec8bc202c2.json",
+      "bytes": 4062197,
+      "sha256": "4883f8606425dde9480b227a1b468ec3acb533ea8f579daf0286c4d288cd362a"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.1c4257f8804f9478.json",
+      "bytes": 19939972,
+      "sha256": "e48855b4f62e7dc703170cbb4e888defb357213eecf516e39abf6c78f8c94bf7"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.2956a7939bf0879c.json",
+      "bytes": 3933552,
+      "sha256": "631a51038ad86252491828238b717be15440ab04838124bc72b3c0a5015ee9d4"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.31f16b44fe03b0c0.json",
+      "bytes": 2641090,
+      "sha256": "986fef30d92564ad81087ec5f8df94f2124e183ef7525c222827a2cda761d5a0"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.33b1b2925d9ff561.json",
+      "bytes": 2302349,
+      "sha256": "30777cc7eb606258e9a956fc5069c05c0c651e71cbaedd0475e0bcf2108f5a3c"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.346ae12a744b45dd.json",
+      "bytes": 1258778,
+      "sha256": "ebfe483dcb2ec52f8bd43ea76524969ce095314a09abb535a8f4d857081f0a56"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.36500f77b86d20a5.json",
+      "bytes": 8934591,
+      "sha256": "314a524369a8cf111030ebcd6f9ef754a941c49d675eb43f55bbaf421233d183"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.376969f91547be8e.json",
+      "bytes": 2437953,
+      "sha256": "191c97ffa6ae7cbf4183191721ef605183c2164d08ee5366773d18d80409bd81"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.37697297db0555a6.json",
+      "bytes": 1987901,
+      "sha256": "631ab397ee305fe5b9f32ea8ccc41dfdecc363f2ec7491e27fee7c800d6525e1"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.385a28e5d3bb3dd0.json",
+      "bytes": 9241711,
+      "sha256": "54ae6469898e49ceae02b3e66d669542b85b8e85f211d6a674fe5d945b0af58a"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.39f4b152dd9bd292.json",
+      "bytes": 7496265,
+      "sha256": "a7d409147aa9e8d8fee3e03827a4f959d31df27d02138e0cf6a78dcb1305a5b1"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.3ec622835c7987b5.json",
+      "bytes": 3806866,
+      "sha256": "44043b36f6b7c7621f164ccc1c58f874211feefb25eb4e50a08ee988a7cf4196"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.41587918e51cca98.json",
+      "bytes": 10378160,
+      "sha256": "a7ee1b6e67d9fddfd68ee0e3a7423f5f92a384738f2055ee368b544b1acaf928"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.42f95ef205743188.json",
+      "bytes": 968270,
+      "sha256": "1e326b39ad405691daafe496bbdff6dfdb803e373f16bf558f75c344d0aa4987"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.43a124d2adc8a2ef.json",
+      "bytes": 765570,
+      "sha256": "fd51a1e97c0ddb80200f81350f9ae7f03d5614b8a3fde7c532644ad8b5aa51f2"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.484a63be03b01a17.json",
+      "bytes": 11591363,
+      "sha256": "46cb8c35520ce3499a9a2b4e13100a72fc7d444b07a00961f54eefdde3ac1f3d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.52865380210a9b69.json",
+      "bytes": 2913571,
+      "sha256": "bef270748c66a8e4b0cdca1eec520dc93f176d82c28690d5af77a5c3fec4c108"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.59a1b3a9a90ca8b3.json",
+      "bytes": 393685,
+      "sha256": "ce498f6670b44fdfb80571b6543c0f8cd978020ec4cabf655b4c64bb9eeca95b"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.5b55bd7cc1ea6e29.json",
+      "bytes": 3538232,
+      "sha256": "471f478518bd0a88ef8f9cddf25aa441f486cd333fb2b75aa34f3b88fda91ef7"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.6039f0080a95df1e.json",
+      "bytes": 2960801,
+      "sha256": "6a218b3681154973ff3623583e8d55a13b220010f70781611d9e28e921ef519f"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.60990dd98dea0998.json",
+      "bytes": 22303995,
+      "sha256": "469ac7a185f3de75d7dd6ee2be11ded696e332e30f3a794deeb539b002024c21"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.624e8f2da4007fc8.json",
+      "bytes": 9768416,
+      "sha256": "5cc71464918914f366ca16caa444b748d4ef5d5d9ac0e08c58af0931c4aade45"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.67e2613d87ca6f98.json",
+      "bytes": 1948065,
+      "sha256": "59eb35774ee16bce5be3def465c051fb335cf2756fbf35c24aadbc7556baaac2"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.68895be451a51c31.json",
+      "bytes": 306676,
+      "sha256": "eb0567e9cb3b1406bd7befe13aef3b77654ec3199657b1e40a77400977ad8b55"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.6acb269a58d5f93f.json",
+      "bytes": 1013720,
+      "sha256": "98694743e7f80ceee207d0c8cb27422bd91666adb43eb61a28ca6fd429c8ab9d"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.6c818a16475113bd.json",
+      "bytes": 6305433,
+      "sha256": "ad2e463e800414b63d50a4913901e6f12111eab47bc700701c2db9f8d19b58fa"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.6f51f7ab7775a392.json",
+      "bytes": 772035,
+      "sha256": "b21af85402864dcd4bc7ad73567ad06ca5bb427937f7154c17f627f7c7d5bbf9"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.75e530a1014802b3.json",
+      "bytes": 279035,
+      "sha256": "7fde9c85da00af34a99befdff0815d6a729fd0eaa425316fc44ea78e0afd0dc3"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TABLE.77f7657eb270e53d.json",
+      "bytes": 95843,
+      "sha256": "de1ba0e8a7136ed7ea971f2acc3b7a390469293977e8b8b5b20996674500b92a"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TOKEN_TYPE_UNSPECIFIED.20543ce18892f7d9.json",
+      "bytes": 284422,
+      "sha256": "172055394a578d849c83c854fb5ae9dccd5a5475ce6ca01d12cbaf4e8a67a54b"
+    },
+    {
+      "path": "docs/design-references/material-design-3/resources/TYPOGRAPHY.20543ce18892f7d9.json",
+      "bytes": 7743300,
+      "sha256": "1dee10de57f9f5e1fc95ece474bd3189968981ea234e676157474fa7eb3640b2"
+    },
+    {
+      "path": "docs/design-references/material-design-3/robots.txt",
+      "bytes": 143,
+      "sha256": "f2277178e0afd0938b7ba3610d8005d2c14101c1615684f23db96f9da08ccdc1"
+    },
+    {
+      "path": "docs/design-references/material-design-3/routes.json",
+      "bytes": 52104,
+      "sha256": "5c562e2d9029d68746d5247426896ae6127b496eb042cee387e31e9a82ff6b34"
+    },
+    {
+      "path": "docs/design-references/material-design-3/sitemap.xml",
+      "bytes": 721312,
+      "sha256": "5777a35e4162b781a330bd08b19d879524f5cce78930ff131ad781e46e5d7807"
+    },
+    {
+      "path": "docs/design-references/README.md",
+      "bytes": 4006,
+      "sha256": "a7e538e233a75eca9d5f0e16fac276c30b86d42d7d1ffd823facbee17a1a9d9a"
+    },
+    {
+      "path": "docs/design-references/shadcn-ui/alert.md",
+      "bytes": 8437,
+      "sha256": "27ac85f1a142cb9cdcb75b2365b49dd9135ccd4b9f7d26619448525cb9403c32"
+    },
+    {
+      "path": "docs/design-references/shadcn-ui/button.md",
+      "bytes": 13020,
+      "sha256": "e603e4d07e51985000fb8e49b915970ca75c1b93889568c9642c8c5b95067ad4"
+    },
+    {
+      "path": "docs/design-references/shadcn-ui/card.md",
+      "bytes": 19925,
+      "sha256": "fedf827e8ff0528964a9eb113d5f0556b4d08a32157d318b87433d95e5c13135"
+    },
+    {
+      "path": "docs/design-references/shadcn-ui/components.md",
+      "bytes": 9572,
+      "sha256": "399707059ae0732ea7fefacb29bb3b7b15820d2dea300e687d0136673455cde7"
+    },
+    {
+      "path": "docs/design-references/shadcn-ui/dialog.md",
+      "bytes": 12447,
+      "sha256": "1af280289e554bb10bbe1c9b2b78a504727f14e8efc04545c5e18627eb66024c"
+    },
+    {
+      "path": "docs/design-references/shadcn-ui/field.md",
+      "bytes": 39433,
+      "sha256": "9626e92b0972349311da8c00b33b17a25246af14f20b91b5f50ff38e713d9b9e"
+    },
+    {
+      "path": "docs/design-references/shadcn-ui/input.md",
+      "bytes": 13158,
+      "sha256": "c6ca8c732265c492245ac9c8efc2caa13ee12152f89bddf6b046748acc55d63e"
+    },
+    {
+      "path": "docs/design-references/shadcn-ui/introduction.md",
+      "bytes": 4565,
+      "sha256": "92b92cf2212df6b163d700036723cff6b9914030929c2283748dfb902df224c2"
+    },
+    {
+      "path": "docs/design-references/shadcn-ui/llms.txt",
+      "bytes": 12260,
+      "sha256": "7abce6a2d2d3124d7140e9a684202e1e265d3b7727e2ca7e2bac15d5e214ec72"
+    },
+    {
+      "path": "docs/design-references/shadcn-ui/README.md",
+      "bytes": 1690,
+      "sha256": "4dd73fc0a4016cdece5e936067d92e04cac3d26cbe4b1e1390a5b62a44df2402"
+    },
+    {
+      "path": "docs/design-references/shadcn-ui/sheet.md",
+      "bytes": 9499,
+      "sha256": "96ce8de8e86da233db6079255d72ecf890c38bcd28573bbddbb8649443ba3ffb"
+    },
+    {
+      "path": "docs/design-references/shadcn-ui/table.md",
+      "bytes": 14872,
+      "sha256": "b6857eb17d779945589b6766aca600d14cde15e36e09924e2193960326e1feae"
+    },
+    {
+      "path": "docs/design-references/shadcn-ui/tabs.md",
+      "bytes": 13157,
+      "sha256": "3045542121269b79c72e543b84fdc4ea0da2a22a02f6a3418a38d52f6fe88ca8"
+    },
+    {
+      "path": "docs/design-references/shadcn-ui/theming.md",
+      "bytes": 13038,
+      "sha256": "b6e280a919c48f11e4ef8543fbdc13061b1a466d3ad67d3258b0f727d04bf098"
+    },
+    {
+      "path": "docs/diagram/data-model.drawio",
+      "bytes": 26879,
+      "sha256": "f94173c27388c64dfe341d23ed7cc93fbc55a3540b31ab483339e73ba07aa2b8"
+    },
+    {
+      "path": "docs/level-0/architecture.md",
+      "bytes": 9325,
+      "sha256": "da7914b843016f8fbe74e016637352b68f98b4727d7ff9bcdcafe7052a9259bd"
+    },
+    {
+      "path": "docs/level-0/conventions.md",
+      "bytes": 3594,
+      "sha256": "162cf053310279577b7ff54155524e21ce584a4469d9d27cabebbf4586f75cf9"
+    },
+    {
+      "path": "docs/level-1/data-model.md",
+      "bytes": 13217,
+      "sha256": "84fe8b99a880361323993a8009481ac026e64f1ad9b043d046835ee8fefc5a78"
+    },
+    {
+      "path": "docs/level-1/modules.md",
+      "bytes": 19129,
+      "sha256": "51a63ab4c6d98e649c9287b842efaae15e695a9f565ed352f5a65b5834c8d952"
+    },
+    {
+      "path": "docs/level-2/backend-health.md",
+      "bytes": 2538,
+      "sha256": "c5c197bfab43a9e0afbbed0f7cef0907d0826fc88ef74e95f856293ba2e1705c"
+    },
+    {
+      "path": "docs/level-2/backend-readiness.md",
+      "bytes": 1684,
+      "sha256": "2bbec2b794adb05ec46b26c9e6370e171df26e7e56e47bef2be5ff936a3e4d0c"
+    },
+    {
+      "path": "docs/level-2/certificate-contract.md",
+      "bytes": 20331,
+      "sha256": "c644a6ca624d1a4016e71b010b2eae1c4e8cd841430b5e3ae4208ef2fbb47cc8"
+    },
+    {
+      "path": "docs/level-2/frontend-readiness.md",
+      "bytes": 1596,
+      "sha256": "164998c606e157d398e116b84b9fc1937b2c4ed6c29458937499a9a10b8f45ef"
+    },
+    {
+      "path": "docs/level-2/keeper-transfers.md",
+      "bytes": 24637,
+      "sha256": "41c2b89a5c8783173ccb6e91ca2661a321586b1c02eb5cb88373180a2361ff85"
+    },
+    {
+      "path": "docs/level-2/snake-registration.md",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/level-3/functional-audit-2026-11-19.md",
+      "bytes": 5254,
+      "sha256": "b9c144ff96b94691e46d3980cb62ff2b5e88e5ead09a2d90cfa7abe5a3926642"
+    },
+    {
+      "path": "docs/level-3/tasks.md",
+      "bytes": 16311,
+      "sha256": "8bef2751d757a91507ebc6e25df55cbad4a529a083cc3a6333f8a3ac73717e43"
+    },
+    {
+      "path": "frontend/api.py",
+      "bytes": 30490,
+      "sha256": "07a2c6bd94d4e3ab5d30eac086fb65380c99a7c79f27f3f1e5e1205d5ba69015"
+    },
+    {
+      "path": "frontend/app.py",
+      "bytes": 2501,
+      "sha256": "6aae0ebeedf42b30f3274843bcdd2befcdecf2cb402cf6c24da60fdaed839b3b"
+    },
+    {
+      "path": "frontend/assets/fonts/Jersey10-OFL.txt",
+      "bytes": 4395,
+      "sha256": "436d5836064cec796c7ddde6fb4faeabdb6f2f17443a24a30d0c38b75d13f922"
+    },
+    {
+      "path": "frontend/assets/fonts/Jersey10-Regular.ttf",
+      "bytes": 77732,
+      "sha256": "db9cbd091617048a145d249daa2b815fe7083be6ab66ac26626e21a4e01c3e82"
+    },
+    {
+      "path": "frontend/assets/fonts/Manrope-OFL.txt",
+      "bytes": 4387,
+      "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b"
+    },
+    {
+      "path": "frontend/assets/fonts/Manrope[wght].ttf",
+      "bytes": 164700,
+      "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6"
+    },
+    {
+      "path": "frontend/assets/fonts/OFL.txt",
+      "bytes": 4506,
+      "sha256": "aa17c06ad829655830e2eacd07a7e0eedca261582e693c3c33118df6fd1ac987"
+    },
+    {
+      "path": "frontend/assets/fonts/PressStart2P-Regular.ttf",
+      "bytes": 118204,
+      "sha256": "034c77f1f05ec89421e4a63f0e3a4ca1ecf852cc6d2bf611f126f275728e017d"
+    },
+    {
+      "path": "frontend/assets/fonts/SpaceGrotesk-OFL.txt",
+      "bytes": 4495,
+      "sha256": "564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72"
+    },
+    {
+      "path": "frontend/assets/fonts/SpaceGrotesk[wght].ttf",
+      "bytes": 136676,
+      "sha256": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72"
+    },
+    {
+      "path": "frontend/assets/Pet Lifetime Records Logo.png",
+      "bytes": 378515,
+      "sha256": "8fee0acbfb7e7a6d4de32e6913aa03027022b620fb9b307594f8406453238515"
+    },
+    {
+      "path": "frontend/assets/pet-1.png",
+      "bytes": 199663,
+      "sha256": "ffe5ed0a968e5221cd62d7f7f82ee3c65d80029f22724ea3980eaaad08f86b54"
+    },
+    {
+      "path": "frontend/assets/pet-2.png",
+      "bytes": 194579,
+      "sha256": "93c45c9a548b514ed2361709dca828ba5fc432581eb7b8a2454d0c806d21b3f8"
+    },
+    {
+      "path": "frontend/assets/pet-3.png",
+      "bytes": 227376,
+      "sha256": "948a25b7eba9aad4dcd7144c2745fbbd1914174d1454b40fbc3c0da9313d5d99"
+    },
+    {
+      "path": "frontend/assets/pet-4.png",
+      "bytes": 144550,
+      "sha256": "ea1b386ea090b21041f921110802421806fab9fafa38fa86451c76b8bf835d54"
+    },
+    {
+      "path": "frontend/assets/pet-5.png",
+      "bytes": 164685,
+      "sha256": "4c930a88180b143042154e97b054ee0ed90d01460422750d7e7437e19254d50a"
+    },
+    {
+      "path": "frontend/assets/pet-6.webp",
+      "bytes": 97300,
+      "sha256": "6e75c1cbce748bcb7cbb2efbd398ef89bad540e594b67ea45c8f387b125beca9"
+    },
+    {
+      "path": "frontend/auth.py",
+      "bytes": 9208,
+      "sha256": "3b2039f29f862f4c16d233dd121fa0d409b7a94a97f551f464dbd1c6fbd81852"
+    },
+    {
+      "path": "frontend/branding.py",
+      "bytes": 297,
+      "sha256": "e0cb8214587d40b97cc433e47940166b04aa5f138addee3c69f90aa3f24a7c94"
+    },
+    {
+      "path": "frontend/certificates.py",
+      "bytes": 13460,
+      "sha256": "5bc0638ac5e14a35cf3102a03a93487e2d244c163220bd0bfa17c49f7afe091d"
+    },
+    {
+      "path": "frontend/husbandry.py",
+      "bytes": 10833,
+      "sha256": "8181875dc61079ddd8809bd3b871a8ed5b91b2935746d9c2797d33c1155c95e1"
+    },
+    {
+      "path": "frontend/keeper_transfers.py",
+      "bytes": 8181,
+      "sha256": "fd9cb5e69207ab5541a938d5614631c803537d5e4f120779e18ede88e5342185"
+    },
+    {
+      "path": "frontend/login_gallery.py",
+      "bytes": 1485,
+      "sha256": "d6005a6a393d2fe6d94d84b22526e1fa8504c15b8af1e9bca79a6fd5f3ba540d"
+    },
+    {
+      "path": "frontend/pages/1_User_Registration.py",
+      "bytes": 6138,
+      "sha256": "1c192274bde8677202ff029cd3e604752af3ee983221ed97886fb89b987537ef"
+    },
+    {
+      "path": "frontend/static/SpaceGrotesk.ttf",
+      "bytes": 136676,
+      "sha256": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72"
+    },
+    {
+      "path": "frontend/styles.py",
+      "bytes": 20878,
+      "sha256": "1ec29118165d7f7f1d21daa0609ce198a60972ef5579230399e99d323ca396c1"
+    },
+    {
+      "path": "frontend/tests/test_app.py",
+      "bytes": 3220,
+      "sha256": "9da0e73bedd7d81b7c6c6adcdb0eb94fff170693d3cfbb6c3d5d4e95520392d5"
+    },
+    {
+      "path": "frontend/tests/test_demo_mode.py",
+      "bytes": 5487,
+      "sha256": "3aad2504513db31cf3d2796a4dfdfd0665bff4cc0f0a0517e5f26a8b656c5a5a"
+    },
+    {
+      "path": "frontend/tests/test_profile_controls.py",
+      "bytes": 4919,
+      "sha256": "db70d18b09691febb42fffc398521e2b1abffabfdcb437ce2446c42e12aa647d"
+    },
+    {
+      "path": "frontend/tests/test_report_selection.py",
+      "bytes": 2664,
+      "sha256": "edfda4c2f156e8053070f1afef4dc36e1cdcadda9238046f10c17300625ecea3"
+    },
+    {
+      "path": "frontend/workspace.py",
+      "bytes": 16413,
+      "sha256": "96bf04a49dd6b7f71af7ccb9553d41b672bee1b45dcd1c08e5d1bcaa8d29a8a0"
+    },
+    {
+      "path": "infrastructure/compose.yaml",
+      "bytes": 545,
+      "sha256": "af594d9ab9c9995867ae7553eab3ce331b50742ced297f7081b7486a772360a5"
+    },
+    {
+      "path": "justfile",
+      "bytes": 2033,
+      "sha256": "7e18c6a88cc599bf4fd79cf8ea7e2213e1f8b5dbc1d052dbb31c8411ac385ead"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 324,
+      "sha256": "478f626e78d70f2bc81e83a6e43f3203df9c4211379676b9bfd232b112a928c3"
+    },
+    {
+      "path": "README.md",
+      "bytes": 20656,
+      "sha256": "6be074a1f0a94ec181d42c1808282d2a55f57e8ebb64c03dda94e51b80b0454b"
+    },
+    {
+      "path": "scripts/sepolia_demo.py",
+      "bytes": 23807,
+      "sha256": "ca2ac8c2aa59cf3b8473ea0b253d742a59761ad64be093da0f83a604db91a5f0"
+    },
+    {
+      "path": "storage/sepolia/sepolia-p0-001/state.json",
+      "bytes": 41959,
+      "sha256": "20537db631d0d64123a239de2b96857ab0d7aef039444643abe18ea36baa2fde"
+    },
+    {
+      "path": "uv.lock",
+      "bytes": 600971,
+      "sha256": "12cda94fa83a97dc4058f2d458da2c081f5eb43aded1421a4d3b3d8aea958a28"
+    }
+  ]
+}

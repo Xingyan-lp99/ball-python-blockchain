@@ -44,11 +44,10 @@ class SnakeRegistrationRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     snake_id: str = Field(min_length=1, strict=True)
-    breeder_internal_id: NonBlankText
-    species: NonBlankText
+    species: Annotated[str, Field(strict=True, pattern=r"\S", max_length=100)]
     sex: NonBlankText
     date_of_birth: date
-    genetic_description: NonBlankText
+    genetic_description: NonBlankText | None = None
 
     nickname: str | None = None
     introduction: str | None = None
@@ -219,6 +218,8 @@ def create_snake(
     return SnakeRegistrationResponse(**result)
 
 class SnakeProfileResponse(SnakeRegistrationRequest):
+    species: NonBlankText
+
     breeder_id: str
     breeder_name: str
     photo_url: str

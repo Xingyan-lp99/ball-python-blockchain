@@ -1,13 +1,13 @@
 import streamlit as st
 
 from frontend.api import AccountRequestError, SignInRequired, fetch_current_account
-from frontend.auth import API_BASE_URL, render_login_page, return_to_login
+from frontend.auth import API_BASE_URL, DEMO_ACCOUNTS, render_demo_navigation, render_login_page, return_to_login
 from frontend.styles import apply_styles
 from frontend.workspace import render_workspace
 
 
 st.set_page_config(
-    page_title="Ball Python Registry",
+    page_title="Pet Lifetime Records",
     layout=(
         "wide"
         if st.session_state.get("auth_session") is None
@@ -36,6 +36,9 @@ if session is not None:
             return_to_login()
         st.stop()
     else:
+        demo_role = st.session_state.get("demo_role")
+        if demo_role and (account["role"], account["participant_id"]) != DEMO_ACCOUNTS[demo_role]:
+            return_to_login("Demo account identity changed. Please sign in again.")
         session["account"] = account
 
 
@@ -50,6 +53,7 @@ def workspace_page() -> None:
             width=1100 if is_wide else "stretch",
             key="role_workspace",
         ):
+            render_demo_navigation()
             render_workspace(
                 api_base_url=API_BASE_URL,
                 account=account,

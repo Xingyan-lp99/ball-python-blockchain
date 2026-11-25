@@ -5,8 +5,8 @@ import streamlit as st
 from frontend.api import (
     KeeperTransferRequestError,
     fetch_keeper_transfer_status,
-    submit_keeper_transfer_action,
     submit_keeper_transfer_request,
+    submit_keeper_transfer_action,
 )
 
 
@@ -17,12 +17,6 @@ STATUS_LABELS = {
     "rejected": "Rejected",
     "cancelled": "Cancelled",
     "unable_to_confirm": "Unable to Confirm",
-}
-SUCCESS_MESSAGES = {
-    "initiate": "Transfer request confirmed. Awaiting buyer acceptance.",
-    "accept": "Transfer accepted successfully.",
-    "reject": "Transfer rejected successfully.",
-    "cancel": "Transfer cancelled successfully.",
 }
 
 
@@ -45,7 +39,7 @@ def _render_last_result(result: dict | None) -> bool:
         "unknown", "unverified", "storage_error",
     }
     if result["status_code"] in {200, 201} and "outcome" not in payload:
-        st.success(SUCCESS_MESSAGES[result["action"]])
+        st.success(f"Transaction confirmed. Transfer status: {payload.get('status', 'confirmed')}.")
         uncertain = False
     else:
         detail = payload.get("detail")
@@ -62,8 +56,7 @@ def _render_last_result(result: dict | None) -> bool:
     return uncertain
 
 
-# Purpose: submit once, retain the result, and reload manager/status information.
-# Without this step, the page could keep displaying its pre-transfer snapshot.
+# Submit through the authenticated backend using local demonstration accounts.
 def _submit_transfer(
     *,
     api_base_url: str,
@@ -90,6 +83,7 @@ def _submit_transfer(
     }
     st.session_state.pop(f"keeper_transfer_status_{snake_id}", None)
     st.rerun()
+
 
 
 # Purpose: show the current manager and only the signed-in party's transfer controls.
@@ -138,7 +132,7 @@ def render_keeper_transfer_section(
             "Use Refresh Transfer Status to update this view."
         )
 
-    if state.get("transfer_id"):
+    if state.get("transfer_id") and account["role"] != "buyer":
         with st.expander("Transfer Details"):
             st.json({
                 "transfer_id": state["transfer_id"],
@@ -199,5 +193,5 @@ def render_keeper_transfer_section(
                 api_base_url=api_base_url, snake_id=snake_id, action="initiate",
                 recipient_username=recipient_username.strip(), access_token=access_token,
             )
-    else:
+    elif account["role"] != "buyer":
         st.caption("Only the current keeper may initiate a transfer.")

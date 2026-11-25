@@ -2,22 +2,22 @@
 base = "light"
 
 # Shared colors for the application and input surfaces.
-backgroundColor = "#F1EAFE"
-secondaryBackgroundColor = "#FFFDF3"
-textColor = "#291344"
-primaryColor = "#6330BA"
-borderColor = "#6330BA"
+backgroundColor = "#F7F9F5"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#243B30"
+primaryColor = "#356B55"
+borderColor = "#D9E5DA"
 
-# Use the shared body font; pixel titles are styled separately.
+# Use the existing local sans-serif font for body text and headings.
 font = "Space Grotesk"
 baseFontSize = 16
 baseFontWeight = 400
 headingFont = "Space Grotesk"
-codeFont = "Space Grotesk"
+codeFont = "monospace"
 
-# Use square corners and visible input borders.
-baseRadius = "none"
-buttonRadius = "none"
+# Keep native widget borders and consistent rounded corners.
+baseRadius = "0.75rem"
+buttonRadius = "0.5rem"
 showWidgetBorder = true
 
 [[theme.fontFaces]]
@@ -28,3 +28,4 @@ style = "normal"
 
 [server]
 enableStaticServing = true
+address = "127.0.0.1"

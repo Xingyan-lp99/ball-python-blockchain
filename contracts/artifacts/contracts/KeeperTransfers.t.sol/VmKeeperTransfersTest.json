@@ -1,0 +1,73 @@
+{
+  "_format": "hh3-artifact-1",
+  "contractName": "VmKeeperTransfersTest",
+  "sourceName": "contracts/KeeperTransfers.t.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "checkTopic1",
+          "type": "bool"
+        },
+        {
+          "internalType": "bool",
+          "name": "checkTopic2",
+          "type": "bool"
+        },
+        {
+          "internalType": "bool",
+          "name": "checkTopic3",
+          "type": "bool"
+        },
+        {
+          "internalType": "bool",
+          "name": "checkData",
+          "type": "bool"
+        },
+        {
+          "internalType": "address",
+          "name": "emitter",
+          "type": "address"
+        }
+      ],
+      "name": "expectEmit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "selector",
+          "type": "bytes4"
+        }
+      ],
+      "name": "expectRevert",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        }
+      ],
+      "name": "prank",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {},
+  "immutableReferences": {},
+  "inputSourceName": "project/contracts/KeeperTransfers.t.sol",
+  "buildInfoId": "solc-0_8_28-3907c0b6eb38d805a71b7152f473f007ffd264d7"
+}

@@ -1,5 +1,18 @@
 # Level 1 - Backend Modules
 
+## Laboratory report selection — 2026-11-20
+
+The approved revision UI selects a stored report title rather than accepting a
+manually copied Series ID. `GET /api/v1/laboratories/me/certificate-series` is a
+read-only, authenticated laboratory endpoint. It returns series ID, snake ID,
+title, laboratory ID, and the highest stored version number for each series.
+The laboratory scope comes exclusively from the authenticated participant, not
+query parameters. Duplicate titles remain separate series and the UI includes
+identifiers to distinguish them. A stored version number does not imply confirmed
+chain evidence; the existing revision operation retains issuer and chain checks.
+No schema or write API change is required. Certificate history offers a separate
+original-PDF download for every version without a version-selection dropdown.
+
 ## 1. Purpose and Architecture
 
 This document describes the six business modules inside the FastAPI backend and how they work together. It follows the architecture and conventions defined in Level 0. Unresolved details are listed as open design questions.

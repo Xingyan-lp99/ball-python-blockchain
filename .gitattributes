@@ -1,2 +1,6 @@
 # Preserve upstream snapshot bytes so manifest checksums survive checkout.
 docs/design-references/** -text
+
+# Preserve deployment fingerprints across Windows and Unix checkouts.
+contracts/artifacts/** -text
+storage/sepolia/** -text

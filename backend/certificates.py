@@ -20,6 +20,26 @@ from backend.certificate_files import (
 )
 
 
+def list_laboratory_reports(connection: psycopg.Connection, *, participant_id: str) -> list[dict]:
+    with connection.cursor(row_factory=dict_row) as cursor:
+        cursor.execute(
+            """
+            SELECT series.series_id, series.snake_id, series.title,
+                   series.laboratory_id,
+                   COALESCE(MAX(version.version_number), 0) AS latest_version_number
+            FROM certificate_series AS series
+            JOIN laboratories AS laboratory
+              ON laboratory.laboratory_id = series.laboratory_id
+            LEFT JOIN certificate_versions AS version ON version.series_id = series.series_id
+            WHERE laboratory.participant_id = %s
+            GROUP BY series.series_id, series.snake_id, series.title, series.laboratory_id
+            ORDER BY series.title, series.snake_id, series.series_id
+            """,
+            (participant_id,),
+        )
+        return list(cursor.fetchall())
+
+
 class CertificateIssuanceError(RuntimeError):
     """Expose report and transaction identifiers without local file paths."""
 

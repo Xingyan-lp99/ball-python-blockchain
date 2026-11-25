@@ -1,15 +1,25 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity 0.8.28;
 
+// Only snake existence is needed here; certificate authority belongs to laboratories.
 interface ISnakeRegistry {
     function getCurrentKeeper(
         string calldata snakeId
     ) external view returns (address);
 }
 
+/// @title Ball Python Laboratory Certificate Evidence
 /// @notice Laboratory permissions and append-only certificate evidence.
 /// @dev The application supplies SHA-256 of the original PDF bytes as fileHash.
 /// The contract stores that digest without validating the file or hash algorithm.
+/// Deploy after SnakeRegistry and supply its address, not KeeperTransfers.
+/// The deployer authorizes laboratories; each laboratory controls its own series.
+/// Example: LAB001 and LAB002 issue independent V1 reports for SNAKE001.
+/// LAB001 appends V2 to its series; its V1 becomes Superseded but stays readable.
+/// Keeper transfers do not change issuers, report history, or laboratory rights.
+/// Original PDFs and report contents stay off-chain. A matching digest supports
+/// byte-level integrity comparison, not the biological truth of a report.
+/// This implementation has no certificate revocation or laboratory removal operation.
 contract CertificateRegistry {
     enum VersionStatus {
         None,
@@ -91,6 +101,9 @@ contract CertificateRegistry {
         bytes32 fileHash
     );
 
+    // Deployment fixes both the administrator and the snake registration source.
+    // Without this setup, laboratory grants and snake-existence checks lack authority.
+    // Only the zero address is rejected here; deployment must verify the registry.
     constructor(address snakeRegistryAddress) {
         if (snakeRegistryAddress == address(0)) {
             revert ZeroAddress();
@@ -100,6 +113,8 @@ contract CertificateRegistry {
         snakeRegistry = ISnakeRegistry(snakeRegistryAddress);
     }
 
+    // Setup step: only the deploying administrator may grant issuance permission.
+    // Without this operation, no laboratory could issue an initial certificate.
     function authorizeLaboratory(address laboratory) external {
         if (msg.sender != administrator) {
             revert Unauthorized();
@@ -117,12 +132,17 @@ contract CertificateRegistry {
         emit LaboratoryAuthorized(laboratory);
     }
 
+    // Read issuance permission without changing it, for setup and application checks.
+    // Without this query, callers lose a direct view of the authorization mapping.
     function isAuthorizedLaboratory(
         address laboratory
     ) external view returns (bool authorized) {
         return authorizedLaboratories[laboratory];
     }
 
+    // Report step: an authorized laboratory supplies snake/series/version IDs and hash.
+    // Store V1 with msg.sender as issuer and emit its evidence; return no value.
+    // Without this operation, neither an initial report nor its later revisions exist.
     function issueCertificate(
         string calldata snakeId,
         string calldata seriesId,
@@ -187,6 +207,9 @@ contract CertificateRegistry {
     }
 
     /// @dev Appends to the latest version; the predecessor is selected on-chain.
+    // Revision step: only the original series issuer may add a new version and hash.
+    // Previous evidence remains stored; its status changes to Superseded.
+    // Without this operation, a laboratory cannot append a traceable correction.
     function appendRevision(
         string calldata seriesId,
         string calldata versionId,
@@ -254,6 +277,8 @@ contract CertificateRegistry {
         );
     }
 
+    // Viewing step: return stored evidence, including historical version status.
+    // Without this query, callers cannot directly inspect a version's hash and issuer.
     function getVersion(
         string calldata versionId
     ) external view returns (VersionEvidence memory evidence) {
@@ -264,6 +289,8 @@ contract CertificateRegistry {
         return versionsById[versionId];
     }
 
+    // Viewing step: return the series issuer, current version, and version count.
+    // Without this query, callers lack a direct summary of the latest report version.
     function getSeries(
         string calldata seriesId
     ) external view returns (SeriesSummary memory summary) {
@@ -283,6 +310,9 @@ contract CertificateRegistry {
             });
     }
 
+    // History step: return a version ID by zero-based index within its series.
+    // Combine with getSeries and getVersion to inspect retained report history.
+    // Without this query, callers would need another index, such as event logs.
     function getSeriesVersionIdAt(
         string calldata seriesId,
         uint256 index

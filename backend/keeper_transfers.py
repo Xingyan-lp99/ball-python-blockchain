@@ -108,7 +108,7 @@ def get_keeper_state(*, snake_id: str) -> dict:
         raise ConnectionError("The current keeper state could not be confirmed.") from None
 
 
-# Purpose: share submission tracking and confirmation for all transfer writes.
+# Purpose: submit local demo transactions and confirm their receipts.
 # Without this helper, resolution could handle uncertain transactions differently.
 def _submit_keeper_transaction(
     *,
@@ -239,6 +239,8 @@ def initiate_keeper_transfer_on_chain(
         "receipt_status": 1,
         "initiated_at": initiated_at,
         "current_keeper_address": keeper,
+        "block_number": receipt["blockNumber"],
+        "transaction_index": receipt["transactionIndex"],
     }
 
 
@@ -333,4 +335,6 @@ def resolve_keeper_transfer_on_chain(
         "receipt_status": 1,
         "resolved_at": resolved_at,
         "current_keeper_address": keeper,
+        "block_number": receipt["blockNumber"],
+        "transaction_index": receipt["transactionIndex"],
     }
