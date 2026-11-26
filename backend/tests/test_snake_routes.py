@@ -23,7 +23,6 @@ SENDER_ADDRESS = "0x2222222222222222222222222222222222222222"
 PAYLOAD = {
     "snake_id": "SNAKE001",
     "sender_address": SENDER_ADDRESS,
-    "breeder_internal_id": "BP001",
     "species": "Python regius",
     "sex": "Female",
     "date_of_birth": "2025-06-01",
@@ -219,7 +218,6 @@ def test_participant_and_profile_errors(
 @pytest.mark.parametrize(
     ("field", "value"),
     [
-        ("breeder_internal_id", " "),
         ("species", ""),
         ("sex", None),
         ("date_of_birth", "not-a-date"),

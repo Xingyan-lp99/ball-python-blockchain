@@ -7,12 +7,12 @@ from PIL import Image
 IMAGE_DIRECTORY = Path(__file__).resolve().parent / "assets"
 
 LOGIN_IMAGES = (
-    "首页图1.webp",
-    "首页图2.webp",
-    "首页图3.jpg",
-    "首页图4.jpg",
-    "首页图5.jpg",
-    "首页图6.webp",
+    "pet-1.png",
+    "pet-2.png",
+    "pet-3.png",
+    "pet-4.png",
+    "pet-5.png",
+    "pet-6.webp",
 )
 
 
@@ -22,10 +22,11 @@ LOGIN_IMAGES = (
 def render_login_gallery() -> None:
     with st.grid(
         columns=3,
-        min_column_width=150,
+        min_column_width=80,
         wrap=True,
-        gap=16,
-        height="stretch",
+        gap=14,
+        row_height=160,
+        height="content",
         key="login_snake_showcase",
     ):
         for index, filename in enumerate(LOGIN_IMAGES):
@@ -44,7 +45,7 @@ def render_login_gallery() -> None:
                     st.image(
                         path,
                         width="stretch",
-                        alt="Ball python showcase photo",
+                        alt=f"Pet showcase photo {index + 1}",
                     )
                 except (OSError, SyntaxError):
                     st.caption("Image unavailable")

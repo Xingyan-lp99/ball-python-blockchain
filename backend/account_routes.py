@@ -61,6 +61,11 @@ class AccountRegistrationResponse(BaseModel):
 def register_account(
     request: AccountRegistrationData,
 ) -> AccountRegistrationResponse:
+    if request.role == "lab":
+        raise HTTPException(
+            status_code=403,
+            detail="Public laboratory registration is disabled. Use a preconfigured laboratory account.",
+        )
     password = os.environ.get("DEMO_DB_PASSWORD")
 
     if not password:

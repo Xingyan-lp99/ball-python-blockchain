@@ -10,9 +10,10 @@ from frontend.auth import API_BASE_URL, return_to_login
 with st.container(horizontal_alignment="center"):
     with st.container(width=680):
         with st.container(key="registration_intro"):
-            st.markdown("**Ball Python Blockchain Registry**")
+            st.markdown("**Pet Lifetime Records**")
             st.title("Create an Account")
-            st.write("Register as a Buyer, Breeder, or Laboratory Staff member.")
+            st.write("Register as a Buyer or Seller.")
+            st.caption("Laboratory staff: sign in with your preconfigured demo account.")
 
         with st.container(border=False, key="registration_card"):
             registered = st.session_state.get("registered_account")
@@ -27,7 +28,8 @@ with st.container(horizontal_alignment="center"):
             # Keep role selection outside the form so its fields update immediately.
             role = st.selectbox(
                 "Account Role *",
-                options=["Buyer", "Breeder", "Laboratory Staff"],
+                options=["Buyer", "Breeder"],
+                format_func=lambda value: "Seller" if value == "Breeder" else value,
             )
 
             with st.form("user_registration", border=False):
@@ -50,26 +52,15 @@ with st.container(horizontal_alignment="center"):
                 breeder_name = ""
                 breeder_region = ""
                 breeder_introduction = ""
-                laboratory_id = None
 
                 if role == "Breeder":
                     st.divider()
-                    st.subheader("Breeder Information")
+                    st.subheader("Seller Information")
 
-                    breeder_name = st.text_input("Breeder Name *")
-                    breeder_region = st.text_input("Breeder Region (Optional)")
+                    breeder_name = st.text_input("Seller Name *")
+                    breeder_region = st.text_input("Seller Region (Optional)")
                     breeder_introduction = st.text_area(
-                        "Breeder Introduction (Optional)"
-                    )
-
-                if role == "Laboratory Staff":
-                    st.divider()
-                    st.subheader("Laboratory Information")
-                    laboratory_id = st.selectbox(
-                        "Laboratory *",
-                        options=["LAB001", "LAB002"],
-                        index=None,
-                        placeholder="Select a laboratory",
+                        "Seller Introduction (Optional)"
                     )
 
                 consent = st.checkbox(
@@ -108,12 +99,11 @@ with st.container(horizontal_alignment="center"):
                     or valid_email is None
                     or not passwords_match
                     or not breeder_name_provided
-                    or (role == "Laboratory Staff" and laboratory_id is None)
                     or not consent
                 ):
                     st.error(
                         "Please complete the required fields and check the email, "
-                        "password confirmation, laboratory selection, and demo consent."
+                        "password confirmation and demo consent."
                     )
                 else:
                     registration = {
@@ -123,9 +113,7 @@ with st.container(horizontal_alignment="center"):
                         "role": {
                             "Buyer": "buyer",
                             "Breeder": "breeder",
-                            "Laboratory Staff": "lab",
                         }[role],
-                        "laboratory_id": laboratory_id,
                         "display_name": display_name.strip(),
                         "country_or_region": country_or_region.strip(),
                         "contact": contact.strip() or None,

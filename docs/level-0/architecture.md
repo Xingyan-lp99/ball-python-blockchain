@@ -138,6 +138,15 @@ Do not store large PDFs, photographs, or sensitive personal information directly
 
 ## 7. Architecture Decisions Requiring Approval
 
+On 2026-11-20 the human approved local chain persistence. Hardhat remains the
+Solidity build/test tool; the daily local demonstration uses Anvil v1.10.0 on
+chain ID 31337 with periodic state files under ignored `storage/chain/`.
+PostgreSQL and uploaded files retain their existing roles. The restart audit
+verified contract code/storage, original transactions/receipts/logs, pending
+transfers and accepted keeper state. This does not restore the previous lost
+Hardhat chain, and no replay or authority fallback is permitted. Coordinated
+local backups include the database, uploads and matching chain checkpoint.
+
 The coding agent must request approval before:
 - Changing the technology stack.
 - Changing the modular monolith architecture.

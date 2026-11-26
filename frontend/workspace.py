@@ -17,15 +17,12 @@ from frontend.keeper_transfers import render_keeper_transfer_section
 from frontend.certificates import render_certificate_history, render_certificate_issuance
 
 
-MONTH_NAMES = (
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December",
-)
-
-
-def _render_snake_registration(api_base_url: str, access_token: str) -> None:
-    st.subheader("Register a Ball Python")
-    previous = st.session_state.get("registration_result")
+def _render_snake_registration(
+    api_base_url: str, access_token: str, *, network: str
+) -> None:
+    st.subheader("Register a Pet")
+    result_key = f"registration_result_{network}"
+    previous = st.session_state.get(result_key)
     locked = False
 
     if previous is not None:
@@ -41,16 +38,35 @@ def _render_snake_registration(api_base_url: str, access_token: str) -> None:
             st.success(f"Registration successful: {profile['snake_id']}")
             st.image(previous["photo_content"], width=320)
             st.write({
-                "Breeder Internal ID": profile["breeder_internal_id"],
+                "Pet ID": profile["snake_id"],
                 "Species": profile["species"],
                 "Sex": profile["sex"],
                 "Date of Birth": profile["date_of_birth"],
-                "Genetic Description": profile["genetic_description"],
+                "Transaction Hash": payload["transaction_hash"],
+                "Receipt Status": payload["receipt_status"],
+                "Initial Keeper": payload["initial_keeper"],
             })
+            if payload.get("contract_address"):
+                st.write({"SnakeRegistry Contract": payload["contract_address"]})
+            if network == "sepolia":
+                st.write({
+                    "Chain ID": payload["chain_id"],
+                    "Estimated Gas": payload["estimated_gas"],
+                    "Gas Limit": payload["gas_limit"],
+                    "Maximum Fee": f"{payload['max_fee_per_gas']} wei",
+                    "Maximum Gas Cost": (
+                        f"{payload['max_cost_wei']} wei "
+                        f"({payload['max_cost_wei'] / 10**18:.12f} SepoliaETH)"
+                    ),
+                })
+            if payload.get("etherscan_url"):
+                st.link_button("View Sepolia Transaction on Etherscan", payload["etherscan_url"])
         elif status_code == 409:
-            st.error("This snake ID already has a profile or on-chain registration.")
+            st.error("This pet ID already has a profile or on-chain registration.")
         elif outcome == "not_submitted":
-            st.error("Registration is not configured yet. No transaction was submitted.")
+            st.error("No transaction was submitted.")
+            if isinstance(payload.get("detail"), str):
+                st.caption(payload["detail"])
         elif locked:
             st.error(
                 "Registration could not be confirmed as complete. "
@@ -59,6 +75,8 @@ def _render_snake_registration(api_base_url: str, access_token: str) -> None:
             if payload.get("transaction_hash"):
                 st.caption("Transaction to Check")
                 st.code(payload["transaction_hash"])
+            if payload.get("etherscan_url"):
+                st.link_button("Check on Sepolia Etherscan", payload["etherscan_url"])
         else:
             detail = payload.get("detail")
             st.error(
@@ -70,51 +88,17 @@ def _render_snake_registration(api_base_url: str, access_token: str) -> None:
         return
 
     with st.form("snake_registration"):
-        snake_id = st.text_input("Snake ID *", value="SNAKE001")
-        breeder_internal_id = st.text_input("Breeder Internal ID *")
-        species = st.text_input("Species *", value="Python regius")
-        sex = st.text_input("Sex *", placeholder="For example, Female")
-        st.markdown("**Date of Birth** *")
-        month_column, day_column, year_column = st.columns(3, gap="small")
-        with month_column:
-            birth_month = st.selectbox(
-                "Month",
-                MONTH_NAMES,
-                index=None,
-                placeholder="Select month",
-                key="snake_birth_month",
-            )
-        with day_column:
-            birth_day = st.number_input(
-                "Day",
-                min_value=1,
-                max_value=31,
-                value=None,
-                step=1,
-                placeholder="Select day",
-                key="snake_birth_day",
-            )
-        with year_column:
-            birth_year = st.selectbox(
-                "Year",
-                range(date.today().year, 1899, -1),
-                index=None,
-                placeholder="Select year",
-                key="snake_birth_year",
-            )
-
-        date_of_birth = None
-        invalid_birth_date = False
-        if birth_month is not None and birth_day is not None and birth_year is not None:
-            try:
-                date_of_birth = date(
-                    int(birth_year),
-                    MONTH_NAMES.index(birth_month) + 1,
-                    int(birth_day),
-                )
-            except ValueError:
-                invalid_birth_date = True
-        genetic_description = st.text_area("Genetic Description *")
+        snake_id = st.text_input("Pet ID *")
+        species = st.text_input("Species *", max_chars=100, placeholder="e.g. Dog, Cat, Snake, Bird")
+        sex = st.selectbox("Sex *", ["Male", "Female"], index=None, placeholder="Select sex")
+        date_of_birth = st.date_input(
+            "Date of Birth *",
+            value=None,
+            min_value=date(1900, 1, 1),
+            max_value=date.today(),
+            format="YYYY-MM-DD",
+            key="snake_date_of_birth",
+        )
         photo = st.file_uploader(
             "Photo * (JPEG / PNG, up to 5 MiB)",
             type=["jpg", "jpeg", "png"],
@@ -122,40 +106,37 @@ def _render_snake_registration(api_base_url: str, access_token: str) -> None:
         )
 
         with st.expander("Optional Details"):
-            nickname = st.text_input("Nickname")
-            introduction = st.text_area("Introduction")
+            nickname = st.text_input("Pet Name")
+            introduction = st.text_area("Additional Information")
             sire_description = st.text_area("Sire Description")
             dam_description = st.text_area("Dam Description")
 
-        submitted = st.form_submit_button("Register")
+        submitted = st.form_submit_button("Register", type="primary", key="register_snake")
 
     if not submitted:
         return
 
-    required_text = [breeder_internal_id, species, sex, genetic_description]
     if (
         snake_id == ""
-        or any(not value.strip() for value in required_text)
+        or sex is None
         or photo is None
     ):
         st.error("Please complete all required fields and upload a photo.")
         return
 
-    if date_of_birth is None:
-        st.error(
-            "Please select a valid date of birth."
-            if invalid_birth_date
-            else "Please select the month, day, and year of birth."
-        )
+    if not species.strip() or len(species) > 100:
+        st.error("Please enter a Species of 1 to 100 characters, not just whitespace.")
+        return
+
+    if date_of_birth is None or date_of_birth > date.today():
+        st.error("Please select a date of birth that is not in the future.")
         return
 
     profile = {
         "snake_id": snake_id,
-        "breeder_internal_id": breeder_internal_id,
         "species": species,
         "sex": sex,
         "date_of_birth": date_of_birth.isoformat(),
-        "genetic_description": genetic_description,
         "nickname": nickname if nickname.strip() else None,
         "introduction": introduction if introduction.strip() else None,
         "sire_description": sire_description if sire_description.strip() else None,
@@ -170,9 +151,10 @@ def _render_snake_registration(api_base_url: str, access_token: str) -> None:
             photo_name=photo.name,
             photo_content=photo_content,
             access_token=access_token,
+            network=network,
         )
 
-    st.session_state["registration_result"] = {
+    st.session_state[result_key] = {
         "status_code": status_code,
         "payload": payload,
         "profile": profile,
@@ -190,16 +172,16 @@ def _render_snake_profile(
     account: dict,
 ) -> None:
     st.divider()
-    st.subheader("Snake Profile")
+    st.subheader("Pet Profile")
 
-    st.session_state.setdefault("profile_lookup_id", "SNAKE001")
+    st.session_state.setdefault("profile_lookup_id", "")
     selected_id = st.session_state.pop("buyer_selected_snake_id", None)
     if selected_id is not None:
         st.session_state["profile_lookup_id"] = selected_id
 
     with st.form("view_snake_profile"):
         snake_id = st.text_input(
-            "Snake ID", key="profile_lookup_id"
+            "Pet ID", key="profile_lookup_id"
         )
         submitted = st.form_submit_button(
             "View Profile",
@@ -209,7 +191,7 @@ def _render_snake_profile(
 
     if submitted:
         if snake_id == "":
-            st.error("Please enter a snake ID.")
+            st.error("Please enter a pet ID.")
         else:
             with st.spinner("Loading the saved profile..."):
                 _select_snake_profile(
@@ -229,7 +211,7 @@ def _render_snake_profile(
 
     with st.container(border=False, key="snake_profile_card"):
         st.subheader(profile.get("nickname") or profile["snake_id"])
-        st.caption(f"Snake ID: {profile['snake_id']}")
+        st.caption(f"Pet ID: {profile['snake_id']}")
 
         if error is not None:
             st.warning(error)
@@ -243,12 +225,12 @@ def _render_snake_profile(
                 st.info("Profile photo is unavailable.")
 
         with details_column:
-            st.markdown("**Basic Information**")
+            st.markdown('<p class="profile-section-title">Basic Information</p>', unsafe_allow_html=True)
             basic_fields = [
-                ("Snake ID", "snake_id"),
-                ("Breeder", "breeder_name"),
-                ("Breeder Internal ID", "breeder_internal_id"),
+                ("Pet ID", "snake_id"),
+                ("Pet Name", "nickname"),
                 ("Species", "species"),
+                ("Seller", "breeder_name"),
                 ("Sex", "sex"),
                 ("Date of Birth", "date_of_birth"),
             ]
@@ -261,15 +243,17 @@ def _render_snake_profile(
             ])
 
         st.divider()
-        st.markdown("**Profile Details**")
+        st.markdown('<p class="profile-section-title">Profile Details</p>', unsafe_allow_html=True)
         description_fields = [
             ("Genetic Description", "genetic_description"),
-            ("Introduction", "introduction"),
+            ("Additional Information", "introduction"),
             ("Sire Description", "sire_description"),
             ("Dam Description", "dam_description"),
         ]
         for label, field in description_fields:
-            st.markdown(f"**{label}**")
+            if field == "genetic_description" and not profile.get(field):
+                continue
+            st.markdown(f'<p class="profile-field-label">{label}</p>', unsafe_allow_html=True)
             st.write(profile.get(field) or "Not provided")
 
     if account["role"] in {"buyer", "breeder"}:
@@ -336,7 +320,7 @@ def _render_buyer_snake_showcase(
     access_token: str,
 ) -> None:
     st.divider()
-    st.subheader("Explore Snake Profiles")
+    st.subheader("Explore Pet Profiles")
 
     if st.button("Shuffle Profiles", key="shuffle_buyer_snake_profiles"):
         st.session_state.pop("buyer_snake_showcase", None)
@@ -347,7 +331,7 @@ def _render_buyer_snake_showcase(
         "buyer_snake_showcase_error" not in st.session_state
     ):
         try:
-            with st.spinner("Finding snake profiles..."):
+            with st.spinner("Finding pet profiles..."):
                 st.session_state["buyer_snake_showcase"] = (
                     fetch_random_snake_profiles(
                         api_base_url=api_base_url,
@@ -371,12 +355,12 @@ def _render_buyer_snake_showcase(
         with column:
             if index >= len(profiles):
                 with st.container(border=True):
-                    st.info("No additional snake profile is available.")
+                    st.info("No additional pet profile is available.")
                 continue
 
             profile, photo_content, photo_error = profiles[index]
             if profile is None:
-                st.info(photo_error or "Snake profile is unavailable.")
+                st.info(photo_error or "Pet profile is unavailable.")
                 continue
 
             snake_id = profile["snake_id"]
@@ -387,7 +371,7 @@ def _render_buyer_snake_showcase(
                     st.image(
                         photo_content,
                         width="stretch",
-                        alt=f"Photo of ball python {nickname}",
+                        alt=f"Photo of pet {nickname}",
                     )
                     clicked = st.button(
                         f"View profile: {nickname} ({snake_id})",
@@ -404,7 +388,7 @@ def _render_buyer_snake_showcase(
                     )
 
                 if clicked:
-                    with st.spinner("Opening the snake profile..."):
+                    with st.spinner("Opening the pet profile..."):
                         _select_snake_profile(
                             api_base_url=api_base_url,
                             snake_id=snake_id,
@@ -420,9 +404,9 @@ def render_workspace(
     *, api_base_url: str, account: dict, access_token: str
 ) -> None:
     role_labels = {
-        "breeder": "BREEDER",
-        "buyer": "BUYER",
-        "lab": "LAB STAFF",
+        "breeder": "Seller",
+        "buyer": "Buyer",
+        "lab": "Laboratory",
     }
     role = account["role"]
     role_label = role_labels[role]
@@ -431,14 +415,15 @@ def render_workspace(
 
     with st.container(border=False, key="workspace_header"):
         with st.container(horizontal=True, vertical_alignment="center", gap="large"):
-            render_pythonpass_logo(width_px=280)
+            if not st.session_state.get("demo_role"):
+                render_pythonpass_logo(width_px=280)
             st.markdown(f"**{role_label}**", width="content")
             st.html(
                 f"""
                 <div class="workspace-account">
                   <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                    <circle cx="12" cy="7" r="3.5" fill="none" stroke="#291344" stroke-width="2" />
-                    <path d="M4.5 21v-2a7.5 7.5 0 0 1 15 0v2z" fill="none" stroke="#291344" stroke-width="2" />
+                    <circle cx="12" cy="7" r="3.5" fill="none" stroke="#243B30" stroke-width="2" />
+                    <path d="M4.5 21v-2a7.5 7.5 0 0 1 15 0v2z" fill="none" stroke="#243B30" stroke-width="2" />
                   </svg>
                   <span>{escape(account['username'])}</span>
                 </div>
@@ -446,8 +431,58 @@ def render_workspace(
                 width="content",
             )
 
-            if st.button("Sign Out", key="account_sign_out", type="secondary"):
+            if st.button("Exit Demo Mode" if st.session_state.get("demo_role") else "Sign Out", key="account_sign_out", type="secondary"):
                 sign_out_current_account(access_token=access_token)
+
+    st.subheader(f"{st.session_state.get('demo_role') or role_label} Workspace")
+    mode_label = "Demo Mode" if st.session_state.get("demo_role") else "Normal Mode"
+    selected_network = st.segmented_control(
+        "Blockchain Network",
+        ["Local Anvil", "Sepolia Testnet"],
+        default="Local Anvil",
+        key="workspace_blockchain_network",
+        width="content",
+    )
+    network = "sepolia" if selected_network == "Sepolia Testnet" else "anvil"
+    st.info(f"Active network: {selected_network} · {mode_label}")
+
+    if network == "sepolia":
+        if role == "lab":
+            with st.container(key="sepolia_lab_certificate_workspace"):
+                render_certificate_issuance(
+                    api_base_url=api_base_url, account=account,
+                    access_token=access_token, network="sepolia",
+                )
+        elif role in {"breeder", "buyer"}:
+            if role == "breeder":
+                st.caption("Sepolia Testnet · Seller Pet Registration and Keeper Transfer.")
+                _render_snake_registration(api_base_url, access_token, network="sepolia")
+            else:
+                st.caption("Sepolia Testnet · Buyer Keeper Transfer.")
+            st.divider()
+            transfer_pet_key = f"sepolia_keeper_pet_id_{account['participant_id']}"
+            completed_registration = st.session_state.get("registration_result_sepolia")
+            if (
+                role == "breeder"
+                and transfer_pet_key not in st.session_state
+                and completed_registration is not None
+                and completed_registration["status_code"] == 201
+            ):
+                st.session_state[transfer_pet_key] = completed_registration["profile"]["snake_id"]
+            transfer_pet_id = st.text_input(
+                "Pet ID for Sepolia Keeper Transfer",
+                key=transfer_pet_key,
+            )
+            if transfer_pet_id.strip():
+                render_keeper_transfer_section(
+                    api_base_url=api_base_url, snake_id=transfer_pet_id.strip(),
+                    account=account, access_token=access_token, network="sepolia",
+                )
+        st.caption(
+            "Husbandry Records remain available in Local Anvil only; "
+            "they are not represented as Sepolia features."
+        )
+        return
 
     if role == "lab":
         with st.container(key="lab_certificate_workspace"):
@@ -459,7 +494,7 @@ def render_workspace(
         return
 
     if role == "breeder":
-        _render_snake_registration(api_base_url, access_token)
+        _render_snake_registration(api_base_url, access_token, network="anvil")
 
     _render_snake_profile(api_base_url, access_token, account)
 

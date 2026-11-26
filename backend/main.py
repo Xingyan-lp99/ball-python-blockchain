@@ -1,8 +1,10 @@
 import os
+import sys
 
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 
+from backend.sepolia_registry import configure_local_sepolia_signers
 from backend.database import check_database_connection
 from backend.husbandry_routes import router as husbandry_router
 from backend.snake_routes import router as snake_router
@@ -12,6 +14,7 @@ from backend.session_routes import router as session_router
 
 from backend.certificate_routes import router as certificate_router
 from backend.keeper_transfer_routes import router as keeper_transfer_router
+from backend.sepolia_routes import router as sepolia_router
 
 app = FastAPI()
 app.include_router(snake_router)
@@ -20,6 +23,15 @@ app.include_router(account_router)
 app.include_router(session_router)
 app.include_router(certificate_router)
 app.include_router(keeper_transfer_router)
+app.include_router(sepolia_router)
+
+
+if os.environ.get("SEPOLIA_DEMO_SIGNING") == "1":
+    @app.on_event("startup")
+    def load_local_sepolia_signers() -> None:
+        if not sys.stdin.isatty():
+            raise RuntimeError("Sepolia demo signing requires a local interactive terminal.")
+        configure_local_sepolia_signers()
 
 # Purpose: report that the backend can respond.
 # Workflow: environment setup, Day 1, step 1.

@@ -1,10 +1,11 @@
 import base64
+import ipaddress
 import os
 from datetime import date
 from typing import Annotated, Literal
 
 import psycopg
-from fastapi import APIRouter, File, Form, UploadFile
+from fastapi import APIRouter, File, Form, Request, UploadFile
 from fastapi.responses import FileResponse, JSONResponse
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 from requests.exceptions import RequestException
@@ -20,6 +21,10 @@ from backend.photos import (
 from backend.register_snake import (
     RegistrationTransactionError,
     SnakeAlreadyRegisteredError,
+)
+from backend.sepolia_registry import (
+    SepoliaRegistrationError,
+    register_pet_on_sepolia,
 )
 from backend.snake_registration import (
     SnakeProfileExistsError,
@@ -44,11 +49,10 @@ class SnakeRegistrationRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     snake_id: str = Field(min_length=1, strict=True)
-    breeder_internal_id: NonBlankText
-    species: NonBlankText
+    species: Annotated[str, Field(strict=True, pattern=r"\S", max_length=100)]
     sex: NonBlankText
     date_of_birth: date
-    genetic_description: NonBlankText
+    genetic_description: NonBlankText | None = None
 
     nickname: str | None = None
     introduction: str | None = None
@@ -61,6 +65,13 @@ class SnakeRegistrationResponse(BaseModel):
     receipt_status: Literal[1]
     snake_id: str
     initial_keeper: str
+    contract_address: str | None = None
+    etherscan_url: str | None = None
+    chain_id: int | None = None
+    estimated_gas: int | None = None
+    gas_limit: int | None = None
+    max_fee_per_gas: int | None = None
+    max_cost_wei: int | None = None
 
 
 # Purpose: register a profile and uploaded photo using the signed-in breeder.
@@ -74,10 +85,12 @@ class SnakeRegistrationResponse(BaseModel):
 def create_snake(
     profile_json: Annotated[str, Form()],
     photo: Annotated[UploadFile, File()],
+    http_request: Request,
     account: BreederAccount,
+    network: Annotated[Literal["anvil", "sepolia"], Form()],
 ) -> SnakeRegistrationResponse | JSONResponse:
     try:
-        request = SnakeRegistrationRequest.model_validate_json(profile_json)
+        registration = SnakeRegistrationRequest.model_validate_json(profile_json)
     except ValidationError as error:
         return JSONResponse(
             status_code=422,
@@ -90,10 +103,28 @@ def create_snake(
             },
         )
 
+    if network == "sepolia":
+        try:
+            is_local_request = bool(
+                http_request.client
+                and ipaddress.ip_address(http_request.client.host).is_loopback
+            )
+        except ValueError:
+            is_local_request = False
+        if not is_local_request:
+            return JSONResponse(
+                status_code=403,
+                content={
+                    "detail": "Sepolia signing is available only through the local demo.",
+                    "outcome": "not_submitted",
+                    "transaction_hash": None,
+                },
+            )
+
     contract_address = os.environ.get("DEMO_REGISTRY_ADDRESS", "")
     password = os.environ.get("DEMO_DB_PASSWORD")
 
-    if not Web3.is_address(contract_address) or not password:
+    if not password or (network == "anvil" and not Web3.is_address(contract_address)):
         return JSONResponse(
             status_code=503,
             content={
@@ -125,9 +156,28 @@ def create_snake(
             if breeder is None:
                 raise UnknownParticipantError("Demo breeder is not configured.")
 
+            if network == "sepolia":
+                if account.participant_id != "BREEDER001":
+                    return JSONResponse(
+                        status_code=403,
+                        content={
+                            "detail": "Only the configured Seller can register on Sepolia.",
+                            "outcome": "not_submitted",
+                            "transaction_hash": None,
+                        },
+                    )
+                content = photo.file.read(MAX_PHOTO_BYTES + 1)
+                result = register_pet_on_sepolia(
+                    connection,
+                    participant_id=account.participant_id,
+                    profile=registration.model_dump(),
+                    photo_content=content,
+                )
+                return SnakeRegistrationResponse(**result)
+
             existing = connection.execute(
                 "SELECT 1 FROM snakes WHERE snake_id = %s",
-                (request.snake_id,),
+                (registration.snake_id,),
             ).fetchone()
 
             if existing is not None:
@@ -143,7 +193,7 @@ def create_snake(
                     content={"detail": str(error)},
                 )
 
-            profile = request.model_dump()
+            profile = registration.model_dump()
             profile["photo_reference"] = photo_reference
 
             result = register_snake_profile(
@@ -154,6 +204,22 @@ def create_snake(
                 sender_address=breeder[0],
                 profile=profile,
             )
+    except SepoliaRegistrationError as error:
+        status_code = 503 if error.outcome in {
+            "unknown", "unverified", "storage_error"
+        } else 502 if error.outcome == "failed" else 422
+        return JSONResponse(
+            status_code=status_code,
+            content={
+                "detail": str(error),
+                "outcome": error.outcome,
+                "transaction_hash": error.transaction_hash,
+                "etherscan_url": (
+                    f"https://sepolia.etherscan.io/tx/{error.transaction_hash}"
+                    if error.transaction_hash else None
+                ),
+            },
+        )
     except UnknownParticipantError:
         return JSONResponse(
             status_code=422,
@@ -219,6 +285,8 @@ def create_snake(
     return SnakeRegistrationResponse(**result)
 
 class SnakeProfileResponse(SnakeRegistrationRequest):
+    species: NonBlankText
+
     breeder_id: str
     breeder_name: str
     photo_url: str

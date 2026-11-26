@@ -39,6 +39,13 @@ class KeeperTransferInitiationResponse(BaseModel):
     current_keeper_address: str
     transaction_hash: str
     receipt_status: Literal[1]
+    contract_address: str | None = None
+    etherscan_url: str | None = None
+    chain_id: int | None = None
+    estimated_gas: int | None = None
+    gas_limit: int | None = None
+    max_fee_per_gas: int | None = None
+    max_cost_wei: int | None = None
 
 
 class KeeperTransferResolutionResponse(KeeperTransferInitiationResponse):
@@ -66,13 +73,15 @@ class KeeperTransferStatusResponse(BaseModel):
     initiated_at: datetime | None
     resolved_at: datetime | None
     transaction_hash: str | None
-    transaction_status: Literal["submitted", "confirmed", "failed"] | None
+    transaction_status: Literal[
+        "prepared", "submitted", "confirmed", "failed", "unknown"
+    ] | None
     chain_block_number: int | None
     detail: str | None
+    etherscan_url: str | None = None
 
 
-# Purpose: share database access and safe failure responses for transfer writes.
-# Without this helper, the four operations could report uncertainty differently.
+# Submit demo transfers using the authenticated participant and local test account.
 def _execute_transfer_write(
     *,
     operation: Callable[..., dict],

@@ -3,7 +3,7 @@ from collections.abc import Iterator
 from datetime import date
 from pathlib import Path
 from uuid import uuid4
-from backend.snake_profiles import save_snake_profile
+from backend.snake_profiles import save_snake_profile, get_snake_profile
 
 import psycopg
 import pytest
@@ -23,6 +23,7 @@ MIGRATION_PATHS = [
     MIGRATIONS_DIRECTORY / "001_create_participants_and_snakes.sql",
     MIGRATIONS_DIRECTORY / "002_require_snake_sex.sql",
     MIGRATIONS_DIRECTORY / "003_create_blockchain_transactions.sql",
+    MIGRATIONS_DIRECTORY / "009_remove_breeder_internal_id.sql",
 ]
 
 
@@ -73,7 +74,6 @@ def profile() -> dict[str, object]:
     return {
         "snake_id": "SNAKE001",
         "breeder_id": "BREEDER001",
-        "breeder_internal_id": "BP001",
         "species": "Python regius",
         "sex": "Female",
         "date_of_birth": date(2025, 6, 1),
@@ -115,12 +115,12 @@ def test_profile_is_stored_with_unconfirmed_keeper(
     assert row[5] is not None
     assert row[6] is not None
     assert row[7] == "Female"
+    assert "breeder_internal_id" not in get_snake_profile(connection, snake_id="SNAKE001")
 
 
 @pytest.mark.parametrize(
     "field",
     [
-        "breeder_internal_id",
         "species",
         "date_of_birth",
         "genetic_description",
@@ -142,7 +142,6 @@ def test_required_fields_reject_null(
 @pytest.mark.parametrize(
     "field",
     [
-        "breeder_internal_id",
         "species",
         "genetic_description",
         "photo_reference",

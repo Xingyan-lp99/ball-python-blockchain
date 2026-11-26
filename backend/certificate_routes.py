@@ -20,6 +20,7 @@ from backend.certificates import (
     get_certificate_file_reference,
     issue_certificate,
     list_certificate_history,
+    list_laboratory_reports,
     revise_certificate,
 )
 
@@ -40,6 +41,13 @@ class CertificateIssuanceResponse(BaseModel):
     issued_at: datetime
     transaction_hash: str
     receipt_status: Literal[1]
+    contract_address: str | None = None
+    etherscan_url: str | None = None
+    chain_id: int | None = None
+    estimated_gas: int | None = None
+    gas_limit: int | None = None
+    max_fee_per_gas: int | None = None
+    max_cost_wei: int | None = None
 
 
 class CertificateRevisionResponse(CertificateIssuanceResponse):
@@ -73,6 +81,14 @@ class CertificateHistoryResponse(BaseModel):
     chain_block_number: int | None
     warnings: list[str]
     series: list[CertificateSeriesHistory]
+
+
+class LaboratoryReportSummary(BaseModel):
+    series_id: str
+    snake_id: str
+    title: str
+    laboratory_id: str
+    latest_version_number: int
 
 
 @contextmanager
@@ -222,6 +238,12 @@ def _write_certificate(
         )
 
     return result
+
+
+@router.get("/laboratories/me/certificate-series", response_model=list[LaboratoryReportSummary])
+def read_my_laboratory_reports(account: LaboratoryAccount) -> list[dict]:
+    with _read_certificate_database() as connection:
+        return list_laboratory_reports(connection, participant_id=account.participant_id)
 
 
 # Purpose: accept an authenticated laboratory's first report upload.

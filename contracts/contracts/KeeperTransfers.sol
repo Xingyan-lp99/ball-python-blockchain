@@ -1,14 +1,26 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity 0.8.28;
 
+// Read-only link to the original registration contract, not a second registry.
 interface IInitialKeeperRegistry {
     function getCurrentKeeper(
         string calldata snakeId
     ) external view returns (address);
 }
 
+/// @title Ball Python Keeper Management and Consensual Transfers
 /// @notice Keeper transfers for snakes registered in the existing SnakeRegistry.
 /// @dev Adapted from keeper-transfer commit b527c1c without replacing that registry.
+/// Deploy after SnakeRegistry and supply that registry's address. This contract
+/// is the current-keeper authority; SnakeRegistry retains the initial keeper.
+/// Example: A initiates a transfer to B and remains keeper while it is pending.
+/// B may accept or reject; A may cancel. Only acceptance changes the keeper.
+/// There is no administrator override, payment handling, or transfer expiry.
+/// Permissions use msg.sender, independently of website roles or SQL records.
+/// The local demo submits through development accounts; these checks alone do
+/// not prove that a person approved a transaction in a browser wallet.
+/// Off-chain services must enforce these rights when writing off-chain records;
+/// this contract cannot prevent direct modification of database contents.
 contract KeeperTransfers {
     struct PendingKeeperTransfer {
         address fromKeeper;
@@ -18,6 +30,7 @@ contract KeeperTransfers {
 
     IInitialKeeperRegistry public immutable snakeRegistry;
 
+    // Only accepted transfers populate this mapping; zero means use initial keeper.
     mapping(string => address) private transferredKeepers;
     mapping(string => PendingKeeperTransfer) private pendingKeeperTransfers;
 
@@ -31,6 +44,9 @@ contract KeeperTransfers {
     error NotDesignatedRecipient();
     error InvalidTransferState();
 
+    // Events preserve lifecycle evidence in chain logs after pending state clears.
+    // An indexed string appears as a Keccak hash in topics, not readable text.
+    // Log retention depends on retaining the chain; a local chain can be reset.
     event KeeperTransferInitiated(
         string indexed snakeId,
         address indexed fromKeeper,
@@ -52,6 +68,10 @@ contract KeeperTransfers {
         address indexed recipient
     );
 
+    // Fix the registration source at deployment; it cannot later be reassigned.
+    // Without this link, existing snake IDs and initial keepers cannot be resolved.
+    // Code presence is checked, but the deployer must select the intended registry.
+    // A new KeeperTransfers deployment has independent state, not copied history.
     constructor(address snakeRegistryAddress) {
         if (snakeRegistryAddress == address(0)) {
             revert ZeroAddress();

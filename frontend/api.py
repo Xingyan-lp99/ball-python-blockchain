@@ -112,10 +112,10 @@ def fetch_public_snake_showcase_images(*, api_base_url: str) -> list[bytes]:
             timeout=(3, 10),
         )
     except requests.RequestException:
-        raise AccountRequestError("Snake photos are temporarily unavailable.") from None
+        raise AccountRequestError("Pet photos are temporarily unavailable.") from None
 
     if response.status_code != 200:
-        raise AccountRequestError("Snake photos are temporarily unavailable.")
+        raise AccountRequestError("Pet photos are temporarily unavailable.")
 
     try:
         payload = response.json()
@@ -190,14 +190,15 @@ def submit_snake_registration(
     photo_name: str,
     photo_content: bytes,
     access_token: str,
+    network: Literal["anvil", "sepolia"],
 ) -> tuple[int | None, dict]:
     try:
         response = requests.post(
             url,
-            data={"profile_json": json.dumps(profile)},
+            data={"profile_json": json.dumps(profile), "network": network},
             files={"photo": (photo_name, photo_content)},
             headers=_authorization(access_token),
-            timeout=(5, 60),
+            timeout=(5, 180),
         )
     except requests.RequestException:
         return None, {
@@ -221,6 +222,18 @@ def submit_snake_registration(
     if response.status_code == 201 and (
         payload.get("receipt_status") != 1
         or payload.get("snake_id") != profile["snake_id"]
+        or (
+            network == "sepolia"
+            and (
+                payload.get("chain_id") != 11155111
+                or not all(
+                    isinstance(payload.get(field), int)
+                    for field in ("estimated_gas", "gas_limit", "max_fee_per_gas", "max_cost_wei")
+                )
+                or not isinstance(payload.get("contract_address"), str)
+                or not isinstance(payload.get("etherscan_url"), str)
+            )
+        )
     ):
         return None, {
             "detail": "The registration response does not match the submitted data. Check the result before submitting again.",
@@ -252,7 +265,7 @@ def fetch_snake_profile(
     _check_session_response(response)
 
     if response.status_code == 404:
-        return None, None, "Snake profile not found."
+        return None, None, "Pet profile not found."
 
     if response.status_code != 200:
         return None, None, "The profile service is unavailable."
@@ -490,6 +503,7 @@ def _submit_certificate_upload(
     pdf_name: str,
     pdf_content: bytes,
     access_token: str,
+    network: Literal["anvil", "sepolia"],
 ) -> tuple[int | None, dict]:
     try:
         response = requests.post(
@@ -499,7 +513,7 @@ def _submit_certificate_upload(
                 "pdf": (pdf_name, pdf_content, "application/pdf"),
             },
             headers=_authorization(access_token),
-            timeout=(5, 60),
+            timeout=(5, 180),
         )
     except requests.RequestException:
         return None, {
@@ -537,6 +551,8 @@ def _submit_certificate_upload(
         )
         if minimum_version >= 2:
             required_text += ("previous_version_id",)
+        if network == "sepolia":
+            required_text += ("contract_address", "etherscan_url")
 
         valid_result = (
             payload.get("receipt_status") == 1
@@ -551,6 +567,13 @@ def _submit_certificate_upload(
                 isinstance(payload.get(field), str)
                 and bool(payload[field])
                 for field in required_text
+            )
+            and (
+                network != "sepolia"
+                or payload.get("chain_id") == 11155111
+                and all(type(payload.get(field)) is int for field in (
+                    "estimated_gas", "gas_limit", "max_fee_per_gas", "max_cost_wei"
+                ))
             )
         )
 
@@ -586,15 +609,18 @@ def submit_certificate_issuance(
     pdf_name: str,
     pdf_content: bytes,
     access_token: str,
+    network: Literal["anvil", "sepolia"] = "anvil",
 ) -> tuple[int | None, dict]:
     return _submit_certificate_upload(
-        url=f"{api_base_url.rstrip('/')}/api/v1/certificate-series",
+        url=(f"{api_base_url.rstrip('/')}/api/v1/sepolia/certificate-series"
+             if network == "sepolia" else f"{api_base_url.rstrip('/')}/api/v1/certificate-series"),
         form_fields={"snake_id": snake_id, "title": title},
         expected_fields={"snake_id": snake_id, "version_number": 1},
         minimum_version=1,
         pdf_name=pdf_name,
         pdf_content=pdf_content,
         access_token=access_token,
+        network=network,
     )
 
 
@@ -607,12 +633,12 @@ def submit_certificate_revision(
     pdf_name: str,
     pdf_content: bytes,
     access_token: str,
+    network: Literal["anvil", "sepolia"] = "anvil",
 ) -> tuple[int | None, dict]:
     return _submit_certificate_upload(
-        url=(
-            f"{api_base_url.rstrip('/')}/api/v1/certificate-series/"
-            f"{quote(series_id, safe='')}/versions"
-        ),
+        url=(f"{api_base_url.rstrip('/')}/api/v1/sepolia/certificate-series/"
+             if network == "sepolia" else f"{api_base_url.rstrip('/')}/api/v1/certificate-series/")
+             + f"{quote(series_id, safe='')}/versions",
         form_fields={},
         expected_fields={
             "series_id": series_id,
@@ -622,11 +648,137 @@ def submit_certificate_revision(
         pdf_name=pdf_name,
         pdf_content=pdf_content,
         access_token=access_token,
+        network=network,
     )
+
+
+def recover_sepolia_certificate_transaction(
+    *, api_base_url: str, transaction_hash: str, access_token: str,
+) -> tuple[int | None, dict]:
+    try:
+        response = requests.post(
+            f"{api_base_url.rstrip('/')}/api/v1/sepolia/certificate-transactions/recover",
+            json={"transaction_hash": transaction_hash},
+            headers=_authorization(access_token),
+            timeout=(5, 60),
+        )
+    except requests.RequestException:
+        return None, {
+            "detail": "Recovery could not be completed. The saved transaction was not resubmitted.",
+            "outcome": "unknown",
+            "transaction_hash": transaction_hash,
+        }
+
+    _check_session_response(response)
+    try:
+        payload = response.json()
+    except ValueError:
+        payload = None
+    if not isinstance(payload, dict):
+        return response.status_code, {
+            "detail": "The recovery response could not be read. No transaction was sent.",
+            "outcome": "unknown",
+            "transaction_hash": transaction_hash,
+        }
+
+    if response.status_code == 200:
+        valid = (
+            payload.get("transaction_hash", "").lower() == transaction_hash.lower()
+            and payload.get("receipt_status") == 1
+            and payload.get("chain_id") == 11155111
+            and payload.get("status") == "current"
+            and all(isinstance(payload.get(field), str) and payload[field] for field in (
+                "snake_id", "series_id", "version_id", "file_hash", "issuer_address",
+                "contract_address", "etherscan_url", "issued_at",
+            ))
+            and type(payload.get("version_number")) is int
+            and (
+                payload["version_number"] == 1
+                or payload.get("previous_version_status") == "superseded"
+                and isinstance(payload.get("previous_version_id"), str)
+                and bool(payload["previous_version_id"])
+            )
+        )
+        if valid:
+            return 201, payload
+        return None, {
+            "detail": "The saved transaction response did not pass validation. Do not resubmit.",
+            "outcome": "unverified",
+            "transaction_hash": transaction_hash,
+            "etherscan_url": f"https://sepolia.etherscan.io/tx/{transaction_hash}",
+        }
+
+    payload["outcome"] = "unverified"
+    return response.status_code, payload
+
+
+def run_sepolia_certificate_permission_demo(
+    *, api_base_url: str,
+    operation: Literal["unauthorized_issuance", "cross_lab_revision"],
+    access_token: str,
+) -> dict:
+    try:
+        response = requests.post(
+            f"{api_base_url.rstrip('/')}/api/v1/sepolia/certificate-permission-demo",
+            json={"operation": operation, "snake_id": "BP-S004"},
+            headers=_authorization(access_token),
+            timeout=(5, 30),
+        )
+    except requests.RequestException:
+        raise CertificateRequestError("The read-only Sepolia permission check could not reach the backend.") from None
+    _check_session_response(response)
+    try:
+        payload = response.json()
+    except ValueError:
+        payload = None
+    expected_fields = {
+        "network", "contract", "contract_address", "pet_id", "simulated_caller",
+        "operation", "authorization_status", "contract_result", "state_unchanged",
+        "read_only_notice", "permission_denied",
+    }
+    if response.status_code != 200 or not isinstance(payload, dict) or not expected_fields.issubset(payload):
+        detail = payload.get("detail") if isinstance(payload, dict) else None
+        raise CertificateRequestError(
+            detail if isinstance(detail, str) else "The Sepolia permission check returned an incomplete result."
+        )
+    if payload.get("operation") not in {
+        "issueCertificate(string,string,string,bytes32)",
+        "appendRevision(string,string,bytes32)",
+    }:
+        raise CertificateRequestError("The permission check operation did not match the request.")
+    return payload
 
 
 class CertificateRequestError(RuntimeError):
     """Report a history or PDF read failure without leaking request details."""
+
+
+def check_sepolia_unauthorized_laboratory(
+    *, api_base_url: str, snake_id: str, access_token: str,
+) -> str:
+    try:
+        response = requests.post(
+            f"{api_base_url.rstrip('/')}/api/v1/sepolia/certificate-unauthorized-check",
+            json={"snake_id": snake_id}, headers=_authorization(access_token),
+            timeout=(5, 20),
+        )
+    except requests.RequestException:
+        raise CertificateRequestError("The unauthorized Laboratory check could not be completed.") from None
+    _check_session_response(response)
+    try:
+        payload = response.json()
+    except ValueError:
+        payload = None
+    if (
+        response.status_code != 200 or not isinstance(payload, dict)
+        or payload.get("outcome") != "rejected"
+        or not isinstance(payload.get("detail"), str)
+    ):
+        detail = payload.get("detail") if isinstance(payload, dict) else None
+        raise CertificateRequestError(
+            detail if isinstance(detail, str) else "The contract rejection was not confirmed."
+        )
+    return payload["detail"]
 
 
 # Purpose: share authenticated read handling for certificate history and PDFs.
@@ -661,11 +813,13 @@ def _get_certificate_response(
 # Purpose: retrieve all series and versions belonging to a snake.
 # Without this helper, the profile page cannot display certificate history.
 def fetch_certificate_history(
-    *, api_base_url: str, snake_id: str, access_token: str
+    *, api_base_url: str, snake_id: str, access_token: str,
+    network: Literal["anvil", "sepolia"] = "anvil",
 ) -> dict:
+    prefix = "/api/v1/sepolia" if network == "sepolia" else "/api/v1"
     response = _get_certificate_response(
         url=(
-            f"{api_base_url.rstrip('/')}/api/v1/snakes/"
+            f"{api_base_url.rstrip('/')}{prefix}/snakes/"
             f"{quote(snake_id, safe='')}/certificate-series"
         ),
         access_token=access_token,
@@ -687,14 +841,44 @@ def fetch_certificate_history(
     return payload
 
 
-# Purpose: retrieve the selected version's PDF using the login session.
-# Without this helper, Streamlit cannot offer an authenticated file download.
+# Retrieve revision choices from the signed-in laboratory, not from browser history.
+def fetch_laboratory_reports(
+    *, api_base_url: str, access_token: str,
+    network: Literal["anvil", "sepolia"] = "anvil",
+) -> list[dict]:
+    prefix = "/api/v1/sepolia" if network == "sepolia" else "/api/v1"
+    response = _get_certificate_response(
+        url=f"{api_base_url.rstrip('/')}{prefix}/laboratories/me/certificate-series",
+        access_token=access_token,
+    )
+    try:
+        reports = response.json()
+    except ValueError:
+        reports = None
+    if (
+        not isinstance(reports, list)
+        or any(
+            not isinstance(report, dict)
+            or any(not isinstance(report.get(key), str) or not report[key] for key in ("series_id", "snake_id", "title", "laboratory_id"))
+            or type(report.get("latest_version_number")) is not int
+            or report["latest_version_number"] < 0
+            for report in reports
+        )
+        or len({report["series_id"] for report in reports}) != len(reports)
+    ):
+        raise CertificateRequestError("The certificate service returned an invalid report list.")
+    return reports
+
+
+# Retrieve a historical version's original PDF using the login session.
 def fetch_certificate_pdf(
-    *, api_base_url: str, version_id: str, access_token: str
+    *, api_base_url: str, version_id: str, access_token: str,
+    network: Literal["anvil", "sepolia"] = "anvil",
 ) -> bytes:
+    prefix = "/api/v1/sepolia" if network == "sepolia" else "/api/v1"
     response = _get_certificate_response(
         url=(
-            f"{api_base_url.rstrip('/')}/api/v1/certificate-versions/"
+            f"{api_base_url.rstrip('/')}{prefix}/certificate-versions/"
             f"{quote(version_id, safe='')}/file"
         ),
         access_token=access_token,
@@ -715,11 +899,13 @@ class KeeperTransferRequestError(RuntimeError):
 # Purpose: retrieve authoritative manager identity and the transfer's latest state.
 # Without this read, the page cannot choose which transfer controls to display.
 def fetch_keeper_transfer_status(
-    *, api_base_url: str, snake_id: str, access_token: str
+    *, api_base_url: str, snake_id: str, access_token: str,
+    network: Literal["anvil", "sepolia"] = "anvil",
 ) -> dict:
+    prefix = "/api/v1/sepolia" if network == "sepolia" else "/api/v1"
     try:
         response = requests.get(
-            f"{api_base_url.rstrip('/')}/api/v1/snakes/"
+            f"{api_base_url.rstrip('/')}{prefix}/snakes/"
             f"{quote(snake_id, safe='')}/keeper",
             headers=_authorization(access_token),
             timeout=(5, 45),
@@ -776,13 +962,22 @@ def _submit_keeper_transfer(
     snake_id: str | None,
     transfer_id: str | None,
     access_token: str,
+    network: Literal["anvil", "sepolia"],
 ) -> tuple[int | None, dict]:
+    sepolia_acceptance = network == "sepolia" and expected_status == "accepted"
+    known = {}
+    if sepolia_acceptance:
+        if transfer_id:
+            known["transfer_id"] = transfer_id
+        if snake_id:
+            known["snake_id"] = snake_id
     try:
         response = requests.post(
-            url, json=body, headers=_authorization(access_token), timeout=(5, 60)
+            url, json=body, headers=_authorization(access_token), timeout=(5, 180)
         )
     except requests.RequestException:
         return None, {
+            **known,
             "detail": "The transfer request could not be completed. Its outcome "
             "may be unknown. Check the existing request before submitting again.",
             "outcome": "unknown",
@@ -795,9 +990,20 @@ def _submit_keeper_transfer(
         payload = None
 
     if not isinstance(payload, dict):
+        detail = (
+            "The transfer service returned an unreadable response. "
+            "Check the result before submitting again."
+        )
+        if sepolia_acceptance:
+            detail = (
+                "The transfer service returned an empty or non-JSON response "
+                f"(HTTP {response.status_code}, Content-Type: "
+                f"{response.headers.get('Content-Type', 'missing')}). "
+                "Refresh to verify the saved acceptance; do not resubmit."
+            )
         return response.status_code, {
-            "detail": "The transfer service returned an unreadable response. "
-            "Check the result before submitting again.",
+            **known,
+            "detail": detail,
             "outcome": "unknown",
         }
 
@@ -815,6 +1021,15 @@ def _submit_keeper_transfer(
                 )
             )
             and (
+                network != "sepolia"
+                or payload.get("chain_id") == 11155111
+                and isinstance(payload.get("etherscan_url"), str)
+                and isinstance(payload.get("contract_address"), str)
+                and all(type(payload.get(field)) is int for field in (
+                    "estimated_gas", "gas_limit", "max_fee_per_gas", "max_cost_wei"
+                ))
+            )
+            and (
                 expected_status == "pending"
                 or isinstance(payload.get("resolved_at"), str)
             )
@@ -829,6 +1044,7 @@ def _submit_keeper_transfer(
                     for field in ("transfer_id", "transaction_hash")
                     if isinstance(payload.get(field), str)
                 },
+                **known,
             }
     else:
         payload.setdefault(
@@ -837,6 +1053,9 @@ def _submit_keeper_transfer(
             else "unknown",
         )
 
+    if sepolia_acceptance and "outcome" in payload:
+        for field, value in known.items():
+            payload.setdefault(field, value)
     return response.status_code, payload
 
 
@@ -845,15 +1064,18 @@ def _submit_keeper_transfer(
 def submit_keeper_transfer_request(
     *, api_base_url: str, snake_id: str,
     recipient_username: str, access_token: str,
+    network: Literal["anvil", "sepolia"] = "anvil",
 ) -> tuple[int | None, dict]:
+    prefix = "/api/v1/sepolia" if network == "sepolia" else "/api/v1"
     return _submit_keeper_transfer(
         url=(
-            f"{api_base_url.rstrip('/')}/api/v1/snakes/"
+            f"{api_base_url.rstrip('/')}{prefix}/snakes/"
             f"{quote(snake_id, safe='')}/keeper-transfers"
         ),
         body={"recipient_username": recipient_username},
         expected_status="pending", expected_http_status=201,
         snake_id=snake_id, transfer_id=None, access_token=access_token,
+        network=network,
     )
 
 
@@ -862,17 +1084,101 @@ def submit_keeper_transfer_request(
 def submit_keeper_transfer_action(
     *, api_base_url: str, transfer_id: str,
     action: Literal["accept", "reject", "cancel"], access_token: str,
+    network: Literal["anvil", "sepolia"] = "anvil",
 ) -> tuple[int | None, dict]:
     statuses = {"accept": "accepted", "reject": "rejected", "cancel": "cancelled"}
     if action not in statuses:
         raise ValueError("Unsupported transfer action.")
+    if network == "sepolia" and action != "accept":
+        raise ValueError("Sepolia demo currently supports acceptance only.")
+    prefix = "/api/v1/sepolia" if network == "sepolia" else "/api/v1"
 
     return _submit_keeper_transfer(
         url=(
-            f"{api_base_url.rstrip('/')}/api/v1/keeper-transfers/"
+            f"{api_base_url.rstrip('/')}{prefix}/keeper-transfers/"
             f"{quote(transfer_id, safe='')}/{action}"
         ),
         body=None,
         expected_status=statuses[action], expected_http_status=200,
         snake_id=None, transfer_id=transfer_id, access_token=access_token,
+        network=network,
     )
+
+
+def verify_keeper_acceptance(
+    *, api_base_url: str, access_token: str,
+    transfer_id: str | None = None, transaction_hash: str | None = None,
+) -> tuple[int | None, dict]:
+    known = {key: value for key, value in {
+        "transfer_id": transfer_id, "transaction_hash": transaction_hash,
+    }.items() if value}
+    if not known:
+        return None, {"outcome": "unknown", "detail": "The original transfer ID or acceptance Hash is required."}
+    try:
+        response = requests.get(
+            f"{api_base_url.rstrip('/')}/api/v1/sepolia/keeper-acceptance",
+            params=known, headers=_authorization(access_token), timeout=(5, 60),
+        )
+    except requests.RequestException:
+        return None, {
+            **known, "outcome": "unknown",
+            "detail": "Verification could not reach the service. The transfer remains locked; no transaction was sent.",
+        }
+    _check_session_response(response)
+    try:
+        payload = response.json()
+    except ValueError:
+        payload = None
+    if not isinstance(payload, dict):
+        return response.status_code, {
+            **known, "outcome": "unknown",
+            "detail": f"Verification returned an empty or non-JSON response (HTTP {response.status_code}). The transfer remains locked.",
+        }
+    valid = (
+        response.status_code == 200 and payload.get("historical_verified") is True
+        and type(payload.get("verified")) is bool and type(payload.get("database_synced")) is bool
+        and payload.get("status") == "accepted" and payload.get("receipt_status") == 1
+        and payload.get("chain_id") == 11155111
+        and all(isinstance(payload.get(field), str) and bool(payload[field]) for field in (
+            "transfer_id", "snake_id", "transaction_hash", "from_participant_id", "to_participant_id",
+            "recipient_username", "current_keeper_address", "initiated_at", "resolved_at",
+        ))
+        and (not transfer_id or payload.get("transfer_id") == transfer_id)
+        and (not transaction_hash or str(payload.get("transaction_hash", "")).lower() == transaction_hash.lower())
+    )
+    if valid:
+        return response.status_code, payload
+    detail = payload.get("detail")
+    return response.status_code, {
+        **{field: payload[field] for field in ("transaction_hash", "business_id")
+           if isinstance(payload.get(field), str)},
+        **known, "outcome": "unverified",
+        "detail": detail if isinstance(detail, str) else "Verification evidence does not match this acceptance.",
+    }
+
+
+def recover_keeper_acceptance(
+    *, api_base_url: str, access_token: str,
+    transfer_id: str | None = None, transaction_hash: str | None = None,
+) -> tuple[int | None, dict]:
+    reference = {key: value for key, value in {
+        "transfer_id": transfer_id, "transaction_hash": transaction_hash,
+    }.items() if value}
+    if not reference:
+        return None, {"outcome": "unverified", "detail": "The original transfer ID or acceptance Hash is required."}
+    code, payload = _submit_keeper_transfer(
+        url=f"{api_base_url.rstrip('/')}/api/v1/sepolia/keeper-acceptance/recover",
+        body=reference, expected_status="accepted", expected_http_status=200,
+        snake_id=None, transfer_id=transfer_id, access_token=access_token, network="sepolia",
+    )
+    if transaction_hash:
+        if (
+            code == 200 and "outcome" not in payload
+            and str(payload.get("transaction_hash", "")).lower() != transaction_hash.lower()
+        ):
+            return None, {
+                **reference, "outcome": "unverified",
+                "detail": "The recovery response does not match the original Hash.",
+            }
+        payload.setdefault("transaction_hash", transaction_hash)
+    return code, payload

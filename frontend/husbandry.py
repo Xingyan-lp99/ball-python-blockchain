@@ -4,9 +4,11 @@ import streamlit as st
 
 from frontend.api import (
     HusbandryRequestError,
+    KeeperTransferRequestError,
     create_husbandry_record,
     edit_husbandry_record,
     fetch_husbandry_records,
+    fetch_keeper_transfer_status,
     remove_husbandry_record,
 )
 
@@ -107,6 +109,7 @@ def _render_record_tab(
     participant_id: str,
     api_base_url: str,
     access_token: str,
+    can_write: bool,
 ) -> None:
     if record_type in state["errors"]:
         st.error(state["errors"][record_type])
@@ -126,6 +129,9 @@ def _render_record_tab(
 
     if not records:
         st.info("No records yet.")
+
+    if not can_write:
+        return
 
     blocked = record_type in state["blocked"]
     if blocked:
@@ -251,10 +257,10 @@ def render_husbandry_section(
             st.error(message)
 
     if bound_profile:
-        st.caption(f"Snake ID: {snake_id}")
+        st.caption(f"Pet ID: {snake_id}")
     else:
         snake_id = st.text_input(
-            "Snake ID", value="SNAKE001", key="husbandry_snake_id"
+            "Pet ID", value="SNAKE001", key="husbandry_snake_id"
         )
     participant_id = account["participant_id"]
     st.caption(f"Acting as {account['display_name']} ({account['username']})")
@@ -269,7 +275,7 @@ def render_husbandry_section(
     )
     if reload_requested or (bound_profile and state["snake_id"] is None):
         if snake_id == "":
-            st.error("Please enter a snake ID.")
+            st.error("Please enter a pet ID.")
             return
 
         if state["snake_id"] != snake_id:
@@ -283,12 +289,32 @@ def render_husbandry_section(
                 _reload_records(state, record_type, api_base_url, access_token)
 
     if state["snake_id"] != snake_id:
-        st.info("Enter a snake ID and select Load Records.")
+        st.info("Enter a pet ID and select Load Records.")
         return
+
+    can_write = False
+    try:
+        keeper_state = fetch_keeper_transfer_status(
+            api_base_url=api_base_url, snake_id=state["snake_id"], access_token=access_token,
+        )
+    except KeeperTransferRequestError:
+        st.warning("Keeper rights could not be confirmed. Records are read-only.")
+    else:
+        if keeper_state["transfer_status"] == "unable_to_confirm":
+            st.warning("Keeper rights could not be confirmed. Records are read-only.")
+        else:
+            keeper = keeper_state.get("current_keeper")
+            can_write = (
+                account["role"] in {"buyer", "breeder"}
+                and keeper is not None
+                and keeper.get("participant_id") == participant_id
+            )
+            if not can_write:
+                st.info("Read-only records. Only the current keeper may add, edit, or delete records.")
 
     tabs = st.tabs(["Growth", "Shedding", "Feeding", "Health"])
     for tab, record_type in zip(tabs, RECORD_FIELDS):
         with tab:
             _render_record_tab(
-                state, record_type, participant_id, api_base_url, access_token
+                state, record_type, participant_id, api_base_url, access_token, can_write
             )

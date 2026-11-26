@@ -1,12 +1,38 @@
+import hashlib
+
 import streamlit as st
 
 from frontend.api import (
     CertificateRequestError,
     fetch_certificate_history,
     fetch_certificate_pdf,
+    fetch_laboratory_reports,
+    recover_sepolia_certificate_transaction,
+    run_sepolia_certificate_permission_demo,
     submit_certificate_issuance,
     submit_certificate_revision,
 )
+
+
+def _render_saved_certificate_recovery(
+    *, api_base_url: str, access_token: str, result_key: str,
+    payload: dict, locked: bool, network: str, button_key: str,
+) -> None:
+    transaction_hash = payload.get("transaction_hash")
+    if not (network == "sepolia" and locked and transaction_hash):
+        return
+    if st.button("Verify and Sync Existing Transaction", key=button_key):
+        with st.spinner("Verifying the saved Sepolia transaction without broadcasting..."):
+            status_code, recovered = recover_sepolia_certificate_transaction(
+                api_base_url=api_base_url,
+                transaction_hash=transaction_hash,
+                access_token=access_token,
+            )
+        st.session_state[result_key] = {
+            "status_code": status_code,
+            "payload": recovered,
+        }
+        st.rerun()
 
 
 # Purpose: separate a new report from a correction to an existing series.
@@ -16,6 +42,7 @@ def render_certificate_issuance(
     api_base_url: str,
     account: dict,
     access_token: str,
+    network: str = "anvil",
 ) -> None:
     issue_tab, revision_tab = st.tabs(["New Report", "Revise Report"])
 
@@ -24,6 +51,7 @@ def render_certificate_issuance(
             api_base_url=api_base_url,
             account=account,
             access_token=access_token,
+            network=network,
         )
 
     with revision_tab:
@@ -31,7 +59,79 @@ def render_certificate_issuance(
             api_base_url=api_base_url,
             account=account,
             access_token=access_token,
+            network=network,
         )
+
+    if network == "sepolia":
+        with st.expander("Sepolia Certificate History"):
+            history_pet_id = st.text_input("Pet ID for history", key="sepolia_certificate_history_pet_id")
+            if st.button("Load Sepolia History", key="load_sepolia_certificate_history"):
+                if not history_pet_id.strip():
+                    st.error("Enter a Pet ID to load its Sepolia report versions.")
+                else:
+                    render_certificate_history(
+                        api_base_url=api_base_url, snake_id=history_pet_id.strip(),
+                        access_token=access_token, network="sepolia",
+                    )
+        if account.get("participant_id") == "LAB002":
+            with st.expander("Security & Permission Demo"):
+                st.caption("Read-only eth_call. No transaction broadcast. No Gas Fee.")
+                demo_actions = (
+                    ("Test Unauthorized Issuance", "unauthorized_issuance"),
+                    ("Test Cross-Lab Revision", "cross_lab_revision"),
+                )
+                for label, operation in demo_actions:
+                    result_key = f"sepolia_permission_demo_{operation}"
+                    if st.button(label, key=f"run_{result_key}"):
+                        try:
+                            with st.spinner("Checking the deployed contract with eth_call..."):
+                                st.session_state[result_key] = run_sepolia_certificate_permission_demo(
+                                    api_base_url=api_base_url,
+                                    operation=operation,
+                                    access_token=access_token,
+                                )
+                        except CertificateRequestError as error:
+                            st.session_state[result_key] = {
+                                "network": "Sepolia Testnet",
+                                "contract": "CertificateRegistry",
+                                "contract_address": "Unable to Verify",
+                                "pet_id": "BP-S004",
+                                "simulated_caller": "Unable to Verify",
+                                "operation": operation,
+                                "authorization_status": "Unable to Verify",
+                                "contract_result": "Inconclusive",
+                                "revert_reason": str(error),
+                                "state_unchanged": "Unable to Verify",
+                                "read_only_notice": "Read-only eth_call. No transaction broadcast. No Gas Fee.",
+                                "permission_denied": False,
+                            }
+                for _, operation in demo_actions:
+                    result = st.session_state.get(f"sepolia_permission_demo_{operation}")
+                    if result is None:
+                        continue
+                    st.table([
+                        {"Check": label, "Result": result.get(field) or "—"}
+                        for label, field in (
+                            ("Network", "network"),
+                            ("Contract", "contract"),
+                            ("Contract Address", "contract_address"),
+                            ("Pet ID", "pet_id"),
+                            ("Series ID", "series_id"),
+                            ("Simulated Caller", "simulated_caller"),
+                            ("Operation", "operation"),
+                            ("Authorization Status", "authorization_status"),
+                            ("Contract Result", "contract_result"),
+                            ("Revert Reason", "revert_reason"),
+                            ("State Unchanged", "state_unchanged"),
+                        )
+                    ])
+                    if result.get("permission_denied") is True:
+                        st.success("Permission Denied — the deployed contract rejected this simulated call.")
+                    elif result.get("contract_result") == "Allowed":
+                        st.warning("Contract Result: Allowed. The contract did not reject this simulated call.")
+                    else:
+                        st.info("Contract Result: Inconclusive. No permission-denial claim is made.")
+                    st.caption(result.get("read_only_notice", "Read-only eth_call. No transaction broadcast. No Gas Fee."))
 
 
 # Purpose: let signed-in laboratory staff upload and issue an original PDF.
@@ -41,6 +141,7 @@ def _render_original_certificate(
     api_base_url: str,
     account: dict,
     access_token: str,
+    network: str,
 ) -> None:
     st.subheader("Issue a Certificate")
     st.caption(
@@ -48,8 +149,8 @@ def _render_original_certificate(
         "Each submission creates a new report series with Version 1."
     )
 
-    result_key = f"certificate_issue_result_{account['participant_id']}"
-    attempt_key = f"certificate_issue_attempt_{account['participant_id']}"
+    result_key = f"certificate_issue_result_{account['participant_id']}_{network}"
+    attempt_key = f"certificate_issue_attempt_{account['participant_id']}_{network}"
 
     previous = st.session_state.get(result_key)
     locked = False
@@ -78,8 +179,12 @@ def _render_original_certificate(
                     "issuer_address": payload["issuer_address"],
                     "issued_at": payload["issued_at"],
                     "transaction_hash": payload["transaction_hash"],
+                    "receipt_status": payload["receipt_status"],
+                    "contract_address": payload.get("contract_address"),
                 }
             )
+            if payload.get("etherscan_url"):
+                st.link_button("View Sepolia Transaction on Etherscan", payload["etherscan_url"])
 
             if st.button("Start Another Report", key="another_certificate"):
                 del st.session_state[result_key]
@@ -107,24 +212,35 @@ def _render_original_certificate(
 
             if identifiers:
                 st.json(identifiers)
+            if payload.get("etherscan_url"):
+                st.link_button("Check transaction on Etherscan", payload["etherscan_url"])
 
             if locked:
                 st.warning(
                     "Submission is locked to prevent duplicate issuance. "
                     "Check the existing transaction before continuing."
                 )
+                _render_saved_certificate_recovery(
+                    api_base_url=api_base_url,
+                    access_token=access_token,
+                    result_key=result_key,
+                    payload=payload,
+                    locked=locked,
+                    network=network,
+                    button_key=f"recover_certificate_issue_{account['participant_id']}_{network}",
+                )
 
     attempt = st.session_state.get(attempt_key, 0)
 
     with st.container(key="certificate_issue_form_frame"):
         with st.form(
-            f"certificate_issuance_{account['participant_id']}_{attempt}"
+            f"certificate_issuance_{account['participant_id']}_{network}_{attempt}"
         ):
             id_column, title_column = st.columns(2, gap="medium")
 
             with id_column:
                 snake_id = st.text_input(
-                    "Snake ID *",
+                    "Pet ID *",
                     disabled=locked,
                 )
 
@@ -136,10 +252,11 @@ def _render_original_certificate(
             pdf = st.file_uploader(
                 "PDF File *",
                 type=["pdf"],
+                max_upload_size=10,
                 disabled=locked,
             )
             st.caption(
-                "Maximum file size: 10 MB. "
+                "Maximum file size: 10 MiB (10,485,760 bytes). "
                 "The original PDF is stored off-chain; "
                 "its SHA-256 digest is recorded on-chain."
             )
@@ -154,7 +271,7 @@ def _render_original_certificate(
         return
 
     if not snake_id or not title.strip() or pdf is None:
-        st.error("Please provide the Snake ID, report title, and PDF file.")
+        st.error("Please provide the Pet ID, report title, and PDF file.")
         return
 
     content = pdf.getvalue()
@@ -171,6 +288,7 @@ def _render_original_certificate(
             pdf_name=pdf.name,
             pdf_content=content,
             access_token=access_token,
+            network=network,
         )
 
     st.session_state[result_key] = {
@@ -193,10 +311,11 @@ def _version_status_label(version: dict) -> str:
 # Purpose: show retained report versions and authenticated PDF downloads.
 # Without this section, buyers cannot inspect V1 after a correction adds V2.
 def render_certificate_history(
-    *, api_base_url: str, snake_id: str, access_token: str
+    *, api_base_url: str, snake_id: str, access_token: str,
+    network: str = "anvil",
 ) -> None:
     st.subheader("Certificate History")
-    history_key = f"certificate_history_{snake_id}"
+    history_key = f"certificate_history_{network}_{snake_id}"
     refresh = st.button("Refresh Certificates", key=f"refresh_certificates_{snake_id}")
 
     if refresh or history_key not in st.session_state:
@@ -206,6 +325,7 @@ def render_certificate_history(
                     api_base_url=api_base_url,
                     snake_id=snake_id,
                     access_token=access_token,
+                    network=network,
                 )
         except CertificateRequestError as error:
             st.session_state.pop(history_key, None)
@@ -219,12 +339,6 @@ def render_certificate_history(
     if not history["series"]:
         st.info("No certificate reports have been uploaded for this snake.")
         return
-
-    if history["chain_block_number"] is not None:
-        st.caption(
-            f"Version status checked at chain block {history['chain_block_number']}. "
-            "Use Refresh Certificates to read the latest status."
-        )
 
     for series in history["series"]:
         st.markdown(f"**{series['laboratory_id']}: {series['title']}**")
@@ -243,46 +357,43 @@ def render_certificate_history(
             for version in versions
         ])
 
-        by_id = {version["version_id"]: version for version in versions}
-        version_id = st.selectbox(
-            "Report Version",
-            options=list(by_id),
-            index=len(versions) - 1,
-            format_func=lambda value, versions_by_id=by_id: (
-                f"V{versions_by_id[value]['version_number']} "
-                f"({_version_status_label(versions_by_id[value])})"
-            ),
-            key=f"download_version_{series['series_id']}",
-        )
-        version = by_id[version_id]
-        with st.expander("Selected Version Details"):
-            st.json({
-                "version_id": version_id,
-                "previous_version_id": version["previous_version_id"],
-                "stored_sha256": version["file_hash"],
-                "issuer_address": version["issuer_address"],
-                "evidence_status": version["evidence_status"],
-            })
+        for version in versions:
+            version_id = version["version_id"]
+            st.caption(f"V{version['version_number']} - {_version_status_label(version)}")
+            file_key = f"certificate_pdf_{version_id}"
+            try:
+                if file_key not in st.session_state:
+                    st.session_state[file_key] = fetch_certificate_pdf(
+                        api_base_url=api_base_url,
+                        version_id=version_id,
+                        access_token=access_token,
+                        network=network,
+                    )
+                if (
+                    network == "sepolia"
+                    and hashlib.sha256(st.session_state[file_key]).hexdigest()
+                    != version["file_hash"]
+                ):
+                    st.error("The downloaded PDF SHA-256 does not match the recorded certificate hash.")
+                    continue
+            except CertificateRequestError as error:
+                st.error(str(error))
+                continue
 
-        file_key = f"certificate_pdf_{version_id}"
-        try:
-            if file_key not in st.session_state:
-                st.session_state[file_key] = fetch_certificate_pdf(
-                    api_base_url=api_base_url,
-                    version_id=version_id,
-                    access_token=access_token,
+            st.download_button(
+                "Download Original PDF",
+                data=st.session_state[file_key],
+                file_name=f"{version_id}.pdf",
+                mime="application/pdf",
+                key=f"download_certificate_{version_id}",
+                type="primary",
+            )
+            if version.get("transaction_hash"):
+                st.link_button(
+                    f"View V{version['version_number']} transaction on Etherscan",
+                    f"https://sepolia.etherscan.io/tx/{version['transaction_hash']}",
+                    key=f"certificate_tx_{network}_{version_id}",
                 )
-        except CertificateRequestError as error:
-            st.error(str(error))
-            continue
-
-        st.download_button(
-            "Download Original PDF",
-            data=st.session_state[file_key],
-            file_name=f"{version_id}.pdf",
-            mime="application/pdf",
-            key=f"download_certificate_{version_id}",
-        )
 
 
 # Purpose: append a corrected PDF while retaining the original report and series.
@@ -292,14 +403,15 @@ def _render_certificate_revision(
     api_base_url: str,
     account: dict,
     access_token: str,
+    network: str = "anvil",
 ) -> None:
     st.subheader("Revise a Certificate")
     st.caption(
-        "Use a Series ID issued by your laboratory. "
+        "Select a report previously issued by your laboratory. "
         "The correction appends a new version and preserves earlier PDFs."
     )
 
-    result_key = f"certificate_revision_result_{account['participant_id']}"
+    result_key = f"certificate_revision_result_{account['participant_id']}_{network}"
     previous = st.session_state.get(result_key)
     locked = False
 
@@ -317,11 +429,13 @@ def _render_certificate_revision(
                 "The previous version is Superseded. "
                 "Its original file and evidence have been retained."
             )
+            if payload.get("etherscan_url"):
+                st.link_button("View Sepolia Revision on Etherscan", payload["etherscan_url"])
         else:
             detail = payload.get("detail")
             st.error(
                 detail if isinstance(detail, str)
-                else "Check the Series ID and revised PDF."
+                else "Check the selected report and revised PDF."
             )
             identifiers = {
                 field: payload[field]
@@ -330,29 +444,48 @@ def _render_certificate_revision(
             }
             if identifiers:
                 st.json(identifiers)
+            if payload.get("etherscan_url"):
+                st.link_button("Check transaction on Etherscan", payload["etherscan_url"])
             if locked:
                 st.warning(
                     "Submission is locked to prevent duplicate revision. "
                     "Check the existing transaction before continuing."
                 )
+                _render_saved_certificate_recovery(
+                    api_base_url=api_base_url,
+                    access_token=access_token,
+                    result_key=result_key,
+                    payload=payload,
+                    locked=locked,
+                    network=network,
+                    button_key=f"recover_certificate_revision_{account['participant_id']}_{network}",
+                )
 
-    original = st.session_state.get(
-        f"certificate_issue_result_{account['participant_id']}", {}
-    )
-    default_series_id = (
-        original.get("payload", {}).get("series_id", "")
-        if original.get("status_code") == 201 else ""
-    )
+    try:
+        reports = fetch_laboratory_reports(api_base_url=api_base_url, access_token=access_token, network=network)
+    except CertificateRequestError as error:
+        st.error(str(error))
+        return
+    if not reports:
+        st.info("Your laboratory has not uploaded any reports yet.")
+        return
+    by_id = {report["series_id"]: report for report in reports}
 
-    with st.form(f"certificate_revision_{account['participant_id']}"):
-        series_id = st.text_input(
-            "Series ID *", value=default_series_id, disabled=locked
+    with st.form(f"certificate_revision_{account['participant_id']}_{network}"):
+        series_id = st.selectbox(
+            "Report Title *", options=list(by_id), index=None,
+            placeholder="Select a report to revise", disabled=locked,
+            format_func=lambda value: (
+                f"{by_id[value]['title']} · {by_id[value]['snake_id']} · "
+                f"V{by_id[value]['latest_version_number']} · {value}"
+            ),
+            key=f"revision_report_{account['participant_id']}_{network}",
         )
         pdf = st.file_uploader(
-            "Revised PDF *", type=["pdf"], disabled=locked
+            "Revised PDF *", type=["pdf"], max_upload_size=10, disabled=locked
         )
         st.caption(
-            "Maximum file size: 10 MB. "
+            "Maximum file size: 10 MiB (10,485,760 bytes). "
             "The next version number is assigned automatically."
         )
         submitted = st.form_submit_button(
@@ -364,8 +497,8 @@ def _render_certificate_revision(
     if not submitted:
         return
 
-    if not series_id.strip() or pdf is None:
-        st.error("Please provide the Series ID and revised PDF.")
+    if series_id is None or pdf is None:
+        st.error("Please select a report and provide the revised PDF.")
         return
 
     content = pdf.getvalue()
@@ -380,11 +513,12 @@ def _render_certificate_revision(
             pdf_name=pdf.name,
             pdf_content=content,
             access_token=access_token,
+            network=network,
         )
 
     if status_code == 201:
         original_result = st.session_state.get(
-            f"certificate_issue_result_{account['participant_id']}"
+            f"certificate_issue_result_{account['participant_id']}_{network}"
         )
         if (
             original_result is not None

@@ -151,8 +151,15 @@ def test_complete_demo_workflow(isolated_demo, monkeypatch):
             data["laboratory_id"] = lab
         if role == "breeder":
             data["breeder_name"] = "Audit Breeder"
-        request("POST", "/accounts", 201, json=data)
-        request("POST", "/accounts", 409, json=data)
+        if lab:
+            from backend.accounts import AccountRegistrationData, create_account
+            request("POST", "/accounts", 403, json=data)
+            with connect(host="127.0.0.1", port=5433, dbname="ballpython_demo",
+                         user="ballpython", password=os.environ["DEMO_DB_PASSWORD"]) as connection:
+                create_account(connection, data=AccountRegistrationData(**data))
+        else:
+            request("POST", "/accounts", 201, json=data)
+            request("POST", "/accounts", 409, json=data)
         request("POST", "/sessions", 401, json={"username": data["username"], "password": "wrong"})
         sessions[name] = request("POST", "/sessions", 200,
                                  json={"username": data["username"], "password": data["password"]}).json()
@@ -162,7 +169,7 @@ def test_complete_demo_workflow(isolated_demo, monkeypatch):
     image = BytesIO()
     Image.new("RGB", (32, 32), "gold").save(image, format="PNG")
     profile = {
-        "snake_id": "SNAKE001", "breeder_internal_id": "AUDIT-001",
+        "snake_id": "SNAKE001",
         "species": "Ball Python", "sex": "Female", "date_of_birth": "2025-01-01",
         "genetic_description": "Fictional isolated test", "nickname": "Audit snake",
     }
@@ -203,6 +210,20 @@ def test_complete_demo_workflow(isolated_demo, monkeypatch):
         response = request("GET", f"/certificate-versions/{version['version_id']}/file", 200, buyer)
         assert hashlib.sha256(response.content).hexdigest() == version["file_hash"]
     checks.append("both laboratories issue, issuer-only revision, confirmed version history, original PDF hashes")
+    own_path = "/laboratories/me/certificate-series"
+    request("GET", own_path, 401)
+    request("GET", own_path, 403, buyer)
+    request("GET", own_path, 403, breeder)
+    own = request("GET", own_path, 200, lab1).json()
+    other = request("GET", own_path, 200, lab2).json()
+    assert [row["series_id"] for row in own] == [first["series_id"]]
+    assert own[0]["latest_version_number"] == 2
+    assert [row["series_id"] for row in other] == [second["series_id"]]
+    duplicate_title = report(lab1)
+    own = request("GET", own_path + "?laboratory_id=LAB002", 200, lab1).json()
+    assert {row["series_id"] for row in own} == {first["series_id"], duplicate_title["series_id"]}
+    assert all(row["laboratory_id"] == "LAB001" for row in own)
+    checks.append("laboratory report list is authenticated, issuer-scoped, revision-aware, and preserves duplicate titles")
     inputs = {
         "growth": {"weight_g": 150, "length_cm": 30, "notes": "Audit"},
         "shedding": {"outcome": "Complete", "follow_up": "Audit"},
@@ -275,6 +296,8 @@ def test_complete_demo_workflow(isolated_demo, monkeypatch):
             assert not at.exception, f"{name} workspace crashed"
             if name in ("buyer", "breeder"):
                 assert not any(s.value == "Husbandry Records" for s in at.subheader)
+                assert at.text_input(key="profile_lookup_id").value == ""
+                at.text_input(key="profile_lookup_id").set_value("SNAKE001")
                 at.button(key="view_profile").click().run()
                 assert not at.exception, f"{name} profile crashed"
                 assert [tab.label for tab in at.tabs][:3] == ["Certificate History", "Keeper Management", "Husbandry Records"]

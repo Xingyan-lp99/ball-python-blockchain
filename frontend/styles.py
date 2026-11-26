@@ -8,36 +8,19 @@ import streamlit as st
 # Workflow: load after page configuration, before rendering any page.
 # Without this function, the custom cards and button styles are not applied.
 def apply_styles() -> None:
-    font_path = (
-        Path(__file__).parent
-        / "assets"
-        / "fonts"
-        / "PressStart2P-Regular.ttf"
-    )
-    font_data = base64.b64encode(font_path.read_bytes()).decode("ascii")
-    jersey_font_data = base64.b64encode(
-        (font_path.parent / "Jersey10-Regular.ttf").read_bytes()
+    font_data = base64.b64encode(
+        (Path(__file__).parent / "assets/fonts/Manrope[wght].ttf").read_bytes()
     ).decode("ascii")
-
     st.html(
         f"""
         <style>
         @font-face {{
-            font-family: "Press Start 2P";
+            font-family: "Manrope";
             src: url("data:font/ttf;base64,{font_data}") format("truetype");
             font-style: normal;
-            font-weight: 400;
+            font-weight: 200 800;
             font-display: swap;
         }}
-
-        @font-face {{
-            font-family: "Jersey 10";
-            src: url("data:font/ttf;base64,{jersey_font_data}") format("truetype");
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-        }}
-
         .st-key-workspace_header [data-testid="stImage"] img {{
             width: 280px !important;
             height: auto !important;
@@ -46,36 +29,36 @@ def apply_styles() -> None:
         }}
 
         .st-key-login_intro [data-testid="stImage"] img {{
-            width: 240px !important;
+            width: 360px !important;
             max-width: 100%;
             height: auto !important;
             object-fit: contain;
         }}
 
         .st-key-login_intro hr {{
-            margin: 8px 0 32px;
+            margin: 12px 0 24px;
         }}
 
         .st-key-login_snake_showcase {{
-            flex: 1;
-            align-self: stretch;
-            grid-auto-rows: minmax(128px, 1fr);
+            flex: 0 0 auto;
+            grid-auto-rows: 160px;
         }}
 
         [class*="st-key-login_photo_slot_"] {{
             position: relative;
-            min-height: 128px;
+            height: 160px;
+            min-height: 0;
             box-sizing: border-box;
-            padding: 8px;
+            padding: 6px;
             background-color: var(--registry-surface);
             border: var(--registry-border);
         }}
 
         [class*="st-key-login_photo_slot_"] img {{
             position: absolute;
-            inset: 8px;
-            width: calc(100% - 16px);
-            height: calc(100% - 16px);
+            inset: 6px;
+            width: calc(100% - 12px);
+            height: calc(100% - 12px);
             object-fit: contain;
         }}
 
@@ -93,7 +76,7 @@ def apply_styles() -> None:
 
         .st-key-login_gallery_column h1,
         .st-key-login_card h3 {{
-            font-family: "Jersey 10", sans-serif;
+            font-family: "Space Grotesk", sans-serif;
             font-weight: 400;
             font-synthesis: none;
             line-height: 1.2;
@@ -102,26 +85,55 @@ def apply_styles() -> None:
         }}
 
         .st-key-login_gallery_column h1 {{
-            font-size: clamp(1.5rem, 3.5vw, 3rem);
+            font-family: "Manrope", sans-serif;
+            font-weight: 700;
+            font-size: clamp(1.875rem, 2.4vw, 2.125rem);
+            color: #243B30;
+            line-height: 1.15;
             white-space: nowrap;
             margin: 0;
             padding: 0;
         }}
 
         .st-key-login_card h3 {{
-            font-size: clamp(1.25rem, 2.5vw, 2rem);
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin: 0;
+            padding: 0;
         }}
 
-        @media (max-width: 1100px) {{
-            .st-key-login_layout > :has(> .st-key-login_form_column) {{
-                order: -1;
-            }}
+        .st-key-login_marketing_copy {{
+            padding-top: 24px;
+        }}
+
+        .st-key-login_card [data-testid="stForm"] {{
+            padding: 0;
+            border: 0;
+            box-shadow: none;
+        }}
+
+        .st-key-login_card hr {{
+            margin: 8px 0;
+        }}
+
+        .st-key-login_card [data-testid="stTextInput"] input {{
+            min-height: 44px;
+        }}
+
+        .st-key-login_card .st-key-enter_demo button:not(:disabled) {{
+            background: #E7F0E7;
+            color: #243B30;
+            border: 1px solid #D9E5DA;
+        }}
+
+        .st-key-login_card .st-key-enter_demo button p {{
+            color: inherit;
         }}
 
         .st-key-role_workspace h3,
         :is(.st-key-lab_certificate_workspace, .st-key-buyer_profile_sections) [role="tab"],
         :is(.st-key-lab_certificate_workspace, .st-key-buyer_profile_sections) [role="tab"] p {{
-            font-family: "Jersey 10", sans-serif;
+            font-family: "Space Grotesk", sans-serif;
             font-weight: 400;
             font-synthesis: none;
             line-height: 1.25;
@@ -129,11 +141,11 @@ def apply_styles() -> None:
         }}
 
         .st-key-role_workspace h3 {{
-            font-size: 2rem;
+            font-size: 1.5rem;
         }}
 
         :is(.st-key-lab_certificate_workspace, .st-key-buyer_profile_sections) [role="tab"] {{
-            font-size: 1.375rem;
+            font-size: 1rem;
             background-color: var(--registry-surface);
             border: var(--registry-border);
             border-radius: var(--registry-radius);
@@ -142,12 +154,12 @@ def apply_styles() -> None:
         }}
 
         :is(.st-key-lab_certificate_workspace, .st-key-buyer_profile_sections) [role="tab"] p {{
-            font-size: 1.375rem;
+            font-size: 1rem;
         }}
 
         :is(.st-key-lab_certificate_workspace, .st-key-buyer_profile_sections)
             [role="tab"][aria-selected="true"] {{
-            background-color: var(--registry-action);
+            background-color: var(--registry-secondary-hover);
         }}
 
         :is(.st-key-lab_certificate_workspace, .st-key-buyer_profile_sections)
@@ -205,7 +217,7 @@ def apply_styles() -> None:
             display: flex;
             align-items: center;
             gap: 0.45rem;
-            color: #291344;
+            color: #243B30;
             font-weight: 700;
             white-space: nowrap;
         }}
@@ -275,23 +287,27 @@ def apply_styles() -> None:
         .st-key-buyer_snake_card_frame_1 .st-key-buyer_snake_card_1 button:focus-visible,
         .st-key-buyer_snake_card_frame_2 .st-key-buyer_snake_card_2 button:focus-visible {{
             opacity: 0.95;
-            background-color: rgba(41, 19, 68, 0.9) !important;
-            color: #FFFDF3 !important;
+            background-color: rgba(53, 107, 85, 0.95) !important;
+            color: #FFFFFF !important;
         }}
 
         .st-key-buyer_snake_card_frame_0 .st-key-buyer_snake_card_0 button:focus-visible p,
         .st-key-buyer_snake_card_frame_1 .st-key-buyer_snake_card_1 button:focus-visible p,
         .st-key-buyer_snake_card_frame_2 .st-key-buyer_snake_card_2 button:focus-visible p {{
-            color: #FFFDF3 !important;
+            color: #FFFFFF !important;
         }}
 
         @media (max-width: 640px) {{
+            .st-key-login_gallery_column h1 {{
+                white-space: normal;
+                font-size: clamp(1.75rem, 6vw, 2.375rem);
+            }}
             .st-key-workspace_header [data-testid="stImage"] img {{
                 width: 190px !important;
             }}
 
             .st-key-login_intro [data-testid="stImage"] img {{
-                width: 220px !important;
+                width: 280px !important;
             }}
 
             .st-key-buyer_snake_card_frame_0 [data-testid="stImage"] img,
@@ -319,28 +335,28 @@ def apply_styles() -> None:
         """
         <style>
         :root {
-            /* Project-specific semantic tokens for the approved pixel style. */
-            --registry-surface: #FFFDF3;
-            --registry-on-surface: #291344;
-            --registry-muted-text: #6E627D;
-            --registry-outline: #6330BA;
+            /* Project-specific semantic tokens for the pet record interface. */
+            --registry-surface: #FFFFFF;
+            --registry-on-surface: #243B30;
+            --registry-muted-text: #60796A;
+            --registry-outline: #D9E5DA;
 
-            --registry-action: #F4EF48;
-            --registry-on-action: #291344;
-            --registry-secondary-hover: #E2D3FA;
-            --registry-focus: #6330BA;
+            --registry-action: #356B55;
+            --registry-on-action: #FFFFFF;
+            --registry-secondary-hover: #E7F0E7;
+            --registry-focus: #356B55;
 
-            --registry-border: 2px solid var(--registry-outline);
-            --registry-radius: 0;
-            --registry-shadow: 4px 4px 0 var(--registry-outline);
+            --registry-border: 1px solid var(--registry-outline);
+            --registry-radius: 12px;
+            --registry-shadow: none;
             --registry-card-shadow: var(--registry-shadow);
-            --registry-shadow-hover: 2px 2px 0 var(--registry-outline);
+            --registry-shadow-hover: none;
 
             --registry-card-padding: 1.5rem;
             --registry-small-gap: 0.5rem;
         }
 
-        :is(.st-key-view_profile, .st-key-sign_in, .st-key-open_account_registration,
+        :is(.st-key-view_profile, .st-key-register_snake, [class*="st-key-download_certificate_"], .st-key-sign_in, .st-key-open_account_registration,
             .st-key-register_account, .st-key-registration_back_to_login,
             .st-key-registered_back_to_login, .st-key-account_sign_out) button {
             background-color: var(--registry-surface);
@@ -353,18 +369,18 @@ def apply_styles() -> None:
             font-weight: 700;
         }
 
-        :is(.st-key-view_profile, .st-key-sign_in, .st-key-register_account) button {
+        :is(.st-key-view_profile, .st-key-register_snake, [class*="st-key-download_certificate_"], .st-key-sign_in, .st-key-register_account) button {
             background-color: var(--registry-action);
             color: var(--registry-on-action);
         }
 
-        :is(.st-key-view_profile, .st-key-sign_in, .st-key-open_account_registration,
+        :is(.st-key-view_profile, .st-key-register_snake, [class*="st-key-download_certificate_"], .st-key-sign_in, .st-key-open_account_registration,
             .st-key-register_account, .st-key-registration_back_to_login,
             .st-key-registered_back_to_login, .st-key-account_sign_out) button p {
             color: inherit;
         }
 
-        :is(.st-key-view_profile, .st-key-sign_in, .st-key-open_account_registration,
+        :is(.st-key-view_profile, .st-key-register_snake, [class*="st-key-download_certificate_"], .st-key-sign_in, .st-key-open_account_registration,
             .st-key-register_account, .st-key-registration_back_to_login,
             .st-key-registered_back_to_login, .st-key-account_sign_out)
             button:hover:not(:disabled) {
@@ -373,7 +389,7 @@ def apply_styles() -> None:
             box-shadow: var(--registry-shadow-hover);
         }
 
-        :is(.st-key-view_profile, .st-key-sign_in, .st-key-register_account)
+        :is(.st-key-view_profile, .st-key-register_snake, [class*="st-key-download_certificate_"], .st-key-sign_in, .st-key-register_account)
             button:hover:not(:disabled) {
             background-color: var(--registry-action);
             color: var(--registry-on-action);
@@ -385,7 +401,7 @@ def apply_styles() -> None:
             background-color: var(--registry-secondary-hover);
         }
 
-        :is(.st-key-view_profile, .st-key-sign_in, .st-key-open_account_registration,
+        :is(.st-key-view_profile, .st-key-register_snake, [class*="st-key-download_certificate_"], .st-key-sign_in, .st-key-open_account_registration,
             .st-key-register_account, .st-key-registration_back_to_login,
             .st-key-registered_back_to_login, .st-key-account_sign_out)
             button:focus-visible {
@@ -393,7 +409,7 @@ def apply_styles() -> None:
             outline-offset: 5px;
         }
 
-        :is(.st-key-view_profile, .st-key-sign_in, .st-key-open_account_registration,
+        :is(.st-key-view_profile, .st-key-register_snake, [class*="st-key-download_certificate_"], .st-key-sign_in, .st-key-open_account_registration,
             .st-key-register_account, .st-key-registration_back_to_login,
             .st-key-registered_back_to_login, .st-key-account_sign_out)
             button:disabled {
@@ -451,7 +467,7 @@ def apply_styles() -> None:
         """
         <style>
         [data-testid="stAppViewContainer"] {
-            color: #291344;
+            color: #243B30;
             letter-spacing: normal;
             line-height: 1.5;
         }
@@ -468,7 +484,7 @@ def apply_styles() -> None:
         [data-testid="stCaptionContainer"] p,
         [data-testid="stFileUploaderDropzone"] small {
             font-size: 14px;
-            color: #6E627D;
+            color: #60796A;
             line-height: 1.5;
         }
 
@@ -486,3 +502,45 @@ def apply_styles() -> None:
         </style>
         """
     )
+
+    st.html(
+        """
+        <style>
+        .st-key-snake_profile_card .profile-section-title {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #243B30;
+            margin-bottom: 16px;
+        }
+        .st-key-snake_profile_card .profile-field-label {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: #356B55;
+            margin-top: 16px;
+            margin-bottom: 4px;
+        }
+        </style>
+        """
+    )
+
+    st.html("""
+    <style>
+    .pet-brand { font-family: "Space Grotesk", sans-serif; font-size: clamp(1.25rem, 2.5vw, 1.8rem); font-weight: 700; color: #243B30; line-height: 1.25; }
+    .pet-brand-subtitle { color: #60796A; font-size: .85rem; margin-top: .4rem; }
+    .st-key-demo_navigation { padding: 1rem 0; max-width: 1100px; margin: auto; }
+    .st-key-demo_navigation [data-testid="stCaptionContainer"] { background: #F5E7B5; border-radius: 8px; padding: .4rem .75rem; width: fit-content; }
+    .st-key-snake_profile_card [data-testid="stImage"] img { width: 100%; max-height: 360px; object-fit: contain; border-radius: 12px; background: #F7F9F5; }
+    [class*="st-key-login_photo_slot_"] { border-radius: 10px; }
+    [data-testid="stForm"] { border: 1px solid #D9E5DA; border-radius: 12px; background: #FFFFFF; padding: 1.25rem; }
+    [data-testid="stFileUploaderDropzone"] { border: 1px dashed #60796A; border-radius: 12px; background: #F7F9F5; }
+    [data-testid="stTable"], [data-testid="stDataFrame"] { border-radius: 8px; }
+    button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #356B55; outline-offset: 3px; }
+    [data-testid="stBaseButton-primary"] { background: #356B55; color: white; }
+    [data-testid="stBaseButton-primary"] p { color: inherit; }
+    .st-key-demo_role_picker [aria-pressed="true"] { background: #E7F0E7; color: #243B30; }
+    [data-testid="stAlert"][data-baseweb="notification"] { border-radius: 8px; }
+    code, pre { font-family: ui-monospace, Consolas, monospace; }
+    </style>
+    """)

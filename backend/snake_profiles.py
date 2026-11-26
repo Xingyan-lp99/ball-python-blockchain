@@ -13,11 +13,10 @@ def save_snake_profile(
     *,
     snake_id: str,
     breeder_id: str,
-    breeder_internal_id: str,
     species: str,
     sex: str,
     date_of_birth: date,
-    genetic_description: str,
+    genetic_description: str | None,
     photo_reference: str,
     nickname: str | None = None,
     introduction: str | None = None,
@@ -29,7 +28,6 @@ def save_snake_profile(
         INSERT INTO snakes (
             snake_id,
             breeder_id,
-            breeder_internal_id,
             species,
             sex,
             date_of_birth,
@@ -42,13 +40,12 @@ def save_snake_profile(
         )
         VALUES (
             %s, %s, %s, %s, %s, %s,
-            %s, %s, %s, %s, %s, %s
+            %s, %s, %s, %s, %s
         )
         """,
         (
             snake_id,
             breeder_id,
-            breeder_internal_id,
             species,
             sex,
             date_of_birth,
@@ -78,7 +75,6 @@ def get_snake_profile(
                 snakes.snake_id,
                 snakes.breeder_id,
                 breeder.display_name AS breeder_name,
-                snakes.breeder_internal_id,
                 snakes.nickname,
                 snakes.species,
                 snakes.sex,
